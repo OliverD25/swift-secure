@@ -49,8 +49,11 @@ const linkClass = (key: Props["current"]) =>
       <LanguageSwitcher />
     </nav>
 
+    <!-- Apply stays in the always-visible bar on mobile; the language switcher
+         moves into the panel below. There is only room for one of them beside
+         the logo, and Apply is the action the page exists to drive. -->
     <div class="flex items-center gap-2 lg:hidden">
-      <LanguageSwitcher />
+      <a href={withBase("/apply/")} class="whitespace-nowrap rounded-lg bg-navy px-3.5 py-2 text-sm font-semibold text-white">Apply</a>
       <button
         type="button"
         data-nav-toggle
@@ -85,7 +88,9 @@ const linkClass = (key: Props["current"]) =>
         </a>
       ))
     }
-    <a href={withBase("/apply/")} class="mt-4 block rounded-lg bg-navy py-3 text-center text-[15px] font-semibold text-white">Apply</a>
+    <div class="mt-4">
+      <LanguageSwitcher />
+    </div>
   </nav>
 </header>
 
