@@ -1,5 +1,6 @@
 ---
 import type { Plan } from "../data/content";
+import { withBase } from "../lib/url";
 
 interface Props {
   plan: Plan;
@@ -37,7 +38,7 @@ const features = featuresCount ? plan.features.slice(0, featuresCount) : plan.fe
     }
   </div>
   <a
-    href="/apply/"
+    href={withBase("/apply/")}
     class:list={[
       "block rounded-lg py-3 text-center text-sm font-semibold",
       plan.featured ? "bg-navy text-white" : "bg-surface-alt text-[oklch(25%_0.02_250)]",

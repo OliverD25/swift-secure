@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
 
 const title = "Verify a Seal";
 const description = "Enter the seal ID shown on a casino's site to confirm it's genuine and currently certified by Swift Secure.";
@@ -49,7 +50,7 @@ const description = "Enter the seal ID shown on a casino's site to confirm it's 
             <div class="text-[17px] font-bold text-[oklch(35%_0.1_40)]">No matching seal found</div>
           </div>
           <div class="text-sm text-[oklch(40%_0.02_250)]">
-            No active seal found for that ID. If you believe this is an error, <a href="/apply/">contact us</a>.
+            No active seal found for that ID. If you believe this is an error, <a href={withBase("/apply/")}>contact us</a>.
           </div>
         </div>
       </div>

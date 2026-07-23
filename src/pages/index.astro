@@ -8,6 +8,7 @@ import CasinoCard from "../components/CasinoCard.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { steps, criteria, testimonials, plans } from "../data/content";
 import { featuredCasinos } from "../data/casinos";
+import { withBase } from "../lib/url";
 
 const title = "Certified & Secure";
 const description =
@@ -42,8 +43,8 @@ const orgJsonLd = {
           We independently audit new casinos on fairness, licensing, security and payout speed &mdash; then issue a seal players can verify in seconds.
         </p>
         <div class="flex flex-wrap gap-3.5">
-          <a href="/apply/" class="rounded-[10px] bg-navy px-6.5 py-3.5 text-base font-semibold text-white">Apply for Certification</a>
-          <a href="/verify/" class="rounded-[10px] border border-[oklch(85%_0.01_250)] px-6.5 py-3.5 text-base font-semibold text-[oklch(25%_0.02_250)]">
+          <a href={withBase("/apply/")} class="rounded-[10px] bg-navy px-6.5 py-3.5 text-base font-semibold text-white">Apply for Certification</a>
+          <a href={withBase("/verify/")} class="rounded-[10px] border border-[oklch(85%_0.01_250)] px-6.5 py-3.5 text-base font-semibold text-[oklch(25%_0.02_250)]">
             Verify a Seal &rarr;
           </a>
         </div>
@@ -110,7 +111,7 @@ const orgJsonLd = {
           <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">Certified operators</div>
           <h2 class="text-[32px] font-extrabold tracking-tight sm:text-4xl">Casinos carrying the seal today</h2>
         </div>
-        <a href="/casinos/" class="whitespace-nowrap text-[15px] font-semibold">View all certified casinos &rarr;</a>
+        <a href={withBase("/casinos/")} class="whitespace-nowrap text-[15px] font-semibold">View all certified casinos &rarr;</a>
       </div>
       <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5.5">
         {featuredCasinos.map((casino) => <CasinoCard casino={casino} />)}

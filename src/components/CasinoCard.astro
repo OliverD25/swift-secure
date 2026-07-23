@@ -1,5 +1,6 @@
 ---
 import type { Casino } from "../data/casinos";
+import { withBase } from "../lib/url";
 
 interface Props {
   casino: Casino;
@@ -33,7 +34,7 @@ const { casino, href } = Astro.props;
   </div>
   {
     href && (
-      <a href={href} class="block rounded-lg border border-[oklch(88%_0.01_250)] py-2.5 text-center text-[13px] font-semibold text-navy">
+      <a href={withBase(href)} class="block rounded-lg border border-[oklch(88%_0.01_250)] py-2.5 text-center text-[13px] font-semibold text-navy">
         View seal record &rarr;
       </a>
     )
