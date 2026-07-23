@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { faqs } from "../../data/content";
+
+const title = "FAQ";
+const description = "Frequently asked questions about Swift Secure certification: cost, timeline, re-audits, and seal verification.";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+---
+
+<Layout title={title} description={description} current="faq">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main>
+    <section class="mx-auto w-full max-w-[700px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">FAQ</div>
+      <h1 class="text-[38px] font-extrabold tracking-tight">Frequently asked questions</h1>
+    </section>
+
+    <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
+      <div data-faq-list>
+        {
+          faqs.map((faq, i) => (
+            <div class="border-b border-line-soft" data-faq-item>
+              <button
+                type="button"
+                data-faq-toggle
+                aria-expanded={i === 0 ? "true" : "false"}
+                class="flex w-full items-center justify-between gap-4 py-5 text-left"
+              >
+                <span class="text-base font-semibold">{faq.q}</span>
+                <span data-faq-symbol class="shrink-0 text-lg text-[oklch(50%_0.02_250)]">
+                  {i === 0 ? "−" : "+"}
+                </span>
+              </button>
+              <div data-faq-answer hidden={i !== 0} class="pb-5 text-sm leading-relaxed text-ink-muted">
+                {faq.a}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <CtaBand heading="Still have questions?" ctaLabel="Get in touch" ctaHref="/apply/" />
+  </main>
+</Layout>
+
+<script>
+  const items = document.querySelectorAll<HTMLElement>("[data-faq-item]");
+
+  items.forEach((item, index) => {
+    const toggle = item.querySelector<HTMLButtonElement>("[data-faq-toggle]");
+    const answer = item.querySelector<HTMLElement>("[data-faq-answer]");
+    const symbol = item.querySelector<HTMLElement>("[data-faq-symbol]");
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      items.forEach((other, otherIndex) => {
+        if (otherIndex === index) return;
+        other.querySelector("[data-faq-toggle]")?.setAttribute("aria-expanded", "false");
+        const otherAnswer = other.querySelector<HTMLElement>("[data-faq-answer]");
+        if (otherAnswer) otherAnswer.hidden = true;
+        const otherSymbol = other.querySelector<HTMLElement>("[data-faq-symbol]");
+        if (otherSymbol) otherSymbol.textContent = "+";
+      });
+
+      const nextOpen = !isOpen;
+      toggle.setAttribute("aria-expanded", String(nextOpen));
+      if (answer) answer.hidden = !nextOpen;
+      if (symbol) symbol.textContent = nextOpen ? "−" : "+";
+    });
+  });
+</script>

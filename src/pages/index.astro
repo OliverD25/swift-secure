@@ -1,0 +1,153 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Seal from "../components/Seal.astro";
+import StatRow from "../components/StatRow.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import PlanCard from "../components/PlanCard.astro";
+import CasinoCard from "../components/CasinoCard.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { steps, criteria, testimonials, plans } from "../data/content";
+import { featuredCasinos } from "../data/casinos";
+
+const title = "Certified & Secure";
+const description =
+  "The Swift Secure trust seal players check before they deposit. We independently audit new online casinos on fairness, licensing, security and payout speed.";
+
+const siteUrl = Astro.site?.toString() ?? "/";
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Certified & Secure",
+  alternateName: "Swift Secure",
+  url: siteUrl,
+  logo: new URL("/favicon.svg", siteUrl).toString(),
+  description,
+};
+---
+
+<Layout title={title} description={description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+  <main>
+    <!-- HERO -->
+    <section class="mx-auto grid w-full max-w-[1280px] grid-cols-[repeat(auto-fit,minmax(320px,1fr))] items-center gap-12 px-[clamp(20px,5vw,40px)] py-20">
+      <div>
+        <div class="mb-5 inline-flex items-center gap-2 rounded-full bg-[oklch(94%_0.04_155)] px-3 py-1.5 text-[13px] font-semibold text-[oklch(35%_0.1_155)]">
+          <span class="size-1.5 rounded-full bg-emerald"></span>
+          Trusted by 340+ licensed operators
+        </div>
+        <h1 class="mb-5 text-[42px] font-extrabold leading-[1.08] tracking-tight sm:text-[52px]">
+          The trust seal players actually check before they deposit.
+        </h1>
+        <p class="mb-8 max-w-[520px] text-lg leading-relaxed text-ink-muted sm:text-[19px]">
+          We independently audit new casinos on fairness, licensing, security and payout speed &mdash; then issue a seal players can verify in seconds.
+        </p>
+        <div class="flex flex-wrap gap-3.5">
+          <a href="/apply/" class="rounded-[10px] bg-navy px-6.5 py-3.5 text-base font-semibold text-white">Apply for Certification</a>
+          <a href="/verify/" class="rounded-[10px] border border-[oklch(85%_0.01_250)] px-6.5 py-3.5 text-base font-semibold text-[oklch(25%_0.02_250)]">
+            Verify a Seal &rarr;
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="flex size-[280px] items-center justify-center rounded-full shadow-[0_20px_60px_-20px_oklch(30%_0.05_250/0.35)]"
+          style="background: radial-gradient(circle at 30% 25%, oklch(97% 0.01 250), oklch(93% 0.015 250));"
+        >
+          <Seal variant="primary" size={200} />
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-navy px-[clamp(20px,5vw,40px)] py-9">
+      <div class="mx-auto max-w-[1280px]">
+        <StatRow variant="dark" />
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-22.5">
+      <SectionHeading eyebrow="How it works" title="From application to a live seal in under 3 weeks" />
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-7">
+        {
+          steps.map((step) => (
+            <div class="rounded-2xl border border-line bg-white p-7 sm:p-[28px_22px]">
+              <div class="mb-4 flex size-9 items-center justify-center rounded-lg bg-[oklch(94%_0.04_155)] text-[15px] font-extrabold text-[oklch(35%_0.1_155)]">
+                {step.n}
+              </div>
+              <div class="mb-2 text-[17px] font-bold">{step.title}</div>
+              <div class="text-sm leading-relaxed text-ink-muted">{step.desc}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- CRITERIA -->
+    <section id="criteria" class="bg-surface-alt px-[clamp(20px,5vw,40px)] py-22.5">
+      <div class="mx-auto max-w-[1280px]">
+        <SectionHeading eyebrow="What we audit" title="Five checks every seal has to pass" />
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
+          {
+            criteria.map((c) => (
+              <div class="rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-6.5">
+                <div class="mb-2 flex items-center gap-2 text-base font-bold">
+                  <span class="size-2 rounded-full bg-emerald" />
+                  {c.title}
+                </div>
+                <div class="text-sm leading-relaxed text-ink-muted">{c.desc}</div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFIED CASINOS -->
+    <section class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-22.5">
+      <div class="mb-11 flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">Certified operators</div>
+          <h2 class="text-[32px] font-extrabold tracking-tight sm:text-4xl">Casinos carrying the seal today</h2>
+        </div>
+        <a href="/casinos/" class="whitespace-nowrap text-[15px] font-semibold">View all certified casinos &rarr;</a>
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5.5">
+        {featuredCasinos.map((casino) => <CasinoCard casino={casino} />)}
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-surface-alt px-[clamp(20px,5vw,40px)] py-22.5">
+      <div class="mx-auto max-w-[1280px]">
+        <SectionHeading eyebrow="In their words" title="Operators on getting certified" />
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
+          {
+            testimonials.map((t) => (
+              <div class="rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-6.5">
+                <div class="mb-4.5 text-[15px] leading-relaxed text-[oklch(28%_0.02_250)]">&ldquo;{t.quote}&rdquo;</div>
+                <div class="text-sm font-bold">{t.name}</div>
+                <div class="text-[13px] text-[oklch(50%_0.02_250)]">{t.role}</div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-22.5">
+      <SectionHeading eyebrow="Pricing" title="Certification plans" />
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
+        {plans.map((plan) => <PlanCard plan={plan} featuresCount={4} />)}
+      </div>
+    </section>
+
+    <CtaBand
+      heading="Ready to earn the seal players trust?"
+      subtext="Applications reviewed within 48 hours."
+      ctaLabel="Apply for Certification"
+      ctaHref="/apply/"
+    />
+  </main>
+</Layout>

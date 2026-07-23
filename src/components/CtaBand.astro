@@ -1,0 +1,21 @@
+---
+interface Props {
+  heading: string;
+  subtext?: string;
+  ctaLabel: string;
+  ctaHref: string;
+  size?: "lg" | "md";
+}
+
+const { heading, subtext, ctaLabel, ctaHref, size = "md" } = Astro.props;
+---
+
+<section class:list={["bg-navy px-5 text-center sm:px-[clamp(20px,5vw,40px)]", size === "lg" ? "py-18" : "py-15"]}>
+  <h2 class:list={["mx-auto mb-3.5 max-w-2xl font-extrabold tracking-tight text-white", size === "lg" ? "text-[32px]" : "text-[28px]"]}>
+    {heading}
+  </h2>
+  {subtext && <p class="mb-7 text-base text-[oklch(80%_0.02_250)]">{subtext}</p>}
+  <a href={ctaHref} class:list={["inline-block rounded-[10px] bg-white font-bold text-navy", size === "lg" ? "px-7.5 py-3.5 text-base" : "px-6.5 py-3.5 text-[15px]"]}>
+    {ctaLabel}
+  </a>
+</section>

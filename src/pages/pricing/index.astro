@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PlanCard from "../../components/PlanCard.astro";
+import { plans, billingNotes } from "../../data/content";
+
+const title = "Pricing";
+const description = "Simple, transparent certification pricing. One audit fee, one year of seal coverage, no surprise renewal terms.";
+---
+
+<Layout title={title} description={description} current="pricing">
+  <main>
+    <section class="mx-auto w-full max-w-[700px] px-[clamp(20px,5vw,40px)] pb-10 pt-18 text-center">
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">Pricing</div>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight">Simple, transparent certification pricing</h1>
+      <p class="text-lg leading-relaxed text-ink-muted">One audit fee, one year of seal coverage, no surprise renewal terms.</p>
+    </section>
+
+    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-7.5 pt-5">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
+        {plans.map((plan) => <PlanCard plan={plan} />)}
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-[900px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
+      <h2 class="mb-8 text-center text-[26px] font-extrabold tracking-tight">Billing details</h2>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5">
+        {
+          billingNotes.map((b) => (
+            <div class="rounded-xl border border-[oklch(91%_0.01_250)] bg-white p-5">
+              <div class="mb-1.5 text-[15px] font-bold">{b.title}</div>
+              <div class="text-sm leading-relaxed text-ink-muted">{b.desc}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>

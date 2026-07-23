@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { stages } from "../../data/content";
+
+const title = "How Certification Works";
+const description =
+  "Six stages from application to a live, monitored Swift Secure seal — typically 10–21 days depending on how quickly documentation comes in.";
+---
+
+<Layout title={title} description={description} current="process">
+  <main>
+    <section class="mx-auto w-full max-w-[900px] px-[clamp(20px,5vw,40px)] pb-10 pt-18 text-center">
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">The process</div>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight">How certification works, step by step</h1>
+      <p class="text-lg leading-relaxed text-ink-muted">
+        Six stages from application to a live, monitored seal &mdash; typically 10&ndash;21 days depending on how quickly documentation comes in.
+      </p>
+    </section>
+
+    <section class="mx-auto w-full max-w-[800px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-10">
+      {
+        stages.map((stage, i) => (
+          <div class="relative flex gap-6 pb-10">
+            <div class="flex flex-col items-center">
+              <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy text-[15px] font-extrabold text-white">
+                {stage.n}
+              </div>
+              {i < stages.length - 1 && <div class="mt-1 w-0.5 flex-1 bg-[oklch(88%_0.01_250)]" />}
+            </div>
+            <div class="-mt-0.5 flex-1 rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-6.5">
+              <div class="mb-2 flex flex-wrap items-center justify-between gap-3">
+                <div class="text-lg font-bold">{stage.title}</div>
+                <div class="whitespace-nowrap rounded-full bg-[oklch(94%_0.04_155)] px-2.5 py-1 text-xs font-semibold text-[oklch(45%_0.13_155)]">
+                  {stage.duration}
+                </div>
+              </div>
+              <div class="mb-3 text-sm leading-relaxed text-ink-muted">{stage.desc}</div>
+              <div class="text-[13px] text-[oklch(40%_0.02_250)]">
+                <strong>You provide:</strong> {stage.provide}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </section>
+
+    <CtaBand heading="Ready to start your audit?" ctaLabel="Apply for Certification" ctaHref="/apply/" />
+  </main>
+</Layout>

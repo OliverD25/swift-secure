@@ -1,0 +1,69 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CasinoCard from "../../components/CasinoCard.astro";
+import { casinos } from "../../data/casinos";
+
+const title = "Certified Casinos Directory";
+const description = "Every operator here holds a live Swift Secure seal, re-audited quarterly. Search by casino name or jurisdiction.";
+---
+
+<Layout title={title} description={description} current="casinos">
+  <main>
+    <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">Directory</div>
+      <h1 class="mb-4 text-[38px] font-extrabold tracking-tight">Certified casinos</h1>
+      <p class="text-base leading-relaxed text-ink-muted">
+        Every operator here holds a live Swift Secure seal, re-audited quarterly. Click through to see full certification details.
+      </p>
+    </section>
+
+    <section class="mx-auto w-full max-w-[600px] px-[clamp(20px,5vw,40px)] pb-2.5 pt-5">
+      <input
+        type="text"
+        data-casino-search
+        placeholder="Search by casino name or jurisdiction"
+        aria-label="Search certified casinos"
+        class="w-full rounded-[10px] border border-[oklch(85%_0.01_250)] px-4 py-3.5 text-[15px] font-sans placeholder:text-[oklch(65%_0.01_250)]"
+      />
+    </section>
+
+    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
+      <div data-casino-grid class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5.5">
+        {
+          casinos.map((casino) => (
+            <div data-casino-item data-search={`${casino.name} ${casino.jurisdiction}`.toLowerCase()}>
+              <CasinoCard casino={casino} href="/verify/" />
+            </div>
+          ))
+        }
+      </div>
+      <div data-casino-empty hidden class="py-10 text-center text-sm text-[oklch(50%_0.02_250)]">No casinos match that search.</div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>("[data-casino-search]");
+  const items = document.querySelectorAll<HTMLElement>("[data-casino-item]");
+  const empty = document.querySelector<HTMLElement>("[data-casino-empty]");
+
+  const normalize = (value: string) =>
+    value
+      .trim()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "");
+
+  if (input && empty) {
+    input.addEventListener("input", () => {
+      const q = normalize(input.value);
+      let visibleCount = 0;
+      items.forEach((item) => {
+        const match = !q || normalize(item.dataset.search ?? "").includes(q);
+        item.hidden = !match;
+        if (match) visibleCount++;
+      });
+      empty.hidden = visibleCount !== 0;
+    });
+  }
+</script>

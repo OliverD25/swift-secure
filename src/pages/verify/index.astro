@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Verify a Seal";
+const description = "Enter the seal ID shown on a casino's site to confirm it's genuine and currently certified by Swift Secure.";
+---
+
+<Layout title={title} description={description} current="verify">
+  <main>
+    <section class="mx-auto w-full max-w-[640px] px-6 py-18">
+      <div class="mb-9 text-center">
+        <h1 class="mb-3 text-[34px] font-extrabold tracking-tight">Verify a Seal</h1>
+        <p class="text-base text-ink-muted">Enter the seal ID shown on the casino's site to confirm it's genuine and current.</p>
+      </div>
+
+      <div class="mb-7 flex gap-2.5">
+        <input
+          type="text"
+          data-verify-input
+          placeholder="e.g. CS-2026-0042"
+          aria-label="Seal ID"
+          class="flex-1 rounded-[10px] border border-[oklch(85%_0.01_250)] px-4 py-3.5 text-[15px] font-sans placeholder:text-[oklch(65%_0.01_250)]"
+        />
+        <button
+          type="button"
+          data-verify-btn
+          class="rounded-[10px] bg-navy px-6 py-3.5 text-[15px] font-semibold text-white"
+        >
+          Verify
+        </button>
+      </div>
+
+      <div data-verify-result hidden aria-live="polite">
+        <div data-verify-valid hidden class="rounded-2xl border border-[oklch(80%_0.06_155)] bg-[oklch(94%_0.04_155)] p-6.5">
+          <div class="mb-4 flex items-center gap-2.5">
+            <div class="flex size-7 items-center justify-center rounded-full bg-emerald text-[15px] font-bold text-white">&#10003;</div>
+            <div class="text-[17px] font-bold text-[oklch(30%_0.1_155)]">Valid &amp; active seal</div>
+          </div>
+          <div class="flex flex-col gap-2 text-sm text-[oklch(30%_0.02_250)]">
+            <div><strong>Operator:</strong> Northgate Interactive Ltd.</div>
+            <div><strong>Jurisdiction:</strong> Malta Gaming Authority</div>
+            <div><strong>Certified since:</strong> Mar 2025</div>
+            <div><strong>Next re-audit:</strong> Sep 2026</div>
+          </div>
+        </div>
+        <div data-verify-invalid hidden class="rounded-2xl border border-[oklch(82%_0.06_40)] bg-[oklch(95%_0.03_40)] p-6.5">
+          <div class="mb-4 flex items-center gap-2.5">
+            <div class="flex size-7 items-center justify-center rounded-full bg-amber text-[15px] font-bold text-white">!</div>
+            <div class="text-[17px] font-bold text-[oklch(35%_0.1_40)]">No matching seal found</div>
+          </div>
+          <div class="text-sm text-[oklch(40%_0.02_250)]">
+            No active seal found for that ID. If you believe this is an error, <a href="/apply/">contact us</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>("[data-verify-input]");
+  const button = document.querySelector<HTMLButtonElement>("[data-verify-btn]");
+  const result = document.querySelector<HTMLElement>("[data-verify-result]");
+  const valid = document.querySelector<HTMLElement>("[data-verify-valid]");
+  const invalid = document.querySelector<HTMLElement>("[data-verify-invalid]");
+
+  const runVerify = () => {
+    if (!input || !result || !valid || !invalid) return;
+    const id = input.value.trim().toUpperCase();
+    if (!id) {
+      result.hidden = true;
+      return;
+    }
+    const isValid = id === "CS-2026-0042" || id.endsWith("42");
+    valid.hidden = !isValid;
+    invalid.hidden = isValid;
+    result.hidden = false;
+  };
+
+  button?.addEventListener("click", runVerify);
+  input?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") runVerify();
+  });
+</script>

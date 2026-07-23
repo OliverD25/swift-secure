@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /badge/
+
+Sitemap: https://swiftsecure.example/sitemap-index.xml
