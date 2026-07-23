@@ -14,7 +14,7 @@ interface Props {
 const { title, description, current, noIndex = false } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const pageTitle = title === "Certified & Secure" ? title : `${title} | Certified & Secure`;
+const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
 ---
 
 <!doctype html>
@@ -31,7 +31,7 @@ const pageTitle = title === "Certified & Secure" ? title : `${title} | Certified
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content="Certified & Secure" />
+    <meta property="og:site_name" content="Swift Secure" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />

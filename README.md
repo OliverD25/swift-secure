@@ -1,4 +1,4 @@
-# Certified & Secure (Swift Secure)
+# Swift Secure
 
 Marketing + utility site for the Swift Secure casino trust-seal certification service. Built with **Astro** (static output) and **Tailwind CSS v4**.
 
