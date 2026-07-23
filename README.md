@@ -32,9 +32,26 @@ Interactive bits (language switcher, FAQ accordion, casino search, verify lookup
 | `npm run preview`      | Preview the production build locally         |
 | `npx astro check`      | Type-check `.astro` files                    |
 
+## Deploying
+
+Two independent targets:
+
+| Target | Command | URL | Use for |
+| :--- | :--- | :--- | :--- |
+| GitHub Pages | `git push` | https://oliverd25.github.io/swift-secured-badge/ | The shareable link. Always up. |
+| Home server | `./deploy.sh` | https://swiftsecure.serveousercontent.com/ | Previewing uncommitted work. |
+
+`git push` triggers `.github/workflows/deploy.yml`, which builds with
+`SITE`/`BASE_PATH` set so links resolve under the `/swift-secured-badge/`
+sub-path Pages serves from. Local builds and `./deploy.sh` leave those unset
+and build at the root — see `src/lib/url.ts`.
+
+The home-server preview depends on a serveo tunnel that does not survive a
+reboot. `./tunnel-status.sh --restart` brings it back.
+
 ## Before launch
 
-- **Domain**: `astro.config.mjs` `site:` and `public/robots.txt` use a placeholder domain (`swiftsecure.example`) — update both to the real domain.
+- **Domain**: `public/robots.txt` still hardcodes the placeholder `swiftsecure.example` sitemap URL, and `astro.config.mjs` falls back to it when `SITE` is unset — point both at the real domain once there is one.
 - **Apply form**: `/apply/` currently swaps in a client-side success message on submit only — wire it up to real submission handling (API route, email, or CRM). See the `TODO` in `src/pages/apply/index.astro`.
 - **Verify lookup**: `/verify/` uses the same client-side demo matching as the design prototype (IDs ending in "42" or `CS-2026-0042`) — replace with a real API call to the certification database. See `src/pages/verify/index.astro`.
 - **Casino directory**: `casinos.ts` is a static in-memory list — replace with a real data source when there's one.
