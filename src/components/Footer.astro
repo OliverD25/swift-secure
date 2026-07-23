@@ -12,10 +12,13 @@ const t = useTranslations(locale);
 <footer class="mt-auto border-t border-line-soft bg-surface px-5 py-10 sm:px-[clamp(20px,5vw,40px)]">
   <div class="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4">
     <div class="text-[15px] font-bold">Swift Secure</div>
-    <div class="flex gap-6 text-sm text-[oklch(40%_0.02_250)]">
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[oklch(40%_0.02_250)]">
       <a href={localePath("/verify/", locale)} class="text-inherit hover:text-ink">{t.footer.verifySeal}</a>
       <a href={localePath("/apply/", locale)} class="text-inherit hover:text-ink">{t.footer.apply}</a>
       <a href={localePath("/faq/", locale)} class="text-inherit hover:text-ink">{t.footer.faq}</a>
+      {/* Brand-asset reference. Reuses the badge page's own eyebrow so the
+          label is already translated in all 19 locales. */}
+      <a href={localePath("/badge/", locale)} class="text-inherit hover:text-ink">{t.badge.eyebrow}</a>
     </div>
     <div class="text-[13px] text-[oklch(55%_0.02_250)]">&copy; {new Date().getUTCFullYear()} Swift Secure</div>
   </div>
