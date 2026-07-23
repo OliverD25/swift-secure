@@ -12,7 +12,7 @@ interface Props {
 const { heading, subtext, ctaLabel, ctaHref, size = "md" } = Astro.props;
 ---
 
-<section class:list={["bg-navy px-5 text-center sm:px-[clamp(20px,5vw,40px)]", size === "lg" ? "py-18" : "py-15"]}>
+<section data-cta-band class:list={["bg-navy px-5 text-center sm:px-[clamp(20px,5vw,40px)]", size === "lg" ? "py-18" : "py-15"]}>
   <h2 class:list={["mx-auto mb-3.5 max-w-2xl font-extrabold tracking-tight text-white", size === "lg" ? "text-[32px]" : "text-[28px]"]}>
     {heading}
   </h2>

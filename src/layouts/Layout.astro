@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import StickyCta from "../components/StickyCta.astro";
 import { withBase } from "../lib/url";
 import "../styles/global.css";
 
@@ -15,6 +16,9 @@ const { title, description, current, noIndex = false } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
+
+// Pointless on the application form itself — the visitor has already converted.
+const showStickyCta = !Astro.url.pathname.includes("/apply");
 ---
 
 <!doctype html>
@@ -45,5 +49,6 @@ const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
     <Header current={current} />
     <slot />
     <Footer />
+    {showStickyCta && <StickyCta />}
   </body>
 </html>

@@ -1,0 +1,64 @@
+---
+import { withBase } from "../lib/url";
+---
+
+<div
+  data-sticky-cta
+  class="pointer-events-none fixed inset-x-0 bottom-0 z-30 translate-y-full border-t border-white/10 bg-navy/95 px-4 py-3 backdrop-blur-sm transition-transform duration-200 motion-reduce:transition-none"
+  aria-hidden="true"
+>
+  <div class="mx-auto flex max-w-[1280px] items-center justify-between gap-4">
+    <div class="hidden text-sm text-[oklch(85%_0.02_250)] sm:block">Applications reviewed within 48 hours.</div>
+    <a
+      href={withBase("/apply/")}
+      tabindex="-1"
+      class="w-full rounded-lg bg-white px-6 py-3 text-center text-[15px] font-bold text-navy sm:w-auto"
+    >
+      Apply for Certification
+    </a>
+  </div>
+</div>
+
+<script>
+  const bar = document.querySelector<HTMLElement>("[data-sticky-cta]");
+  const band = document.querySelector<HTMLElement>("[data-cta-band]");
+  const footer = document.querySelector("footer");
+
+  if (bar) {
+    const link = bar.querySelector<HTMLAnchorElement>("a");
+    // Roughly one screen of scrolling — long enough that the bar does not
+    // cover the hero, which already carries its own primary CTA.
+    const SHOW_AFTER = 600;
+
+    // The in-page band and the footer are the two places a duplicate CTA
+    // would look wrong, so the bar yields whenever either is on screen.
+    let blockedByBand = false;
+    let blockedByFooter = false;
+
+    const apply = () => {
+      const show = window.scrollY > SHOW_AFTER && !blockedByBand && !blockedByFooter;
+      bar.classList.toggle("translate-y-full", !show);
+      bar.classList.toggle("pointer-events-none", !show);
+      bar.setAttribute("aria-hidden", String(!show));
+      // Keep the offscreen bar out of the tab order.
+      if (link) link.tabIndex = show ? 0 : -1;
+    };
+
+    const watch = (el: Element | null, set: (v: boolean) => void) => {
+      if (!el) return;
+      new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) set(entry.isIntersecting);
+          apply();
+        },
+        { rootMargin: "0px" },
+      ).observe(el);
+    };
+
+    watch(band, (v) => (blockedByBand = v));
+    watch(footer, (v) => (blockedByFooter = v));
+
+    window.addEventListener("scroll", apply, { passive: true });
+    apply();
+  }
+</script>
