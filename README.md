@@ -38,11 +38,11 @@ Two independent targets:
 
 | Target | Command | URL | Use for |
 | :--- | :--- | :--- | :--- |
-| GitHub Pages | `git push` | https://oliverd25.github.io/swift-secured-badge/ | The shareable link. Always up. |
+| GitHub Pages | `git push` | https://oliverd25.github.io/swift-secure/ | The shareable link. Always up. |
 | Home server | `./deploy.sh` | https://swiftsecure.serveousercontent.com/ | Previewing uncommitted work. |
 
 `git push` triggers `.github/workflows/deploy.yml`, which builds with
-`SITE`/`BASE_PATH` set so links resolve under the `/swift-secured-badge/`
+`SITE`/`BASE_PATH` set so links resolve under the `/swift-secure/`
 sub-path Pages serves from. Local builds and `./deploy.sh` leave those unset
 and build at the root — see `src/lib/url.ts`.
 
