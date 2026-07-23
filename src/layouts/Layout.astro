@@ -12,10 +12,9 @@ interface Props {
   title: string;
   description: string;
   current?: "process" | "pricing" | "about" | "faq" | "casinos" | "verify";
-  noIndex?: boolean;
 }
 
-const { locale, path, title, description, current, noIndex = false } = Astro.props;
+const { locale, path, title, description, current } = Astro.props;
 const lang = getLanguage(locale);
 
 const abs = (p: string) => new URL(p, Astro.site).toString();
@@ -33,7 +32,6 @@ const showStickyCta = !path.startsWith("/apply");
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
     {
       /* Tell search engines this page exists in 19 languages, so the right one

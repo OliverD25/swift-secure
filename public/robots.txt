@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Internal brand-asset reference, not customer-facing. One rule per locale
-# prefix is unnecessary — a trailing wildcard covers /badge/ and /<lang>/badge/.
-Disallow: /badge/
-Disallow: /*/badge/
-
 Sitemap: https://swiftsecure.example/sitemap-index.xml

@@ -24,11 +24,7 @@ export default defineConfig({
     // English lives at the root; every other locale gets a /<code>/ prefix.
     routing: { prefixDefaultLocale: false },
   },
-  integrations: [
-    sitemap({
-      filter: (page) => !page.includes('/badge/'),
-    }),
-  ],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
