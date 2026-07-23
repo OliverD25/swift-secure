@@ -2,27 +2,31 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import StickyCta from "../components/StickyCta.astro";
-import { withBase } from "../lib/url";
+import { localePath, languages, getLanguage, defaultLocale } from "../i18n";
 import "../styles/global.css";
 
 interface Props {
+  locale: string;
+  /** Route without any locale prefix, e.g. "/" or "/about/". Used for hreflang. */
+  path: string;
   title: string;
   description: string;
   current?: "process" | "pricing" | "about" | "faq" | "casinos" | "verify";
   noIndex?: boolean;
 }
 
-const { title, description, current, noIndex = false } = Astro.props;
+const { locale, path, title, description, current, noIndex = false } = Astro.props;
+const lang = getLanguage(locale);
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const abs = (p: string) => new URL(p, Astro.site).toString();
+const canonicalURL = abs(localePath(path, locale));
 const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
 
-// Pointless on the application form itself — the visitor has already converted.
-const showStickyCta = !Astro.url.pathname.includes("/apply");
+const showStickyCta = !path.startsWith("/apply");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang.htmlLang} dir={lang.dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,24 +35,32 @@ const showStickyCta = !Astro.url.pathname.includes("/apply");
     <link rel="canonical" href={canonicalURL} />
     {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
+    {
+      /* Tell search engines this page exists in 19 languages, so the right one
+         is surfaced per user rather than them competing as duplicates. */
+      languages.map((l) => <link rel="alternate" hreflang={l.htmlLang} href={abs(localePath(path, l.locale))} />)
+    }
+    <link rel="alternate" hreflang="x-default" href={abs(localePath(path, defaultLocale))} />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="Swift Secure" />
+    <meta property="og:locale" content={lang.htmlLang.replace("-", "_")} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
-    <link rel="icon" href={withBase("/favicon.ico")} sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href={localePath("/favicon.svg", defaultLocale)} />
+    <link rel="icon" href={localePath("/favicon.ico", defaultLocale)} sizes="32x32" />
     <meta name="theme-color" content="oklch(30% 0.06 250)" />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="flex min-h-screen flex-col font-sans text-ink">
-    <Header current={current} />
+    <Header locale={locale} path={path} current={current} />
     <slot />
-    <Footer />
-    {showStickyCta && <StickyCta />}
+    <Footer locale={locale} />
+    {showStickyCta && <StickyCta locale={locale} />}
   </body>
 </html>

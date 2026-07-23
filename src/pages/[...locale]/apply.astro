@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { useTranslations, localeStaticPaths } from "../../i18n";
+
+export const getStaticPaths = () => localeStaticPaths();
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const [successBefore, successAfter] = t.apply.successBody.split("{email}");
+const fieldClass =
+  "rounded-lg border border-[oklch(85%_0.01_250)] px-3.5 py-3 text-sm font-sans placeholder:text-[oklch(65%_0.01_250)]";
+const labelClass = "text-[13px] font-semibold text-[oklch(35%_0.02_250)]";
+---
+
+<Layout locale={locale} path="/apply/" title={t.apply.title} description={t.apply.description}>
+  <main>
+    <section class="mx-auto w-full max-w-[640px] px-6 py-16">
+      <div class="mb-9">
+        <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.apply.eyebrow}</div>
+        <h1 class="mb-2.5 text-[32px] font-extrabold tracking-tight">{t.apply.h1}</h1>
+        <p class="text-[15px] text-ink-muted">{t.apply.sub}</p>
+      </div>
+
+      <form data-apply-form class="flex flex-col gap-4.5" novalidate>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label for="name" class={labelClass}>{t.apply.fieldName}</label>
+            <input id="name" name="name" type="text" required placeholder={t.apply.fieldNamePlaceholder} class={fieldClass} />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="website" class={labelClass}>{t.apply.fieldWebsite}</label>
+            <input id="website" name="website" type="url" required placeholder="https://" class={fieldClass} />
+          </div>
+        </div>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label for="jurisdiction" class={labelClass}>{t.apply.fieldJurisdiction}</label>
+            <input
+              id="jurisdiction"
+              name="jurisdiction"
+              type="text"
+              required
+              placeholder={t.apply.fieldJurisdictionPlaceholder}
+              class={fieldClass}
+            />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="email" class={labelClass}>{t.apply.fieldEmail}</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" class={fieldClass} />
+          </div>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label for="message" class={labelClass}>{t.apply.fieldMessage}</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder={t.apply.fieldMessagePlaceholder}
+            class={`resize-y ${fieldClass}`}></textarea>
+        </div>
+        <button type="submit" class="mt-1.5 rounded-[10px] bg-navy py-4 text-[15px] font-semibold text-white">{t.apply.submit}</button>
+      </form>
+
+      <div data-apply-success hidden class="rounded-2xl border border-[oklch(80%_0.06_155)] bg-[oklch(94%_0.04_155)] px-6 py-12 text-center">
+        <div class="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-emerald text-[22px] font-bold text-white">&#10003;</div>
+        <div class="mb-2 text-[19px] font-bold">{t.apply.successTitle}</div>
+        <div class="text-sm text-[oklch(35%_0.06_155)]">
+          {successBefore}<span data-apply-email></span>{successAfter}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-apply-form]");
+  const success = document.querySelector<HTMLElement>("[data-apply-success]");
+  const emailSpan = document.querySelector<HTMLElement>("[data-apply-email]");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const email = (form.querySelector<HTMLInputElement>("#email")?.value ?? "").trim();
+    if (emailSpan && email) emailSpan.textContent = email;
+
+    // TODO: wire this up to real submission handling (API route, email, or CRM)
+    // before launch — this currently only swaps in a client-side confirmation.
+    form.hidden = true;
+    if (success) success.hidden = false;
+  });
+</script>

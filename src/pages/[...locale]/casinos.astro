@@ -2,27 +2,28 @@
 import Layout from "../../layouts/Layout.astro";
 import CasinoCard from "../../components/CasinoCard.astro";
 import { casinos } from "../../data/casinos";
+import { useTranslations, localeStaticPaths } from "../../i18n";
 
-const title = "Certified Casinos Directory";
-const description = "Every operator here holds a live Swift Secure seal, re-audited quarterly. Search by casino name or jurisdiction.";
+export const getStaticPaths = () => localeStaticPaths();
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
 ---
 
-<Layout title={title} description={description} current="casinos">
+<Layout locale={locale} path="/casinos/" title={t.casinos.title} description={t.casinos.description} current="casinos">
   <main>
     <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">Directory</div>
-      <h1 class="mb-4 text-[38px] font-extrabold tracking-tight">Certified casinos</h1>
-      <p class="text-base leading-relaxed text-ink-muted">
-        Every operator here holds a live Swift Secure seal, re-audited quarterly. Click through to see full certification details.
-      </p>
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.casinos.eyebrow}</div>
+      <h1 class="mb-4 text-[38px] font-extrabold tracking-tight">{t.casinos.h1}</h1>
+      <p class="text-base leading-relaxed text-ink-muted">{t.casinos.sub}</p>
     </section>
 
     <section class="mx-auto w-full max-w-[600px] px-[clamp(20px,5vw,40px)] pb-2.5 pt-5">
       <input
         type="text"
         data-casino-search
-        placeholder="Search by casino name or jurisdiction"
-        aria-label="Search certified casinos"
+        placeholder={t.casinos.searchPlaceholder}
+        aria-label={t.casinos.searchLabel}
         class="w-full rounded-[10px] border border-[oklch(85%_0.01_250)] px-4 py-3.5 text-[15px] font-sans placeholder:text-[oklch(65%_0.01_250)]"
       />
     </section>
@@ -32,12 +33,12 @@ const description = "Every operator here holds a live Swift Secure seal, re-audi
         {
           casinos.map((casino) => (
             <div data-casino-item data-search={`${casino.name} ${casino.jurisdiction}`.toLowerCase()}>
-              <CasinoCard casino={casino} href="/verify/" />
+              <CasinoCard locale={locale} casino={casino} href="/verify/" />
             </div>
           ))
         }
       </div>
-      <div data-casino-empty hidden class="py-10 text-center text-sm text-[oklch(50%_0.02_250)]">No casinos match that search.</div>
+      <div data-casino-empty hidden class="py-10 text-center text-sm text-[oklch(50%_0.02_250)]">{t.casinos.empty}</div>
     </section>
   </main>
 </Layout>

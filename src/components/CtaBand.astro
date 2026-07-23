@@ -1,7 +1,8 @@
 ---
-import { withBase } from "../lib/url";
+import { localePath } from "../i18n";
 
 interface Props {
+  locale: string;
   heading: string;
   subtext?: string;
   ctaLabel: string;
@@ -9,7 +10,7 @@ interface Props {
   size?: "lg" | "md";
 }
 
-const { heading, subtext, ctaLabel, ctaHref, size = "md" } = Astro.props;
+const { locale, heading, subtext, ctaLabel, ctaHref, size = "md" } = Astro.props;
 ---
 
 <section data-cta-band class:list={["bg-navy px-5 text-center sm:px-[clamp(20px,5vw,40px)]", size === "lg" ? "py-18" : "py-15"]}>
@@ -17,7 +18,10 @@ const { heading, subtext, ctaLabel, ctaHref, size = "md" } = Astro.props;
     {heading}
   </h2>
   {subtext && <p class="mb-7 text-base text-[oklch(80%_0.02_250)]">{subtext}</p>}
-  <a href={withBase(ctaHref)} class:list={["inline-block rounded-[10px] bg-white font-bold text-navy", size === "lg" ? "px-7.5 py-3.5 text-base" : "px-6.5 py-3.5 text-[15px]"]}>
+  <a
+    href={localePath(ctaHref, locale)}
+    class:list={["inline-block rounded-[10px] bg-white font-bold text-navy", size === "lg" ? "px-7.5 py-3.5 text-base" : "px-6.5 py-3.5 text-[15px]"]}
+  >
     {ctaLabel}
   </a>
 </section>

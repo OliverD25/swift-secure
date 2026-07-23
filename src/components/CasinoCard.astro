@@ -1,13 +1,15 @@
 ---
 import type { Casino } from "../data/casinos";
-import { withBase } from "../lib/url";
+import { useTranslations, localePath } from "../i18n";
 
 interface Props {
+  locale: string;
   casino: Casino;
   href?: string;
 }
 
-const { casino, href } = Astro.props;
+const { locale, casino, href } = Astro.props;
+const t = useTranslations(locale);
 ---
 
 <div class="rounded-2xl border border-line bg-white p-5.5">
@@ -30,12 +32,15 @@ const { casino, href } = Astro.props;
         <path d="M8.5 12L11 14.5L16 9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <span class="text-[12.5px] font-semibold text-[oklch(35%_0.1_155)]">Certified since {casino.since}</span>
+    <span class="text-[12.5px] font-semibold text-[oklch(35%_0.1_155)]">{t.common.certifiedSince} {casino.since}</span>
   </div>
   {
     href && (
-      <a href={withBase(href)} class="block rounded-lg border border-[oklch(88%_0.01_250)] py-2.5 text-center text-[13px] font-semibold text-navy">
-        View seal record &rarr;
+      <a
+        href={localePath(href, locale)}
+        class="block rounded-lg border border-[oklch(88%_0.01_250)] py-2.5 text-center text-[13px] font-semibold text-navy"
+      >
+        {t.common.viewSealRecord} &rarr;
       </a>
     )
   }

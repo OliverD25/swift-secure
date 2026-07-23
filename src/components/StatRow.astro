@@ -1,16 +1,18 @@
 ---
-import { stats } from "../data/content";
+import { useTranslations } from "../i18n";
 
 interface Props {
+  locale: string;
   variant?: "dark" | "light";
 }
 
-const { variant = "dark" } = Astro.props;
+const { locale, variant = "dark" } = Astro.props;
+const t = useTranslations(locale);
 ---
 
 <div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-6 text-center">
   {
-    stats.map((s) => (
+    t.stats.map((s) => (
       <div>
         <div class:list={["text-[32px] font-extrabold", variant === "dark" ? "text-white" : "text-navy"]}>{s.value}</div>
         <div class:list={["mt-1 text-sm", variant === "dark" ? "text-[oklch(80%_0.02_250)]" : "text-ink-muted"]}>{s.label}</div>

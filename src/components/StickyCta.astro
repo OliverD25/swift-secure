@@ -1,5 +1,12 @@
 ---
-import { withBase } from "../lib/url";
+import { useTranslations, localePath } from "../i18n";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
 ---
 
 <div
@@ -8,13 +15,13 @@ import { withBase } from "../lib/url";
   aria-hidden="true"
 >
   <div class="mx-auto flex max-w-[1280px] items-center justify-between gap-4">
-    <div class="hidden text-sm text-[oklch(85%_0.02_250)] sm:block">Applications reviewed within 48 hours.</div>
+    <div class="hidden text-sm text-[oklch(85%_0.02_250)] sm:block">{t.stickyCta.note}</div>
     <a
-      href={withBase("/apply/")}
+      href={localePath("/apply/", locale)}
       tabindex="-1"
       class="w-full rounded-lg bg-white px-6 py-3 text-center text-[15px] font-bold text-navy sm:w-auto"
     >
-      Apply for Certification
+      {t.stickyCta.button}
     </a>
   </div>
 </div>

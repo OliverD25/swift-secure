@@ -1,45 +1,41 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import StatRow from "../../components/StatRow.astro";
-import { team } from "../../data/content";
+import { useTranslations, localeStaticPaths } from "../../i18n";
 
-const title = "About Us";
-const description = "An independent check on new casinos, since 2020. We built the audit that both players and casinos trust.";
+export const getStaticPaths = () => localeStaticPaths();
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
 ---
 
-<Layout title={title} description={description} current="about">
+<Layout locale={locale} path="/about/" title={t.about.title} description={t.about.description} current="about">
   <main>
     <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-7.5 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">About us</div>
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight">An independent check on new casinos, since 2020</h1>
-      <p class="text-lg leading-relaxed text-ink-muted">
-        We started because players had no fast way to tell a legitimate new operator from a shell site. We built the audit players and casinos both trust.
-      </p>
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.about.eyebrow}</div>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight">{t.about.h1}</h1>
+      <p class="text-lg leading-relaxed text-ink-muted">{t.about.sub}</p>
     </section>
 
     <section class="mx-auto grid w-full max-w-[900px] grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-8 px-[clamp(20px,5vw,40px)] py-7.5">
       <div class="rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-7">
-        <div class="mb-2.5 text-lg font-bold">Independent by design</div>
-        <div class="text-sm leading-relaxed text-ink-muted">
-          We take no revenue share or referral fees from certified operators. The audit fee is flat, so our findings can't be bought.
-        </div>
+        <div class="mb-2.5 text-lg font-bold">{t.about.card1Title}</div>
+        <div class="text-sm leading-relaxed text-ink-muted">{t.about.card1Body}</div>
       </div>
       <div class="rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-7">
-        <div class="mb-2.5 text-lg font-bold">Rigorous, not slow</div>
-        <div class="text-sm leading-relaxed text-ink-muted">
-          Our audit team is ex-regulators and RNG engineers. We built the process to be thorough in days, not months.
-        </div>
+        <div class="mb-2.5 text-lg font-bold">{t.about.card2Title}</div>
+        <div class="text-sm leading-relaxed text-ink-muted">{t.about.card2Body}</div>
       </div>
     </section>
 
     <section class="bg-surface-alt px-[clamp(20px,5vw,40px)] py-17.5">
       <div class="mx-auto max-w-[1100px]">
         <div class="mx-auto mb-11 max-w-[600px] text-center">
-          <h2 class="text-[32px] font-extrabold tracking-tight">The audit team</h2>
+          <h2 class="text-[32px] font-extrabold tracking-tight">{t.about.teamTitle}</h2>
         </div>
         <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
           {
-            team.map((m) => (
+            t.team.map((m) => (
               <div class="rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-6 text-center">
                 <div class="mx-auto mb-3.5 flex size-16 items-center justify-center rounded-full bg-[oklch(90%_0.02_155)] text-xl font-extrabold text-[oklch(35%_0.1_155)]">
                   {m.initials}
@@ -55,7 +51,7 @@ const description = "An independent check on new casinos, since 2020. We built t
     </section>
 
     <section class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-17.5">
-      <StatRow variant="light" />
+      <StatRow locale={locale} variant="light" />
     </section>
   </main>
 </Layout>

@@ -1,15 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import CtaBand from "../../components/CtaBand.astro";
-import { faqs } from "../../data/content";
+import { useTranslations, localeStaticPaths } from "../../i18n";
 
-const title = "FAQ";
-const description = "Frequently asked questions about Swift Secure certification: cost, timeline, re-audits, and seal verification.";
+export const getStaticPaths = () => localeStaticPaths();
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: t.faqs.map((faq) => ({
     "@type": "Question",
     name: faq.q,
     acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -17,29 +19,27 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} current="faq">
+<Layout locale={locale} path="/faq/" title={t.faqPage.title} description={t.faqPage.description} current="faq">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main>
     <section class="mx-auto w-full max-w-[700px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">FAQ</div>
-      <h1 class="text-[38px] font-extrabold tracking-tight">Frequently asked questions</h1>
+      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.faqPage.eyebrow}</div>
+      <h1 class="text-[38px] font-extrabold tracking-tight">{t.faqPage.h1}</h1>
     </section>
 
     <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
       <div data-faq-list>
         {
-          faqs.map((faq, i) => (
+          t.faqs.map((faq, i) => (
             <div class="border-b border-line-soft" data-faq-item>
               <button
                 type="button"
                 data-faq-toggle
                 aria-expanded={i === 0 ? "true" : "false"}
-                class="flex w-full items-center justify-between gap-4 py-5 text-left"
+                class="flex w-full items-center justify-between gap-4 py-5 text-start"
               >
                 <span class="text-base font-semibold">{faq.q}</span>
-                <span data-faq-symbol class="shrink-0 text-lg text-[oklch(50%_0.02_250)]">
-                  {i === 0 ? "−" : "+"}
-                </span>
+                <span data-faq-symbol class="shrink-0 text-lg text-[oklch(50%_0.02_250)]">{i === 0 ? "−" : "+"}</span>
               </button>
               <div data-faq-answer hidden={i !== 0} class="pb-5 text-sm leading-relaxed text-ink-muted">
                 {faq.a}
@@ -50,7 +50,7 @@ const faqJsonLd = {
       </div>
     </section>
 
-    <CtaBand heading="Still have questions?" ctaLabel="Get in touch" ctaHref="/apply/" />
+    <CtaBand locale={locale} heading={t.faqPage.ctaHeading} ctaLabel={t.faqPage.ctaButton} ctaHref="/apply/" />
   </main>
 </Layout>
 
