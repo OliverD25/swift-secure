@@ -23,7 +23,7 @@ const nl: Translation = {
     button: "Certificering aanvragen",
   },
   seal: {
-    certified: "GECERTIFICEERD",
+    certified: "Gecertificeerd",
   },
   common: {
     certifiedSince: "Gecertificeerd sinds",

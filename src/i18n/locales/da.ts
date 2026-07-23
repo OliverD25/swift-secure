@@ -23,7 +23,7 @@ const da: Translation = {
     button: "Ansøg om certificering",
   },
   seal: {
-    certified: "CERTIFICERET",
+    certified: "Certificeret",
   },
   common: {
     certifiedSince: "Certificeret siden",

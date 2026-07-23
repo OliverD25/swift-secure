@@ -23,7 +23,7 @@ const sv: Translation = {
     button: "Ansök om certifiering",
   },
   seal: {
-    certified: "CERTIFIERAD",
+    certified: "Certifierad",
   },
   common: {
     certifiedSince: "Certifierad sedan",

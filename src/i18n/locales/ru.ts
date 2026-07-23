@@ -23,7 +23,7 @@ const ru: Translation = {
     button: "Подать заявку",
   },
   seal: {
-    certified: "СЕРТИФИЦИРОВАНО",
+    certified: "Сертифицировано",
   },
   common: {
     certifiedSince: "Сертифицировано с",

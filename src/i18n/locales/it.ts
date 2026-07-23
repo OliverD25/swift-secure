@@ -23,7 +23,7 @@ const it: Translation = {
     button: "Richiedi la certificazione",
   },
   seal: {
-    certified: "CERTIFICATO",
+    certified: "Certificato",
   },
   common: {
     certifiedSince: "Certificato dal",

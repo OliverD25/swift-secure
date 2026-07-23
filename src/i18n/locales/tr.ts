@@ -23,7 +23,7 @@ const tr: Translation = {
     button: "Sertifikasyon için başvur",
   },
   seal: {
-    certified: "SERTİFİKALI",
+    certified: "Sertifikalı",
   },
   common: {
     certifiedSince: "Sertifika tarihi",
