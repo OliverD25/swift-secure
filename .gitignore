@@ -26,3 +26,4 @@ pnpm-debug.log*
 # crawler
 crawler/node_modules/
 crawler/reports/
+.screenshots/
