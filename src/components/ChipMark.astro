@@ -1,0 +1,75 @@
+---
+/**
+ * The Swift Secure casino-chip mark.
+ *
+ * `kind` picks the geometry: "mark" is the standalone logo (checkmark inside),
+ * "seal" is the ring only — the badge composes it with an HTML text stack on
+ * top, so the wordmark stays real text and can be translated.
+ */
+interface Props {
+  size: number;
+  kind?: "mark" | "seal";
+  variant?: "filled" | "outline";
+  color?: string;
+  class?: string;
+}
+
+const { size, kind = "mark", variant = "filled", color, class: className = "" } = Astro.props;
+
+const BRAND_GREEN = "#0e7a3f";
+const OUTLINE_GREEN = "oklch(65% 0.15 155)";
+
+const ink = color ?? (variant === "outline" ? OUTLINE_GREEN : BRAND_GREEN);
+// On the filled mark the rim notches and checkmark are knocked out in white;
+// the outline variant is single-colour, so everything is drawn in `ink`.
+const detail = variant === "outline" ? ink : "#fff";
+
+// The outline variant sits slightly inside the filled one: its outer edge is a
+// 6px stroke rather than a fill, so the rim pulls in to keep the same optical
+// weight against a dark background.
+const geometry =
+  variant === "outline"
+    ? { disc: 96, rim: 82, rimWidth: 20, inner: 68, innerWidth: 3 }
+    : { mark: { disc: 92, rim: 76, rimWidth: 26, inner: 58, innerWidth: 5 }, seal: { disc: 98, rim: 84, rimWidth: 24, inner: 68, innerWidth: 4 } }[kind];
+
+// Six notches, evenly spaced. Deriving the dash array from the circumference
+// keeps the pattern closing exactly at 0°; a hand-written value that does not
+// divide evenly leaves the wrapped dash butted against the first one, which
+// renders as a single notch up to 1.6x wider than the rest.
+const SEGMENTS = 6;
+const NOTCH_DUTY = 0.625;
+const segment = (2 * Math.PI * geometry.rim) / SEGMENTS;
+const dashArray = `${(segment * NOTCH_DUTY).toFixed(2)} ${(segment * (1 - NOTCH_DUTY)).toFixed(2)}`;
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 200 200"
+  fill="none"
+  aria-hidden="true"
+  class:list={["shrink-0", className]}
+>
+  {
+    variant === "outline" ? (
+      <circle cx="100" cy="100" r="96" fill="none" stroke={ink} stroke-width="6" />
+    ) : (
+      <circle cx="100" cy="100" r={geometry.disc} fill={ink} />
+    )
+  }
+  <circle
+    cx="100"
+    cy="100"
+    r={geometry.rim}
+    fill="none"
+    stroke={detail}
+    stroke-width={geometry.rimWidth}
+    stroke-dasharray={dashArray}
+  />
+  <circle cx="100" cy="100" r={geometry.inner} fill="none" stroke={detail} stroke-width={geometry.innerWidth} />
+  {
+    kind === "mark" && (
+      <path d="M74 100 L94 122 L134 76" fill="none" stroke={detail} stroke-width="13" stroke-linecap="square" />
+    )
+  }
+</svg>

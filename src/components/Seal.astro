@@ -1,4 +1,5 @@
 ---
+import ChipMark from "./ChipMark.astro";
 import { useTranslations } from "../i18n";
 
 interface Props {
@@ -11,11 +12,26 @@ interface Props {
 const { locale, variant = "primary", size, class: className = "" } = Astro.props;
 const t = useTranslations(locale);
 
-const shieldPath = "M12 2L4 5V11C4 16.5 7.5 20.7 12 22C16.5 20.7 20 16.5 20 11V5L12 2Z";
-const boltPath = "M13 6.5L8.5 13H11.5L10.5 17.5L15.5 11H12.5L13 6.5Z";
+const isDark = variant === "dark";
+const diameter = size ?? (isDark ? 160 : 200);
 
-const diameter = size ?? (variant === "dark" ? 160 : 200);
-const iconSize = variant === "dark" ? 38 : 46;
+// The badge is a chip ring with the wordmark stacked on top as real HTML rather
+// than SVG <text>, so it stays translatable and reflows per locale. Type is
+// expressed as a fraction of the diameter so the lockup holds at any size.
+const frac = (atDesignSize: number, designDiameter: number) => (atDesignSize / designDiameter) * diameter;
+
+const checkPx = isDark ? frac(24, 160) : frac(34, 200);
+const titlePx = isDark ? frac(11, 160) : frac(14, 200);
+const subBasePx = isDark ? frac(8, 160) : frac(9, 200);
+
+// "CERTIFIED" is 9 characters; several localisations run far longer
+// ("СЕРТИФИЦИРОВАНО" is 15) and would cross the inner ring at the design size.
+// Estimating the rendered width from character count lets the sub-line step
+// down just enough to stay inside, instead of clipping or overlapping the rim.
+const SUB_ADVANCE = 0.86; // measured average advance per char, including the 0.14em tracking
+const usableWidth = 0.51 * diameter; // chord available inside the inner ring at the sub-line's offset
+const estimatedWidth = t.seal.certified.length * SUB_ADVANCE * subBasePx;
+const subPx = Math.min(subBasePx, (usableWidth / estimatedWidth) * subBasePx);
 ---
 
 {
@@ -26,55 +42,42 @@ const iconSize = variant === "dark" ? 38 : 46;
         className,
       ]}
     >
-      <div class="flex size-7 shrink-0 items-center justify-center rounded-lg bg-emerald">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d={boltPath} fill="white" />
-        </svg>
-      </div>
+      <ChipMark size={28} kind="mark" />
       <span class="text-sm font-bold text-[oklch(25%_0.05_250)]">Swift Secure</span>
       <span class="text-xs font-semibold text-ink-muted">{t.seal.certified}</span>
     </div>
   ) : (
-    <div
-      class:list={[
-        "flex flex-col items-center justify-center gap-2 rounded-full text-center",
-        variant === "dark" ? "border-2 border-[oklch(60%_0.15_155)]" : "border-[3px] border-emerald bg-white",
-        className,
-      ]}
-      style={{ width: `${diameter}px`, height: `${diameter}px` }}
-    >
-      <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        {variant === "dark" ? (
-          <>
-            <path d={shieldPath} stroke="oklch(65% 0.15 155)" stroke-width="1.4" />
-            <path d={boltPath} fill="oklch(65% 0.15 155)" />
-          </>
-        ) : (
-          <>
-            <path d={shieldPath} fill="var(--color-emerald)" />
-            <path d={boltPath} fill="white" />
-          </>
-        )}
-      </svg>
-      <span
-        class:list={[
-          "px-2 text-sm font-extrabold tracking-wide",
-          variant === "dark" ? "text-white" : "text-[oklch(25%_0.05_250)]",
-        ]}
-      >
-        SWIFT SECURE
-      </span>
-      <span
-        class:list={[
-          // Uppercased in CSS rather than in the copy, so the browser applies
-          // each locale's own casing rules (e.g. Turkish i → İ) and scripts
-          // without case are left untouched.
-          "px-2 text-[10px] font-semibold uppercase tracking-[0.1em]",
-          variant === "dark" ? "text-[oklch(70%_0.02_250)]" : "text-[oklch(55%_0.02_250)]",
-        ]}
-      >
-        {t.seal.certified}
-      </span>
+    <div class:list={["relative shrink-0", className]} style={{ width: `${diameter}px`, height: `${diameter}px` }}>
+      <ChipMark size={diameter} kind="seal" variant={isDark ? "outline" : "filled"} />
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-[1.5%] text-center">
+        <svg width={checkPx} height={checkPx} viewBox="0 0 60 60" fill="none" aria-hidden="true" class="shrink-0">
+          <path
+            d="M14 30 L26 43 L48 17"
+            fill="none"
+            stroke={isDark ? "oklch(65% 0.15 155)" : "#fff"}
+            stroke-width="8"
+            stroke-linecap="square"
+          />
+        </svg>
+        <span
+          class="whitespace-nowrap font-extrabold leading-none text-white"
+          style={{ fontSize: `${titlePx.toFixed(2)}px`, letterSpacing: "0.03em" }}
+        >
+          SWIFT SECURE
+        </span>
+        <span
+          class:list={[
+            // Uppercased in CSS rather than in the copy, so the browser applies
+            // each locale's own casing rules (e.g. Turkish i → İ) and scripts
+            // without case are left untouched.
+            "whitespace-nowrap font-semibold uppercase leading-none",
+            isDark ? "text-[oklch(70%_0.02_250)]" : "text-[oklch(88%_0.06_155)]",
+          ]}
+          style={{ fontSize: `${subPx.toFixed(2)}px`, letterSpacing: "0.14em" }}
+        >
+          {t.seal.certified}
+        </span>
+      </div>
     </div>
   )
 }
