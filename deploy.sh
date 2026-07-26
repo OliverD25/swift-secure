@@ -7,6 +7,17 @@ SERVER="${DEPLOY_SERVER:-rde@192.168.88.166}"
 REMOTE_DIR="swift-secure-site"
 PUBLIC_URL="https://swiftsecure.serveousercontent.com/"
 
+# Git Bash on Windows sets HOME to the repo drive, not the Windows profile, so
+# ssh looks for keys and config in the wrong place and falls back to a password
+# prompt. Point it at the profile copies when the local HOME has no key.
+WIN_SSH="${USERPROFILE:-/c/Users/$USER}"
+WIN_SSH="${WIN_SSH//\\//}"
+WIN_SSH="$(printf '%s' "$WIN_SSH" | sed 's|^\([A-Za-z]\):|/\L\1|')/.ssh"
+SSH_OPTS="${DEPLOY_SSH_OPTS:-}"
+if [ -z "$SSH_OPTS" ] && [ ! -f "$HOME/.ssh/id_ed25519" ] && [ -f "$WIN_SSH/id_ed25519" ]; then
+  SSH_OPTS="-F $WIN_SSH/config -i $WIN_SSH/id_ed25519"
+fi
+
 echo "==> Building..."
 npm run build
 
@@ -14,11 +25,11 @@ npm run build
 # never sees a half-copied site and the running web server needs no restart —
 # it resolves the directory path fresh on each request.
 echo "==> Uploading..."
-ssh "$SERVER" "rm -rf ~/${REMOTE_DIR}.new && mkdir -p ~/${REMOTE_DIR}.new"
-scp -q -r dist/* "$SERVER:~/${REMOTE_DIR}.new/"
+ssh $SSH_OPTS "$SERVER" "rm -rf ~/${REMOTE_DIR}.new && mkdir -p ~/${REMOTE_DIR}.new"
+scp $SSH_OPTS -q -r dist/* "$SERVER:~/${REMOTE_DIR}.new/"
 
 echo "==> Swapping in..."
-ssh "$SERVER" "rm -rf ~/${REMOTE_DIR}.old && \
+ssh $SSH_OPTS "$SERVER" "rm -rf ~/${REMOTE_DIR}.old && \
   mv ~/${REMOTE_DIR} ~/${REMOTE_DIR}.old && \
   mv ~/${REMOTE_DIR}.new ~/${REMOTE_DIR} && \
   rm -rf ~/${REMOTE_DIR}.old"
