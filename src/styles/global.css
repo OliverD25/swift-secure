@@ -278,7 +278,13 @@
   --radius-pill: 100px;
   --radius-btn: 100px;
 
-  --btn-bg: linear-gradient(90deg, #2ad4e8, #4b7cf5);
+  /* Deepened from the handoff's #2ad4e8 → #4b7cf5. White on those stops gives
+     2.1:1 under the label — the labels are centred, so they sit on the light
+     middle of the ramp and reversing the stops changes nothing. Darkening both
+     ends keeps the blue→cyan character and lifts the worst point under a label
+     to 4.8:1. Restore the original pair if the exact hues matter more than
+     legibility. */
+  --btn-bg: linear-gradient(90deg, #3a63d6, #1a7f9e);
   --btn-text: #ffffff;
   --btn-alt-border: #d8dbe2;
 
