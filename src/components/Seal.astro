@@ -38,13 +38,13 @@ const subPx = Math.min(subBasePx, (usableWidth / estimatedWidth) * subBasePx);
   variant === "compact" ? (
     <div
       class:list={[
-        "inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-[oklch(85%_0.02_155)] bg-white px-4.5 py-2.5",
+        "inline-flex items-center gap-2.5 rounded-full border-[1.5px] border-accent/40 bg-surface px-4.5 py-2.5",
         className,
       ]}
     >
       <ChipMark size={28} kind="mark" />
-      <span class="text-sm font-bold text-[oklch(25%_0.05_250)]">Swift Secure</span>
-      <span class="text-xs font-semibold text-ink-muted">{t.seal.certified}</span>
+      <span class="text-sm font-bold text-ink-strong">Swift Secure</span>
+      <span class="text-xs font-semibold text-muted">{t.seal.certified}</span>
     </div>
   ) : (
     <div class:list={["relative shrink-0", className]} style={{ width: `${diameter}px`, height: `${diameter}px` }}>
@@ -54,14 +54,18 @@ const subPx = Math.min(subBasePx, (usableWidth / estimatedWidth) * subBasePx);
           <path
             d="M14 30 L26 43 L48 17"
             fill="none"
-            stroke={isDark ? "oklch(65% 0.15 155)" : "#fff"}
+            style={`stroke:${isDark ? "var(--logo-fill)" : "var(--logo-ink)"}`}
             stroke-width="8"
             stroke-linecap="square"
           />
         </svg>
         <span
-          class="whitespace-nowrap font-extrabold leading-none text-white"
-          style={{ fontSize: `${titlePx.toFixed(2)}px`, letterSpacing: "0.03em" }}
+          class="whitespace-nowrap font-extrabold leading-none"
+          style={{
+            fontSize: `${titlePx.toFixed(2)}px`,
+            letterSpacing: "0.03em",
+            color: isDark ? "#ffffff" : "var(--logo-ink)",
+          }}
         >
           SWIFT SECURE
         </span>
@@ -71,9 +75,15 @@ const subPx = Math.min(subBasePx, (usableWidth / estimatedWidth) * subBasePx);
             // each locale's own casing rules (e.g. Turkish i → İ) and scripts
             // without case are left untouched.
             "whitespace-nowrap font-semibold uppercase leading-none",
-            isDark ? "text-[oklch(70%_0.02_250)]" : "text-[oklch(88%_0.06_155)]",
           ]}
-          style={{ fontSize: `${subPx.toFixed(2)}px`, letterSpacing: "0.14em" }}
+          style={{
+            fontSize: `${subPx.toFixed(2)}px`,
+            letterSpacing: "0.14em",
+            // Sits on the chip disc, so it reads against the logo ink rather
+            // than the page text colour; dimmed to stay secondary to the name.
+            color: isDark ? "rgba(255,255,255,0.72)" : "var(--logo-ink)",
+            opacity: isDark ? "1" : "0.78",
+          }}
         >
           {t.seal.certified}
         </span>

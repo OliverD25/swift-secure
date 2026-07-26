@@ -11,15 +11,15 @@ const t = useTranslations(locale);
 
 <div
   data-sticky-cta
-  class="pointer-events-none fixed inset-x-0 bottom-0 z-30 translate-y-full border-t border-white/10 bg-navy/95 px-4 py-3 backdrop-blur-sm transition-transform duration-200 motion-reduce:transition-none"
+  class="pointer-events-none fixed inset-x-0 bottom-0 z-30 translate-y-full border-t border-line/20 bg-band/95 px-4 py-3 backdrop-blur-sm transition-transform duration-200 motion-reduce:transition-none"
   aria-hidden="true"
 >
   <div class="mx-auto flex max-w-[1280px] items-center justify-between gap-4">
-    <div class="hidden text-sm text-[oklch(85%_0.02_250)] sm:block">{t.stickyCta.note}</div>
+    <div class="hidden text-sm text-band-muted sm:block">{t.stickyCta.note}</div>
     <a
       href={localePath("/apply/", locale)}
       tabindex="-1"
-      class="w-full rounded-lg bg-white px-6 py-3 text-center text-[15px] font-bold text-navy sm:w-auto"
+      class="btn-on-band w-full px-6 py-3 text-center text-[15px] font-bold sm:w-auto"
     >
       {t.stickyCta.button}
     </a>

@@ -12,9 +12,9 @@ const t = useTranslations(locale);
 <Layout locale={locale} path="/how-it-works/" title={t.process.title} description={t.process.description} current="process">
   <main>
     <section class="mx-auto w-full max-w-[900px] px-[clamp(20px,5vw,40px)] pb-10 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.process.eyebrow}</div>
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight">{t.process.h1}</h1>
-      <p class="text-lg leading-relaxed text-ink-muted">{t.process.sub}</p>
+      <div class="eyebrow mb-2.5 text-[13px] font-bold">{t.process.eyebrow}</div>
+      <h1 class="text-h2 mb-4">{t.process.h1}</h1>
+      <p class="text-lg leading-relaxed text-muted">{t.process.sub}</p>
     </section>
 
     <section class="mx-auto w-full max-w-[800px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-10">
@@ -22,20 +22,20 @@ const t = useTranslations(locale);
         t.stages.map((stage, i) => (
           <div class="relative flex gap-6 pb-10">
             <div class="flex flex-col items-center">
-              <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy text-[15px] font-extrabold text-white">
+              <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-band text-[15px] font-extrabold text-band-text">
                 {stage.n}
               </div>
-              {i < t.stages.length - 1 && <div class="mt-1 w-0.5 flex-1 bg-[oklch(88%_0.01_250)]" />}
+              {i < t.stages.length - 1 && <div class="mt-1 w-0.5 flex-1 bg-line" />}
             </div>
-            <div class="-mt-0.5 flex-1 rounded-2xl border border-[oklch(91%_0.01_250)] bg-white p-6.5">
+            <div class="card -mt-0.5 flex-1 p-6.5">
               <div class="mb-2 flex flex-wrap items-center justify-between gap-3">
                 <div class="text-lg font-bold">{stage.title}</div>
-                <div class="whitespace-nowrap rounded-full bg-[oklch(94%_0.04_155)] px-2.5 py-1 text-xs font-semibold text-[oklch(45%_0.13_155)]">
+                <div class="chip whitespace-nowrap px-2.5 py-1 text-xs font-semibold">
                   {stage.duration}
                 </div>
               </div>
-              <div class="mb-3 text-sm leading-relaxed text-ink-muted">{stage.desc}</div>
-              <div class="text-[13px] text-[oklch(40%_0.02_250)]">
+              <div class="mb-3 text-sm leading-relaxed text-muted">{stage.desc}</div>
+              <div class="text-[13px] text-muted">
                 <strong>{t.common.youProvide}</strong> {stage.provide}
               </div>
             </div>

@@ -2,7 +2,9 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import StickyCta from "../components/StickyCta.astro";
+import DesignSwitcher from "../components/DesignSwitcher.astro";
 import { localePath, languages, getLanguage, defaultLocale } from "../i18n";
+import { DEFAULT_THEME, STORAGE_KEY, THEMES } from "../lib/theme";
 import "../styles/global.css";
 
 interface Props {
@@ -22,10 +24,15 @@ const canonicalURL = abs(localePath(path, locale));
 const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
 
 const showStickyCta = !path.startsWith("/apply");
+
+// Runs before first paint so a reviewer who picked Option C does not see a
+// frame of Option A first. Inline and blocking on purpose — a deferred module
+// would land after the page has already painted the built-in default.
+const themeBootstrap = `(function(){try{var t=localStorage.getItem(${JSON.stringify(STORAGE_KEY)});if(${JSON.stringify(THEMES)}.indexOf(t)>-1){document.documentElement.dataset.theme=t}}catch(e){}})()`;
 ---
 
 <!doctype html>
-<html lang={lang.htmlLang} dir={lang.dir}>
+<html lang={lang.htmlLang} dir={lang.dir} data-theme={DEFAULT_THEME}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,10 +59,14 @@ const showStickyCta = !path.startsWith("/apply");
 
     <link rel="icon" type="image/svg+xml" href={localePath("/favicon.svg", defaultLocale)} />
     <link rel="icon" href={localePath("/favicon.ico", defaultLocale)} sizes="32x32" />
-    <meta name="theme-color" content="oklch(30% 0.06 250)" />
+    {/* Matches the review bar pinned at the top of the page, not the nav.
+        Revisit when the switcher is removed. */}
+    <meta name="theme-color" content="#101314" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline set:html={themeBootstrap} />
   </head>
-  <body class="flex min-h-screen flex-col font-sans text-ink">
+  <body class="flex min-h-screen flex-col bg-canvas font-sans text-ink">
+    <DesignSwitcher />
     <Header locale={locale} path={path} current={current} />
     <slot />
     <Footer locale={locale} />

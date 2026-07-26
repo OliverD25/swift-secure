@@ -18,7 +18,7 @@ const current = getLanguage(locale);
     data-lang-trigger
     aria-haspopup="listbox"
     aria-expanded="false"
-    class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-[oklch(20%_0.01_250)] px-2.5 py-1.5 text-[13px] font-semibold text-white"
+    class="flex items-center gap-1.5 whitespace-nowrap rounded-pill bg-nav-surface px-2.5 py-1.5 text-[13px] font-semibold text-nav-surface-text"
   >
     <span class="inline-block size-[18px] shrink-0 overflow-hidden rounded-full">
       <img src={flagUrl(current.iso)} alt="" width="18" height="18" decoding="async" class="size-full object-cover" />
@@ -31,7 +31,7 @@ const current = getLanguage(locale);
     data-lang-menu
     role="listbox"
     hidden
-    class="absolute end-0 top-[calc(100%+8px)] z-30 max-h-[420px] w-[220px] overflow-y-auto rounded-2xl bg-[oklch(16%_0.01_250)] p-2.5 text-start shadow-[0_20px_50px_-12px_oklch(0%_0_0/0.4)]"
+    class="absolute end-0 top-[calc(100%+8px)] z-30 max-h-[420px] w-[220px] overflow-y-auto rounded-card border border-line bg-surface p-2.5 text-start shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)]"
   >
     {
       languages.map((lang) => (
@@ -42,8 +42,8 @@ const current = getLanguage(locale);
           role="option"
           aria-selected={lang.locale === locale ? "true" : "false"}
           class:list={[
-            "flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2.5 text-sm font-medium hover:bg-[oklch(24%_0.01_250)]",
-            lang.locale === locale ? "text-white" : "text-[oklch(92%_0.005_250)]",
+            "flex w-full items-center gap-2.5 rounded-chip px-2.5 py-2.5 text-sm font-medium hover:bg-surface-2",
+            lang.locale === locale ? "font-semibold text-accent" : "text-ink",
           ]}
         >
           <span class="inline-block size-5 shrink-0 overflow-hidden rounded-full">

@@ -23,15 +23,15 @@ const faqJsonLd = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main>
     <section class="mx-auto w-full max-w-[700px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.faqPage.eyebrow}</div>
-      <h1 class="text-[38px] font-extrabold tracking-tight">{t.faqPage.h1}</h1>
+      <div class="eyebrow mb-2.5 text-[13px] font-bold">{t.faqPage.eyebrow}</div>
+      <h1 class="text-h2">{t.faqPage.h1}</h1>
     </section>
 
     <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
       <div data-faq-list>
         {
           t.faqs.map((faq, i) => (
-            <div class="border-b border-line-soft" data-faq-item>
+            <div class="border-b border-line" data-faq-item>
               <button
                 type="button"
                 data-faq-toggle
@@ -39,9 +39,9 @@ const faqJsonLd = {
                 class="flex w-full items-center justify-between gap-4 py-5 text-start"
               >
                 <span class="text-base font-semibold">{faq.q}</span>
-                <span data-faq-symbol class="shrink-0 text-lg text-[oklch(50%_0.02_250)]">{i === 0 ? "−" : "+"}</span>
+                <span data-faq-symbol class="shrink-0 text-lg text-accent">{i === 0 ? "−" : "+"}</span>
               </button>
-              <div data-faq-answer hidden={i !== 0} class="pb-5 text-sm leading-relaxed text-ink-muted">
+              <div data-faq-answer hidden={i !== 0} class="pb-5 text-sm leading-relaxed text-muted">
                 {faq.a}
               </div>
             </div>

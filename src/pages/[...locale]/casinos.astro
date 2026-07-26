@@ -13,9 +13,9 @@ const t = useTranslations(locale);
 <Layout locale={locale} path="/casinos/" title={t.casinos.title} description={t.casinos.description} current="casinos">
   <main>
     <section class="mx-auto w-full max-w-[760px] px-[clamp(20px,5vw,40px)] pb-5 pt-18 text-center">
-      <div class="mb-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[oklch(50%_0.13_155)]">{t.casinos.eyebrow}</div>
-      <h1 class="mb-4 text-[38px] font-extrabold tracking-tight">{t.casinos.h1}</h1>
-      <p class="text-base leading-relaxed text-ink-muted">{t.casinos.sub}</p>
+      <div class="eyebrow mb-2.5 text-[13px] font-bold">{t.casinos.eyebrow}</div>
+      <h1 class="text-h2 mb-4">{t.casinos.h1}</h1>
+      <p class="text-base leading-relaxed text-muted">{t.casinos.sub}</p>
     </section>
 
     <section class="mx-auto w-full max-w-[600px] px-[clamp(20px,5vw,40px)] pb-2.5 pt-5">
@@ -24,7 +24,7 @@ const t = useTranslations(locale);
         data-casino-search
         placeholder={t.casinos.searchPlaceholder}
         aria-label={t.casinos.searchLabel}
-        class="w-full rounded-[10px] border border-[oklch(85%_0.01_250)] px-4 py-3.5 text-[15px] font-sans placeholder:text-[oklch(65%_0.01_250)]"
+        class="w-full rounded-btn border border-btn-line bg-surface px-4 py-3.5 text-[15px] font-sans text-ink placeholder:text-faint"
       />
     </section>
 
@@ -38,7 +38,7 @@ const t = useTranslations(locale);
           ))
         }
       </div>
-      <div data-casino-empty hidden class="py-10 text-center text-sm text-[oklch(50%_0.02_250)]">{t.casinos.empty}</div>
+      <div data-casino-empty hidden class="py-10 text-center text-sm text-faint">{t.casinos.empty}</div>
     </section>
   </main>
 </Layout>

@@ -16,13 +16,13 @@ interface Props {
 
 const { size, kind = "mark", variant = "filled", color, class: className = "" } = Astro.props;
 
-const BRAND_GREEN = "#0e7a3f";
-const OUTLINE_GREEN = "oklch(65% 0.15 155)";
-
-const ink = color ?? (variant === "outline" ? OUTLINE_GREEN : BRAND_GREEN);
-// On the filled mark the rim notches and checkmark are knocked out in white;
-// the outline variant is single-colour, so everything is drawn in `ink`.
-const detail = variant === "outline" ? ink : "#fff";
+// Themed via CSS variables rather than literals so the mark follows the design
+// option. These have to be applied through `style`: a presentation attribute
+// like fill="..." cannot parse var(), which is why nothing here uses one.
+const ink = color ?? "var(--logo-fill)";
+// On the filled mark the rim notches and checkmark are knocked out in the ink
+// colour; the outline variant is single-colour, so everything is drawn in `ink`.
+const detail = variant === "outline" ? ink : "var(--logo-ink)";
 
 // The outline variant sits slightly inside the filled one: its outer edge is a
 // 6px stroke rather than a fill, so the rim pulls in to keep the same optical
@@ -52,9 +52,9 @@ const dashArray = `${(segment * NOTCH_DUTY).toFixed(2)} ${(segment * (1 - NOTCH_
 >
   {
     variant === "outline" ? (
-      <circle cx="100" cy="100" r="96" fill="none" stroke={ink} stroke-width="6" />
+      <circle cx="100" cy="100" r="96" fill="none" style={`stroke:${ink}`} stroke-width="6" />
     ) : (
-      <circle cx="100" cy="100" r={geometry.disc} fill={ink} />
+      <circle cx="100" cy="100" r={geometry.disc} style={`fill:${ink}`} />
     )
   }
   <circle
@@ -62,14 +62,14 @@ const dashArray = `${(segment * NOTCH_DUTY).toFixed(2)} ${(segment * (1 - NOTCH_
     cy="100"
     r={geometry.rim}
     fill="none"
-    stroke={detail}
+    style={`stroke:${detail}`}
     stroke-width={geometry.rimWidth}
     stroke-dasharray={dashArray}
   />
-  <circle cx="100" cy="100" r={geometry.inner} fill="none" stroke={detail} stroke-width={geometry.innerWidth} />
+  <circle cx="100" cy="100" r={geometry.inner} fill="none" style={`stroke:${detail}`} stroke-width={geometry.innerWidth} />
   {
     kind === "mark" && (
-      <path d="M74 100 L94 122 L134 76" fill="none" stroke={detail} stroke-width="13" stroke-linecap="square" />
+      <path d="M74 100 L94 122 L134 76" fill="none" style={`stroke:${detail}`} stroke-width="13" stroke-linecap="square" />
     )
   }
 </svg>

@@ -1,31 +1,429 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
+@import "@fontsource-variable/archivo";
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/plus-jakarta-sans";
 
-@theme {
-  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+/* ---------------------------------------------------------------------------
+   Design options.
 
-  /* Brand */
-  --color-navy: oklch(30% 0.06 250);
-  --color-emerald: oklch(55% 0.15 155);
-  --color-amber: oklch(55% 0.15 40);
+   Four themes over one set of tokens. Every colour, radius, font and spacing
+   value in the site reads from a variable here, so switching themes is a single
+   `data-theme` attribute on <html> — no per-theme markup, no duplicated
+   components.
 
-  /* Neutrals */
-  --color-ink: oklch(22% 0.03 250);
-  --color-ink-muted: oklch(45% 0.02 250);
-  --color-surface: oklch(98.5% 0.004 250);
-  --color-surface-alt: oklch(96.5% 0.006 250);
-  --color-line: oklch(91% 0.01 250);
-  --color-line-soft: oklch(90% 0.01 250);
+   Nav and footer carry their own token groups on purpose: options B, C and D
+   invert them relative to the page, so reusing --text in the header would break
+   them. --logo-fill / --logo-ink must stay solid colours; they are applied to
+   SVG via the style attribute, and a gradient cannot go in `fill`.
+
+   This is a review device. When an option is chosen, delete the other three
+   blocks, promote the winner into :root, and remove DesignSwitcher.
+   --------------------------------------------------------------------------- */
+
+/* Option A — Corporate Trust (current build, baseline) */
+:root,
+[data-theme="a"] {
+  --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-head: "Inter Variable", "Inter", system-ui, sans-serif;
+  --head-weight: 800;
+  --head-spacing: -0.02em;
+  --head-transform: none;
+  --eyebrow-spacing: 0.08em;
+
+  --hero-size: 52px;
+  --h2-size: 36px;
+  --section-pad: 90px;
+
+  --bg: oklch(98.5% 0.004 250);
+  --surface: #ffffff;
+  --surface-2: oklch(96.5% 0.006 250);
+  --border: oklch(91% 0.01 250);
+  --card-shadow: 0 0 #0000;
+
+  --text: oklch(22% 0.03 250);
+  --text-strong: oklch(18% 0.03 250);
+  --muted: oklch(45% 0.02 250);
+  --faint: oklch(55% 0.02 250);
+
+  --accent: oklch(50% 0.15 155);
+  --accent-bright: oklch(55% 0.15 155);
+  --accent-soft-bg: oklch(94% 0.04 155);
+  --accent-soft-text: oklch(35% 0.1 155);
+
+  --band: oklch(30% 0.06 250);
+  --band-text: #ffffff;
+  --band-muted: oklch(80% 0.02 250);
+
+  --nav-bg: oklch(99% 0.003 250 / 0.92);
+  --nav-text: oklch(22% 0.03 250);
+  --nav-muted: oklch(35% 0.02 250);
+  --nav-border: oklch(90% 0.01 250);
+  --nav-surface: oklch(20% 0.01 250);
+  --nav-surface-text: #ffffff;
+
+  --footer-bg: oklch(98.5% 0.004 250);
+  --footer-text: oklch(22% 0.03 250);
+  --footer-muted: oklch(40% 0.02 250);
+  --footer-faint: oklch(55% 0.02 250);
+  --footer-border: oklch(90% 0.01 250);
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-pill: 100px;
+  --radius-btn: 10px;
+
+  --btn-bg: oklch(30% 0.06 250);
+  --btn-text: #ffffff;
+  --btn-alt-border: oklch(85% 0.01 250);
+
+  --hero-disc: radial-gradient(circle at 30% 25%, oklch(97% 0.01 250), oklch(93% 0.015 250));
+  --hero-disc-shadow: 0 20px 60px -20px oklch(30% 0.05 250 / 0.35);
+
+  --warn: oklch(55% 0.15 40);
+  --warn-soft-bg: oklch(95% 0.03 40);
+  --warn-soft-text: oklch(35% 0.1 40);
+  --warn-line: oklch(82% 0.06 40);
+
+  --logo-fill: #0e7a3f;
+  --logo-ink: #ffffff;
+}
+
+/* Option B — Dark Casino */
+[data-theme="b"] {
+  --font-body: "Archivo Variable", system-ui, sans-serif;
+  --font-head: "Archivo Variable", system-ui, sans-serif;
+  --head-weight: 900;
+  --head-spacing: -0.01em;
+  --head-transform: uppercase;
+  --eyebrow-spacing: 0.22em;
+
+  --hero-size: 60px;
+  --h2-size: 38px;
+  --section-pad: 100px;
+
+  --bg: #0a0c0b;
+  --surface: #141917;
+  --surface-2: #0f1312;
+  --border: #232b28;
+  --card-shadow: 0 0 #0000;
+
+  --text: #eef3f0;
+  --text-strong: #ffffff;
+  --muted: #93a09a;
+  --faint: #6d7a74;
+
+  --accent: #3ef08a;
+  --accent-bright: #5cf59d;
+  --accent-soft-bg: rgba(62, 240, 138, 0.12);
+  --accent-soft-text: #3ef08a;
+
+  /* Bands invert: the stats strip and final CTA become the loudest thing here. */
+  --band: #3ef08a;
+  --band-text: #06120b;
+  --band-muted: rgba(6, 18, 11, 0.72);
+
+  --nav-bg: rgba(10, 12, 11, 0.92);
+  --nav-text: #eef3f0;
+  --nav-muted: #93a09a;
+  --nav-border: #232b28;
+  --nav-surface: #1b221f;
+  --nav-surface-text: #eef3f0;
+
+  --footer-bg: #0a0c0b;
+  --footer-text: #eef3f0;
+  --footer-muted: #93a09a;
+  --footer-faint: #6d7a74;
+  --footer-border: #232b28;
+
+  --radius: 3px;
+  --radius-sm: 2px;
+  --radius-pill: 2px;
+  --radius-btn: 2px;
+
+  --btn-bg: #3ef08a;
+  --btn-text: #06120b;
+  --btn-alt-border: #2f3a35;
+
+  --hero-disc: #0f1312;
+  --hero-disc-shadow: 0 0 0 1px #232b28, 0 30px 80px -30px rgba(62, 240, 138, 0.35);
+
+  --warn: #f0a63e;
+  --warn-soft-bg: rgba(240, 166, 62, 0.12);
+  --warn-soft-text: #f0a63e;
+  --warn-line: #4a3a22;
+
+  --logo-fill: #3ef08a;
+  --logo-ink: #06120b;
+}
+
+/* Option C — Premium Gold */
+[data-theme="c"] {
+  --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-head: "Playfair Display Variable", Georgia, serif;
+  --head-weight: 600;
+  --head-spacing: -0.01em;
+  --head-transform: none;
+  --eyebrow-spacing: 0.26em;
+
+  --hero-size: 56px;
+  --h2-size: 38px;
+  --section-pad: 104px;
+
+  --bg: #14120f;
+  --surface: #1d1a16;
+  --surface-2: #191612;
+  --border: #322b22;
+  --card-shadow: 0 0 #0000;
+
+  --text: #f2ece0;
+  --text-strong: #fdf9f1;
+  --muted: #a3977f;
+  --faint: #7d7362;
+
+  --accent: #cba53c;
+  --accent-bright: #e0bb52;
+  --accent-soft-bg: rgba(203, 165, 60, 0.12);
+  --accent-soft-text: #dcb64f;
+
+  --band: #0d0b09;
+  --band-text: #f6efe0;
+  --band-muted: #a3977f;
+
+  --nav-bg: rgba(20, 18, 15, 0.92);
+  --nav-text: #f2ece0;
+  --nav-muted: #a3977f;
+  --nav-border: #322b22;
+  --nav-surface: #241f18;
+  --nav-surface-text: #f2ece0;
+
+  --footer-bg: #14120f;
+  --footer-text: #f2ece0;
+  --footer-muted: #a3977f;
+  --footer-faint: #7d7362;
+  --footer-border: #322b22;
+
+  /* Zero radius everywhere is the defining move of this option — including
+     buttons and pills. Do not soften it. */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-pill: 0px;
+  --radius-btn: 0px;
+
+  --btn-bg: #cba53c;
+  --btn-text: #17130c;
+  --btn-alt-border: #4a4034;
+
+  --hero-disc: radial-gradient(circle at 32% 24%, #241f18, #14120f);
+  --hero-disc-shadow: 0 0 0 1px #322b22;
+
+  --warn: #d9822b;
+  --warn-soft-bg: rgba(217, 130, 43, 0.12);
+  --warn-soft-text: #e09a4d;
+  --warn-line: #4a3624;
+
+  --logo-fill: #cba53c;
+  --logo-ink: #17130c;
+}
+
+/* Option D — Catalog (AFFCatalog-style) */
+[data-theme="d"] {
+  --font-body: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  --font-head: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+  --head-weight: 800;
+  --head-spacing: -0.025em;
+  --head-transform: none;
+  --eyebrow-spacing: 0.08em;
+
+  --hero-size: 46px;
+  --h2-size: 32px;
+  --section-pad: 76px;
+
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --surface-2: #eef0f3;
+  --border: #e6e8ec;
+  --card-shadow: 0 4px 24px -12px rgba(19, 19, 25, 0.12);
+
+  --text: #33363f;
+  --text-strong: #131319;
+  --muted: #5d616c;
+  --faint: #8a8f9b;
+
+  --accent: #1f8fd6;
+  --accent-bright: #2f9ff0;
+  --accent-soft-bg: #fdf0d4;
+  --accent-soft-text: #8a5c05;
+
+  --band: #0c0b12;
+  --band-text: #ffffff;
+  --band-muted: rgba(255, 255, 255, 0.72);
+
+  /* Dark nav and footer floating over a light canvas. */
+  --nav-bg: #0c0b12;
+  --nav-text: #ffffff;
+  --nav-muted: rgba(255, 255, 255, 0.72);
+  --nav-border: #23222c;
+  --nav-surface: rgba(255, 255, 255, 0.1);
+  --nav-surface-text: #ffffff;
+
+  --footer-bg: #0c0b12;
+  --footer-text: #ffffff;
+  --footer-muted: rgba(255, 255, 255, 0.72);
+  --footer-faint: rgba(255, 255, 255, 0.5);
+  --footer-border: #23222c;
+
+  --radius: 24px;
+  --radius-sm: 14px;
+  --radius-pill: 100px;
+  --radius-btn: 100px;
+
+  --btn-bg: linear-gradient(90deg, #2ad4e8, #4b7cf5);
+  --btn-text: #ffffff;
+  --btn-alt-border: #d8dbe2;
+
+  --hero-disc: #ffffff;
+  --hero-disc-shadow: 0 4px 24px -12px rgba(19, 19, 25, 0.12);
+
+  --warn: #b45309;
+  --warn-soft-bg: #fdf0d4;
+  --warn-soft-text: #8a5c05;
+  --warn-line: #f0d9a8;
+
+  --logo-fill: #2f9ff0;
+  --logo-ink: #ffffff;
+}
+
+/* `inline` makes Tailwind emit `var(--token)` in the utility rather than baking
+   in a value, which is what lets a utility change meaning when data-theme does. */
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-head: var(--font-head);
+
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+
+  --color-ink: var(--text);
+  --color-ink-strong: var(--text-strong);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-soft: var(--accent-soft-bg);
+  --color-accent-soft-text: var(--accent-soft-text);
+
+  --color-band: var(--band);
+  --color-band-text: var(--band-text);
+  --color-band-muted: var(--band-muted);
+
+  --color-nav: var(--nav-bg);
+  --color-nav-text: var(--nav-text);
+  --color-nav-muted: var(--nav-muted);
+  --color-nav-line: var(--nav-border);
+  --color-nav-surface: var(--nav-surface);
+  --color-nav-surface-text: var(--nav-surface-text);
+
+  --color-footer: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-faint: var(--footer-faint);
+  --color-footer-line: var(--footer-border);
+
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft-bg);
+  --color-warn-soft-text: var(--warn-soft-text);
+  --color-warn-line: var(--warn-line);
+
+  --color-btn-text: var(--btn-text);
+  --color-btn-line: var(--btn-alt-border);
+
+  --radius-card: var(--radius);
+  --radius-chip: var(--radius-sm);
+  --radius-pill: var(--radius-pill);
+  --radius-btn: var(--radius-btn);
 }
 
 @layer base {
   body {
-    background: var(--color-surface);
-    color: var(--color-ink);
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+  }
+
+  /* Headings carry the option's voice — family, weight, tracking and case.
+     Setting it here rather than per-heading means a new option changes all of
+     them at once, and Option B's uppercase cannot be forgotten on one page. */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-head);
+    font-weight: var(--head-weight);
+    letter-spacing: var(--head-spacing);
+    text-transform: var(--head-transform);
   }
 
   ::selection {
-    background: oklch(85% 0.06 155);
+    background: var(--accent-soft-bg);
+    color: var(--accent-soft-text);
+  }
+}
+
+@layer components {
+  /* Sizes clamp so a 60px hero in Option B still fits a 375px screen; the token
+     is the desktop ceiling rather than a fixed size. */
+  .text-hero {
+    font-size: clamp(34px, 7.5vw, var(--hero-size));
+    line-height: 1.08;
+  }
+
+  .text-h2 {
+    font-size: clamp(26px, 4.6vw, var(--h2-size));
+  }
+
+  .section-y {
+    padding-block: clamp(52px, 8vw, var(--section-pad));
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+  }
+
+  /* Background rather than background-color: Option D's button is a gradient,
+     which is legal here and would be invalid as a Tailwind colour token. */
+  .btn-primary {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: var(--radius-btn);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--btn-alt-border);
+    color: var(--text);
+    border-radius: var(--radius-btn);
+  }
+
+  .btn-on-band {
+    background: var(--band-text);
+    color: var(--band);
+    border-radius: var(--radius-btn);
+  }
+
+  .chip {
+    background: var(--accent-soft-bg);
+    color: var(--accent-soft-text);
+    border-radius: var(--radius-pill);
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    letter-spacing: var(--eyebrow-spacing);
+    text-transform: uppercase;
   }
 }
 

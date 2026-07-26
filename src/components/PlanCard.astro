@@ -14,22 +14,22 @@ const t = useTranslations(locale);
 const features = featuresCount ? plan.features.slice(0, featuresCount) : plan.features;
 ---
 
-<div class:list={["relative rounded-2xl bg-white p-7 sm:p-8", featured ? "border-2 border-emerald" : "border border-line"]}>
+<div class:list={["card relative p-7 sm:p-8", featured && "border-2 border-accent"]}>
   {
     featured && (
-      <div class="absolute -top-3 start-7 rounded-md bg-emerald px-2.5 py-1 text-[11px] font-bold tracking-[0.03em] text-white">
+      <div class="absolute -top-3 start-7 rounded-chip bg-accent px-2.5 py-1 text-[11px] font-bold tracking-[0.03em] text-[var(--logo-ink)]">
         {t.pricing.mostPopular}
       </div>
     )
   }
   <div class="mb-1.5 text-lg font-bold">{plan.name}</div>
   <div class="mb-1 text-[34px] font-extrabold">{plan.price}</div>
-  <div class="mb-5.5 text-[13px] text-ink-muted">{plan.cadence}</div>
+  <div class="mb-5.5 text-[13px] text-muted">{plan.cadence}</div>
   <div class="mb-6.5 flex flex-col gap-2.5">
     {
       features.map((f) => (
-        <div class="flex gap-2 text-sm text-[oklch(30%_0.02_250)]">
-          <span class="text-emerald">&#10003;</span>
+        <div class="flex gap-2 text-sm text-ink">
+          <span class="text-accent">&#10003;</span>
           {f}
         </div>
       ))
@@ -38,8 +38,8 @@ const features = featuresCount ? plan.features.slice(0, featuresCount) : plan.fe
   <a
     href={localePath("/apply/", locale)}
     class:list={[
-      "block rounded-lg py-3 text-center text-sm font-semibold",
-      featured ? "bg-navy text-white" : "bg-surface-alt text-[oklch(25%_0.02_250)]",
+      "block py-3 text-center text-sm font-semibold",
+      featured ? "btn-primary" : "btn-secondary bg-surface-2",
     ]}
   >
     {t.pricing.applyNow}

@@ -12,33 +12,33 @@ const { locale, casino, href } = Astro.props;
 const t = useTranslations(locale);
 ---
 
-<div class="rounded-2xl border border-line bg-white p-5.5">
+<div class="card p-5.5">
   <div class="mb-3.5 flex items-center gap-3">
     <div
-      class="flex size-11 shrink-0 items-center justify-center rounded-[10px] font-mono text-[9px] text-[oklch(55%_0.01_250)]"
-      style="background: repeating-linear-gradient(135deg, oklch(94% 0.006 250), oklch(94% 0.006 250) 4px, oklch(90% 0.006 250) 4px, oklch(90% 0.006 250) 8px);"
+      class="flex size-11 shrink-0 items-center justify-center rounded-[10px] font-mono text-[9px] text-faint"
+      style="background: repeating-linear-gradient(135deg, var(--surface-2), var(--surface-2) 4px, var(--border) 4px, var(--border) 8px);"
       aria-hidden="true"
     >
       logo
     </div>
     <div>
       <div class="text-[15px] font-bold">{casino.name}</div>
-      <div class="text-xs text-[oklch(50%_0.02_250)]">{casino.jurisdiction}</div>
+      <div class="text-xs text-faint">{casino.jurisdiction}</div>
     </div>
   </div>
   <div class:list={["flex items-center gap-1.5", href && "mb-3"]}>
-    <div class="flex size-4 shrink-0 items-center justify-center rounded-full bg-emerald">
+    <div class="flex size-4 shrink-0 items-center justify-center rounded-full bg-accent">
       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M8.5 12L11 14.5L16 9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <span class="text-[12.5px] font-semibold text-[oklch(35%_0.1_155)]">{t.common.certifiedSince} {casino.since}</span>
+    <span class="text-[12.5px] font-semibold text-accent-soft-text">{t.common.certifiedSince} {casino.since}</span>
   </div>
   {
     href && (
       <a
         href={localePath(href, locale)}
-        class="block rounded-lg border border-[oklch(88%_0.01_250)] py-2.5 text-center text-[13px] font-semibold text-navy"
+        class="btn-secondary block py-2.5 text-center text-[13px] font-semibold"
       >
         {t.common.viewSealRecord} &rarr;
       </a>
