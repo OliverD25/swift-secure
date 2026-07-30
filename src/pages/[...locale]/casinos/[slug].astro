@@ -34,12 +34,16 @@ const t = useTranslations(locale);
 const status = t.directory[casino.status];
 
 const title = `${casino.name} — ${status.label}`;
-const description = `${casino.name} (${casino.domain}): ${status.desc} Licence: ${casino.jurisdiction}. Last checked ${casino.lastScanned}.`;
+const description =
+  `${casino.name} (${casino.domain}): ${status.desc} Licence: ${casino.jurisdiction}.` +
+  (casino.licenceVerified ? " Licence number confirmed in the regulator's public register." : "");
 
 const facts = [
   { k: "Domain", v: casino.domain },
   { k: "Licence", v: casino.jurisdiction },
   { k: "Licence number", v: casino.licenceNumber ?? "—" },
+  { k: "Licence holder", v: casino.operator ?? "—" },
+  { k: "Licence expires", v: casino.licenceExpiry ?? "—" },
   { k: "Launched", v: casino.launched ?? "—" },
   { k: "Platform", v: casino.platform ?? "—" },
   { k: t.directory.lastScanned, v: casino.lastScanned },
@@ -87,13 +91,32 @@ const facts = [
       </div>
 
       {
+        /* A licence matched in the regulator's own register is the one hard
+           fact on an otherwise unverified page — worth separating from the
+           second-hand fields above so the difference is visible. */
+        casino.licenceVerified && (
+          <div class="mb-8 rounded-card border border-accent/40 bg-accent-soft p-5.5">
+            <div class="mb-1.5 flex gap-2.5 text-[15px] font-bold text-accent-soft-text">
+              <span aria-hidden="true">&#10003;</span>
+              Licence confirmed in the public register
+            </div>
+            <p class="ps-6 text-sm leading-relaxed text-muted">
+              We matched this licence number against the regulator's own register: {casino.licenceVerified}. That confirms
+              the licence exists and is recorded against this domain. It is not a verification of the site itself.
+            </p>
+          </div>
+        )
+      }
+
+      {
         casino.status !== "certified" && (
           <div class="rounded-card border border-warn-line bg-warn-soft p-5.5">
             <div class="mb-1.5 text-[15px] font-bold text-warn-soft-text">No badge issued</div>
             <p class="text-sm leading-relaxed text-muted">
-              This page reports an automated check only. {casino.name} is not a Swift Secure client, has not been through
-              full verification, and is not endorsed by us. If you operate this brand and want the full check, you can
-              request one.
+              {casino.status === "listed"
+                ? `${casino.name} is listed here from public sources. We have not run a check on this site, it is not a Swift Secure client, and nothing here is an endorsement.`
+                : `This page reports an automated check only. ${casino.name} is not a Swift Secure client, has not been through full verification, and is not endorsed by us.`}
+              {" "}If you operate this brand and want the full check, you can request one.
             </p>
           </div>
         )
