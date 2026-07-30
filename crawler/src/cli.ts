@@ -1,4 +1,4 @@
-import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
+import { writeFileSync, mkdirSync } from "node:fs";
 import { chromium } from "playwright";
 import { scanCasino } from "./scan.ts";
 import { loadAnjouanRegister } from "./checks/licence.ts";
@@ -60,7 +60,11 @@ async function cmdLicence(domains: string[]) {
   try {
     const records = await loadAnjouanRegister(browser);
     console.log(`Anjouan register: ${records.length} records\n`);
-    const norm = (d: string) => d.toLowerCase().replace(/^www\./, "").trim();
+    // trim() must run BEFORE stripping www.: the register stores domains as a
+    // comma-separated string, so split() yields " www.example.com" with a leading
+    // space and the ^www\. anchor would never match. Getting this order wrong
+    // silently reports licensed operators as unlicensed.
+    const norm = (d: string) => d.trim().toLowerCase().replace(/^www\./, "");
     const index = new Map<string, (typeof records)[number]>();
     for (const r of records) for (const d of String(r.domains || "").split(",")) if (norm(d)) index.set(norm(d), r);
 

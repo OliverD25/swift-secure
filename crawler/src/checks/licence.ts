@@ -59,7 +59,11 @@ export async function loadAnjouanRegister(browser: Browser): Promise<LicenceReco
   }
 }
 
-const norm = (d: string) => d.toLowerCase().replace(/^www\./, "").trim();
+// trim() must run BEFORE stripping www.: the register stores domains as a
+// comma-separated string, so split() yields " www.example.com" with a leading
+// space and the ^www\. anchor would never match. Getting this order wrong
+// silently reports licensed operators as unlicensed.
+const norm = (d: string) => d.trim().toLowerCase().replace(/^www\./, "");
 
 export async function checkLicence(browser: Browser, domain: string): Promise<LicenceResult> {
   try {
