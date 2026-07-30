@@ -8,6 +8,18 @@ export const getStaticPaths = () => localeStaticPaths();
 
 const { locale } = Astro.props;
 const t = useTranslations(locale);
+
+const counts = {
+  certified: casinos.filter((c) => c.status === "certified").length,
+  scanned: casinos.filter((c) => c.status === "scanned").length,
+  flagged: casinos.filter((c) => c.status === "flagged").length,
+};
+const filters = [
+  { key: "all", label: t.directory.statusFilterAll, n: casinos.length },
+  { key: "certified", label: t.directory.certified.label, n: counts.certified },
+  { key: "scanned", label: t.directory.scanned.label, n: counts.scanned },
+  { key: "flagged", label: t.directory.flagged.label, n: counts.flagged },
+].filter((f) => f.n > 0 || f.key === "all");
 ---
 
 <Layout locale={locale} path="/casinos/" title={t.casinos.title} description={t.casinos.description} current="casinos">
@@ -18,7 +30,22 @@ const t = useTranslations(locale);
       <p class="text-base leading-relaxed text-muted">{t.casinos.sub}</p>
     </section>
 
-    <section class="mx-auto w-full max-w-[600px] px-[clamp(20px,5vw,40px)] pb-2.5 pt-5">
+    <!-- What each status means, stated up front. A directory that mixes
+         verified clients with merely-scanned sites has to say so plainly. -->
+    <section class="mx-auto w-full max-w-[900px] px-[clamp(20px,5vw,40px)] pt-6">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-3">
+        {
+          (["certified", "scanned", "flagged"] as const).map((key) => (
+            <div class="card p-4">
+              <div class="mb-1 text-[13px] font-bold">{t.directory[key].label}</div>
+              <div class="text-[12.5px] leading-relaxed text-muted">{t.directory[key].desc}</div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-[600px] px-[clamp(20px,5vw,40px)] pb-2.5 pt-8">
       <input
         type="text"
         data-casino-search
@@ -28,12 +55,33 @@ const t = useTranslations(locale);
       />
     </section>
 
-    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-7.5">
+    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-4 pt-3">
+      <div class="flex flex-wrap justify-center gap-2">
+        {
+          filters.map((f, i) => (
+            <button
+              type="button"
+              data-status-filter={f.key}
+              aria-pressed={i === 0 ? "true" : "false"}
+              class="rounded-pill border border-line px-3.5 py-1.5 text-[13px] font-semibold text-muted"
+            >
+              {f.label} <span class="opacity-60">{f.n}</span>
+            </button>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-5">
       <div data-casino-grid class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5.5">
         {
           casinos.map((casino) => (
-            <div data-casino-item data-search={`${casino.name} ${casino.jurisdiction}`.toLowerCase()}>
-              <CasinoCard locale={locale} casino={casino} href="/verify/" />
+            <div
+              data-casino-item
+              data-status={casino.status}
+              data-search={`${casino.name} ${casino.jurisdiction} ${casino.domain}`.toLowerCase()}
+            >
+              <CasinoCard locale={locale} casino={casino} href="/casinos/" />
             </div>
           ))
         }
@@ -45,8 +93,9 @@ const t = useTranslations(locale);
 
 <script>
   const input = document.querySelector<HTMLInputElement>("[data-casino-search]");
-  const items = document.querySelectorAll<HTMLElement>("[data-casino-item]");
+  const items = [...document.querySelectorAll<HTMLElement>("[data-casino-item]")];
   const empty = document.querySelector<HTMLElement>("[data-casino-empty]");
+  const filterButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-status-filter]")];
 
   const normalize = (value: string) =>
     value
@@ -55,16 +104,38 @@ const t = useTranslations(locale);
       .normalize("NFD")
       .replace(/[̀-ͯ]/g, "");
 
-  if (input && empty) {
-    input.addEventListener("input", () => {
-      const q = normalize(input.value);
-      let visibleCount = 0;
-      items.forEach((item) => {
-        const match = !q || normalize(item.dataset.search ?? "").includes(q);
-        item.hidden = !match;
-        if (match) visibleCount++;
-      });
-      empty.hidden = visibleCount !== 0;
+  let activeStatus = "all";
+
+  const apply = () => {
+    const q = normalize(input?.value ?? "");
+    let visible = 0;
+    for (const item of items) {
+      const matchesText = !q || normalize(item.dataset.search ?? "").includes(q);
+      const matchesStatus = activeStatus === "all" || item.dataset.status === activeStatus;
+      const show = matchesText && matchesStatus;
+      item.hidden = !show;
+      if (show) visible++;
+    }
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  input?.addEventListener("input", apply);
+
+  for (const button of filterButtons) {
+    button.addEventListener("click", () => {
+      activeStatus = button.dataset.statusFilter!;
+      for (const other of filterButtons) {
+        const on = other === button;
+        other.setAttribute("aria-pressed", String(on));
+        other.classList.toggle("bg-accent-soft", on);
+        other.classList.toggle("text-accent-soft-text", on);
+        other.classList.toggle("border-accent", on);
+        other.classList.toggle("text-muted", !on);
+        other.classList.toggle("border-line", !on);
+      }
+      apply();
     });
   }
+
+  apply();
 </script>

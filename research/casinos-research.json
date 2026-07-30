@@ -1,0 +1,163 @@
+{
+  "researched": "2026-07-30",
+  "caveats": [
+    "Every entry below has a domain and a launch date taken verbatim from a public source that was fetched directly during this research; nothing is inferred.",
+    "jurisdiction, licenceNumber and platform are null for most entries. Casino operator sites (403/WAF) and the two best licence sources (casino.guru, askgamblers.com) all block automated fetching, so licence footers could not be read. These fields need a manual pass.",
+    "All 13 entries were checked against the LCB warnings/blacklist (https://lcb.org/casinos/warnings) and none appear on it. warning: null therefore reflects an actual negative check, not an absent check. It is not a clean bill of health: brand-new casinos rarely have accumulated complaints yet.",
+    "This list is short of the 30 target and is skewed toward crypto-first 2026 launches. Jurisdiction spread was NOT achieved - see report."
+  ],
+  "sources": [
+    "https://www.cryptolists.com/casinos/new/",
+    "https://cryptocasinos.com/new-crypto-casinos/",
+    "https://www.askgamblers.com/online-casinos/new",
+    "https://www.askgamblers.com/online-casinos/crypto/new",
+    "https://anjouanonlinecasinos.com/",
+    "https://www.newcasinos.com/",
+    "https://lcb.org/casinos/warnings"
+  ],
+  "casinos": [
+    {
+      "name": "Zenobet",
+      "domain": "zenobet.io",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-06",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 15 June 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Grailbet",
+      "domain": "grailbet.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-06",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 13 June 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Smash Casino",
+      "domain": "smash.casino",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-03",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 16 March 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Royalen",
+      "domain": "royalen.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-03",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 9 March 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Allstars Casino",
+      "domain": "allstars.io",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-03",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 1 March 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Casino Cat",
+      "domain": "casinocat.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-02",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 28 February 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Lucky Anon Casino",
+      "domain": "luckyanon.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-02",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 23 February 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Ala Win Casino",
+      "domain": "alawin.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-02",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 10 February 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Hercules Casino",
+      "domain": "herculescasino.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-02",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 5 February 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Spinko Casino",
+      "domain": "spinko.co",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-01",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 28 January 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "Bet Republic",
+      "domain": "betrepublic.com",
+      "jurisdiction": null,
+      "licenceNumber": null,
+      "launched": "2026-01",
+      "platform": null,
+      "note": "Crypto casino; CryptoLists new-launch tracker dates the launch to 10 January 2026.",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "ZizoBet Casino",
+      "domain": "zizobet.com",
+      "jurisdiction": "Anjouan",
+      "licenceNumber": null,
+      "launched": "2026-01",
+      "platform": null,
+      "note": "Crypto casino launched 3 January 2026; also listed on an Anjouan-licensed casino directory. Domain confirmed live (host returned HTTP 403 to automated fetch).",
+      "warning": null,
+      "sourceUrl": "https://www.cryptolists.com/casinos/new/"
+    },
+    {
+      "name": "VivaSpin Casino",
+      "domain": "vivaspin.com",
+      "jurisdiction": "Anjouan",
+      "licenceNumber": null,
+      "launched": null,
+      "platform": null,
+      "note": "Listed on an Anjouan-licensed casino directory and on AskGamblers' new crypto casinos page. Domain confirmed live (host returned HTTP 403 to automated fetch). Launch date NOT established.",
+      "warning": null,
+      "sourceUrl": "https://anjouanonlinecasinos.com/"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+---
+/**
+ * Per-casino verification page.
+ *
+ * Generated for every casino in the directory, including ones with no
+ * commercial relationship — that is the point. A new operator has no search
+ * presence for its own brand, so "<brand> review / legit / withdrawal" is
+ * uncontested; this page takes that query and is also the artefact outreach
+ * points at ("we scanned you, here is the page").
+ *
+ * The status language is load-bearing. On a `scanned` page nothing may read as
+ * an endorsement: it reports what an automated check saw and says plainly that
+ * no badge was issued.
+ */
+import Layout from "../../../layouts/Layout.astro";
+import CtaBand from "../../../components/CtaBand.astro";
+import { casinos } from "../../../data/casinos";
+import { useTranslations, localePath, languages, defaultLocale } from "../../../i18n";
+
+export function getStaticPaths() {
+  return languages.flatMap((lang) =>
+    casinos.map((casino) => ({
+      params: {
+        locale: lang.locale === defaultLocale ? undefined : lang.locale,
+        slug: casino.slug,
+      },
+      props: { locale: lang.locale, casino },
+    })),
+  );
+}
+
+const { locale, casino } = Astro.props;
+const t = useTranslations(locale);
+const status = t.directory[casino.status];
+
+const title = `${casino.name} — ${status.label}`;
+const description = `${casino.name} (${casino.domain}): ${status.desc} Licence: ${casino.jurisdiction}. Last checked ${casino.lastScanned}.`;
+
+const facts = [
+  { k: "Domain", v: casino.domain },
+  { k: "Licence", v: casino.jurisdiction },
+  { k: "Licence number", v: casino.licenceNumber ?? "—" },
+  { k: "Launched", v: casino.launched ?? "—" },
+  { k: "Platform", v: casino.platform ?? "—" },
+  { k: t.directory.lastScanned, v: casino.lastScanned },
+].filter((f) => f.v && f.v !== "—");
+---
+
+<Layout locale={locale} path={`/casinos/${casino.slug}/`} title={title} description={description} current="casinos">
+  <main>
+    <section class="mx-auto w-full max-w-[820px] px-[clamp(20px,5vw,40px)] pb-8 pt-16">
+      <a href={localePath("/casinos/", locale)} class="mb-6 inline-block text-[13px] font-semibold text-accent">
+        &larr; {t.casinos.h1}
+      </a>
+
+      <div class="mb-6 flex flex-wrap items-center gap-3">
+        <h1 class="text-h2">{casino.name}</h1>
+        <span
+          class:list={[
+            "inline-flex items-center px-3 py-1 text-[13px] font-semibold",
+            casino.status === "certified"
+              ? "chip"
+              : casino.status === "flagged"
+                ? "rounded-pill bg-warn-soft text-warn-soft-text"
+                : "rounded-pill bg-surface-2 text-muted",
+          ]}
+        >
+          {status.label}
+          {casino.status === "certified" && casino.level && <span class="ms-1 opacity-70">· {casino.level}</span>}
+        </span>
+      </div>
+
+      <p class="mb-8 max-w-[60ch] text-base leading-relaxed text-muted">{status.desc}</p>
+
+      <div class="card mb-8 p-6.5">
+        <dl class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-x-8 gap-y-4">
+          {
+            facts.map((f) => (
+              <div>
+                <dt class="mb-0.5 text-[12px] font-semibold uppercase tracking-wide text-faint">{f.k}</dt>
+                <dd class="text-[15px] text-ink">{f.v}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        {casino.note && <p class="mt-5 border-t border-line pt-4 text-sm leading-relaxed text-muted">{casino.note}</p>}
+      </div>
+
+      {
+        casino.status !== "certified" && (
+          <div class="rounded-card border border-warn-line bg-warn-soft p-5.5">
+            <div class="mb-1.5 text-[15px] font-bold text-warn-soft-text">No badge issued</div>
+            <p class="text-sm leading-relaxed text-muted">
+              This page reports an automated check only. {casino.name} is not a Swift Secure client, has not been through
+              full verification, and is not endorsed by us. If you operate this brand and want the full check, you can
+              request one.
+            </p>
+          </div>
+        )
+      }
+
+      <p class="mt-8 text-sm text-muted">
+        <a href={localePath("/methodology/", locale)} class="font-semibold text-accent">
+          {t.methodology.title} &rarr;
+        </a>
+      </p>
+    </section>
+
+    <CtaBand
+      locale={locale}
+      heading={t.methodology.ctaHeading}
+      ctaLabel={t.methodology.ctaButton}
+      ctaHref="/apply/"
+    />
+  </main>
+</Layout>

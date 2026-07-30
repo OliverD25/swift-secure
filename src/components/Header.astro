@@ -6,7 +6,7 @@ import { useTranslations, localePath } from "../i18n";
 interface Props {
   locale: string;
   path: string;
-  current?: "process" | "pricing" | "about" | "faq" | "casinos" | "verify";
+  current?: "process" | "methodology" | "pricing" | "about" | "faq" | "casinos" | "verify";
 }
 
 const { locale, path, current } = Astro.props;
@@ -14,6 +14,7 @@ const t = useTranslations(locale);
 
 const navItems: { key: NonNullable<Props["current"]>; href: string; label: string }[] = [
   { key: "process", href: "/how-it-works/", label: t.nav.howItWorks },
+  { key: "methodology", href: "/methodology/", label: t.nav.methodology },
   { key: "pricing", href: "/pricing/", label: t.nav.pricing },
   { key: "about", href: "/about/", label: t.nav.about },
   { key: "faq", href: "/faq/", label: t.nav.faq },

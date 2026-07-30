@@ -26,6 +26,29 @@ export interface BillingNote {
   title: string;
   desc: string;
 }
+/** One-off charges that sit alongside the monthly plans. */
+export interface AddOn {
+  name: string;
+  price: string;
+  desc: string;
+}
+/** Bronze / Silver / Gold — what is actually checked, priced as an upsell path. */
+export interface Tier {
+  id: string;
+  name: string;
+  summary: string;
+  checks: string[];
+}
+/** A line in the "what we deliberately do not verify" list. Kept in the data
+ *  rather than prose so it stays as prominent as the claims themselves. */
+export interface Limit {
+  title: string;
+  desc: string;
+}
+export interface DirectoryStatus {
+  label: string;
+  desc: string;
+}
 export interface Stage {
   n: string;
   title: string;
@@ -47,6 +70,7 @@ export interface Faq {
 export interface Translation {
   nav: {
     howItWorks: string;
+    methodology: string;
     pricing: string;
     about: string;
     faq: string;
@@ -120,9 +144,41 @@ export interface Translation {
     applyNow: string;
     mostPopular: string;
     billingTitle: string;
+    addOnsTitle: string;
+    addOnsSub: string;
+    tiersTitle: string;
+    tiersSub: string;
   };
   plans: Plan[];
+  addOns: AddOn[];
+  tiers: Tier[];
   billingNotes: BillingNote[];
+  methodology: {
+    title: string;
+    description: string;
+    eyebrow: string;
+    h1: string;
+    sub: string;
+    checksTitle: string;
+    limitsTitle: string;
+    limitsSub: string;
+    monitoringTitle: string;
+    monitoringBody: string;
+    suspensionTitle: string;
+    suspensionBody: string;
+    ctaHeading: string;
+    ctaButton: string;
+  };
+  limits: Limit[];
+  directory: {
+    certified: DirectoryStatus;
+    scanned: DirectoryStatus;
+    listed: DirectoryStatus;
+    flagged: DirectoryStatus;
+    statusFilterAll: string;
+    lastScanned: string;
+    viewReport: string;
+  };
   casinos: {
     title: string;
     description: string;
