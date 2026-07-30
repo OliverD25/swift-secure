@@ -25,11 +25,7 @@ const linkClass = (key: Props["current"]) =>
   current === key ? "font-semibold text-accent" : "text-nav-muted hover:text-nav-text";
 ---
 
-<!-- Sticks below the review switcher, whose height it reads at runtime. The
-     fallback keeps the offset sane before the script publishes a measurement. -->
-<header
-  class="sticky top-[var(--switcher-h,41px)] z-20 border-b border-nav-line bg-nav backdrop-blur-sm"
->
+<header class="sticky top-0 z-20 border-b border-nav-line bg-nav backdrop-blur-sm">
   <div class="flex items-center justify-between gap-3 px-5 py-3.5 sm:px-[clamp(20px,5vw,40px)]">
     <a href={localePath("/", locale)} class="flex shrink-0 items-center gap-2.5">
       <ChipMark size={32} kind="mark" />

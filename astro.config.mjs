@@ -24,7 +24,13 @@ export default defineConfig({
     // English lives at the root; every other locale gets a /<code>/ prefix.
     routing: { prefixDefaultLocale: false },
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Internal design-option picker; it is noindexed and unlinked, so listing
+      // it in the sitemap would only invite crawlers to a page we then refuse.
+      filter: (page) => !page.includes('/settings'),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

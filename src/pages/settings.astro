@@ -1,0 +1,276 @@
+---
+/**
+ * Internal design-option picker.
+ *
+ * Deliberately outside src/pages/[...locale]/: this is tooling, not content, so
+ * it does not need nineteen translations, hreflang, or a place in the sitemap.
+ *
+ * It also carries its own fixed dark chrome rather than reading the theme
+ * tokens — the page whose job is to compare four looks should not be wearing
+ * one of them, or the swatches lose their reference point.
+ */
+import { THEME_OPTIONS, DEFAULT_THEME, STORAGE_KEY, THEMES } from "../lib/theme";
+import { withBase } from "../lib/url";
+
+const bootstrap = `(function(){try{var t=localStorage.getItem(${JSON.stringify(STORAGE_KEY)});if(${JSON.stringify(THEMES)}.indexOf(t)>-1){document.documentElement.dataset.theme=t}}catch(e){}})()`;
+---
+
+<!doctype html>
+<html lang="en" data-theme={DEFAULT_THEME}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design options — Swift Secure</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#101314" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
+    <script is:inline set:html={bootstrap} />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        background: #101314;
+        color: #e8eeec;
+        font-family: "Inter Variable", Inter, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        color: #8b9694;
+        margin: 0 0 10px;
+      }
+      h1 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin: 0 0 8px;
+      }
+      .lede {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #a9b3b1;
+        margin: 0 0 32px;
+        max-width: 56ch;
+      }
+      .options {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 28px;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #2c3433;
+        border-radius: 10px;
+        background: #161a1a;
+        color: inherit;
+        font: inherit;
+        text-align: left;
+        cursor: pointer;
+        transition: border-color 120ms, background 120ms;
+      }
+      .option:hover {
+        border-color: #46514f;
+      }
+      .option[aria-pressed="true"] {
+        border-color: #6ee7a6;
+        background: #17201c;
+      }
+      .swatch {
+        display: flex;
+        flex-shrink: 0;
+        width: 52px;
+        height: 34px;
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid #0c0f0f;
+      }
+      .swatch span {
+        flex: 1;
+      }
+      .meta {
+        min-width: 0;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .badge {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8b9694;
+        border: 1px solid #2c3433;
+        border-radius: 4px;
+        padding: 2px 5px;
+      }
+      .note {
+        font-size: 12.5px;
+        line-height: 1.5;
+        color: #98a3a1;
+        margin-top: 3px;
+      }
+      .tick {
+        margin-inline-start: auto;
+        flex-shrink: 0;
+        color: #6ee7a6;
+        font-size: 15px;
+        opacity: 0;
+      }
+      .option[aria-pressed="true"] .tick {
+        opacity: 1;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        border-top: 1px solid #262c2c;
+        padding-top: 22px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .btn-go {
+        background: #e8eeec;
+        color: #101314;
+      }
+      .btn-reset {
+        background: transparent;
+        border-color: #3a4241;
+        color: #c3ccca;
+      }
+      .status {
+        font-size: 12px;
+        color: #8b9694;
+        margin-inline-start: auto;
+      }
+      .footnote {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #7d8785;
+        margin: 26px 0 0;
+        max-width: 62ch;
+      }
+      .footnote code {
+        background: #1b2020;
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-size: 11.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="eyebrow">SWIFT SECURE</p>
+      <h1>Design options</h1>
+      <p class="lede">
+        Pick a look and it applies across the whole site — every page, every language. The choice is stored in this browser
+        only; it changes nothing for anyone else.
+      </p>
+
+      <div class="options">
+        {
+          THEME_OPTIONS.map((option) => (
+            <button type="button" class="option" data-option={option.id} aria-pressed="false">
+              <span class="swatch" aria-hidden="true">
+                {option.swatch.map((c) => (
+                  <span style={`background:${c}`} />
+                ))}
+              </span>
+              <span class="meta">
+                <span class="name">
+                  {option.name}
+                  {option.id === DEFAULT_THEME && <span class="badge">Default</span>}
+                </span>
+                <span class="note">{option.note}</span>
+              </span>
+              <span class="tick" aria-hidden="true">&#10003;</span>
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-go" href={withBase("/")}>View the site &rarr;</a>
+        <button type="button" class="btn btn-reset" data-reset>Reset to default</button>
+        <span class="status" data-status></span>
+      </div>
+
+      <p class="footnote">
+        This page is not linked from the site and is excluded from search. To make a choice permanent for everyone, promote
+        that option's token block into <code>:root</code> in <code>src/styles/global.css</code>, delete the other three, and
+        remove this page.
+      </p>
+    </div>
+
+    <script>
+      import { applyTheme, readTheme, DEFAULT_THEME, STORAGE_KEY, THEME_OPTIONS } from "../lib/theme";
+
+      const buttons = [...document.querySelectorAll<HTMLButtonElement>("[data-option]")];
+      const status = document.querySelector<HTMLElement>("[data-status]");
+
+      const nameFor = (id: string) => THEME_OPTIONS.find((o) => o.id === id)?.name ?? id;
+
+      const paint = (id: string, saved: boolean) => {
+        for (const button of buttons) {
+          button.setAttribute("aria-pressed", String(button.dataset.option === id));
+        }
+        if (status) {
+          status.textContent = saved
+            ? `Saved — showing ${nameFor(id)}`
+            : `Showing ${nameFor(id)}${id === DEFAULT_THEME ? " (default)" : ""}`;
+        }
+      };
+
+      for (const button of buttons) {
+        button.addEventListener("click", () => {
+          const id = button.dataset.option!;
+          applyTheme(id);
+          try {
+            localStorage.setItem(STORAGE_KEY, id);
+          } catch {
+            /* private mode — the choice applies now but will not persist */
+          }
+          paint(id, true);
+        });
+      }
+
+      document.querySelector("[data-reset]")?.addEventListener("click", () => {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch {
+          /* nothing stored to clear */
+        }
+        applyTheme(DEFAULT_THEME);
+        paint(DEFAULT_THEME, false);
+      });
+
+      paint(readTheme(), false);
+    </script>
+  </body>
+</html>

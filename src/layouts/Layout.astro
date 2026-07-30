@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import StickyCta from "../components/StickyCta.astro";
-import DesignSwitcher from "../components/DesignSwitcher.astro";
 import { localePath, languages, getLanguage, defaultLocale } from "../i18n";
 import { DEFAULT_THEME, STORAGE_KEY, THEMES } from "../lib/theme";
 import "../styles/global.css";
@@ -25,9 +24,9 @@ const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
 
 const showStickyCta = !path.startsWith("/apply");
 
-// Runs before first paint so a reviewer who picked Option C does not see a
-// frame of Option A first. Inline and blocking on purpose — a deferred module
-// would land after the page has already painted the built-in default.
+// Runs before first paint so someone who picked a non-default option at
+// /settings/ does not see a frame of the shipped default first. Inline and
+// blocking on purpose — a deferred module lands after the page has painted.
 const themeBootstrap = `(function(){try{var t=localStorage.getItem(${JSON.stringify(STORAGE_KEY)});if(${JSON.stringify(THEMES)}.indexOf(t)>-1){document.documentElement.dataset.theme=t}}catch(e){}})()`;
 ---
 
@@ -59,14 +58,11 @@ const themeBootstrap = `(function(){try{var t=localStorage.getItem(${JSON.string
 
     <link rel="icon" type="image/svg+xml" href={localePath("/favicon.svg", defaultLocale)} />
     <link rel="icon" href={localePath("/favicon.ico", defaultLocale)} sizes="32x32" />
-    {/* Matches the review bar pinned at the top of the page, not the nav.
-        Revisit when the switcher is removed. */}
-    <meta name="theme-color" content="#101314" />
+    <meta name="theme-color" content="#0c0b12" />
     <meta name="generator" content={Astro.generator} />
     <script is:inline set:html={themeBootstrap} />
   </head>
   <body class="flex min-h-screen flex-col bg-canvas font-sans text-ink">
-    <DesignSwitcher />
     <Header locale={locale} path={path} current={current} />
     <slot />
     <Footer locale={locale} />

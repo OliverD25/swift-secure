@@ -17,11 +17,15 @@
    them. --logo-fill / --logo-ink must stay solid colours; they are applied to
    SVG via the style attribute, and a gradient cannot go in `fill`.
 
-   This is a review device. When an option is chosen, delete the other three
-   blocks, promote the winner into :root, and remove DesignSwitcher.
+   Catalog (option D) is the shipped default — see DEFAULT_THEME in
+   src/lib/theme.ts. The other three stay switchable from /settings/, which is
+   unlinked and noindexed. To settle on one permanently: promote its block into
+   :root, delete the rest, and remove src/pages/settings.astro.
    --------------------------------------------------------------------------- */
 
-/* Option A — Corporate Trust (current build, baseline) */
+/* Option A — Corporate Trust. Also still in :root as the last-resort
+   fallback if data-theme is somehow absent; the shipped default is D, set on
+   <html> at build time. */
 :root,
 [data-theme="a"] {
   --font-body: "Inter Variable", "Inter", system-ui, sans-serif;
