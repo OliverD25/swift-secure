@@ -1,0 +1,99 @@
+{
+  "_readme": [
+    "Signature database — the technical moat of the whole unit.",
+    "",
+    "A game loading from a provider's own infrastructure, or from a legitimate",
+    "content aggregator, is normal. A game loading from the casino's own servers",
+    "is the signal we are actually looking for: it means the operator controls",
+    "the maths.",
+    "",
+    "THE AGGREGATOR LIST IS NOT OPTIONAL. Most legally-operating casinos take",
+    "games through an aggregator (SoftSwiss, Slotegrator, Hub88, EveryMatrix)",
+    "rather than integrating each provider directly. Omit them and the crawler",
+    "reports half the legal market as fake, the first operator to check the",
+    "report destroys the product's credibility, and the unit is finished.",
+    "",
+    "Anyone can copy the badge artwork in an afternoon. Nobody can copy this",
+    "file without doing the same work. Expand it continuously.",
+    "",
+    "VERIFY BEFORE TRUSTING: these domains were compiled from public knowledge",
+    "of the iGaming stack and have NOT all been confirmed against live traffic.",
+    "Run `npm run learn -- <domain>` against known-good casinos to observe real",
+    "traffic and grow the list from evidence rather than assumption."
+  ],
+
+  "providers": {
+    "Pragmatic Play": ["pragmaticplay.net", "pragmaticplay.com", "prerelease-env.biz", "pragmaticplaylive.net"],
+    "Evolution": ["evo-games.com", "evolutiongaming.com", "egcvi.com", "evolution.com"],
+    "NetEnt": ["netent.com", "netentstatic.com", "casinomodule.com", "netent-static.casinomodule.com"],
+    "Play'n GO": ["playngonetwork.com", "playngo.com"],
+    "Hacksaw Gaming": ["hacksawgaming.com", "hacksaw.se"],
+    "Nolimit City": ["nolimitcity.com", "nolimit-cdn.com"],
+    "Push Gaming": ["pushgaming.com", "pushgamingmedia.com"],
+    "Red Tiger": ["redtiger.com", "rtg-eu.com", "redtigergaming.com"],
+    "Yggdrasil": ["yggdrasilgaming.com", "ygg-games.com"],
+    "BGaming": ["bgaming-network.com", "bgaming.com"],
+    "Big Time Gaming": ["bigtimegaming.com"],
+    "Relax Gaming": ["relaxgaming.com", "relax-gaming.com"],
+    "Quickspin": ["quickspin.com", "quickspin.cloud"],
+    "Thunderkick": ["thunderkick.com"],
+    "ELK Studios": ["elk-studios.com"],
+    "Print Studios": ["printstudios.com"],
+    "Games Global": ["gameassists.co.uk", "microgaming.co.uk", "gamesglobal.com"],
+    "Playtech": ["playtech.com", "ptgames.net", "playtechone.com"],
+    "Wazdan": ["wazdan.com"],
+    "Booongo": ["booongo.com", "bng.games"],
+    "Spinomenal": ["spinomenal.com"],
+    "Habanero": ["habanerosystems.com", "habanero.com"],
+    "Endorphina": ["endorphina.com"],
+    "Betsoft": ["betsoft.com", "betsoftgaming.com"],
+    "Amatic": ["amatic.com"],
+    "1x2 Gaming": ["1x2gaming.com"],
+    "Blueprint Gaming": ["blueprintgaming.com"],
+    "Gamomat": ["gamomat.com"],
+    "Peter & Sons": ["petersons.games"],
+    "Backseat Gaming": ["backseatgaming.com"],
+    "Ezugi": ["ezugi.com"],
+    "Pragmatic Play Live": ["pragmaticplaylive.net"],
+    "Authentic Gaming": ["authenticgaming.com"],
+    "Absolute Live Gaming": ["absolutelivegaming.com"]
+  },
+
+  "aggregators": {
+    "SoftSwiss Game Aggregator": ["softswiss.com", "softswiss.net", "sw-cdn.net", "softswiss.io"],
+    "Slotegrator": ["slotegrator.com", "slotegrator.pro", "slotegrator.net"],
+    "Hub88": ["hub88.io"],
+    "EveryMatrix": ["everymatrix.com", "gamematrix.com", "cdn-everymatrix.com"],
+    "Pariplay Fusion": ["pariplayservices.com", "pariplay.com"],
+    "BetConstruct": ["betconstruct.com", "bcapps.org"],
+    "Digitain": ["digitain.com"],
+    "Groove Gaming": ["groovegaming.com"],
+    "Salsa Technology": ["salsatechnology.com"],
+    "TVBet": ["tvbet.tv"],
+    "Turbo Games": ["turbogames.io"],
+    "OnlyPlay": ["onlyplay.net"],
+    "GameArt": ["gameart.net"],
+    "Iforium": ["iforium.com"],
+    "Oryx Gaming": ["oryxgaming.com"],
+    "SmartSoft": ["smartsoftgaming.com"]
+  },
+
+  "_cdnNote": [
+    "Generic CDNs prove nothing either way — a provider, an aggregator and a",
+    "clone farm can all sit behind Cloudflare. Traffic matching these is",
+    "classified `neutral` and excluded from the verdict rather than counted",
+    "as evidence in either direction."
+  ],
+  "neutralCdns": [
+    "cloudfront.net", "cloudflare.com", "cloudflare.net", "akamaized.net", "akamai.net",
+    "fastly.net", "jsdelivr.net", "unpkg.com", "googleapis.com", "gstatic.com",
+    "bunnycdn.com", "b-cdn.net", "amazonaws.com", "azureedge.net", "cdn77.org"
+  ],
+
+  "_analyticsNote": "Tracking and support widgets are noise for this check; excluded from the verdict.",
+  "ignore": [
+    "google-analytics.com", "googletagmanager.com", "doubleclick.net", "facebook.net",
+    "hotjar.com", "intercom.io", "livechatinc.com", "zendesk.com", "tawk.to",
+    "sentry.io", "cloudflareinsights.com", "clarity.ms", "crisp.chat"
+  ]
+}
