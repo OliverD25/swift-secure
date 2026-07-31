@@ -27,3 +27,6 @@ pnpm-debug.log*
 crawler/node_modules/
 crawler/reports/
 .screenshots/
+
+# scratch worktrees left behind by remote sessions
+.claude/worktrees/

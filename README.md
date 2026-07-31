@@ -56,6 +56,10 @@ Two independent targets:
 | GitHub Pages | `git push` | https://oliverd25.github.io/swift-secure/ | The shareable link. Always up. |
 | Home server | `./deploy.sh` | https://swiftsecure.serveousercontent.com/ | Previewing uncommitted work. |
 
+Run `./publish.sh` instead of `./deploy.sh` when the session is already **on**
+the home server (phone-driven work). Same target, but it builds in place rather
+than copying 4,400 files across the network, so it does not need this PC awake.
+
 `git push` triggers `.github/workflows/deploy.yml`, which builds with
 `SITE`/`BASE_PATH` set so links resolve under the `/swift-secure/`
 sub-path Pages serves from. Local builds and `./deploy.sh` leave those unset
