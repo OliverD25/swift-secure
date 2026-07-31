@@ -13,9 +13,19 @@ interface Props {
   title: string;
   description: string;
   current?: "process" | "methodology" | "pricing" | "about" | "faq" | "casinos" | "verify";
+  /**
+   * Keep the page out of the index while still following its links.
+   *
+   * Set on directory entries we have not checked. Each is a template filled
+   * with register data, so across 19 locales they are thousands of near
+   * identical pages — the pattern search engines treat as thin content, and
+   * they can drag down the whole site rather than just themselves. A page
+   * earns indexing once a real check has run on it.
+   */
+  noindex?: boolean;
 }
 
-const { locale, path, title, description, current } = Astro.props;
+const { locale, path, title, description, current, noindex = false } = Astro.props;
 const lang = getLanguage(locale);
 
 const abs = (p: string) => new URL(p, Astro.site).toString();
@@ -38,13 +48,17 @@ const themeBootstrap = `(function(){try{var t=localStorage.getItem(${JSON.string
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     {
       /* Tell search engines this page exists in 19 languages, so the right one
-         is surfaced per user rather than them competing as duplicates. */
-      languages.map((l) => <link rel="alternate" hreflang={l.htmlLang} href={abs(localePath(path, l.locale))} />)
+         is surfaced per user rather than them competing as duplicates.
+         Skipped when noindexed: hreflang nominates a page as the right result
+         for a language, which contradicts asking for it not to be indexed. */
+      !noindex &&
+        languages.map((l) => <link rel="alternate" hreflang={l.htmlLang} href={abs(localePath(path, l.locale))} />)
     }
-    <link rel="alternate" hreflang="x-default" href={abs(localePath(path, defaultLocale))} />
+    {!noindex && <link rel="alternate" hreflang="x-default" href={abs(localePath(path, defaultLocale))} />}
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />

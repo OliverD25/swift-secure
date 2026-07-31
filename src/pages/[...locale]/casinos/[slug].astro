@@ -13,6 +13,7 @@
  * no badge was issued.
  */
 import Layout from "../../../layouts/Layout.astro";
+import { CONTACT_EMAIL } from "../../../lib/leadCapture";
 import CtaBand from "../../../components/CtaBand.astro";
 import { casinos } from "../../../data/casinos";
 import { useTranslations, localePath, languages, defaultLocale } from "../../../i18n";
@@ -48,9 +49,49 @@ const facts = [
   { k: "Platform", v: casino.platform ?? "—" },
   { k: t.directory.lastScanned, v: casino.lastScanned },
 ].filter((f) => f.v && f.v !== "—");
+
+/**
+ * Which directory entries are worth putting in front of a search engine.
+ *
+ * Two separate problems, and conflating them removes the whole directory:
+ *
+ *  - An entry with no verified licence carries nothing a register could not
+ *    give you. There is no reason to index it anywhere.
+ *  - An entry whose licence *was* confirmed carries a real, unique fact —
+ *    operator, number, expiry, source registry, date. Worth indexing once. But
+ *    the substantive content is identical in all 19 locales, since only the
+ *    surrounding labels translate, so indexing every locale would submit 18
+ *    duplicates per casino. That multiplication, not the entry count, is what
+ *    makes a directory read as thin.
+ *
+ * So: verified entries are indexed in the default locale only.
+ */
+const hasVerifiedLicence = Boolean(casino.licenceVerified);
+const noindex = !hasVerifiedLicence || locale !== defaultLocale;
+
+/**
+ * Where this entry came from, in words that survive the odd cases.
+ *
+ * `jurisdiction` doubles as a plain-language note — it can read "Not published"
+ * or "Costa Rica — no gaming regulator" — so pasting it into a sentence
+ * produced "compiled from the Not published public register". Naming a register
+ * is only safe when a register is what it actually was.
+ */
+const namesARegulator =
+  hasVerifiedLicence && casino.jurisdiction && !/not published|no gaming regulator/i.test(casino.jurisdiction);
+const sourceLabel = namesARegulator
+  ? `the ${casino.jurisdiction} public register`
+  : "public sources";
 ---
 
-<Layout locale={locale} path={`/casinos/${casino.slug}/`} title={title} description={description} current="casinos">
+<Layout
+  locale={locale}
+  path={`/casinos/${casino.slug}/`}
+  title={title}
+  description={description}
+  current="casinos"
+  noindex={noindex}
+>
   <main>
     <section class="mx-auto w-full max-w-[820px] px-[clamp(20px,5vw,40px)] pb-8 pt-16">
       <a href={localePath("/casinos/", locale)} class="mb-6 inline-block text-[13px] font-semibold text-accent">
@@ -118,6 +159,24 @@ const facts = [
                 : `This page reports an automated check only. ${casino.name} is not a Swift Secure client, has not been through full verification, and is not endorsed by us.`}
               {" "}If you operate this brand and want the full check, you can request one.
             </p>
+            {casino.status === "listed" && (
+              /* An operator listed without being asked needs a stated route to
+                 correct or remove the entry. Publishing a company's details
+                 with no way to object is the part of a directory that turns
+                 into a legal problem. */
+              <p class="mt-3 border-t border-warn-line pt-3 text-sm leading-relaxed text-muted">
+                This entry was compiled from {sourceLabel}. If you
+                represent {casino.name} and want it corrected or removed, write to{" "}
+                {CONTACT_EMAIL ? (
+                  <a href={`mailto:${CONTACT_EMAIL}?subject=Directory entry: ${casino.domain}`} class="font-semibold text-accent">
+                    {CONTACT_EMAIL}
+                  </a>
+                ) : (
+                  <span class="font-semibold">our team</span>
+                )}{" "}
+                and we will action it. No explanation required.
+              </p>
+            )}
           </div>
         )
       }
