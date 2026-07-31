@@ -8,6 +8,7 @@
     "scan": "node --experimental-strip-types src/cli.ts scan",
     "licence": "node --experimental-strip-types src/cli.ts licence",
     "learn": "node --experimental-strip-types src/cli.ts learn",
+    "footer": "node --experimental-strip-types src/cli.ts footer",
     "install-browser": "playwright install chromium"
   },
   "dependencies": {

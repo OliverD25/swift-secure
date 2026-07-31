@@ -2,6 +2,7 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { chromium } from "playwright";
 import { scanCasino } from "./scan.ts";
 import { loadAnjouanRegister } from "./checks/licence.ts";
+import { readFooterLicence } from "./checks/footer.ts";
 import { classify } from "./signatures.ts";
 import { loadProxies } from "./proxies.ts";
 
@@ -14,6 +15,7 @@ Swift Secure verification crawler
   npm run scan -- <domain> [more domains...]   Full check: games + licence
   npm run licence -- <domain> [...]            Licence register lookup only (fast, no proxy needed)
   npm run learn -- <domain>                    Dump unclassified hosts, to grow the signature DB
+  npm run footer -- <domain> [...]             Read what the site itself claims about its licence
 
 Environment:
   PROXIES     comma/newline separated proxy URLs, e.g.
@@ -116,8 +118,31 @@ async function cmdLearn(domains: string[]) {
   if (sorted.length === 0) console.log("  (none — everything matched a known signature)");
 }
 
+/** Records what a site claims about its own licence, so the claim can then be
+ *  checked against a register. A footer is not evidence — it is the assertion
+ *  we are going to test. */
+async function cmdFooter(domains: string[]) {
+  if (domains.length === 0) usage();
+  const browser = await chromium.launch({ headless: true });
+  try {
+    for (const domain of domains) {
+      const r = await readFooterLicence(browser, domain);
+      console.log(`
+${domain}`);
+      if (!r.reachable) { console.log(`  unreachable: ${r.blockedReason}`); continue; }
+      console.log(`  regulators mentioned: ${r.regulators.length ? r.regulators.join(", ") : "none found"}`);
+      console.log(`  licence numbers:      ${r.numbers.length ? r.numbers.join(", ") : "none found"}`);
+      if (r.sealLinks.length) console.log(`  seal/validator links: ${r.sealLinks.join(", ")}`);
+      if (r.excerpt) console.log(`  context: ${r.excerpt.slice(0, 220)}`);
+    }
+  } finally {
+    await browser.close();
+  }
+}
+
 switch (command) {
   case "scan": await cmdScan(args); break;
+  case "footer": await cmdFooter(args); break;
   case "licence": await cmdLicence(args); break;
   case "learn": await cmdLearn(args); break;
   default: usage();
