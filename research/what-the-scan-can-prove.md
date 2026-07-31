@@ -50,32 +50,46 @@ survive — the entire product is that our word means something.
 
 ## Market size — measured, 470 sites
 
-The sweep answered a question we had been guessing at: **how many casinos
-actually pay for a trust seal?**
+> **Corrected 31 July 2026.** The first pass reported 2.5% paying and 84% with
+> no trust signal. Both were wrong. It detected seals by third-party *hostname*,
+> so any badge an operator self-hosts — the normal deployment — was invisible.
+> Re-measured with a detector validated against known cases first. Numbers below
+> are the corrected ones; the originals are kept in the table so the size of the
+> error stays visible.
 
-| | Sites | % |
-| :--- | ---: | ---: |
-| Paying a **commercial** seal vendor | **12** | 2.5% |
-| Displaying the regulator's free seal | 60 | 13% |
-| No third-party trust signal at all | 394 | 84% |
+| | Corrected | First pass | |
+| :--- | ---: | ---: | :--- |
+| Paying for **certification** (lab or seal vendor) | **27 (5.7%)** | 12 (2.5%) | ×2.3 |
+| Carrying a review-platform badge (often free) | 16 (3.4%) | — | |
+| Displaying the regulator's licence seal | **263 (56%)** | 60 (13%) | ×4.4 |
+| Responsible-gambling logos | 144 (31%) | — | |
+| **Listing their game providers on-site** | **197 (42%)** | — | |
+| No trust signal of any kind | 145 (31%) | 394 (84%) | ⅓ |
 
-**Twelve out of 470 pay.** The commercial seal market in this segment is close
-to nonexistent, and no amount of product work changes that.
+Three things follow, and they are not what the first pass suggested.
 
-The number next to it is the one that matters, though: **60 operators display a
-seal they got for free.** They are willing to put a third-party badge on their
-site — they are not willing to pay for one. The behaviour we need already
-exists; only the payment does not.
+**Displaying a badge is normal, not rare.** 56% show the regulator's seal and
+only 31% show nothing at all. The behaviour the offer depends on is already
+routine — we are asking for something operators visibly already do.
 
-That makes the free founding-cohort offer the right model on the evidence, not
-just a launch tactic. It also means **badge subscriptions cannot be the revenue
-line here.** Money has to come from platforms, or from a segment with compliance
-budgets (MGA/UKGC), while this segment supplies backlinks, directory content and
-reference cases.
+**Paying is a real but minority market.** 5.7% is not the near-zero the first
+pass implied, but it is still a minority, so a badge subscription remains a hard
+primary revenue line in this segment. The free founding cohort stays right; the
+reasoning is now "most don't pay" rather than "nobody pays".
 
-The twelve who already pay are the warmest list we have, and they cluster: five
-sit on `licenseseal.online` and are all Turkish-facing brands, almost certainly
-one group. Twelve names is realistically four conversations.
+**42% list their game providers on their own site.** This partly recovers what
+the traffic analysis could not do. We cannot see which provider serves a game
+from the network, but nearly half of operators *publish the claim* — and a
+published claim is something that can be recorded, dated, and checked.
+
+Vendor concentration among the 27 payers: `gamecheck` (9), `licenseseal` (6),
+`gaminglabs` (6), `gli` (4), `dlagglobal` (3). Both leaders skew heavily
+Turkish-facing, and several names cluster into single groups — narnia*/narnium*
+are one operator, as are most of the licenseseal set. Twenty-seven names is
+realistically closer to a dozen conversations.
+
+Full per-site output: `research/seal-census.json`, regenerate with
+`node crawler/seal-census.mjs`.
 
 ## Platforms are detectable even though providers are not
 
