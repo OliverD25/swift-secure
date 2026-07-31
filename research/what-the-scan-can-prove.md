@@ -48,6 +48,51 @@ survive — the entire product is that our word means something.
 - **Shared infrastructure.** Hosts recurring across operators reveal platform
   groupings and therefore which brands share an owner.
 
+## Market size — measured, 470 sites
+
+The sweep answered a question we had been guessing at: **how many casinos
+actually pay for a trust seal?**
+
+| | Sites | % |
+| :--- | ---: | ---: |
+| Paying a **commercial** seal vendor | **12** | 2.5% |
+| Displaying the regulator's free seal | 60 | 13% |
+| No third-party trust signal at all | 394 | 84% |
+
+**Twelve out of 470 pay.** The commercial seal market in this segment is close
+to nonexistent, and no amount of product work changes that.
+
+The number next to it is the one that matters, though: **60 operators display a
+seal they got for free.** They are willing to put a third-party badge on their
+site — they are not willing to pay for one. The behaviour we need already
+exists; only the payment does not.
+
+That makes the free founding-cohort offer the right model on the evidence, not
+just a launch tactic. It also means **badge subscriptions cannot be the revenue
+line here.** Money has to come from platforms, or from a segment with compliance
+budgets (MGA/UKGC), while this segment supplies backlinks, directory content and
+reference cases.
+
+The twelve who already pay are the warmest list we have, and they cluster: five
+sit on `licenseseal.online` and are all Turkish-facing brands, almost certainly
+one group. Twelve names is realistically four conversations.
+
+## Platforms are detectable even though providers are not
+
+The same sweep found what the game-launch approach was reaching for, one layer
+up. Individual game providers are invisible, but the **platform** is not:
+
+| Signature | Sites | Reading |
+| :--- | ---: | :--- |
+| `bc-status.betconstruct.workers.dev`, `cmsbetconstruct.com`, `geoapi2.bcapps.org` | ~26 | **BetConstruct** — named explicitly in the hosts |
+| `v3.traincdn.com` | 13 | Slotegrator, by signature |
+| `cdn.launcher.a8r.games` | 8 | Aggregator launcher |
+
+This is commercially useful in a way provider-level checking never was. It maps
+which platform serves which operators, which is the opening for the partnership
+channel: approaching BetConstruct with "we have already mapped and indexed 26 of
+your operators" is a materially different conversation from a cold pitch.
+
 ## Why this is better than what it replaced
 
 Provider verification was a claim only a specialist could evaluate. Speed, geo

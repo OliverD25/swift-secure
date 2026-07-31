@@ -1,0 +1,6289 @@
+[
+ {
+  "domain": "betibet.com",
+  "operator": "Novatrix SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.betspace.tech",
+   "sentry-sportsbook.s7s.ai"
+  ]
+ },
+ {
+  "domain": "spinsamurai.com",
+  "operator": "Novatrix SRL",
+  "ok": true,
+  "seals": [
+   "images.dmca.com",
+   "896dae30-78d3-4f69-97c0-35dfeb36af48.seals.dlagglobal.com"
+  ],
+  "unbranded": [
+   "contentdeliverynetwork.cc",
+   "k7m4x2q9lp.dev"
+  ],
+  "third": [
+   "payments-lib.cdn.s7s.ai",
+   "contentdeliverynetwork.cc",
+   "pixel-us.mymetricpath.xyz",
+   "images.dmca.com",
+   "k7m4x2q9lp.dev",
+   "896dae30-78d3-4f69-97c0-35dfeb36af48.seals.dlagglobal.com",
+   "sentry.h100b.com"
+  ]
+ },
+ {
+  "domain": "fatbets.com",
+  "operator": "Fatbets Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "coinzillatag.com",
+   "track.liftdsp.com",
+   "cnv.event.prod.bidr.io",
+   "t.co",
+   "ps.l.liftdsp.com",
+   "event-va1.pubmatic.com",
+   "pool.liftdsp.com"
+  ]
+ },
+ {
+  "domain": "levabet.com",
+  "operator": "Mistletoe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "vendor-provider.fra1.cdn.digitaloceanspaces.com",
+   "service.3odjzv6x.com",
+   "chat15.3odjzv6x.com"
+  ]
+ },
+ {
+  "domain": "matixbet.com",
+  "operator": "Mistletoe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "vendor-provider.fra1.cdn.digitaloceanspaces.com",
+   "i.ibb.co",
+   "vendor-provider.fra1.digitaloceanspaces.com"
+  ]
+ },
+ {
+  "domain": "ezcash.casino",
+  "operator": "EZCS Solutions Ltd",
+  "ok": true,
+  "seals": [
+   "9d2d2949-5251-42c5-9bc4-3abb590bba89.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9d2d2949-5251-42c5-9bc4-3abb590bba89.snippet.anjouangaming.org",
+   "ezcashstorage.com",
+   "9d2d2949-5251-42c5-9bc4-3abb590bba89.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betpir.com",
+  "operator": "Mistletoe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "vendor-provider.fra1.cdn.digitaloceanspaces.com",
+   "cdn.softswiss.net",
+   "d3psi4rj7mv4u4.cloudfront.net",
+   "cdn.files-text.com"
+  ]
+ },
+ {
+  "domain": "levelupcasino.com",
+  "operator": "Novatrix SRL",
+  "ok": true,
+  "seals": [
+   "7bec17af-0e81-480d-a720-3a26d57b495c.seals.dlagglobal.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "7bec17af-0e81-480d-a720-3a26d57b495c.seals.dlagglobal.com",
+   "d1baaxdbrk3n29.cloudfront.net",
+   "mpc-prod-21-1053047382554.us-central1.run.app"
+  ]
+ },
+ {
+  "domain": "cooked.com",
+  "operator": "Digital Chain Ventures SRL",
+  "ok": true,
+  "seals": [
+   "images.dmca.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "cdn.getid.cloud",
+   "images.dmca.com",
+   "track.liftdsp.com",
+   "ps.l.liftdsp.com",
+   "b10eab74-3b77-4af0-901f-cdf2c92c42d6.snippet.anjcdn.org",
+   "files.kick.com",
+   "pool.liftdsp.com",
+   "cg-prod-public-f3-casino.s3.ap-southeast-1.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "loonieplay.com",
+  "operator": "Kingside Push Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d3zz21owqgcp7.cloudfront.net",
+   "analytics.ahrefs.com",
+   "dh9r2j19vk8dn.cloudfront.net",
+   "chat.cevro.ai",
+   "admaxium.com",
+   "d2kzy17kpr7psn.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "twixos.com",
+  "operator": "Global Score Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "00412643-b10a-43b4-aad1-8b3cb17e4483.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "richevoslot.com",
+  "operator": "Nuvorich Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "phonix.casino",
+  "operator": "3-102-939892 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "placehold.co"
+  ]
+ },
+ {
+  "domain": "betfal.com",
+  "operator": "Anzal Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi.bcapps.net",
+   "builder.spring-builder.prod.yospace.ai",
+   "statistics.betconstruct.com"
+  ]
+ },
+ {
+  "domain": "jokertipp.com",
+  "operator": "Mirella Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "76cookie.services"
+  ],
+  "third": [
+   "cdn.datpix.net",
+   "76cookie.services",
+   "951fe499-0cc8-4232-ad28-9d6d8a55074d.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "caposino.com",
+  "operator": "CONDOOR V.P. LIMITED",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "platform.mdlr.tech",
+   "errs.qwrt.xyz",
+   "js.datadome.co",
+   "js.support-tech.io",
+   "api-js.datadome.co"
+  ]
+ },
+ {
+  "domain": "megapot.io",
+  "operator": "Megapot Inc",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "875931dd-dba1-434b-8e0d-2a0e7dfe5595.snippet.anjcdn.org",
+   "sr-client-cfg.amplitude.com",
+   "explorer-api.walletconnect.com",
+   "auth.privy.io"
+  ]
+ },
+ {
+  "domain": "slot.win",
+  "operator": "3-102-942828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "9d22a230-d340-4ac9-896e-9b9fd7bfb154.snippet.anjcdn.org",
+   "r.uuidksinc.net",
+   "luckmedia.link"
+  ]
+ },
+ {
+  "domain": "kush.casino",
+  "operator": "3-102-937610 SRL",
+  "ok": true,
+  "seals": [
+   "1bbda959-dd3b-4ada-9321-43a5918a4cbf.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "1bbda959-dd3b-4ada-9321-43a5918a4cbf.snippet.anjouangaming.org",
+   "auth.kush-vault.com",
+   "imgs.kush-vault.com",
+   "sentry.betrium.io",
+   "core.kush-vault.com",
+   "1bbda959-dd3b-4ada-9321-43a5918a4cbf.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "wgcasino.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gbetplay.net",
+  "operator": "Juicecraft Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d404dd5a-2cd4-4562-bceb-a371a8c0c2ae.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "afrislots.net",
+  "operator": "Juicecraft Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "812e6d2b-668e-4b99-8ae8-ca521ca84999.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "whalebet.gg",
+  "operator": "3-102-942955 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "9dfa7136-2a50-47d6-8de7-8258480ff343.snippet.anjcdn.org",
+   "whalabet.s3.bhs.io.cloud.ovh.net"
+  ]
+ },
+ {
+  "domain": "j8de.io",
+  "operator": "3-102-937610 SRL",
+  "ok": true,
+  "seals": [
+   "5c88a634-b4ac-4037-b827-b5376e91cf71.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "imgs.j8de-vault.com",
+   "sentry.betrium.io",
+   "j8de-vault.com",
+   "fpnpmcdn.net",
+   "ap.api.fpjs.io",
+   "dv-c3e594c6d429469e90b54478358619c3.ecs.us-east-1.on.aws",
+   "mpc-prod-25-s6uit34pua-wl.a.run.app",
+   "5c88a634-b4ac-4037-b827-b5376e91cf71.snippet.anjouangaming.org",
+   "5c88a634-b4ac-4037-b827-b5376e91cf71.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "elvisluck.net",
+  "operator": "Juicecraft Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "486d5163-8955-41d6-9599-33170b85f0bb.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "ganamega.net",
+  "operator": "Juicecraft Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "i.pravatar.cc",
+   "a014c369-f39c-4bae-8ec9-87375ea96262.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "raize.poker",
+  "operator": "3-102-943085 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "datadoghq-browser-agent.com",
+   "browser-intake-datadoghq.eu"
+  ]
+ },
+ {
+  "domain": "matadorbet.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org",
+   "cfmtdr.psnwcontent.com"
+  ]
+ },
+ {
+  "domain": "zbahis.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org"
+  ]
+ },
+ {
+  "domain": "fixbet.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org"
+  ]
+ },
+ {
+  "domain": "blockdag.co",
+  "operator": "3-102-946540 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "238d2a2d-6d11-40fe-8b72-935805ded677.snippet.anjcdn.org",
+   "preapi.blockdag.network",
+   "bdag.imgix.net",
+   "cdn.hub88.io",
+   "api.c.blockdag.network",
+   "media.spartans.com",
+   "media.v2.spartans.com",
+   "youtube.com",
+   "i.ytimg.com"
+  ]
+ },
+ {
+  "domain": "stakeboss.com",
+  "operator": "3-102-947775 Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ad0b251f-e3a4-419c-a857-3b8c0decbac0.snippet.anjcdn.org",
+   "flextrade-prod-storage.s3.us-east-1.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "africa-bizbet.com",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [
+   "0ea074be-2d0e-4b39-8b28-89638bdecca6.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "0ea074be-2d0e-4b39-8b28-89638bdecca6.snippet.anjouangaming.org",
+   "0ea074be-2d0e-4b39-8b28-89638bdecca6.snippet.anjcdn.org",
+   "v2d.cdnsfree.com"
+  ]
+ },
+ {
+  "domain": "bizbet.mobi",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [
+   "772a0990-2753-4af9-b683-ccddbfb68199.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "772a0990-2753-4af9-b683-ccddbfb68199.snippet.anjouangaming.org",
+   "772a0990-2753-4af9-b683-ccddbfb68199.snippet.anjcdn.org",
+   "v2gc.traincdn.com"
+  ]
+ },
+ {
+  "domain": "bizbet-biz.com",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [
+   "07d40f59-b9d2-4c31-81a1-e5b926ccc044.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "07d40f59-b9d2-4c31-81a1-e5b926ccc044.snippet.anjouangaming.org",
+   "07d40f59-b9d2-4c31-81a1-e5b926ccc044.snippet.anjcdn.org",
+   "v2d.cdnsfree.com"
+  ]
+ },
+ {
+  "domain": "frogbet.com",
+  "operator": "3-102-940062 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "narniumcasino.com",
+  "operator": "Narnium Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "nrn-media.s3.amazonaws.com",
+   "e2fbc703-4511-4dfc-8b47-87acce632415.snippet.anjcdn.org",
+   "app.tugi.ai",
+   "cdn.launcher.a8r.games",
+   "cdn.zmsfnxxx.xyz"
+  ]
+ },
+ {
+  "domain": "narniaslots.com",
+  "operator": "Narnium Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "nrn-media.s3.amazonaws.com",
+   "db742eb6-ce28-4a0d-a138-1b0df19b327a.snippet.anjcdn.org",
+   "app.tugi.ai",
+   "cdn.launcher.a8r.games",
+   "cdn.zmsfnxxx.xyz"
+  ]
+ },
+ {
+  "domain": "narniumslots.com",
+  "operator": "Narnium Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "nrn-media.s3.amazonaws.com",
+   "91befec0-ef15-4570-a59f-a6f25c8708ec.snippet.anjcdn.org",
+   "app.tugi.ai",
+   "cdn.launcher.a8r.games",
+   "cdn.zmsfnxxx.xyz"
+  ]
+ },
+ {
+  "domain": "betida.com",
+  "operator": "Betida Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.sanity.io",
+   "9572cacc-29eb-4d03-bdb2-37b73e129761.snippet.anjcdn.org",
+   "react-circle-flags.pages.dev",
+   "res.cloudinary.com",
+   "api-raeth4un-feed.sptpub.com",
+   "gamma-api.polymarket.com",
+   "polymarket-upload.s3.us-east-2.amazonaws.com",
+   "luckmedia.link"
+  ]
+ },
+ {
+  "domain": "aldex.win",
+  "operator": "Aldex Win Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "s3.sa-east-1.amazonaws.com",
+   "static.zdassets.com",
+   "a298fc83-6db0-45d8-af73-467936ab9c27.snippet.anjcdn.org",
+   "cxg.playwebservice.com",
+   "playwebservice.com",
+   "ekr.zdassets.com",
+   "api-eu.mixpanel.com"
+  ]
+ },
+ {
+  "domain": "graildraw.com",
+  "operator": "Grail Technologies Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "img1.wsimg.com",
+   "csp.secureserver.net"
+  ]
+ },
+ {
+  "domain": "fortunehub.io",
+  "operator": "Fortune HUB OÜ",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "luminous.casino",
+  "operator": "LuminousCompany Ltd.",
+  "ok": true,
+  "seals": [
+   "902776ea-3778-45a7-a4f7-dfe77826f7ee.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "902776ea-3778-45a7-a4f7-dfe77826f7ee.snippet.anjouangaming.org",
+   "902776ea-3778-45a7-a4f7-dfe77826f7ee.snippet.anjcdn.org",
+   "static.me-talk.ru",
+   "widget.me-talk.ru"
+  ]
+ },
+ {
+  "domain": "slotbaba.com",
+  "operator": "IsleSoft Lab Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinay.com",
+  "operator": "Oranox Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "platform.mdlr.tech",
+   "errs.qwrt.xyz",
+   "js.datadome.co",
+   "js.support-tech.io",
+   "static.zdassets.com",
+   "api-js.datadome.co",
+   "ekr.zdassets.com"
+  ]
+ },
+ {
+  "domain": "ustabet.com",
+  "operator": "Real Tech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "errs.qwrt.xyz",
+   "js.datadome.co",
+   "js.support-tech.io",
+   "api-js.datadome.co",
+   "service.zca7lviaupx.com",
+   "chat15.zca7lviaupx.com"
+  ]
+ },
+ {
+  "domain": "betabc.io",
+  "operator": "3-102-952781 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gamwiz.com",
+  "operator": "Gamwiz Inc",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "9af5c2c4-21ae-4477-b69c-71cd2067b93b.snippet.anjcdn.org",
+   "r2.thesportsdb.com",
+   "thesportsdb.com",
+   "cdn-api.pandascore.co",
+   "ztvtosdredrmqhkkymxb.supabase.co"
+  ]
+ },
+ {
+  "domain": "zlot.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.gamecheck.cloud"
+  ],
+  "unbranded": [],
+  "third": [
+   "seal.gamecheck.cloud",
+   "clientcdn.pushengage.com",
+   "api-zlot-tr--prd--pl-sb.api3kut.com",
+   "service.e4026ext8b.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "dmtb43htzkr6a.cloudfront.net",
+   "data.gosquared.com",
+   "chat15.e4026ext8b.com",
+   "1711649b-9e92-4751-96c1-df252e42b589.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "hyperoll.com",
+  "operator": "Quantum House Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.seondf.com",
+   "mpc-prod-23-s6uit34pua-ue.a.run.app",
+   "e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws",
+   "8b-ffbbe167ddcc42afb5f860276d91024e.ecs.us-west-2.on.aws",
+   "1823b87e-761c-4b40-8b86-eb178320cb3b.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "cat2bet.com",
+  "operator": "Terravista Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.hearts.casino",
+   "03d8f097-022e-48ef-96d2-e8772b45c584.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betum.com",
+  "operator": "Pulsiora Ltd",
+  "ok": true,
+  "seals": [
+   "anj-4c1c000a-2410-4150-9e6c-ece1629e4bb4.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "pixaxixa.cloud",
+   "4c1c000a-2410-4150-9e6c-ece1629e4bb4.snippet.anjcdn.org",
+   "anj-4c1c000a-2410-4150-9e6c-ece1629e4bb4.snippet.anjouangaming.org"
+  ]
+ },
+ {
+  "domain": "luckyclash.io",
+  "operator": "Prime Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "2bddbc5d-b738-4c51-8924-b5039e1cad7f.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "redslot.com",
+  "operator": "3-102-953088 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "pk8.com",
+  "operator": "High Gaming IT Services Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "a5web.oss-cn-shenzhen.aliyuncs.com",
+   "pk9-prod.a5-labs-cloud.com",
+   "cdn.segment.com",
+   "api.segment.io"
+  ]
+ },
+ {
+  "domain": "sansli.io",
+  "operator": "Dragonfruit Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "81e5608e-6215-497f-bccb-360f11922f6c.snippet.anjcdn.org",
+   "d1om8bhvvd0l9e.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "oxy.casino",
+  "operator": "Spiritus Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "fenixbet.online",
+  "operator": "Spiritus Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ac5511a6-8048-4e50-8856-52857b1f3ce2.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "vegasking.io",
+  "operator": "Royal Edge Holdings Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "dustbet.io",
+  "operator": "Anklebone Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "041b3cd4-46b0-4e29-ba0f-2a48c49d24f2.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "trenchbet.com",
+  "operator": "Lock In Capital Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "lupload.b-cdn.net",
+   "res.cloudinary.com",
+   "api.gleap.io",
+   "4ec50007-b190-4e73-aafa-037aded2d84c.snippet.anjcdn.org",
+   "nowpayments.io",
+   "trenchbet.sptpub.com",
+   "start32.sptpub.com",
+   "bt-app-static-themes.sptpub.com",
+   "api-32-sp-c7818b61-598.sptpub.com",
+   "static.sptpub.com",
+   "d1bvoel1nv172p.cloudfront.net",
+   "files-immutable-4cbc033nbd3.sptpub.com"
+  ]
+ },
+ {
+  "domain": "betsmove.com",
+  "operator": "Vesaro Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "orowin.bet",
+  "operator": "Win Vision N.V.",
+  "ok": true,
+  "seals": [
+   "64a9179d-f40c-4a70-8cf3-673e6ef755fc.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "orowin-promo-main.s3.sa-east-1.amazonaws.com",
+   "orowin-public.s3.sa-east-1.amazonaws.com",
+   "64a9179d-f40c-4a70-8cf3-673e6ef755fc.snippet.anjouangaming.org",
+   "64a9179d-f40c-4a70-8cf3-673e6ef755fc.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "sikkaro.bet",
+  "operator": "Win Vision N.V.",
+  "ok": true,
+  "seals": [
+   "e014641c-8cc5-4b67-b25d-dc47e9f9719a.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "sikkaro-main-promo.s3.ap-southeast-1.amazonaws.com",
+   "sikkaro-public.s3.ap-southeast-1.amazonaws.com",
+   "e014641c-8cc5-4b67-b25d-dc47e9f9719a.snippet.anjouangaming.org",
+   "e014641c-8cc5-4b67-b25d-dc47e9f9719a.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "80bet.com",
+  "operator": "88gaming B.V.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static.springbuilder.site",
+   "builder.spring-builder.prod.yospace.ai",
+   "geoapi.bcapps.net",
+   "go.cmsbetconstruct.com",
+   "statistics.betconstruct.com",
+   "80bet-18763996.springbuilder.org",
+   "cdn.files-text.com"
+  ]
+ },
+ {
+  "domain": "bet16.com",
+  "operator": "88gaming B.V.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static.springbuilder.site",
+   "builder.spring-builder.prod.yospace.ai",
+   "geoapi.bcapps.net",
+   "go.cmsbetconstruct.com",
+   "statistics.betconstruct.com",
+   "static.springbuilder.org",
+   "cdn.files-text.com"
+  ]
+ },
+ {
+  "domain": "voodoo.casino",
+  "operator": "Novatrix SRL",
+  "ok": true,
+  "seals": [
+   "eb1a41eb-434b-478b-8dce-4b553e6895bc.seals.dlagglobal.com"
+  ],
+  "unbranded": [
+   "netcontent.cc"
+  ],
+  "third": [
+   "payments-lib.cdn.s7s.ai",
+   "netcontent.cc",
+   "eb1a41eb-434b-478b-8dce-4b553e6895bc.seals.dlagglobal.com",
+   "scripts.prdredir.com",
+   "mediaagencyads.com",
+   "stalkoda.com",
+   "trkwwtarget.cloud",
+   "rtg.wewomedia.com",
+   "plxaud.com",
+   "secure.afilio.com.br",
+   "media.athena-tech.eu",
+   "cloud.umami.is",
+   "optera.tech",
+   "cf-voodoo.btrtrf.com",
+   "771.mask-traffic.world",
+   "static-cdn.trackier.com",
+   "pixel.adfyier.com",
+   "pixel.athena-tech.eu",
+   "m.stalkoda.com",
+   "gateway.umami.is",
+   "rtg.prdredir.com",
+   "api-voodoo.btrtrf.com",
+   "adtrackerz.co.uk",
+   "c.stalkoda.com",
+   "s.logstracker.com",
+   "media.openxglobal.com",
+   "fluxrise.gotrackier.io",
+   "voodoo-redirector.com",
+   "voodoo4.casino"
+  ]
+ },
+ {
+  "domain": "21bit.com",
+  "operator": "Novatrix SRL",
+  "ok": true,
+  "seals": [
+   "b13e7f11-2917-4862-92b6-0cae9089529f.seals.dlagglobal.com"
+  ],
+  "unbranded": [
+   "k7m4x2q9lp.dev"
+  ],
+  "third": [
+   "payments-lib.cdn.s7s.ai",
+   "pixel-us.mymetricpath.xyz",
+   "b13e7f11-2917-4862-92b6-0cae9089529f.seals.dlagglobal.com",
+   "cdn.softswiss.net",
+   "k7m4x2q9lp.dev",
+   "sentry.h100b.com"
+  ]
+ },
+ {
+  "domain": "vamoplay.com",
+  "operator": "3-102-938326 SRL",
+  "ok": true,
+  "seals": [
+   "328e7545-2c89-4ee3-8f32-c6f21d8410f6.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "328e7545-2c89-4ee3-8f32-c6f21d8410f6.snippet.anjouangaming.org",
+   "telegram.org",
+   "dv-c3e594c6d429469e90b54478358619c3.ecs.us-east-1.on.aws",
+   "cdn.urm.app",
+   "urmingestion.protechly.com",
+   "urmappapi.protechly.com",
+   "fungamess.games",
+   "aws.oddservice.live"
+  ]
+ },
+ {
+  "domain": "funbet888.me",
+  "operator": "3-102-938581 Limitada",
+  "ok": true,
+  "seals": [
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "scripts.coolretargeting.com",
+   "rtg.wewomedia.com",
+   "r.uuidksinc.net",
+   "media.athena-tech.eu",
+   "shop-cart.app",
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjouangaming.org",
+   "funbet.me",
+   "rtg.prdredir.com",
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjcdn.org",
+   "pixel.athena-tech.eu",
+   "my.rtmark.net",
+   "track.phoenix-widget.com",
+   "tsyndicate.com",
+   "openrtb.tds.bid",
+   "ads.trafficjunky.net",
+   "syncbm.com",
+   "cs.dt.cckmnd.com",
+   "z.cdn.adtarget.me",
+   "cm.pxltag.com",
+   "dmg.digitaltarget.ru",
+   "s.uuidksinc.net"
+  ]
+ },
+ {
+  "domain": "funbet.me",
+  "operator": "3-102-938581 Limitada",
+  "ok": true,
+  "seals": [
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "scripts.coolretargeting.com",
+   "rtg.wewomedia.com",
+   "r.uuidksinc.net",
+   "media.athena-tech.eu",
+   "shop-cart.app",
+   "rtg.prdredir.com",
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjouangaming.org",
+   "pixel.athena-tech.eu",
+   "372d79a1-ae2f-4d82-8127-1acbe4e455e6.snippet.anjcdn.org",
+   "my.rtmark.net",
+   "track.phoenix-widget.com",
+   "tsyndicate.com",
+   "openrtb.tds.bid",
+   "ads.trafficjunky.net",
+   "syncbm.com",
+   "cs.dt.cckmnd.com",
+   "z.cdn.adtarget.me",
+   "cm.pxltag.com",
+   "dmg.digitaltarget.ru",
+   "s.uuidksinc.net"
+  ]
+ },
+ {
+  "domain": "acespinz.com",
+  "operator": "Flashpot Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "slash.bet",
+  "operator": "Flashpot Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "greatslots.com",
+  "operator": "BrightSky Ltd",
+  "ok": true,
+  "seals": [
+   "db4c8672-393a-42d0-9477-acde3b748521.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "d140ri21ohh3o7.cloudfront.net",
+   "ik.imagekit.io",
+   "cdn-4.convertexperiments.com",
+   "cdn.cookiehub.eu",
+   "static.zdassets.com",
+   "db4c8672-393a-42d0-9477-acde3b748521.snippet.anjouangaming.org",
+   "ekr.zdassets.com",
+   "db4c8672-393a-42d0-9477-acde3b748521.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "spin.io",
+  "operator": "FunGame LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bca-protocol.firebaseapp.com",
+   "api.ipify.org",
+   "web-button.metamap.com",
+   "tag.adrsbl.io",
+   "us-central1-web3-marketing-hub.cloudfunctions.net",
+   "secure.adnxs.com",
+   "v6.tag.adrsbl.io",
+   "api.adradv.io",
+   "track.adform.net",
+   "telegram.org",
+   "660e058f-0df2-4283-8f52-e2895fad7722.snippet.anjcdn.org",
+   "oauth.telegram.org"
+  ]
+ },
+ {
+  "domain": "tonplay.com",
+  "operator": "Galaxy Byte Lab SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "3d48ca35-3fff-4ccc-af46-6d50544ee5ec.snippet.anjcdn.org",
+   "tonplay.rox.chat",
+   "hatscripts.github.io",
+   "config.ton.org"
+  ]
+ },
+ {
+  "domain": "godsgame.casino",
+  "operator": "Galaxy Byte Lab SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betbeast.com",
+  "operator": "FunGame LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "tm.ads.sportradar.com",
+   "fae51f1e-82c3-4f17-936d-20eadfc72db6.snippet.anjcdn.org",
+   "sb2wsdk-altenar2.biahosted.com",
+   "tracker.ads.sportradar.com",
+   "tag.growthbuddy.app",
+   "a.sportradarserving.com",
+   "sb2wsdk-cdn-altenar2.biahosted.net",
+   "cdn.weglot.com",
+   "tracker.growthbuddy.app",
+   "x.bidswitch.net",
+   "sb2integration-altenar2.biahosted.com",
+   "sb2frontend-altenar2.biahosted.com",
+   "sb2auth-altenar2.biahosted.com",
+   "sb2bonus-gateway-p002.biahosted.com"
+  ]
+ },
+ {
+  "domain": "betmonks.com",
+  "operator": "Gamerly Holding Ltd",
+  "ok": true,
+  "seals": [
+   "64f833da-b7ba-4974-b977-a0b8420f6e4b.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "dp0kd0fj044fh.cloudfront.net",
+   "da4gomi5w3o01.cloudfront.net",
+   "d1nxk8io3iz4ej.cloudfront.net",
+   "64f833da-b7ba-4974-b977-a0b8420f6e4b.snippet.anjouangaming.org",
+   "64f833da-b7ba-4974-b977-a0b8420f6e4b.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "grizzly.online",
+  "operator": "GC Service Group Ltd",
+  "ok": true,
+  "seals": [
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjouangaming.org",
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "grizzly.win",
+  "operator": "GC Service Group Ltd",
+  "ok": true,
+  "seals": [
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjouangaming.org",
+   "abe6d51a-c22f-4540-8e08-4f318fe2aaf7.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "kuzeycasino.com",
+  "operator": "Mistletoe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betanic.com",
+  "operator": "Kitsilano Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "api.i18nexus.com",
+   "images.gscplusmd.com"
+  ]
+ },
+ {
+  "domain": "evetabi.com",
+  "operator": "Mistletoe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "38593e72-9493-4f16-9ec9-63d3889c71f0.snippet.anjcdn.org",
+   "chatbro.app",
+   "eu-west-1.chatbro.app"
+  ]
+ },
+ {
+  "domain": "sportsduel.com",
+  "operator": "Kitsilano Limitada",
+  "ok": true,
+  "seals": [
+   "668e0aed-7006-475f-a41b-c58cd6495a17.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "668e0aed-7006-475f-a41b-c58cd6495a17.snippet.anjouangaming.org",
+   "668e0aed-7006-475f-a41b-c58cd6495a17.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "squadduel.com",
+  "operator": "Kitsilano Limitada",
+  "ok": true,
+  "seals": [
+   "cff4f815-7269-48c0-8a38-4d678b32ddfa.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "cff4f815-7269-48c0-8a38-4d678b32ddfa.snippet.anjouangaming.org",
+   "ipwho.is",
+   "cff4f815-7269-48c0-8a38-4d678b32ddfa.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "tucasino.lat",
+  "operator": "Nova Code Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "js.sentry-cdn.com",
+   "75465c7f-026c-46dc-b1ac-8ef8a5b64660.snippet.anjcdn.org",
+   "browser.sentry-cdn.com",
+   "sportsbook.cmswager.com",
+   "ttlive.me",
+   "media.latsystem.com"
+  ]
+ },
+ {
+  "domain": "partybet.ai",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "juegojoker.com",
+  "operator": "Nova Code Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d856f251-8c28-4825-938e-cae030f6cfca.snippet.anjcdn.org",
+   "sportsbook.cmswager.com",
+   "ttlive.me",
+   "joker.partners",
+   "media.latsystem.com"
+  ]
+ },
+ {
+  "domain": "partybet.app",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "partyguess.com",
+   "partyguess-backend-production.up.railway.app"
+  ]
+ },
+ {
+  "domain": "partybet.bot",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "partybet.casino",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "partybet.fun",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "8fa4d875-ceac-4047-abff-7e80abce82bc.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "8fa4d875-ceac-4047-abff-7e80abce82bc.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "partybet.social",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "partybet.win",
+  "operator": "On Read SRL",
+  "ok": true,
+  "seals": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org",
+   "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "1xbetanj.com",
+  "operator": "PRAECUS LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com"
+  ]
+ },
+ {
+  "domain": "questjack.com",
+  "operator": "QuestJack Ltd",
+  "ok": true,
+  "seals": [
+   "29122954-ff59-4e69-8ccf-a23718fa44e4.snippet.anjouangaming.org",
+   "c4c94aa9-db6d-43f9-be23-75e5aa18ee3c.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "29122954-ff59-4e69-8ccf-a23718fa44e4.snippet.anjouangaming.org",
+   "c4c94aa9-db6d-43f9-be23-75e5aa18ee3c.snippet.anjouangaming.org",
+   "c4c94aa9-db6d-43f9-be23-75e5aa18ee3c.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "tibiablackjack.com",
+  "operator": "QuestJack Ltd",
+  "ok": true,
+  "seals": [
+   "29122954-ff59-4e69-8ccf-a23718fa44e4.snippet.anjouangaming.org",
+   "c4c94aa9-db6d-43f9-be23-75e5aa18ee3c.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "29122954-ff59-4e69-8ccf-a23718fa44e4.snippet.anjouangaming.org",
+   "c4c94aa9-db6d-43f9-be23-75e5aa18ee3c.snippet.anjouangaming.org",
+   "29122954-ff59-4e69-8ccf-a23718fa44e4.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "tibiadice.com",
+  "operator": "QuestJack Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "flush.com",
+  "operator": "Fordegens Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.mxpnl.com",
+   "fc133b1e-d9fa-4f82-8ea6-ab4b8bd06814.api-access.org",
+   "206721e8-853c-4a05-b890-4c86015bd5d9.snippet.anjcdn.org",
+   "api-js.mixpanel.com"
+  ]
+ },
+ {
+  "domain": "cryptobosscasino.com",
+  "operator": "3-102-937046 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "1c2e36e7-9933-416d-b0ab-6bb6d95fa7c8.snippet.anjcdn.org",
+   "telegram.org",
+   "chat-platform.qodeq.net",
+   "sdk.solitics.com",
+   "oauth.telegram.org",
+   "static-cbc.fra1.cdn.digitaloceanspaces.com",
+   "static-cryptoboss.com",
+   "openreplay.combotech.net"
+  ]
+ },
+ {
+  "domain": "xypoker1.com",
+  "operator": "3-102-938312 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "asn.ziwtu.com",
+   "store.rwbus.cn",
+   "sales.adwbpx.com",
+   "ab.bdmnom.com"
+  ]
+ },
+ {
+  "domain": "unlimcasino.com",
+  "operator": "3-102-937046 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "70ef2a73-cc08-485e-bd75-0eba957b4135.snippet.anjcdn.org",
+   "chat-platform.qodeq.net",
+   "openreplay.combotech.net"
+  ]
+ },
+ {
+  "domain": "casinohype.com",
+  "operator": "3-102-937046 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "hypecasinosite.xyz"
+  ],
+  "third": [
+   "cb6bb52e-86c9-4f7b-92c3-e9f55ca9e663.snippet.anjcdn.org",
+   "chat-platform.qodeq.net",
+   "openreplay.combotech.net",
+   "static-hypecasino.com",
+   "hypecasinosite.xyz",
+   "nexthypecasino.com"
+  ]
+ },
+ {
+  "domain": "aufcasino.com",
+  "operator": "3-102-937046 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "8e5cc699-f0b9-4790-84c8-3e33609ee3af.snippet.anjcdn.org",
+   "chat-platform.qodeq.net",
+   "openreplay.combotech.net"
+  ]
+ },
+ {
+  "domain": "slapperzz.com",
+  "operator": "3-102-942611 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "casinityx.com",
+  "operator": "3-102-942477 SRL",
+  "ok": true,
+  "seals": [
+   "7fc159f8-a801-4306-b8fe-43df5e6c326a.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "7fc159f8-a801-4306-b8fe-43df5e6c326a.snippet.anjouangaming.org",
+   "7fc159f8-a801-4306-b8fe-43df5e6c326a.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betitor.com",
+  "operator": "3-102-941073 SRL",
+  "ok": true,
+  "seals": [
+   "e8c10794-bf50-4bf2-9b02-900372b431eb.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "plausible.io",
+   "widget.betitorpromo.com",
+   "e8c10794-bf50-4bf2-9b02-900372b431eb.snippet.anjouangaming.org",
+   "e8c10794-bf50-4bf2-9b02-900372b431eb.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "cryptogaming.com",
+  "operator": "Digital Chain Ventures SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.getid.cloud",
+   "js.jam.dev",
+   "data.f3-dev.net",
+   "api.cooked.com",
+   "0f90f94d-d6f0-4269-91c6-6dfc20ca5e72.snippet.anjcdn.org",
+   "apic.cooked.com",
+   "recorder.jam.dev",
+   "sdk.iad-07.braze.com"
+  ]
+ },
+ {
+  "domain": "kikabet.com",
+  "operator": "Blackwave Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "90815d9c-4287-435e-bdb7-9f3558758caf.snippet.anjcdn.org",
+   "cdn.gtranslate.net",
+   "scripts.coolretargeting.com",
+   "rtg.prdredir.com",
+   "nowpayments.io",
+   "gis-static.com"
+  ]
+ },
+ {
+  "domain": "grbets.com",
+  "operator": "Eagle Nobility LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "snippet.anjcdn.com",
+   "11fdc83e-fe33-4128-a3bf-1082f278a5a1.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "acarbet.com",
+  "operator": "Eagle Nobility LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "snippet.anjcdn.com",
+   "dd347e6e-a44d-487c-97d9-3d624fe9dbc9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "gameside.io",
+  "operator": "Final Whistle Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.launcher.a8r.games",
+   "d562f151-422d-4dd2-9b53-109dead18103.snippet.anjcdn.org",
+   "gameside.app.retention.studio",
+   "wgt-s3-cdn.statscore.com",
+   "t.co",
+   "telegram.org",
+   "gameside-assets-all-regions.b-cdn.net",
+   "oauth.telegram.org",
+   "api.ipify.org",
+   "ipapi.co",
+   "cdn.opticodds.com"
+  ]
+ },
+ {
+  "domain": "dadastake.com",
+  "operator": "Fortaluna Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "4a811e3c-8a8a-4f83-bf82-b599b235734c.snippet.anjcdn.org",
+   "telegram.org",
+   "ip2c.org",
+   "cdn.greylabel.org",
+   "gis-static.com"
+  ]
+ },
+ {
+  "domain": "vexlbet.com",
+  "operator": "Global Score Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "anubet.com",
+  "operator": "Hexiro Ltd",
+  "ok": true,
+  "seals": [
+   "c90e4d0d-6d67-4e40-9cfa-a7a1a1a99298.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "fpnpmcdn.net",
+   "api.fpjs.io",
+   "d26az7au14ditw.cloudfront.net",
+   "anubet.sptpub.com",
+   "start9.sptpub.com",
+   "c90e4d0d-6d67-4e40-9cfa-a7a1a1a99298.snippet.anjouangaming.org",
+   "anubet-static.imgix.net",
+   "bt-app-static-themes.sptpub.com",
+   "c90e4d0d-6d67-4e40-9cfa-a7a1a1a99298.snippet.anjcdn.org",
+   "api-k-c7818b61-623.sptpub.com",
+   "files-immutable-4cbc033nbd3.sptpub.com",
+   "d1bvoel1nv172p.cloudfront.net",
+   "static.sptpub.com"
+  ]
+ },
+ {
+  "domain": "bogartcasino.ag",
+  "operator": "International Radical Investment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cmsfe3xc5.bookcdn.net",
+   "ipapi.co",
+   "be1f5983-45cb-4d7c-a3be-5e7df4906e2b.snippet.anjcdn.org",
+   "res.cloudinary.com",
+   "cdn.jokergator.com",
+   "inc.jokergator.com"
+  ]
+ },
+ {
+  "domain": "betphoenix.ag",
+  "operator": "International Radical Investment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.gtranslate.net",
+   "api.securecashiersystem.ag",
+   "cdn.heapanalytics.com",
+   "ipapi.co",
+   "heapanalytics.com",
+   "84ef8d9f-00da-427b-9c4c-7ed3a5ef7fa6.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betmania.ag",
+  "operator": "International Radical Investment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cmsfe3xc5.bookcdn.net",
+   "xml.securecashiersystem.ag",
+   "ipapi.co",
+   "api.securecashiersystem.ag",
+   "cdn.jokergator.com",
+   "inc.jokergator.com",
+   "thesportsdb.com",
+   "b4a99ee7-ec0a-445c-bf1b-c446310578b7.snippet.anjcdn.org",
+   "res.cloudinary.com",
+   "r2.thesportsdb.com"
+  ]
+ },
+ {
+  "domain": "skybook.ag",
+  "operator": "International Radical Investment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.gtranslate.net",
+   "api.securecashiersystem.ag",
+   "ipapi.co",
+   "1878f67b-3ec3-4e9e-aed7-9e8c27dc89d9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "wildroll.com",
+  "operator": "Jackpot Junction Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "c38133fd-c9d8-4098-ac71-29c43165026a.snippet.anjcdn.org",
+   "analytics.ahrefs.com",
+   "26szbaei.apicdn.sanity.io"
+  ]
+ },
+ {
+  "domain": "altaris.casino",
+  "operator": "Mirella Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "sierra.casino",
+  "operator": "Mirella Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "060c7c17-15c6-418f-b3a0-3bd620b22852.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "winbitcasino.com",
+  "operator": "MOONSEEKER SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "d1i1wfn7hj3mva.cloudfront.net",
+   "api.coinbase.com",
+   "bfd25635-0c92-4354-96a3-cb2451ca2045.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "vegazcasino.com",
+  "operator": "MOONSEEKER SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d1i1wfn7hj3mva.cloudfront.net",
+   "s2.adform.net",
+   "js.adsrvr.org",
+   "insight.adsrvr.org",
+   "a1.adform.net",
+   "match.adsrvr.org",
+   "b779abae-feda-41e2-b78e-e430a59005e8.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "mondcasino.com",
+  "operator": "MOONSEEKER SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "07f63a5f-827c-4d54-afcd-7d30b95afb48.snippet.anjcdn.org",
+   "trackadshub.com",
+   "adscool.net",
+   "api.ipgeolocation.io",
+   "d1i1wfn7hj3mva.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "casinostars.io",
+  "operator": "MOONSEEKER SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "689c2ddd-5ad8-45ba-9ab4-8980ec15396d.snippet.anjcdn.org",
+   "cdn.skypack.dev",
+   "adssistem.com",
+   "rtg.wewomedia.com",
+   "adscool.net",
+   "api.ipgeolocation.io",
+   "d1i1wfn7hj3mva.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "meritwin.com",
+  "operator": "Nowplatform Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "pxdouegwvziwwkql7x5du4gnrm0ikcty.lambda-url.eu-central-1.on.aws",
+   "d11k2x767znmiw.cloudfront.net",
+   "service.r619lb67.com",
+   "d29i6pt8t98nr9.cloudfront.net",
+   "d1b82hscw3e9o2.cloudfront.net",
+   "rest.ably.io",
+   "gaaf2.com",
+   "chat15.r619lb67.com",
+   "d3nmqf33izuizs.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "yasalbahis.com",
+  "operator": "Nowplatform Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d11k2x767znmiw.cloudfront.net",
+   "service.jblqcpunpc.com",
+   "d29i6pt8t98nr9.cloudfront.net",
+   "d1b82hscw3e9o2.cloudfront.net",
+   "chat15.jblqcpunpc.com",
+   "rest.ably.io",
+   "gaaf2.com",
+   "d3nmqf33izuizs.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "volacasino.com",
+  "operator": "Nowplatform Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d11k2x767znmiw.cloudfront.net",
+   "service.gg343ghha.com",
+   "chat15.gg343ghha.com",
+   "d29i6pt8t98nr9.cloudfront.net",
+   "d1b82hscw3e9o2.cloudfront.net",
+   "rest.ably.io",
+   "d3nmqf33izuizs.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "haydicasino.com",
+  "operator": "Nowplatform Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "s.w.org"
+  ]
+ },
+ {
+  "domain": "dustbit.com",
+  "operator": "Oxilium Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.thepowergames.com",
+   "d62b9b69-d608-4acf-983c-c728f069828b.snippet.anjcdn.org",
+   "prod.webpu.sh",
+   "api.thepowergames.com",
+   "api.xtremepush.com",
+   "server.blockchain-ads.com"
+  ]
+ },
+ {
+  "domain": "goldenclovercasino.com",
+  "operator": "PC Play365 Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "api.myuser.com",
+   "bc415b4f-1cc9-4a55-ad2d-94ef421c8ef6.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "7red.com",
+  "operator": "Red Ace Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "eda2dcf0-c568-48d2-ba94-d2388ffd6c2f.snippet.anjcdn.org",
+   "cmp.inmobi.com",
+   "r.bidswitch.net",
+   "x.bidswitch.net",
+   "eu-gce-nl.r.bidswitch.net",
+   "x7red-api-prod.p3-fppstatic.com"
+  ]
+ },
+ {
+  "domain": "spassino.com",
+  "operator": "Total Unlimited Marketing Ltd",
+  "ok": true,
+  "seals": [
+   "widget.trustpilot.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "d389bac5-838e-4b4d-bd3e-29e2eab28e93.snippet.anjcdn.org",
+   "v2.zopim.com",
+   "widget.trustpilot.com",
+   "static.zdassets.com",
+   "ekr.zdassets.com"
+  ]
+ },
+ {
+  "domain": "luckyspy.com",
+  "operator": "Solidplay Group Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "funbahis.com",
+  "operator": "Total Unlimited Marketing Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "funbahis98.com",
+   "fn-mrktting.com",
+   "static.zdassets-backup.com",
+   "ekr.zdassets.com",
+   "static.zdassets.com",
+   "v2assets.zopim.io"
+  ]
+ },
+ {
+  "domain": "duffspin.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "fonts.cdnfonts.com"
+  ]
+ },
+ {
+  "domain": "zombillion.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "garrisonbet.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "unlimluck.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinathlon.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "daytonaspin.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "bananzia.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "luckycrew.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "hahaspin.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinpolo.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "winwinter.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "heavybet.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "woolbet.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinformula.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "nightluck.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "villaspin.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betmica.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "tweedbet.com",
+  "operator": "Win Top Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "zenobet.com",
+  "operator": "Zenobet Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.getid.cloud",
+   "ignite-sdk.nl-ams-1.linodeobjects.com",
+   "assets.nsoft.app",
+   "b5c215b1-3b7c-460e-8fdd-4a2b5c2c447d.snippet.anjcdn.org",
+   "static.zdassets.com",
+   "ekr.zdassets.com",
+   "prod.webpu.sh",
+   "edge.fullstory.com",
+   "nsftx-sports-web.nsoft.app",
+   "aio-offer-distribution.de-2.nsoft.cloud",
+   "frasier.de-2.nsoft.cloud",
+   "assets.nsoft-cdn.com",
+   "edge.eu1.fullstory.com",
+   "api.xtremepush.com",
+   "rs.eu1.fullstory.com"
+  ]
+ },
+ {
+  "domain": "zenobet.gg",
+  "operator": "Zenobet Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "b47aecaf-e1ce-4fba-9c48-95f813d1949d.snippet.anjcdn.org",
+   "prod.webpu.sh",
+   "edge.fullstory.com",
+   "edge.eu1.fullstory.com",
+   "api.xtremepush.com",
+   "thumbs.alea.com",
+   "rs.eu1.fullstory.com"
+  ]
+ },
+ {
+  "domain": "betoranje.com",
+  "operator": "3-102-937541 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "img.betspace.tech",
+   "sentry-sportsbook.s7s.ai"
+  ]
+ },
+ {
+  "domain": "degen.com",
+  "operator": "Degen Legend Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "e2249c0e-5cbb-4bec-a001-62ccce77907e.snippet.anjcdn.org",
+   "luckmedia.link",
+   "capi-automation.s3.us-east-2.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "inky.bet",
+  "operator": "3-102-937541 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d1yabsjhm5ni78.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "warriorbet.io",
+  "operator": "3-102-938960 SRL",
+  "ok": true,
+  "seals": [
+   "023dc458-4093-4393-b7ca-960d51997a06.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "js.adsrvr.org",
+   "insight.adsrvr.org",
+   "match.adsrvr.org",
+   "023dc458-4093-4393-b7ca-960d51997a06.snippet.anjouangaming.org",
+   "com-warriorbet-website-cms.s3.amazonaws.com",
+   "023dc458-4093-4393-b7ca-960d51997a06.snippet.anjcdn.org",
+   "silks.racingandsports.com.au"
+  ]
+ },
+ {
+  "domain": "bhaicasino.com",
+  "operator": "Capitanos Games Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "icons.cmsbetconstruct.com",
+   "6921eba6-0d2f-4e8f-ab9e-fe89c436633f.snippet.anjcdn.org",
+   "go-cms.fjykjczttspydxcx.com",
+   "crm-lib.fasttrack-solutions.com",
+   "eu.fw-cdn.com",
+   "capitanosgamesltd-d31868f219e572b17729843.freshchat.com",
+   "assetscdn-wchat.eu.freshchat.com",
+   "rts-static-prod.freshworksapi.com",
+   "fc-euc1-00-pics-bkt-00.s3.eu-central-1.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "betbeto.com",
+  "operator": "Capitanos Games Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "s3.ap-south-1.amazonaws.com",
+   "trendytreasures.art"
+  ]
+ },
+ {
+  "domain": "tucanbit.io",
+  "operator": "3-102-940901 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "2f383814-a048-4535-9601-03c0b9738510.snippet.anjcdn.org",
+   "my.rtmark.net",
+   "ipwho.is",
+   "tucanbit-prod.directus.app"
+  ]
+ },
+ {
+  "domain": "cwinz.com",
+  "operator": "Capitanos Games Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cmsbetconstruct.com",
+   "33e70cbe-908d-4677-aac2-7469f253d246.snippet.anjcdn.org",
+   "api.web3modal.org",
+   "crm-lib.fasttrack-solutions.com",
+   "eu.fw-cdn.com",
+   "statistics.trexname.com",
+   "capitanosgamesltd-d31868f219e572b17729843.freshchat.com",
+   "assetscdn-wchat.eu.freshchat.com",
+   "rts-static-prod.freshworksapi.com",
+   "fc-euc1-00-pics-bkt-00.s3.eu-central-1.amazonaws.com",
+   "app.pertento.ai",
+   "rtgio.co",
+   "scripts.prdredir.com",
+   "media.athena-tech.eu",
+   "embed.dyntube.com",
+   "stalkoda.com",
+   "759.sentermax.com",
+   "blend.host",
+   "cdn.adtrackerz.co.uk",
+   "pixel.athena-tech.eu",
+   "s.logstracker.com",
+   "scripts.pertento.ai",
+   "m.stalkoda.com",
+   "insights.rtgio.co",
+   "c.stalkoda.com",
+   "tracking.pertento.ai",
+   "xtargtrack.com",
+   "cca-lite.coinbase.com"
+  ]
+ },
+ {
+  "domain": "bluebetz.com",
+  "operator": "Capitanos Games Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "icons.cmsbetconstruct.com",
+   "9cf0e6ee-90f9-4e1f-92a8-2ff6d96245ec.snippet.anjcdn.org",
+   "go.cmsbetconstruct.com",
+   "eu.fw-cdn.com",
+   "capitanosgamesltd-d31868f219e572b17729843.freshchat.com",
+   "assetscdn-wchat.eu.freshchat.com",
+   "rts-static-prod.freshworksapi.com",
+   "fc-euc1-00-pics-bkt-00.s3.eu-central-1.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "yekbet.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.fjykjczttspydxcx.com",
+   "bc-status.betconstruct.workers.dev",
+   "ce26df3d-7f3d-4f24-887d-827473747b34.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "ikasbet.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "asyabahis.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "7307db35-2dda-4738-b589-5c8bc1f172d1.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "dumanbet.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d73db0b7-ddf7-430f-8232-bcd70db31967.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "olabahis.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "maltcasino.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "scripts.mediamathrdrt.com",
+   "sdk.optimove.net",
+   "23220161-981a-4b09-bae4-b8bb55d24f2a.snippet.anjcdn.org",
+   "sdkuaservice.optimove.net",
+   "stream-1302.optimove.net",
+   "event.getblue.io",
+   "rtg.mediamathrdrt.com",
+   "quality.text.com",
+   "realtime-1302.optimove.net",
+   "static-cdn.betsolutions.com"
+  ]
+ },
+ {
+  "domain": "spinman.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "s3.eu-central-1.amazonaws.com",
+   "cdn.softswiss.net",
+   "83faa370-5766-4c16-a6e7-f3299b720300.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "pinbahis.com",
+  "operator": "Fortuna Digital Solutions FDS Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d219d13a-5c55-422c-89e4-293399794122.snippet.anjcdn.org",
+   "libs.smartico.ai"
+  ]
+ },
+ {
+  "domain": "luckyelfcasino.com",
+  "operator": "Metlait SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "payments-lib.cdn.s7s.ai"
+  ]
+ },
+ {
+  "domain": "arba777.com",
+  "operator": "Rtech LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "194fba3a-546a-4334-b59f-09dfea1fff7f.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "megasino.win",
+  "operator": "Karthala Ventures Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "3af4afb0-2a53-4882-aa80-3cb0caa64e7e.snippet.anjcdn.org",
+   "media.ohxeeshei2eigooji3ey8nah9bah7r.site"
+  ]
+ },
+ {
+  "domain": "yeet.com",
+  "operator": "Pacific Edge Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "mad.casino",
+  "operator": "3-102-938906 SRL",
+  "ok": true,
+  "seals": [
+   "17aceb28-2a8b-4cb2-a1f9-b585fc2ac5bb.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "madstat.tech",
+   "r.uuidksinc.net",
+   "code.jivosite.com",
+   "17aceb28-2a8b-4cb2-a1f9-b585fc2ac5bb.snippet.anjouangaming.org",
+   "cdn.eu.amplitude.com",
+   "17aceb28-2a8b-4cb2-a1f9-b585fc2ac5bb.snippet.anjcdn.org",
+   "cdn.amplitude.com",
+   "sr-client-cfg.eu.amplitude.com",
+   "node-ya-5.jivosite.com",
+   "api.eu.amplitude.com"
+  ]
+ },
+ {
+  "domain": "madcasino.org",
+  "operator": "3-102-938906 SRL",
+  "ok": true,
+  "seals": [
+   ".snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "madstat.tech",
+   "r.uuidksinc.net",
+   "code.jivosite.com",
+   ".snippet.anjouangaming.org",
+   "cdn.eu.amplitude.com",
+   "cdn.amplitude.com",
+   "node-ya-5.jivosite.com",
+   "sr-client-cfg.eu.amplitude.com",
+   "api.eu.amplitude.com"
+  ]
+ },
+ {
+  "domain": "casino007.com",
+  "operator": "3-102-942052 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "sentry.tmsoft.dev",
+   "6bdcb613-0dde-4ea3-a911-4997fab287e1.snippet.anjcdn.org",
+   "translator.betforge.io",
+   "cdn.urm.app",
+   "urmingestion.protechly.com",
+   "cdn.betforge.io",
+   "urmappapi.protechly.com",
+   "usercontent.cc",
+   "thumbs.alea.com"
+  ]
+ },
+ {
+  "domain": "369wins.com",
+  "operator": "Anzal Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "4ee0271d-ca99-4836-89f7-43d47e80f393.snippet.anjcdn.org",
+   "statistics.fjykjczttspydxcx.com"
+  ]
+ },
+ {
+  "domain": "imperia.bet",
+  "operator": "3-102-939877 SRL",
+  "ok": true,
+  "seals": [
+   "42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouangaming.org"
+  ],
+  "unbranded": [
+   "cdn2.davidmarkuz.com"
+  ],
+  "third": [
+   "42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouangaming.org",
+   "image.davidmarkuz.com",
+   "cdn2.davidmarkuz.com"
+  ]
+ },
+ {
+  "domain": "welvura1.com",
+  "operator": "3-102-943707 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bit.ly",
+   "bc345fa8-6a7f-4f42-9a89-7c2d77652760.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "kirabet.com",
+  "operator": "Arkevia Group Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "7de2d1fb-7f8f-43e6-acb3-c3f530eaf492.snippet.anjcdn.org",
+   "cdn.oneservice.cc"
+  ]
+ },
+ {
+  "domain": "molcasino.com",
+  "operator": "Arkevia Group Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ccc33e03-51d0-412e-8dff-e5fb1e34327a.snippet.anjcdn.org",
+   "cdn.oneservice.cc"
+  ]
+ },
+ {
+  "domain": "booty.casino",
+  "operator": "BMGruppe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "afba448e-2630-453a-9ad3-23b6ef257c6d.snippet.anjcdn.org",
+   "ipapi.co",
+   "ipinfo.io",
+   "booty-prod-pictures-zdbu5g.fra1.digitaloceanspaces.com",
+   "gis-static.com"
+  ]
+ },
+ {
+  "domain": "elipsbet.com",
+  "operator": "Evoluxia Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "elipslisans.com",
+   "service.czb001pj2g.com",
+   "chat15.czb001pj2g.com",
+   "img1.wsimg.com",
+   "77115747-751e-4d43-99bf-27ee5aa37147.snippet.anjcdn.org",
+   "csp.secureserver.net"
+  ]
+ },
+ {
+  "domain": "g4mbit.com",
+  "operator": "CONDOOR V.P. LIMITED",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "42ad7415-2cde-4a5b-a553-61865bc8d102.snippet.anjcdn.org",
+   "d1ulm6cp2sti3u.cloudfront.net",
+   "rgs-media-production.ams3.cdn.digitaloceanspaces.com"
+  ]
+ },
+ {
+  "domain": "casinocrypto.io",
+  "operator": "BMGruppe Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ac6b9d9c-c9bb-4235-a473-0e79665d6136.snippet.anjcdn.org",
+   "analytics.ahrefs.com",
+   "casinocrypto-prod-pictures-sb2osc.fra1.digitaloceanspaces.com",
+   "cdnamus.frxgobwexopslv01.com",
+   "gis-static.com",
+   "ipapi.co",
+   "ipinfo.io"
+  ]
+ },
+ {
+  "domain": "tomi.club",
+  "operator": "Arkevia Group Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "7c80a57b-dd0d-49a2-bd17-00620043de25.snippet.anjcdn.org",
+   "cdn.oneservice.cc"
+  ]
+ },
+ {
+  "domain": "olipsbet.com",
+  "operator": "Evoluxia Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "fbc9efad-c495-4f9e-980a-db44908ff806.snippet.anjcdn.org",
+   "service.vh6r082s4e.com",
+   "chat15.vh6r082s4e.com"
+  ]
+ },
+ {
+  "domain": "betet77.com",
+  "operator": "GF CLUB Seven Seven Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "12e5db0d-a207-4e0d-9b25-8cfec8d355ab.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "lavbet.com",
+  "operator": "Lavbet Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "script.tapfiliate.com",
+   "cdn.launcher.a8r.games",
+   "ff594c08-ebcf-4f60-ac0c-43e00f283eb9.snippet.anjcdn.org",
+   "api.lavbet.co",
+   "lavbet.fra1.digitaloceanspaces.com",
+   "usercontent.cc"
+  ]
+ },
+ {
+  "domain": "lavbet.co",
+  "operator": "Lavbet Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "script.tapfiliate.com",
+   "cdn.launcher.a8r.games",
+   "9f3430af-e36a-4296-a6a7-fb42d0749d6b.snippet.anjcdn.org",
+   "lavbet.fra1.digitaloceanspaces.com",
+   "usercontent.cc"
+  ]
+ },
+ {
+  "domain": "americaloto.com",
+  "operator": "Lucky AML Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ba5d9f6f-647f-4100-9c9d-543851076140.snippet.anjcdn.org",
+   "d335luupugsy2.cloudfront.net",
+   "hbqqcyko.sag.stape.io",
+   "d1sag09wwfbul8.cloudfront.net",
+   "popups.rdstation.com.br"
+  ]
+ },
+ {
+  "domain": "luckypari.org",
+  "operator": "Lunex LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com"
+  ]
+ },
+ {
+  "domain": "luckypari.com",
+  "operator": "Lunex LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "cdn.amplitude.com",
+   "cdn.gravitec.net",
+   "my.rtmark.net",
+   "tsyndicate.com",
+   "r.uuidksinc.net",
+   "cdn.gravitec.media",
+   "api.gravitec.media",
+   "api2.amplitude.com"
+  ]
+ },
+ {
+  "domain": "luckypari.net",
+  "operator": "Lunex LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com"
+  ]
+ },
+ {
+  "domain": "freespinz.casino",
+  "operator": "Pacific Odds SRL",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "jupitercryptox.com",
+  "operator": "Evoluxia Limitada",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "freespinz.com",
+  "operator": "Pacific Odds SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "wooblyads.site",
+   "nowofertas.online"
+  ],
+  "third": [
+   "8af2e9a8-cc72-4d0b-8615-a1f68063d117.snippet.anjcdn.org",
+   "cdn.cookie-script.com",
+   "rtgio.co",
+   "trkwwtarget.com",
+   "trackadshub.com",
+   "media.athena-tech.eu",
+   "scripts.mediamathrdrt.com",
+   "m.afilio.com.br",
+   "pixel.athena-tech.eu",
+   "rtg.mediamathrdrt.com",
+   "insights.rtgio.co",
+   "yhwgp.watohadonawhshnobehuis.net",
+   "widgets.sir.sportradar.com",
+   "libs.smartico.ai",
+   "static.gortb.com",
+   "static-cdn.trackier.com",
+   "adtag.cloud",
+   "802.linkclub.solutions",
+   "wooblyads.site",
+   "stage-cdn.oddstech.net",
+   "sport.oddstech.net",
+   "s.logstracker.com",
+   "sslwidget.salesanalytics.io",
+   "analytics.salesanalytics.io",
+   "proxysites.co",
+   "nowofertas.online",
+   "s.afilio.com.br"
+  ]
+ },
+ {
+  "domain": "case-battle.com",
+  "operator": "MILLENNIUM LIMITED",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "433a3f4c-59db-4c2f-9f5f-4c19f7217df3.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "ebete.com",
+  "operator": "Pacific Odds SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "maxxcric.com",
+  "operator": "Rich Able Developments Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "chance.net",
+  "operator": "Chance Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web.meshconnect.com",
+   "indestructibletype.com",
+   "e14971a0-4cc5-4242-b165-ac6bcb41de90.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "dailyluck.com",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "admiralshark.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "casigood.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "casiroom.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "chillireels.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "clockfortune.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "fancyreels.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "euphoriawins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "fruitychance.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "jimmywinner.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "lbspins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "magicreels.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "maximumcasino.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "misterxcasino.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "papayawins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "orionspins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "professorwins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "shinyjoker.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "slotsshine.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "slotsmuse.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinmywin.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "triumphcasino.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "twinkywin.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "voodoowins.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "windiggers.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "yetiwin.best",
+  "operator": "3-102-940828 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gold24x7.com",
+  "operator": "3-102-944744 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "e318a67e-9248-4424-86d4-2a1cb9187bc5.snippet.anjcdn.org",
+   "gold-sentry.com"
+  ]
+ },
+ {
+  "domain": "dh.casino",
+  "operator": "DH Entertainment Ltd.",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "dhcasino.games",
+  "operator": "DH Entertainment Ltd.",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gold.casino",
+  "operator": "3-102-944744 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "475aa655-8954-4619-9dfa-0b983776b56a.snippet.anjcdn.org",
+   "gold-sentry.com",
+   "cdn.gold24x7.com"
+  ]
+ },
+ {
+  "domain": "buffalo-casino.com",
+  "operator": "3-102-945833 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "2918b06c-84f4-4729-b3af-edc4a8ebdaf3.snippet.anjcdn.org",
+   "cdn.mouseflow.com",
+   "code.tidio.co",
+   "fpnpmcdn.net"
+  ]
+ },
+ {
+  "domain": "bkmwin.com",
+  "operator": "Asoftgame Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "flagsapi.com",
+   "service.vy5hs5x0jmzphp4.com",
+   "f3fc2816-48d2-41e5-9b26-1d74d84dfc4c.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "u.game",
+  "operator": "Aurora Soft Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "13.228.251.255",
+   "u335.vip"
+  ]
+ },
+ {
+  "domain": "playbet.io",
+  "operator": "Aurevia Digital Ventures Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "contentdeliverynetwork.cc",
+   "usercontent.cc"
+  ],
+  "third": [
+   "cdn.launcher.a8r.games",
+   "payments-lib.cdn.s7s.ai",
+   "7656733a-db0e-4cc7-b7c9-d402a8228d46.snippet.anjcdn.org",
+   "contentdeliverynetwork.cc",
+   "browser-intake-datadoghq.eu",
+   "usercontent.cc",
+   "event.getblue.io",
+   "app.viralsweep.com",
+   "jas.digitonic.com",
+   "tm.ads.sportradar.com",
+   "trackadshub.com",
+   "tracker.ads.sportradar.com",
+   "secure.afilio.com.br",
+   "tags.srv.stackadapt.com",
+   "pixel-us.convertagain.net",
+   "scripts.prdredir.com",
+   "a.sportradarserving.com",
+   "rtg.wewomedia.com",
+   "x.bidswitch.net",
+   "pixel.containads.com",
+   "254.sentermax.com",
+   "mailinbox.com.br",
+   "mediaconvertly.com",
+   "static.targethaus.net",
+   "sys.betfusion.media",
+   "shop-cart.app",
+   "s.logstracker.com",
+   "blend.host"
+  ]
+ },
+ {
+  "domain": "robobet.com",
+  "operator": "Aurevia Digital Ventures Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "gotorobo.xyz"
+  ],
+  "third": [
+   "gotorobo.xyz",
+   "i.ibb.co"
+  ]
+ },
+ {
+  "domain": "forzabet.live",
+  "operator": "BeLion International Holdings Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "c9ae3e70-063a-4190-81ac-fd6ed9440737.snippet.anjcdn.org",
+   "ipapi.co",
+   "fpjscdn.net",
+   "forza.ams3.cdn.digitaloceanspaces.com",
+   "eu-assets.i.posthog.com",
+   "eu.i.posthog.com",
+   "ipinfo.io"
+  ]
+ },
+ {
+  "domain": "linebetglobal.com",
+  "operator": "Savoska LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "v2l.cdnsfree.com"
+  ]
+ },
+ {
+  "domain": "coolt.casino",
+  "operator": "Nuveau Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "76cookie.services"
+  ],
+  "third": [
+   "cdn.datpix.net",
+   "76cookie.services",
+   "28177019-5e39-4521-82d6-8091ece8b05e.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "zunabet.com",
+  "operator": "Strathvale Group Ltd",
+  "ok": true,
+  "seals": [
+   "ce4056a8-5516-45ee-b3e5-846851a62334.snippet.anjouangaming.org"
+  ],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "ce4056a8-5516-45ee-b3e5-846851a62334.snippet.anjouangaming.org",
+   "bf8ff392-8fb2-4915-a93a-d0686ef8bdc2.snippet.anjcdn.org",
+   "s3.eu-central-1.amazonaws.com",
+   "scripts.mediamathrdrt.com",
+   "zunabet-prod-pictures.fra1.digitaloceanspaces.com",
+   "usercontent.cc"
+  ]
+ },
+ {
+  "domain": "lasbet486.com",
+  "operator": "Qos Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "vue.livehelp100service.com",
+   "static.springbuilder.site",
+   "uuierqg.23trgaaddg.com",
+   "geoapi.bcapps.net"
+  ]
+ },
+ {
+  "domain": "rumwin.com",
+  "operator": "3-102-939534 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "turboplatform-dev.btgpub.online",
+   "eu1.gcdn.tech"
+  ]
+ },
+ {
+  "domain": "tomcasino.net",
+  "operator": "3-102-941391 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cbc16ce8-5171-443d-8371-09e9814e76a4.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "majorx.game",
+  "operator": "Ay Information Technology LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnx.pro"
+  ]
+ },
+ {
+  "domain": "minorx.game",
+  "operator": "Ay Information Technology LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnx.pro"
+  ]
+ },
+ {
+  "domain": "grandx.game",
+  "operator": "Ay Information Technology LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnx.pro"
+  ]
+ },
+ {
+  "domain": "minix.game",
+  "operator": "Ay Information Technology LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnx.pro"
+  ]
+ },
+ {
+  "domain": "angelspin.com",
+  "operator": "Fruitopia Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "fuegos.bet",
+  "operator": "Fuego Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "assets-inter.energaming.services"
+  ]
+ },
+ {
+  "domain": "mrcriptobet.com",
+  "operator": "OWG Group Limited",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "tikbet.games",
+  "operator": "OWG Group Limited",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "rooksbet.com",
+  "operator": "Prontogabriela SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.rooksstatic.com",
+   "cdnwl.rooksstatic.com",
+   "auth.betonliga.com",
+   "api.rooksstatic.com"
+  ]
+ },
+ {
+  "domain": "flex2bet.com",
+  "operator": "Bright Entertainment Inc",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "porkbun-media.s3-us-west-2.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "bollygame.com",
+  "operator": "3-102-938908 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "k1.game",
+  "operator": "3-102-938908 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "a756340f-e53b-43b5-80da-642930d171dd.snippet.anjcdn.org",
+   "res.openinstalljs.com",
+   "cdn.mxpnl.com",
+   "api.k118.org",
+   "misc.k118.org"
+  ]
+ },
+ {
+  "domain": "dicey.com",
+  "operator": "3-102-943011 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "s3.eu-central-1.amazonaws.com",
+   "cmp.osano.com",
+   "66306a14-39d9-4b77-8636-416c7c17162e.snippet.anjcdn.org",
+   "consent.api.osano.com",
+   "sdk.optimove.net",
+   "api.rudderstack.com",
+   "usercontent.cc",
+   "sdkuaservice.optimove.net",
+   "stream-1944.optimove.net",
+   "realtime-1944.optimove.net",
+   "browser-intake-datadoghq.com"
+  ]
+ },
+ {
+  "domain": "lv33.com",
+  "operator": "3-102-945737 SRL",
+  "ok": true,
+  "seals": [
+   "7901a23f-81bd-4c2f-9eb8-ce0b61d9d170.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "7901a23f-81bd-4c2f-9eb8-ce0b61d9d170.snippet.anjouangaming.org",
+   "telegram.org",
+   "lv33.io",
+   "fungamess.games",
+   "aws.oddservice.live"
+  ]
+ },
+ {
+  "domain": "pro11play.com",
+  "operator": "3-102-947393 SRL",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "lv33.io",
+  "operator": "3-102-945737 SRL",
+  "ok": true,
+  "seals": [
+   "7901a23f-81bd-4c2f-9eb8-ce0b61d9d170.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "7901a23f-81bd-4c2f-9eb8-ce0b61d9d170.snippet.anjouangaming.org",
+   "telegram.org",
+   "fungamess.games",
+   "aws.oddservice.live"
+  ]
+ },
+ {
+  "domain": "getwin.online",
+  "operator": "3-102-945845 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "dirty.ams3.cdn.digitaloceanspaces.com",
+   "getwin.ams3.cdn.digitaloceanspaces.com",
+   "d10f7exfm61imd.cloudfront.net",
+   "js-agent.newrelic.com",
+   "bam.eu01.nr-data.net",
+   "724299c4-3f57-43b0-b462-d9d32b2ade5e.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "huhubet.com",
+  "operator": "3-102-946540 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "pamimage.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "i.hizliresim.com",
+   "service.b65832f.com",
+   "chat15.b65832f.com"
+  ]
+ },
+ {
+  "domain": "fortislots.com",
+  "operator": "3-102-945845 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "fortislots.ams3.cdn.digitaloceanspaces.com",
+   "dirty.ams3.cdn.digitaloceanspaces.com",
+   "d10f7exfm61imd.cloudfront.net",
+   "js-agent.newrelic.com",
+   "bam.eu01.nr-data.net",
+   "233f5b85-7385-4ea8-8947-3f48d0d5b572.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "8win.com.my",
+  "operator": "3-102-946565 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "20de7f11-7d8e-4c7c-beb4-6130cd6b1800.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "pro11casino.com",
+  "operator": "3-102-947393 SRL",
+  "ok": true,
+  "seals": [
+   "95c65380-d219-4a88-8cf3-018505eaff6f.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "95c65380-d219-4a88-8cf3-018505eaff6f.snippet.anjouangaming.org",
+   "95c65380-d219-4a88-8cf3-018505eaff6f.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "bahis.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "tipobet365.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "alanlarim.com"
+  ]
+ },
+ {
+  "domain": "surewin168.com",
+  "operator": "3-102-948637 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ef40ebb8-57e6-4bf1-bc58-407f70345ed9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "sahabet.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [
+   "images.dmca.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "ddirekt.com",
+   "images.dmca.com"
+  ]
+ },
+ {
+  "domain": "betturkey.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [
+   "seal.cgcb.info",
+   "licensing.gaming-curacao.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org",
+   "seal.cgcb.info",
+   "licensing.gaming-curacao.com"
+  ]
+ },
+ {
+  "domain": "bizbet.io",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [
+   "3241e8aa-5e34-4b4b-891d-327eda1bf2d9.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "3241e8aa-5e34-4b4b-891d-327eda1bf2d9.snippet.anjouangaming.org",
+   "3241e8aa-5e34-4b4b-891d-327eda1bf2d9.snippet.anjcdn.org",
+   "v2l.cdnsfree.com"
+  ]
+ },
+ {
+  "domain": "tipobet.com",
+  "operator": "Galactic Infinity Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "bizbet-au.com",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [
+   "8f72dbf4-cd82-4886-b93d-b2144bd3442a.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "8f72dbf4-cd82-4886-b93d-b2144bd3442a.snippet.anjouangaming.org",
+   "8f72dbf4-cd82-4886-b93d-b2144bd3442a.snippet.anjcdn.org",
+   "v2cn.cdnsfree.com"
+  ]
+ },
+ {
+  "domain": "bet502.com",
+  "operator": "Netsolution Holding Ltd.",
+  "ok": true,
+  "seals": [
+   "b8fc28eb-2bab-4ec7-8182-53a3e8170fa6.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "fpnpmcdn.net",
+   "api.fpjs.io",
+   "d26az7au14ditw.cloudfront.net",
+   "bet502.sptpub.com",
+   "start5.sptpub.com",
+   "b8fc28eb-2bab-4ec7-8182-53a3e8170fa6.snippet.anjouangaming.org",
+   "bet502-static.imgix.net",
+   "bt-app-static-themes.sptpub.com",
+   "b8fc28eb-2bab-4ec7-8182-53a3e8170fa6.snippet.anjcdn.org",
+   "api-g-c7818b61-607.sptpub.com",
+   "static.sptpub.com",
+   "d1bvoel1nv172p.cloudfront.net",
+   "files-immutable-4cbc033nbd3.sptpub.com"
+  ]
+ },
+ {
+  "domain": "mn-bizbet.io",
+  "operator": "Gameway Global LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com",
+   "widget.suphelper.top",
+   "v2gc.traincdn.com"
+  ]
+ },
+ {
+  "domain": "blockchain.poker",
+  "operator": "Highcard Software SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "sideshift.ai",
+   "cdn.usefathom.com",
+   "eth.merkle.io"
+  ]
+ },
+ {
+  "domain": "riskiiit.com",
+  "operator": "Overcooked Entertainment Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "t.co",
+   "capi-automation.s3.us-east-2.amazonaws.com",
+   "img.phygitals.com"
+  ]
+ },
+ {
+  "domain": "ssplaywin.club",
+  "operator": "3-102-942786 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "config.ss24ss7.com",
+   "daba.b-cdn.net",
+   "dabba.b-cdn.net"
+  ]
+ },
+ {
+  "domain": "ssexch.io",
+  "operator": "3-102-942786 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "config.ss24ss7.com",
+   "daba.b-cdn.net",
+   "dabba.b-cdn.net"
+  ]
+ },
+ {
+  "domain": "satfair.in",
+  "operator": "3-102-942786 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "config.ss24ss7.com",
+   "dabba.b-cdn.net",
+   "iriscdn.b-cdn.net",
+   "ipecho.net",
+   "daba.b-cdn.net",
+   "score.urexch.net"
+  ]
+ },
+ {
+  "domain": "stack.bet",
+  "operator": "3-102-936714 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "4bc54236-0ee0-400a-b699-dd4dcade1c4d.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "lebull.com",
+  "operator": "3-102-945060 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "b10f57b4-e36e-4b5d-9367-6542e37a912e.snippet.anjcdn.org",
+   "dv-c3e594c6d429469e90b54478358619c3.ecs.us-east-1.on.aws",
+   "i.covery.ai",
+   "api.covery.ai"
+  ]
+ },
+ {
+  "domain": "aryanbet.com",
+  "operator": "3-102-946386 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnjunction.com",
+   "sport.dg.xlargesoftwareab.com",
+   "17c5fcf2-7c00-42b4-9343-e5491c8f8d42.snippet.anjcdn.org",
+   "certify-js.alexametrics.com",
+   "cdn.ml.bcua.io",
+   "code.tidio.co",
+   "cdn.hub88.io",
+   "d1b82hscw3e9o2.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "xprobet.com",
+  "operator": "3-102-946386 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdnjunction.com",
+   "sport.dggloble.com",
+   "15f71c21-b68d-411b-a15c-45c38aa9cf5f.snippet.anjcdn.org",
+   "cdn.ml.bcua.io"
+  ]
+ },
+ {
+  "domain": "1winbets.pro",
+  "operator": "3-102-947042 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "hyperwin.org",
+  "operator": "3-102-948725 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "3be5ba6b-0442-41f0-a16c-43e30de18cf2.snippet.anjcdn.org",
+   "js.stripe.com",
+   "api.hyperwinbet.com",
+   "eu-assets.i.posthog.com",
+   "dexms63mlokr0.cloudfront.net",
+   "m.stripe.network",
+   "m.stripe.com"
+  ]
+ },
+ {
+  "domain": "kktcbet.com",
+  "operator": "Nicosia Betting Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bycr.dev",
+   "01ad09c7-b0cb-4562-a8e9-165a745b55c2.snippet.anjcdn.org",
+   "service.dk4dbwxom3.com",
+   "esm.sh",
+   "kbr.bycr.dev",
+   "geoapi.bcapps.net",
+   "chat15.dk4dbwxom3.com",
+   "statistics.betconstruct.com"
+  ]
+ },
+ {
+  "domain": "lukkly.com",
+  "operator": "Nexluck Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "6a8dae43-3568-4ae2-9bba-dee523457e41.snippet.anjcdn.org",
+   "image.lukklycdn.com"
+  ]
+ },
+ {
+  "domain": "bufonbet.com",
+  "operator": "OW Internacional Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "c38a5a00-dcf2-4fc9-8e96-0b43fd091d2a.snippet.anjcdn.org",
+   "bb970a46-cee3-45e4-9fa3-22fedb6167d3.snippet.anjcdn.org",
+   "flagsapi.com",
+   "thumbs.alea.com"
+  ]
+ },
+ {
+  "domain": "gangabet.mx",
+  "operator": "OW Internacional Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "c38a5a00-dcf2-4fc9-8e96-0b43fd091d2a.snippet.anjcdn.org",
+   "bb970a46-cee3-45e4-9fa3-22fedb6167d3.snippet.anjcdn.org",
+   "flagsapi.com",
+   "thumbs.alea.com"
+  ]
+ },
+ {
+  "domain": "vegabro.com",
+  "operator": "Vega Technologies Holding Limited",
+  "ok": true,
+  "seals": [
+   "verification.anjouangamingboard.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "verification.anjouangamingboard.org"
+  ]
+ },
+ {
+  "domain": "bolt-casino.com",
+  "operator": "3-102-946302 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "flagcdn.com",
+   "dcb859b1-e072-44ca-be92-ae02bc1f8afc.snippet.anjcdn.org",
+   "raw.githubusercontent.com",
+   "a.adskeeper.com",
+   "cdn.livechat-static.com"
+  ]
+ },
+ {
+  "domain": "cs2skin.com",
+  "operator": "3-102-946905 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "b8cc45c53121.us-east-1.captcha-sdk.awswaf.com",
+   "b8cc45c53121.cbfcebb4.us-east-1.captcha.awswaf.com",
+   "b8cc45c53121.cbfcebb4.us-east-1.token.awswaf.com",
+   "8637cf24-227f-4997-a069-d656e5f32d02.snippet.anjcdn.org",
+   "d16ihrb0ssls33.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "tubetrd.com",
+  "operator": "3-102-948797 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "public.whaticket.com",
+   "8e092f89-829f-4ec5-9c6c-34a6839da44f.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "drazzewin.com",
+  "operator": "Drazze Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "5be4d24d-91eb-4c05-956f-2368e2a332b9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "drazze.casino",
+  "operator": "Drazze Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "1086d9fc-af61-4b07-b1a8-d5101d404b84.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "erc20play.com",
+  "operator": "Fortune HUB OÜ",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "0e964eed-b0af-4117-a095-ea8a95656c45.snippet.anjcdn.org",
+   "placehold.co"
+  ]
+ },
+ {
+  "domain": "scattr.com",
+  "operator": "Triglyph Technologies Ltd",
+  "ok": true,
+  "seals": [
+   "verification.anjouangamingboard.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "hebbkx1anhila5yf.public.blob.vercel-storage.com",
+   "verification.anjouangamingboard.org"
+  ]
+ },
+ {
+  "domain": "returntoplayer.io",
+  "operator": "Red Fisch Inc",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "wilderbet.com",
+  "operator": "VitaCore Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "4b792bb4-dc6a-49a9-a06d-64350d605198.snippet.anjcdn.org",
+   "cdn.iconvert.network",
+   "event.iconvert.network"
+  ]
+ },
+ {
+  "domain": "spin-betz.com",
+  "operator": "Diamante Tech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "newguys-prod-content.s3-eu-west-2.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "theluckyspinz.com",
+  "operator": "Diamante Tech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "newguys-prod-content.s3-eu-west-2.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "ohmywin.com",
+  "operator": "Liberty Walk Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "jeevybet.com",
+  "operator": "3-102-947122 SRL",
+  "ok": true,
+  "seals": [
+   "aef37e89-2beb-47b4-881c-39261db7a4d7.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "aef37e89-2beb-47b4-881c-39261db7a4d7.snippet.anjouangaming.org",
+   "sportsbet-new.esportings.com",
+   "aef37e89-2beb-47b4-881c-39261db7a4d7.snippet.anjcdn.org",
+   "api2-sportsbet.esportings.com",
+   "api3-sportsbet.esportings.com",
+   "bmm.esportings.com",
+   "i.imgur.com",
+   "static-sportsbet.esportings.com"
+  ]
+ },
+ {
+  "domain": "redneckspins.com",
+  "operator": "3-102-940146 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "degencity.com",
+  "operator": "3-102-939867 Limitada",
+  "ok": true,
+  "seals": [
+   "widget.trustpilot.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "s3.eu-central-1.amazonaws.com",
+   "c50d839b-fc7e-4abc-8fe6-ba9fbb6741bb.snippet.anjcdn.org",
+   "widget.trustpilot.com",
+   "cdn.hub88.io",
+   "cdn.softswiss.net"
+  ]
+ },
+ {
+  "domain": "azizistake.com",
+  "operator": "AZIZI GLOBAL GROUP INC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "trc20play.com",
+  "operator": "Fortune HUB OÜ",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "ilove.casino",
+  "operator": "EXENTIA LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "spinrain.com",
+  "operator": "IsleSoft Lab Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "cdn-spr.tentangle.com",
+   "4956fc57-a6df-484d-8b98-e2e092811bbe.snippet.anjcdn.org",
+   "clob.appservicenet.com",
+   "cdn-d.tentangle.com"
+  ]
+ },
+ {
+  "domain": "ibitplay.com",
+  "operator": "Coderstuff Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "api.i18nexus.com"
+  ]
+ },
+ {
+  "domain": "leclubbet.com",
+  "operator": "LeClub Bet Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "753c984d-2143-40d6-ab46-37d0d71c2738.snippet.anjcdn.org",
+   "apis-int.webapis.sk",
+   "sportapis-int.webapis.sk",
+   "resources.betx.bet"
+  ]
+ },
+ {
+  "domain": "hojabet.com",
+  "operator": "Luxora Interactive Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "router.parklogic.com",
+   "parking3.parklogic.com"
+  ]
+ },
+ {
+  "domain": "stradabet.com",
+  "operator": "Luxora Interactive Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.tailwindcss.com",
+   "cdn.nexovotech.com",
+   "nexovo.b-cdn.net",
+   "713cbee1-bb9d-4e47-a9b9-8c7842eb007d.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "crash2x.com",
+  "operator": "Meta Jack Inc.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "server.blockchain-ads.com",
+   "3713f66b-c4cf-4772-baa3-e84bfaeffe43.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betmarino.com",
+  "operator": "Real Tech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "outxxx.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "betmarinolicense.com",
+   "betmarinokripto.com",
+   "service.dsp2v4g42q.com",
+   "statistics.28btcoservice.com",
+   "chat15.dsp2v4g42q.com",
+   "shurima-cdn.netlify.app"
+  ]
+ },
+ {
+  "domain": "avrupabet.com",
+  "operator": "Real Tech Ltd",
+  "ok": true,
+  "seals": [
+   "images.dmca.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cms.btcoservice40.com",
+   "79081f13-04e7-4b13-b478-a7a78f74935c.snippet.anjcdn.org",
+   "images.dmca.com",
+   "service.vh6r082s4e.com",
+   "chat15.vh6r082s4e.com"
+  ]
+ },
+ {
+  "domain": "betticket.com",
+  "operator": "Riotorto Digital LTD",
+  "ok": true,
+  "seals": [
+   "betticket.licenseseal.online",
+   "api.licenseseal.online"
+  ],
+  "unbranded": [],
+  "third": [
+   "cdnbahis.com",
+   "betticket.licenseseal.online",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "aa8e844b-a9d6-4e46-af87-b1ed30496ea6.snippet.anjcdn.org",
+   "service.wk3i4dqleo.com",
+   "api.licenseseal.online",
+   "chat15.wk3i4dqleo.com",
+   "statistics.btcoservice40.com"
+  ]
+ },
+ {
+  "domain": "bet10bet.com",
+  "operator": "Riotorto Digital LTD",
+  "ok": true,
+  "seals": [
+   "bet10bet.licenseseal.online",
+   "api.licenseseal.online"
+  ],
+  "unbranded": [],
+  "third": [
+   "i.ibb.co",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "bet10bet.licenseseal.online",
+   "service.ghiklwj45y09.com",
+   "chat15.ghiklwj45y09.com",
+   "api.licenseseal.online"
+  ]
+ },
+ {
+  "domain": "grandbetting.com",
+  "operator": "Riotorto Digital LTD",
+  "ok": true,
+  "seals": [
+   "grandbetting.licenseseal.online",
+   "api.licenseseal.online"
+  ],
+  "unbranded": [],
+  "third": [
+   "grandbetting.licenseseal.online",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cmsbetconstruct.com",
+   "f302f35f-4aa7-4de9-a330-c08eba2296be.snippet.anjcdn.org",
+   "api.web3modal.org",
+   "service.fzbr1mzrjrhp.com",
+   "api.licenseseal.online",
+   "statistics.bcapps.org",
+   "chat15.fzbr1mzrjrhp.com",
+   "cca-lite.coinbase.com"
+  ]
+ },
+ {
+  "domain": "queenbet.com",
+  "operator": "Riotorto Digital LTD",
+  "ok": true,
+  "seals": [
+   "queenbet.licenseseal.online",
+   "api.licenseseal.online"
+  ],
+  "unbranded": [],
+  "third": [
+   "queenbet.licenseseal.online",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cms.deimosphobos.net",
+   "45b218bd-13fe-4299-86ba-0807720605fa.snippet.anjcdn.org",
+   "service.xu3nwcg4v5.com",
+   "api.licenseseal.online",
+   "statistics.24btcoservice.com",
+   "chat15.xu3nwcg4v5.com"
+  ]
+ },
+ {
+  "domain": "betlike.com",
+  "operator": "Riotorto Digital LTD",
+  "ok": true,
+  "seals": [
+   "betlike.licenseseal.online",
+   "api.licenseseal.online"
+  ],
+  "unbranded": [],
+  "third": [
+   "vip.cdnplatforms.com",
+   "betlike.licenseseal.online",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "e04df752-79bc-4546-85f5-cd2e21361827.snippet.anjcdn.org",
+   "service.so9cl1p8ro.com",
+   "api.licenseseal.online",
+   "chat15.so9cl1p8ro.com"
+  ]
+ },
+ {
+  "domain": "betbanksy.com",
+  "operator": "SSA Technologies Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "fpnpmcdn.net",
+   "game.dgkqzfhi.com",
+   "resources.iqsoftllc.com",
+   "89715c2a-8123-43fb-a118-000e55fd1e59.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "artemisbet.com",
+  "operator": "Star Moss Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "28175e40-466a-4cbb-9efa-41e71521805b.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "spinxtreme.com",
+  "operator": "Xtreme Platforms Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "regal.casino",
+  "operator": "Zenorix Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "winro.io",
+  "operator": "August Gaming Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ipapi.co",
+   "api-46824--prd--sb.219.lol",
+   "one.one.one.one",
+   "api-46824--prd--sb.538.lol",
+   "analytics.219.lol",
+   "api-prd--shared.219.lol",
+   "sentry.219.lol",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data.gosquared.com",
+   "vue.comm100.com",
+   "chatserver15.comm100.io",
+   "14661c3d-816a-4225-adf4-7a5d0f152961.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "jogpix.com",
+  "operator": "Summer Spins Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "sweatbet.io",
+  "operator": "3-102-944260 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn-cookieyes.com",
+   "6dea0eeb-1cfb-4913-81a6-d9228753a29d.snippet.anjcdn.org",
+   "capi-automation.s3.us-east-2.amazonaws.com"
+  ]
+ },
+ {
+  "domain": "rugs.fun",
+  "operator": "3-102-948660 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "1d6f7d3b-346b-4347-9b06-46d3b86f1494.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "peakbet.io",
+  "operator": "3-102-949997 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "like.casino",
+  "operator": "3-102-948639 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn-image-store.b-cdn.net",
+   "e605be00-c433-4a72-83b4-9625c89d0c3a.snippet.anjcdn.org",
+   "storage-prod.s3.eu-central-1.amazonaws.com",
+   "web-sdk.smartlook.com"
+  ]
+ },
+ {
+  "domain": "wildwin.io",
+  "operator": "3-102-950481 Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "plump.com",
+  "operator": "BTR Gaming LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "winup.io",
+  "operator": "3-102-952740 SRL",
+  "ok": true,
+  "seals": [
+   "2ffa450b-6306-4d38-b17c-0c848ac921d7.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "2ffa450b-6306-4d38-b17c-0c848ac921d7.snippet.anjouangaming.org",
+   "2ffa450b-6306-4d38-b17c-0c848ac921d7.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "fixa.casino",
+  "operator": "FX Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "quokkasino.com",
+  "operator": "GBO ASSETS LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "chat.datavela.io",
+   "cdn.playgamewinmoney.com",
+   "slots.ps9launcher.com"
+  ]
+ },
+ {
+  "domain": "goldante.com",
+  "operator": "GBO ASSETS LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "roketbahis.com",
+  "operator": "Laulani Investment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bc-status.betconstruct.workers.dev",
+   "geoapi2.bcapps.org",
+   "i.imgur.com",
+   "c7357471-819e-4bbb-bc7c-7997fa3d7cf8.snippet.anjcdn.org",
+   "service.j72t3w6u6c.com",
+   "chat15.j72t3w6u6c.com"
+  ]
+ },
+ {
+  "domain": "moon.com",
+  "operator": "Moon International Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "silenthorn.imgix.net",
+   "datadoghq-browser-agent.com",
+   "5b86778a-4d08-4437-8215-2eb93ae5a77b.snippet.anjcdn.org",
+   "mpsnare.iesnare.com",
+   "browser-intake-datadoghq.eu",
+   "moon-pixels.imgix.net"
+  ]
+ },
+ {
+  "domain": "gbjp.fun",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "bahismosco9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "bonitabet9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gangbahis9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "kazanla9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "hana.asia",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "tronbet9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "ruletin9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "1hitbet9999.com",
+  "operator": "Sphynx Solutions Inc",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "longtian.bet",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "f2b973f8-6fcf-4b78-81b4-95ef567ed35b.snippet.anjcdn.org",
+   "resource.funfuncorp.com",
+   "common-static.ppgames.net"
+  ]
+ },
+ {
+  "domain": "a1slot.net",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "u2is.tech",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "3ee030a7-e50a-411f-b4de-195ff2d4c48d.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "artcasino.io",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "35e74ca7-a7fe-46ca-8450-ed3bbc773294.snippet.anjcdn.org",
+   "trackadshub.com",
+   "adscool.net",
+   "api.ipgeolocation.io",
+   "d1i1wfn7hj3mva.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "oncasi.com",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "a98c97cc-4544-4ca1-aa76-9c1aab0bcd3f.snippet.anjcdn.org",
+   "cdn-icons-png.flaticon.com"
+  ]
+ },
+ {
+  "domain": "winpeso.asia",
+  "operator": "U2IS Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betcrush.com",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ctag.containermedia.net",
+   "acdn.adnxs.com",
+   "secure-ds.serving-sys.com",
+   "dsp.harmonyads.com",
+   "pixel.mathtag.com",
+   "t.co",
+   "ib.adnxs.com",
+   "d1i1wfn7hj3mva.cloudfront.net",
+   "ut.om-meta.com",
+   "12fa0349-eea3-43e9-b25a-b74542b42ba2.snippet.anjcdn.org",
+   "js.pusher.com",
+   "stats.pusher.com"
+  ]
+ },
+ {
+  "domain": "casinoorca.com",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "b70d1e9d-02bb-4410-92c9-dd8505d384b1.snippet.anjcdn.org",
+   "cdn.skypack.dev",
+   "trackadshub.com",
+   "analytics.ahrefs.com",
+   "adscool.net",
+   "api.ipgeolocation.io",
+   "d1i1wfn7hj3mva.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "wett-bet.com",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d1i1wfn7hj3mva.cloudfront.net",
+   "f4844bed-0759-466b-9fd0-072176b57624.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "lumibet.com",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "f53a9565-49c8-4dcd-9b10-cd760f3485ec.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "winspin.ai",
+  "operator": "Wild Blackfin Limited SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "77d9f8ce-35a1-4be8-8997-dec5123231cc.snippet.anjcdn.org",
+   "api.ipgeolocation.io",
+   "d1i1wfn7hj3mva.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "gameslots.com",
+  "operator": "Solid X Ltd",
+  "ok": true,
+  "seals": [
+   "832984e1-7b3f-47ba-b4f9-943460a67475.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "832984e1-7b3f-47ba-b4f9-943460a67475.snippet.anjouangaming.org",
+   "telegram.org",
+   "fungamess.games",
+   "aws.oddservice.live"
+  ]
+ },
+ {
+  "domain": "nolimit.com",
+  "operator": "Fuego Mediatech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "f6417783-4bea-4c5d-ba97-7cefe63ec1e8.snippet.anjcdn.org",
+   "ipapi.co",
+   "cdn.pushalert.co",
+   "service.tfmzg3v81q.com",
+   "chat15.tfmzg3v81q.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data.gosquared.com",
+   "nolimit907.pushalert.co"
+  ]
+ },
+ {
+  "domain": "betoriz.com",
+  "operator": "Kingslayer Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web-betoriz-lic--demo-tr--prd--pl-sb.web4pod.com",
+   "api-demo-tr--prd--pl-sb.web4pod.com",
+   "analytics.api3kut.com",
+   "api-prd--shared.api3kut.com",
+   "sentry.web4pod.com",
+   "cdn.erisgaming.com",
+   "api-prd--ca.api3kut.com",
+   "78efca8a-3233-415f-9f6d-d5de20a9cd41.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "mavibet.com",
+  "operator": "3-102-949697 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.alwaysdomain.xyz"
+  ]
+ },
+ {
+  "domain": "kavbet.com",
+  "operator": "3-102-949697 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.alwaysdomain.xyz"
+  ]
+ },
+ {
+  "domain": "nakitbahis.com",
+  "operator": "3-102-949697 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "ampm.casino",
+  "operator": "3-102-950476 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web.webpushs.com",
+   "trackadshub.com",
+   "rtg.wewomedia.com",
+   "api.web3modal.org",
+   "d2anrf6jptfkek.cloudfront.net",
+   "fonts.reown.com"
+  ]
+ },
+ {
+  "domain": "tycoonwin.com",
+  "operator": "3-102-950476 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "10a06aaa-fa7d-4f19-adab-16c16c3cba7e.snippet.anjcdn.org",
+   "sr-client-cfg.eu.amplitude.com",
+   "web.webpushs.com",
+   "d2anrf6jptfkek.cloudfront.net",
+   "awsprospace-public-files.s3.eu-central-1.amazonaws.com",
+   "api.eu.amplitude.com",
+   "telegram.org"
+  ]
+ },
+ {
+  "domain": "spingreen.casino",
+  "operator": "3-102-950476 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d2anrf6jptfkek.cloudfront.net",
+   "awsprospace-public-files.s3.eu-central-1.amazonaws.com",
+   "trackadshub.com",
+   "rtg.wewomedia.com",
+   "web.webpushs.com",
+   "sr-client-cfg.eu.amplitude.com",
+   "telegram.org",
+   "api.eu.amplitude.com"
+  ]
+ },
+ {
+  "domain": "metawin.com",
+  "operator": "Rivolo Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static.moonpay.com",
+   "web.meshconnect.com",
+   "featureassets.org",
+   "indestructibletype.com",
+   "prodregistryv2.org",
+   "api.ipify.org",
+   "edcyyirq.apicdn.sanity.io",
+   "api.prod.platform.mwapp.io",
+   "redditstatic.com",
+   "tag.adrsbl.io",
+   "uk1-api.eng.bloomreach.com",
+   "api.hypelab.com",
+   "bcdea61f-e75c-4b23-ba94-680c755cf14a.snippet.anjcdn.org",
+   "mc-com-cms-prod.imgix.net",
+   "mw-com-prod.imgix.net",
+   "content.prod.platform.mwapp.io",
+   "t.co",
+   "api.web3modal.org",
+   "pixel-config.reddit.com",
+   "alb.reddit.com",
+   "secure.adnxs.com",
+   "v6.tag.adrsbl.io",
+   "api.adradv.io",
+   "track.adform.net",
+   "k6-e4e4123be8e54363900a90353991ca93.ecs.us-west-1.on.aws",
+   "mpc-prod-28-1053047382554.us-central1.run.app",
+   "fonts.reown.com"
+  ]
+ },
+ {
+  "domain": "hit.com",
+  "operator": "Novarex Media Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "roulobets.com",
+  "operator": "Roulo Interactive Games LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "5b7a77ea-8457-4151-b4df-dc18a944a74b.snippet.anjcdn.org",
+   "usercontent.cc"
+  ]
+ },
+ {
+  "domain": "pokerjoker.com",
+  "operator": "PJK Trading Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "npc2-config.jw777.co",
+   "th.api.live.poker-th.work",
+   "9bcdc933-74f8-4ef9-aef4-069e022c6133.snippet.anjcdn.org",
+   "cdn.livechat-static.com"
+  ]
+ },
+ {
+  "domain": "roulo.gg",
+  "operator": "Roulo Interactive Games LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [
+   "usercontent.cc"
+  ],
+  "third": [
+   "5b7a77ea-8457-4151-b4df-dc18a944a74b.snippet.anjcdn.org",
+   "usercontent.cc"
+  ]
+ },
+ {
+  "domain": "batcasino.bet",
+  "operator": "3-102-953033 SRL",
+  "ok": true,
+  "seals": [
+   "0920aa28-917c-4352-9172-7c4e20c30b91.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "0920aa28-917c-4352-9172-7c4e20c30b91.snippet.anjouangaming.org",
+   "0920aa28-917c-4352-9172-7c4e20c30b91.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "gamealotroyale.com",
+  "operator": "3-102-954988 SRL",
+  "ok": true,
+  "seals": [
+   "213ae301-4610-4c30-b2fa-110cbc907bdc.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "213ae301-4610-4c30-b2fa-110cbc907bdc.snippet.anjouangaming.org",
+   "213ae301-4610-4c30-b2fa-110cbc907bdc.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "sportifpro.com",
+  "operator": "Ameriserv LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "8584c866-fe4b-4849-bc1b-2bbe01668bed.snippet.anjcdn.org",
+   "go.cmsbetconstruct.com",
+   "icons.cmsbetconstruct.com",
+   "app.hoory.com",
+   "browser.sentry-cdn.com",
+   "statistics.bcapps.org"
+  ]
+ },
+ {
+  "domain": "appleicasino.com",
+  "operator": "AIC Enterprises LLC",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "gis-static.com"
+  ]
+ },
+ {
+  "domain": "castle.com",
+  "operator": "Broken Tentacle Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "45dd2abd-117b-4282-a0e3-0f672ce2d3b8.snippet.anjcdn.org",
+   "app.launchdarkly.com",
+   "events.launchdarkly.com",
+   "clientstream.launchdarkly.com",
+   "media3.giphy.com",
+   "media1.giphy.com"
+  ]
+ },
+ {
+  "domain": "kheli.bet",
+  "operator": "Ingrex Tech LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "mdlr.site"
+  ]
+ },
+ {
+  "domain": "craze.casino",
+  "operator": "Gridline Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "images.ctfassets.net",
+   "dbb84f34-d9be-4a14-98ab-b4737560bffc.snippet.anjcdn.org",
+   "imagedelivery.net",
+   "graphql.contentful.com",
+   "api.web3modal.org",
+   "fonts.reown.com"
+  ]
+ },
+ {
+  "domain": "cola.com",
+  "operator": "Desert Star Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "api-cola-global--prd--pl-sb.api3kut.com"
+  ]
+ },
+ {
+  "domain": "xbagh.casino",
+  "operator": "Ingrex Tech LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "kheli-s3.fra1.cdn.digitaloceanspaces.com",
+   "4baabe64-a45d-4503-b14c-5f76ee5d49db.snippet.anjcdn.org",
+   "diswdgcu9cfva.cloudfront.net",
+   "static.zdassets.com",
+   "ekr.zdassets.com"
+  ]
+ },
+ {
+  "domain": "tengri.casino",
+  "operator": "Ingrex Tech LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "assets.abovedomains.com"
+  ]
+ },
+ {
+  "domain": "otobet.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "service.jgi2t435d.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data2.gosquared.com",
+   "chat15.jgi2t435d.com",
+   "bd7abcf6-4875-45b2-898d-7e2d18c7731e.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "slotin.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "service.h78h78125.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data2.gosquared.com",
+   "chat15.h78h78125.com",
+   "dc63b9bd-73c6-4839-a58f-c58483eee699.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "betewin.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "sdk.optimove.net",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "vt.livechata1.com",
+   "data2.gosquared.com",
+   "sdkuaservice.optimove.net",
+   "stream-1781.optimove.net",
+   "realtime-1781.optimove.net",
+   "api.betewin224.com",
+   "ca.api.betewin224.com"
+  ]
+ },
+ {
+  "domain": "betpublic.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.cgcb.info"
+  ],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org",
+   "seal.cgcb.info",
+   "cutt.ly",
+   "solobet411.com",
+   "api.solobet411.com",
+   "one.one.one.one",
+   "api-54968--prd--sb.538.lol",
+   "dns.hostux.net",
+   "masters-of-cloud.de",
+   "analytics.api.solobet411.com",
+   "shared.api.solobet411.com",
+   "sentry.api.solobet411.com"
+  ]
+ },
+ {
+  "domain": "starzbet.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.certcga.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "analytics.ahrefs.com",
+   "script.evx-chat.com",
+   "r.pxlretarg.com",
+   "adsynapsemax.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "r.uuidksinc.net",
+   "mpc2-prod-27-is5qnl632q-uk.a.run.app",
+   "data.gosquared.com",
+   "my.rtmark.net",
+   "track.phoenix-widget.com",
+   "tsyndicate.com",
+   "openrtb.tds.bid",
+   "ads.trafficjunky.net",
+   "syncbm.com",
+   "cs.dt.cckmnd.com",
+   "z.cdn.adtarget.me",
+   "cm.pxltag.com",
+   "dmg.digitaltarget.ru",
+   "s.uuidksinc.net",
+   "c46d2705-ec72-4487-bad8-1dbab54e0687.snippet.anjcdn.org",
+   "seal.certcga.com"
+  ]
+ },
+ {
+  "domain": "baywin.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "service.262h98i8k.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data2.gosquared.com",
+   "chat15.262h98i8k.com",
+   "be2f53e1-0aef-4645-8168-3ae4f2444bc7.snippet.anjcdn.org",
+   "gamecheck.com"
+  ]
+ },
+ {
+  "domain": "luxslot.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web-luxslot-lic--demo-tr--prd--pl-sb.web4pod.com"
+  ]
+ },
+ {
+  "domain": "bycasino.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betira.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.cgcb.info"
+  ],
+  "unbranded": [],
+  "third": [
+   "web-betira-lic--demo-tr--prd--pl-sb.web4pod.com",
+   "api-demo-tr--prd--pl-sb.web4pod.com",
+   "analytics.api3kut.com",
+   "api-prd--shared.api3kut.com",
+   "sentry.web4pod.com",
+   "cdn.erisgaming.com",
+   "api-prd--ca.api3kut.com",
+   "seal.cgcb.info"
+  ]
+ },
+ {
+  "domain": "northwin.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.cgcb.info"
+  ],
+  "unbranded": [],
+  "third": [
+   "web-northwin-lic--demo-tr--prd--pl-sb.web4pod.com",
+   "api-demo-tr--prd--pl-sb.web4pod.com",
+   "analytics.api3kut.com",
+   "api-prd--shared.api3kut.com",
+   "sentry.web4pod.com",
+   "api-prd--ca.api3kut.com",
+   "cdn.erisgaming.com",
+   "seal.cgcb.info"
+  ]
+ },
+ {
+  "domain": "jasino.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "service.jgi2t435d.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data.gosquared.com",
+   "chat15.jgi2t435d.com"
+  ]
+ },
+ {
+  "domain": "solobet.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.cgcb.info"
+  ],
+  "unbranded": [],
+  "third": [
+   "cdn.ampproject.org",
+   "seal.cgcb.info",
+   "cutt.ly",
+   "solobet411.com",
+   "api.solobet411.com",
+   "one.one.one.one",
+   "api-54968--prd--sb.538.lol",
+   "dns.hostux.net",
+   "dukun.de",
+   "analytics.api.solobet411.com",
+   "shared.api.solobet411.com",
+   "sentry.api.solobet411.com"
+  ]
+ },
+ {
+  "domain": "ligobet.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [
+   "seal.certcga.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "admaxium.com",
+   "service.vhw7uhua.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data2.gosquared.com",
+   "chat15.vhw7uhua.com",
+   "pixel.admaxium.com",
+   "seal.certcga.com"
+  ]
+ },
+ {
+  "domain": "dodobet.com",
+  "operator": "Obsidian Titan Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "d1l6p2sc9645hc.cloudfront.net",
+   "data2.gosquared.com",
+   "ea69aa56-1101-4555-802a-d5ae5dfdfbd6.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "lt.com",
+  "operator": "RegalTech Solutions Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "af719fde-8308-4564-a669-ef37732071cb.snippet.anjcdn.org",
+   "admaxium.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "pixel.admaxium.com",
+   "api.ipify.org",
+   "finger-api.kzxdwqpl.com",
+   "static.xly3355.com",
+   "static.trtxs.com",
+   "static.ltstatic.net",
+   "i1l7mfp.lcqychz4.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com",
+   "cmbi.licimg.com"
+  ]
+ },
+ {
+  "domain": "howzitcasino.com",
+  "operator": "RegalTech Solutions Limitada",
+  "ok": true,
+  "seals": [
+   "d53c0cb2-ed72-4988-9873-9e686bd5d82a.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "yz5p1nru.apicdn.sanity.io",
+   "static.zdassets.com",
+   "yz5p1nru.api.sanity.io",
+   "api-bsecure.prod.edgegaming.io",
+   "ekr.zdassets.com",
+   "s3.eu-central-1.amazonaws.com",
+   "mpsnare.iesnare.com",
+   "d53c0cb2-ed72-4988-9873-9e686bd5d82a.snippet.anjouangaming.org",
+   "cdn.sanity.io",
+   "api.prod.abc01b.com",
+   "d53c0cb2-ed72-4988-9873-9e686bd5d82a.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "mrcat.com",
+  "operator": "RegalTech Solutions Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "dfbef57f-9a60-41f3-bc9d-ab7554ccbd2f.snippet.anjcdn.org",
+   "static.uajttx.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "finger-api.kzxdwqpl.com",
+   "api.ipify.org",
+   "static.trtxs.com",
+   "p8j8mfp.lcptajky.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com",
+   "cmbi.licimg.com"
+  ]
+ },
+ {
+  "domain": "letou.com",
+  "operator": "RegalTech Solutions Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "38da82b5-c001-48cd-827d-28a77c8f4271.snippet.anjcdn.org",
+   "static.jsdqsc.com",
+   "admaxium.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "pixel.admaxium.com",
+   "api.ipify.org",
+   "finger-api.kzxdwqpl.com",
+   "static.trtxs.com",
+   "i1l7mfp.lcjwdx65.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com",
+   "cmbi.licimg.com"
+  ]
+ },
+ {
+  "domain": "time4bets.com",
+  "operator": "AWSLO Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cmsbetconstruct.com",
+   "statistics.bcapps.org",
+   "m6-211026f8a25b42c08fc190458268b30e.ecs.us-east-2.on.aws",
+   "cdn.livechat-files.com"
+  ]
+ },
+ {
+  "domain": "enomocasino.com",
+  "operator": "3-102-944179 SRL",
+  "ok": true,
+  "seals": [
+   "images.dmca.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "yastatic.net",
+   "cdn.launcher.a8r.games",
+   "images.dmca.com",
+   "flagcdn.com"
+  ]
+ },
+ {
+  "domain": "vwin.com",
+  "operator": "RegalTech Solutions Limitada",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static.vejthvm.com",
+   "005d0e3f-0a0e-4121-8c4a-40c8ac535cd8.snippet.anjcdn.org",
+   "admaxium.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "pixel.admaxium.com",
+   "finger-api.kzxdwqpl.com",
+   "api.ipify.org",
+   "static.trtxs.com",
+   "i1l7mfp.lcqychz4.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com",
+   "cmbi.licimg.com"
+  ]
+ },
+ {
+  "domain": "gooobet.com",
+  "operator": "AWSLO Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com"
+  ]
+ },
+ {
+  "domain": "maksibet.com",
+  "operator": "3-102-939685 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "clientcdn.pushengage.com",
+   "fonts.cdnfonts.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "bfb943ca-cb4d-4f29-9e52-80e0b1f2c88c.snippet.anjcdn.org",
+   "service.9crtxzsmco.com",
+   "chat15.9crtxzsmco.com",
+   "bcvsss"
+  ]
+ },
+ {
+  "domain": "hotslot.com",
+  "operator": "3-102-947593 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "slotio.com",
+  "operator": "3-102-947593 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "egebet.com",
+  "operator": "3-102-947593 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "lugarbet.com",
+  "operator": "3-102-951260 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "c9a680be-bca8-4d02-9987-163b2df9621b.snippet.anjcdn.org",
+   "rtg.wewomedia.com",
+   "mindful-broker.com",
+   "general.mindful-broker.com",
+   "cdn.baketshares.com",
+   "cdn.zmsfnxxx.xyz",
+   "qludus-frontend-api.fly.dev",
+   "cdn.educatedapegaming.com"
+  ]
+ },
+ {
+  "domain": "celtabet.com",
+  "operator": "3-102-952681 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "tcnljhkesvlgisaiyddq.supabase.co",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cmsbetconstruct.com",
+   "15d9a392-c7c5-4944-bfe9-5423eb7c6eef.snippet.anjcdn.org",
+   "api.web3modal.org",
+   "cms.celtabet1079.com",
+   "service.nnn3tgza.com",
+   "chat15.nnn3tgza.com",
+   "statistics.bcapps.org",
+   "cca-lite.coinbase.com"
+  ]
+ },
+ {
+  "domain": "lord.casino",
+  "operator": "3-102-952681 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "zumabet.com",
+  "operator": "3-102-952681 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "mm-sdk-analytics.api.cx.metamask.io"
+  ]
+ },
+ {
+  "domain": "parmabet.com",
+  "operator": "3-102-952681 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "tcnljhkesvlgisaiyddq.supabase.co",
+   "geoapi.qaxcraveniq.com",
+   "bc-status.betconstruct.workers.dev",
+   "cmsbetconstruct.com",
+   "12e050da-7326-48a5-ab80-afa6352c51e2.snippet.anjcdn.org",
+   "api.web3modal.org",
+   "service.quppt4napno.com",
+   "cms.parmabet590.com",
+   "chat15.quppt4napno.com",
+   "statistics.trexname.com"
+  ]
+ },
+ {
+  "domain": "bettogames.com",
+  "operator": "3-102-954365 SRL",
+  "ok": true,
+  "seals": [
+   "c125c514-1780-4c07-88f6-1fdfc0c961ed.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "c125c514-1780-4c07-88f6-1fdfc0c961ed.snippet.anjouangaming.org",
+   "c125c514-1780-4c07-88f6-1fdfc0c961ed.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "bahizz.com",
+  "operator": "High Gaming IT Services Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "wpk.com",
+  "operator": "High Gaming IT Services Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "a98-wsite-for-prod.oss-accelerate.aliyuncs.com"
+  ]
+ },
+ {
+  "domain": "betixir.com",
+  "operator": "Maltech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "flagsapi.com"
+  ]
+ },
+ {
+  "domain": "wepoker.com",
+  "operator": "High Gaming IT Services Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "a98-wsite-for-prod.oss-accelerate.aliyuncs.com",
+   "h5.wpk.com"
+  ]
+ },
+ {
+  "domain": "capitolbet.com",
+  "operator": "Maltech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "flagsapi.com"
+  ]
+ },
+ {
+  "domain": "betss.com",
+  "operator": "Ceylonite Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "seylan.gateway.mastercard.com",
+   "tm.ads.sportradar.com",
+   "tracker.ads.sportradar.com",
+   "a.sportradarserving.com",
+   "x.bidswitch.net",
+   "sumathistore.blob.core.windows.net",
+   "static.everymatrix.com"
+  ]
+ },
+ {
+  "domain": "trendbet.com",
+  "operator": "Maltech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "trendhizli.com",
+   "cmsbetconstruct.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "8c12adab-2818-4968-92c6-ee03450db8a2.snippet.anjcdn.org",
+   "crm-lib.fasttrack-solutions.com",
+   "statistics.trexname.com"
+  ]
+ },
+ {
+  "domain": "taksimbet.com",
+  "operator": "Maltech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "flagsapi.com"
+  ]
+ },
+ {
+  "domain": "parobet.com",
+  "operator": "Maltech Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "parohizli.com",
+   "cmsbetconstruct.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "b90a26af-4824-425c-bebe-44a8254272e0.snippet.anjcdn.org",
+   "cms.kgdrenaoihfhek.com",
+   "statistics.bcapps.org"
+  ]
+ },
+ {
+  "domain": "flush.io",
+  "operator": "Purple Dragon Ltd.",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cloud.umami.is",
+   "glitchgl.naughtyduk.com",
+   "gateway.umami.is"
+  ]
+ },
+ {
+  "domain": "dalercasino.com",
+  "operator": "3-102-950194 SRL",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "slotzula.com",
+  "operator": "Rambo Corp Limited",
+  "ok": true,
+  "seals": [
+   "e061b0c1-32d6-4dbd-bfaa-294ecd54992e.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "e061b0c1-32d6-4dbd-bfaa-294ecd54992e.snippet.anjouangaming.org",
+   "e061b0c1-32d6-4dbd-bfaa-294ecd54992e.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "qqpk.poker",
+  "operator": "QQPOKER Technology Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web.cdn.openinstall.io",
+   "ipapi.co",
+   "fpzx.vttphs.com",
+   "87d4f2a2-0ca6-4b5d-9e65-81d94a85855e.snippet.anjcdn.org",
+   "web-zn58lp.opstatistics.cn"
+  ]
+ },
+ {
+  "domain": "qqpk.com",
+  "operator": "QQPOKER Technology Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "web.cdn.openinstall.io",
+   "web-zn58lp.opstatistics.cn",
+   "87d4f2a2-0ca6-4b5d-9e65-81d94a85855e.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "jp88.io",
+  "operator": "3-102-950412 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static-m9.vwz7zfbp.com",
+   "admaxium.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "finger-api.kzxdwqpl.com",
+   "api.ipify.org",
+   "static.trtxs.com",
+   "static.kc86sn58.com",
+   "166fc5cd-0625-4899-9b42-916fc8daf648.snippet.anjcdn.org",
+   "g426mfp.lcdqhjqk.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com"
+  ]
+ },
+ {
+  "domain": "normal-game.com",
+  "operator": "3-102-950813 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "0d22ff77-e9ed-4ba2-b710-ce19835b3e4a.snippet.anjcdn.org",
+   "cdn.zmsfnxxx.xyz"
+  ]
+ },
+ {
+  "domain": "jackpot88.io",
+  "operator": "3-102-950412 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "static-m9.vwz7zfbp.com",
+   "admaxium.com",
+   "jxqrp.kzxdwqpl.com",
+   "fiuspzry.athena25.com",
+   "api.ipify.org",
+   "finger-api.kzxdwqpl.com",
+   "static.trtxs.com",
+   "static.kc86sn58.com",
+   "01e82e35-efaf-43f6-84eb-d8dfa958cdb2.snippet.anjcdn.org",
+   "g426mfp.lcdqhjqk.com",
+   "api.wx7777.com",
+   "api-widget.wx7777.com",
+   "cmbi.licimg.com"
+  ]
+ },
+ {
+  "domain": "normal.game",
+  "operator": "3-102-950813 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "b15b246f-9e9d-4eeb-a9de-9f80a6568569.snippet.anjcdn.org",
+   "cdn.zmsfnxxx.xyz"
+  ]
+ },
+ {
+  "domain": "betfuze.com",
+  "operator": "BET Fusion Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.forms-content-1.sg-form.com",
+   "mc.sendgrid.com"
+  ]
+ },
+ {
+  "domain": "ezbet.com",
+  "operator": "Brightshore Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "7288b5ac-db6e-4b87-af73-9c44e28cecce.snippet.anjcdn.org",
+   "assets.ezbcdn.com",
+   "refactor-api.eezzadm.com"
+  ]
+ },
+ {
+  "domain": "liqd.com",
+  "operator": "LIQD LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "events.framer.com",
+   "framerusercontent.com",
+   "framer.com",
+   "app.framerstatic.com",
+   "prod.spline.design",
+   "api.framer.com"
+  ]
+ },
+ {
+  "domain": "liqd.gg",
+  "operator": "LIQD LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "scripts.simpleanalyticscdn.com",
+   "queue.simpleanalyticscdn.com",
+   "t.co",
+   "rxwaszbxkqrcjfdegzxs.supabase.co"
+  ]
+ },
+ {
+  "domain": "pr1mebet.com",
+  "operator": "Prime Entertainment Ltd",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "10x10.bet",
+  "operator": "Normanhouse LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "gls.liveplugins.com",
+   "builder.spring-builder.prod.yospace.ai",
+   "static.springbuilder.site",
+   "10x10bet-18749214.springbuilder.site",
+   "a93a9972-47e1-4726-b641-0f5bbd6fa4a5.snippet.anjcdn.org",
+   "verification.pagcor-regulatory.ph",
+   "x10x10d.com",
+   "static.springbuilder.org",
+   "geoapi.bcapps.net"
+  ]
+ },
+ {
+  "domain": "10x10bet.com",
+  "operator": "Normanhouse LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "gls.liveplugins.com",
+   "static.springbuilder.site",
+   "ce81cce4-9f51-4f33-805a-fbda60e3efa9.snippet.anjcdn.org",
+   "my.hellobar.com",
+   "x10x10d.com",
+   "geoapi2.bcapps.net",
+   "eu-swarm-newm.vmemkhhgjigrjefb.com",
+   "go-cms.deimosphobos.net",
+   "cms.deimosphobos.net"
+  ]
+ },
+ {
+  "domain": "maxxed.io",
+  "operator": "Obsidian Ventures Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ajax.aspnetcdn.com",
+   "appservice.azureedge.net"
+  ]
+ },
+ {
+  "domain": "oktop.mx",
+  "operator": "Novaspin Network Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "us.thinkingdata.cc",
+   "mx-api.ck-web.com"
+  ]
+ },
+ {
+  "domain": "tau777.mx",
+  "operator": "Novaspin Network Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "bet303.com",
+  "operator": "Play Fortune Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi.fjykjczttspydxcx.com",
+   "bc-status.betconstruct.workers.dev",
+   "app.hoory.com",
+   "statistics.21btcoservice.com",
+   "browser.sentry-cdn.com"
+  ]
+ },
+ {
+  "domain": "bet808.com",
+  "operator": "Play Fortune Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "4211e956-95a1-422e-8b4a-3bd0d6a3427b.snippet.anjcdn.org",
+   "app.hoory.com",
+   "statistics.bcapps.org",
+   "browser.sentry-cdn.com"
+  ]
+ },
+ {
+  "domain": "alphabet79.com",
+  "operator": "Silverline Source Ltd",
+  "ok": true,
+  "seals": [
+   "licensing.gaming-curacao.com"
+  ],
+  "unbranded": [],
+  "third": [
+   "builder.spring-builder.prod.yospace.ai",
+   "gls.liveplugins.com",
+   "vk.com",
+   "static.springbuilder.site",
+   "60a790ac-d535-4b29-bd4f-e98cd7faa1b1.snippet.anjcdn.org",
+   "telegram.org",
+   "licensing.gaming-curacao.com",
+   "alphabet-18753930.springbuilder.site",
+   "geoapi2.bcapps.net",
+   "eu-swarm-springre.trexname.com"
+  ]
+ },
+ {
+  "domain": "solstake.tv",
+  "operator": "SOLSTART LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "us-assets.i.posthog.com",
+   "us.i.posthog.com"
+  ]
+ },
+ {
+  "domain": "10x.win",
+  "operator": "Vantage Crest Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "builder.spring-builder.prod.yospace.ai",
+   "static.springbuilder.site",
+   "static.springbuilder.org",
+   "87926b73-4d0e-4e8d-a1e8-f5b2ac89d74e.snippet.anjcdn.org",
+   "youtube.com",
+   "geoapi.bcapps.net",
+   "i.ytimg.com"
+  ]
+ },
+ {
+  "domain": "pokerclubhub.com",
+  "operator": "3-102-953867 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "8c625be8-147b-4102-bb06-b2ccead8d39b.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "rolly.info",
+  "operator": "3-102-954977 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "placebet.partners",
+  "operator": "3-102-959375 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "mybc.game",
+  "operator": "AceQueen Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bb5465aa-6640-4942-a0f2-d816847fdde8.snippet.anjcdn.org",
+   "gis-static.com",
+   "cdn.taboola.com",
+   "mybc.sptpub.com",
+   "sr-client-cfg.amplitude.com",
+   "start32.sptpub.com",
+   "trc.taboola.com",
+   "bt-app-static-themes.sptpub.com",
+   "api-32-sp-c7818b61-598.sptpub.com",
+   "static.sptpub.com",
+   "d1bvoel1nv172p.cloudfront.net",
+   "files-immutable-4cbc033nbd3.sptpub.com",
+   "trc-events.taboola.com"
+  ]
+ },
+ {
+  "domain": "anklebone.io",
+  "operator": "Anklebone Limited",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "playify.com",
+  "operator": "Calla Pulse Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "betlexo.com",
+  "operator": "Fortuna Dynamics Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "legenddrop.com",
+  "operator": "Legenddrop Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "0d5b1973-418b-475b-b4f5-3140174932e7.snippet.anjcdn.org",
+   "cdn.lgd-dev.com"
+  ]
+ },
+ {
+  "domain": "2k.bet",
+  "operator": "2K Services Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "hellocasino.io",
+  "operator": "3-102-940372 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cmsbetconstruct.com",
+   "geoapi2.bcapps.org",
+   "bc-status.betconstruct.workers.dev",
+   "cefe0975-b031-4041-a6c8-8ea0d2c99285.snippet.anjcdn.org",
+   "service.67kn10vndc.com",
+   "statistics.bcapps.org",
+   "chat15.67kn10vndc.com"
+  ]
+ },
+ {
+  "domain": "pariland.com",
+  "operator": "3-102-952738 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "v3.traincdn.com"
+  ]
+ },
+ {
+  "domain": "kranz.top",
+  "operator": "3-102-952153 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "16008c99-0814-4235-888f-6dc8c5eaecd1.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "reeljoy.com",
+  "operator": "3-102-952820 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "fe82b8a5-3f9e-4f73-9ff6-c66b51746fd9.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "casshiva.com",
+  "operator": "3-102-952932 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "sektor.chat"
+  ]
+ },
+ {
+  "domain": "parolambet.com",
+  "operator": "3-102-952932 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "static.dev.phoenixapps.org",
+   "dynamicanjouan.besofted.workers.dev",
+   "lynonprod.phoenix365-prod.com",
+   "86d7919f-e3c6-48f0-a73e-dba80553981c.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "donebets.com",
+  "operator": "3-102-952932 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "telegram.org",
+   "vue.comm100.com",
+   "chat15.uh1m02ax4.com",
+   "static.dev.phoenixapps.org",
+   "dynamicanjouan.besofted.workers.dev",
+   "lynonprod.phoenix365-prod.com",
+   "dcba3132-0eac-4637-918e-a9f117bf5c14.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "buff.gg",
+  "operator": "3-102-954785 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "gamblit.net",
+  "operator": "3-102-954785 LIMITADA",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ipapi.co",
+   "37514376-7c38-474c-954c-4f0dd751f619.snippet.anjcdn.org",
+   "fungamess.games"
+  ]
+ },
+ {
+  "domain": "cosmoracasinos.com",
+  "operator": "3-102-958311 SRL",
+  "ok": true,
+  "seals": [
+   "73677ed1-39ca-4758-8895-414c3c27d718.snippet.anjouangaming.org"
+  ],
+  "unbranded": [],
+  "third": [
+   "73677ed1-39ca-4758-8895-414c3c27d718.snippet.anjouangaming.org",
+   "73677ed1-39ca-4758-8895-414c3c27d718.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "herkulbet.com",
+  "operator": "Golden Ridge Group Ltd",
+  "ok": false,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "ganare.com",
+  "operator": "Born Champion Entertainment Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "ui.invisiblesport.com",
+   "cdn.whatismybrowser.com"
+  ]
+ },
+ {
+  "domain": "interwin.com",
+  "operator": "3-102-959230 SRL",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "files.sitestatic.net",
+   "db0dd1ed-dfc8-4fab-9dcc-e5ab63a701c0.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "gorillacasinos.com",
+  "operator": "Luminous Interactive Solutions Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "bp.app.tasp13.com",
+   "media.ohxeeshei2eigooji3ey8nah9bah7r.site"
+  ]
+ },
+ {
+  "domain": "stepsino.com",
+  "operator": "Dexbay Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "pics.staticsuper.net",
+   "ef47dfac-cdf1-4c90-99a1-7c59dff52594.snippet.anjcdn.org",
+   "sentry.alphasrv.org"
+  ]
+ },
+ {
+  "domain": "keyzino.com",
+  "operator": "Dexbay Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "pics.staticsuper.net",
+   "6ee8fd46-8d80-415d-a676-f4429ecf3a89.snippet.anjcdn.org",
+   "sentry.alphasrv.org"
+  ]
+ },
+ {
+  "domain": "sinbet.co.com",
+  "operator": "GK INTERACTIVE LTD",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "sinbet.com.co",
+   "debet.vip",
+   "d39mzzwe2ijlir.cloudfront.net"
+  ]
+ },
+ {
+  "domain": "stakevegas.net",
+  "operator": "PlayTrust Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "hype247.bet",
+  "operator": "One Crane Studio Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "asset.trinity-igaming.com",
+   "283ad3c9-d85d-4a4e-9d3a-6f7e59aed89b.snippet.anjcdn.org",
+   "app.hoory.com",
+   "browser.sentry-cdn.com",
+   "chat.stream-io-api.com"
+  ]
+ },
+ {
+  "domain": "matbet.com",
+  "operator": "Vesaro Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": []
+ },
+ {
+  "domain": "stakevegas.com",
+  "operator": "PlayTrust Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "events.framer.com",
+   "framerusercontent.com",
+   "framer.com",
+   "app.framerstatic.com",
+   "raw.githubusercontent.com",
+   "api.framer.com"
+  ]
+ },
+ {
+  "domain": "playandpredict.io",
+  "operator": "Blackmere Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "d953fefd-8c4c-44e8-a2e9-c22c94589627.snippet.anjcdn.org"
+  ]
+ },
+ {
+  "domain": "elitcasino.com",
+  "operator": "Vesaro Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "cdn.alwaysdomain.xyz"
+  ]
+ },
+ {
+  "domain": "degenta.com",
+  "operator": "Thornwick Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "img1.wsimg.com",
+   "cdn.reamaze.com",
+   "contact.apps-api.instantpage.secureserver.net",
+   "csp.secureserver.net",
+   "ms.godaddy.com",
+   "s.zkcdn.net"
+  ]
+ },
+ {
+  "domain": "mollydice.com",
+  "operator": "Satoshi Labs Ltd",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "grnyptwbmjlulohgtful.supabase.co",
+   "bakerbet.sptpub.com",
+   "start32.sptpub.com",
+   "api-32-sp-c7818b61-598.sptpub.com",
+   "bt-app-static-themes.sptpub.com",
+   "d1bvoel1nv172p.cloudfront.net",
+   "files-immutable-4cbc033nbd3.sptpub.com"
+  ]
+ },
+ {
+  "domain": "star.gg",
+  "operator": "Skyborn Limited",
+  "ok": true,
+  "seals": [],
+  "unbranded": [],
+  "third": [
+   "us-assets.i.posthog.com",
+   "128a1a8c-e20e-49e8-aa48-cb68f3ec3cc9.snippet.anjcdn.org"
+  ]
+ }
+]

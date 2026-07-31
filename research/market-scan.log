@@ -1,0 +1,65 @@
+scanning 489 sites, concurrency 8
+  25/489  ok=24
+  50/489  ok=49
+  75/489  ok=74
+  100/489  ok=99
+  125/489  ok=124
+  150/489  ok=149
+  175/489  ok=174
+  200/489  ok=199
+  225/489  ok=222
+  250/489  ok=245
+  275/489  ok=267
+  300/489  ok=292
+  325/489  ok=316
+  350/489  ok=338
+  375/489  ok=359
+  400/489  ok=384
+  425/489  ok=409
+  450/489  ok=432
+  475/489  ok=455
+
+=== scanned ok: 470/489 ===
+already running a seal/trust widget: 76
+serving via unbranded CDN: 17
+no third-party trust signal at all: 394
+
+--- seal vendors by reach ---
+   53 sites  anjouangaming.org
+   10 sites  licenseseal.online
+    5 sites  dmca.com
+    5 sites  cgcb.info
+    4 sites  dlagglobal.com
+    2 sites  trustpilot.com
+    2 sites  gaming-curacao.com
+    2 sites  anjouangamingboard.org
+    2 sites  certcga.com
+    1 sites  gamecheck.cloud
+
+--- shared infrastructure (3+ operators) ---
+   26 sites  bc-status.betconstruct.workers.dev
+   23 sites  geoapi2.bcapps.org
+   20 sites  telegram.org
+   13 sites  v3.traincdn.com
+   12 sites  ipapi.co
+   11 sites  d1l6p2sc9645hc.cloudfront.net
+    9 sites  clientcdn.pushengage.com
+    9 sites  api.ipify.org
+    9 sites  d1i1wfn7hj3mva.cloudfront.net
+    8 sites  cdn.launcher.a8r.games
+    8 sites  static.zdassets.com
+    8 sites  ekr.zdassets.com
+    8 sites  rtg.wewomedia.com
+    8 sites  cmsbetconstruct.com
+    8 sites  usercontent.cc
+    7 sites  admaxium.com
+    7 sites  geoapi.bcapps.net
+    7 sites  r.uuidksinc.net
+    7 sites  static.springbuilder.site
+    7 sites  trackadshub.com
+    7 sites  api.web3modal.org
+    7 sites  statistics.bcapps.org
+    6 sites  t.co
+    6 sites  builder.spring-builder.prod.yospace.ai
+    6 sites  cdn.ampproject.org
+
