@@ -9,6 +9,91 @@ clever the pitch is.
 
 ---
 
+## Your list already exists — start from the CSV, not from scratch
+
+Two files, both built from the Anjouan register (1,475 licence records) on
+31 July 2026:
+
+| File | Rows | What it is |
+| :--- | ---: | :--- |
+| `prospects.csv` | 3,549 | Every domain on a valid B2C Anjouan licence. Raw pool. Unchecked. |
+| `prospects-live.csv` | 491 | The newest 900 of those, actually fetched. Only the ones that responded with a real page. |
+| `prospects-by-operator.csv` | **259** | The same 491 brands grouped by the company that owns them. **Start here.** |
+
+### Work the operator list, not the brand list
+
+The 491 live brands are run by just **259 companies**. One owns 27 of them;
+another owns 18. Mailing the brand list means writing to the same company up to
+27 times — that is indistinguishable from spam, and it burns the single first
+contact you get with them.
+
+The arithmetic is worth sitting with, because it changes the whole plan:
+
+| | |
+| :--- | :--- |
+| Brands covered by the **top 10 operators** | **109** |
+| Multi-brand operators | 92 of 259 |
+| Operators reachable by email today | 50 |
+| Largest operator (27 brands) reachable now? | **yes** |
+
+**The 10-casino target is plausibly one conversation.** A single yes from the
+27-brand operator clears it outright, and the top three reachable groups cover
+about 50 brands between them. Work down `prospects-by-operator.csv` in order —
+it is sorted by brand count, reachable-first — and pitch the *group*, offering
+the badge across their whole portfolio.
+
+Two notes on that file. `name_is_reg_number: yes` marks operators whose
+registered name is a bare company number (Costa Rica corporate IDs look like
+`3-102-940828 SRL`) — still real operators, still worth contacting, but treat
+any "licence" claim from them with particular care, because Costa Rica issues
+no gaming licences at all. And `all_domains` lists their portfolio, which is
+your opening line: naming their brands back to them proves you did the work and
+is the single strongest personalisation available.
+
+Columns in `prospects-live.csv`: `brand`, `domain`, `site`, `operator`,
+`licence`, `issued`, `expiry`, `contact_email`, `contact_source`, `status`,
+`contacted_on`, `notes`. Rows with an address sort to the top. `status` starts
+at *not contacted* — keep it current or you will double-mail people.
+
+**Names come from the page's own `<title>`,** not from the domain, so they are
+what the operator calls themselves. Sorted newest licence first: a brand
+licensed weeks ago has no trust signals yet and no incumbent seal to displace.
+
+### What checking 900 domains actually showed
+
+Worth knowing before you plan a week around this list:
+
+- **491 live, 409 not.** Roughly **45% of register domains are not worth an
+  email** — never launched, parked, or DNS-dead. Any list built from a registry
+  without this step is half padding.
+- **222 returned HTTP 403, 33 returned 451.** Those are almost certainly *alive
+  and geo-blocking a UK/EU home IP*, not dead. 451 literally means blocked for
+  legal reasons. They are excluded from the live list because they could not be
+  confirmed — **the residential proxies would recover most of them.** That is
+  the concrete payoff for the ~$15–20/mo, and it is worth roughly 250 more
+  prospects.
+- **Only 66 of 491 publish an email address at all — 13%.** This is the finding
+  that should change your plan. Casinos deliberately route everything through
+  live chat and contact forms. Cold email to a published address is *not* the
+  main channel here; it is the exception.
+
+### So how do you actually reach the other 87%?
+
+In order of what works:
+
+1. **The `/affiliates` or `/partners` page.** Affiliate programmes exist to be
+   contacted and almost always publish a real human's address. This is the
+   single best door and it is why section 4 matters more than section 1.
+2. **LinkedIn**, searching the `operator` column — the legal entity, not the
+   brand. Small operators have 5–20 staff and the affiliate or brand manager is
+   findable.
+3. **The live chat widget.** Unglamorous and it works: ask the agent for the
+   affiliate or partnerships email. They will usually just tell you.
+4. **The contact form.** Lowest yield — often lands in a support queue that has
+   no idea what to do with a partnership.
+
+---
+
 ## Start here — first five actions
 
 Do these in order. They are ranked by yield per hour, not by how interesting
@@ -173,9 +258,10 @@ did for them.** Never open with "buy our badge."
 > {link to /casinos/{slug}/}
 >
 > Right now it just shows public info: your licence, launch date, domain. If you
-> want, we'll run the full check for free — games loading from real providers,
-> licence matched against the register, test withdrawal — and if it passes you
-> can display the badge and the page becomes a verified record.
+> want, we'll run the full check for free — licence matched against the
+> regulator's register, games confirmed as loading from the studios you name —
+> and if it passes you can display the badge and the page becomes a verified
+> record.
 >
 > Players search "{Casino} legit" and "{Casino} withdrawal" before depositing.
 > Right now they find nothing. We'd rather they found something accurate.
@@ -183,6 +269,38 @@ did for them.** Never open with "buy our badge."
 > Worth 15 minutes?
 >
 > {Your name}
+
+### Email — to a multi-brand operator (use this one first)
+
+For anyone near the top of `prospects-by-operator.csv`. Naming their portfolio
+back to them is the whole point: it proves this is not a mail-merge, and it
+reframes the ask from one badge to a portfolio deal.
+
+> **Subject:** Verification pages for {Brand A}, {Brand B} and your other brands
+>
+> Hi {Name},
+>
+> We run Swift Secure — we check casino licences against the regulator's own
+> register rather than what the footer claims, then confirm the games really do
+> load from the studios the site names.
+>
+> I noticed {Operator} runs {N} brands, including {Brand A}, {Brand B} and
+> {Brand C}. We've indexed them, and right now each page shows only public
+> information: licence number, domain, issue date.
+>
+> We're just starting, so the first operators get this free — no fee, no
+> contract. We run the checks across your brands, you get a badge and a public
+> verification page for each, and all we ask is that the badge links back to us.
+> Remove it any time.
+>
+> Doing your whole portfolio at once is less work for both of us than doing one.
+> Want me to start with {Brand A} so you can see the output before deciding?
+>
+> {Your name}
+
+Why this closes better than the single-brand version: it asks for a decision on
+*one* brand, not twelve, so the yes is cheap — but the deal it opens is the
+whole portfolio. See `the-offer.md` for what we are and are not promising.
 
 ### Telegram / LinkedIn — short form
 
@@ -242,7 +360,21 @@ proof than with a pitch.
   change.
 - Reply-rate figures are general B2B benchmarks, not iGaming-specific measured
   data. Instrument your own sending from day one.
-- The research pass that produced the directory was cut short by a search
-  budget limit, so `jurisdiction` is missing on 12 of 23 entries and no licence
-  number is independently confirmed against a regulator register. Fill those
-  from the registries in section 1 before using any of it commercially.
+- **The whole prospect list is Anjouan-only.** It is one register out of many,
+  so it is a large sample, not the market. Curaçao is the bigger pool and is
+  not represented here at all — section 1 is still the way to add it.
+- **2,649 of the 3,549 raw domains were never checked**, only the newest 900.
+  The unchecked remainder is older licences, which are lower priority but not
+  worthless.
+- **The 290 domains returning 403/401/451 are unresolved, not dead.** They
+  almost certainly block a home IP rather than being offline. Re-run the
+  liveness check through the residential proxies to recover them.
+- Contact addresses were read from published contact and support pages. The
+  13% hit rate means the list is a starting point for finding a human, not a
+  finished mailing list — expect to work the affiliate pages by hand.
+
+### Resolved since the first draft
+
+- `jurisdiction` gaps and unconfirmed licence numbers: 11 licences are now
+  confirmed against the Anjouan register, and the directory carries an explicit
+  `listed` status for everything unchecked.
