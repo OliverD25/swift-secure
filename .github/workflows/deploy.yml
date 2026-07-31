@@ -43,7 +43,16 @@ jobs:
           # build needs both halves to emit correct links and canonical URLs.
           SITE: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Repository *variables*, not secrets: the PUBLIC_ prefix inlines
+          # these into client-side JS, so they ship to every visitor anyway.
+          # Marking them secret would only hide them from our own build logs.
+          PUBLIC_FORM_ENDPOINT: ${{ vars.PUBLIC_FORM_ENDPOINT }}
+          PUBLIC_CONTACT_EMAIL: ${{ vars.PUBLIC_CONTACT_EMAIL }}
         run: npm run build
+
+      - name: Warn if applications have nowhere to go
+        if: vars.PUBLIC_CONTACT_EMAIL == ''
+        run: echo "::warning::PUBLIC_CONTACT_EMAIL is unset — the apply form tells operators it could not submit and gives them no address to fall back to. Set it under Settings → Secrets and variables → Actions → Variables."
 
       - uses: actions/upload-pages-artifact@v3
         with:

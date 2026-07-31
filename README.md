@@ -79,7 +79,7 @@ covers the base-path, CI and indexing traps in more depth.
 ## Before launch
 
 - **Domain**: `public/robots.txt` still hardcodes the placeholder `swiftsecure.example` sitemap URL, and `astro.config.mjs` falls back to it when `SITE` is unset — point both at the real domain once there is one.
-- **Apply form**: `/apply/` currently swaps in a client-side success message on submit only — wire it up to real submission handling (API route, email, or CRM). See the `TODO` in `src/pages/[...locale]/apply.astro`.
+- **Apply form — applications currently go nowhere.** `/apply/` POSTs to `PUBLIC_FORM_ENDPOINT` and only reports success on a 2xx. Neither that nor `PUBLIC_CONTACT_EMAIL` is set, so an operator who applies is told the submission failed and is given *no address to fall back to*. It no longer loses leads silently, but it cannot receive one either. Fix by setting both under **Settings → Secrets and variables → Actions → Variables** (repository *variables*, not secrets — see the note in `.github/workflows/deploy.yml`). `PUBLIC_CONTACT_EMAIL` alone is enough to make the page usable; the endpoint wants a form-to-email service such as Formspree or Web3Forms. Copy `.env.example` to `.env` for local builds.
 - **Verify lookup**: `/verify/` uses the same client-side demo matching as the design prototype (IDs ending in "42" or `CS-2026-0042`) — replace with a real API call to the certification database. See `src/pages/[...locale]/verify.astro`.
 - **Casino directory**: `casinos.ts` is a static in-memory list — replace with a real data source when there's one.
 - **Flag images**: the language switcher hotlinks flags from `flagcdn.com` — confirm that's acceptable for production or self-host them.
