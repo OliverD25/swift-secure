@@ -50,6 +50,34 @@ function paidVendor(text) {
   return m ? m[0].toLowerCase().replace(/\s+/g, "") : null;
 }
 
+// Counting category matches answers "how much provider markup is on this page",
+// which is not a fact about the casino — one operator produced 409. What is
+// worth stating is how many *distinct studios* they list, so the names are
+// captured individually.
+const PROVIDER_NAMES = [
+  ["Pragmatic Play", /pragmatic/i], ["Evolution", /evolution ?gaming|\bevolution\b/i],
+  ["NetEnt", /netent/i], ["Play'n GO", /play'?n ?go|playngo/i], ["Microgaming", /microgaming/i],
+  ["Quickspin", /quickspin/i], ["Yggdrasil", /yggdrasil/i], ["Red Tiger", /red ?tiger/i],
+  ["Nolimit City", /nolimit/i], ["Hacksaw", /hacksaw/i], ["Push Gaming", /push ?gaming/i],
+  ["Relax Gaming", /relax ?gaming/i], ["Betsoft", /betsoft/i], ["Habanero", /habanero/i],
+  ["Endorphina", /endorphina/i], ["Booongo", /booongo/i], ["Amatic", /amatic/i],
+  ["Novomatic", /novomatic/i], ["Wazdan", /wazdan/i], ["ELK Studios", /elk ?studios/i],
+  ["Thunderkick", /thunderkick/i], ["BGaming", /bgaming/i], ["Spinomenal", /spinomenal/i],
+  ["Playson", /playson/i], ["3 Oaks", /3 ?oaks/i], ["Gamzix", /gamzix/i],
+  ["Mancala", /mancala/i], ["Pariplay", /pariplay/i], ["Tom Horn", /tom ?horn/i],
+  ["OnlyPlay", /onlyplay/i], ["Evoplay", /evoplay/i], ["Belatra", /belatra/i],
+  ["Platipus", /platipus/i], ["Kalamba", /kalamba/i], ["Swintt", /swintt/i],
+  ["Fugaso", /fugaso/i], ["BetGames", /betgames/i], ["Ezugi", /ezugi/i],
+  ["Vivo Gaming", /vivo ?gaming/i], ["Authentic Gaming", /authentic ?gaming/i],
+  ["EGT", /\begt\b|egt ?interactive|egt ?digital/i],
+];
+
+function providerNames(text) {
+  const hits = [];
+  for (const [name, re] of PROVIDER_NAMES) if (re.test(text)) hits.push(name);
+  return hits;
+}
+
 // Seal vendors that render inside an iframe leave nothing in the parent DOM.
 // spinsamurai loads dlagglobal this way, and a DOM-only pass reported it as
 // having no trust signals at all — so the network layer stays in play.
@@ -57,7 +85,7 @@ const VENDOR_HOST =
   /dlagglobal|licenseseal|gamecheck\.cloud|ecogra|itechlabs|gaminglabs|bmm-?testlabs|quinel|trisigma|askgamblers|trustpilot|gamcare|gambleaware|cert\.cga\.cw|certcga|cgcb\.info|anjouangaming|antillephone|gaming-?curacao/i;
 
 export async function readTrustSignals(browser, domain) {
-  const out = { domain, ok: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [] };
+  const out = { domain, ok: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [] };
   const ctx = await browser.newContext({ userAgent: UA, locale: "en-GB", ignoreHTTPSErrors: true });
   const page = await ctx.newPage();
   const vendorHosts = new Set();
@@ -100,9 +128,11 @@ export async function readTrustSignals(browser, domain) {
     const found = {};
     const samples = {};
     const vendors = new Set();
+    const providers = new Set();
     for (const item of raw) {
       const v = paidVendor(item);
       if (v) vendors.add(v);
+      for (const p of providerNames(item)) providers.add(p);
       const cat = classify(item);
       if (!cat) continue;
       found[cat] = (found[cat] ?? 0) + 1;
@@ -113,6 +143,7 @@ export async function readTrustSignals(browser, domain) {
       if (v) vendors.add(v);
     }
     out.paidVendors = [...vendors];
+    out.providerNames = [...providers].sort();
     // Merge the network finding in: an iframe seal counts even though the DOM
     // pass cannot see it.
     out.vendorHosts = [...vendorHosts];
