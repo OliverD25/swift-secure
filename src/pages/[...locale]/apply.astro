@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { useTranslations, localeStaticPaths } from "../../i18n";
+import { FORM_ENDPOINT, CONTACT_EMAIL } from "../../lib/leadCapture";
 
 export const getStaticPaths = () => localeStaticPaths();
 
@@ -22,7 +23,13 @@ const labelClass = "text-[13px] font-semibold text-muted";
         <p class="text-[15px] text-muted">{t.apply.sub}</p>
       </div>
 
-      <form data-apply-form class="flex flex-col gap-4.5" novalidate>
+      <form
+        data-apply-form
+        data-endpoint={FORM_ENDPOINT}
+        data-contact={CONTACT_EMAIL}
+        class="flex flex-col gap-4.5"
+        novalidate
+      >
         <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4">
           <div class="flex flex-col gap-1.5">
             <label for="name" class={labelClass}>{t.apply.fieldName}</label>
@@ -69,6 +76,24 @@ const labelClass = "text-[13px] font-semibold text-muted";
           {successBefore}<span data-apply-email></span>{successAfter}
         </div>
       </div>
+
+      {/* Shown when the submission could not be delivered. A visible failure
+          with a working address beats a success screen that loses the lead. */}
+      <div data-apply-error hidden class="mt-6 rounded-card border border-warn-line bg-warn-soft p-5.5">
+        <div class="mb-1.5 text-[15px] font-bold text-warn-soft-text">We could not submit that automatically</div>
+        <p class="text-sm leading-relaxed text-muted">
+          Nothing was lost on your side, but the form did not reach us. Please email the details straight to
+          {" "}
+          {CONTACT_EMAIL ? (
+            <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-accent">
+              {CONTACT_EMAIL}
+            </a>
+          ) : (
+            <span class="font-semibold">our team</span>
+          )}
+          {" "}and we will pick it up from there.
+        </p>
+      </div>
     </section>
   </main>
 </Layout>
@@ -76,18 +101,57 @@ const labelClass = "text-[13px] font-semibold text-muted";
 <script>
   const form = document.querySelector<HTMLFormElement>("[data-apply-form]");
   const success = document.querySelector<HTMLElement>("[data-apply-success]");
+  const failure = document.querySelector<HTMLElement>("[data-apply-error]");
   const emailSpan = document.querySelector<HTMLElement>("[data-apply-email]");
 
-  form?.addEventListener("submit", (event) => {
+  const showSuccess = (email: string) => {
+    if (emailSpan && email) emailSpan.textContent = email;
+    if (form) form.hidden = true;
+    if (success) success.hidden = false;
+  };
+
+  // Never hide the form on failure: the operator keeps what they typed and can
+  // copy it into an email rather than retyping everything.
+  const showFailure = () => {
+    if (failure) failure.hidden = false;
+    failure?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
+    const endpoint = form.dataset.endpoint ?? "";
     const email = (form.querySelector<HTMLInputElement>("#email")?.value ?? "").trim();
-    if (emailSpan && email) emailSpan.textContent = email;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const original = button?.textContent ?? "";
 
-    // TODO: wire this up to real submission handling (API route, email, or CRM)
-    // before launch — this currently only swaps in a client-side confirmation.
-    form.hidden = true;
-    if (success) success.hidden = false;
+    if (!endpoint) {
+      // Not configured. Saying so is the only honest option — the previous
+      // behaviour was to show success and discard the application.
+      showFailure();
+      return;
+    }
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = "…";
+    }
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      showSuccess(email);
+    } catch {
+      showFailure();
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = original;
+      }
+    }
   });
 </script>
