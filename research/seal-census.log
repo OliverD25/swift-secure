@@ -1,57 +1,60 @@
 seal census over 489 sites, concurrency 8
-  40/489  paid so far: 7
-  80/489  paid so far: 11
-  120/489  paid so far: 12
-  160/489  paid so far: 18
-  200/489  paid so far: 20
-  240/489  paid so far: 20
-  280/489  paid so far: 21
-  320/489  paid so far: 23
-  360/489  paid so far: 29
-  400/489  paid so far: 32
-  440/489  paid so far: 34
-  480/489  paid so far: 34
+  40/489  paid so far: 6
+  80/489  paid so far: 9
+  120/489  paid so far: 9
+  160/489  paid so far: 16
+  200/489  paid so far: 18
+  240/489  paid so far: 18
+  280/489  paid so far: 20
+  320/489  paid so far: 24
+  360/489  paid so far: 31
+  400/489  paid so far: 34
+  440/489  paid so far: 37
+  480/489  paid so far: 37
 
-=== seal census: 469 of 489 sites read ===
-  paying a commercial seal vendor : 34  (7.2%)
-  regulator licence seal          : 254  (54.2%)
-  responsible-gambling logos      : 137  (29.2%)
-  review-platform badge           : 12  (2.6%)
-  lists game providers on site    : 190  (40.5%)
-  no trust signal of any kind     : 153
+=== seal census: 374 read, 95 blocked, of 489 attempted ===
+  paying a commercial seal vendor : 37  (9.9%)
+  regulator licence seal          : 254  (67.9%)
+  responsible-gambling logos      : 144  (38.5%)
+  review-platform badge           : 17  (4.5%)
+  lists game providers on site    : 198  (52.9%)
+  no trust signal of any kind     : 53
 
 --- paid vendors by reach ---
+   11  askgamblers
     9  gamecheck
-    8  askgamblers
-    7  trustpilot
+    9  trustpilot
+    8  casinoguru
     6  gaminglabs
-    6  casinoguru
     6  licenseseal
     4  gli
-    3  dlagglobal
+    1  dlagglobal
     1  quinel
     1  bmmtest
 
 --- the paying list ---
-  21bit.com                    dlagglobal
+  artcasino.io                 casinoguru, askgamblers
+  bahizz.com                   trustpilot
   baywin.com                   gamecheck
   bet10bet.com                 licenseseal
   betlike.com                  licenseseal
   betphoenix.ag                quinel
   betticket.com                licenseseal
+  casinoorca.com               casinoguru, askgamblers
   casinostars.io               askgamblers, casinoguru
   degencity.com                trustpilot
   fatbets.com                  gamecheck, trustpilot
   grandbetting.com             licenseseal
-  levelupcasino.com            dlagglobal
+  lukkly.com                   askgamblers
   maltcasino.com               gamecheck
   meritwin.com                 gamecheck
-  mondcasino.com               casinoguru, askgamblers
+  mondcasino.com               askgamblers, casinoguru
   narniaslots.com              gaminglabs, gli, trustpilot, casinoguru, askgamblers
   narniumcasino.com            gaminglabs, gli, trustpilot, casinoguru, askgamblers
   narniumslots.com             gaminglabs, gli, trustpilot, casinoguru, askgamblers
   pinbahis.com                 gamecheck
   pk8.com                      gaminglabs
+  playbet.io                   trustpilot
   queenbet.com                 licenseseal
   raize.poker                  gli
   slot.win                     trustpilot
