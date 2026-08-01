@@ -93,6 +93,10 @@ async function hunt(rec) {
     return t === "image" || t === "font" || t === "media" ? r.abort() : r.continue();
   });
   const page = await ctx.newPage();
+  // Some affiliate pages fire an age-gate alert(). Left unhandled it wedges the
+  // page and throws a protocol error that kills the whole worker, not just the
+  // one site — a single bad page took out a chunk of the sweep.
+  page.on("dialog", (d) => d.dismiss().catch(() => {}));
   const found = new Map();
   const platforms = new Set();
 
@@ -138,7 +142,16 @@ async function hunt(rec) {
 
 await Promise.all(
   Array.from({ length: CONC }, async () => {
-    while (queue.length) results.push(await hunt(queue.shift()));
+    while (queue.length) {
+      const rec = queue.shift();
+      // One unlucky site must not end its worker and silently shrink coverage.
+      try {
+        results.push(await hunt(rec));
+      } catch (err) {
+        results.push({ ...rec, affiliateEmail: "", affiliateUrl: "", platform: "", others: [],
+          error: String(err.message).split("\n")[0].slice(0, 80) });
+      }
+    }
   }),
 );
 await browser.close();
