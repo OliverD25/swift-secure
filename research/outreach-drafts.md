@@ -7,11 +7,11 @@ Review, edit and send manually. Every claim is checked against `seal-census.json
 
 | Tier | Meaning | Count | With address |
 | :-- | :-- | --: | --: |
-| A | already pay a certification vendor | 25 | 7 |
-| B | display regulator seal, pay nobody | 235 | 32 |
-| C | no trust signal at all | 114 | 18 |
+| A | already pay a certification vendor | 25 | 9 |
+| B | display regulator seal, pay nobody | 235 | 91 |
+| C | no trust signal at all | 114 | 32 |
 
-## Tier A — drafts (7 with a published address)
+## Tier A — drafts (9 with a published address)
 
 ### Zlot (zlot.com)
 
@@ -37,6 +37,30 @@ Worth a look?
 [your name]
 ```
 
+### Bet10bet (bet10bet.com)
+
+```
+To: info@bet10bet.com
+
+Subject: Verification pages for Bet10bet and your other brands
+
+Hi,
+
+I noticed Riotorto Digital LTD runs 5 brands, including Bet10bet, Betticket, Grandbetting, Queenbet. We've indexed them.
+
+You already run a licenseseal badge, so you clearly value the signal. Ours works differently: it links to a dated public page stating exactly what was checked and what was not, and it gets re-checked rather than sitting static.
+
+We confirmed licence ALSI-202601035-FI1 against the Anjouan register (valid to 2027-01-14).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
 ### Poker King (pk8.com)
 
 ```
@@ -51,6 +75,30 @@ I noticed High Gaming IT Services Limited runs 4 brands, including Poker King, B
 You already run a gaminglabs badge, so you clearly value the signal. Ours works differently: it links to a dated public page stating exactly what was checked and what was not, and it gets re-checked rather than sitting static.
 
 We confirmed licence ALSI-202603023-FI1 against the Anjouan register (valid to 2027-03-13).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
+### Yasalbahis (yasalbahis.com)
+
+```
+To: info@yasalbahis.com
+
+Subject: Verification pages for Yasalbahis and your other brands
+
+Hi,
+
+I noticed Nowplatform Ltd. runs 4 brands, including Yasalbahis, Meritwin, Vola, Haydicasino Adresi Güncellendi. We've indexed them.
+
+You already run a gamecheck badge, so you clearly value the signal. Ours works differently: it links to a dated public page stating exactly what was checked and what was not, and it gets re-checked rather than sitting static.
+
+We confirmed licence ALSI-202509021-Fll against the Anjouan register (valid to 2026-09-15). We also recorded the 23 game studios you list on-site (3 Oaks, BGaming, BetGames among them).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -183,6 +231,78 @@ Worth a look?
 
 ## Tier B — drafts (12 with a published address)
 
+### Ligobet (ligobet.com)
+
+```
+To: marketing@ligobet.com
+
+Subject: Verification pages for Ligobet and your other brands
+
+Hi,
+
+I noticed Obsidian Titan Limited runs 15 brands, including Ligobet, Zlot, Otobet, Slotin. We've indexed them.
+
+You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
+
+We confirmed licence ALSI-202602052-FI2 against the Anjouan register (valid to 2027-02-27).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
+### Starzbet (starzbet.com)
+
+```
+To: winwith@infernopartners.com
+
+Subject: Verification pages for Starzbet and your other brands
+
+Hi,
+
+I noticed Obsidian Titan Limited runs 15 brands, including Starzbet, Zlot, Otobet, Slotin. We've indexed them.
+
+You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
+
+We confirmed licence ALSI-202602052-FI2 against the Anjouan register (valid to 2027-02-27).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
+### Dodobet global (dodobet.com)
+
+```
+To: marketing@dodobetglobal.com
+
+Subject: Verification pages for Dodobet global and your other brands
+
+Hi,
+
+I noticed Obsidian Titan Limited runs 15 brands, including Dodobet global, Zlot, Otobet, Slotin. We've indexed them.
+
+You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
+
+We confirmed licence ALSI-202602052-FI2 against the Anjouan register (valid to 2027-02-27).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
 ### Matadorbet (matadorbet.com)
 
 ```
@@ -231,20 +351,20 @@ Worth a look?
 [your name]
 ```
 
-### BizBet Africa (bizbet.mobi)
+### Spinman (spinman.com)
 
 ```
-To: support-en@africa-bizbet.com
+To: support@spinman.com
 
-Subject: Verification pages for BizBet Africa and your other brands
+Subject: Verification pages for Spinman and your other brands
 
 Hi,
 
-I noticed Gameway Global LLC runs 6 brands, including BizBet Africa, BizBet Africa, Bizbet Biz, Bizbet. We've indexed them.
+I noticed Fortuna Digital Solutions FDS Limitada runs 8 brands, including Spinman, Yekbet, Ikasbet, Asyabahis. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511025-FI2 against the Anjouan register (valid to 2026-11-29).
+We confirmed licence ALSI-202509068-FI2 against the Anjouan register (valid to 2026-09-29). We also recorded the 12 game studios you list on-site (BGaming, Evolution, Habanero among them).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -255,20 +375,20 @@ Worth a look?
 [your name]
 ```
 
-### Bizbet Biz (bizbet-biz.com)
+### PartyBet (partybet.ai)
 
 ```
-To: support-en@bizbet-biz.com
+To: support@partybet.fun
 
-Subject: Verification pages for Bizbet Biz and your other brands
+Subject: Verification pages for PartyBet and your other brands
 
 Hi,
 
-I noticed Gameway Global LLC runs 6 brands, including Bizbet Biz, BizBet Africa, BizBet Africa, Bizbet. We've indexed them.
+I noticed On Read SRL runs 7 brands, including PartyBet, Partybet, PartyBet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511025-FI2 against the Anjouan register (valid to 2026-11-29).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -279,20 +399,20 @@ Worth a look?
 [your name]
 ```
 
-### BizBet Africa (africa-bizbet.com)
+### PartyBet (partybet.casino)
 
 ```
-To: support-en@africa-bizbet.com
+To: support@partybet.fun
 
-Subject: Verification pages for BizBet Africa and your other brands
+Subject: Verification pages for PartyBet and your other brands
 
 Hi,
 
-I noticed Gameway Global LLC runs 6 brands, including BizBet Africa, BizBet Africa, Bizbet Biz, Bizbet. We've indexed them.
+I noticed On Read SRL runs 7 brands, including PartyBet, PartyBet, Partybet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511025-FI2 against the Anjouan register (valid to 2026-11-29).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -303,20 +423,20 @@ Worth a look?
 [your name]
 ```
 
-### AfriSlots (afrislots.net)
+### Partybet (partybet.fun)
 
 ```
-To: legal@afrislots.net
+To: support@partybet.fun
 
-Subject: Verification pages for AfriSlots and your other brands
+Subject: Verification pages for Partybet and your other brands
 
 Hi,
 
-I noticed Juicecraft Limited runs 4 brands, including AfriSlots, Gbet, ElvisLuck, GanaMega. We've indexed them.
+I noticed On Read SRL runs 7 brands, including Partybet, PartyBet, Partybet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511012-FI1 against the Anjouan register (valid to 2026-11-14).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -327,20 +447,20 @@ Worth a look?
 [your name]
 ```
 
-### Gbet (gbetplay.net)
+### PartyBet (partybet.social)
 
 ```
-To: abuse@gbetplay.net
+To: support@partybet.fun
 
-Subject: Verification pages for Gbet and your other brands
+Subject: Verification pages for PartyBet and your other brands
 
 Hi,
 
-I noticed Juicecraft Limited runs 4 brands, including Gbet, AfriSlots, ElvisLuck, GanaMega. We've indexed them.
+I noticed On Read SRL runs 7 brands, including PartyBet, PartyBet, Partybet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511012-FI1 against the Anjouan register (valid to 2026-11-14). We also recorded the 4 game studios you list on-site (BGaming, Belatra, NetEnt among them).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -351,20 +471,20 @@ Worth a look?
 [your name]
 ```
 
-### GanaMega (ganamega.net)
+### PartyBet (partybet.bot)
 
 ```
-To: support@ganamega.net
+To: support@partybet.fun
 
-Subject: Verification pages for GanaMega and your other brands
+Subject: Verification pages for PartyBet and your other brands
 
 Hi,
 
-I noticed Juicecraft Limited runs 4 brands, including GanaMega, Gbet, AfriSlots, ElvisLuck. We've indexed them.
+I noticed On Read SRL runs 7 brands, including PartyBet, PartyBet, Partybet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511012-FI1 against the Anjouan register (valid to 2026-11-14).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -375,92 +495,20 @@ Worth a look?
 [your name]
 ```
 
-### ElvisLuck (elvisluck.net)
+### PartyBet (partybet.win)
 
 ```
-To: hello@elvisluck.net
+To: support@partybet.fun
 
-Subject: Verification pages for ElvisLuck and your other brands
+Subject: Verification pages for PartyBet and your other brands
 
 Hi,
 
-I noticed Juicecraft Limited runs 4 brands, including ElvisLuck, Gbet, AfriSlots, GanaMega. We've indexed them.
+I noticed On Read SRL runs 7 brands, including PartyBet, PartyBet, Partybet, PartyBet. We've indexed them.
 
 You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
 
-We confirmed licence ALSI-202511012-FI1 against the Anjouan register (valid to 2026-11-14). We also recorded the 7 game studios you list on-site (Amatic, BGaming, Belatra among them).
-
-We're just starting, so the first operators get this free — no fee, no contract.
-You get the badge and a public verification page; all we ask is that the badge
-links back to us. Remove it any time.
-
-Worth a look?
-
-[your name]
-```
-
-### Joker Tipp (jokertipp.com)
-
-```
-To: support@jokertipp.com
-
-Subject: Verification pages for Joker Tipp and your other brands
-
-Hi,
-
-I noticed Mirella Ltd runs 3 brands, including Joker Tipp, 403 Forbidden, Sierra. We've indexed them.
-
-You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
-
-We confirmed licence ALSI-202509009-FI1 against the Anjouan register (valid to 2026-09-15). We also recorded the 18 game studios you list on-site (BGaming, Belatra, Endorphina among them).
-
-We're just starting, so the first operators get this free — no fee, no contract.
-You get the badge and a public verification page; all we ask is that the badge
-links back to us. Remove it any time.
-
-Worth a look?
-
-[your name]
-```
-
-### Twixos (twixos.com)
-
-```
-To: privacy@twixos.com
-
-Subject: Verification pages for Twixos and your other brands
-
-Hi,
-
-I noticed Global Score Ltd runs 2 brands, including Twixos, vexlbet. We've indexed them.
-
-You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
-
-We confirmed licence ALSI-202509002-FI1 against the Anjouan register (valid to 2026-09-15).
-
-We're just starting, so the first operators get this free — no fee, no contract.
-You get the badge and a public verification page; all we ask is that the badge
-links back to us. Remove it any time.
-
-Worth a look?
-
-[your name]
-```
-
-### Cooked (cooked.com)
-
-```
-To: support@cooked.com
-
-Subject: Verification pages for Cooked and your other brands
-
-Hi,
-
-I noticed Digital Chain Ventures SRL runs 2 brands, including Cooked, CryptoGaming. We've indexed them.
-
-You display your regulator's licence seal, which tells a player you are licensed but not that anyone independently confirmed it. We check the licence against the regulator's own register and publish the result with a date.
-
-We confirmed licence ALSI-202509004-FI1 against the Anjouan register (valid to 2026-09-15). We also recorded the 26 game studios you list on-site (3 Oaks, BGaming, BetGames among them).
+We confirmed licence ALSI-202508060-FI2 against the Anjouan register (valid to 2026-08-28).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge
@@ -593,6 +641,54 @@ Worth a look?
 [your name]
 ```
 
+### Betbeto (betbeto.com)
+
+```
+To: support@betbeto.com
+
+Subject: Verification pages for Betbeto and your other brands
+
+Hi,
+
+I noticed Capitanos Games Ltd runs 4 brands, including Betbeto, BhaiCasino, Cwinz, Bluebetz. We've indexed them.
+
+Right now the site carries no independent trust signal at all. Players search "Betbeto legit" before depositing, and there is nothing for them to find.
+
+We confirmed licence ALSI-202509071-FI2 against the Anjouan register (valid to 2026-09-29).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
+### Betmarino (betmarino.com)
+
+```
+To: chupurnov@gmail.com
+
+Subject: Verification pages for Betmarino and your other brands
+
+Hi,
+
+I noticed Real Tech Ltd runs 4 brands, including Betmarino, Ustabet, Avrupa nın En Büyük, Rekor Oranlar Rekor Kazançlar. We've indexed them.
+
+Right now the site carries no independent trust signal at all. Players search "Betmarino legit" before depositing, and there is nothing for them to find.
+
+We confirmed licence ALSI-202601013-FI1 against the Anjouan register (valid to 2027-01-14). We also recorded the 3 game studios you list on-site (EGT, Playson, Pragmatic Play among them).
+
+We're just starting, so the first operators get this free — no fee, no contract.
+You get the badge and a public verification page; all we ask is that the badge
+links back to us. Remove it any time.
+
+Worth a look?
+
+[your name]
+```
+
 ### Fortune HUB (fortunehub.io)
 
 ```
@@ -703,54 +799,6 @@ I noticed IsleSoft Lab Ltd. runs 2 brands, including Slotbaba Official, SpinRain
 Right now the site carries no independent trust signal at all. Players search "Slotbaba Official legit" before depositing, and there is nothing for them to find.
 
 We confirmed licence ALSI-202601011-FI1 against the Anjouan register (valid to 2027-01-14).
-
-We're just starting, so the first operators get this free — no fee, no contract.
-You get the badge and a public verification page; all we ask is that the badge
-links back to us. Remove it any time.
-
-Worth a look?
-
-[your name]
-```
-
-### OXY (oxy.casino)
-
-```
-To: support@oxy.casino
-
-Subject: Verification pages for OXY and your other brands
-
-Hi,
-
-I noticed Spiritus Limited runs 2 brands, including OXY, FenixBet. We've indexed them.
-
-Right now the site carries no independent trust signal at all. Players search "OXY legit" before depositing, and there is nothing for them to find.
-
-We confirmed licence ALSI-202603056-FI2 against the Anjouan register (valid to 2027-03-30). We also recorded the 14 game studios you list on-site (BGaming, Belatra, Endorphina among them).
-
-We're just starting, so the first operators get this free — no fee, no contract.
-You get the badge and a public verification page; all we ask is that the badge
-links back to us. Remove it any time.
-
-Worth a look?
-
-[your name]
-```
-
-### RICHEVO (richevoslot.com)
-
-```
-To: support@game.com
-
-Subject: RICHEVO — verification page we built for you
-
-Hi,
-
-We index newly licensed casinos and build a public page for each. Here's RICHEVO's.
-
-Right now the site carries no independent trust signal at all. Players search "RICHEVO legit" before depositing, and there is nothing for them to find.
-
-We confirmed licence ALSI-202509053-FI2 against the Anjouan register (valid to 2026-09-29).
 
 We're just starting, so the first operators get this free — no fee, no contract.
 You get the badge and a public verification page; all we ask is that the badge

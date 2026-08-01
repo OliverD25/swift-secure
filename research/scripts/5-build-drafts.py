@@ -22,6 +22,16 @@ census = {c["domain"]: c for c in json.loads((R / "seal-census.json").read_text(
 live = {r["domain"]: r for r in csv.DictReader((R / "prospects-live.csv").open(encoding="utf8"))}
 ops = list(csv.DictReader((R / "prospects-by-operator.csv").open(encoding="utf8")))
 
+# Affiliate addresses beat support desks for this pitch: a partner programme
+# exists to be contacted, and the affiliate manager owns a badge-and-link deal.
+# A support queue does not know what to do with one.
+aff_path = R / "affiliate-contacts.json"
+affiliate = {}
+if aff_path.exists():
+    for a in json.loads(aff_path.read_text(encoding="utf8")):
+        if a.get("affiliateEmail"):
+            affiliate[a["domain"]] = a
+
 brands_by_op = {}
 for o in ops:
     brands_by_op[o["operator"]] = o["all_domains"].split()
@@ -78,11 +88,16 @@ for domain, c in census.items():
     op = l.get("operator", "")
     siblings = [b for b in brands_by_op.get(op, []) if b != domain]
     providers = c.get("providerNames") or []
+    aff = affiliate.get(domain)
+    email = (aff or {}).get("affiliateEmail") or l.get("contact_email", "")
     rows.append({
         "tier": tier(c),
         "domain": domain,
         "brand": clean_brand(l.get("brand"), domain),
-        "email": l.get("contact_email", ""),
+        "email": email,
+        "email_source": "affiliate page" if aff else ("contact page" if l.get("contact_email") else ""),
+        "affiliate_url": (aff or {}).get("affiliateUrl", ""),
+        "affiliate_platform": (aff or {}).get("platform", ""),
         "operator": op,
         "licence": l.get("licence", ""),
         "expiry": l.get("expiry", ""),
@@ -100,7 +115,8 @@ for domain, c in census.items():
 rows.sort(key=lambda r: (r["tier"], r["email"] == "", -len(r["siblings"])))
 
 with (R / "outreach-list.csv").open("w", newline="", encoding="utf8") as f:
-    cols = ["tier", "domain", "brand", "email", "operator", "licence", "expiry",
+    cols = ["tier", "domain", "brand", "email", "email_source", "affiliate_url",
+            "affiliate_platform", "operator", "licence", "expiry",
             "vendors", "regulator_seal", "provider_count"]
     w = csv.DictWriter(f, fieldnames=cols + ["sibling_brands", "status", "contacted_on"])
     w.writeheader()
