@@ -107,7 +107,14 @@ export async function readTrustSignals(browser, domain) {
     await page.goto(`https://${domain}`, { waitUntil: "domcontentloaded", timeout: 30000 });
     await page.waitForTimeout(4000);
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
-    await page.waitForTimeout(3500);
+
+    // Seal widgets are iframes below the fold and load last. A fixed wait made
+    // this measurably flaky — spinsamurai reported "no trust signals" on one run
+    // in three, which is how a census silently loses a few percent every time it
+    // is regenerated. Wait for the network to settle, with a ceiling so a site
+    // that polls forever cannot stall the sweep.
+    await page.waitForLoadState("networkidle", { timeout: 12000 }).catch(() => {});
+    await page.waitForTimeout(2500);
 
     const raw = await page.evaluate(() => {
       const items = [];
