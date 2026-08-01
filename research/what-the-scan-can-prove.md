@@ -50,43 +50,68 @@ survive — the entire product is that our word means something.
 
 ## Market size — measured, 470 sites
 
-> **Corrected 31 July 2026.** The first pass reported 2.5% paying and 84% with
-> no trust signal. Both were wrong. It detected seals by third-party *hostname*,
-> so any badge an operator self-hosts — the normal deployment — was invisible.
-> Re-measured with a detector validated against known cases first. Numbers below
-> are the corrected ones; the originals are kept in the table so the size of the
-> error stays visible.
+> **Corrected twice.** Each fix to the method raised the number, which is worth
+> knowing before trusting the current one.
+>
+> 1. **Hostname only — 2.5%.** Detected seals by third-party host, so any badge
+>    an operator self-hosts (the normal deployment) was invisible.
+> 2. **Reading the DOM — 5.7%.** Caught self-hosted badges, but a site that
+>    blocked us returned "no signals" and was counted as a casino displaying
+>    nothing.
+> 3. **Excluding blocked pages — 9.9%.** 95 of 489 sites refuse this host
+>    outright. They are now reported as unmeasured rather than as absences.
+>
+> The direction is consistent: every correction found more badges. **95 sites
+> remain unmeasured**, so the true figure is likelier above 9.9% than below it.
 
-| | Corrected | First pass | |
-| :--- | ---: | ---: | :--- |
-| Paying for **certification** (lab or seal vendor) | **27 (5.7%)** | 12 (2.5%) | ×2.3 |
-| Carrying a review-platform badge (often free) | 16 (3.4%) | — | |
-| Displaying the regulator's licence seal | **263 (56%)** | 60 (13%) | ×4.4 |
-| Responsible-gambling logos | 144 (31%) | — | |
-| **Listing their game providers on-site** | **197 (42%)** | — | |
-| No trust signal of any kind | 145 (31%) | 394 (84%) | ⅓ |
+Measured from the homelab, 374 sites read, 95 blocked, of 489 attempted.
+Percentages are of sites actually read.
 
-Three things follow, and they are not what the first pass suggested.
+| | Current | Was (DOM) | Was (host) |
+| :--- | ---: | ---: | ---: |
+| Paying for **certification** (lab or seal vendor) | **37 (9.9%)** | 27 (5.7%) | 12 (2.5%) |
+| Carrying a review-platform badge (often free) | 17 (4.5%) | 16 (3.4%) | — |
+| Displaying the regulator's licence seal | **254 (67.9%)** | 263 (56%) | 60 (13%) |
+| Responsible-gambling logos | 144 (38.5%) | 144 (31%) | — |
+| **Listing their game providers on-site** | **198 (52.9%)** | 197 (42%) | — |
+| No trust signal of any kind | **53** | 145 | 394 |
+| Blocked, therefore unknown | **95** | counted as "no signal" | counted as "no signal" |
 
-**Displaying a badge is normal, not rare.** 56% show the regulator's seal and
-only 31% show nothing at all. The behaviour the offer depends on is already
-routine — we are asking for something operators visibly already do.
+**Which host you scan from changes the block count**, not the market. The
+homelab and the workstation are refused by different sites, so the blocked set
+is a property of our network position. Residential proxies would recover most
+of it.
 
-**Paying is a real but minority market.** 5.7% is not the near-zero the first
-pass implied, but it is still a minority, so a badge subscription remains a hard
-primary revenue line in this segment. The free founding cohort stays right; the
-reasoning is now "most don't pay" rather than "nobody pays".
+Three things follow, and none of them is what the first pass suggested.
+
+**Displaying a badge is normal, not rare.** 68% show the regulator's seal and
+only 14% of readable sites show nothing at all. The behaviour the offer depends
+on is already routine — we are asking operators to do something they visibly
+already do.
+
+**Paying is a real market, not a rounding error.** At 9.9% of readable sites,
+roughly one operator in ten already buys this category. Across the 3,549 domains
+in the Anjouan register alone that implies a few hundred businesses with a
+demonstrated willingness to pay for exactly what we sell. **The earlier
+conclusion that badge subscriptions cannot be a revenue line was an artefact of
+a broken measurement, and should not be repeated.** It remains a minority of the
+market, which is an argument about sizing, not about viability.
 
 **42% list their game providers on their own site.** This partly recovers what
 the traffic analysis could not do. We cannot see which provider serves a game
 from the network, but nearly half of operators *publish the claim* — and a
 published claim is something that can be recorded, dated, and checked.
 
-Vendor concentration among the 27 payers: `gamecheck` (9), `licenseseal` (6),
-`gaminglabs` (6), `gli` (4), `dlagglobal` (3). Both leaders skew heavily
-Turkish-facing, and several names cluster into single groups — narnia*/narnium*
-are one operator, as are most of the licenseseal set. Twenty-seven names is
-realistically closer to a dozen conversations.
+Vendor concentration among the payers: `askgamblers` (11), `gamecheck` (9),
+`trustpilot` (9), `casinoguru` (8), `gaminglabs` (6), `licenseseal` (6),
+`gli` (4). Certification labs and review platforms are different products —
+`gamecheck` and `licenseseal` skew heavily Turkish-facing, while the review
+badges are largely free listings and should not be read as paid certification.
+
+Several names collapse into single groups: narnia*/narnium* are one operator, as
+are most of the `licenseseal` set. The payer list is fewer conversations than it
+is rows, which is an advantage rather than a problem — see the operator-level
+list in `outreach-channels.md`.
 
 Full per-site output: `research/seal-census.json`, regenerate with
 `node crawler/seal-census.mjs`.
