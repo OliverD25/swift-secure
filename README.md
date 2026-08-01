@@ -60,6 +60,33 @@ Run `./publish.sh` instead of `./deploy.sh` when the session is already **on**
 the home server (phone-driven work). Same target, but it builds in place rather
 than copying 4,400 files across the network, so it does not need this PC awake.
 
+## Working on the homelab
+
+The full toolchain runs on `rde@192.168.88.166` at `~/projects/swift-secure` —
+Node 22, Python 3.12, Playwright with Chromium already installed. Everything
+below works there unchanged; paths resolve from each script's own location
+rather than a drive letter, so nothing needs editing per machine.
+
+```bash
+npm run build && npx astro check          # site
+python3 research/scripts/test_drafts.py   # 1,275 assertions on the outreach drafts
+python3 research/scripts/test_directory_seo.py   # indexing + consent, reads dist/
+node crawler/seal-census.mjs              # ~15 min, rewrites research/seal-census.json
+./publish.sh                              # build and swap into the live docroot
+```
+
+**Scan results depend on which machine you run them from.** 95 of 489 sites
+refuse the homelab outright, and the workstation is refused by a different set.
+Numbers move between hosts because our network position moved, not because the
+market did — so don't compare a homelab census against a workstation one and
+read the difference as a trend.
+
+Long sweeps need detaching properly, or they die with the SSH session:
+
+```bash
+setsid nohup node crawler/seal-census.mjs > research/seal-census.log 2>&1 < /dev/null &
+```
+
 `git push` triggers `.github/workflows/deploy.yml`, which builds with
 `SITE`/`BASE_PATH` set so links resolve under the `/swift-secure/`
 sub-path Pages serves from. Local builds and `./deploy.sh` leave those unset
