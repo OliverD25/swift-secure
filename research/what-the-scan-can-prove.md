@@ -158,3 +158,42 @@ node market-scan.mjs              # full sweep of research/prospects-live.csv
   geo-blocking, not offline, and are excluded from every number above.
 - Whether a logged-in session would expose provider hosts. Plausible, but it
   requires real accounts and deposits, which is a different kind of undertaking.
+
+## Platform map, and a fraud check that came back clean
+
+`platform-map.csv`, built from hosts the market scan already captured — no extra
+crawling. 67 of 470 sites (14%) resolve to a named platform:
+
+| Brands | Confidence | Platform |
+| ---: | :--- | :--- |
+| 35 | named | BetConstruct |
+| 13 | inferred | Slotegrator |
+| 8 | inferred | A8R launcher |
+| 5 | inferred | s7s |
+| 4 | named | SoftSwiss |
+
+*Named* means the host says so outright (`cmsbetconstruct.com`); *inferred*
+means the signature is consistent but the brand is not in the hostname
+(`traincdn.com` for Slotegrator). The distinction is worth keeping — one is a
+fact and the other is a reading, and a sales call will find the difference.
+
+**One platform deal reaches a client base that would take months to approach
+one brand at a time.** BetConstruct alone is 35 of our indexed brands, which is
+a materially better opening than a cold pitch.
+
+### Shared seal IDs — checked, nothing wrong
+
+Anjouan seals load from a per-certificate UUID host, and six sites shared one
+ID. If a single seal ID appeared across *unrelated* operators, that would be an
+operator displaying somebody else's certificate — exactly the fraud this product
+should catch.
+
+Checked all ten shared IDs. **Every one belongs to a single operator** —
+partybet.ai/.bot/.casino/.fun/.social/.win are one company, and so on down the
+list. No misuse found.
+
+Recording the negative deliberately: the check now exists and is defined, so a
+future scan that *does* find a seal shared across operators is immediately
+meaningful rather than a curiosity someone has to re-derive. It also gives an
+operator-clustering signal that is independent of the register's own company
+field, which is a useful cross-check on data we otherwise take on trust.
