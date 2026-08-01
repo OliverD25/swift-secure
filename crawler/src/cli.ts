@@ -3,6 +3,7 @@ import { chromium } from "playwright";
 import { scanCasino } from "./scan.ts";
 import { loadAnjouanRegister } from "./checks/licence.ts";
 import { readFooterLicence } from "./checks/footer.ts";
+import { verifyCuracaoLicence } from "./checks/curacao.ts";
 import { classify } from "./signatures.ts";
 import { loadProxies } from "./proxies.ts";
 
@@ -16,6 +17,7 @@ Swift Secure verification crawler
   npm run licence -- <domain> [...]            Licence register lookup only (fast, no proxy needed)
   npm run learn -- <domain>                    Dump unclassified hosts, to grow the signature DB
   npm run footer -- <domain> [...]             Read what the site itself claims about its licence
+  npm run curacao -- <OGL/.../...> [domain]    Verify a Curacao licence, and that it covers that domain
 
 Environment:
   PROXIES     comma/newline separated proxy URLs, e.g.
@@ -140,9 +142,33 @@ ${domain}`);
   }
 }
 
+
+async function cmdCuracao(args: string[]) {
+  const [number, domain] = args;
+  if (!number) usage();
+  const browser = await chromium.launch({ headless: true });
+  try {
+    const r = await verifyCuracaoLicence(browser, number, domain);
+    console.log(`
+${number}${domain ? ` @ ${domain}` : ""}`);
+    if (r.found) {
+      console.log(`  ${r.type} licence — ${r.company} (company no. ${r.companyNumber}), licensed since ${r.licensedSince}`);
+      console.log(`  Certificate authorises: ${r.certifiedDomain}`);
+      // The domain line is the finding worth shouting about; a genuine number on
+      // a site it does not cover is the fraud this check exists to catch.
+      if (r.domainMatches === false) console.log(`  *** DOMAIN MISMATCH ***`);
+    }
+    console.log(`  ${r.note}`);
+    if (r.sourceUrl) console.log(`  source: ${r.sourceUrl}`);
+  } finally {
+    await browser.close();
+  }
+}
+
 switch (command) {
   case "scan": await cmdScan(args); break;
   case "footer": await cmdFooter(args); break;
+  case "curacao": await cmdCuracao(args); break;
   case "licence": await cmdLicence(args); break;
   case "learn": await cmdLearn(args); break;
   default: usage();
