@@ -60,16 +60,28 @@ survive — the entire product is that our word means something.
 >    nothing.
 > 3. **Excluding blocked pages — 9.9%.** 95 of 489 sites refuse this host
 >    outright. They are now reported as unmeasured rather than as absences.
+> 4. **Checking what each vendor sells — 4.8%.** Two of the biggest "vendors"
+>    turned out to be a regulator and a licensing agent, so their seals ship
+>    with the licence and are not purchases at all.
 >
-> The direction is consistent: every correction found more badges. **95 sites
-> remain unmeasured**, so the true figure is likelier above 9.9% than below it.
+> The first three corrections all raised the number and the fourth cut it in
+> half, which is the useful lesson: the earlier passes were inferring a business
+> model from a hostname. **95 sites remain unmeasured** and would move it again.
 
 Measured from the homelab, 374 sites read, 95 blocked, of 489 attempted.
 Percentages are of sites actually read.
 
+> **Corrected a third time, and this is the one to use.** Visiting the vendors
+> showed that two of them do not sell certification at all: `licenseseal.online`
+> is the Anjouan regulator's own site, and `dlagglobal` is Tobique's licensing
+> agent. Nine sites were counted as a competitor's paying customers while
+> displaying a seal that came with their licence. **Paid lab certification is
+> 4.8%** — see `competitors.md` for what each vendor actually sells.
+
 | | Current | Was (DOM) | Was (host) |
 | :--- | ---: | ---: | ---: |
-| Paying for **certification** (lab or seal vendor) | **37 (9.9%)** | 27 (5.7%) | 12 (2.5%) |
+| **Paying for lab certification** (gamecheck, gaminglabs, gli, quinel, bmm) | **18 (4.8%)** | 27 (5.7%) | 12 (2.5%) |
+| Licence seal from a regulator or licensing agent (free with the licence) | 7 (1.9%) | counted as paid | counted as paid |
 | Carrying a review-platform badge (often free) | 17 (4.5%) | 16 (3.4%) | — |
 | Displaying the regulator's licence seal | **254 (67.9%)** | 263 (56%) | 60 (13%) |
 | Responsible-gambling logos | 144 (38.5%) | 144 (31%) | — |
@@ -89,24 +101,25 @@ only 14% of readable sites show nothing at all. The behaviour the offer depends
 on is already routine — we are asking operators to do something they visibly
 already do.
 
-**Paying is a real market, not a rounding error.** At 9.9% of readable sites,
-roughly one operator in ten already buys this category. Across the 3,549 domains
-in the Anjouan register alone that implies a few hundred businesses with a
-demonstrated willingness to pay for exactly what we sell. **The earlier
-conclusion that badge subscriptions cannot be a revenue line was an artefact of
-a broken measurement, and should not be repeated.** It remains a minority of the
-market, which is an argument about sizing, not about viability.
+**Paying is a real market, but a thin one.** At 4.8%, roughly one operator in
+twenty buys quality certification. Across the 3,549 Anjouan domains that is
+still a few hundred businesses with demonstrated willingness to pay, so the
+earlier flat conclusion that badge subscriptions *cannot* be a revenue line was
+an artefact of a broken measurement and should not be repeated. But neither
+should the 9.9% that briefly replaced it — that one counted regulator seals as
+purchases. One in twenty is the honest figure to plan against.
 
 **42% list their game providers on their own site.** This partly recovers what
 the traffic analysis could not do. We cannot see which provider serves a game
 from the network, but nearly half of operators *publish the claim* — and a
 published claim is something that can be recorded, dated, and checked.
 
-Vendor concentration among the payers: `askgamblers` (11), `gamecheck` (9),
-`trustpilot` (9), `casinoguru` (8), `gaminglabs` (6), `licenseseal` (6),
-`gli` (4). Certification labs and review platforms are different products —
-`gamecheck` and `licenseseal` skew heavily Turkish-facing, while the review
-badges are largely free listings and should not be read as paid certification.
+Badge sources by reach, with the categories kept apart because they are
+different products: **paid labs** — `gamecheck` (9), `gaminglabs` (6), `gli` (4),
+`quinel` (1), `bmm` (1); **free review listings** — `askgamblers` (11),
+`trustpilot` (9), `casinoguru` (8); **licence seals that ship with the licence**
+— `licenseseal` (6, the Anjouan regulator), `dlagglobal` (1, Tobique's agent).
+Only the first group is a competitor. `gamecheck` skews heavily Turkish-facing.
 
 Several names collapse into single groups: narnia*/narnium* are one operator, as
 are most of the `licenseseal` set. The payer list is fewer conversations than it
