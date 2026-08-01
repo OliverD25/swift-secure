@@ -16,6 +16,12 @@
 import { chromium } from "playwright";
 import { readFileSync, writeFileSync } from "node:fs";
 
+// Resolve against this file, not the shell's working directory: the scripts are
+// run from the repo root as often as from crawler/, and a relative path that
+// depends on where you happened to be standing fails on the other machine.
+const RESEARCH = new URL("../research/", import.meta.url);
+
+
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
@@ -28,7 +34,7 @@ const UNBRANDED =
 const NOISE =
   /google|doubleclick|facebook|fbcdn|hotjar|onesignal|intercom|cloudflareinsights|sentry\.io|customer\.io|gstatic|jsdelivr|jquery|bootstrapcdn|cookiebot|usercentrics|zendesk|livechatinc|tawk|crisp|gist\.build|clarity\.ms|yandex|tiktok|snapchat|bing|criteo|twitter|linkedin|contentsquare|talk-me|cloudflare\.com|unpkg|fontawesome|typekit|recaptcha/i;
 
-const rows = readFileSync("../research/prospects-live.csv", "utf8").trim().split(/\r?\n/);
+const rows = readFileSync(new URL("prospects-live.csv", RESEARCH), "utf8").trim().split(/\r?\n/);
 const head = rows[0].split(",");
 const di = head.indexOf("domain");
 const oi = head.indexOf("operator");
@@ -89,7 +95,7 @@ await Promise.all(
 );
 await browser.close();
 
-writeFileSync("../research/market-scan.json", JSON.stringify(results, null, 1), "utf8");
+writeFileSync(new URL("market-scan.json", RESEARCH), JSON.stringify(results, null, 1), "utf8");
 
 const ok = results.filter((r) => r.ok);
 const freq = new Map();

@@ -8,7 +8,7 @@ import csv, pathlib, re, socket, ssl, sys, html
 import concurrent.futures as cf
 import urllib.request, urllib.error
 
-ROOT = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 SRC = ROOT / "research" / "prospects.csv"
 DEST = ROOT / "research" / "prospects-live.csv"
 

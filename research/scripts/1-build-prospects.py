@@ -1,7 +1,7 @@
 import json, re, pathlib, subprocess, sys, csv
 from collections import Counter
 
-ROOT = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 
 dump = ROOT / "crawler" / "_dump.mjs"
 dump.write_text('''import { chromium } from "playwright";

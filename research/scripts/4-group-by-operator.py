@@ -8,7 +8,7 @@ delivers every one of its brands.
 import csv, pathlib, re
 from collections import defaultdict
 
-ROOT = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 rows = list(csv.DictReader((ROOT / "research/prospects-live.csv").open(encoding="utf8")))
 
 groups = defaultdict(list)

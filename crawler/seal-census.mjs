@@ -12,7 +12,13 @@ import { chromium } from "playwright";
 import { readFileSync, writeFileSync } from "node:fs";
 import { readTrustSignals } from "./trust-signals.mjs";
 
-const lines = readFileSync("../research/prospects-live.csv", "utf8").trim().split(/\r?\n/);
+// Resolve against this file, not the shell's working directory: the scripts are
+// run from the repo root as often as from crawler/, and a relative path that
+// depends on where you happened to be standing fails on the other machine.
+const RESEARCH = new URL("../research/", import.meta.url);
+
+
+const lines = readFileSync(new URL("prospects-live.csv", RESEARCH), "utf8").trim().split(/\r?\n/);
 const di = lines[0].split(",").indexOf("domain");
 const domains = lines.slice(1).map((l) => l.split(",")[di]).filter((d) => d && d.includes("."));
 
@@ -39,7 +45,7 @@ await Promise.all(
 );
 await browser.close();
 
-writeFileSync("../research/seal-census.json", JSON.stringify(results, null, 1), "utf8");
+writeFileSync(new URL("seal-census.json", RESEARCH), JSON.stringify(results, null, 1), "utf8");
 
 const ok = results.filter((r) => r.ok);
 const paid = ok.filter((r) => r.paidVendors?.length);

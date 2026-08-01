@@ -15,7 +15,7 @@ Tiers are ordered by how little has to be argued:
 import csv, json, pathlib, re
 from collections import defaultdict
 
-ROOT = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 R = ROOT / "research"
 
 census = {c["domain"]: c for c in json.loads((R / "seal-census.json").read_text(encoding="utf8")) if c.get("ok")}

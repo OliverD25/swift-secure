@@ -9,7 +9,7 @@ Runs against dist/, so it tests what actually ships rather than the source.
 """
 import pathlib, re, sys, gzip
 
-ROOT = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
 SRC = (ROOT / "src/data/casinos.ts").read_text(encoding="utf8")
 

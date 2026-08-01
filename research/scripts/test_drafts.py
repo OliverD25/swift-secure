@@ -7,7 +7,8 @@ mail-merge and destroys the one thing the message has going for it.
 """
 import csv, json, pathlib, re, sys
 
-R = pathlib.Path("E:/codespace/_claude_code/swift-secured-badge/research")
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+R = ROOT / "research"
 drafts = (R / "outreach-drafts.md").read_text(encoding="utf8")
 rows = list(csv.DictReader((R / "outreach-list.csv").open(encoding="utf8")))
 census = {c["domain"]: c for c in json.loads((R / "seal-census.json").read_text(encoding="utf8")) if c.get("ok")}
