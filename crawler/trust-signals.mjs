@@ -84,9 +84,40 @@ function providerNames(text) {
 const VENDOR_HOST =
   /dlagglobal|licenseseal|gamecheck\.cloud|ecogra|itechlabs|gaminglabs|bmm-?testlabs|quinel|trisigma|askgamblers|trustpilot|gamcare|gambleaware|cert\.cga\.cw|certcga|cgcb\.info|anjouangaming|antillephone|gaming-?curacao/i;
 
-export async function readTrustSignals(browser, domain) {
-  const out = { domain, ok: false, blocked: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [] };
-  const ctx = await browser.newContext({ userAgent: UA, locale: "en-GB", ignoreHTTPSErrors: true });
+/**
+ * Browser identity that matches itself.
+ *
+ * Most refusals here are bot detection rather than geography, and the cheapest
+ * tell is a context that contradicts itself: a UK locale on a German IP, a UTC
+ * clock, no `Accept-Language`, and `navigator.webdriver` set true. Passing a
+ * region makes the locale, timezone and headers agree with the exit IP.
+ */
+const REGIONS = {
+  uk: { locale: "en-GB", timezoneId: "Europe/London", lang: "en-GB,en;q=0.9" },
+  de: { locale: "de-DE", timezoneId: "Europe/Berlin", lang: "de-DE,de;q=0.9,en;q=0.8" },
+  ca: { locale: "en-CA", timezoneId: "America/Toronto", lang: "en-CA,en;q=0.9" },
+  tr: { locale: "tr-TR", timezoneId: "Europe/Istanbul", lang: "tr-TR,tr;q=0.9,en;q=0.8" },
+};
+
+export async function readTrustSignals(browser, domain, opts = {}) {
+  const region = REGIONS[opts.region] ?? REGIONS.uk;
+  const out = { domain, ok: false, blocked: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [], region: opts.region ?? "uk" };
+  const ctx = await browser.newContext({
+    userAgent: UA,
+    locale: region.locale,
+    timezoneId: region.timezoneId,
+    ignoreHTTPSErrors: true,
+    viewport: { width: 1440, height: 900 },
+    extraHTTPHeaders: { "Accept-Language": region.lang },
+  });
+  // Playwright leaves navigator.webdriver true and no plugins array, both of
+  // which are checked by the off-the-shelf detection these sites deploy.
+  await ctx.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+    Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3, 4, 5] });
+    // eslint-disable-next-line no-undef
+    window.chrome = window.chrome ?? { runtime: {} };
+  });
   const page = await ctx.newPage();
   const vendorHosts = new Set();
   const noteUrl = (u) => {
@@ -104,7 +135,8 @@ export async function readTrustSignals(browser, domain) {
     return t === "font" || t === "media" ? r.abort() : r.continue();
   });
   try {
-    await page.goto(`https://${domain}`, { waitUntil: "domcontentloaded", timeout: 30000 });
+    const response = await page.goto(`https://${domain}`, { waitUntil: "domcontentloaded", timeout: 30000 });
+    const status = response?.status() ?? 0;
     await page.waitForTimeout(4000);
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
 
@@ -119,15 +151,26 @@ export async function readTrustSignals(browser, domain) {
     // between "has a seal" and "has nothing" on the same site. Counting a block
     // as an absence is the same error as reading "not in the register" as "not
     // licensed": we did not look, so we know nothing.
-    const pageTitle = await page.title().catch(() => "");
+    // Judge by HTTP status and the page title only. Matching loose words against
+    // body text flagged LevelUp, WG Casino and Lucky Spy as blocked when they had
+    // loaded perfectly well — a live casino page mentions "blocked" or "403"
+    // somewhere often enough. False blocks are not harmless: they leave the
+    // denominator, which inflates every percentage computed from it.
+    const pageTitle = (await page.title().catch(() => "")).trim();
     const bodyText = await page.evaluate(() => document.body?.innerText ?? "").catch(() => "");
-    const blocked =
-      /forbidden|access denied|not available in your (country|region)|403|blocked|use your vpn|geo.?restrict/i.test(
-        `${pageTitle} ${bodyText.slice(0, 400)}`,
-      ) || bodyText.trim().length < 200;
-    if (blocked) {
+    const titleBlocked =
+      /forbidden|access denied|^403|\b403\b|attention required|just a moment|checking your browser|cloudflare access|temporary auth|not available in your (country|region)/i.test(
+        pageTitle,
+      );
+    if (status >= 400 || titleBlocked) {
       out.blocked = true;
-      out.error = `blocked or unavailable from this host (title: ${pageTitle.slice(0, 60)})`;
+      out.error = `HTTP ${status || "?"} — ${pageTitle.slice(0, 60) || "no title"}`;
+      return out;
+    }
+    // Nothing rendered at all: not a block, but nothing to read either.
+    if (bodyText.trim().length < 120) {
+      out.blocked = true;
+      out.error = `page rendered empty (HTTP ${status})`;
       return out;
     }
 
