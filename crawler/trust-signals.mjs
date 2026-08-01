@@ -85,7 +85,7 @@ const VENDOR_HOST =
   /dlagglobal|licenseseal|gamecheck\.cloud|ecogra|itechlabs|gaminglabs|bmm-?testlabs|quinel|trisigma|askgamblers|trustpilot|gamcare|gambleaware|cert\.cga\.cw|certcga|cgcb\.info|anjouangaming|antillephone|gaming-?curacao/i;
 
 export async function readTrustSignals(browser, domain) {
-  const out = { domain, ok: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [] };
+  const out = { domain, ok: false, blocked: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [] };
   const ctx = await browser.newContext({ userAgent: UA, locale: "en-GB", ignoreHTTPSErrors: true });
   const page = await ctx.newPage();
   const vendorHosts = new Set();
@@ -108,13 +108,28 @@ export async function readTrustSignals(browser, domain) {
     await page.waitForTimeout(4000);
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
 
-    // Seal widgets are iframes below the fold and load last. A fixed wait made
-    // this measurably flaky — spinsamurai reported "no trust signals" on one run
-    // in three, which is how a census silently loses a few percent every time it
-    // is regenerated. Wait for the network to settle, with a ceiling so a site
-    // that polls forever cannot stall the sweep.
+    // Seal widgets are iframes below the fold and load last, so settle before
+    // reading. Capped, because a site that polls forever would stall the sweep.
     await page.waitForLoadState("networkidle", { timeout: 12000 }).catch(() => {});
     await page.waitForTimeout(2500);
+
+    // A blocked page must not be reported as a page with no trust signals.
+    // spinsamurai serves the homelab a "Forbidden page" and the badge sometimes
+    // races through before the block lands — that produced results alternating
+    // between "has a seal" and "has nothing" on the same site. Counting a block
+    // as an absence is the same error as reading "not in the register" as "not
+    // licensed": we did not look, so we know nothing.
+    const pageTitle = await page.title().catch(() => "");
+    const bodyText = await page.evaluate(() => document.body?.innerText ?? "").catch(() => "");
+    const blocked =
+      /forbidden|access denied|not available in your (country|region)|403|blocked|use your vpn|geo.?restrict/i.test(
+        `${pageTitle} ${bodyText.slice(0, 400)}`,
+      ) || bodyText.trim().length < 200;
+    if (blocked) {
+      out.blocked = true;
+      out.error = `blocked or unavailable from this host (title: ${pageTitle.slice(0, 60)})`;
+      return out;
+    }
 
     const raw = await page.evaluate(() => {
       const items = [];

@@ -48,11 +48,15 @@ await browser.close();
 writeFileSync(new URL("seal-census.json", RESEARCH), JSON.stringify(results, null, 1), "utf8");
 
 const ok = results.filter((r) => r.ok);
+const blocked = results.filter((r) => r.blocked);
 const paid = ok.filter((r) => r.paidVendors?.length);
 const has = (r, c) => (r.signals?.[c] ?? 0) > 0;
 
+// Percentages are of sites we could actually read. Dividing by everything we
+// attempted would quietly fold blocked sites into "has no trust signal", which
+// is a claim we have no evidence for.
 const pct = (n) => `${((n / ok.length) * 100).toFixed(1)}%`;
-console.log(`\n=== seal census: ${ok.length} of ${results.length} sites read ===`);
+console.log(`\n=== seal census: ${ok.length} read, ${blocked.length} blocked, of ${results.length} attempted ===`);
 console.log(`  paying a commercial seal vendor : ${paid.length}  (${pct(paid.length)})`);
 console.log(`  regulator licence seal          : ${ok.filter((r) => has(r, "regulator")).length}  (${pct(ok.filter((r) => has(r, "regulator")).length)})`);
 console.log(`  responsible-gambling logos      : ${ok.filter((r) => has(r, "responsible")).length}  (${pct(ok.filter((r) => has(r, "responsible")).length)})`);
