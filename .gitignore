@@ -34,3 +34,6 @@ crawler/reports/
 # proxy credentials — never commit
 crawler/proxies.txt
 .env.proxies
+
+# partial sweep output — a limited run, never the canonical dataset
+research/*.partial.json

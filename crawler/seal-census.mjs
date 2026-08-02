@@ -54,7 +54,16 @@ await Promise.all(
 );
 await browser.close();
 
-writeFileSync(new URL("seal-census.json", RESEARCH), JSON.stringify(results, null, 1), "utf8");
+
+// A limited run must never overwrite the full dataset. Both are written by the
+// same line of code to the same fixed path, so a three-site smoke test used to
+// silently destroy a 489-site sweep that took hours — which is exactly what
+// happened. Partial runs now write beside the canonical file instead.
+const isPartial = targets.length < domains.length;
+const OUT_NAME = isPartial ? "seal-census.partial.json" : "seal-census.json";
+if (isPartial) console.log(`Partial run (${targets.length} of ${ domains.length }) -> ${OUT_NAME}; the full ${"seal-census"}.json is left alone.`);
+
+writeFileSync(new URL(OUT_NAME, RESEARCH), JSON.stringify(results, null, 1), "utf8");
 
 const ok = results.filter((r) => r.ok);
 const blocked = results.filter((r) => r.blocked);
