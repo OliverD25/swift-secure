@@ -91,8 +91,9 @@ Percentages are of sites actually read.
 
 **Which host you scan from changes the block count**, not the market. The
 homelab and the workstation are refused by different sites, so the blocked set
-is a property of our network position. Residential proxies would recover most
-of it.
+is partly a property of our network position. Residential proxies were bought
+and measured — they recover **about a quarter** of the blocked set, not most of
+it. See "What the proxies actually recovered" below before planning around this.
 
 Three things follow, and none of them is what the first pass suggested.
 
