@@ -16,19 +16,37 @@
  * Usage: node cloaking.mjs <domain> [more...]   (PROXY_FILE / PROXIES required)
  */
 import { chromium } from "playwright";
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync } from "node:fs";
 import { readTrustSignals } from "./trust-signals.mjs";
 import { loadProxyPool, describePool } from "./proxy-pool.mjs";
 
 const RESEARCH = new URL("../research/", import.meta.url);
 
-const domains = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const args = process.argv.slice(2);
+const flag = (name) => args.find((a) => a.startsWith(`--${name}=`))?.split("=")[1];
+
+// Proxy traffic is metered and every region multiplies the bill, so the two
+// inputs that decide the cost are explicit rather than implied.
+const fromFile = flag("from");
+const domains = fromFile
+  ? readFileSync(fromFile, "utf8").trim().split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
+  : args.filter((a) => !a.startsWith("--"));
+
 if (!domains.length) {
-  console.error("usage: node cloaking.mjs <domain> [more...]");
+  console.error("usage: node cloaking.mjs <domain>... | --from=list.txt  [--regions=de,ca]");
   process.exit(1);
 }
 
-const pool = loadProxyPool();
+const wanted = flag("regions")?.split(",").map((s) => s.trim());
+let pool = loadProxyPool();
+if (wanted) {
+  pool = pool.filter((p) => wanted.includes(p.region));
+  const missing = wanted.filter((w) => !pool.some((p) => p.region === w));
+  if (missing.length) {
+    console.error(`No proxy configured for: ${missing.join(", ")}`);
+    process.exit(1);
+  }
+}
 if (pool.length < 2) {
   console.error("Cloaking needs at least two regions to compare. Configure PROXY_FILE.");
   process.exit(1);
@@ -118,7 +136,13 @@ for (const domain of domains) {
 }
 
 await browser.close();
-writeFileSync(new URL("cloaking-report.json", RESEARCH), JSON.stringify(report, null, 1), "utf8");
+
+// Same guard as the other sweeps: a narrow run must not overwrite a broad one.
+// A partial file that looks like the full result is how an expensive dataset
+// gets silently replaced by a smoke test.
+const OUT = domains.length < 50 ? "cloaking-report.partial.json" : "cloaking-report.json";
+if (OUT.includes("partial")) console.log(`Small run (${domains.length} sites) -> ${OUT}; the full report is untouched.`);
+writeFileSync(new URL(OUT, RESEARCH), JSON.stringify(report, null, 1), "utf8");
 
 // startsWith, not equality: the confirmed verdict carries a suffix naming the
 // regions, and an exact match silently counted every confirmed finding as zero.
