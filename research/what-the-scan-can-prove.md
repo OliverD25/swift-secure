@@ -210,3 +210,41 @@ future scan that *does* find a seal shared across operators is immediately
 meaningful rather than a curiosity someone has to re-derive. It also gives an
 operator-clustering signal that is independent of the register's own company
 field, which is a useful cross-check on data we otherwise take on trust.
+
+## What the proxies actually recovered — 24%, not most
+
+Residential proxies bought and measured 2 August 2026: IPRoyal, 2GB, four exit
+countries (tr, de, ca, gb). All four verified to exit where asked — Istanbul,
+Kaiserslautern, Thunder Bay, Poplar.
+
+Retried 25 previously-blocked sites through them. **Six recovered, nineteen did
+not.** The six were worth having — levelupcasino turned out to carry both
+`askgamblers` and `dlagglobal`, 21bit carries `dlagglobal`, spinsamurai carries
+`askgamblers` — but 24% is a long way from what the vendor's own demo suggested.
+
+**The earlier claim that these blocks are geographic was too broad.** It rested
+on one favourable test, run by the seller, on a site that happens to be in the
+recoverable quarter. A quarter of them are geographic. The rest are not.
+
+### More countries will not help
+
+The stubborn ones cluster by name — spinathlon, daytonaspin, unlimluck,
+bananzia, luckycrew, spinpolo, hahaspin, winwinter, heavybet, zombillion — and
+all return the same "403 Access Forbidden". Tested one of them from eight
+countries (us, br, nl, fr, es, pl, it, ru): **HTTP 200 with an identical 2,106
+byte body every time.** Same refusal page regardless of origin.
+
+So this cluster blocks the residential proxy network itself, not a region.
+Buying more geographies buys nothing here.
+
+### Revised expectation
+
+At 24%, the 95 blocked sites yield roughly **23 additional measurable casinos**,
+not the ~250 estimated before the block-detection fix. Two separate errors
+compounded in that earlier figure: the blocked count was 290 before blocked
+pages were distinguished from empty ones, and recovery was assumed near-total.
+
+The purchase still earns its keep, for a reason that was secondary at the time:
+the crawler can now fetch the same casino from four countries, which is what
+makes cloaking detection possible at all. That is a product capability, not a
+research convenience.
