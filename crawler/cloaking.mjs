@@ -137,12 +137,30 @@ for (const domain of domains) {
 
 await browser.close();
 
-// Same guard as the other sweeps: a narrow run must not overwrite a broad one.
-// A partial file that looks like the full result is how an expensive dataset
-// gets silently replaced by a smoke test.
-const OUT = domains.length < 50 ? "cloaking-report.partial.json" : "cloaking-report.json";
-if (OUT.includes("partial")) console.log(`Small run (${domains.length} sites) -> ${OUT}; the full report is untouched.`);
-writeFileSync(new URL(OUT, RESEARCH), JSON.stringify(report, null, 1), "utf8");
+/**
+ * Merge into the existing report rather than replacing it.
+ *
+ * A size threshold was the wrong guard and it failed the first time it mattered:
+ * runs of 60 and 70 sites both counted as "full", so the second silently erased
+ * the first. Only the git commit saved it.
+ *
+ * The report is an accumulating record of sites compared over time, so the
+ * correct operation is a merge keyed by domain — a re-check updates that
+ * domain's entry and leaves every other one alone. There is no run size at
+ * which discarding previous work is the right behaviour.
+ */
+const OUT = new URL("cloaking-report.json", RESEARCH);
+let existing = [];
+try {
+  existing = JSON.parse(readFileSync(OUT, "utf8"));
+} catch {
+  /* first run */
+}
+const merged = new Map(existing.map((r) => [r.domain, r]));
+for (const r of report) merged.set(r.domain, r);
+const all = [...merged.values()];
+writeFileSync(OUT, JSON.stringify(all, null, 1), "utf8");
+console.log(`  report now holds ${all.length} sites (${report.length} from this run, ${all.length - report.length} kept from previous)`);
 
 // startsWith, not equality: the confirmed verdict carries a suffix naming the
 // regions, and an exact match silently counted every confirmed finding as zero.

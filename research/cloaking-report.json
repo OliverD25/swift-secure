@@ -1562,5 +1562,1826 @@
     "vendors": []
    }
   ]
+ },
+ {
+  "domain": "unlimcasino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=unlimcasino.com&seal_id=809b1e",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=unlimcasino.com&seal_id=809b1e",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "casinohype.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=casinohype.com&seal_id=db640bf",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=casinohype.com&seal_id=db640bf",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "aufcasino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=aufcasino.com&seal_id=ce7cf519",
+    "hasRegulatorClaim": true,
+    "providers": 20,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=aufcasino.com&seal_id=ce7cf519",
+    "hasRegulatorClaim": true,
+    "providers": 20,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "grbets.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?seal_id=306203d1d9d16261fcfc72ac778c6",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?seal_id=306203d1d9d16261fcfc72ac778c6",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "acarbet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?seal_id=a58ecca0afb6a96fca1dd2969193b",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?seal_id=a58ecca0afb6a96fca1dd2969193b",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "betitor.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 451 — Location restriction",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "wlc-license__anjouan ng-star-inserted | https://verification.anjouangamingboard.org/validate?domain=betitor.com&seal_id=c0616e3217 | [iframe/network] e8c10794-b",
+    "hasRegulatorClaim": true,
+    "providers": 10,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "cryptogaming.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=cryptogaming.com&seal_id=59595",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=cryptogaming.com&seal_id=59595",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "casinityx.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 451 — Location restriction",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "wlc-anjouan-license wlc-anjouan-license--theme-default wlc-anjouan-license--theme-mod-defa | wlc-anjouan-license__age-restrictions wlc-icon wlc-icon--theme-defa",
+    "hasRegulatorClaim": true,
+    "providers": 3,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "dadastake.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=dadastake.com&seal_id=b88c59a7",
+    "hasRegulatorClaim": true,
+    "providers": 14,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=dadastake.com&seal_id=b88c59a7",
+    "hasRegulatorClaim": true,
+    "providers": 14,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "kikabet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=kikabet.com&seal_id=7c9499b0d6",
+    "hasRegulatorClaim": true,
+    "providers": 9,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=kikabet.com&seal_id=7c9499b0d6",
+    "hasRegulatorClaim": true,
+    "providers": 9,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "gameside.io",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=gameside.io&seal_id=a0bb4aac7c",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=gameside.io&seal_id=a0bb4aac7c",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "wildroll.com",
+  "verdict": "unstable signal — not a difference we can stand behind",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": [],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=wildroll.com&seal_id=c3ebb60eb",
+    "hasRegulatorClaim": true,
+    "providers": 34,
+    "vendors": [],
+    "claimRate": "0/3"
+   }
+  ]
+ },
+ {
+  "domain": "sierra.casino",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=sierra.casino&seal_id=9387413e",
+    "hasRegulatorClaim": true,
+    "providers": 27,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=sierra.casino&seal_id=9387413e",
+    "hasRegulatorClaim": true,
+    "providers": 16,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "betphoenix.ag",
+  "verdict": "DIFFERENT LICENCE CLAIM (confirmed: shown in de, absent in ca)",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.betphoenix.ag&seal_id=9c3e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": [
+     "quinel"
+    ],
+    "claimRate": "3/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": [
+     "quinel"
+    ],
+    "claimRate": "0/3"
+   }
+  ]
+ },
+ {
+  "domain": "anubet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=anubet.com&seal_id=f119c803cb2 | [iframe/network] c90e4d0d-6d67-4e40-9cfa-a7a1a1a99298.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 16,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=anubet.com&seal_id=f119c803cb2 | [iframe/network] c90e4d0d-6d67-4e40-9cfa-a7a1a1a99298.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 16,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "winbitcasino.com",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.winbitcasino.com&seal_id=5",
+    "hasRegulatorClaim": true,
+    "providers": 25,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.winbitcasino.com&seal_id=5",
+    "hasRegulatorClaim": true,
+    "providers": 24,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "vegazcasino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.vegazcasino.com&seal_id=28",
+    "hasRegulatorClaim": true,
+    "providers": 31,
+    "vendors": [
+     "askgamblers"
+    ]
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.vegazcasino.com&seal_id=28",
+    "hasRegulatorClaim": true,
+    "providers": 31,
+    "vendors": [
+     "askgamblers"
+    ]
+   }
+  ]
+ },
+ {
+  "domain": "bogartcasino.ag",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "mondcasino.com",
+  "verdict": "DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 14,
+    "vendors": [
+     "askgamblers"
+    ],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.mondcasino.com&seal_id=0c9",
+    "hasRegulatorClaim": true,
+    "providers": 15,
+    "vendors": [
+     "askgamblers"
+    ],
+    "claimRate": "3/3"
+   }
+  ]
+ },
+ {
+  "domain": "casinostars.io",
+  "verdict": "DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 15,
+    "vendors": [
+     "askgamblers"
+    ],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.casinostars.io&seal_id=a86",
+    "hasRegulatorClaim": true,
+    "providers": 15,
+    "vendors": [
+     "askgamblers"
+    ],
+    "claimRate": "3/3"
+   }
+  ]
+ },
+ {
+  "domain": "betmania.ag",
+  "verdict": "unstable signal — not a difference we can stand behind",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.betmania.ag&seal_id=ce7d66",
+    "hasRegulatorClaim": true,
+    "providers": 1,
+    "vendors": [],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 1,
+    "vendors": [],
+    "claimRate": "0/3"
+   }
+  ]
+ },
+ {
+  "domain": "yasalbahis.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=yasalbahis.com&seal_id=86f7820 | https://d11k2x767znmiw.cloudfront.net/anjouan-service/sealassets/87",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": [
+     "gamecheck"
+    ]
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=yasalbahis.com&seal_id=86f7820 | https://d11k2x767znmiw.cloudfront.net/anjouan-service/sealassets/87",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": [
+     "gamecheck"
+    ]
+   }
+  ]
+ },
+ {
+  "domain": "meritwin.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://verification.anjouangamingboard.org/validate?domain=meritwin.com&seal_id=742aada2d | https",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": [
+     "gamecheck"
+    ]
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://verification.anjouangamingboard.org/validate?domain=meritwin.com&seal_id=742aada2d | https",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": [
+     "gamecheck"
+    ]
+   }
+  ]
+ },
+ {
+  "domain": "volacasino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://verification.anjouangamingboard.org/validate?domain=volacasino.com&seal_id=3cbcfcc | https",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://verification.anjouangamingboard.org/validate?domain=volacasino.com&seal_id=3cbcfcc | https",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "7red.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.7red.com&seal_id=009dd1a0b",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.7red.com&seal_id=009dd1a0b",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "dustbit.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "curacao-seal-container | anjouan-seal | https://verification.anjouangamingboard.org/validate?domain=dustbit.com&seal_id=8184ec86a5",
+    "hasRegulatorClaim": true,
+    "providers": 11,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "curacao-seal-container | anjouan-seal | https://verification.anjouangamingboard.org/validate?domain=dustbit.com&seal_id=8184ec86a5",
+    "hasRegulatorClaim": true,
+    "providers": 11,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "spassino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=spassino.com&seal_id=fd1b5ff0e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": [
+     "trustpilot"
+    ]
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=spassino.com&seal_id=fd1b5ff0e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": [
+     "trustpilot"
+    ]
+   }
+  ]
+ },
+ {
+  "domain": "zenobet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=zenobet.com&seal_id=45f07bb298",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=zenobet.com&seal_id=45f07bb298",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "zenobet.gg",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "ca"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=zenobet.gg&seal_id=9e39c217883",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": true,
+    "error": "HTTP 403 — 403 Forbidden",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "degen.com",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=degen.com&seal_id=5cacd2554207",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=degen.com&seal_id=5cacd2554207",
+    "hasRegulatorClaim": true,
+    "providers": 12,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "warriorbet.io",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=warriorbet.io&seal_id=5d4fe270 | [iframe/network] 023dc458-4093-4393-b7ca-960d51997a06.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=warriorbet.io&seal_id=5d4fe270 | [iframe/network] 023dc458-4093-4393-b7ca-960d51997a06.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "tucanbit.io",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tucanbit.io&seal_id=bb31a16d5b",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tucanbit.io&seal_id=bb31a16d5b",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "bhaicasino.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "ca"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=593d57bf79b9186a775e15e3f0bac",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": true,
+    "error": "HTTP 403 — 403 Forbidden",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "bluebetz.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=43cd2c52342cf761792c546c3390e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=43cd2c52342cf761792c546c3390e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "yekbet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=c9dbb570eb54dfa0756b9b1e602b5",
+    "hasRegulatorClaim": true,
+    "providers": 3,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=c9dbb570eb54dfa0756b9b1e602b5",
+    "hasRegulatorClaim": true,
+    "providers": 3,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "asyabahis.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=asyabahis.com&seal_id=9ef46d69",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=asyabahis.com&seal_id=9ef46d69",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "dumanbet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=dumanbet.com&seal_id=aee20f738",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=dumanbet.com&seal_id=aee20f738",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "maltcasino.com",
+  "verdict": "DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": [],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=maltcasino1519.com&seal_id=4be",
+    "hasRegulatorClaim": true,
+    "providers": 12,
+    "vendors": [
+     "gamecheck"
+    ],
+    "claimRate": "3/3"
+   }
+  ]
+ },
+ {
+  "domain": "spinman.com",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=spinman.com&seal_id=eb8dace598",
+    "hasRegulatorClaim": true,
+    "providers": 14,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=spinman.com&seal_id=eb8dace598",
+    "hasRegulatorClaim": true,
+    "providers": 9,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "pinbahis.com",
+  "verdict": "DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": [],
+    "claimRate": "0/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=pinbahis991.com&seal_id=86d649",
+    "hasRegulatorClaim": true,
+    "providers": 2,
+    "vendors": [
+     "gamecheck"
+    ],
+    "claimRate": "2/3"
+   }
+  ]
+ },
+ {
+  "domain": "arba777.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=arba777.com&seal_id=51cfcc042d",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=arba777.com&seal_id=51cfcc042d",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "cwinz.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 403 — Attention Required! | Cloudflare",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container",
+    "hasRegulatorClaim": true,
+    "providers": 1,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "megasino.win",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=megasino.win&seal_id=fcd7cbdbe",
+    "hasRegulatorClaim": true,
+    "providers": 20,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=megasino.win&seal_id=fcd7cbdbe",
+    "hasRegulatorClaim": true,
+    "providers": 20,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "madcasino.org",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "[iframe/network] .snippet.anjouangaming.org",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "[iframe/network] .snippet.anjouangaming.org",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "welvura1.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=welvura12.com&seal_id=bf26845d",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=welvura12.com&seal_id=bf26845d",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "imperia.bet",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "[iframe/network] 42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouangaming.org",
+    "hasRegulatorClaim": true,
+    "providers": 8,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "[iframe/network] 42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouangaming.org",
+    "hasRegulatorClaim": true,
+    "providers": 11,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "369wins.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "ca"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=239911da818415722597a37c91633",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": true,
+    "error": "HTTP 403 — 403 Forbidden",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "mad.casino",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=mad.casino&seal_id=ae3456c2b08 | [iframe/network] 17aceb28-2a8b-4cb2-a1f9-b585fc2ac5bb.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=mad.casino&seal_id=ae3456c2b08 | [iframe/network] 17aceb28-2a8b-4cb2-a1f9-b585fc2ac5bb.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "g4mbit.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=g4mbit.com&seal_id=e1e570384a6",
+    "hasRegulatorClaim": true,
+    "providers": 5,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=g4mbit.com&seal_id=e1e570384a6",
+    "hasRegulatorClaim": true,
+    "providers": 5,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "casino007.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de",
+   "ca"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 403 — Attention Required! | Cloudflare",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": true,
+    "error": "HTTP 403 — Attention Required! | Cloudflare",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "kirabet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=kira222.com&seal_id=4773c82f6e",
+    "hasRegulatorClaim": true,
+    "providers": 24,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=kira222.com&seal_id=4773c82f6e",
+    "hasRegulatorClaim": true,
+    "providers": 24,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "olipsbet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=1dc4218d9b2a86a6e29b8c25cf231",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "FooterLicenceCuracaoContainer anj-container | https://verification.anjouangamingboard.org/validate?seal_id=1dc4218d9b2a86a6e29b8c25cf231",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "lavbet.co",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=lavbet.co&seal_id=29c9ebdaae59",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=lavbet.co&seal_id=29c9ebdaae59",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "molcasino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=mol.casino&seal_id=f7c52aa0185",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=mol.casino&seal_id=f7c52aa0185",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "betet77.com",
+  "verdict": "inconclusive",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "page.goto: net::ERR_TOO_MANY_REDIRECTS at https://betet77.com/",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=betet77.com&seal_id=5383cc8c7a",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "lavbet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=lavbet.com&seal_id=264ebebae4e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=lavbet.com&seal_id=264ebebae4e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "tomi.club",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tomi30.com&seal_id=2162ab86715",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tomi30.com&seal_id=2162ab86715",
+    "hasRegulatorClaim": true,
+    "providers": 21,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "americaloto.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 403 — Attention Required! | Cloudflare",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=americaloto.com&seal_id=9fbb51",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "case-battle.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 403 — no title",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=case-battle.com&seal_id=7d9222",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "chance.net",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=chance.net&seal_id=dec0a28ed45",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=chance.net&seal_id=dec0a28ed45",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "freespinz.com",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 403 — Attention Required! | Cloudflare",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=freespinz.com&seal_id=b2a7912e",
+    "hasRegulatorClaim": true,
+    "providers": 0,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "gold24x7.com",
+  "verdict": "unstable signal — not a difference we can stand behind",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=gold24x7.com&seal_id=ea32ac63e",
+    "hasRegulatorClaim": true,
+    "providers": 15,
+    "vendors": [],
+    "claimRate": "2/3"
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://cdn.gold24x7.com/img/providers/148458/MGA-games.svg | MGA Games | w-full h-full | https://verification.anjouangamingboard.org/validate?domain=gold24x7.c",
+    "hasRegulatorClaim": true,
+    "providers": 9,
+    "vendors": [],
+    "claimRate": "3/3"
+   }
+  ]
+ },
+ {
+  "domain": "buffalo-casino.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "anjouan-license-seal",
+    "hasRegulatorClaim": true,
+    "providers": 19,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "anjouan-license-seal",
+    "hasRegulatorClaim": true,
+    "providers": 19,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "coolt.casino",
+  "verdict": "inconclusive",
+  "blockedIn": [
+   "de"
+  ],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": true,
+    "error": "HTTP 200 — 403 Forbidden",
+    "regulators": "",
+    "hasRegulatorClaim": false,
+    "providers": 0,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=coolt.casino&seal_id=565b998b6",
+    "hasRegulatorClaim": true,
+    "providers": 1,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "zunabet.com",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=zunabet.com&seal_id=1409d81627 | [iframe/network] ce4056a8-5516-45ee-b3e5-846851a62334.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=zunabet.com&seal_id=1409d81627 | [iframe/network] ce4056a8-5516-45ee-b3e5-846851a62334.snippet.anjou",
+    "hasRegulatorClaim": true,
+    "providers": 22,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "playbet.io",
+  "verdict": "content varies",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.playbet.io&seal_id=9101580",
+    "hasRegulatorClaim": true,
+    "providers": 19,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=www.playbet.io&seal_id=9101580",
+    "hasRegulatorClaim": true,
+    "providers": 16,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "forzabet.live",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=forzabet.live&seal_id=558c1da6",
+    "hasRegulatorClaim": true,
+    "providers": 1,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=forzabet.live&seal_id=558c1da6",
+    "hasRegulatorClaim": true,
+    "providers": 1,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "tomcasino.net",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tomcasino.net&seal_id=0783a8ba",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.anjouangamingboard.org/validate?domain=tomcasino.net&seal_id=0783a8ba",
+    "hasRegulatorClaim": true,
+    "providers": 23,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "majorx.game",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.curacao-egaming.uk/validateview.aspx?domain=majorx193.com | inline-fl | /gc.png | Curaçao eGaming License | h-10 md:h-12 w-auto object-cont",
+    "hasRegulatorClaim": true,
+    "providers": 4,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.curacao-egaming.uk/validateview.aspx?domain=majorx193.com | inline-fl | /gc.png | Curaçao eGaming License | h-10 md:h-12 w-auto object-cont",
+    "hasRegulatorClaim": true,
+    "providers": 4,
+    "vendors": []
+   }
+  ]
+ },
+ {
+  "domain": "minorx.game",
+  "verdict": "consistent",
+  "blockedIn": [],
+  "perRegion": [
+   {
+    "region": "de",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.curacao-egaming.uk/validateview.aspx?domain=minorx140.com | inline-fl | /gc.png | Curaçao eGaming License | h-10 md:h-12 w-auto object-cont",
+    "hasRegulatorClaim": true,
+    "providers": 4,
+    "vendors": []
+   },
+   {
+    "region": "ca",
+    "blocked": false,
+    "error": "",
+    "regulators": "https://verification.curacao-egaming.uk/validateview.aspx?domain=minorx140.com | inline-fl | /gc.png | Curaçao eGaming License | h-10 md:h-12 w-auto object-cont",
+    "hasRegulatorClaim": true,
+    "providers": 4,
+    "vendors": []
+   }
+  ]
  }
 ]

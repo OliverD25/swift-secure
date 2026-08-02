@@ -252,50 +252,77 @@ research convenience.
 
 ## Cloaking: the check the badge exists to make
 
-Ran 3 August 2026 over 60 sites that claim a regulator, comparing Germany
-against Canada through a residential exit in each.
+Ran 3 August 2026 over **130 sites** that claim a regulator, in two batches,
+comparing Germany against Canada through a residential exit in each.
 
 | | Sites |
 | :--- | ---: |
-| **Confirmed: licence claim shown to one country, not the other** | **2** |
-| Discarded as our own noise after re-sampling | 4 |
-| Content varies by region (localisation, currency) | 9 |
-| Open in one country, refused in the other | 2 |
+| **Confirmed: licence claim shown to one country, not the other** | **7** (5.4%) |
+| Discarded as our own noise after re-sampling | 7 |
+| Content varies by region (localisation, currency) | 16 |
+| Open in one country, refused in the other | 12 |
 
-**The confirmed pair:** `jokertipp.com` and `greatslots.com` both show a link to
-the Anjouan licence verifier to Canadian visitors on 3 of 3 samples, and to
-German visitors on 0 of 3. The split is as clean as this measurement gets.
+### The seven
+
+| Site | Shows the licence to | Hides it from |
+| :--- | :--- | :--- |
+| jokertipp.com | Canada | Germany |
+| greatslots.com | Canada | Germany |
+| mondcasino.com | Canada | Germany |
+| casinostars.io | Canada | Germany |
+| maltcasino.com | Canada | Germany |
+| pinbahis.com | Canada | Germany |
+| **betphoenix.ag** | **Germany** | **Canada** |
+
+**betphoenix.ag runs the other way, and that matters.** The first batch suggested
+a tidy story — operators hiding an Anjouan licence from strictly regulated
+markets like Germany. One site doing the reverse breaks it. Whatever drives this
+is not simply "conceal from the regulated market", and any explanation that only
+accounts for six of the seven is not the explanation.
 
 ### The methodological result is bigger than the finding
 
-Six sites looked like they cloaked on a single sample. Two survived
-re-sampling. Three of the four discarded — `kush.casino`, `afrislots.net`,
-`gamwiz.com` — turned out to show the seal in **both** countries at 3 of 3, so
-there was never any difference at all; one unlucky sample invented it.
+Fourteen sites looked like they cloaked on a single sample. Seven survived
+re-sampling. Several of the discarded ones showed the seal in **both** countries
+at 3 of 3 once measured properly, so there was never a difference at all — one
+unlucky sample invented it.
 
-**Single-sample comparison had a 67% false-positive rate.** Publishing those
-four would have meant accusing four operators of hiding their licence on the
-strength of a slow-loading iframe. For a business whose only asset is that its
-word means something, that is the failure mode to fear most — and it is now
-prevented by the tool rather than by whoever happens to be paying attention.
+**Single-sample comparison had roughly a 50% false-positive rate.** Publishing
+those would have meant accusing operators of hiding their licence on the strength
+of a slow-loading iframe. For a business whose only asset is that its word means
+something, that is the failure to fear most — and it is now prevented by the tool
+rather than by whoever happens to be paying attention.
 
-### What the confirmed finding does and does not mean
+### What the confirmed findings do and do not mean
 
-Germany licenses gambling under the GGL regime, where an Anjouan licence does
-not authorise serving German players. Both sites serve German visitors while
+Germany licenses gambling under the GGL regime, where an Anjouan licence does not
+authorise serving German players. Six of the seven serve German visitors while
 showing them nothing about who licenses them.
 
 Three explanations fit, and this check cannot separate them:
 
 - the seal vendor's own widget may geo-restrict independently of the casino;
-- the operator may deliberately suppress a licence claim in a market that the
-  licence does not cover, which is arguably the responsible choice;
+- the operator may deliberately suppress a licence claim in a market the licence
+  does not cover, which is arguably the responsible choice;
 - or it is what it looks like.
+
+The betphoenix reversal weakens the second explanation without settling the
+question.
 
 **Resolving it is not required to have something worth publishing.** "Licence
 seal shown to visitors from Canada, not shown to visitors from Germany, checked
 3 August 2026" is a dated fact, and no static badge image can make that
 statement. That is the product.
+
+### The report is now cumulative, after nearly losing half of it
+
+The first guard against overwriting was a size threshold — runs under 50 sites
+wrote to a separate file. Both batches were larger, so both counted as "full",
+and the second silently erased the first. Only the git commit saved it.
+
+Size was the wrong test. The report is an accumulating record, so it now merges
+by domain: a re-check updates that site and leaves the rest alone. There is no
+run size at which discarding previous work is correct.
 
 Regenerate:
 
