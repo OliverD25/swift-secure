@@ -63,7 +63,7 @@ for (const domain of domains) {
   const claimSets = [...new Set(reachable.map((p) => p.regulators))];
   const providerCounts = [...new Set(reachable.map((p) => p.providers))];
 
-  const verdict =
+  let verdict =
     reachable.length < 2
       ? "inconclusive"
       : claimSets.length > 1
@@ -71,6 +71,40 @@ for (const domain of domains) {
         : providerCounts.length > 1
           ? "content varies"
           : "consistent";
+
+  /**
+   * Confirm a suspected difference before reporting it.
+   *
+   * The regulator seal is a lazily loaded widget and one sample per region
+   * cannot tell a real regional difference from a slow iframe. Measured on
+   * fatbets: Germany showed no seal in 5 of 5 runs, but Canada showed it in
+   * only 3 of 5 — so a single-sample comparison would have called that
+   * cloaking on the strength of a coin flip.
+   *
+   * Re-samples only the suspicious cases, because tripling every fetch would
+   * triple the proxy bill for sites that already agree.
+   */
+  if (verdict === "DIFFERENT LICENCE CLAIM") {
+    const SAMPLES = 3;
+    const rate = {};
+    for (const p of reachable) {
+      let seen = 0;
+      for (let i = 0; i < SAMPLES; i++) {
+        const proxy = pool.find((x) => x.region === p.region);
+        const r = await readTrustSignals(browser, domain, { proxy, region: p.region });
+        if (r.signals?.regulator) seen++;
+      }
+      rate[p.region] = seen;
+    }
+    const solidYes = Object.entries(rate).filter(([, n]) => n >= 2).map(([r]) => r);
+    const solidNo = Object.entries(rate).filter(([, n]) => n === 0).map(([r]) => r);
+    // A difference counts only when one region reliably shows the claim and
+    // another reliably does not. Anything in between is our own noise.
+    verdict = solidYes.length && solidNo.length
+      ? `DIFFERENT LICENCE CLAIM (confirmed: shown in ${solidYes.join(",")}, absent in ${solidNo.join(",")})`
+      : "unstable signal — not a difference we can stand behind";
+    for (const p of perRegion) if (rate[p.region] !== undefined) p.claimRate = `${rate[p.region]}/${SAMPLES}`;
+  }
 
   report.push({ domain, verdict, blockedIn, perRegion });
 
