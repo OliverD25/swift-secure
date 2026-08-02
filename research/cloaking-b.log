@@ -1,0 +1,364 @@
+Proxy pool: 2 entries across 2 region(s): de, ca
+comparing 70 sites across 2 regions
+
+unlimcasino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=unlimcasin
+    ca  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=unlimcasin
+
+casinohype.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=casinohype
+    ca  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=casinohype
+
+aufcasino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=20 https://verification.anjouangamingboard.org/validate?domain=aufcasino.
+    ca  read     regulator-claim=yes providers=20 https://verification.anjouangamingboard.org/validate?domain=aufcasino.
+
+grbets.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?seal_id=306203d1d
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?seal_id=306203d1d
+
+acarbet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?seal_id=a58ecca0a
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?seal_id=a58ecca0a
+
+betitor.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers=10 wlc-license__anjouan ng-star-inserted | https://verification.anjouanga
+
+cryptogaming.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=cryptogami
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=cryptogami
+
+casinityx.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 3 wlc-anjouan-license wlc-anjouan-license--theme-default wlc-anjouan-lic
+
+dadastake.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=14 https://verification.anjouangamingboard.org/validate?domain=dadastake.
+    ca  read     regulator-claim=yes providers=14 https://verification.anjouangamingboard.org/validate?domain=dadastake.
+
+kikabet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 9 https://verification.anjouangamingboard.org/validate?domain=kikabet.co
+    ca  read     regulator-claim=yes providers= 9 https://verification.anjouangamingboard.org/validate?domain=kikabet.co
+
+gameside.io
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=gameside.i
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=gameside.i
+
+wildroll.com
+  verdict: unstable signal — not a difference we can stand behind
+    de  read     regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers=34 https://verification.anjouangamingboard.org/validate?domain=wildroll.c
+
+sierra.casino
+  verdict: content varies
+    de  read     regulator-claim=yes providers=27 https://verification.anjouangamingboard.org/validate?domain=sierra.cas
+    ca  read     regulator-claim=yes providers=16 https://verification.anjouangamingboard.org/validate?domain=sierra.cas
+
+betphoenix.ag
+  verdict: DIFFERENT LICENCE CLAIM (confirmed: shown in de, absent in ca)
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=www.betpho
+    ca  read     regulator-claim=no  providers= 0 
+
+anubet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=16 https://verification.anjouangamingboard.org/validate?domain=anubet.com
+    ca  read     regulator-claim=yes providers=16 https://verification.anjouangamingboard.org/validate?domain=anubet.com
+
+winbitcasino.com
+  verdict: content varies
+    de  read     regulator-claim=yes providers=25 https://verification.anjouangamingboard.org/validate?domain=www.winbit
+    ca  read     regulator-claim=yes providers=24 https://verification.anjouangamingboard.org/validate?domain=www.winbit
+
+vegazcasino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=31 https://verification.anjouangamingboard.org/validate?domain=www.vegazc
+    ca  read     regulator-claim=yes providers=31 https://verification.anjouangamingboard.org/validate?domain=www.vegazc
+
+bogartcasino.ag
+  verdict: consistent
+    de  read     regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=no  providers= 0 
+
+mondcasino.com
+  verdict: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+    de  read     regulator-claim=no  providers=14 
+    ca  read     regulator-claim=yes providers=15 https://verification.anjouangamingboard.org/validate?domain=www.mondca
+
+casinostars.io
+  verdict: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+    de  read     regulator-claim=no  providers=15 
+    ca  read     regulator-claim=yes providers=15 https://verification.anjouangamingboard.org/validate?domain=www.casino
+
+betmania.ag
+  verdict: unstable signal — not a difference we can stand behind
+    de  read     regulator-claim=yes providers= 1 https://verification.anjouangamingboard.org/validate?domain=www.betman
+    ca  read     regulator-claim=no  providers= 1 
+
+yasalbahis.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=23 https://verification.anjouangamingboard.org/validate?domain=yasalbahis
+    ca  read     regulator-claim=yes providers=23 https://verification.anjouangamingboard.org/validate?domain=yasalbahis
+
+meritwin.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=23 license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://
+    ca  read     regulator-claim=yes providers=23 license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://
+
+volacasino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=21 license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://
+    ca  read     regulator-claim=yes providers=21 license-trust-wrapper anjouan-trust-wrapper anjouan-wrapper | https://
+
+7red.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=www.7red.c
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=www.7red.c
+
+dustbit.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=11 curacao-seal-container | anjouan-seal | https://verification.anjouanga
+    ca  read     regulator-claim=yes providers=11 curacao-seal-container | anjouan-seal | https://verification.anjouanga
+
+spassino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=spassino.c
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=spassino.c
+
+zenobet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=zenobet.co
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=zenobet.co
+
+zenobet.gg
+  verdict: inconclusive   (blocked in: ca)
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=zenobet.gg
+    ca  blocked  regulator-claim=no  providers= 0 
+
+degen.com
+  verdict: content varies
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=degen.com&
+    ca  read     regulator-claim=yes providers=12 https://verification.anjouangamingboard.org/validate?domain=degen.com&
+
+warriorbet.io
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=warriorbet
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=warriorbet
+
+tucanbit.io
+  verdict: content varies
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=tucanbit.i
+    ca  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=tucanbit.i
+
+bhaicasino.com
+  verdict: inconclusive   (blocked in: ca)
+    de  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+    ca  blocked  regulator-claim=no  providers= 0 
+
+bluebetz.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+    ca  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+
+yekbet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 3 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+    ca  read     regulator-claim=yes providers= 3 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+
+asyabahis.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=asyabahis.
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=asyabahis.
+
+dumanbet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=dumanbet.c
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=dumanbet.c
+
+maltcasino.com
+  verdict: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+    de  read     regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers=12 https://verification.anjouangamingboard.org/validate?domain=maltcasino
+
+spinman.com
+  verdict: content varies
+    de  read     regulator-claim=yes providers=14 https://verification.anjouangamingboard.org/validate?domain=spinman.co
+    ca  read     regulator-claim=yes providers= 9 https://verification.anjouangamingboard.org/validate?domain=spinman.co
+
+pinbahis.com
+  verdict: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+    de  read     regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 2 https://verification.anjouangamingboard.org/validate?domain=pinbahis99
+
+arba777.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=arba777.co
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=arba777.co
+
+cwinz.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 1 FooterLicenceCuracaoContainer anj-container
+
+megasino.win
+  verdict: consistent
+    de  read     regulator-claim=yes providers=20 https://verification.anjouangamingboard.org/validate?domain=megasino.w
+    ca  read     regulator-claim=yes providers=20 https://verification.anjouangamingboard.org/validate?domain=megasino.w
+
+madcasino.org
+  verdict: consistent
+    de  read     regulator-claim=yes providers=22 [iframe/network] .snippet.anjouangaming.org
+    ca  read     regulator-claim=yes providers=22 [iframe/network] .snippet.anjouangaming.org
+
+welvura1.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=welvura12.
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=welvura12.
+
+imperia.bet
+  verdict: content varies
+    de  read     regulator-claim=yes providers= 8 [iframe/network] 42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouang
+    ca  read     regulator-claim=yes providers=11 [iframe/network] 42f67fa0-5dac-47a1-af2b-695fb5bae06c.snippet.anjouang
+
+369wins.com
+  verdict: inconclusive   (blocked in: ca)
+    de  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+    ca  blocked  regulator-claim=no  providers= 0 
+
+mad.casino
+  verdict: consistent
+    de  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=mad.casino
+    ca  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=mad.casino
+
+g4mbit.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 5 https://verification.anjouangamingboard.org/validate?domain=g4mbit.com
+    ca  read     regulator-claim=yes providers= 5 https://verification.anjouangamingboard.org/validate?domain=g4mbit.com
+
+casino007.com
+  verdict: inconclusive   (blocked in: de, ca)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  blocked  regulator-claim=no  providers= 0 
+
+kirabet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=24 https://verification.anjouangamingboard.org/validate?domain=kira222.co
+    ca  read     regulator-claim=yes providers=24 https://verification.anjouangamingboard.org/validate?domain=kira222.co
+
+olipsbet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+    ca  read     regulator-claim=yes providers= 0 FooterLicenceCuracaoContainer anj-container | https://verification.anj
+
+lavbet.co
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=lavbet.co&
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=lavbet.co&
+
+molcasino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=mol.casino
+    ca  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=mol.casino
+
+betet77.com
+  verdict: inconclusive
+    de  error    regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=betet77.co
+
+lavbet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=lavbet.com
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=lavbet.com
+
+tomi.club
+  verdict: consistent
+    de  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=tomi30.com
+    ca  read     regulator-claim=yes providers=21 https://verification.anjouangamingboard.org/validate?domain=tomi30.com
+
+americaloto.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=americalot
+
+case-battle.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=case-battl
+
+chance.net
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=chance.net
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=chance.net
+
+freespinz.com
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 0 https://verification.anjouangamingboard.org/validate?domain=freespinz.
+
+gold24x7.com
+  verdict: unstable signal — not a difference we can stand behind
+    de  read     regulator-claim=yes providers=15 https://verification.anjouangamingboard.org/validate?domain=gold24x7.c
+    ca  read     regulator-claim=yes providers= 9 https://cdn.gold24x7.com/img/providers/148458/MGA-games.svg | MGA Game
+
+buffalo-casino.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=19 anjouan-license-seal
+    ca  read     regulator-claim=yes providers=19 anjouan-license-seal
+
+coolt.casino
+  verdict: inconclusive   (blocked in: de)
+    de  blocked  regulator-claim=no  providers= 0 
+    ca  read     regulator-claim=yes providers= 1 https://verification.anjouangamingboard.org/validate?domain=coolt.casi
+
+zunabet.com
+  verdict: consistent
+    de  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=zunabet.co
+    ca  read     regulator-claim=yes providers=22 https://verification.anjouangamingboard.org/validate?domain=zunabet.co
+
+playbet.io
+  verdict: content varies
+    de  read     regulator-claim=yes providers=19 https://verification.anjouangamingboard.org/validate?domain=www.playbe
+    ca  read     regulator-claim=yes providers=16 https://verification.anjouangamingboard.org/validate?domain=www.playbe
+
+forzabet.live
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 1 https://verification.anjouangamingboard.org/validate?domain=forzabet.l
+    ca  read     regulator-claim=yes providers= 1 https://verification.anjouangamingboard.org/validate?domain=forzabet.l
+
+tomcasino.net
+  verdict: consistent
+    de  read     regulator-claim=yes providers=23 https://verification.anjouangamingboard.org/validate?domain=tomcasino.
+    ca  read     regulator-claim=yes providers=23 https://verification.anjouangamingboard.org/validate?domain=tomcasino.
+
+majorx.game
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 4 https://verification.curacao-egaming.uk/validateview.aspx?domain=major
+    ca  read     regulator-claim=yes providers= 4 https://verification.curacao-egaming.uk/validateview.aspx?domain=major
+
+minorx.game
+  verdict: consistent
+    de  read     regulator-claim=yes providers= 4 https://verification.curacao-egaming.uk/validateview.aspx?domain=minor
+    ca  read     regulator-claim=yes providers= 4 https://verification.curacao-egaming.uk/validateview.aspx?domain=minor
+
+=== 70 sites compared across 2 regions ===
+  different licence claim by region : 5  <- the finding that matters
+  content varies by region          : 7  (usually localisation, not a problem)
+  suspected but unstable            : 3  (our own noise, reported as nothing)
+      betphoenix.ag: DIFFERENT LICENCE CLAIM (confirmed: shown in de, absent in ca)
+      mondcasino.com: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+      casinostars.io: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+      maltcasino.com: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+      pinbahis.com: DIFFERENT LICENCE CLAIM (confirmed: shown in ca, absent in de)
+  open in some countries, not others: 10  (normal — licences are territorial)
+  wrote research/cloaking-report.json
