@@ -1,5 +1,11 @@
 # What else a casino's own page gives up
 
+> **Read the full-sweep section at the bottom first.** This first half is the
+> original 14-site sample, kept for the record. The sweep over 374 sites
+> **overturned section 2 entirely** — the responsible-gambling and legal-page
+> figures here are measurement artefacts, not findings, and must not be quoted.
+> Sections 1, 3 and 4 held up.
+
 Measured 3 August 2026 on 14 live casinos, loaded from a German browser context
 with nothing clicked. The question behind this: what could make Swift Secure a
 report an operator wants, rather than a request to display a free badge?
@@ -32,7 +38,7 @@ Why operators plausibly do not know: marketing adds a tag manager, nobody
 re-checks what fires before the banner, and the banner is often missing entirely
 on sites built for non-EU markets that later took EU traffic.
 
-## 2. Responsible-gambling markers missing — 3 of 13 show none
+## 2. Responsible-gambling markers missing — 3 of 13 show none  [WITHDRAWN]
 
 Checked for age notice, self-exclusion, deposit limits, and a help organisation.
 
@@ -40,9 +46,9 @@ Checked for age notice, self-exclusion, deposit limits, and a help organisation.
 - Most show one or two
 - Very few show all four
 
-Most licences require these. A missing self-exclusion route is a licence
-condition problem, not a style choice — and unlike the tracker finding, this one
-is unambiguous.
+**Withdrawn.** The full sweep showed this was measuring English-and-German text
+on the homepage, which is the wrong place and the wrong vocabulary. See "What
+had to be thrown away" below.
 
 ## 3. Page weight — the spread is enormous
 
