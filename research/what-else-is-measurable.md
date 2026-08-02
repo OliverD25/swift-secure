@@ -140,23 +140,45 @@ and 3.5 MB; the heaviest site loads 807 requests and 67 MB.
 **Half of all readable casinos have at least one defensible finding.** That is
 the number the product rests on.
 
-### The worst breakage found
+### The breakage findings did not reproduce — retracted
 
-| Site | Failed requests | Sample |
-| :--- | ---: | :--- |
-| tomcasino.net | 100 | `404 /_next/image` |
-| cosmoracasinos.com | 46 | missing fonts, 403 on assets |
-| funbet888.me / funbet.me / robobet.com | 39 each | `403 /gstatic/wlc/icons/.../crashgame.svg` |
-| winup.io | 38 | `404 /paysystems/.../aninda2_banka.svg` |
-| bettogames.com | 32 | `404 /paysystems/.../help2pay_online_banking.svg` |
-| slotin.com | 26 | `403 /platform-telegram-bot__api/...` |
+The sweep reported heavy breakage on a handful of sites, and it looked like the
+most valuable result in the whole exercise:
 
-The three funbet/robobet sites fail identically, so that is one platform bug
-affecting an operator group rather than three separate problems — which is
-useful, because it is one conversation.
+| Site | Failed requests in the sweep |
+| :--- | ---: |
+| tomcasino.net | 100 |
+| cosmoracasinos.com | 46 |
+| funbet888.me / funbet.me / robobet.com | 39 each |
+| winup.io | 38 |
+| bettogames.com | 32 |
+| slotin.com | 26 |
 
-Payment-icon 404s on winup and bettogames mean the deposit page renders with
-missing method logos. Small, visible, and directly in the path to a deposit.
+**Re-running those eight sites returned zero failed requests. Every one.**
+
+Two attempts: three sites at concurrency 3, then all eight at concurrency 6 to
+match the sweep. Zero both times. The failures existed only inside the 374-site
+run.
+
+The likely cause is us. Six parallel browsers working through a long list will
+trip rate limiting, and a site under that load answers asset requests with 403
+or 404. **We were not finding broken casinos; we were breaking them ourselves,
+briefly, and then writing it down as their defect.**
+
+This is the fourth time in this project that a headline finding turned out to be
+a measurement artefact, and the shape is identical each time: a single
+observation, believed because it was interesting. What makes this one worse is
+how close it came to leaving the building. "Your payment icons return 404" is
+exactly the specific, useful-sounding claim that gets a reply — and the operator
+would have checked, found them working, and correctly concluded we do not know
+what we are doing.
+
+**Nothing derived from `brokenRequests` in the 374-site sweep can be used.** The
+counts in the table above the previous section — 105 sites with any failed
+request, 33 with five or more — are contaminated by the same effect and are
+withdrawn. A sweep that measures breakage must run one site at a time, or at
+concurrency low enough to be invisible, and must re-check anything it finds
+before the finding is written down.
 
 ## What had to be thrown away, and why
 
