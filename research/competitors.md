@@ -6,12 +6,16 @@ had no idea what this category charges.
 
 ## The short version
 
-Two findings that change the plan, one of them uncomfortable.
+Three findings, and the last one is the one that hurts.
 
-1. **The market price for a casino trust seal is €250/month.** Our €200 tier was
-   a reasonable guess and is priced slightly under the incumbent.
+1. **The market price for a casino trust seal is €250/month.** Two vendors
+   independently at that number. Our €200 tier is priced just under them.
 2. **The licence check we built is already given away free by a live
    competitor**, across more regulators than we cover.
+3. **Check2Play already sells everything we planned to sell.** Licence
+   verification, a badge, a public report — plus provider confirmation, which we
+   cannot do at all. Corrected 3 August; the first version of this document said
+   nobody occupied that position, and that was wrong.
 
 ## The players
 
@@ -34,12 +38,31 @@ the hard way — game-provider verification is not reachable from the network, a
 Gamecheck solved it commercially rather than technically. We cannot copy this
 without partnerships we do not have.
 
-### Check2Play — same product, same method
+### Check2Play — the closest competitor, and closer than first recorded
 
-*"We verify directly with game providers like Evolution Gaming and Pragmatic
-Play to confirm legitimate partnerships."* Also badge-based, also aimed at
-operators. Confirms game-authenticity certification is an established category
-with more than one seller, not a gap.
+**$250/month**, published on their pricing page. Free unlimited lookups for
+players, one paid plan for operators.
+
+Their own description of what an operator gets:
+
+> *"Comprehensive Audit — Our team conducts thorough checks: **license
+> verification**, game provider confirmation, security analysis, payment method
+> review, and terms & conditions audit."*
+
+> *"Provider Confirmation — We contact game providers directly to confirm the
+> casino has legitimate partnerships and authorized access to their game
+> content."*
+
+Read that list against ours. Licence verification: they do it. A badge and a
+public verification report: they do it. Provider confirmation: they do it and we
+have proven we cannot. Payment and terms review: they do it, we do not.
+
+**The first version of this document described a gap that does not exist.** It
+said Gamecheck checks games but not licences, CasinoLicensing checks licences
+but sells operators nothing, and therefore nobody sold an operator a badge
+backed by licence verification. Check2Play does exactly that, and has for some
+time. The error came from reading their seal page for the provider claim and not
+reading the sentence next to it.
 
 ### CasinoLicensing.org — does our check, free
 
@@ -95,26 +118,37 @@ certification.
 and Check2Play both have them and we have none, and it cannot be substituted
 with network analysis — we tested that and it does not work.
 
-**Where the actual gap is.** Gamecheck states it does not assess licensing.
-CasinoLicensing.org assesses licensing but serves players, free, with no badge
-for the operator to display. So nobody is selling an operator **a badge backed
-by licence verification with a dated public page behind it**. That is a narrow
-gap, but it is real, and it is exactly what we already built.
+**There is no product gap.** Everything we can build, Check2Play already sells,
+and they sell two things on top of it. Any pitch built on "nobody does this" is
+false and will be caught by the first operator who has heard of them.
 
-**Pricing.** €250/month is the anchor. Free for the founding cohort still makes
-sense, and there is now a defensible number to move to afterwards rather than a
-guess.
+**What is left is narrower and has to be said plainly.** Three things are ours:
 
-**The honest risk.** Our check is cheap to replicate and already free somewhere
-else. What is not cheap to replicate is a reputation for saying what we did not
-check. That was already the plan; this research makes it the whole plan rather
-than one differentiator among several.
+- **Cloaking detection.** Neither competitor publishes anything about checking a
+  site from multiple countries. It is the one check we run that they do not, and
+  it is measurable, dated and hard to fake.
+- **Published limits.** Both competitors describe what they check. Neither
+  publishes what they do not. For an entrant with no reputation, being the only
+  one to state the boundary is the only credible position available.
+- **Free.** Not a differentiator so much as the price of entry against two
+  established vendors at $250/month.
+
+**The honest risk, restated.** It is worse than the first version of this
+document said. The risk is not that our check is cheap to replicate — it is that
+it has already been replicated, packaged, priced and sold, by someone who also
+does the check we proved we cannot. We are not entering an empty space. We are
+entering behind two vendors with a narrower product and no track record.
+
+That is survivable — the market is large, most operators have heard of neither,
+and 4.8% paying means the category is under-sold rather than saturated. But it
+has to be planned for honestly rather than around.
 
 ## Sources
 
 - [Gamecheck SEAL](https://gamecheck.com/seal) — pricing and scope
 - [Gamecheck: the SEAL has arrived](https://gamecheck.com/articles/online-casino-technology-and-innovations/the-gamecheck-seal-has-arrived)
-- [Check2Play SEAL](https://check2play.com/seal)
+- [Check2Play SEAL](https://check2play.com/seal) — scope of their audit
+- [Check2Play pricing](https://check2play.com/pricing) — $250/month, free for players
 - [CasinoLicensing.org](https://www.casinolicensing.org/)
 - [licenseseal.online](https://licenseseal.online) — the Anjouan authority itself
 - [DLAG](https://dlagglobal.com/) — Tobique licensing agent
