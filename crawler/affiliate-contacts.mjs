@@ -15,6 +15,7 @@
  */
 import { chromium } from "playwright";
 import { readFileSync, writeFileSync } from "node:fs";
+import { loadProxyPool, pickProxy, describePool } from "./proxy-pool.mjs";
 
 const RESEARCH = new URL("../research/", import.meta.url);
 
@@ -71,8 +72,10 @@ const CONC = Number(process.argv[3] ?? 8);
 // prospects-live.csv sorts contactable rows first, so a plain head() sample is
 // entirely sites that already have an address and reports a yield of zero new
 // ones. ONLY_MISSING restricts the run to the rows this is meant to fix.
-const pool = process.env.ONLY_MISSING ? all.filter((r) => !r.existing) : all;
-const targets = pool.slice(0, LIMIT);
+const candidatePool = process.env.ONLY_MISSING ? all.filter((r) => !r.existing) : all;
+const targets = candidatePool.slice(0, LIMIT);
+const proxyPool = loadProxyPool();
+console.log(describePool(proxyPool));
 console.log(`affiliate hunt over ${targets.length} sites, concurrency ${CONC}`);
 
 const browser = await chromium.launch({ headless: true });
@@ -83,9 +86,11 @@ let done = 0;
 async function hunt(rec) {
   const d = rec.domain;
   const out = { ...rec, affiliateEmail: "", affiliateUrl: "", platform: "", others: [] };
+  const proxy = pickProxy(proxyPool, done);
   const ctx = await browser.newContext({
     userAgent: UA, locale: "en-GB", ignoreHTTPSErrors: true,
     extraHTTPHeaders: { "Accept-Language": "en-GB,en;q=0.9" },
+    ...(proxy ? { proxy } : {}),
   });
   await ctx.addInitScript(() => Object.defineProperty(navigator, "webdriver", { get: () => undefined }));
   await ctx.route("**/*", (r) => {

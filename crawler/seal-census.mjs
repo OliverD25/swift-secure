@@ -11,6 +11,7 @@
 import { chromium } from "playwright";
 import { readFileSync, writeFileSync } from "node:fs";
 import { readTrustSignals } from "./trust-signals.mjs";
+import { loadProxyPool, pickProxy, describePool } from "./proxy-pool.mjs";
 
 // Resolve against this file, not the shell's working directory: the scripts are
 // run from the repo root as often as from crawler/, and a relative path that
@@ -25,6 +26,8 @@ const domains = lines.slice(1).map((l) => l.split(",")[di]).filter((d) => d && d
 const LIMIT = Number(process.argv[2] ?? domains.length);
 const CONC = Number(process.argv[3] ?? 8);
 const targets = domains.slice(0, LIMIT);
+const pool = loadProxyPool();
+console.log(describePool(pool));
 console.log(`seal census over ${targets.length} sites, concurrency ${CONC}`);
 
 const browser = await chromium.launch({ headless: true });
@@ -36,7 +39,13 @@ await Promise.all(
   Array.from({ length: CONC }, async () => {
     while (queue.length) {
       const d = queue.shift();
-      const r = await readTrustSignals(browser, d);
+      const proxy = pickProxy(pool, done);
+      const r = await readTrustSignals(browser, d, {
+        proxy,
+        // Match the browser's declared locale to where the IP claims to be;
+        // a UK locale on a Turkish exit node is a giveaway.
+        region: proxy?.region,
+      });
       results.push(r);
       if (++done % 40 === 0)
         console.log(`  ${done}/${targets.length}  paid so far: ${results.filter((x) => x.paidVendors?.length).length}`);
@@ -49,6 +58,11 @@ writeFileSync(new URL("seal-census.json", RESEARCH), JSON.stringify(results, nul
 
 const ok = results.filter((r) => r.ok);
 const blocked = results.filter((r) => r.blocked);
+// Neither read nor blocked: a crash, a timeout, or — most likely on the first
+// run after buying proxies — a proxy that is not working. Counted explicitly,
+// because a site that vanishes from both buckets looks like a smaller market
+// rather than a broken configuration.
+const errored = results.filter((r) => !r.ok && !r.blocked);
 const paid = ok.filter((r) => r.paidVendors?.length);
 const has = (r, c) => (r.signals?.[c] ?? 0) > 0;
 
@@ -56,7 +70,17 @@ const has = (r, c) => (r.signals?.[c] ?? 0) > 0;
 // attempted would quietly fold blocked sites into "has no trust signal", which
 // is a claim we have no evidence for.
 const pct = (n) => `${((n / ok.length) * 100).toFixed(1)}%`;
-console.log(`\n=== seal census: ${ok.length} read, ${blocked.length} blocked, of ${results.length} attempted ===`);
+console.log(`\n=== seal census: ${ok.length} read, ${blocked.length} blocked, ${errored.length} errored, of ${results.length} attempted ===`);
+if (errored.length > results.length / 4) {
+  // Most likely cause on a first run: proxies configured but not working. A
+  // site that lands in neither bucket would otherwise just shrink the market.
+  console.log(`  !! ${errored.length} sites failed outright — check the proxy configuration before trusting anything below.`);
+  console.log(`     first error: ${(errored.find((r) => r.error)?.error ?? "none recorded").slice(0, 90)}`);
+}
+if (!ok.length) {
+  console.log(`  Nothing could be read, so there are no percentages to report.`);
+  process.exit(1);
+}
 console.log(`  paying a commercial seal vendor : ${paid.length}  (${pct(paid.length)})`);
 console.log(`  regulator licence seal          : ${ok.filter((r) => has(r, "regulator")).length}  (${pct(ok.filter((r) => has(r, "regulator")).length)})`);
 console.log(`  responsible-gambling logos      : ${ok.filter((r) => has(r, "responsible")).length}  (${pct(ok.filter((r) => has(r, "responsible")).length)})`);

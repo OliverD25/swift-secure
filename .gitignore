@@ -30,3 +30,7 @@ crawler/reports/
 
 # scratch worktrees left behind by remote sessions
 .claude/worktrees/
+
+# proxy credentials — never commit
+crawler/proxies.txt
+.env.proxies

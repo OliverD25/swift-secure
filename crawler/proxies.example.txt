@@ -1,0 +1,9 @@
+# Residential proxy endpoints, one per line. Never commit this file.
+# Format: http://user:pass@host:port?country=<cc>
+#
+# The ?country= tag is not decoration — the sweep matches the browser locale
+# and timezone to it, so a mismatched tag makes the scanner look wrong on
+# purpose. Use the code your provider actually routes to.
+#
+# http://USER:PASS@geo.iproyal.com:12321?country=tr
+# http://USER:PASS@geo.iproyal.com:12321?country=de

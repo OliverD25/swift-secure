@@ -101,7 +101,7 @@ const REGIONS = {
 
 export async function readTrustSignals(browser, domain, opts = {}) {
   const region = REGIONS[opts.region] ?? REGIONS.uk;
-  const out = { domain, ok: false, blocked: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [], region: opts.region ?? "uk" };
+  const out = { domain, ok: false, blocked: false, error: "", signals: {}, samples: {}, vendorHosts: [], paidVendors: [], providerNames: [], region: opts.region ?? "uk", proxied: Boolean(opts.proxy) };
   const ctx = await browser.newContext({
     userAgent: UA,
     locale: region.locale,
@@ -109,6 +109,9 @@ export async function readTrustSignals(browser, domain, opts = {}) {
     ignoreHTTPSErrors: true,
     viewport: { width: 1440, height: 900 },
     extraHTTPHeaders: { "Accept-Language": region.lang },
+    // Set per context rather than per browser, so one sweep can rotate exit
+    // nodes across sites instead of burning a single one.
+    ...(opts.proxy ? { proxy: opts.proxy } : {}),
   });
   // Playwright leaves navigator.webdriver true and no plugins array, both of
   // which are checked by the off-the-shelf detection these sites deploy.
