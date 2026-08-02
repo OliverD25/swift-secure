@@ -249,3 +249,56 @@ The purchase still earns its keep, for a reason that was secondary at the time:
 the crawler can now fetch the same casino from four countries, which is what
 makes cloaking detection possible at all. That is a product capability, not a
 research convenience.
+
+## Cloaking: the check the badge exists to make
+
+Ran 3 August 2026 over 60 sites that claim a regulator, comparing Germany
+against Canada through a residential exit in each.
+
+| | Sites |
+| :--- | ---: |
+| **Confirmed: licence claim shown to one country, not the other** | **2** |
+| Discarded as our own noise after re-sampling | 4 |
+| Content varies by region (localisation, currency) | 9 |
+| Open in one country, refused in the other | 2 |
+
+**The confirmed pair:** `jokertipp.com` and `greatslots.com` both show a link to
+the Anjouan licence verifier to Canadian visitors on 3 of 3 samples, and to
+German visitors on 0 of 3. The split is as clean as this measurement gets.
+
+### The methodological result is bigger than the finding
+
+Six sites looked like they cloaked on a single sample. Two survived
+re-sampling. Three of the four discarded — `kush.casino`, `afrislots.net`,
+`gamwiz.com` — turned out to show the seal in **both** countries at 3 of 3, so
+there was never any difference at all; one unlucky sample invented it.
+
+**Single-sample comparison had a 67% false-positive rate.** Publishing those
+four would have meant accusing four operators of hiding their licence on the
+strength of a slow-loading iframe. For a business whose only asset is that its
+word means something, that is the failure mode to fear most — and it is now
+prevented by the tool rather than by whoever happens to be paying attention.
+
+### What the confirmed finding does and does not mean
+
+Germany licenses gambling under the GGL regime, where an Anjouan licence does
+not authorise serving German players. Both sites serve German visitors while
+showing them nothing about who licenses them.
+
+Three explanations fit, and this check cannot separate them:
+
+- the seal vendor's own widget may geo-restrict independently of the casino;
+- the operator may deliberately suppress a licence claim in a market that the
+  licence does not cover, which is arguably the responsible choice;
+- or it is what it looks like.
+
+**Resolving it is not required to have something worth publishing.** "Licence
+seal shown to visitors from Canada, not shown to visitors from Germany, checked
+3 August 2026" is a dated fact, and no static badge image can make that
+statement. That is the product.
+
+Regenerate:
+
+```bash
+PROXY_FILE=proxies.txt node crawler/cloaking.mjs --from=research/cloaking-targets.txt --regions=de,ca
+```
