@@ -161,7 +161,60 @@ export async function audit(browser, domain) {
   return out;
 }
 
-const domains = process.argv.slice(2);
+const argv = process.argv.slice(2);
+const flag = (n) => argv.find((a) => a.startsWith(`--${n}=`))?.split("=")[1];
+const RESEARCH = new URL("../research/", import.meta.url);
+
+// Sweep mode: read the domain list from the census, run concurrently, write
+// JSON. Runs over a direct connection on purpose — these sites are already
+// known to be readable without a proxy, so the sweep costs nothing.
+if (flag("sweep") !== undefined || flag("from")) {
+  const { readFileSync, writeFileSync } = await import("node:fs");
+  let list;
+  if (flag("from")) {
+    list = readFileSync(flag("from"), "utf8").trim().split(/\r?\n/).map((s) => s.trim()).filter(Boolean);
+  } else {
+    const census = JSON.parse(readFileSync(new URL("seal-census.json", RESEARCH), "utf8"));
+    list = census.filter((r) => r.ok).map((r) => r.domain);
+  }
+  const LIMIT = Number(flag("limit") ?? list.length);
+  const CONC = Number(flag("conc") ?? 6);
+  list = list.slice(0, LIMIT);
+  console.log(`auditing ${list.length} sites, concurrency ${CONC}, direct connection`);
+
+  const browser = await chromium.launch({ headless: true });
+  const results = [];
+  const queue = [...list];
+  let done = 0;
+  await Promise.all(
+    Array.from({ length: CONC }, async () => {
+      while (queue.length) {
+        const d = queue.shift();
+        try {
+          results.push(await audit(browser, d));
+        } catch (err) {
+          results.push({ domain: d, ok: false, error: String(err.message).slice(0, 80) });
+        }
+        if (++done % 25 === 0) console.log(`  ${done}/${list.length}  readable: ${results.filter((r) => r.ok).length}`);
+      }
+    }),
+  );
+  await browser.close();
+
+  // Merge by domain rather than replace — the same lesson the cloaking report
+  // had to learn the hard way when one run silently erased another.
+  const OUT = new URL("audit-report.json", RESEARCH);
+  let prev = [];
+  try { prev = JSON.parse(readFileSync(OUT, "utf8")); } catch { /* first run */ }
+  const merged = new Map(prev.map((r) => [r.domain, r]));
+  for (const r of results) merged.set(r.domain, r);
+  const all = [...merged.values()];
+  writeFileSync(OUT, JSON.stringify(all, null, 1), "utf8");
+  console.log(`\nwrote research/audit-report.json — ${all.length} sites (${results.length} this run)`);
+  process.exit(0);
+}
+
+const domains = argv.filter((a) => !a.startsWith("--"));
 if (domains.length) {
   const browser = await chromium.launch({ headless: true });
   const all = [];
