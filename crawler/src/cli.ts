@@ -153,7 +153,7 @@ async function cmdCuracao(args: string[]) {
 ${number}${domain ? ` @ ${domain}` : ""}`);
     if (r.found) {
       console.log(`  ${r.type} licence — ${r.company} (company no. ${r.companyNumber}), licensed since ${r.licensedSince}`);
-      console.log(`  Certificate authorises: ${r.certifiedDomain}`);
+      console.log(`  Approved domains (${r.approvedDomains?.length ?? 0}): ${(r.approvedDomains ?? []).slice(0, 8).join(", ")}${(r.approvedDomains?.length ?? 0) > 8 ? " ..." : ""}`);
       // The domain line is the finding worth shouting about; a genuine number on
       // a site it does not cover is the fraud this check exists to catch.
       if (r.domainMatches === false) console.log(`  *** DOMAIN MISMATCH ***`);

@@ -26,7 +26,15 @@ export interface CuracaoCertificate {
   licensedSince?: string;
   /** The domain the regulator authorises for this certificate. */
   certifiedDomain?: string;
-  /** True only when the certified domain matches the site we are checking. */
+  /**
+   * Every domain the licence covers.
+   *
+   * B2B certificates name one corporate site; B2C certificates list the whole
+   * portfolio. That list is worth more than the licence check it was fetched
+   * for — it is the operator's full brand roster, stated by the regulator.
+   */
+  approvedDomains?: string[];
+  /** True only when the site we are checking is covered by the licence. */
   domainMatches?: boolean;
   note: string;
   sourceUrl?: string;
@@ -88,22 +96,37 @@ export async function verifyCuracaoLicence(
     out.company = text.match(/certify that (.+?), a company incorporated/i)?.[1]?.trim();
     out.companyNumber = text.match(/Company Number (\w+)/i)?.[1];
     out.licensedSince = text.match(/since ([0-9]{1,2}\/\w{3}\/[0-9]{4})/i)?.[1];
-    out.certifiedDomain = text.match(/seal of approval on their corporate website ([^\s,]+)/i)?.[1]?.replace(/\.$/, "");
+    // Two certificate formats. B2B names one corporate site; B2C lists every
+    // approved domain. Only the B2B wording was handled, so a B2C certificate
+    // reported "authorises: undefined" and skipped the comparison entirely —
+    // the exact check this module exists to perform, silently not performed.
+    const b2b = text.match(/seal of approval on their corporate website ([^\s,]+)/i)?.[1]?.replace(/\.$/, "");
+    const listed = text.match(/following domains under its licen[cs]e:?\s*(.+?)(?:\s*Copyright|\s*Terms|$)/i)?.[1];
+    out.approvedDomains = listed
+      ? [...new Set(listed.split(/\s+/).map((d) => d.trim().replace(/[.,;]$/, "")).filter((d) => /^[a-z0-9-]+(\.[a-z0-9-]+)+$/i.test(d)).map(norm))]
+      : b2b
+        ? [norm(b2b)]
+        : [];
+    out.certifiedDomain = out.approvedDomains[0];
 
-    if (casinoDomain && out.certifiedDomain) {
-      const a = norm(out.certifiedDomain);
+    if (casinoDomain && out.approvedDomains.length) {
       const b = norm(casinoDomain);
-      out.domainMatches = a === b || a.endsWith(`.${b}`) || b.endsWith(`.${a}`);
+      out.domainMatches = out.approvedDomains.some((a) => a === b || a.endsWith(`.${b}`) || b.endsWith(`.${a}`));
     }
 
     // The domain line is the whole point: a real licence number displayed on a
     // site it does not cover is the failure this check exists to find.
+    const covers = out.approvedDomains.length;
     out.note = out.domainMatches === false
-      ? `The certificate is genuine but authorises ${out.certifiedDomain}, not ${casinoDomain}. ` +
-        `A licence number shown on a domain it does not cover needs a human to look at it.`
+      ? `The certificate is genuine but does not cover ${casinoDomain}. It authorises ` +
+        `${covers === 1 ? out.certifiedDomain : `${covers} other domains`}. A licence number shown on a ` +
+        `domain it does not cover needs a human to look at it.`
       : out.domainMatches === true
-        ? `Confirmed against the Curaçao Gaming Authority certificate, including the authorised domain.`
-        : `Certificate found. No casino domain was supplied, so the domain it authorises was not compared.`;
+        ? `Confirmed against the Curaçao Gaming Authority certificate, including the approved domain list` +
+          `${covers > 1 ? ` (${covers} domains on this licence)` : ""}.`
+        : !casinoDomain
+          ? `Certificate found. No casino domain was supplied, so nothing was compared.`
+          : `Certificate found, but no approved-domain list could be read from it, so coverage was not checked.`;
   } catch (err) {
     out.note = `Could not reach the certificate endpoint (${(err as Error).message.split("\n")[0].slice(0, 80)}). Nothing concluded.`;
   } finally {
