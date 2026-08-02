@@ -30,6 +30,66 @@ If `git diff --stat` shows thousands of deleted lines in one of these files,
 stop: count the records against `git show HEAD:<file>` before doing anything
 else.
 
+## The report must be useful to the casino, not to us
+
+We send operators a free technical report. Its purpose is to be **worth reading
+for them**. A finding that is merely interesting to us, or that gives us an
+opening for a sales conversation, does not belong in it.
+
+Before a check goes into the report it has to pass all four:
+
+1. **Would they thank us for it?** If the honest answer is "they would feel
+   accused", it is not a report item.
+2. **Can they act on it?** A finding with no fix is a complaint.
+3. **Is it plausible they do not already know?** If they did it deliberately,
+   telling them is either pointless or a threat.
+4. **Does it cost them money, players, or licence risk if left alone?**
+
+The example that fails: *"your certification badge looks fake."* They put it
+there on purpose, so they already know. Saying it helps nobody and reads as a
+threat whatever tone we use.
+
+The example that passes: *"38 requests on your deposit page return 404, all of
+them payment-method icons."* They almost certainly do not know, it costs them
+conversions at the worst possible moment, and it is fixable this afternoon.
+
+### What currently passes, measured over 367 readable sites
+
+| Check | Sites | Verdict |
+| :--- | ---: | :--- |
+| Broken requests (404/403 on assets) | 105 (29%) | **Passes.** Unknown to them, costs money, fixable |
+| Homepage over 500 requests | 20 (5%) | **Passes.** Factual, no accusation |
+| Trackers firing with no consent gate | 149 (41%) | **Passes only with careful wording** — state the measurement, never "you are breaking GDPR" |
+| Missing security headers | 250 (68%) | **Fails.** They do not care, and we would be one more voice saying so |
+| Images without alt text | most | **Fails.** Nobody acts on this from a stranger |
+| Licence claim differs by country | 7 of 130 | **Fails as a report item.** Either deliberate, or the seal vendor's own behaviour — not their bug either way |
+| Seal that misrepresents a licence | several | **Fails.** Deliberate. This is an accusation, not help |
+
+**122 of 367 sites (33%) have a finding that is unambiguously welcome** —
+breakage or extreme page weight, with nothing accusatory attached. Including the
+consent finding takes it to 181 (49%), but only while the wording stays a
+measurement rather than a legal opinion.
+
+### Findings that fail the test are not deleted, they change destination
+
+There are two outputs and they follow different rules:
+
+- **The report we send the operator** — only findings that pass all four tests.
+- **The public verification page** — may carry observations that are true but
+  unwelcome, because independent verification that publishes only flattering
+  facts is worth nothing.
+
+Cloaking and misrepresented seals belong in the second, never the first. Putting
+them in an email addressed to the operator turns a free service into an
+accusation, and the conversation is lost before it starts.
+
+### Never pad a report
+
+Roughly half of sites have nothing worth reporting. Those get a report saying
+exactly that. The temptation to add weak findings so it looks fuller destroys
+the only thing that makes the report worth sending — that when we do say
+something, it matters.
+
 ## Documentation
 
 Full documentation: https://docs.astro.build
