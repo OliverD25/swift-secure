@@ -120,12 +120,17 @@ for (const domain of domains) {
 await browser.close();
 writeFileSync(new URL("cloaking-report.json", RESEARCH), JSON.stringify(report, null, 1), "utf8");
 
-const differing = report.filter((r) => r.verdict === "DIFFERENT LICENCE CLAIM");
+// startsWith, not equality: the confirmed verdict carries a suffix naming the
+// regions, and an exact match silently counted every confirmed finding as zero.
+const differing = report.filter((r) => r.verdict.startsWith("DIFFERENT LICENCE CLAIM"));
 const varying = report.filter((r) => r.verdict === "content varies");
+const unstable = report.filter((r) => r.verdict.startsWith("unstable"));
 const geo = report.filter((r) => r.blockedIn.length && r.blockedIn.length < pool.length);
 
 console.log(`=== ${report.length} sites compared across ${pool.length} regions ===`);
 console.log(`  different licence claim by region : ${differing.length}${differing.length ? "  <- the finding that matters" : ""}`);
 console.log(`  content varies by region          : ${varying.length}  (usually localisation, not a problem)`);
+console.log(`  suspected but unstable            : ${unstable.length}  (our own noise, reported as nothing)`);
+for (const r of differing) console.log(`      ${r.domain}: ${r.verdict}`);
 console.log(`  open in some countries, not others: ${geo.length}  (normal — licences are territorial)`);
 console.log(`  wrote research/cloaking-report.json`);
