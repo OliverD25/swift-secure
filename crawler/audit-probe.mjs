@@ -56,7 +56,11 @@ export async function audit(browser, domain) {
     try {
       const len = Number(r.headers()["content-length"] ?? 0);
       bytes += len;
-      if (r.status() >= 400) failed.push(`${r.status()} ${new URL(r.url()).pathname.slice(0, 50)}`);
+      // Keep the whole URL, query included. Storing only the pathname made
+      // findings unreproducible: /_next/image without its ?url= parameters is a
+      // legitimate 400, so an operator handed that path would rightly dismiss
+      // it. A finding we cannot hand over verbatim is not a finding.
+      if (r.status() >= 400) failed.push({ status: r.status(), url: r.url(), type: r.resourceType() });
     } catch {}
   });
   page.on("console", (m) => { if (m.type() === "error") consoleErrors.push(m.text().slice(0, 100)); });
@@ -144,7 +148,17 @@ export async function audit(browser, domain) {
 
     // --- craft: things that are simply broken ---------------------------
     out.brokenRequests = failed.length;
-    out.brokenSample = failed.slice(0, 3);
+    out.brokenSample = failed.slice(0, 6);
+    // Group by the failing directory so "38 broken payment icons" reads as one
+    // fixable problem rather than 38 unrelated errors.
+    const groups = {};
+    for (const f of failed) {
+      try {
+        const dir = new URL(f.url).pathname.split("/").slice(0, -1).join("/") || "/";
+        groups[dir] = (groups[dir] ?? 0) + 1;
+      } catch {}
+    }
+    out.brokenGroups = Object.entries(groups).sort((a, b) => b[1] - a[1]).slice(0, 4);
     out.consoleErrors = consoleErrors.length;
     out.consoleSample = consoleErrors.slice(0, 2);
     out.mixedContent = requests.filter((r) => r.url.startsWith("http://")).length;
