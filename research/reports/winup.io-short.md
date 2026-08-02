@@ -13,8 +13,11 @@ Same for `aninda2_papara.svg` and `betterbro_pix.svg`. **38 requests failed on
 one homepage load.** Verified with curl, outside the browser.
 
 Players get blank spaces where the Papara, bank transfer and Pix logos should
-be — at the moment they choose how to deposit. It fails silently, and anyone
-who has visited before sees them from cache, which is likely why nobody noticed.
+be — at the moment they choose how to deposit.
+
+This is easy to miss. A missing image produces no error page and no warning, and
+anyone who has opened the site before is served the icons from their own cache —
+so on your team's machines the page looks correct.
 
 The redirect adds `/en/` to the asset path, so the SPA rewrite is probably
 catching it before the static file handler.
