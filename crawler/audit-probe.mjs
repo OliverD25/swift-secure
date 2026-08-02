@@ -163,12 +163,16 @@ export async function audit(browser, domain) {
 
 const argv = process.argv.slice(2);
 const flag = (n) => argv.find((a) => a.startsWith(`--${n}=`))?.split("=")[1];
+// A bare --sweep carries no "=", so the flag reader above cannot see it and the
+// script exited silently with status 0 — worse than an error, because it looks
+// like a successful run that found nothing.
+const has = (n) => argv.includes(`--${n}`);
 const RESEARCH = new URL("../research/", import.meta.url);
 
 // Sweep mode: read the domain list from the census, run concurrently, write
 // JSON. Runs over a direct connection on purpose — these sites are already
 // known to be readable without a proxy, so the sweep costs nothing.
-if (flag("sweep") !== undefined || flag("from")) {
+if (has("sweep") || flag("from")) {
   const { readFileSync, writeFileSync } = await import("node:fs");
   let list;
   if (flag("from")) {
