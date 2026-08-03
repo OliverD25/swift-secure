@@ -1,0 +1,174 @@
+{
+ "domain": "winup.io",
+ "ranAt": "2026-08-03T09:43:23.197Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan (ALSI-202601062-FI2). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 6 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "report",
+   "area": "health",
+   "text": "38 requests fail on the homepage. Examples: 400 https://winup.io/api/v1/bonuses?lang=en&type=promo | 400 https://winup.io/api/v1/publicSocketsData?lang=en | 404 https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10"
+  },
+  {
+   "use": "report",
+   "area": "consent",
+   "text": "2 tracking host(s) received a request before any consent interaction, measured from a German browser context: www.googletagmanager.com, www.google-analytics.com. This is a measurement, not a legal opinion."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection the Register/Sign-up button does not appear for 15.2s."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "The page does not finish loading within 10s on a Fast 3G mobile connection."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "winup.io",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [
+     "ALSI-202601062-FI2"
+    ],
+    "sealLinks": [
+     "https://verification.anjouangamingboard.org/validate?domain=winup.io&seal_id=711467b1ddcb6c1140a50fba8bdd2a5b76e31baa66fb8ee220d69e3afd8f37143b7e5ba5b3d7be9f17d0fe46deed18e7&stamp=d9147a8bf0e963b48012ecccfdcb8335"
+    ],
+    "excerpt": "METROS AL NORTE Y CINCUENTA AL ESTE, EDIFICIO OFI DENT, OFICINA NUMERO TRES.. Contact us support@winup.io. Winup.io is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No.ALSI-202601062-FI2. Winup.io has passed all regulatory compliance and is legally authorized to conduct gaming opera ons for any and all"
+   }
+  },
+  "signals": {
+   "domain": "winup.io",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "provider": 14,
+    "regulator": 3
+   },
+   "samples": {
+    "provider": [
+     "//agstatic.com/games/playsondirect/315/burning_wins.jpg | Burning Wins: classic 5 lines",
+     "//agstatic.com/games/playsondirect/315/diamonds_power_hold_and_win.jpg | Diamonds Power: H",
+     "//agstatic.com/games/playsondirect/315/golden_penny_x1000.jpg | Golden Penny x1000",
+     "//agstatic.com/games/playsondirect/315/royal_coins_2_hold_and_win.jpg | Royal Coins 2: Hol"
+    ],
+    "regulator": [
+     "wlc-license__anjouan ng-star-inserted",
+     "https://verification.anjouangamingboard.org/validate?domain=winup.io&seal_id=711467b1ddcb6",
+     "[iframe/network] 2ffa450b-6306-4d38-b17c-0c848ac921d7.snippet.anjouangaming.org"
+    ]
+   },
+   "vendorHosts": [
+    "2ffa450b-6306-4d38-b17c-0c848ac921d7.snippet.anjouangaming.org"
+   ],
+   "paidVendors": [],
+   "providerNames": [
+    "Belatra",
+    "Betsoft",
+    "Evoplay",
+    "Hacksaw",
+    "Playson",
+    "Yggdrasil"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "winup.io",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 708,
+   "settled": 6721,
+   "requestCount": 206,
+   "transferKB": 2400,
+   "thirdPartyHosts": 5,
+   "trackersBeforeConsent": [
+    "www.googletagmanager.com",
+    "www.google-analytics.com"
+   ],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": false,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 32,
+    "metaDescription": 138,
+    "h1Count": 0,
+    "canonical": false,
+    "hreflang": 1,
+    "structuredData": 0,
+    "ogImage": true,
+    "imagesNoAlt": 3
+   },
+   "brokenRequests": 38,
+   "brokenSample": [
+    "400 https://winup.io/api/v1/bonuses?lang=en&type=promo",
+    "400 https://winup.io/api/v1/publicSocketsData?lang=en",
+    "404 https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10",
+    "404 https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=100&quantity=10",
+    "404 https://agstatic.com/paysystems/V2/svg/black/aninda2_banka.svg",
+    "400 https://winup.io/api/v1/tournaments?lang=en&currency=EUR"
+   ],
+   "brokenGroups": [
+    [
+     "/paysystems/V2/svg/black",
+     33
+    ],
+    [
+     "/api/v1",
+     5
+    ]
+   ],
+   "consoleErrors": 38,
+   "consoleSample": [
+    "Failed to load resource: the server responded with a status of 400 ()",
+    "Failed to load resource: the server responded with a status of 400 ()"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "winup.io  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 12847ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 15152ms (\"Sign Up\")\n  requests / KB    : 213 / 3700",
+   "ctaMs": 15152,
+   "loadTimedOut": true
+  }
+ }
+}

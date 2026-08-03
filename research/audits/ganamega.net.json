@@ -1,0 +1,132 @@
+{
+ "domain": "ganamega.net",
+ "ranAt": "2026-08-03T09:45:30.793Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan (ALSI-202511012-FI1). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 0.5s on Fast 3G — healthy."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "ganamega.net",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [
+     "ALSI-202511012-FI1"
+    ],
+    "sealLinks": [
+     "https://verification.anjouangamingboard.org/validate?domain=ganamega.net&seal_id=2506aa4c77d9f9cba0c8339da8661429a016ae7d7c61f3183b05d585130ba1dda6b636a314ba38b1b02889ce79f65951&stamp=3e3fa7ee6d4c3e56ec8042c4ba5f1f1d"
+    ],
+    "excerpt": "erated by Juicecraft Limited, registration number: 16132, registered address: Hamchako, Mutsamudu, Autonomous Island of Anjouan, Union of Comoros. Contact us at support@ganamega.net. ganamega.net is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No. ALSI-202511012-FI1. ganamega.net has passed all regulat"
+   }
+  },
+  "signals": {
+   "domain": "ganamega.net",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "responsible": 2,
+    "regulator": 2,
+    "payment": 7
+   },
+   "samples": {
+    "responsible": [
+     "/responsible-gambling | Footer_colLink__slISn | Responsible Gambling",
+     "Footer_ageBadge__1i4li | 18+"
+    ],
+    "regulator": [
+     "AnjouanSeal_seal__2st_P",
+     "https://verification.anjouangamingboard.org/validate?domain=ganamega.net&seal_id=2506aa4c7"
+    ],
+    "payment": [
+     "Footer_paymentBadge__uojr0 | Visa",
+     "Footer_paymentBadge__uojr0 | Mastercard",
+     "Footer_paymentBadge__uojr0 | Skrill",
+     "Footer_paymentBadge__uojr0 | Neteller"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "ganamega.net",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 217,
+   "settled": 6228,
+   "requestCount": 75,
+   "transferKB": 476,
+   "thirdPartyHosts": 2,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": true,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": false,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 47,
+    "metaDescription": 140,
+    "h1Count": 0,
+    "canonical": false,
+    "hreflang": 0,
+    "structuredData": 0,
+    "ogImage": false,
+    "imagesNoAlt": 1
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "ganamega.net  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 776ms\n  load event       : 4029ms\n  CTA visible at   : 513ms (\"Register\")\n  requests / KB    : 70 / 476",
+   "ctaMs": 513,
+   "loadTimedOut": false
+  }
+ }
+}

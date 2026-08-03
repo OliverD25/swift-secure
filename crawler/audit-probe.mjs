@@ -60,7 +60,14 @@ export async function audit(browser, domain) {
       // findings unreproducible: /_next/image without its ?url= parameters is a
       // legitimate 400, so an operator handed that path would rightly dismiss
       // it. A finding we cannot hand over verbatim is not a finding.
-      if (r.status() >= 400) failed.push({ status: r.status(), url: r.url(), type: r.resourceType() });
+      // resourceType() lives on Request, not Response. Calling it here threw on
+      // every single 4xx, and the empty catch below swallowed it — so
+      // brokenRequests read 0 on a site with 38 real failures, and the whole
+      // strongest category of report finding was silently invisible. Read it
+      // from the originating request instead, and tolerate that being absent.
+      if (r.status() >= 400) {
+        failed.push({ status: r.status(), url: r.url(), type: r.request()?.resourceType() ?? "" });
+      }
     } catch {}
   });
   page.on("console", (m) => { if (m.type() === "error") consoleErrors.push(m.text().slice(0, 100)); });
@@ -148,7 +155,11 @@ export async function audit(browser, domain) {
 
     // --- craft: things that are simply broken ---------------------------
     out.brokenRequests = failed.length;
-    out.brokenSample = failed.slice(0, 6);
+    // Formatted to a string here rather than left as objects: this value is
+    // consumed by audit.mjs and by the report writer, both of which join it
+    // into human-readable text — an object array renders as [object Object]
+    // and silently destroys the one detail that makes the finding actionable.
+    out.brokenSample = failed.slice(0, 6).map((f) => `${f.status} ${f.url}`);
     // Group by the failing directory so "38 broken payment icons" reads as one
     // fixable problem rather than 38 unrelated errors.
     const groups = {};
@@ -175,7 +186,13 @@ export async function audit(browser, domain) {
   return out;
 }
 
-const argv = process.argv.slice(2);
+// Only act as a CLI when run directly. audit.mjs imports audit() from here and
+// passes a domain as its own argv, which this file used to read as "single
+// domain mode" and act on — so importing the module silently launched a second
+// full scan and printed its own report before the caller's.
+const RUN_DIRECTLY = process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, "/").split("/").pop());
+
+const argv = RUN_DIRECTLY ? process.argv.slice(2) : [];
 const flag = (n) => argv.find((a) => a.startsWith(`--${n}=`))?.split("=")[1];
 // A bare --sweep carries no "=", so the flag reader above cannot see it and the
 // script exited silently with status 0 — worse than an error, because it looks

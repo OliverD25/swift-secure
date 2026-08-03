@@ -351,10 +351,43 @@ names resolved through the same shared landing-page host, and one Curaçao
 operator's domain appeared under two separate licences. A contact-harvest pass
 against the newer pools should update this file, not create a fourth.
 
+## 7a. Auditing a single casino — the one command
+
+When a new casino turns up and you want it audited against this document:
+
+```bash
+cd crawler && npm run audit -- <domain>
+```
+
+`crawler/audit.mjs` runs the checks this methodology considers trustworthy —
+licence verification, trust signals, site health, mobile time-to-register — and
+routes every finding into one of three buckets, per §1:
+
+- **SEND TO OPERATOR** — passed all four AGENTS.md questions
+- **PUBLIC PAGE ONLY** — true but unwelcome, never emailed
+- **context** — for our own understanding
+
+It writes `research/audits/<domain>.json` and prints the routed summary. When a
+site has nothing worth reporting it says exactly that rather than padding.
+
+**Cloaking and payment-routing are deliberately not part of it.** Both need two
+or more proxy regions at three samples each, so they cost real metered traffic
+and are a deliberate decision rather than a default. `audit.mjs` prints the
+exact commands when a proxy pool is configured.
+
+> **`npm run scan` is deprecated and must not be used to judge a casino.** Its
+> core is the game-provider check that §6 records as impossible; it still
+> prints clean/suspicious verdicts about game origins, and those verdicts are
+> not defensible. It survives only because its licence lookup predates the
+> newer tooling.
+
 ## 8. Tooling map
 
 | Stage | Tool | Output |
 | :--- | :--- | :--- |
+| **Audit one casino (start here)** | `crawler/audit.mjs` | `research/audits/<domain>.json` |
+| Mobile time-to-register | `crawler/mobile-timing.mjs` | `research/mobile-timing-report.json` |
+| Payment routing by region | `crawler/payment-routing-check.mjs` | `research/payment-routing-report.json` |
 | Anjouan register pull | `crawler/src/checks/licence.ts` | used live, not persisted separately |
 | Curaçao register (PDF) | `research/scripts/8-curacao-register.py` | `research/curacao-register.csv` |
 | Curaçao licence → domains | `crawler/curacao-expand.mjs` | `research/curacao-expanded.json` |

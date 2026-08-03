@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Verification crawler: checks that a casino's games load from real provider or aggregator infrastructure, and that its licence exists in the regulator's register.",
   "scripts": {
+    "audit": "node audit.mjs",
     "scan": "node --experimental-strip-types src/cli.ts scan",
     "licence": "node --experimental-strip-types src/cli.ts licence",
     "learn": "node --experimental-strip-types src/cli.ts learn",

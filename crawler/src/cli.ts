@@ -13,7 +13,14 @@ function usage(): never {
   console.log(`
 Swift Secure verification crawler
 
-  npm run scan -- <domain> [more domains...]   Full check: games + licence
+  For a full audit of one casino, use the orchestrator instead of this CLI:
+
+      npm run audit -- <domain>          (crawler/audit.mjs)
+
+  It follows research/methodology.md and routes every finding to report /
+  public-page / context. The commands below are single-purpose tools.
+
+  npm run scan -- <domain> [more domains...]   DEPRECATED — see note below
   npm run licence -- <domain> [...]            Licence register lookup only (fast, no proxy needed)
   npm run learn -- <domain>                    Dump unclassified hosts, to grow the signature DB
   npm run footer -- <domain> [...]             Read what the site itself claims about its licence
@@ -26,6 +33,14 @@ Environment:
 
 Without proxies the crawler still runs, but from one datacentre IP: results are
 marked proxied:false and must not be published as geo-verified.
+
+DEPRECATED — 'scan': its core is checkGames(), the "verify game iframes route
+to real provider servers" check. That was tested against four live casinos and
+found zero provider hosts on every one, because operators proxy game content
+through unbranded CDNs and their own mirror domains. The clean/suspicious
+verdicts it prints about game origins are not defensible and must not be shown
+to an operator or used in a report. Use 'npm run audit' instead. See
+research/methodology.md section 6.
 `);
   process.exit(1);
 }
