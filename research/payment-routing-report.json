@@ -1,0 +1,145 @@
+[
+ {
+  "domain": "winup.io",
+  "perRegion": {
+   "de": {
+    "rates": {},
+    "blockedCount": 3,
+    "sampled": 0
+   },
+   "ca": {
+    "rates": {
+     "Interac": 3
+    },
+    "blockedCount": 0,
+    "sampled": 3
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "bet10bet.com",
+  "perRegion": {
+   "de": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {},
+    "blockedCount": 1,
+    "sampled": 2
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "yasalbahis.com",
+  "perRegion": {
+   "de": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "fatbets.com",
+  "perRegion": {
+   "de": {
+    "rates": {
+     "Bitcoin": 3,
+     "Litecoin": 3
+    },
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {
+     "Bitcoin": 3,
+     "Litecoin": 3
+    },
+    "blockedCount": 0,
+    "sampled": 3
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "ligobet.com",
+  "perRegion": {
+   "de": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {},
+    "blockedCount": 2,
+    "sampled": 1
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "starzbet.com",
+  "perRegion": {
+   "de": {
+    "rates": {
+     "Visa": 3,
+     "Mastercard": 3,
+     "Apple Pay": 3,
+     "Google Pay": 3,
+     "Bitcoin": 3,
+     "USDT": 3,
+     "Litecoin": 3
+    },
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {
+     "Visa": 2,
+     "Mastercard": 2,
+     "Apple Pay": 2,
+     "Google Pay": 2,
+     "Bitcoin": 2,
+     "USDT": 2,
+     "Litecoin": 2
+    },
+    "blockedCount": 1,
+    "sampled": 2
+   }
+  },
+  "findings": [],
+  "flag": ""
+ },
+ {
+  "domain": "dodobet.com",
+  "perRegion": {
+   "de": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   },
+   "ca": {
+    "rates": {},
+    "blockedCount": 0,
+    "sampled": 3
+   }
+  },
+  "findings": [],
+  "flag": ""
+ }
+]
