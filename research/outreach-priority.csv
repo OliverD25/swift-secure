@@ -1,0 +1,753 @@
+rank,domain,score,areas,n_findings,n_emailable,email_headline,brand,operator,operator_rank,email,has_email,licence,licence_status,source
+1,race365.com,22,broken+consent+weight,3,2,15 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Race365,Superstars Entertainment B.V.,1,,no,OGL/2024/1296/0547,active,curacao
+2,donebets.com,20,broken+weight,2,2,11 genuine request failure(s) on the homepage (all on their own domain),Loading,3-102-952932 SRL,1,,no,ALSI-202604027-FI2,,anjouan
+3,metaigaming.io,19,broken+consent+weight,3,2,22 genuine request failure(s) on the homepage (all on their own domain),Meta System,Middle Kang B.V.,1,,no,OGL/2024/2267/1181,assessment in progress,curacao
+4,betplatino.co,18,broken+consent+mixed+weight,4,3,"2 genuine request failure(s) on the homepage (1 on their own domain, 1 on a third-party host)",Betplatino,Trickless N.V,1,,no,OGL/2024/139/0125,assessment in progress,curacao
+5,casshiva.com,18,broken+weight,2,2,5 genuine request failure(s) on the homepage (all on their own domain),Loading,3-102-952932 SRL,2,,no,ALSI-202604027-FI2,,anjouan
+6,godbunny.com,18,broken+consent+weight,3,2,"55 genuine request failure(s) on the homepage (1 on their own domain, 54 on a third-party host)",GodBunny,Godbunny B.V.,1,,no,OGL/2024/199/0868,active,curacao
+7,luckybet.co,18,broken+consent+weight,3,2,42 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),LuckyBet,LBC Enterprises B.V.,1,,no,OGL/2024/1221/0500,assessment in progress,curacao
+8,parolambet.com,18,broken+consent+weight,3,2,10 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Loading,3-102-952932 SRL,3,,no,ALSI-202604027-FI2,,anjouan
+9,fatbets.com,17,broken+consent,2,1,9 genuine request failure(s) on the homepage (all on their own domain),Gamdom,Fatbets Ltd,1,support@gamdom.com,yes,ALSI-202508054-FI2,,anjouan
+10,nicewinz.com,17,broken+weight,2,2,21 genuine request failure(s) on the homepage (all on their own domain),NiceWin,Glory Multimedia B.V.,1,,no,OGL/2024/1600/0861,assessment in progress,curacao
+11,oxy.casino,17,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),OXY,Spiritus Limited,1,support@oxy.casino,yes,ALSI-202603056-FI2,,anjouan
+12,slapperzz.com,17,broken+consent+weight,3,2,24 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Slapperzz,3-102-942611 SRL,1,support@slapperzz.com,yes,ALSI-202509041-FI1,,anjouan
+13,winup.io,17,broken+consent,2,1,"38 genuine request failure(s) on the homepage (5 on their own domain, 33 on a third-party host)",Winup,3-102-952740 SRL,1,support@winup.io,yes,ALSI-202601062-FI2,,anjouan
+14,xtp.com,17,broken+consent,2,1,20 genuine request failure(s) on the homepage (all on their own domain),XTP,Entretenimiento Rojo B.V.,1,,no,OGL/2024/1100/0505,assessment in progress,curacao
+15,casinonavy.com,16,broken,1,1,8 genuine request failure(s) on the homepage (all on their own domain),Homepage,JMS Investment Group N.V.,1,,no,OGL/2024/675/0939,active,curacao
+16,ganalucas.com,16,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Spotless Serenity Stays Inc.,W&C N.V.,1,,no,OGL/2024/922/0638,active,curacao
+17,gekipachi.com,16,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on their own domain),アツパチ,Lucifer N.V.,1,,no,OGL/2024/1635/0968,active,curacao
+18,jonbet.io,16,broken,1,1,33 genuine request failure(s) on the homepage (all on their own domain),jonbet,Ascend Entertainment N.V.,1,,no,OGL/2024/1467/0728,assessment in progress,curacao
+19,jun88.id,16,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Jun88 Trang chủ chính thức Jun88.com,Cyber Labs B.V.,1,,no,OGL/2024/1696/1055,active,curacao
+20,tomcasino.net,16,broken+consent+weight,3,2,92 genuine request failure(s) on the homepage (all on their own domain),Tomcasino,3-102-941391 SRL,1,,no,ALSI-202511019-FI1,,anjouan
+21,jurassino.com,15,broken,1,1,6 genuine request failure(s) on the homepage (all on their own domain),jurassino,GTW B.V.,1,,no,OGL/2024/250/0115,assessment in progress,curacao
+22,betanic.com,14,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Games,Kitsilano Limitada,1,,no,ALSI-202508065-FI2,,anjouan
+23,castle.com,14,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Castle,Broken Tentacle Ltd,1,partners@castle.com,yes,ALSI-202602048-FI2,,anjouan
+24,coinebet.com,14,broken+weight,2,2,3 genuine request failure(s) on the homepage (all on their own domain),coinebet,Rail Solutions Group B.V.,1,,no,OGL/2024/788/0550,assessment in progress,curacao
+25,fgfox.com,14,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on their own domain),fgfox,FairGame G.P. N.V.,1,,no,OGL/2024/1673/0915,active,curacao
+26,gamealotroyale.com,14,broken+consent+weight,3,2,27 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Gamealotroyale,3-102-954988 SRL,1,support@gamealotroyale.com,yes,ALSI-202602051-FI2,,anjouan
+27,ganare.com,14,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on their own domain),Ganare,Born Champion Entertainment Ltd,1,,no,ALSI-202604031-FI2,,anjouan
+28,gangabet.mx,14,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on their own domain),GANGABET Apuestas y,OW Internacional Ltd,1,,no,ALSI-202512013-FI1,,anjouan
+29,keeponwin.com,14,broken+weight,2,2,7 genuine request failure(s) on the homepage (all on their own domain),Keep On Win,Keep On Entertainment N.V.,1,,no,OGL/2024/2279/1202,active,curacao
+30,orobet.cl,14,broken+consent+weight,3,2,"3 genuine request failure(s) on the homepage (1 on their own domain, 2 on a third-party host)",Orobet,SUVYD B.V.,1,,no,OGL/2024/846/0501,assessment in progress,curacao
+31,petra.bet,14,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on their own domain),petra,Trickless N.V,2,,no,OGL/2024/139/0125,assessment in progress,curacao
+32,vivaro.me,14,broken+consent+mixed+weight,4,3,1 genuine request failure(s) on the homepage (all on their own domain),Feed,Radon B.V.,1,,no,OGL/2024/802/0282,assessment in progress,curacao
+33,zeabet777.com,14,broken+weight,2,2,4 genuine request failure(s) on the homepage (all on their own domain),ZeaBet,Glory Multimedia B.V.,2,,no,OGL/2024/1600/0861,assessment in progress,curacao
+34,9winz.com,13,broken+consent+weight,3,2,12 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),winz,Globis N.V.,1,,no,OGL/2024/1194/0723,active,curacao
+35,betitor.com,13,broken+consent,2,1,"7 genuine request failure(s) on the homepage (6 on their own domain, 1 on a third-party host)",Betitor,3-102-941073 SRL,1,,no,ALSI-202509018-FI1,,anjouan
+36,chokwin.com,13,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on their own domain),chokwin,Rail Solutions Group B.V.,2,,no,OGL/2024/788/0550,assessment in progress,curacao
+37,dustbit.com,13,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Dustbit,Oxilium Limited,1,support@dustbit.com,yes,ALSI-202509012-FI1,,anjouan
+38,elitebet.io,13,broken,1,1,4 genuine request failure(s) on the homepage (all on their own domain),elitebet,R. Bostock Enterprises B.V.,1,,no,OGL/2024/1067/0640,active,curacao
+39,gaming-panda.com,13,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Gaming Panda,Pistis Trade N.V.,1,,no,OGL/2024/1670/1153,active,curacao
+40,jon.bet,13,broken,1,1,33 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),jon,Ascend Entertainment N.V.,2,,no,OGL/2024/1467/0728,assessment in progress,curacao
+41,kaahaus.com,13,broken+consent,2,1,3 genuine request failure(s) on the homepage (all on their own domain),Tervetuloa Kaahaus Kasinolle,Fruity Entertainment N.V.,1,,no,OGL/2024/1487/0729,assessment in progress,curacao
+42,lottotoo.com,13,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Lottotoo,Superstars Entertainment B.V.,2,,no,OGL/2024/1296/0547,active,curacao
+43,luminous.casino,13,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Luminous,LuminousCompany Ltd.,1,support@luminous.casino,yes,ALSI-202601036-FI1,,anjouan
+44,orobetar.com,13,broken+consent+weight,3,2,"3 genuine request failure(s) on the homepage (1 on their own domain, 2 on a third-party host)",Orobet,SUVYD B.V.,2,,no,OGL/2024/846/0501,assessment in progress,curacao
+45,spinnaus.com,13,broken+consent,2,1,3 genuine request failure(s) on the homepage (all on their own domain),Spinnaus Kasino,Fruity Entertainment N.V.,2,,no,OGL/2024/1487/0729,assessment in progress,curacao
+46,top.casino,13,broken+consent+weight,3,2,4 genuine request failure(s) on the homepage (all on their own domain),Online betting,Cre8 B.V.,1,,no,OGL/2024/375/0657,assessment in progress,curacao
+47,zipangcasino.com,13,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),ジパングカジノ｜24時間日本語サポートのオンラインカジノ,Osmila N.V.,1,,no,OGL/2024/1276/0583,active,curacao
+48,abcfortunazone.com,12,broken+consent+weight,3,2,60 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Fortunazone Slots,Altan N.V.,1,,no,OGL/2024/596/0252,active,curacao
+49,anubet.com,12,broken+consent,2,1,"2 genuine request failure(s) on the homepage (1 on their own domain, 1 on a third-party host)",AnuBet,Hexiro Ltd,1,,no,ALSI-202509043-FI1,,anjouan
+50,atlantivegas.com,12,broken+consent+weight,3,2,17 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Atlantivegas,SG International N.V.,1,,no,OGL/2024/379/0174,assessment in progress,curacao
+51,atomfortuna.com,12,broken+consent+weight,3,2,60 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Fortunazone Slots,Altan N.V.,2,,no,OGL/2024/596/0252,active,curacao
+52,auro777.win,12,broken,1,1,"3 genuine request failure(s) on the homepage (2 on their own domain, 1 on a third-party host)",auro,Mirth B.V.,1,,no,OGL/2024/1124/0444,active,curacao
+53,bet502.com,12,broken+consent,2,1,"2 genuine request failure(s) on the homepage (1 on their own domain, 1 on a third-party host)",Bet502,Netsolution Holding Ltd.,1,,no,ALSI-202511057-FI2,,anjouan
+54,betss.com,12,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Betss,Ceylonite Ltd,1,,no,ALSI-202603025-FI1,,anjouan
+55,betx360.live,12,broken+mixed,2,2,1 genuine request failure(s) on the homepage (all on their own domain),WebClientV3,GB Tech Services N.V.,1,,no,OGL/2024/114/0135,assessment in progress,curacao
+56,bm.bet,12,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on their own domain),Bm.bet,FairGame G.P. N.V.,2,,no,OGL/2024/1673/0915,active,curacao
+57,fortunazone.com,12,broken+consent+weight,3,2,60 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Fortunazone Slots,Altan N.V.,3,,no,OGL/2024/596/0252,active,curacao
+58,grandx.game,12,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),GrandX,Ay Information Technology LTD,1,,no,ALSI-202511017-FI1,,anjouan
+59,kilobet.com,12,broken+consent+weight,3,2,9 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),KiloBet,SG International N.V.,2,,no,OGL/2024/379/0174,assessment in progress,curacao
+60,majorx.game,12,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),MajorX,Ay Information Technology LTD,2,,no,ALSI-202511017-FI1,,anjouan
+61,maltcasino.com,12,broken+consent+weight,3,2,3 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),MaltCasino,Fortuna Digital Solutions FDS Limitada,1,,no,ALSI-202509068-FI2,,anjouan
+62,minix.game,12,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),MiniX,Ay Information Technology LTD,3,,no,ALSI-202511017-FI1,,anjouan
+63,minorx.game,12,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),MinorX,Ay Information Technology LTD,4,,no,ALSI-202511017-FI1,,anjouan
+64,nolimit.bet,12,broken,1,1,3 genuine request failure(s) on the homepage (all on their own domain),UnlimitedBet,NovaWave Technology N.V.,1,,no,OGL/2024/547/0446,active,curacao
+65,sc88.co,12,broken,1,1,"3 genuine request failure(s) on the homepage (1 on their own domain, 2 on a third-party host)",SC88,Cyber Labs B.V.,2,,no,OGL/2024/1696/1055,active,curacao
+66,spinay.com,12,broken,1,1,8 genuine request failure(s) on the homepage (all on their own domain),Spinay,Oranox Ltd,1,support@spinay.com,yes,ALSI-202601012-FI1,,anjouan
+67,squadduel.com,12,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Squad Duel,Kitsilano Limitada,2,,no,ALSI-202508065-FI2,,anjouan
+68,tucasino.lat,12,broken+weight,2,2,5 genuine request failure(s) on the homepage (all on their own domain),TuCasino,Nova Code Limitada,1,,no,ALSI-202508064-FI2,,anjouan
+69,vegas.salon,12,broken+consent+weight,3,2,21 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Vegas,SG International N.V.,3,,no,OGL/2024/379/0174,assessment in progress,curacao
+70,10x10.bet,11,broken,1,1,6 genuine request failure(s) on the homepage (all on their own domain),Home,Normanhouse LTD,1,,no,ALSI-202603050-FI2,,anjouan
+71,batcasino.bet,11,broken+consent+weight,3,2,6 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Batcasino,3-102-953033 SRL,1,support@batcasino.bet,yes,ALSI-202602037-FI2,,anjouan
+72,betphoenix.ag,11,broken+consent+mixed+weight,4,3,1 genuine request failure(s) on the homepage (all on their own domain),Betphoenix,International Radical Investment Ltd,1,,no,ALSI-202509042-FI1,,anjouan
+73,betsomnia.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Betsomnia,FairGame G.P. N.V.,3,,no,OGL/2024/1673/0915,active,curacao
+74,betzard.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Betzard Casino,FairGame G.P. N.V.,4,,no,OGL/2024/1673/0915,active,curacao
+75,bufonbet.com,11,broken+consent+weight,3,2,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),GANGABET Apuestas y,OW Internacional Ltd,2,,no,ALSI-202512013-FI1,,anjouan
+76,ftvclub.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),ftvclub,Osmila N.V.,2,,no,OGL/2024/1276/0583,active,curacao
+77,jacktop.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Jacktop,FairGame G.P. N.V.,5,,no,OGL/2024/1673/0915,active,curacao
+78,kiekka.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Kiekka pikakasino,Fruity Entertainment N.V.,3,,no,OGL/2024/1487/0729,assessment in progress,curacao
+79,kikabet.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Kikabet,Blackwave Ltd.,1,,no,ALSI-202509019-FI1,,anjouan
+80,orowin.bet,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Orowin,Win Vision N.V.,1,support@orowin.bet,yes,ALSI-202605001-FI1,,anjouan
+81,realreelscasino.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),realreelscasino,River Entertainment B.V.,1,,no,OGL/2024/688/0234,active,curacao
+82,sikkaro.bet,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Sikkarobet,Win Vision N.V.,2,support@sikkaro.bet,yes,ALSI-202605001-FI1,,anjouan
+83,slots.com,11,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),slots,Torero Media B.V.,1,,no,OGL/2024/669/0816,active,curacao
+84,spingreen.casino,11,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),SpinGreen,3-102-950476 LIMITADA,1,,no,ALSI-202602013-FI1,,anjouan
+85,spinnair.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Spinnair Casino,Fruity Entertainment N.V.,4,,no,OGL/2024/1487/0729,assessment in progress,curacao
+86,swordbet.io,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),SwordBet.io,Superstars Entertainment B.V.,3,,no,OGL/2024/1296/0547,active,curacao
+87,titaani.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Titaani Casino,Fruity Entertainment N.V.,5,,no,OGL/2024/1487/0729,assessment in progress,curacao
+88,tykitys.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Tykitys Casino,Fruity Entertainment N.V.,6,,no,OGL/2024/1487/0729,assessment in progress,curacao
+89,unlimited.bet,11,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),UnlimitedBet,NovaWave Technology N.V.,2,,no,OGL/2024/547/0446,active,curacao
+90,vespercasino.com,11,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),Vesper,FairGame G.P. N.V.,6,,no,OGL/2024/1673/0915,active,curacao
+91,wizebets.com,11,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),wizebets,FairGame G.P. N.V.,7,,no,OGL/2024/1673/0915,active,curacao
+92,007casinoroyal.com,10,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),007CasinoRoyal.com,MCG Technologies N.V.,1,,no,OGL/2024/1698/0936,active,curacao
+93,betmarino.com,10,broken+consent+mixed+weight,4,3,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Betmarino,Real Tech Ltd,1,chupurnov@gmail.com,yes,ALSI-202601013-FI1,,anjouan
+94,blockbet.gg,10,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),BlockBet,Entretenimiento Rojo B.V.,2,,no,OGL/2024/1100/0505,assessment in progress,curacao
+95,c168.biz,10,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),C168,Cyber Labs B.V.,3,,no,OGL/2024/1696/1055,active,curacao
+96,funbet.me,10,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Funbet,3-102-938581 Limitada,1,reach.us@funbet.me,yes,ALSI-202508066-FI2,,anjouan
+97,funbet888.me,10,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Funbet,3-102-938581 Limitada,2,reach.us@funbet.me,yes,ALSI-202508066-FI2,,anjouan
+98,jeevybet.com,10,broken+consent,2,1,16 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Jeevybet,3-102-947122 SRL,1,support@jeevybet.com,yes,ALSI-202601034-FI1,,anjouan
+99,mollydice.com,10,broken+consent,2,1,13 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Mollydice,Satoshi Labs Ltd,1,support@mollydice.com,yes,ALSI-202605020-FI1,,anjouan
+100,wincraft.casino,10,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),wincraft,Casiworx N.V.,1,,no,OGL/2024/1278/0497,active,curacao
+101,7spin.com,9,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on their own domain),7SPIN,Plustar N.V.,1,,no,OGL/2024/138/0289,active,curacao
+102,beti.playtraff.com,9,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Beti Bet,,1,,no,,,cryptolists
+103,bettogames.com,9,broken,1,1,32 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Bettogames,3-102-954365 SRL,1,support@bettogames.com,yes,ALSI-202603002-FI1,,anjouan
+104,buffalo-casino.com,9,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on their own domain),BUFFALO,3-102-945833 SRL,1,,no,ALSI-202510062-FI2,,anjouan
+105,casinityx.com,9,broken,1,1,8 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),casinityx,3-102-942477 SRL,1,support@casinityx.com,yes,ALSI-202509036-FI1,,anjouan
+106,cm88.com,9,broken,1,1,3 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),CM88,Cyber Labs B.V.,4,,no,OGL/2024/1696/1055,active,curacao
+107,grizzly.online,9,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on their own domain),Grizzly,GC Service Group Ltd,1,affiliate@grizzly.bingo,yes,ALSI-202508052-FI2,,anjouan
+108,grizzly.win,9,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on their own domain),Grizzly,GC Service Group Ltd,2,affiliate@grizzly.bingo,yes,ALSI-202508052-FI2,,anjouan
+109,iwildcasino.com,9,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),iwildcasino,Goodwin N.V.,1,,no,OGL/2024/758/0228,active,curacao
+110,lavabet.com,9,consent+weight,2,1,at least 35.9MB and 200 requests to load the homepage,Lavabet,Glory Multimedia B.V.,3,,no,OGL/2024/1600/0861,assessment in progress,curacao
+111,limanbet.com,9,broken+consent+mixed,3,2,1 genuine request failure(s) on the homepage (all on their own domain),Limanbet,Pinbit N.V.,1,,no,OGL/2024/601/0623,assessment in progress,curacao
+112,livegames.io,9,broken+weight,2,2,2 genuine request failure(s) on the homepage (all on their own domain),LiveGames,Livetech Software Solutions N.V.,1,,no,OGL/2024/845/0407,assessment in progress,curacao
+113,oncasi.com,9,consent+weight,2,1,at least 66.3MB and 106 requests to load the homepage,ONCASI 最新ゲーム搭載オンカジ,U2IS Limited,1,,no,ALSI-202601056-FI2,,anjouan
+114,pincowins.com,9,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),pincowins,Carlitta N.V.,1,,no,OGL/2024/1516/0841,assessment in progress,curacao
+115,pro11casino.com,9,broken,1,1,12 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Pro11casino,3-102-947393 SRL,1,support@pro11casino.com,yes,ALSI-202511030-FI2,,anjouan
+116,rake.com,9,consent+weight,2,1,at least 32.5MB and 197 requests to load the homepage,Rake Casino,,1,,no,,,cryptolists
+117,snatchcasino.com,9,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),snatchcasino,Goodwin N.V.,2,,no,OGL/2024/758/0228,active,curacao
+118,sporttyp.com,9,broken,1,1,4 genuine request failure(s) on the homepage (all on their own domain),Sporttyp,Delphin Blue Ocean B.V.,1,,no,OGL/2024/657/0248,active,curacao
+119,zenobet.com,9,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Zenobet,Zenobet Ltd,1,,no,ALSI-202509034-FI1,,anjouan
+120,777spins.online,8,weight,1,1,at least 27.6MB and 208 requests to load the homepage,spins,Turn1 B.V.,1,,no,OGL/2024/236/0117,active,curacao
+121,789bet.sc,8,weight,1,1,at least 275.1MB and 215 requests to load the homepage,789BET,Cyber Labs B.V.,5,,no,OGL/2024/1696/1055,active,curacao
+122,astrobet.ec,8,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),astrobet,Trickless N.V,3,,no,OGL/2024/139/0125,assessment in progress,curacao
+123,beastone.co,8,weight,1,1,at least 34.2MB and 29 requests to load the homepage,Beastone,Beastone N.V.,1,,no,OGL/2024/390/0122,assessment in progress,curacao
+124,betfal.com,8,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Home,Anzal Ltd,1,info@betfal.com,yes,ALSI-202510004-FI1,,anjouan
+125,betovix.com,8,weight,1,1,at least 40.5MB and 181 requests to load the homepage,Betovix -,,1,,no,,,cryptolists
+126,betpro.hn,8,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Betpro Honduras,Trickless N.V,4,,no,OGL/2024/139/0125,assessment in progress,curacao
+127,bonkersbet.com,8,broken,1,1,3 genuine request failure(s) on the homepage (all on their own domain),BonkersBet.com,Velorum Corporation N.V.,1,,no,OGL/2024/1384/0627,active,curacao
+128,bookielink.com,8,weight,1,1,at least 21.0MB and 114 requests to load the homepage,BookieLink,Blueinic B.V.,1,,no,OGL/2024/314/1090,active,curacao
+129,casinomega.com,8,consent+weight,2,1,at least 34.1MB and 1061 requests to load the homepage,Casino,Continental Solutions Limited B.V.,1,,no,OGL/2024/1208/0715,active,curacao
+130,drazze.casino,8,weight,1,1,at least 37.7MB and 178 requests to load the homepage,Drazze,Drazze Limited,1,partners@drazze.casino,yes,ALSI-202512040-FI1,,anjouan
+131,drazzewin.com,8,weight,1,1,at least 37.7MB and 179 requests to load the homepage,Drazze,Drazze Limited,2,partners@drazze.casino,yes,ALSI-202512040-FI1,,anjouan
+132,fachaigaming.com,8,weight,1,1,at least 78.3MB and 235 requests to load the homepage,Top Online Casino Game Provider,WiselnNet Technologies B.V.,1,,no,OGL/2024/1184/1010,active,curacao
+133,forzabet.live,8,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),Forza.Bet,BeLion International Holdings Ltd.,1,support@forzabet.live,yes,ALSI-202510053-FI2,,anjouan
+134,gambleverse.casino,8,weight,1,1,at least 22.1MB and 33 requests to load the homepage,Ölüdeniz Hostel,Casiworx N.V.,2,,no,OGL/2024/1278/0497,active,curacao
+135,grombet.com,8,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),grombet,Radon B.V.,2,,no,OGL/2024/802/0282,assessment in progress,curacao
+136,jokacasino.com,8,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),jokacasino,Swervy International B.V.,1,,no,OGL/2024/1340/0996,active,curacao
+137,longtian.bet,8,broken+weight,2,2,1 genuine request failure(s) on the homepage (all on their own domain),LONG TIAN,U2IS Limited,2,,no,ALSI-202601056-FI2,,anjouan
+138,lussurio.com,8,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),lussurio,Goodwin N.V.,3,,no,OGL/2024/758/0228,active,curacao
+139,malibuclubcasino.io,8,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on their own domain),Malibu Club,Audeo N.V.,1,,no,OGL/2024/1534/0834,active,curacao
+140,neredebahis.com,8,broken,1,1,3 genuine request failure(s) on the homepage (all on their own domain),Neredebahis,Trickless N.V,5,,no,OGL/2024/139/0125,assessment in progress,curacao
+141,partybet.ai,8,weight,1,1,at least 23.4MB and 48 requests to load the homepage,PartyBet,On Read SRL,1,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+142,partybet.bot,8,weight,1,1,at least 23.4MB and 47 requests to load the homepage,PartyBet,On Read SRL,2,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+143,partybet.casino,8,weight,1,1,at least 23.3MB and 47 requests to load the homepage,PartyBet,On Read SRL,3,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+144,partybet.fun,8,weight,1,1,at least 23.4MB and 53 requests to load the homepage,Partybet,On Read SRL,4,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+145,partybet.social,8,weight,1,1,at least 23.3MB and 47 requests to load the homepage,PartyBet,On Read SRL,5,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+146,partybet.win,8,weight,1,1,at least 23.3MB and 47 requests to load the homepage,PartyBet,On Read SRL,6,support@partybet.fun,yes,ALSI-202508060-FI2,,anjouan
+147,pinbahis.com,8,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Pinbahis,Fortuna Digital Solutions FDS Limitada,2,,no,ALSI-202509068-FI2,,anjouan
+148,poker8.io,8,weight,1,1,at least 26.2MB and 63 requests to load the homepage,Poker with passion,Joyeux B.V.,1,,no,OGL/2024/1603/0850,assessment in progress,curacao
+149,riskiiit.com,8,weight,1,1,at least 54.5MB and 78 requests to load the homepage,riskiiit,Overcooked Entertainment Ltd.,1,support@riskiiit.com,yes,ALSI-202511044-FI2,,anjouan
+150,star7.casino,8,broken,1,1,3 genuine request failure(s) on the homepage (all on their own domain),Star7,Velorum Corporation N.V.,2,,no,OGL/2024/1384/0627,active,curacao
+151,thestakehouse.io,8,weight,1,1,at least 56.5MB and 235 requests to load the homepage,The Stake House,,1,,no,,,cryptolists
+152,u2is.tech,8,weight,1,1,at least 29.6MB and 66 requests to load the homepage,U2IS,U2IS Limited,3,,no,ALSI-202601056-FI2,,anjouan
+153,vawzengaming.com,8,weight,1,1,at least 22.7MB and 311 requests to load the homepage,Vawzen Gaming,Geeker Technology N.V.,1,,no,OGL/2024/251/0130,active,curacao
+154,wgmgames.com,8,broken,1,1,6 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),wgmgames,Overseas Gaming Management B.V.,1,,no,OGL/2024/2162/1156,active,curacao
+155,wildcardcity.com,8,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),wildcardcity,Swervy International B.V.,2,,no,OGL/2024/1340/0996,active,curacao
+156,xwin.so,8,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on their own domain),Xwin Casino,Bridge Technologies B.V.,1,,no,OGL/2024/431/0231,active,curacao
+157,xypoker1.com,8,weight,1,1,at least 42.2MB and 58 requests to load the homepage,Xypoker1,3-102-938312 SRL,1,,no,ALSI-202509050-FI1,,anjouan
+158,21bets.com,7,consent+weight,2,1,at least 23.5MB and 494 requests to load the homepage,21Bets,Famagousta B.V.,1,,no,OGL/2023/155/0098,active,curacao
+159,80bet.com,7,weight,1,1,at least 21.7MB and 533 requests to load the homepage,80벳,88gaming B.V.,1,,no,ALSI-202508037-FI1,,anjouan
+160,apuesterapido.com,7,consent+weight,2,1,at least 24.6MB and 358 requests to load the homepage,Apuesta Rápido Bet,Twins Games N.V.,1,,no,OGL/2024/1681/0917,active,curacao
+161,casino007.com,7,consent+weight,2,1,at least 52.5MB and 307 requests to load the homepage,Casino007,3-102-942052 SRL,1,affiliate@casino007.com,yes,ALSI-202510008-FI1,,anjouan
+162,casinocrypto.io,7,consent+weight,2,1,at least 40.3MB and 311 requests to load the homepage,CasinoCrypto,BMGruppe Ltd,1,affiliates@casinocrypto.io,yes,ALSI-202510020-FI1,,anjouan
+163,cryptobosscasino.com,7,consent+weight,2,1,at least 20.0MB and 135 requests to load the homepage,CryptoBoss,3-102-937046 SRL,1,,no,ALSI-202509033-FI1,,anjouan
+164,fantasticbet.com,7,consent+weight,2,1,at least 23.1MB and 189 requests to load the homepage,Betting website,Radon B.V.,3,,no,OGL/2024/802/0282,assessment in progress,curacao
+165,freespinz.com,7,consent+weight,2,1,at least 24.9MB and 354 requests to load the homepage,Freespinz,Pacific Odds SRL,1,,no,ALSI-202510032-FI1,,anjouan
+166,gameszapped.com,7,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),gameszapped,Get Zapped Gaming N.V.,1,,no,OGL/2024/1592/0901,active,curacao
+167,j8de.io,7,consent+weight,2,1,at least 35.9MB and 297 requests to load the homepage,J8DE,3-102-937610 SRL,1,support@j8de.io,yes,ALSI-202510054-FI2,,anjouan
+168,lebull.com,7,weight,1,1,at least 31.1MB and 629 requests to load the homepage,Lebull,3-102-945060 SRL,1,,no,ALSI-202512018-FI1,,anjouan
+169,luckycoin.com,7,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Lucky Coin Casino,,1,,no,,,cryptolists
+170,luxewin.bet,7,consent+weight,2,1,at least 20.5MB and 379 requests to load the homepage,Luxewin,Famagousta B.V.,2,,no,OGL/2023/155/0098,active,curacao
+171,megajeet.com,7,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),megajeet,Santeda International B.V.,1,,no,OGL/2024/1798/1048,assessment in progress,curacao
+172,onion.casino,7,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),onion,Omega Entertainment N.V.,1,,no,OGL/2024/558/0973,active,curacao
+173,pixreal.bet,7,consent+weight,2,1,at least 28.6MB and 108 requests to load the homepage,PIX REAL ONLINE,Azung B.V.,1,,no,OGL/2024/835/0400,assessment in progress,curacao
+174,playorbet.com,7,broken,1,1,5 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),playorbet,White Star B.V.,1,,no,OGL/2023/159/0076,assessment in progress,curacao
+175,reipas.com,7,consent+weight,2,1,at least 20.5MB and 211 requests to load the homepage,Reipas Kasino,GP Holding B.V.,1,,no,OGL/2024/1326/0684,active,curacao
+176,secure100.com,7,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Secure100,Bridge Technologies B.V.,2,,no,OGL/2024/431/0231,active,curacao
+177,slotrix.net,7,broken,1,1,2 genuine request failure(s) on the homepage (all on their own domain),slotrix,Trickless N.V,6,,no,OGL/2024/139/0125,assessment in progress,curacao
+178,slotszer.com,7,broken+consent,2,1,4 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),slotszer,Playvision Group B.V.,1,,no,OGL/2024/968/0753,active,curacao
+179,sultan-wins.com,7,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),...,Bluestream N.V.,1,,no,OGL/2024/1452/0706,assessment in progress,curacao
+180,tuskcasino.com,7,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),🥇 Online Casino Play Online & Win,Alt.Bet. Exchange B.V.,1,,no,OGL/2024/785/0229,active,curacao
+181,vegasreelz.com,7,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on their own domain),Welcome to the casino,Yentel Investments B.V.,1,,no,OGL/2024/1349/0997,active,curacao
+182,zowin.cab,7,consent+weight,2,1,at least 13.9MB and 43 requests to load the homepage,ZOWIN,Amadeus Technology B.V,1,,no,OGL/2024/1272/1143,active,curacao
+183,324bet.com,6,weight,1,1,at least 36.4MB and 223 requests to load the homepage,324bet,50 Gold B.V.,1,,no,OGL/2024/1144/0972,active,curacao
+184,africanobet.com,6,weight,1,1,at least 41.8MB and 204 requests to load the homepage,New Generation Betting Site,Glory Multimedia B.V.,4,,no,OGL/2024/1600/0861,assessment in progress,curacao
+185,betixir.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Betixir,Maltech Ltd,1,,no,ALSI-202603007-FI1,,anjouan
+186,betsala.com,6,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),betsala,Betsala B.V.,1,,no,OGL/2024/1506/0854,assessment in progress,curacao
+187,bodog.io,6,broken+consent,2,1,3 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Yoyocasino.com,Caravan Media B.V.,1,,no,OGL/2024/674/0714,assessment in progress,curacao
+188,cafecasino.lv,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Online Casino,Arbol Media B.V.,1,,no,OGL/2024/670/0711,active,curacao
+189,capitolbet.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Capitolbet,Maltech Ltd,2,,no,ALSI-202603007-FI1,,anjouan
+190,cosmoracasinos.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Cosmoracasinos,3-102-958311 SRL,1,support@cosmoracasinos.com,yes,ALSI-202604029-FI2,,anjouan
+191,evolvebets.com,6,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),EvolveBets Casino,HNA Gaming B.V.,1,,no,OGL/2024/1191/0663,active,curacao
+192,horusbet.cl,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Home,Radon B.V.,4,,no,OGL/2024/802/0282,assessment in progress,curacao
+193,icombet.com,6,weight,1,1,at least 25.2MB and 173 requests to load the homepage,Betting website,Glory Multimedia B.V.,5,,no,OGL/2024/1600/0861,assessment in progress,curacao
+194,ignitionpoker.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Ignition Poker,Connaught Media B.V.,1,,no,OGL/2024/625/0719,assessment in progress,curacao
+195,kirabet.com,6,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Kira.Bet,Arkevia Group Ltd,1,info@kirabet.com,yes,ALSI-202510025-FI1,,anjouan
+196,legenddrop.com,6,weight,1,1,at least 28.6MB and 191 requests to load the homepage,LegendDrop,Legenddrop Ltd,1,,no,ALSI-202604012-FI1,,anjouan
+197,letou.com,6,consent+weight,2,1,at least 12.7MB and 535 requests to load the homepage,Letou,RegalTech Solutions Limitada,1,cs@letou.com,yes,ALSI-202602046-FI2,,anjouan
+198,lukycricket.com,6,broken+consent+weight,3,2,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Casino,Middle Kang B.V.,2,,no,OGL/2024/2267/1181,assessment in progress,curacao
+199,metawin.com,6,consent+weight,2,1,at least 20.0MB and 540 requests to load the homepage,Metawin,Rivolo Limited,1,affiliates@arena.com,yes,ALSI-202602025-FI1,,anjouan
+200,mrcat.com,6,consent+weight,2,1,at least 10.4MB and 597 requests to load the homepage,Mrcat,RegalTech Solutions Limitada,2,,no,ALSI-202602046-FI2,,anjouan
+201,novero.io,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),novero,Rail Solutions Group B.V.,3,,no,OGL/2024/788/0550,assessment in progress,curacao
+202,oysterbet.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Oysterbet.com,Oyster Media N.V.,1,,no,OGL/2024/1745/0962,active,curacao
+203,slotclover.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),slotclover,Aspera Operations B.V.,1,,no,OGL/2024/1068/0572,assessment in progress,curacao
+204,slots.lv,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),SlotsLV,Arbol Media B.V.,2,,no,OGL/2024/670/0711,active,curacao
+205,slotzula.com,6,weight,1,1,at least 22.2MB and 336 requests to load the homepage,Slotzula,Rambo Corp Limited,1,,no,ALSI-202603015-FI1,,anjouan
+206,spin-betz.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Spin Betz,Diamante Tech Ltd,1,,no,ALSI-202601003-FI1,,anjouan
+207,taksimbet.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Taksimbet,Maltech Ltd,3,,no,ALSI-202603007-FI1,,anjouan
+208,theluckyspinz.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Theluckyspinz,Diamante Tech Ltd,2,,no,ALSI-202601003-FI1,,anjouan
+209,trenchbet.com,6,broken,1,1,1 genuine request failure(s) on the homepage (all on their own domain),Trench Bet,Lock In Capital Ltd,1,support@trenchbet.com,yes,ALSI-202604039-FI2,,anjouan
+210,vegabro.com,6,weight,1,1,at least 20.1MB and 118 requests to load the homepage,VegaBro,Vega Technologies Holding Limited,1,,no,ALSI-202512019-FI1,,anjouan
+211,yasalbahis.com,6,weight,1,1,at least 24.4MB and 206 requests to load the homepage,Yasalbahis,Nowplatform Ltd.,1,info@yasalbahis.com,yes,ALSI-202509021-Fll,,anjouan
+212,10sports.io,5,consent+weight,2,1,at least 13.4MB and 320 requests to load the homepage,sports,Superstars Entertainment B.V.,4,,no,OGL/2024/1296/0547,active,curacao
+213,1royspins1.com,5,consent+weight,2,1,at least 11.9MB and 227 requests to load the homepage,Royspins,,1,,no,,,cryptolists
+214,6ense.vip,5,consent+weight,2,1,at least 14.0MB and 62 requests to load the homepage,ense,Bridge Technologies B.V.,3,,no,OGL/2024/431/0231,active,curacao
+215,americaloto.com,5,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Jogue America Loto,Lucky AML Ltd,1,,no,ALSI-202510001-FI1,,anjouan
+216,banger.casino,5,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Casino,Bettor IO N.V.,1,,no,OGL/2024/1699/1163,active,curacao
+217,bet16.com,5,weight,1,1,at least 19.0MB and 536 requests to load the homepage,벳16,88gaming B.V.,2,,no,ALSI-202508037-FI1,,anjouan
+218,betbaba.com,5,consent+weight,2,1,at least 19.6MB and 247 requests to load the homepage,Betbaba,Continental Solutions Limited B.V.,2,,no,OGL/2024/1208/0715,active,curacao
+219,betgcc.com,5,consent+weight,2,1,at least 10.8MB and 306 requests to load the homepage,BetGCC,Cetus Technology N.V.,1,,no,OGL/2024/408/0128,assessment in progress,curacao
+220,blockdag.co,5,consent+weight,2,1,at least 10.0MB and 301 requests to load the homepage,BlockDAG,3-102-946540 SRL,1,commercials@blockdag.co,yes,ALSI-202511024-FI2,,anjouan
+221,casinohype.com,5,consent+weight,2,1,at least 11.9MB and 333 requests to load the homepage,Hype казино официальный сайт,3-102-937046 SRL,2,,no,ALSI-202509033-FI1,,anjouan
+222,cybercitycasino.com,5,consent+weight,2,1,at least 15.7MB and 290 requests to load the homepage,Cyber City,Play Smart ENT B.V.,1,,no,OGL/2024/649/0442,active,curacao
+223,dixy.com,5,consent+weight,2,1,at least 13.1MB and 169 requests to load the homepage,Best CSGO Gaming Site,New Age N.V.,1,,no,OGL/2024/1409/0649,active,curacao
+224,egebet.com,5,consent+weight,2,1,at least 7.6MB and 36 requests to load the homepage,Egebet Web Sitesi,3-102-947593 SRL,1,,no,ALSI-202603005-FI1,,anjouan
+225,hadibet.com,5,consent+weight,2,1,at least 10.8MB and 253 requests to load the homepage,HadiBet,Momo Entertainment B.V.,1,,no,OGL/2024/940/0485,active,curacao
+226,hoy777.com,5,consent+weight,2,1,at least 11.6MB and 403 requests to load the homepage,Hoy777,Pistis Trade N.V.,2,,no,OGL/2024/1670/1153,active,curacao
+227,hyperoll.com,5,consent+weight,2,1,at least 13.0MB and 239 requests to load the homepage,Hyperoll Crypto,Quantum House Ltd,1,contact@hyperoll.com,yes,ALSI-202602027-FI2,,anjouan
+228,hyperwin.org,5,consent+weight,2,1,at least 12.8MB and 164 requests to load the homepage,Hyperwin,3-102-948725 SRL,1,support@hyperwin.org,yes,ALSI-202512016-FI1,,anjouan
+229,iwin.ceo,5,consent+weight,2,1,at least 8.5MB and 52 requests to load the homepage,iWin,Gladiator Holding N.V.,1,,no,OGL/2024/1756/0979,assessment in progress,curacao
+230,kazancasino.com,5,consent+weight,2,1,at least 11.4MB and 400 requests to load the homepage,Kazan Casino,Novi B.V.,1,,no,OGL/2024/1288/0542,assessment in progress,curacao
+231,luckybonanza.ag,5,consent+weight,2,1,at least 12.8MB and 287 requests to load the homepage,Lucky Bonanza Casino,,1,,no,,,cryptolists
+232,mad.casino,5,consent+weight,2,1,at least 15.5MB and 419 requests to load the homepage,Mad,3-102-938906 SRL,1,,no,ALSI-202510009-FI1,,anjouan
+233,madcasino.org,5,consent+weight,2,1,at least 13.5MB and 409 requests to load the homepage,Mad,3-102-938906 SRL,2,,no,ALSI-202510009-FI1,,anjouan
+234,mexboss.com,5,consent+weight,2,1,at least 13.1MB and 241 requests to load the homepage,MEXBOSS,Pistis Trade N.V.,3,,no,OGL/2024/1670/1153,active,curacao
+235,mgc88.cc,5,consent+weight,2,1,at least 11.3MB and 307 requests to load the homepage,mgc,Novisoft N.V.,1,,no,OGL/2024/1394/0725,assessment in progress,curacao
+236,miki.com,5,consent+weight,2,1,at least 11.2MB and 393 requests to load the homepage,Miki Casino,Novi B.V.,2,,no,OGL/2024/1288/0542,assessment in progress,curacao
+237,mybc.game,5,consent+weight,2,1,at least 14.2MB and 343 requests to load the homepage,MYBC,AceQueen Limited,1,,no,ALSI-202604006-FI1,,anjouan
+238,olimposcasino.com,5,consent+weight,2,1,at least 17.6MB and 218 requests to load the homepage,olimposcasino,Novi B.V.,3,,no,OGL/2024/1288/0542,assessment in progress,curacao
+239,riodeorocasino.com,5,consent+weight,2,1,at least 16.6MB and 152 requests to load the homepage,riodeorocasino,Bridge Technologies B.V.,4,,no,OGL/2024/431/0231,active,curacao
+240,rocketbet.com,5,consent+weight,2,1,at least 14.5MB and 342 requests to load the homepage,Rocketbet Crypto Casino,R. Bostock Enterprises B.V.,2,,no,OGL/2024/1067/0640,active,curacao
+241,roulo.gg,5,consent+weight,2,1,at least 19.2MB and 123 requests to load the homepage,Roulo,Roulo Interactive Games LLC,1,,no,ALSI-202602053-FI2,,anjouan
+242,roulobets.com,5,consent+weight,2,1,at least 19.2MB and 121 requests to load the homepage,Roulo,Roulo Interactive Games LLC,2,support@roulo.gg,yes,ALSI-202602053-FI2,,anjouan
+243,spingreen3.casino,5,consent+weight,2,1,at least 16.8MB and 281 requests to load the homepage,Spin Green Casino,,1,,no,,,cryptolists
+244,turkbet.io,5,broken+consent,2,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Turkbet Bahis Sitesi,Poligon Entertainment N.V.,1,,no,OGL/2024/815/0653,active,curacao
+245,unlimcasino.com,5,consent+weight,2,1,at least 14.2MB and 302 requests to load the homepage,Unlim казино официальный сайт,3-102-937046 SRL,3,,no,ALSI-202509033-FI1,,anjouan
+246,wilderbet.com,5,weight,1,1,at least 11.8MB and 754 requests to load the homepage,Wilderbet,VitaCore Limited,1,,no,ALSI-202512038-FI1,,anjouan
+247,10x10bet.com,4,weight,1,1,at least 11.3MB and 139 requests to load the homepage,TEN by TEN BET 10x10bet,Normanhouse LTD,2,,no,ALSI-202603050-FI2,,anjouan
+248,96odds.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Odds96,Breakout Group B.V.,1,,no,OGL/2024/391/0299,assessment in progress,curacao
+249,avrupabet.com,4,weight,1,1,at least 13.5MB and 179 requests to load the homepage,Avrupa nın En Büyük,Real Tech Ltd,2,,no,ALSI-202601013-FI1,,anjouan
+250,bahisdeyiz.com,4,weight,1,1,at least 13.8MB and 236 requests to load the homepage,Betting website,Middle Kang B.V.,3,,no,OGL/2024/2267/1181,assessment in progress,curacao
+251,betbeto.com,4,weight,1,1,at least 13.9MB and 79 requests to load the homepage,Betbeto,Capitanos Games Ltd,1,support@betbeto.com,yes,ALSI-202509071-FI2,,anjouan
+252,betfuze.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Betfuze,BET Fusion Ltd,1,,no,ALSI-202603042-FI2,,anjouan
+253,betofgame.com,4,weight,1,1,at least 15.7MB and 228 requests to load the homepage,Betofgame,Middle Kang B.V.,4,,no,OGL/2024/2267/1181,assessment in progress,curacao
+254,bolt-casino.com,4,weight,1,1,at least 17.9MB and 135 requests to load the homepage,Bolt,3-102-946302 SRL,1,contact@bolt-casino.com,yes,ALSI-202512028-FI1,,anjouan
+255,cassinopix.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Cassino BET,Superbet88 International N.V.,1,,no,OGL/2024/1619/0872,active,curacao
+256,cwinz.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Cwinz,Capitanos Games Ltd,2,support@cwinz.com,yes,ALSI-202509071-FI2,,anjouan
+257,eddybetcasino.com,4,weight,1,1,at least 5.6MB and 35 requests to load the homepage,Play lovable Games For Money,Palau Holdings N.V.,1,,no,OGL/2024/197/0481,active,curacao
+258,etabet.com,4,weight,1,1,at least 11.7MB and 11 requests to load the homepage,Etabet,Red Lane B.V.,1,,no,OGL/2024/1065/0847,active,curacao
+259,fastpari-afro.com,4,consent+weight,2,1,at least 7.5MB and 859 requests to load the homepage,FastPari,Mystic Glitter B.V.,1,,no,OGL/2024/997/0945,assessment in progress,curacao
+260,gangsta.casino,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Gangsta Online Casino,Boom Line B.V.,1,,no,OGL/2024/599/0274,active,curacao
+261,gdfplay.com,4,weight,1,1,at least 10.1MB and 328 requests to load the homepage,gdfplay,WoT N.V.,1,,no,OGL/2024/452/0687,assessment in progress,curacao
+262,imperia.bet,4,weight,1,1,at least 18.6MB and 177 requests to load the homepage,IMPERIABET,3-102-939877 SRL,1,,no,ALSI-202510024-FI1,,anjouan
+263,jackpotjill.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),jackpotjill,Swervy International B.V.,3,,no,OGL/2024/1340/0996,active,curacao
+264,jp88.io,4,consent+weight,2,1,at least 5.4MB and 530 requests to load the homepage,Jp88,3-102-950412 LIMITADA,1,,no,ALSI-202603036-FI2,,anjouan
+265,kilogram.club,4,weight,1,1,at least 13.2MB and 197 requests to load the homepage,Kilogram Club,Snowdunes B.V.,1,,no,OGL/2024/604/0267,active,curacao
+266,meritwin.com,4,weight,1,1,at least 12.9MB and 198 requests to load the homepage,Meritwin,Nowplatform Ltd.,2,,no,ALSI-202509021-Fll,,anjouan
+267,mundoapostas.com,4,broken,1,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Mundoapostas,Media Entertainment N.V.,1,,no,OGL/2024/1110/0512,active,curacao
+268,o96.vip,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Odds96,Breakout Group B.V.,2,,no,OGL/2024/391/0299,assessment in progress,curacao
+269,odds4sports.com,4,broken,1,1,2 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Odds4Sports,Ole Group International B.V.,1,,no,OGL/2024/1358/1233,active,curacao
+270,pelaanyt.com,4,weight,1,1,at least 13.6MB and 418 requests to load the homepage,Pelaanyt,Play Smart ENT B.V.,2,,no,OGL/2024/649/0442,active,curacao
+271,queenbet.com,4,weight,1,1,at least 13.3MB and 215 requests to load the homepage,Queenbet,Riotorto Digital LTD,1,,no,ALSI-202601035-FI1,,anjouan
+272,raize.poker,4,weight,1,1,at least 12.4MB and 30 requests to load the homepage,RAIZE,3-102-943085 SRL,1,hey@raize.poker,yes,ALSI-202511038-FI2,,anjouan
+273,reeljoy.com,4,weight,1,1,at least 10.0MB and 500 requests to load the homepage,Reeljoy,3-102-952820 SRL,1,,no,ALSI-202604026-FI2,,anjouan
+274,slotbaba.com,4,weight,1,1,at least 18.1MB and 75 requests to load the homepage,Slotbaba Official,IsleSoft Lab Ltd.,1,info@slotbaba.com,yes,ALSI-202601011-FI1,,anjouan
+275,tedbet.com,4,weight,1,1,at least 9.3MB and 9 requests to load the homepage,Region restrictions,Owl In N.V.,1,,no,OGL/2024/774/0362,active,curacao
+276,tipclub.sbs,4,weight,1,1,at least 7.7MB and 48 requests to load the homepage,Tipclub,Amadeus Technology B.V,2,,no,OGL/2024/1272/1143,active,curacao
+277,vibebet.com,4,weight,1,1,at least 11.6MB and 127 requests to load the homepage,vibebet,HNA Gaming B.V.,2,,no,OGL/2024/1191/0663,active,curacao
+278,viggoslots.io,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Online Casino & Live Casino,HNA Gaming B.V.,3,,no,OGL/2024/1191/0663,active,curacao
+279,volacasino.com,4,weight,1,1,at least 12.4MB and 163 requests to load the homepage,Vola,Nowplatform Ltd.,3,info@volacasino.com,yes,ALSI-202509021-Fll,,anjouan
+280,wayyy.com,4,broken+consent,2,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Wayyy,Ninetynine N.V.,1,,no,OGL/2023/166/0071,assessment in progress,curacao
+281,wepoker.com,4,weight,1,1,at least 14.7MB and 61 requests to load the homepage,WePoker官网,High Gaming IT Services Limited,1,,no,ALSI-202603023-FI1,,anjouan
+282,wolf.io,4,weight,1,1,at least 13.8MB and 347 requests to load the homepage,Wolf IO Casino,,1,,no,,,cryptolists
+283,wpk.com,4,weight,1,1,at least 14.7MB and 59 requests to load the homepage,WePoker官网,High Gaming IT Services Limited,2,,no,ALSI-202603023-FI1,,anjouan
+284,10x.win,3,consent+weight,2,1,at least 6.5MB and 194 requests to load the homepage,Home 10xwin,Vantage Crest Ltd,1,,no,ALSI-202603058-FI2,,anjouan
+285,allinn.com,3,consent+weight,2,1,at least 9.6MB and 171 requests to load the homepage,allinn.com,Radon B.V.,5,,no,OGL/2024/802/0282,assessment in progress,curacao
+286,azar365.com,3,consent+weight,2,1,at least 6.5MB and 183 requests to load the homepage,azar,Trickless N.V,7,,no,OGL/2024/139/0125,assessment in progress,curacao
+287,azerbet.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Azerbet lic,Elfy Interactive B.V.,1,,no,OGL/2024/1279/0531,assessment in progress,curacao
+288,aztecspinz.com,3,consent+mixed,2,1,1 subresource(s) requested over plain http:// on an https:// page,Aztec Spins,SureWin B.V.,1,,no,OGL/2024/1341/0995,active,curacao
+289,bet303.com,3,consent+weight,2,1,at least 6.1MB and 208 requests to load the homepage,Bet303,Play Fortune Entertainment Ltd,1,,no,ALSI-202603053-FI2,,anjouan
+290,betbanksy.com,3,consent+weight,2,1,at least 8.6MB and 307 requests to load the homepage,Betbanksy,SSA Technologies Ltd.,1,affiliate@betbanksy.com,yes,ALSI-202601017-FI1,,anjouan
+291,betbeast.com,3,consent+weight,2,1,at least 5.0MB and 202 requests to load the homepage,BetBeast,FunGame LLC,1,,no,ALSI-202508063-FI2,,anjouan
+292,betira.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Betira lic,Obsidian Titan Limited,1,,no,ALSI-202602052-FI2,,anjouan
+293,betivo.com,3,consent+weight,2,1,at least 6.7MB and 302 requests to load the homepage,Betivo,Continental Solutions Limited B.V.,3,,no,OGL/2024/1208/0715,active,curacao
+294,betja.com,3,consent+weight,2,1,at least 6.4MB and 369 requests to load the homepage,betja,Swervy International B.V.,4,,no,OGL/2024/1340/0996,active,curacao
+295,betone.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),betone,Continent Gaming N.V.,1,,no,OGL/2024/1332/0669,assessment in progress,curacao
+296,betoriz.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Betoriz lic,Kingslayer Entertainment Ltd,1,,no,ALSI-202602006-FI1,,anjouan
+297,betpas.com,3,consent+weight,2,1,at least 6.0MB and 226 requests to load the homepage,betpas,Better World N.V.,1,,no,OGL/2024/836/0401,assessment in progress,curacao
+298,betya.com,3,consent+weight,2,1,at least 6.5MB and 370 requests to load the homepage,betya,Swervy International B.V.,5,,no,OGL/2024/1340/0996,active,curacao
+299,bison.win,3,consent+weight,2,1,at least 7.5MB and 329 requests to load the homepage,bison,Betelgeuse Entertainment B.V.,1,,no,OGL/2024/1062/0475,active,curacao
+300,blaze.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Blaze,Prolific Trade N.V.,1,,no,OGL/2024/1415/0636,assessment in progress,curacao
+301,blitz.playtraff.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Blitz Casino,,1,,no,,,cryptolists
+302,booty.casino,3,consent+weight,2,1,at least 9.9MB and 176 requests to load the homepage,Booty,BMGruppe Ltd,2,support@booty.casino,yes,ALSI-202510020-FI1,,anjouan
+303,brmegas.com,3,consent+weight,2,1,at least 5.3MB and 98 requests to load the homepage,brmegas,Trickless N.V,8,,no,OGL/2024/139/0125,assessment in progress,curacao
+304,buustikasino.com,3,consent+weight,2,1,at least 6.5MB and 233 requests to load the homepage,buustikasino,White Star B.V.,2,,no,OGL/2023/159/0076,assessment in progress,curacao
+305,casinoencasa.com,3,consent+weight,2,1,at least 6.4MB and 340 requests to load the homepage,CasinoEnCasa,Trickless N.V,9,,no,OGL/2024/139/0125,assessment in progress,curacao
+306,casinoorca1.com,3,consent+weight,2,1,at least 5.0MB and 306 requests to load the homepage,Casino Orca,,1,,no,,,cryptolists
+307,cat2bet.com,3,consent+weight,2,1,at least 8.1MB and 231 requests to load the homepage,Cat2Bet,Terravista Entertainment Ltd,1,sac@cat2bet.com,yes,ALSI-202603022-FI1,,anjouan
+308,celtabet.com,3,consent+weight,2,1,at least 8.3MB and 238 requests to load the homepage,Celtabet Türkiye,3-102-952681 SRL,1,,no,ALSI-202603008-FI1,,anjouan
+309,chexx.bet,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),chexx,Continent Gaming N.V.,2,,no,OGL/2024/1332/0669,assessment in progress,curacao
+310,clubcd.com,3,consent+weight,2,1,at least 6.8MB and 139 requests to load the homepage,clubcd,White Star B.V.,3,,no,OGL/2023/159/0076,assessment in progress,curacao
+311,enebet.com,3,consent+weight,2,1,at least 9.2MB and 189 requests to load the homepage,Enebet,Glory Multimedia B.V.,6,,no,OGL/2024/1600/0861,assessment in progress,curacao
+312,fireball.casino,3,consent+weight,2,1,at least 7.8MB and 368 requests to load the homepage,fireball,Betelgeuse Entertainment B.V.,2,,no,OGL/2024/1062/0475,active,curacao
+313,gameside.io,3,consent+weight,2,1,at least 9.1MB and 148 requests to load the homepage,Gameside,Final Whistle Ltd,1,,no,ALSI-202509022-FI1,,anjouan
+314,gamwiz.com,3,consent+weight,2,1,at least 6.5MB and 293 requests to load the homepage,Gamwiz,Gamwiz Inc,1,support@gamwiz.com,yes,ALSI-202602039-FI2,,anjouan
+315,globalbahis.com,3,consent+weight,2,1,at least 9.0MB and 88 requests to load the homepage,Loading...,TC Entertainment N.V.,1,,no,OGL/2024/419/0348,assessment in progress,curacao
+316,gogoroyal.com,3,consent+weight,2,1,at least 8.7MB and 379 requests to load the homepage,GOGOROYAL,Bet n Play Solution B.V.,1,,no,OGL/2024/927/1070,active,curacao
+317,howl.gg,3,consent+weight,2,1,at least 5.9MB and 175 requests to load the homepage,Howl,Genius Touch B.V.,1,,no,OGL/2024/1638/1028,active,curacao
+318,hw.vip,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),HWYL.COM 好玩娱乐,Lucifer N.V.,2,,no,OGL/2024/1635/0968,active,curacao
+319,interwin.com,3,consent+mixed,2,1,1 subresource(s) requested over plain http:// on an https:// page,Interwin,3-102-959230 SRL,1,,no,ALSI-202604030-FI2,,anjouan
+320,juegaconelking.com,3,consent+weight,2,1,at least 5.1MB and 345 requests to load the homepage,JUEGA CON EL KING,Trickless N.V,10,,no,OGL/2024/139/0125,assessment in progress,curacao
+321,koning.playtraff.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Koningbet Casino,,1,,no,,,cryptolists
+322,larivieracasino.com,3,consent+mixed,2,1,18 subresource(s) requested over plain http:// on an https:// page,Lariviera Casino,Galactic Investments B.V.,1,,no,OGL/2024/1323/0734,active,curacao
+323,latamwin.com,3,consent+weight,2,1,at least 9.0MB and 164 requests to load the homepage,Latamwin,W&C N.V.,2,,no,OGL/2024/922/0638,active,curacao
+324,latribet.ec,3,consent+weight,2,1,at least 5.8MB and 196 requests to load the homepage,latribet,Media Entertainment N.V.,2,,no,OGL/2024/1110/0512,active,curacao
+325,like.casino,3,consent+weight,2,1,at least 6.2MB and 314 requests to load the homepage,LikeCasino,3-102-948639 SRL,1,,no,ALSI-202601050-FI2,,anjouan
+326,luckera.casino,3,consent+weight,2,1,at least 9.1MB and 423 requests to load the homepage,luckera,Orange Entertainment B.V.,1,,no,OGL/2024/1111/0488,active,curacao
+327,maksibet.com,3,consent+weight,2,1,at least 7.6MB and 172 requests to load the homepage,Maksibet,3-102-939685 SRL,1,info@maksibet.com,yes,ALSI-202603030-FI1,,anjouan
+328,masterbets365.com,3,consent+weight,2,1,at least 5.3MB and 270 requests to load the homepage,masterbets,Trickless N.V,11,,no,OGL/2024/139/0125,assessment in progress,curacao
+329,meteoro.casino,3,consent+weight,2,1,at least 8.1MB and 392 requests to load the homepage,meteoro,Betelgeuse Entertainment B.V.,3,,no,OGL/2024/1062/0475,active,curacao
+330,mond1casino.com,3,consent+weight,2,1,at least 5.4MB and 272 requests to load the homepage,Mond Casino,,1,,no,,,cryptolists
+331,nohu.gd,3,consent+weight,2,1,at least 5.7MB and 47 requests to load the homepage,NOHUWIN,Gladiator Holding N.V.,2,,no,OGL/2024/1756/0979,assessment in progress,curacao
+332,nolimit.com,3,consent+weight,2,1,at least 5.7MB and 187 requests to load the homepage,Nolimit,Fuego Mediatech Ltd,1,,no,ALSI-202602003-FI1,,anjouan
+333,parmabet.com,3,consent+weight,2,1,at least 8.1MB and 232 requests to load the homepage,Parmabet,3-102-952681 SRL,2,,no,ALSI-202603008-FI1,,anjouan
+334,pk8.com,3,consent+mixed,2,1,3 subresource(s) requested over plain http:// on an https:// page,Poker King,High Gaming IT Services Limited,3,rakesh.sharma@a5labs.co,yes,ALSI-202603023-FI1,,anjouan
+335,playbison.com,3,consent+weight,2,1,at least 8.2MB and 417 requests to load the homepage,playbison,Betelgeuse Entertainment B.V.,4,,no,OGL/2024/1062/0475,active,curacao
+336,playred.com,3,consent+weight,2,1,at least 8.2MB and 265 requests to load the homepage,Playred Casino Lobby,Trickless N.V,12,,no,OGL/2024/139/0125,assessment in progress,curacao
+337,playsala.com,3,consent+weight,2,1,at least 6.3MB and 210 requests to load the homepage,PlaySala Chile,Betsala B.V.,2,,no,OGL/2024/1506/0854,assessment in progress,curacao
+338,quokkasino.com,3,consent+weight,2,1,at least 8.1MB and 192 requests to load the homepage,Quokkasino,GBO ASSETS LTD,1,,no,ALSI-202601061-FI2,,anjouan
+339,raced.io,3,consent+weight,2,1,at least 8.0MB and 154 requests to load the homepage,Raced.io,Superstars Entertainment B.V.,5,,no,OGL/2024/1296/0547,active,curacao
+340,rojabet.cl,3,consent+weight,2,1,at least 8.4MB and 210 requests to load the homepage,Rojabet Chile,Media Entertainment N.V.,3,,no,OGL/2024/1110/0512,active,curacao
+341,ruhtinas.com,3,consent+weight,2,1,at least 7.5MB and 238 requests to load the homepage,ruhtinas,White Star B.V.,4,,no,OGL/2023/159/0076,assessment in progress,curacao
+342,sansli.io,3,consent+weight,2,1,at least 6.1MB and 152 requests to load the homepage,Sansli,Dragonfruit Limited,1,support@sansli.io,yes,ALSI-202603060-FI2,,anjouan
+343,simsinos.io,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Simsinos,HNA Gaming B.V.,4,,no,OGL/2024/1191/0663,active,curacao
+344,sinbet.co.com,3,consent+weight,2,1,at least 7.0MB and 258 requests to load the homepage,Sinbet,GK INTERACTIVE LTD,1,,no,ALSI-202604035-FI2,,anjouan
+345,skybook.ag,3,consent+mixed,2,1,1 subresource(s) requested over plain http:// on an https:// page,Skybook,International Radical Investment Ltd,2,,no,ALSI-202509042-FI1,,anjouan
+346,slot.playlink.me,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Slot Rush Casino,,1,,no,,,cryptolists
+347,spin3grande.com,3,consent+weight,2,1,at least 6.3MB and 148 requests to load the homepage,Spin Grande Casino -,,1,,no,,,cryptolists
+348,spinni.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),SPINNI Casino,Play Smart ENT B.V.,3,,no,OGL/2024/649/0442,active,curacao
+349,spinrain.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),SpinRain,IsleSoft Lab Ltd.,2,,no,ALSI-202601011-FI1,,anjouan
+350,sprutcasino.com,3,consent+weight,2,1,at least 7.1MB and 450 requests to load the homepage,Ласкаво просимо,Game2Net B.V.,1,,no,OGL/2024/296/1093,active,curacao
+351,sunpuraplay.com,3,consent+weight,2,1,at least 6.4MB and 366 requests to load the homepage,GBWin,Entertainment Art B.V.,1,,no,OGL/2024/995/0478,active,curacao
+352,tar.la,3,consent+weight,2,1,at least 5.4MB and 62 requests to load the homepage,tar,Jazz Business Solutions B.V.,1,,no,OGL/2024/400/0824,assessment in progress,curacao
+353,theonlinecasino.com,3,consent+weight,2,1,at least 5.0MB and 311 requests to load the homepage,The Online Casino,,1,,no,,,cryptolists
+354,time4bets.com,3,consent+weight,2,1,at least 5.6MB and 193 requests to load the homepage,Time4Bets,AWSLO Limited,1,,no,ALSI-202603024-FI1,,anjouan
+355,tradeball.com,3,consent+mixed,2,1,1 subresource(s) requested over plain http:// on an https:// page,Tradeball,A2F B.V.,1,,no,OGL/2024/298/0109,active,curacao
+356,ttbetarena.com,3,consent+weight,2,1,at least 5.7MB and 261 requests to load the homepage,TT Bet Arena,Arena Sports Entertainment N.V.,1,,no,OGL/2024/833/1005,active,curacao
+357,u.vip,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),U.VIP,Lucifer N.V.,3,,no,OGL/2024/1635/0968,active,curacao
+358,voodoo.casino,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Voodoo,Novatrix SRL,1,,no,ALSI-202508056-FI2,,anjouan
+359,wingobingo.tv,3,consent+weight,2,1,at least 6.1MB and 159 requests to load the homepage,WingoBingo,Middle Kang B.V.,5,,no,OGL/2024/2267/1181,assessment in progress,curacao
+360,winz1.me,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),Winz Casino Homepage,,1,,no,,,cryptolists
+361,wionbet.com,3,consent+weight,2,1,at least 9.3MB and 205 requests to load the homepage,Wionbet,Glory Multimedia B.V.,7,,no,OGL/2024/1600/0861,assessment in progress,curacao
+362,xbet.playtraff.com,3,broken,1,1,1 genuine request failure(s) on the homepage (all on a third-party host — the fix belongs to their platform vendor),0Xbet,,1,,no,,,cryptolists
+363,2k.bet,2,weight,1,1,at least 5.6MB and 13 requests to load the homepage,2KBet,2K Services Ltd,1,,no,ALSI-202604019-FI2,,anjouan
+364,a1slot.net,2,weight,1,1,at least 9.5MB and 97 requests to load the homepage,A1slot,U2IS Limited,4,,no,ALSI-202601056-FI2,,anjouan
+365,apuestaswin.com,2,weight,1,1,at least 5.3MB and 141 requests to load the homepage,ApuestasWin,Trickless N.V,13,,no,OGL/2024/139/0125,assessment in progress,curacao
+366,bet4win.net,2,weight,1,1,at least 8.7MB and 203 requests to load the homepage,BET4WIN,UnityBet B.V.,1,,no,OGL/2024/1994/1120,assessment in progress,curacao
+367,bet808.com,2,weight,1,1,at least 6.1MB and 202 requests to load the homepage,Bet808,Play Fortune Entertainment Ltd,2,support@bet808.com,yes,ALSI-202603053-FI2,,anjouan
+368,betgr8.com,2,mixed,1,1,1 subresource(s) requested over plain http:// on an https:// page,Betgr8,BG8 Entertainment N.V.,1,,no,OGL/2024/1657/1069,active,curacao
+369,betgreat.com,2,mixed,1,1,1 subresource(s) requested over plain http:// on an https:// page,Betgr8,BG8 Entertainment N.V.,2,,no,OGL/2024/1657/1069,active,curacao
+370,betticket.com,2,weight,1,1,at least 9.3MB and 180 requests to load the homepage,Betticket,Riotorto Digital LTD,2,,no,ALSI-202601035-FI1,,anjouan
+371,betwiz.com,2,weight,1,1,at least 8.9MB and 85 requests to load the homepage,betwiz,Blueinic B.V.,2,,no,OGL/2024/314/1090,active,curacao
+372,bigboost.com,2,weight,1,1,at least 7.3MB and 245 requests to load the homepage,bigboost,White Star B.V.,5,,no,OGL/2023/159/0076,assessment in progress,curacao
+373,bkmwin.com,2,weight,1,1,at least 6.5MB and 120 requests to load the homepage,BkmWin,Asoftgame Limited,1,,no,ALSI-202510043-FI2,,anjouan
+374,btc2bet.com,2,weight,1,1,at least 5.1MB and 371 requests to load the homepage,Online Sports and Casino Betting,Media Entertainment N.V.,4,,no,OGL/2024/1110/0512,active,curacao
+375,casimono.com,2,weight,1,1,at least 7.7MB and 90 requests to load the homepage,Casimono,Momo Entertainment B.V.,2,,no,OGL/2024/940/0485,active,curacao
+376,degen.com,2,weight,1,1,at least 5.0MB and 263 requests to load the homepage,Degen,Degen Legend Limitada,1,support@degen.com,yes,ALSI-202509061-FI2,,anjouan
+377,deporgram.com,2,weight,1,1,at least 7.5MB and 354 requests to load the homepage,Online Sports and Casino Betting,Media Entertainment N.V.,5,,no,OGL/2024/1110/0512,active,curacao
+378,evetabi.com,2,weight,1,1,at least 5.7MB and 148 requests to load the homepage,EvetAbi,Mistletoe Ltd,1,info@evetabi.com,yes,ALSI-202508061-FI2,,anjouan
+379,glory.casino,2,consent,1,0,,Casino,Bettor IO N.V.,2,,no,OGL/2024/1699/1163,active,curacao
+380,grandzbet.com,2,weight,1,1,at least 9.7MB and 415 requests to load the homepage,Grandz Bet,Inovaplay B.V.,1,,no,OGL/2024/221/0534,active,curacao
+381,hertzbetz.com,2,weight,1,1,at least 5.4MB and 290 requests to load the homepage,HERTZBETZ,SUVYD B.V.,3,,no,OGL/2024/846/0501,assessment in progress,curacao
+382,howzitcasino.com,2,weight,1,1,at least 6.0MB and 232 requests to load the homepage,Howzit.com,RegalTech Solutions Limitada,3,,no,ALSI-202602046-FI2,,anjouan
+383,hugobets.io,2,weight,1,1,at least 6.1MB and 214 requests to load the homepage,HugoBets Casino,HNA Gaming B.V.,5,,no,OGL/2024/1191/0663,active,curacao
+384,hype247.bet,2,weight,1,1,at least 8.3MB and 195 requests to load the homepage,Hype247,One Crane Studio Ltd,1,,no,ALSI-202604043-FI2,,anjouan
+385,instantsports.com,2,mixed,1,1,1 subresource(s) requested over plain http:// on an https:// page,Instant Sports,Entretenimiento Rojo B.V.,3,,no,OGL/2024/1100/0505,assessment in progress,curacao
+386,jackpot88.io,2,consent,1,0,,Jackpot88,3-102-950412 LIMITADA,2,,no,ALSI-202603036-FI2,,anjouan
+387,jugabet.com.ec,2,mixed,1,1,1 subresource(s) requested over plain http:// on an https:// page,com,Gladia N.V.,1,,no,OGL/2024/378/0652,assessment in progress,curacao
+388,keyzino.com,2,weight,1,1,at least 5.4MB and 247 requests to load the homepage,Keyzino,Dexbay Ltd,1,,no,ALSI-202604033-FI2,,anjouan
+389,kikobet.com,2,weight,1,1,at least 8.0MB and 402 requests to load the homepage,Online Sports and Casino Betting,Media Entertainment N.V.,6,,no,OGL/2024/1110/0512,active,curacao
+390,kirgo.io,2,weight,1,1,at least 7.0MB and 153 requests to load the homepage,KIRGO,Raining Games N.V.,1,,no,OGL/2024/2252/1179,active,curacao
+391,kktcbet.com,2,consent,1,0,,Ana Sayfa,Nicosia Betting Ltd,1,,no,ALSI-202512025-FI1,,anjouan
+392,kktcroyal.com,2,consent,1,0,,kktcroyal,Keep On Entertainment N.V.,2,,no,OGL/2024/2279/1202,active,curacao
+393,kraken.casino,2,weight,1,1,at least 5.0MB and 118 requests to load the homepage,Kraken casino,SUVYD B.V.,4,,no,OGL/2024/846/0501,assessment in progress,curacao
+394,loterianacional.ec,2,weight,1,1,at least 5.5MB and 190 requests to load the homepage,Loteria Nacional,Trickless N.V,14,,no,OGL/2024/139/0125,assessment in progress,curacao
+395,lt.com,2,consent,1,0,,Lt,RegalTech Solutions Limitada,4,cs@letou.com,yes,ALSI-202602046-FI2,,anjouan
+396,luckyanon.com,2,weight,1,1,at least 6.2MB and 272 requests to load the homepage,Lucky Anon Casino,,1,,no,,,cryptolists
+397,luckyclash.io,2,weight,1,1,at least 8.1MB and 67 requests to load the homepage,Early Access,Prime Entertainment Ltd,1,info@luckyclash.info,yes,ALSI-202603032-FI1,,anjouan
+398,luckyspins-in.com,2,weight,1,1,at least 7.2MB and 247 requests to load the homepage,luckyspinsin,White Star B.V.,6,,no,OGL/2023/159/0076,assessment in progress,curacao
+399,mas1x2.com,2,weight,1,1,at least 7.7MB and 201 requests to load the homepage,Mas1x2,Trickless N.V,15,,no,OGL/2024/139/0125,assessment in progress,curacao
+400,mastispins.com,2,weight,1,1,at least 7.2MB and 245 requests to load the homepage,mastispins,White Star B.V.,7,,no,OGL/2023/159/0076,assessment in progress,curacao
+401,megasino.win,2,weight,1,1,at least 8.4MB and 70 requests to load the homepage,Megasino,Karthala Ventures Ltd,1,,no,ALSI-202510014-FI1,,anjouan
+402,misterxargent.com,2,weight,1,1,at least 8.9MB and 148 requests to load the homepage,Home MisterXArgent,TGI Entertainment N.V.,1,,no,OGL/2024/428/0397,active,curacao
+403,misterxor.com,2,weight,1,1,at least 8.9MB and 146 requests to load the homepage,Home MisterXor,TGI Entertainment N.V.,2,,no,OGL/2024/428/0397,active,curacao
+404,misterxplatinum.com,2,weight,1,1,at least 8.7MB and 143 requests to load the homepage,Home MisterXPlatinum,TGI Entertainment N.V.,3,,no,OGL/2024/428/0397,active,curacao
+405,misterxvip.com,2,weight,1,1,at least 8.7MB and 146 requests to load the homepage,Home MisterXvip,TGI Entertainment N.V.,4,,no,OGL/2024/428/0397,active,curacao
+406,mrsbet.com,2,weight,1,1,at least 8.7MB and 167 requests to load the homepage,mrsbet,TGI Entertainment N.V.,5,,no,OGL/2024/428/0397,active,curacao
+407,mrxbet.bet,2,weight,1,1,at least 5.8MB and 146 requests to load the homepage,Mrxbet,TGI Entertainment N.V.,6,,no,OGL/2024/428/0397,active,curacao
+408,narniumcasino.com,2,weight,1,1,at least 5.3MB and 254 requests to load the homepage,NarniumCasino,Narnium Solutions Ltd,1,support@narniumcasino.com,yes,ALSI-202511055-FI2,,anjouan
+409,narniumslots.com,2,weight,1,1,at least 5.3MB and 253 requests to load the homepage,NarniumSlots,Narnium Solutions Ltd,2,support@narniumslots.com,yes,ALSI-202511055-FI2,,anjouan
+410,ok9.pro,2,weight,1,1,at least 8.7MB and 185 requests to load the homepage,ok,Cyber Labs B.V.,6,,no,OGL/2024/1696/1055,active,curacao
+411,optimbet.com,2,weight,1,1,at least 5.3MB and 392 requests to load the homepage,Optimbet,Media Entertainment N.V.,7,,no,OGL/2024/1110/0512,active,curacao
+412,parobet.com,2,weight,1,1,at least 6.3MB and 215 requests to load the homepage,Parobet,Maltech Ltd,4,,no,ALSI-202603007-FI1,,anjouan
+413,pelicancasino10.games,2,weight,1,1,at least 6.8MB and 244 requests to load the homepage,Pelican Casino,,1,,no,,,cryptolists
+414,racetan.com,2,weight,1,1,at least 6.0MB and 184 requests to load the homepage,racetan,Digibet N.V.,1,,no,OGL/2024/1312/0525,active,curacao
+415,regalrush.com,2,weight,1,1,at least 7.0MB and 237 requests to load the homepage,regalrush,White Star B.V.,8,,no,OGL/2023/159/0076,assessment in progress,curacao
+416,rocketriches.com,2,weight,1,1,at least 7.3MB and 250 requests to load the homepage,rocketriches,White Star B.V.,9,,no,OGL/2023/159/0076,assessment in progress,curacao
+417,roketbahis.com,2,weight,1,1,at least 6.0MB and 165 requests to load the homepage,Oyun Zamanı,Laulani Investment Ltd,1,,no,ALSI-202601057-FI2,,anjouan
+418,royalen.io,2,weight,1,1,at least 6.7MB and 323 requests to load the homepage,Royalen,,1,,no,,,cryptolists
+419,rr-in.in,2,weight,1,1,at least 7.3MB and 251 requests to load the homepage,rrin,White Star B.V.,10,,no,OGL/2023/159/0076,assessment in progress,curacao
+420,samogon.bet,2,weight,1,1,at least 7.9MB and 303 requests to load the homepage,SAMOGON,Mamba Edge B.V.,1,,no,OGL/2024/976/0894,assessment in progress,curacao
+421,slotoro.bet,2,weight,1,1,at least 6.1MB and 357 requests to load the homepage,Slotoro Official Online Casino,Wiraon B.V.,1,,no,OGL/2024/686/0183,active,curacao
+422,sportsduel.com,2,weight,1,1,at least 9.8MB and 67 requests to load the homepage,Sports Duel,Kitsilano Limitada,3,,no,ALSI-202508065-FI2,,anjouan
+423,stakeboss.com,2,weight,1,1,at least 9.8MB and 163 requests to load the homepage,Stakeboss Home,3-102-947775 Limitada,1,support@stakeboss.com,yes,ALSI-202511052-FI2,,anjouan
+424,stepsino.com,2,weight,1,1,at least 5.1MB and 288 requests to load the homepage,Stepsino,Dexbay Ltd,2,,no,ALSI-202604033-FI2,,anjouan
+425,suratbet.com,2,weight,1,1,at least 7.4MB and 201 requests to load the homepage,"SüratBet Hızlı Oyun, Hızlı Kazanç",Middle Kang B.V.,6,,no,OGL/2024/2267/1181,assessment in progress,curacao
+426,sweatbet.io,2,weight,1,1,at least 8.4MB and 201 requests to load the homepage,Sweatbet,3-102-944260 SRL,1,,no,ALSI-202601052-FI2,,anjouan
+427,tombriches.com,2,weight,1,1,at least 8.9MB and 233 requests to load the homepage,Tombriches,SUVYD B.V.,5,,no,OGL/2024/846/0501,assessment in progress,curacao
+428,topbet100.com,2,weight,1,1,at least 6.1MB and 185 requests to load the homepage,TOPBET casino,SUVYD B.V.,6,,no,OGL/2024/846/0501,assessment in progress,curacao
+429,u.game,2,mixed,1,1,1 subresource(s) requested over plain http:// on an https:// page,Loading,Aurora Soft Ltd,1,,no,ALSI-202510044-FI2,,anjouan
+430,v.vegas,2,weight,1,1,at least 6.7MB and 383 requests to load the homepage,V Vegas Casino Online,Whitebox B.V.,1,,no,OGL/2024/822/0338,active,curacao
+431,vbet.kg,2,weight,1,1,at least 5.3MB and 202 requests to load the homepage,Betting website,Radon B.V.,6,,no,OGL/2024/802/0282,assessment in progress,curacao
+432,vegasoro.com,2,weight,1,1,at least 6.9MB and 93 requests to load the homepage,Casino Games,Middle Kang B.V.,7,,no,OGL/2024/2267/1181,assessment in progress,curacao
+433,vegazcasino.com,2,weight,1,1,at least 7.1MB and 290 requests to load the homepage,vegazcasino,MOONSEEKER SRL,1,info@affpartnergroup.com,yes,ALSI-202509006-FI1,,anjouan
+434,weezybet.com,2,weight,1,1,at least 8.5MB and 340 requests to load the homepage,Weezybet,Geeker Technology N.V.,2,,no,OGL/2024/251/0130,active,curacao
+435,win777live.com,2,weight,1,1,at least 8.0MB and 281 requests to load the homepage,Win777 Casino,Bridge Technologies B.V.,5,,no,OGL/2024/431/0231,active,curacao
+436,winpeso.asia,2,weight,1,1,at least 9.5MB and 84 requests to load the homepage,Winpeso,U2IS Limited,5,,no,ALSI-202601056-FI2,,anjouan
+437,winro.io,2,weight,1,1,at least 7.2MB and 265 requests to load the homepage,Winro,August Gaming Ltd,1,,no,ALSI-202601039-FI2,,anjouan
+438,wlscasino.com,2,weight,1,1,at least 6.5MB and 135 requests to load the homepage,wlscasino,Faraday Online N.V.,1,,no,OGL/2024/943/0431,active,curacao
+439,yekbet.com,2,weight,1,1,at least 5.5MB and 156 requests to load the homepage,Yekbet,Fortuna Digital Solutions FDS Limitada,3,,no,ALSI-202509068-FI2,,anjouan
+440,zenobet.gg,2,weight,1,1,at least 6.4MB and 148 requests to load the homepage,Zenobet,Zenobet Ltd,2,,no,ALSI-202509034-FI1,,anjouan
+441,123loterias.com,1,consent,1,0,,loterias,123 Global Media B.V.,1,,no,OGL/2024/911/0710,assessment in progress,curacao
+442,13spins.com,1,consent,1,0,,13Spins,Boom Line B.V.,2,,no,OGL/2024/599/0274,active,curacao
+443,1king.com,1,consent,1,0,,...,Losartez B.V.,1,,no,OGL/2024/1441/0693,active,curacao
+444,1x001.com,1,consent,1,0,,x,Caecus N.V.,1,,no,OGL/2024/1262/0493,assessment in progress,curacao
+445,1xbet.com,1,consent,1,0,,xbet,Caecus N.V.,2,,no,OGL/2024/1262/0493,assessment in progress,curacao
+446,1xcasino-af.com,1,consent,1,0,,xcasinoaf,Caecus N.V.,3,,no,OGL/2024/1262/0493,assessment in progress,curacao
+447,1xcasino-ar.com,1,consent,1,0,,xcasinoar,Caecus N.V.,4,,no,OGL/2024/1262/0493,assessment in progress,curacao
+448,1xcasino-asia.com,1,consent,1,0,,xcasinoasia,Caecus N.V.,5,,no,OGL/2024/1262/0493,assessment in progress,curacao
+449,1xcasino-bangladesh.com,1,consent,1,0,,xcasinobangladesh,Caecus N.V.,6,,no,OGL/2024/1262/0493,assessment in progress,curacao
+450,1xcasino-bd.com,1,consent,1,0,,xcasinobd,Caecus N.V.,7,,no,OGL/2024/1262/0493,assessment in progress,curacao
+451,1xcasino-kr.com,1,consent,1,0,,xcasinokr,Caecus N.V.,8,,no,OGL/2024/1262/0493,assessment in progress,curacao
+452,1xcasino-latam.com,1,consent,1,0,,xcasinolatam,Caecus N.V.,9,,no,OGL/2024/1262/0493,assessment in progress,curacao
+453,1xcasino-sng.com,1,consent,1,0,,xcasinosng,Caecus N.V.,10,,no,OGL/2024/1262/0493,assessment in progress,curacao
+454,1xcasino-st.com,1,consent,1,0,,xcasinost,Caecus N.V.,11,,no,OGL/2024/1262/0493,assessment in progress,curacao
+455,1xcasino.com,1,consent,1,0,,xcasino,Caecus N.V.,12,,no,OGL/2024/1262/0493,assessment in progress,curacao
+456,22bit.com,1,consent,1,0,,bit,Techwave B.V.,1,,no,OGL/2024/1653/0930,active,curacao
+457,369wins.com,1,consent,1,0,,369Wins,Anzal Ltd,2,support@369wins.com,yes,ALSI-202510004-FI1,,anjouan
+458,777baby.com,1,consent,1,0,,オンラインカジノ・ラッキーベイビー 777Baby日本語ネットカジノ,Osmila N.V.,3,,no,OGL/2024/1276/0583,active,curacao
+459,789club.online,1,consent,1,0,,789Club,DG Innovations B.V.,1,,no,OGL/2024/1273/1142,active,curacao
+460,8bet.co.sz,1,consent,1,0,,co,Trickless N.V,16,,no,OGL/2024/139/0125,assessment in progress,curacao
+461,8win.com.my,1,consent,1,0,,8win,3-102-946565 SRL,1,,no,ALSI-202511031-FI2,,anjouan
+462,a360.bet,1,consent,1,0,,a,Borondoso B.V.,1,,no,OGL/2024/1041/0856,assessment in progress,curacao
+463,a5.winvegasplus-line.com,1,consent,1,0,,WinVegasPlus Casino,,1,,no,,,cryptolists
+464,aajogo.com,1,consent,1,0,,AAJogo,Pistis Trade N.V.,4,,no,OGL/2024/1670/1153,active,curacao
+465,acarbet.com,1,consent,1,0,,Acarbet Adresi,Eagle Nobility LTD,1,,no,ALSI-202509017-FI1,,anjouan
+466,africa-bizbet.com,1,,0,0,,BizBet Africa,Gameway Global LLC,1,support-en@africa-bizbet.com,yes,ALSI-202511025-FI2,,anjouan
+467,aldex.win,1,consent,1,0,,Aldex Win,Aldex Win Ltd,1,support@aldex.com,yes,ALSI-202512034-FI1,,anjouan
+468,ampm.casino,1,consent,1,0,,Ampm,3-102-950476 LIMITADA,2,,no,ALSI-202602013-FI1,,anjouan
+469,ampm7.casino,1,consent,1,0,,AMPM Casino,,1,,no,,,cryptolists
+470,apolobet.com,1,consent,1,0,,apolobet,Trickless N.V,17,,no,OGL/2024/139/0125,assessment in progress,curacao
+471,appleicasino.com,1,consent,1,0,,AppleiCasino,AIC Enterprises LLC,1,,no,ALSI-202602038-FI2,,anjouan
+472,apuesta360.com,1,consent,1,0,,apuesta,Borondoso B.V.,2,,no,OGL/2024/1041/0856,assessment in progress,curacao
+473,apuestashouse.com,1,consent,1,0,,apuestashouse,Media Entertainment N.V.,8,,no,OGL/2024/1110/0512,active,curacao
+474,arba777.com,1,consent,1,0,,Arba777,Rtech LTD,1,support@arba777.com,yes,ALSI-202509056-FI2,,anjouan
+475,arrowexch.com,1,consent,1,0,,Arrow Exchange,Arrow Wood N.V.,1,,no,OGL/2024/2289/1184,active,curacao
+476,aryanbet.com,1,consent,1,0,,Aryanbet,3-102-946386 SRL,1,info@aryanbet.com,yes,ALSI-202512003-FI1,,anjouan
+477,b52club.info,1,consent,1,0,,B52,Gladiator Holding N.V.,3,,no,OGL/2024/1756/0979,assessment in progress,curacao
+478,bahibi.com,1,consent,1,0,,Sportsbetting,Blue Pepper B.V.,1,,no,OGL/2024/351/0124,assessment in progress,curacao
+479,bahsine.com,1,consent,1,0,,Bahsine Giriş,Momo Entertainment B.V.,3,,no,OGL/2024/940/0485,active,curacao
+480,baocasino.com,1,consent,1,0,,Online Casino BAO Casino,Highbet B.V.,1,,no,OGL/2024/295/0600,assessment in progress,curacao
+481,barawin.com,1,consent,1,0,,VipArabClub,Alt.Bet. Exchange B.V.,2,,no,OGL/2024/785/0229,active,curacao
+482,batery-bet.in,1,consent,1,0,,baterybet,YouGMedia B.V.,1,,no,OGL/2024/107/0914,active,curacao
+483,batery.in,1,consent,1,0,,batery,YouGMedia B.V.,2,,no,OGL/2024/107/0914,active,curacao
+484,baywin.com,1,consent,1,0,,Baywin,Obsidian Titan Limited,2,,no,ALSI-202602052-FI2,,anjouan
+485,beatbet.com,1,consent,1,0,,beatbet,Royal Bonanza B.V.,1,,no,OGL/2024/304/0398,assessment in progress,curacao
+486,belugabahis.com,1,consent,1,0,,belugabahis,Pinbit N.V.,2,,no,OGL/2024/601/0623,assessment in progress,curacao
+487,bet-football.com,1,consent,1,0,,Bet Football,Dynamik Marketing B.V.,1,,no,OGL/2024/1313/0727,active,curacao
+488,bet7k.cl,1,consent,1,0,,Bet7k,NovaWave Technology N.V.,3,,no,OGL/2024/547/0446,active,curacao
+489,betandreas.com,1,consent,1,0,,betandreas,Bizbon N.V.,1,,no,OGL/2024/597/0249,active,curacao
+490,betbuta.com,1,consent,1,0,,betbuta,Ryker B.V.,1,,no,OGL/2024/1800/1049,assessment in progress,curacao
+491,betcrush.com,1,consent,1,0,,Betcrush,Wild Blackfin Limited SRL,1,,no,ALSI-202601043-FI2,,anjouan
+492,betet77.com,1,consent,1,0,,Sports,GF CLUB Seven Seven Limitada,1,support@betet77.com,yes,ALSI-202510016-FI1,,anjouan
+493,betewin.com,1,consent,1,0,,Betewin Adresi,Obsidian Titan Limited,3,,no,ALSI-202602052-FI2,,anjouan
+494,betfiery.com,1,consent,1,0,,BetFiery,Pistis Trade N.V.,5,,no,OGL/2024/1670/1153,active,curacao
+495,bethype.com,1,consent,1,0,,BetHype Casino,Boost Gaming N.V.,1,,no,OGL/2024/906/0375,assessment in progress,curacao
+496,betinha.com,1,consent,1,0,,betinha,Victoria Games Solutions B.V.,1,,no,OGL/2024/746/0204,active,curacao
+497,betistar.com,1,consent,1,0,,betistar,Final Enterprises N.V.,1,,no,OGL/2024/420/0675,active,curacao
+498,betitbet.com,1,consent,1,0,,betitbet,Momo Entertainment B.V.,4,,no,OGL/2024/940/0485,active,curacao
+499,betjam.com,1,consent,1,0,,betjam,Betquest B.V.,1,,no,OGL/2024/832/0423,assessment in progress,curacao
+500,betkom.com,1,consent,1,0,,Anasayfa,Feel So Good B.V.,1,,no,OGL/2024/1297/0532,assessment in progress,curacao
+501,betlabel.com,1,consent,1,0,,betlabel,Techwave B.V.,2,,no,OGL/2024/1653/0930,active,curacao
+502,betlist.com,1,consent,1,0,,Betlist Giriş,Red Lane B.V.,2,,no,OGL/2024/1065/0847,active,curacao
+503,betmania.ag,1,consent,1,0,,Betmania,International Radical Investment Ltd,3,,no,ALSI-202509042-FI1,,anjouan
+504,betmartini.com,1,consent,1,0,,Scommesse online e scommesse da casinò,Media Entertainment N.V.,9,,no,OGL/2024/1110/0512,active,curacao
+505,betmatik.com,1,consent,1,0,,betmatik,Feel So Good B.V.,2,,no,OGL/2024/1297/0532,assessment in progress,curacao
+506,betmexico.mx,1,consent,1,0,,Betmexico,Media4 Curaçao N.V.,1,,no,OGL/2024/1510/0839,active,curacao
+507,betmonks.com,1,consent,1,0,,Betmonks,Gamerly Holding Ltd,1,,no,ALSI-202508059-FI2,,anjouan
+508,betmxs.com,1,consent,1,0,,BETMXS,Pistis Trade N.V.,6,,no,OGL/2024/1670/1153,active,curacao
+509,betnimbus.com,1,consent,1,0,,betnimbus,City Limit B.V.,1,,no,OGL/2024/1286/0529,assessment in progress,curacao
+510,betpari.com,1,consent,1,0,,betpari,G2 Tech B.V.,1,,no,OGL/2024/987/0597,assessment in progress,curacao
+511,betpriz.com,1,consent,1,0,,betpriz,Ryker B.V.,2,,no,OGL/2024/1800/1049,assessment in progress,curacao
+512,betsmove.com,1,consent,1,0,,Betsmove,Vesaro Limited,1,support@betsmove.com,yes,ALSI-202604046-FI2,,anjouan
+513,bettingsoftware.com,1,consent,1,0,,BettingSoftware.com,IBC Broker B.V.,1,,no,OGL/2024/1230/1099,active,curacao
+514,betwinner.llc,1,,0,0,,BetWinner,Luckyroo N.V.,1,,no,OGL/2024/1371/0694,assessment in progress,curacao
+515,betzy.io,1,consent,1,0,,Betzy,Blueinic B.V.,3,,no,OGL/2024/314/1090,active,curacao
+516,bhaicasino.com,1,consent,1,0,,BhaiCasino,Capitanos Games Ltd,3,support@bhaicasino.com,yes,ALSI-202509071-FI2,,anjouan
+517,bigwin.com,1,consent,1,0,,Bigwin,EastPoint Operations B.V.,1,,no,OGL/2024/1093/0504,active,curacao
+518,bitzamo-casino.org,1,consent,1,0,,bitzamocasino,Elsikora N.V.,1,,no,OGL/2024/345/0210,active,curacao
+519,bizbet-au.com,1,,0,0,,BizBet,Gameway Global LLC,2,,no,ALSI-202511025-FI2,,anjouan
+520,bizbet-biz.com,1,,0,0,,Bizbet Biz,Gameway Global LLC,3,support-en@bizbet-biz.com,yes,ALSI-202511025-FI2,,anjouan
+521,bizbet.io,1,,0,0,,Bizbet,Gameway Global LLC,4,,no,ALSI-202511025-FI2,,anjouan
+522,bizbet.mobi,1,,0,0,,BizBet Africa,Gameway Global LLC,5,support-en@africa-bizbet.com,yes,ALSI-202511025-FI2,,anjouan
+523,blaze.bet.br,1,consent,1,0,,Blaze,Prolific Trade N.V.,2,,no,OGL/2024/1415/0636,assessment in progress,curacao
+524,blitz-casino.biz,1,consent,1,0,,blitzcasino,Elsikora N.V.,2,,no,OGL/2024/345/0210,active,curacao
+525,blockchain.poker,1,consent,1,0,,Blockchain Poker,Highcard Software SRL,1,,no,ALSI-202511029-FI2,,anjouan
+526,blockspins.com,1,consent,1,0,,Blockspins Casino,,1,,no,,,cryptolists
+527,bluebetz.com,1,consent,1,0,,Bluebetz,Capitanos Games Ltd,4,support@bluebetz.com,yes,ALSI-202509071-FI2,,anjouan
+528,bogartcasino.ag,1,consent,1,0,,Bogart,International Radical Investment Ltd,4,,no,ALSI-202509042-FI1,,anjouan
+529,boomzy.com,1,consent,1,0,,boomzy,TH Gambling N.V.,1,,no,OGL/2024/1468/1024,assessment in progress,curacao
+530,boostwin.com,1,consent,1,0,,BoostWin,Playora B.V.,1,,no,OGL/2024/456/0257,assessment in progress,curacao
+531,bounty-casino.info,1,consent,1,0,,bountycasino,Elsikora N.V.,3,,no,OGL/2024/345/0210,active,curacao
+532,bovbet.com,1,consent,1,0,,Bovbet Resmi Giriş,Momo Entertainment B.V.,5,,no,OGL/2024/940/0485,active,curacao
+533,brillx-casino.com,1,consent,1,0,,brillxcasino,Elsikora N.V.,4,,no,OGL/2024/345/0210,active,curacao
+534,bumbet.com,1,consent,1,0,,bumbet,Brindisa Media N.V.,1,,no,OGL/2024/698/0579,assessment in progress,curacao
+535,caddebet.com,1,consent,1,0,,Caddebet,Moonlight N.V.,1,,no,OGL/2024/551/0622,assessment in progress,curacao
+536,callibet.com,1,consent,1,0,,...,Green Point Technology N.V.,1,,no,OGL/2024/256/0304,assessment in progress,curacao
+537,caposino.com,1,consent,1,0,,Caposino,CONDOOR V.P. LIMITED,1,support@mangodorado.com,yes,ALSI-202510026-FI1,,anjouan
+538,casin0x.com,1,consent,1,0,,Casin0x,,1,,no,,,cryptolists
+539,casinoclic.com,1,consent,1,0,,Casino en Ligne France 2026,Galactic Investments B.V.,2,,no,OGL/2024/1323/0734,active,curacao
+540,casinojamboree.com,1,consent,1,0,,カジノジャンボリー リアルカジノ感覚、高速出金のオンラインカジノ,Osmila N.V.,4,,no,OGL/2024/1276/0583,active,curacao
+541,casinovibes.com,1,consent,1,0,,casinovibes,TH Gambling N.V.,2,,no,OGL/2024/1468/1024,assessment in progress,curacao
+542,casongo.com,1,consent,1,0,,casongo,XZ Solutions B.V.,1,,no,OGL/2024/609/0253,assessment in progress,curacao
+543,casoo46.com,1,consent,1,0,,Casoo Casino,,1,,no,,,cryptolists
+544,catwin.com,1,consent,1,0,,catwin,Notica B.V.,1,,no,OGL/2024/274/0420,assessment in progress,curacao
+545,clickpari.com,1,consent,1,0,,clickpari,Lotostorm B.V.,1,,no,OGL/2024/303/300,assessment in progress,curacao
+546,cocobet.com,1,consent,1,0,,cocobet,NewEra Information Technology N.V.,1,,no,OGL/2024/135/0139,assessment in progress,curacao
+547,coldbet.com,1,consent,1,0,,coldbet,Game2Net B.V.,2,,no,OGL/2024/296/1093,active,curacao
+548,cooked.com,1,consent,1,0,,Cooked,Digital Chain Ventures SRL,1,support@cooked.com,yes,ALSI-202509004-FI1,,anjouan
+549,corgislot.com,1,consent,1,0,,CorgiSlot,FairGame G.P. N.V.,8,,no,OGL/2024/1673/0915,active,curacao
+550,crash2x.com,1,consent,1,0,,Crash2x,Meta Jack Inc.,1,,no,ALSI-202601024-FI1,,anjouan
+551,cs2skin.com,1,consent,1,0,,CS2SKIN,3-102-946905 SRL,1,,no,ALSI-202512033-FI1,,anjouan
+552,cyprusslots3.com,1,consent,1,0,,Login,Middle Kang B.V.,8,,no,OGL/2024/2267/1181,assessment in progress,curacao
+553,dale-bets.com,1,consent,1,0,,...,Bespinex N.V.,1,,no,OGL/2024/1563/0831,assessment in progress,curacao
+554,degencity.com,1,consent,1,0,,DegenCity,3-102-939867 Limitada,1,support@degencity.com,yes,ALSI-202601025-FI1,,anjouan
+555,dicebet.com,1,consent,1,0,,Dicebet,Advanced Sports Entertainment N.V.,1,,no,OGL/2024/635/0818,active,curacao
+556,dicey.com,1,,0,0,,Play,3-102-943011 SRL,1,,no,ALSI-202511054-FI2,,anjouan
+557,dreamroyale.com,1,consent,1,0,,Dream Royale,Raeen Exchange N.V.,1,,no,OGL/2024/1743/0960,active,curacao
+558,efbet.net,1,consent,1,0,,efbet,AE Group B.V.,1,,no,OGL/2024/216/0606,active,curacao
+559,elexbet.com,1,consent,1,0,,elexbet,Longterm Interactive N.V.,1,,no,OGL/2024/1417/0637,assessment in progress,curacao
+560,enomocasino.com,1,consent,1,0,,Еномо Казино,3-102-944179 SRL,1,support@enomocasino.com,yes,ALSI-202603016-FI1,,anjouan
+561,estelarbet.cl,1,consent,1,0,,estelarbet,S3 Tech N.V.,1,,no,OGL/2024/1347/0683,active,curacao
+562,fairpari.com,1,consent,1,0,,fairpari,Centrald B.V.,1,,no,OGL/2024/1143/0865,assessment in progress,curacao
+563,fastpari.com,1,,0,0,,fastpari,Mystic Glitter B.V.,2,,no,OGL/2024/997/0945,assessment in progress,curacao
+564,fixplay.pe,1,consent,1,0,,Betting website,Trickless N.V,18,,no,OGL/2024/139/0125,assessment in progress,curacao
+565,fizabet.com,1,consent,1,0,,fiz a bet,Victoria Games Solutions B.V.,2,,no,OGL/2024/746/0204,active,curacao
+566,flex2bet.com,1,consent,1,0,,porkbun.com,Bright Entertainment Inc,1,,no,ALSI-202511026-FI2,,anjouan
+567,friends-casino.vg,1,consent,1,0,,friendscasino,Elsikora N.V.,5,,no,OGL/2024/345/0210,active,curacao
+568,fuego.casino,1,consent,1,0,,...,Bespinex N.V.,2,,no,OGL/2024/1563/0831,assessment in progress,curacao
+569,funbahis.com,1,consent,1,0,,Funbahis,Total Unlimited Marketing Ltd,1,,no,ALSI-202509001-FI1,,anjouan
+570,funpari.com,1,consent,1,0,,funpari,Kromstex B.V.,1,,no,OGL/2024/313/0337,assessment in progress,curacao
+571,g4mbit.com,1,consent,1,0,,G4mbit,CONDOOR V.P. LIMITED,2,,no,ALSI-202510026-FI1,,anjouan
+572,go-habibi.com,1,consent,1,0,,GoHabibi,Playora B.V.,2,,no,OGL/2024/456/0257,assessment in progress,curacao
+573,go88.hm,1,consent,1,0,,Go88,Green Stream Technology B.V.,1,,no,OGL/2024/1264/1125,active,curacao
+574,golden-winners.com,1,consent,1,0,,goldenwinners,Gleneagles B.V.,1,,no,OGL/2024/1242/0772,active,curacao
+575,gomblingo.casino,1,consent,1,0,,Gomblingo Casino,,1,,no,,,cryptolists
+576,gramado.bet,1,consent,1,0,,Jogadores Anônimos,Victoria Games Solutions B.V.,3,,no,OGL/2024/746/0204,active,curacao
+577,grandesloterias.com,1,consent,1,0,,grandesloterias,Play UK Internet N.V.,1,,no,OGL/2024/1404/0617,active,curacao
+578,grbets.com,1,consent,1,0,,Grbets Adresi,Eagle Nobility LTD,2,,no,ALSI-202509017-FI1,,anjouan
+579,guruplay.io,1,consent,1,0,,guruplay,Chancier B.V.,1,,no,OGL/2024/364/0157,assessment in progress,curacao
+580,handikap.com,1,consent,1,0,,Handikap Giriş,Momo Entertainment B.V.,6,,no,OGL/2024/940/0485,active,curacao
+581,hellocasino.io,1,consent,1,0,,HelloCasino,3-102-940372 SRL,1,,no,ALSI-202604020-FI2,,anjouan
+582,hitclub.hm,1,consent,1,0,,Hitclub,DG Innovations B.V.,2,,no,OGL/2024/1273/1142,active,curacao
+583,holeybet.com,1,consent,1,0,,holeybet,Red Lane B.V.,3,,no,OGL/2024/1065/0847,active,curacao
+584,hornet.bet,1,consent,1,0,,Hornetbet,Jay Services B.V.,1,,no,OGL/2024/1118/0773,active,curacao
+585,hornetbet.io,1,consent,1,0,,Hornetbet,Jay Services B.V.,2,,no,OGL/2024/1118/0773,active,curacao
+586,hotslot.com,1,consent,1,0,,Hotslot Site,3-102-947593 SRL,2,,no,ALSI-202603005-FI1,,anjouan
+587,hoywin.com,1,consent,1,0,,HOYWIN,Pistis Trade N.V.,7,,no,OGL/2024/1670/1153,active,curacao
+588,imajbet.com,1,consent,1,0,,imajbet,Longterm Interactive N.V.,2,,no,OGL/2024/1417/0637,assessment in progress,curacao
+589,indi3.club,1,consent,1,0,,Cricket Betting,Evelnex B.V.,1,,no,OGL/2024/921/0845,assessment in progress,curacao
+590,jestbahis.com,1,consent,1,0,,Jestbahis Yeni ve Güncel Giriş Adresi,Pinbit N.V.,3,,no,OGL/2024/601/0623,assessment in progress,curacao
+591,jogobet.com,1,consent,1,0,,Domain Is No Longer Listed,Zerone B.V.,1,,no,OGL/2024/738/0549,assessment in progress,curacao
+592,joinbet.com,1,consent,1,0,,...,Bespinex N.V.,3,,no,OGL/2024/1563/0831,assessment in progress,curacao
+593,jokertipp.com,1,consent,1,0,,Joker Tipp,Mirella Ltd,1,support@jokertipp.com,yes,ALSI-202509009-FI1,,anjouan
+594,k1.game,1,consent,1,0,,K1 Game,3-102-938908 SRL,1,,no,ALSI-202511053-FI2,,anjouan
+595,katon.ai,1,consent,1,0,,WillBet,Novisoft N.V.,2,,no,OGL/2024/1394/0725,assessment in progress,curacao
+596,kazansana.com,1,consent,1,0,,Kazansana Giriş (Güncel),Momo Entertainment B.V.,7,,no,OGL/2024/940/0485,active,curacao
+597,kclub.fit,1,consent,1,0,,KCLUB,DG Innovations B.V.,3,,no,OGL/2024/1273/1142,active,curacao
+598,kheli.bet,1,consent,1,0,,Kheli,Ingrex Tech LTD,1,,no,ALSI-202602050-FI2,,anjouan
+599,klasbahis.com,1,consent,1,0,,klasbahis,SXM Management N.V.,1,,no,OGL/2024/777/0365,assessment in progress,curacao
+600,kongocash.com,1,consent,1,0,,Ingreso,Trickless N.V,19,,no,OGL/2024/139/0125,assessment in progress,curacao
+601,kurdbet.net,1,consent,1,0,,Kurdbet,Arena Sports Entertainment N.V.,2,,no,OGL/2024/833/1005,active,curacao
+602,kush.casino,1,consent,1,0,,Kush,3-102-937610 SRL,2,support@kush.casino,yes,ALSI-202510054-FI2,,anjouan
+603,lavbet.co,1,consent,1,0,,LavBet,Lavbet Limitada,1,,no,ALSI-202510027-FI1,,anjouan
+604,lavbet.com,1,consent,1,0,,LavBet,Lavbet Limitada,2,,no,ALSI-202510027-FI1,,anjouan
+605,lets777.com,1,consent,1,0,,Lets 777 Casino,,1,,no,,,cryptolists
+606,ligobet.com,1,consent,1,0,,Ligobet,Obsidian Titan Limited,4,marketing@ligobet.com,yes,ALSI-202602052-FI2,,anjouan
+607,lil.bet,1,consent,1,0,,lil,Blackbelt N.V.,1,,no,OGL/2024/131/0296,assessment in progress,curacao
+608,linebet.com,1,consent,1,0,,linebet,Aspro N.V.,1,,no,OGL/2024/565/0553,assessment in progress,curacao
+609,linebetglobal.com,1,,0,0,,Linebet,Savoska LLC,1,,no,ALSI-202510056-FI2,,anjouan
+610,liqd.gg,1,consent,1,0,,LIQD,LIQD LTD,1,,no,ALSI-202603048-FI2,,anjouan
+611,listobet.com,1,consent,1,0,,listobet.com,Trickless N.V,20,,no,OGL/2024/139/0125,assessment in progress,curacao
+612,livebetline.com,1,consent,1,0,,LiveBetLine,Complex Technologies B.V.,1,,no,OGL/2024/334/0243,assessment in progress,curacao
+613,locabet.com,1,consent,1,0,,locabet,Red Lane B.V.,4,,no,OGL/2024/1065/0847,active,curacao
+614,loco777.com,1,consent,1,0,,LOCO777,Pistis Trade N.V.,8,,no,OGL/2024/1670/1153,active,curacao
+615,loonieplay.com,1,consent,1,0,,loonieplay.com,Kingside Push Ltd,1,info@loonieplay.com,yes,ALSI-202509025-FI1,,anjouan
+616,lope.bet,1,consent,1,0,,Online Casino LopeBet Casino,Favorit United N.V.,1,,no,OGL/2024/300/0596,active,curacao
+617,lotbet.vip,1,consent,1,0,,Lotbet Guatemala,Trickless N.V,21,,no,OGL/2024/139/0125,assessment in progress,curacao
+618,lotto247.io,1,consent,1,0,,lotto,Play UK Internet N.V.,2,,no,OGL/2024/1404/0617,active,curacao
+619,ltccas.xyz,1,consent,1,0,,LTC Casino,,1,,no,,,cryptolists
+620,lukscasino.com,1,consent,1,0,,...,Losartez B.V.,2,,no,OGL/2024/1441/0693,active,curacao
+621,majesticslotsclub.net,1,consent,1,0,,Meilleur Casino en Ligne Français,Galactic Investments B.V.,3,,no,OGL/2024/1323/0734,active,curacao
+622,manclub.mba,1,consent,1,0,,ManClub Chính Thức,Green Stream Technology B.V.,2,,no,OGL/2024/1264/1125,active,curacao
+623,mars.bingo,1,consent,1,0,,mars.bingo,Pistis Trade N.V.,9,,no,OGL/2024/1670/1153,active,curacao
+624,marsbahis.com,1,consent,1,0,,Marsbahis Giriş,Stella Tech B.V.,1,,no,OGL/2024/1292/0546,assessment in progress,curacao
+625,maximabet.net,1,consent,1,0,,Maxima Bet,Superjogos N.V.,1,,no,OGL/2024/1130/0520,active,curacao
+626,megapot.io,1,consent,1,0,,Megapot,Megapot Inc,1,support@megapot.io,yes,ALSI-202510018-FI1,,anjouan
+627,megawin.cl,1,consent,1,0,,MegaWin Casino,Media Entertainment N.V.,10,,no,OGL/2024/1110/0512,active,curacao
+628,melbet-ca.com,1,consent,1,0,,melbetca,Pelican Entertainment B.V.,1,,no,OGL/2024/561/0554,assessment in progress,curacao
+629,melbet-canada.com,1,consent,1,0,,melbetcanada,Pelican Entertainment B.V.,2,,no,OGL/2024/561/0554,assessment in progress,curacao
+630,melbetghana.com,1,consent,1,0,,melbetghana,Pelican Entertainment B.V.,3,,no,OGL/2024/561/0554,assessment in progress,curacao
+631,meucassino.com,1,consent,1,0,,MeuCassino,Mic Group Entertainment N.V.,1,,no,OGL/2024/1580/0801,assessment in progress,curacao
+632,meugreen.com,1,consent,1,0,,Apostas Esportivas e Cassino,Superjogos N.V.,2,,no,OGL/2024/1130/0520,active,curacao
+633,mexlucky.com,1,consent,1,0,,MexLucky,Pistis Trade N.V.,10,,no,OGL/2024/1670/1153,active,curacao
+634,mexswin.com,1,consent,1,0,,Mexswin,Pistis Trade N.V.,11,,no,OGL/2024/1670/1153,active,curacao
+635,milkyway8.casino,1,consent,1,0,,Milky Way Casino,,1,,no,,,cryptolists
+636,mintdice.com,1,consent,1,0,,MintDice Bitcoin Casino 2.0,Prism Sentinel N.V.,1,,no,OGL/2024/1739/0965,active,curacao
+637,mn-bizbet.io,1,,0,0,,BizBet Mongolia,Gameway Global LLC,6,,no,ALSI-202511025-FI2,,anjouan
+638,molcasino.com,1,consent,1,0,,Mol,Arkevia Group Ltd,2,info@molcasino.com,yes,ALSI-202510025-FI1,,anjouan
+639,monixbet.com,1,consent,1,0,,Monixbet,FairGame G.P. N.V.,9,,no,OGL/2024/1673/0915,active,curacao
+640,monotech.group,1,consent,1,0,,Monotech,Monotech Solutions B.V.,1,,no,OGL/2024/1672/0923,assessment in progress,curacao
+641,mosulbet.com,1,consent,1,0,,Mosulbet,Arena Sports Entertainment N.V.,3,,no,OGL/2024/833/1005,active,curacao
+642,mx7k.com,1,consent,1,0,,MX7K,Pistis Trade N.V.,12,,no,OGL/2024/1670/1153,active,curacao
+643,newbahis.com,1,consent,1,0,,Newbahis Giriş,Momo Entertainment B.V.,8,,no,OGL/2024/940/0485,active,curacao
+644,odarobet.com,1,consent,1,0,,ODAROBET,Radon B.V.,7,,no,OGL/2024/802/0282,assessment in progress,curacao
+645,oddjusta.com,1,consent,1,0,,OddJusta,A2F B.V.,2,,no,OGL/2024/298/0109,active,curacao
+646,ogbets.com,1,consent,1,0,,ogbets,Middle Kang B.V.,9,,no,OGL/2024/2267/1181,assessment in progress,curacao
+647,oktop.mx,1,consent,1,0,,OKTOP.MX,Novaspin Network Ltd,1,,no,ALSI-202603051-FI2,,anjouan
+648,otobet.com,1,consent,1,0,,Otobet,Obsidian Titan Limited,5,,no,ALSI-202602052-FI2,,anjouan
+649,panosta.com,1,consent,1,0,,panosta,White Star B.V.,11,,no,OGL/2023/159/0076,assessment in progress,curacao
+650,panostabet-no.com,1,consent,1,0,,panostabetno,White Star B.V.,12,,no,OGL/2023/159/0076,assessment in progress,curacao
+651,paratiisi.com,1,consent,1,0,,paratiisi,White Star B.V.,13,,no,OGL/2023/159/0076,assessment in progress,curacao
+652,parimatch.page,1,consent,1,0,,Parimatch Casino,,1,,no,,,cryptolists
+653,parimatchs1.com,1,consent,1,0,,...,Castianes B.V.,1,,no,OGL/2024/1329/0629,assessment in progress,curacao
+654,pasgol.com,1,consent,1,0,,Pasgol Güncel Giriş,Momo Entertainment B.V.,9,,no,OGL/2024/940/0485,active,curacao
+655,pb77exch.com,1,consent,1,0,,pbexch,Evelnex B.V.,2,,no,OGL/2024/921/0845,assessment in progress,curacao
+656,pb77india.com,1,consent,1,0,,pbindia,Evelnex B.V.,3,,no,OGL/2024/921/0845,assessment in progress,curacao
+657,pboffers.co,1,consent,1,0,,pboffers,Evelnex B.V.,4,,no,OGL/2024/921/0845,assessment in progress,curacao
+658,pec.bet,1,consent,1,0,,PEC.BET,GP Holding B.V.,2,,no,OGL/2024/1326/0684,active,curacao
+659,perabet.com,1,consent,1,0,,Perabet,SXM Management N.V.,2,,no,OGL/2024/777/0365,assessment in progress,curacao
+660,pg-play.com,1,consent,1,0,,Country blocked,Axum B.V.,1,,no,OGL/2024/196/0574,active,curacao
+661,philucky.com,1,consent,1,0,,philucky,Pistis Trade N.V.,13,,no,OGL/2024/1670/1153,active,curacao
+662,pingwincasino.com,1,consent,1,0,,Pingwin Casino,Entertainment Art B.V.,2,,no,OGL/2024/995/0478,active,curacao
+663,pixcartela.com,1,consent,1,0,,Pix Cartela Online,Azung B.V.,2,,no,OGL/2024/835/0400,assessment in progress,curacao
+664,play.casinosecret.net,1,consent,1,0,,CasinoSecret,Breckenridge Curaçao B.V.,1,,no,OGL/2024/175/0182,assessment in progress,curacao
+665,play.intercasino.net,1,consent,1,0,,InterCasino,Breckenridge Curaçao B.V.,2,,no,OGL/2024/175/0182,assessment in progress,curacao
+666,play.verajohn.net,1,consent,1,0,,Vera&John,Breckenridge Curaçao B.V.,3,,no,OGL/2024/175/0182,assessment in progress,curacao
+667,play.yuugado.net,1,consent,1,0,,Yuugado,Breckenridge Curaçao B.V.,4,,no,OGL/2024/175/0182,assessment in progress,curacao
+668,playhugelottos.com,1,consent,1,0,,playhugelottos,Play UK Internet N.V.,3,,no,OGL/2024/1404/0617,active,curacao
+669,pokerklas.com,1,consent,1,0,,pokerklas,Moonlight N.V.,2,,no,OGL/2024/551/0622,assessment in progress,curacao
+670,pongbet88.com,1,consent,1,0,,pongbet,Krevetka B.V.,1,,no,OGL/2024/937/0857,assessment in progress,curacao
+671,psewin.com,1,consent,1,0,,PSEWIN,Pistis Trade N.V.,14,,no,OGL/2024/1670/1153,active,curacao
+672,pulibet.com,1,consent,1,0,,Pulibet Resmi Giriş Adresi 2026,Webforce Entertainment N.V.,1,,no,OGL/2024/781/0368,assessment in progress,curacao
+673,purecasino.co,1,consent,1,0,,Home,Windward Circle B.V.,1,,no,OGL/2024/1135/0484,active,curacao
+674,questjack.com,1,consent,1,0,,Questjack,QuestJack Ltd,1,,no,ALSI-202508055-FI2,,anjouan
+675,r7.bet,1,consent,1,0,,R7.BET,One Internet B.V.,1,,no,OGL/2024/1053/0486,active,curacao
+676,ragnar.bet,1,consent,1,0,,RAGNAR.BET,Victoria Games Solutions B.V.,4,,no,OGL/2024/746/0204,active,curacao
+677,raketti.com,1,consent,1,0,,raketti,White Star B.V.,14,,no,OGL/2023/159/0076,assessment in progress,curacao
+678,rakoocasino.com,1,consent,1,0,,Rakoo,FairGame G.P. N.V.,10,,no,OGL/2024/1673/0915,active,curacao
+679,regalrush-no.com,1,consent,1,0,,regalrushno,White Star B.V.,15,,no,OGL/2023/159/0076,assessment in progress,curacao
+680,restbet.com,1,consent,1,0,,restbet,Better World N.V.,2,,no,OGL/2024/836/0401,assessment in progress,curacao
+681,rikvip.mba,1,consent,1,0,,Rikvip,DG Innovations B.V.,4,,no,OGL/2024/1273/1142,active,curacao
+682,rocket.run,1,consent,1,0,,Rocket.run,Ninetynine N.V.,2,,no,OGL/2023/166/0071,assessment in progress,curacao
+683,rocketrichescasino.com,1,consent,1,0,,rocketrichescasino,White Star B.V.,16,,no,OGL/2023/159/0076,assessment in progress,curacao
+684,rollchain.io,1,consent,1,0,,Rollchain Casino,,1,,no,,,cryptolists
+685,rolletto.cc,1,consent,1,0,,rolletto,Santeda International B.V.,2,,no,OGL/2024/1798/1048,assessment in progress,curacao
+686,rolly.info,1,consent,1,0,,Platform,3-102-954977 SRL,1,,no,ALSI-202604001-FI1,,anjouan
+687,rolsbet.com,1,consent,1,0,,rolsbet,Numereto B.V.,1,,no,OGL/2024/315/0489,assessment in progress,curacao
+688,sahabet.com,1,consent,1,0,,Sahabet,Galactic Infinity Ltd,1,,no,ALSI-202511048-FI2,,anjouan
+689,satoshihero.com,1,consent,1,0,,Satoshi Hero,Bitplay Global B.V.,1,,no,OGL/2024/201/0270,active,curacao
+690,selector-casino.net,1,consent,1,0,,selectorcasino,Selector Group N.V.,1,,no,OGL/2024/755/0908,active,curacao
+691,sgslot.com,1,consent,1,0,,SG Slot,Meta Tech Innovations B.V.,1,,no,OGL/2024/325/0187,assessment in progress,curacao
+692,shock.com,1,consent,1,0,,Shock.com,PR Entertainment N.V.,1,,no,OGL/2024/1320/0958,active,curacao
+693,slotexpress.com,1,consent,1,0,,SlotExpress,Novatech Solutions N.V.,1,,no,OGL/2024/1790/1062,assessment in progress,curacao
+694,slotio.com,1,consent,1,0,,Slotio,3-102-947593 SRL,3,,no,ALSI-202603005-FI1,,anjouan
+695,spassino.com,1,consent,1,0,,Spassino,Total Unlimited Marketing Ltd,2,,no,ALSI-202509001-FI1,,anjouan
+696,spin.io,1,consent,1,0,,Spin.io,FunGame LLC,2,,no,ALSI-202508063-FI2,,anjouan
+697,spinarium4.com,1,consent,1,0,,Spinarium Casino,,1,,no,,,cryptolists
+698,spinbit.com,1,consent,1,0,,Spinbit,,1,,no,,,cryptolists
+699,spinza.co.za,1,consent,1,0,,co,Gleneagles B.V.,2,,no,OGL/2024/1242/0772,active,curacao
+700,sportifpro.com,1,consent,1,0,,SportifPro,Ameriserv LLC,1,,no,ALSI-202602034-FI2,,anjouan
+701,sportsbits.com,1,consent,1,0,,Duelbits,Liquid Entertainment N.V.,1,,no,OGL/2024/1507/0838,assessment in progress,curacao
+702,starzbet.com,1,consent,1,0,,Starzbet,Obsidian Titan Limited,6,winwith@infernopartners.com,yes,ALSI-202602052-FI2,,anjouan
+703,stawki.win,1,consent,1,0,,stawki,Kallila N.V.,1,,no,OGL/2024/398/0495,assessment in progress,curacao
+704,sunwin.info,1,consent,1,0,,Sunwin,Amadeus Technology B.V,3,,no,OGL/2024/1272/1143,active,curacao
+705,superodds88.com,1,consent,1,0,,superodds88,A2F B.V.,3,,no,OGL/2024/298/0109,active,curacao
+706,supremabet.com,1,consent,1,0,,Apostas Esportivas e Cassino,Superjogos N.V.,3,,no,OGL/2024/1130/0520,active,curacao
+707,surewin168.com,1,consent,1,0,,sureWin,3-102-948637 SRL,1,,no,ALSI-202511046-FI2,,anjouan
+708,tamambet.com,1,consent,1,0,,tamambet,Ryker B.V.,3,,no,OGL/2024/1800/1049,assessment in progress,curacao
+709,tarafbet.com,1,consent,1,0,,Tarafbet.com,Feel So Good B.V.,3,,no,OGL/2024/1297/0532,assessment in progress,curacao
+710,tibiablackjack.com,1,consent,1,0,,Tibiablackjack,QuestJack Ltd,2,,no,ALSI-202508055-FI2,,anjouan
+711,tibiadice.com,1,consent,1,0,,Tibia Dice,QuestJack Ltd,3,,no,ALSI-202508055-FI2,,anjouan
+712,tigerbet247.com,1,consent,1,0,,Online Casino,CW Investments N.V.,1,,no,OGL/2024/285/0330,active,curacao
+713,tipobet365.com,1,consent,1,0,,Tipobet,Galactic Infinity Ltd,2,,no,ALSI-202511048-FI2,,anjouan
+714,tomi.club,1,consent,1,0,,Tomi,Arkevia Group Ltd,3,info@tomi.club,yes,ALSI-202510025-FI1,,anjouan
+715,top-bet.com,1,consent,1,0,,topbet,Interactive Betting N.V.,1,,no,OGL/2024/537/0691,assessment in progress,curacao
+716,top-x-go.com,1,consent,1,0,,topxgo,Topxgo N.V.,1,,no,OGL/2024/496/0781,active,curacao
+717,top88.ing,1,consent,1,0,,TOP88,DG Innovations B.V.,5,,no,OGL/2024/1273/1142,active,curacao
+718,tucanbit.io,1,consent,1,0,,TucanBit,3-102-940901 SRL,1,,no,ALSI-202509055-FI2,,anjouan
+719,tulipbet.com,1,consent,1,0,,tulipbet,Better World N.V.,3,,no,OGL/2024/836/0401,assessment in progress,curacao
+720,turbo-casino.plus,1,consent,1,0,,turbocasino,Elsikora N.V.,6,,no,OGL/2024/345/0210,active,curacao
+721,turbobet.bet,1,consent,1,0,,Turbobet,Great Star N.V.,1,,no,OGL/2024/689/0696,active,curacao
+722,tycoonwin.com,1,consent,1,0,,Tycoon,3-102-950476 LIMITADA,3,,no,ALSI-202602013-FI1,,anjouan
+723,ubet.io,1,consent,1,0,,UBET.io,BetU Curacao B.V.,1,,no,OGL/2024/1064/0761,active,curacao
+724,ustabet.com,1,consent,1,0,,Ustabet,Real Tech Ltd,3,support@ustabet.com,yes,ALSI-202601013-FI1,,anjouan
+725,venusbet.com,1,consent,1,0,,venusbet,SXM Management N.V.,3,,no,OGL/2024/777/0365,assessment in progress,curacao
+726,vip-ibc.com,1,consent,1,0,,VIP,IBC Broker B.V.,2,,no,OGL/2024/1230/1099,active,curacao
+727,viparabclub.com,1,consent,1,0,,VipArabClub,Alt.Bet. Exchange B.V.,3,,no,OGL/2024/785/0229,active,curacao
+728,vippari.bet,1,consent,1,0,,vippari,Geosix B.V.,1,,no,OGL/2024/316/0598,assessment in progress,curacao
+729,vivafortuna.casino,1,consent,1,0,,Vivafortuna,NewGenx N.V.,1,,no,OGL/2024/1234/0896,active,curacao
+730,vivardocasino.com,1,consent,1,0,,Vivardo Casino,Vivardo N.V.,1,,no,OGL/2024/1383/0619,active,curacao
+731,vodka.bet,1,consent,1,0,,VODKA,Mamba Edge B.V.,2,,no,OGL/2024/976/0894,assessment in progress,curacao
+732,voltacasino.com,1,consent,1,0,,Play online for money,Agenics N.V.,1,,no,OGL/2024/1309/0602,active,curacao
+733,vostokcasino.com,1,consent,1,0,,Play online for money,Agenics N.V.,2,,no,OGL/2024/1309/0602,active,curacao
+734,waspbet.live,1,consent,1,0,,Waspbet TH,Platinum Technology N.V.,1,,no,OGL/2024/137/0132,assessment in progress,curacao
+735,wazobet.com,1,consent,1,0,,Online Casino India 2026,AzRa678 N.V.,1,,no,OGL/2024/183/0195,active,curacao
+736,welvura1.com,1,consent,1,0,,Welvura,3-102-943707 SRL,1,,no,ALSI-202510019-FI1,,anjouan
+737,wildroll.com,1,consent,1,0,,WildRoll,Jackpot Junction Limited,1,support@wildroll.com,yes,ALSI-202509011-FI1,,anjouan
+738,willbet.ai,1,consent,1,0,,WillBet,Novisoft N.V.,3,,no,OGL/2024/1394/0725,assessment in progress,curacao
+739,winebet.com,1,consent,1,0,,winebet,Cupwin B.V.,1,,no,OGL/2024/834/0422,assessment in progress,curacao
+740,winspin.ai,1,consent,1,0,,WinSpin,Wild Blackfin Limited SRL,2,,no,ALSI-202601043-FI2,,anjouan
+741,wrbet.me,1,consent,1,0,,Wrbet Kenya casino online,Zeno Club B.V.,1,,no,OGL/2024/401/0680,active,curacao
+742,wsbets.com,1,consent,1,0,,"Spor Bahisleri, Slotlar ve Canlı Casino",Media Entertainment N.V.,11,,no,OGL/2024/1110/0512,active,curacao
+743,ww-bet.com,1,consent,1,0,,wwbet,Alasia Soft B.V.,1,,no,OGL/2024/433/0399,assessment in progress,curacao
+744,wwetten.com,1,consent,1,0,,Hornetbet,Jay Services B.V.,3,,no,OGL/2024/1118/0773,active,curacao
+745,xolotto.com,1,consent,1,0,,xolotto,Clubhouse Media N.V.,1,,no,OGL/2024/821/1033,active,curacao
+746,xturka.com,1,consent,1,0,,xturka,Ryker B.V.,4,,no,OGL/2024/1800/1049,assessment in progress,curacao
+747,yep.casino,1,consent,1,0,,Yep Casino Official,Nixxe B.V.,1,,no,OGL/2024/1363/0705,active,curacao
+748,yo88.zip,1,consent,1,0,,Yo88,Green Stream Technology B.V.,3,,no,OGL/2024/1264/1125,active,curacao
+749,yohoho.bet,1,,0,0,,yohoho,Yungmetro B.V.,1,,no,OGL/2024/1038/0879,assessment in progress,curacao
+750,zizobet.com,1,consent,1,0,,zizobet,Santeda International B.V.,3,,no,OGL/2024/1798/1048,assessment in progress,curacao
+751,zora.bet,1,consent,1,0,,...,Cre8 B.V.,2,,no,OGL/2024/375/0657,assessment in progress,curacao
+752,zota.playtraff.com,1,consent,1,0,,Zota Bet,,1,,no,,,cryptolists
