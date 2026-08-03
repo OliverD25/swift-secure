@@ -59,16 +59,31 @@ function score(addr, domain) {
   return s;
 }
 
-const rows = readFileSync(new URL("prospects-live.csv", RESEARCH), "utf8").trim().split(/\r?\n/);
-const di = rows[0].split(",").indexOf("domain");
-const ei = rows[0].split(",").indexOf("contact_email");
-const all = rows.slice(1).map((l) => {
-  const p = l.split(",");
-  return { domain: p[di], existing: p[ei] ?? "" };
-}).filter((r) => r.domain && r.domain.includes("."));
+const argFlag = (n) => process.argv.find((a) => a.startsWith(`--${n}=`))?.split("=").slice(1).join("=");
+const argHas = (n) => process.argv.includes(`--${n}`);
 
-const LIMIT = Number(process.argv[2] ?? all.length);
-const CONC = Number(process.argv[3] ?? 8);
+// --from lets this run over any domain list, not just prospects-live.csv.
+// Needed because master-outreach-list.csv now holds 1311 eligible rows of which
+// only 132 have an address — the 855 Curacao and 82 CryptoLists rows have never
+// been through a contact harvest, and prospects-live.csv does not contain them.
+let all;
+if (argFlag("from")) {
+  all = readFileSync(argFlag("from"), "utf8").trim().split(/\r?\n/)
+    .map((s) => s.trim()).filter((d) => d && d.includes("."))
+    .map((domain) => ({ domain, existing: "" }));
+} else {
+  const rows = readFileSync(new URL("prospects-live.csv", RESEARCH), "utf8").trim().split(/\r?\n/);
+  const di = rows[0].split(",").indexOf("domain");
+  const ei = rows[0].split(",").indexOf("contact_email");
+  all = rows.slice(1).map((l) => {
+    const p = l.split(",");
+    return { domain: p[di], existing: p[ei] ?? "" };
+  }).filter((r) => r.domain && r.domain.includes("."));
+}
+
+const positional = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const LIMIT = Number(argFlag("limit") ?? positional[0] ?? all.length);
+const CONC = Number(argFlag("conc") ?? positional[1] ?? 8);
 // prospects-live.csv sorts contactable rows first, so a plain head() sample is
 // entirely sites that already have an address and reports a yield of zero new
 // ones. ONLY_MISSING restricts the run to the rows this is meant to fix.
@@ -145,6 +160,39 @@ async function hunt(rec) {
   return out;
 }
 
+// A limited run must never overwrite the full dataset. Both are written by the
+// same line of code to the same fixed path, so a three-site smoke test used to
+// silently destroy a 489-site sweep that took hours — which is exactly what
+// happened. Partial runs now write beside the canonical file instead.
+//
+// An explicit --out is a deliberately named destination, so it overrides the
+// guard rather than being caught by it. The guard exists to stop an ACCIDENTAL
+// overwrite of a fixed default path, not to stop the caller writing where they
+// asked to write.
+const isPartial = targets.length < all.length || Boolean(process.env.ONLY_MISSING);
+const OUT_NAME = argFlag("out") ?? (isPartial ? "affiliate-contacts.partial.json" : "affiliate-contacts.json");
+if (!argFlag("out") && isPartial) console.log(`Partial run (${targets.length} of ${all.length}) -> ${OUT_NAME}; the full affiliate-contacts.json is left alone.`);
+const OUT_URL = new URL(OUT_NAME, RESEARCH);
+
+// Checkpoint during the run. A harvest over 1179 domains is roughly an hour of
+// live page loads, and writing only after the last one means any process death
+// throws away every address found. Merged by domain so a resumed or repeated
+// run adds to the file instead of replacing it.
+let existing = [];
+try { existing = JSON.parse(readFileSync(OUT_URL, "utf8")); } catch { /* first run */ }
+if (argHas("resume") && existing.length) {
+  const seen = new Set(existing.map((r) => r.domain));
+  const before = queue.length;
+  for (let i = queue.length - 1; i >= 0; i--) if (seen.has(queue[i].domain)) queue.splice(i, 1);
+  console.log(`  --resume: ${before - queue.length} already harvested, ${queue.length} left`);
+}
+const flush = () => {
+  const merged = new Map(existing.map((r) => [r.domain, r]));
+  for (const r of results) merged.set(r.domain, r);
+  writeFileSync(OUT_URL, JSON.stringify([...merged.values()], null, 1), "utf8");
+  return merged.size;
+};
+
 await Promise.all(
   Array.from({ length: CONC }, async () => {
     while (queue.length) {
@@ -156,21 +204,16 @@ await Promise.all(
         results.push({ ...rec, affiliateEmail: "", affiliateUrl: "", platform: "", others: [],
           error: String(err.message).split("\n")[0].slice(0, 80) });
       }
+      if (++done % 25 === 0) {
+        flush();
+        console.log(`  ${done}/${targets.length}  addresses so far: ${results.filter((r) => r.affiliateEmail).length}  [checkpointed]`);
+      }
     }
   }),
 );
 await browser.close();
-
-
-// A limited run must never overwrite the full dataset. Both are written by the
-// same line of code to the same fixed path, so a three-site smoke test used to
-// silently destroy a 489-site sweep that took hours — which is exactly what
-// happened. Partial runs now write beside the canonical file instead.
-const isPartial = targets.length < all.length || Boolean(process.env.ONLY_MISSING);
-const OUT_NAME = isPartial ? "affiliate-contacts.partial.json" : "affiliate-contacts.json";
-if (isPartial) console.log(`Partial run (${targets.length} of ${ all.length }) -> ${OUT_NAME}; the full ${"affiliate-contacts"}.json is left alone.`);
-
-writeFileSync(new URL(OUT_NAME, RESEARCH), JSON.stringify(results, null, 1), "utf8");
+const totalRecords = flush();
+console.log(`\nwrote research/${OUT_NAME} — ${totalRecords} records total, ${results.length} this run`);
 
 const withAff = results.filter((r) => r.affiliateEmail);
 const newly = withAff.filter((r) => !r.existing);
