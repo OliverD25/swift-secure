@@ -28,6 +28,25 @@ const PATHS = [
   "/affiliates/", "/partnership", "/affiliate-programme", "/ru/affiliates", "/tr/affiliates",
 ];
 
+// Second pass, run only when the affiliate hunt found nothing.
+//
+// Over the first 150 domains of the Curacao/CryptoLists pool this script found
+// 2 addresses — 1.3%, against 18% on the older prospects-live pool. The reason
+// is not that these sites hide their contacts. It is that the script only ever
+// visited affiliate paths, and a small white-label brand under a larger operator
+// usually has no affiliate programme of its own while still publishing a support
+// address in its own footer.
+//
+// A support desk is a worse target than an affiliate manager and is kept in a
+// separate field so the two are never confused when the outreach list is built.
+// But we are offering a free technical audit, not asking for a revenue share,
+// and support@ reaching a human beats a perfect affiliate address that does not
+// exist.
+const CONTACT_PATHS = [
+  "", "/contact", "/contact-us", "/contacts", "/support", "/help",
+  "/about", "/about-us", "/terms", "/terms-and-conditions",
+];
+
 const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,24}/g;
 
 // Whoever runs the programme can be contacted through the platform even when
@@ -100,7 +119,7 @@ let done = 0;
 
 async function hunt(rec) {
   const d = rec.domain;
-  const out = { ...rec, affiliateEmail: "", affiliateUrl: "", platform: "", others: [] };
+  const out = { ...rec, affiliateEmail: "", affiliateUrl: "", contactEmail: "", contactUrl: "", platform: "", others: [] };
   const proxy = pickProxy(proxyPool, done);
   const ctx = await browser.newContext({
     userAgent: UA, locale: "en-GB", ignoreHTTPSErrors: true,
@@ -152,6 +171,38 @@ async function hunt(rec) {
     out.others = [...found.keys()].filter((a) => a !== best).slice(0, 3);
   }
   out.platform = [...platforms].join(", ");
+
+  // Fallback: general contact addresses. Only when the affiliate hunt came up
+  // empty, so a site with a real affiliate manager is never downgraded to
+  // support@. No topical gate here — a contact page is allowed to be short and
+  // is not required to mention anything in particular.
+  if (!out.affiliateEmail) {
+    const general = new Map();
+    for (const p of CONTACT_PATHS) {
+      try {
+        const url = `https://${d}${p}`;
+        const resp = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 15000 });
+        if (!resp || resp.status() >= 400) continue;
+        await page.waitForTimeout(1500);
+        const html = await page.content();
+        for (const m of html.match(EMAIL) ?? []) {
+          const a = m.toLowerCase().replace(/^mailto:/, "").replace(/[.,;:'")<>]+$/, "");
+          if (JUNK.test(a) || a.length > 70) continue;
+          if (!general.has(a)) general.set(a, url);
+        }
+        // Two pages' worth is plenty; stop early rather than walk all ten and
+        // pay ten page loads on every address-less site in the pool.
+        if (general.size >= 2) break;
+      } catch {}
+    }
+    if (general.size) {
+      const best = [...general.keys()].sort((a, b) => score(b, d) - score(a, d))[0];
+      out.contactEmail = best;
+      out.contactUrl = general.get(best);
+      out.others = [...general.keys()].filter((a) => a !== best).slice(0, 3);
+    }
+  }
+
   await ctx.close().catch(() => {});
   if (++done % 40 === 0) {
     const got = results.filter((r) => r.affiliateEmail).length;
@@ -206,7 +257,7 @@ await Promise.all(
       }
       if (++done % 25 === 0) {
         flush();
-        console.log(`  ${done}/${targets.length}  addresses so far: ${results.filter((r) => r.affiliateEmail).length}  [checkpointed]`);
+        console.log(`  ${done}/${targets.length}  affiliate: ${results.filter((r) => r.affiliateEmail).length}  contact: ${results.filter((r) => r.contactEmail).length}  [checkpointed]`);
       }
     }
   }),
