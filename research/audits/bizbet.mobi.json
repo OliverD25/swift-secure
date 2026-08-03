@@ -1,6 +1,6 @@
 {
  "domain": "bizbet.mobi",
- "ranAt": "2026-08-03T10:15:12.073Z",
+ "ranAt": "2026-08-03T10:34:23.851Z",
  "findings": [
   {
    "use": "context",
@@ -15,12 +15,12 @@
   {
    "use": "report",
    "area": "health",
-   "text": "678 requests and 994KB to load the homepage — well above the ~167-request median across sites we have measured."
+   "text": "679 requests and 994KB to load the homepage — well above the ~167-request median across sites we have measured."
   },
   {
-   "use": "report",
+   "use": "context",
    "area": "mobile",
-   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+   "text": "Register button visible after 0.7s on Fast 3G — healthy."
   }
  ],
  "raw": {
@@ -73,9 +73,9 @@
     "x-content-type-options": false,
     "referrer-policy": false
    },
-   "domContentLoaded": 380,
-   "settled": 6384,
-   "requestCount": 678,
+   "domContentLoaded": 495,
+   "settled": 6507,
+   "requestCount": 679,
    "transferKB": 994,
    "thirdPartyHosts": 2,
    "trackersBeforeConsent": [],
@@ -114,8 +114,9 @@
    "hasViewportMeta": true
   },
   "mobile": {
-   "raw": "bizbet.mobi  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1662ms\n  load event       : 5202ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 521 / 1092",
-   "ctaMs": null,
+   "raw": "bizbet.mobi  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1687ms\n  load event       : 5336ms\n  CTA visible at   : 682ms (\"Registration\")\n  requests / KB    : 84 / 167",
+   "ctaMs": 682,
+   "transferKB": 167,
    "loadTimedOut": false
   }
  }

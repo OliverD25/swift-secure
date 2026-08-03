@@ -1,6 +1,6 @@
 {
  "domain": "pk8.com",
- "ranAt": "2026-08-03T10:10:21.283Z",
+ "ranAt": "2026-08-03T10:33:28.698Z",
  "findings": [
   {
    "use": "context",
@@ -23,9 +23,9 @@
    "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
   },
   {
-   "use": "report",
+   "use": "context",
    "area": "mobile",
-   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+   "text": "No Register/Sign-up CTA matched within 20s on Fast 3G. NOT reportable — our text pattern has produced a false 'missing' on every site checked by hand so far. Treat as 'unmeasured', never as 'absent'."
   }
  ],
  "raw": {
@@ -75,8 +75,8 @@
     "x-content-type-options": false,
     "referrer-policy": false
    },
-   "domContentLoaded": 4959,
-   "settled": 10968,
+   "domContentLoaded": 4856,
+   "settled": 10862,
    "requestCount": 98,
    "transferKB": 3205,
    "thirdPartyHosts": 9,
@@ -122,8 +122,9 @@
    "hasViewportMeta": true
   },
   "mobile": {
-   "raw": "pk8.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 11751ms\n  load event       : 20458ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 97 / 3052",
+   "raw": "pk8.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 11267ms\n  load event       : 18743ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 97 / 3052",
    "ctaMs": null,
+   "transferKB": 3052,
    "loadTimedOut": false
   }
  }

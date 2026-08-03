@@ -60,16 +60,29 @@ const MOBILE_UA =
 // plain view, which is precisely the accusation-by-broken-tooling this project
 // cannot afford.
 //
+// Hand-checking the remaining two "not found" sites then failed AGAIN, and not
+// over language: partybet.ai says "JOIN THE PARTY" and bizbet.mobi says
+// "Registration". Both English, both obvious to a human, both missed. "register"
+// is not a substring of "Registration", and "join now|join us" does not cover
+// "join the party". Whole words were the mistake.
+//
+// MATCH STEMS, NOT WHOLE WORDS, and prefer over-matching. The two error
+// directions are not symmetric. A false match costs nothing — the module
+// reports a fast time and produces no finding, so nobody is told anything
+// wrong. A missed match produces "your signup button never appeared", a claim
+// an operator disproves in five seconds. So "registr" (register, Registration,
+// registrieren, registrarse) and a bare "join" are correct even though they are
+// looser than they look.
+//
 // This is the same failure that killed the text-matched compliance checks
-// (methodology.md §5) — English-and-German vocabulary against a market that is
-// heavily Turkish, Russian and CJK. The list below is not exhaustive; a locale
-// it does not cover still produces a false "not found", so that result is
-// phrased as an observation to check rather than a defect.
+// (methodology.md §5) — vocabulary matching against a market that is heavily
+// Turkish, Russian and CJK. The list below is still not exhaustive, which is
+// why audit.mjs no longer routes a "not found" into the operator email at all.
 const CTA_TEXT = new RegExp(
   [
-    // English
-    "register", "sign ?up", "join now", "join us", "create account", "get started",
-    "play now", "deposit", "claim bonus",
+    // English — stems, so "Registration"/"Registered" match too
+    "registr", "sign ?up", "signup", "join", "create account", "open account",
+    "get started", "play now", "deposit", "claim bonus", "start playing",
     // Turkish — a large share of this market
     "kayit", "kayıt", "üye ol", "uye ol", "giriş yap", "hemen oyna",
     // Russian / Ukrainian
@@ -133,7 +146,18 @@ async function measure(browser, domain) {
     });
 
     const t0 = Date.now();
-    const navPromise = page.goto(`https://${domain}`, { waitUntil: "commit", timeout: 45000 });
+    // The .catch() must be attached HERE, not at the await further down. This
+    // promise is deliberately left running while the poll loop below measures
+    // the CTA, so a navigation failure rejects during the loop — several ticks
+    // before the old `await navPromise.catch()` could attach a handler. Node
+    // sees a rejected promise with no handler and kills the process. bizbet.mobi
+    // hit exactly this with ERR_NO_BUFFER_SPACE (a local socket exhaustion, not
+    // a site problem) and took down the whole run, losing the two sites that
+    // had already been measured in the same invocation.
+    let navError = null;
+    const navPromise = page
+      .goto(`https://${domain}`, { waitUntil: "commit", timeout: 45000 })
+      .catch((e) => { navError = e; });
 
     // Poll for the CTA becoming visible rather than checking once at the end —
     // a single end-of-load check would answer "is it visible now", not "how
@@ -162,10 +186,19 @@ async function measure(browser, domain) {
         ctaLabel = found;
         break;
       }
+      // Stop polling a page that never loaded. Otherwise a navigation failure
+      // burns the full 20s of polling and then reports "NOT FOUND in 20s",
+      // which reads as a finding about the site instead of a failed run.
+      if (navError) break;
       await page.waitForTimeout(200);
     }
 
-    await navPromise.catch(() => {});
+    await navPromise;
+    // A navigation that never succeeded must be reported as a failed run, not
+    // as a measurement. Falling through would emit "NOT FOUND in 20s" and a
+    // request count of ~0, which is indistinguishable in the output from a real
+    // site that loaded and simply has no signup button.
+    if (navError) throw navError;
 
     // The CTA poll loop above can exit within a second on a fast site, well
     // before the browser's own 'load' event has fired — reading performance

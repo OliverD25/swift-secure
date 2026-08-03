@@ -167,18 +167,46 @@ try {
     timeout: 120000,
   });
   const ctaMatch = out.match(/CTA visible at\s*:\s*(\d+)ms/);
+  const weightMatch = out.match(/requests \/ KB\s*:\s*(\d+) \/ (\d+)/);
   const loadTimeout = /did not finish within/.test(out);
-  mobile = { raw: out.trim(), ctaMs: ctaMatch ? Number(ctaMatch[1]) : null, loadTimedOut: loadTimeout };
+  mobile = {
+    raw: out.trim(),
+    ctaMs: ctaMatch ? Number(ctaMatch[1]) : null,
+    transferKB: weightMatch ? Number(weightMatch[2]) : null,
+    loadTimedOut: loadTimeout,
+  };
 
-  // "NOT FOUND in 20s" is the worst outcome this check can produce, and the
-  // first version handled only the numeric cases — so a site where the
-  // Register button never appeared at all produced no mobile finding whatever,
-  // silently dropping the strongest result of the module. zlot.com hit exactly
-  // this. Phrased as an observation rather than a verdict, because a CTA can
-  // legitimately sit behind a cookie wall or an age gate we did not dismiss.
+  // Mobile page weight. Added after partybet.ai measured 23.9MB and raize.poker
+  // 12.7MB and neither produced a finding — the module recorded the number and
+  // audit.mjs simply never looked at it.
+  //
+  // Safe to report because of which way it can be wrong. The total is summed
+  // from content-length response headers, and a response that omits that header
+  // contributes zero. So the figure is a FLOOR, never an overstatement: the real
+  // page is this size or larger. Reporting "at least 23.9MB" cannot be an
+  // overclaim, which is what makes it emailable at all.
+  if (mobile.transferKB !== null && mobile.transferKB > 5000) {
+    add("report", "mobile", `At least ${(mobile.transferKB / 1024).toFixed(1)}MB transfers to load the homepage on a mobile viewport. Measured from content-length headers, so responses that omit one are counted as zero — the real figure is this or higher.`);
+  }
+
+  // "NOT FOUND in 20s" is CONTEXT ONLY. It is never emailed, and that is a
+  // deliberate reversal of how this started.
+  //
+  // Every one of these hand-checked so far was wrong. zlot.com, bet10bet.com
+  // and pk8.com were missed for language ("Приєднатися", "KAYIT", Chinese).
+  // partybet.ai ("JOIN THE PARTY") and bizbet.mobi ("Registration") were missed
+  // in plain English by a whole-word pattern. Five for five. The pattern is now
+  // much broader, but breadth cannot make text matching sound — that is exactly
+  // the lesson methodology.md §5 already records for the compliance checks.
+  //
+  // Note the asymmetry that decides the routing. A measured 16.3s is a
+  // protocol-level number: the clock does not care what language the button is
+  // in, and it holds up. "No button exists" is an inference from page text, and
+  // when wrong it tells an operator their most visible element is missing. So
+  // the timing stays report-eligible and the absence does not.
   const ctaMissing = /NOT FOUND in 20s/.test(mobile.raw ?? "");
   if (ctaMissing) {
-    add("report", "mobile", "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open.");
+    add("context", "mobile", "No Register/Sign-up CTA matched within 20s on Fast 3G. NOT reportable — our text pattern has produced a false 'missing' on every site checked by hand so far. Treat as 'unmeasured', never as 'absent'.");
   } else if (mobile.ctaMs !== null && mobile.ctaMs > 8000) {
     add("report", "mobile", `On a Fast 3G mobile connection the Register/Sign-up button does not appear for ${(mobile.ctaMs / 1000).toFixed(1)}s.`);
   } else if (mobile.ctaMs !== null) {

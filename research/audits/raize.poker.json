@@ -1,6 +1,6 @@
 {
  "domain": "raize.poker",
- "ranAt": "2026-08-03T10:13:02.452Z",
+ "ranAt": "2026-08-03T10:34:57.967Z",
  "findings": [
   {
    "use": "context",
@@ -23,9 +23,14 @@
    "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
   },
   {
+   "use": "report",
+   "area": "mobile",
+   "text": "At least 12.4MB transfers to load the homepage on a mobile viewport. Measured from content-length headers, so responses that omit one are counted as zero — the real figure is this or higher."
+  },
+  {
    "use": "context",
    "area": "mobile",
-   "text": "Register button visible after 4.7s on Fast 3G — healthy."
+   "text": "Register button visible after 4.6s on Fast 3G — healthy."
   },
   {
    "use": "report",
@@ -95,8 +100,8 @@
     "x-content-type-options": false,
     "referrer-policy": false
    },
-   "domContentLoaded": 271,
-   "settled": 6276,
+   "domContentLoaded": 310,
+   "settled": 6311,
    "requestCount": 28,
    "transferKB": 12673,
    "thirdPartyHosts": 6,
@@ -134,8 +139,9 @@
    "hasViewportMeta": true
   },
   "mobile": {
-   "raw": "raize.poker  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1125ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 4662ms (\"Sign Up\")\n  requests / KB    : 27 / 12673",
-   "ctaMs": 4662,
+   "raw": "raize.poker  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1114ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 4645ms (\"Sign Up\")\n  requests / KB    : 27 / 12673",
+   "ctaMs": 4645,
+   "transferKB": 12673,
    "loadTimedOut": true
   }
  }

@@ -1,6 +1,6 @@
 {
  "domain": "partybet.ai",
- "ranAt": "2026-08-03T10:14:32.604Z",
+ "ranAt": "2026-08-03T10:33:59.018Z",
  "findings": [
   {
    "use": "context",
@@ -15,7 +15,17 @@
   {
    "use": "report",
    "area": "mobile",
-   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+   "text": "At least 23.4MB transfers to load the homepage on a mobile viewport. Measured from content-length headers, so responses that omit one are counted as zero — the real figure is this or higher."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 1.1s on Fast 3G — healthy."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "The page does not finish loading within 10s on a Fast 3G mobile connection."
   }
  ],
  "raw": {
@@ -32,7 +42,7 @@
      "ALSI-202508060-FI2"
     ],
     "sealLinks": [
-     "https://verification.anjouangamingboard.org/validate?domain=partybet.bot&seal_id=42c126a8ad4bee3ce9e01879d270faef124d4e1438ba9922d5031aa164792b8060d6da1e4f4efeb50a0013b6c7cceb06&stamp=7d73d199f3ab9f1086be1c183febb52c"
+     "https://verification.anjouangamingboard.org/validate?domain=partybet.bot&seal_id=42c126a8ad4bee3ce9e01879d270faef124d4e1438ba9922d5031aa164792b8060d6da1e4f4efeb50a0013b6c7cceb06&stamp=6f57bab419b01fb836be3c6a10723283"
     ],
     "excerpt": "treet Thirty-Nine, Second Office on the Right, LY Center, Costa Rica. Contact us: support@partybet.fun. PartyBet.bot is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No: ALSI-202508060-FI2. PartyBet.bot has passed all regulatory compliance and is legally authorized to conduct gaming operations for any a"
    }
@@ -75,8 +85,8 @@
     "x-content-type-options": false,
     "referrer-policy": false
    },
-   "domContentLoaded": 352,
-   "settled": 6366,
+   "domContentLoaded": 319,
+   "settled": 6324,
    "requestCount": 48,
    "transferKB": 23963,
    "thirdPartyHosts": 3,
@@ -114,9 +124,10 @@
    "hasViewportMeta": true
   },
   "mobile": {
-   "raw": "partybet.ai  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 2194ms\n  load event       : 21727ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 48 / 23963",
-   "ctaMs": null,
-   "loadTimedOut": false
+   "raw": "partybet.ai  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 2099ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 1120ms (\"JOIN THE PARTY\")\n  requests / KB    : 48 / 23963",
+   "ctaMs": 1120,
+   "transferKB": 23963,
+   "loadTimedOut": true
   }
  }
 }
