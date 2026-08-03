@@ -75,7 +75,17 @@ function parse(url, html) {
   // Every fact on the page is a condition-item title/value pair — 14 of them on
   // a full profile. Reading them generically rather than hardcoding the four we
   // happen to want today means a new field the site adds arrives on its own.
-  for (const m of html.matchAll(/condition-item__title[^>]*>([\s\S]*?)<\/div>[\s\S]{0,120}?condition-item__value[^>]*>([\s\S]*?)<\/div>/g)) {
+  //
+  // `class="` is load-bearing, not decoration. Matching the bare class NAME also
+  // hit the CSS rules in the page's own <style> block, where the selector reads
+  // `.condition-item__title[data-v-e4d1e722]{...}`. From there the non-greedy
+  // scan for </div> ran on into the document body and stored whole megabytes of
+  // markup as a "field". The output file came out at 166MB for 1458 records —
+  // roughly 114KB each — with keys like ".promo-banner[data-v-e4d1e722]{backgroun".
+  // A CSS selector has no class= attribute, so requiring one excludes the style
+  // block entirely. The length bounds are the second line of defence: a real
+  // label is a few words and a real value is a sentence.
+  for (const m of html.matchAll(/class="condition-item__title"[^>]*>([^<]{1,80})<\/div>\s*<div class="condition-item__value"[^>]*>([\s\S]{0,600}?)<\/div>/g)) {
     const k = strip(m[1]);
     const v = strip(m[2]);
     if (k && v) out.fields[k] = v;
