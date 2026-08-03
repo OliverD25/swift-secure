@@ -9,10 +9,13 @@ had no idea what this category charges.
 Three findings, and the last one is the one that hurts.
 
 1. **The market price for a casino trust seal is €250/month — confirmed for one
-   vendor, self-reported for a second.** Gamecheck's price and scope are
-   corroborated by trade press. A second vendor, Check2Play, claims the same
-   number but could not be independently verified to exist as a real operating
-   company — see below. Our €200 tier is priced just under the confirmed one.
+   vendor, self-reported for a second.** Gamecheck checked out on every test
+   applied: named founder corroborated by an outside CEO's interview, an ISO
+   27001 certificate from BSI Group with a matching registered address, trade
+   press, Wayback Machine history. A second vendor, Check2Play, claims the same
+   price but could not be independently verified to exist as a real operating
+   company beyond its own site — see below. Our €200 tier is priced just under
+   the confirmed one.
 2. **The licence check we built is already given away free by a live
    competitor**, across more regulators than we cover.
 3. **On paper, at least one competitor already sells everything we planned to
@@ -163,6 +166,7 @@ has to be planned for honestly rather than around.
 
 - [Gamecheck SEAL](https://gamecheck.com/seal) — pricing and scope
 - [Gamecheck: the SEAL has arrived](https://gamecheck.com/articles/online-casino-technology-and-innovations/the-gamecheck-seal-has-arrived)
+- `gamecheck-ownership.md` — independent verification: ISO 27001/BSI, named founder, Wayback history
 - [Check2Play SEAL](https://check2play.com/seal) — scope of their audit
 - [Check2Play pricing](https://check2play.com/pricing) — $250/month, free for players
 - `check2play-ownership.md` — why these claims are marked self-reported rather than confirmed
