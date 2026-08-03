@@ -186,17 +186,74 @@ care rather than by what is technically convenient:
 | Group | What | Status |
 | :--- | :--- | :--- |
 | **money** | request count, transfer weight, third-party host count | reliable — network-measured |
-| **legal** | trackers firing before any consent interaction; whether a consent UI was found at all | reliable, **wording constraint below** |
-| **craft** | broken requests (4xx/5xx), console errors, security headers, mixed content | reliable — protocol-measured |
+| **legal** | trackers firing before any consent interaction; whether a consent UI was found at all | **rank-only until measured from an EU IP — see below** |
+| **craft** | broken requests, security headers, mixed content | reliable, **but only after refusals are removed — see below** |
+| ~~console errors~~ | ~~JS exceptions on load~~ | **dropped from scoring — duplicates the broken-request count** |
 | ~~compliance~~ | ~~terms/privacy links, age notice, self-exclusion, deposit limits~~ | **withdrawn — see below** |
 
-### The consent finding must stay a measurement
+### A refused request is not a broken request
 
-"N tracking hosts received a request before any consent interaction, measured
-from `<country>` on `<date>`" is defensible. **"You are breaking GDPR" is not**
-— Google Consent Mode can send cookieless pings that are not violations, and
-this project is not qualified to render a legal opinion. Every report that uses
-this finding states the measurement and stops there.
+This is the page-level rule — 401/403/429/451 means *refused*, not *absent* —
+applied where it was missing: to individual requests inside a page that loaded
+fine.
+
+Found on 3 August 2026 during the 1311-domain sweep. Sorting by broken-request
+count put `betewin.com` (22) and `betim.com` (20) at the top, both failing on
+their own API subdomains. Every one returns a 552-byte page:
+
+```
+<html><head><title>403 Forbidden</title></head>
+<body><center><h1>403 Forbidden</h1></center>
+<hr><center>openresty</center></body></html>
+```
+
+An API that means *"you are not logged in"* answers in JSON with an error code.
+A bare nginx HTML 403 means the request never reached the application. That is
+an edge or WAF refusal aimed at our crawler, and the site works for a real
+visitor. In one 148-failure sample, **60 (40%) were refusals of this kind**.
+`challenges.cloudflare.com` appearing as a "failure" is the same mistake in its
+most obvious form: Turnstile was interrogating us.
+
+`audit-probe.mjs` now separates them. **Only `brokenReal` may be quoted**;
+`brokenRefused` is kept as context and never reported. Genuine failures are also
+split into `brokenOwnHost` and `brokenThirdParty`, because
+`abcfortunazone.com`'s 60 real 404s are all on `agstatic.com` — its white-label
+platform's CDN. Worth telling the operator, but the fix belongs to their vendor
+and the wording has to say so.
+
+### Console errors are not a separate finding
+
+Their most common samples across the sweep are `Failed to load resource: the
+server responded with a status of 404` and the 403 equivalent — the same
+failures `brokenReal` already counts, arriving a second time through a different
+channel. Scoring both counts one problem twice. The remainder are third-party ad
+and analytics scripts throwing inside code the operator did not write, plus
+`ERR_NAME_NOT_RESOLVED`, which can be our own DNS. Still collected as supporting
+context, never scored.
+
+### The consent finding is rank-only until we measure from an EU IP
+
+It used to be reported with the wording *"measured from a German browser
+context"*. **That was false.** `audit-probe.mjs` sets `locale: de-DE`,
+`timezoneId: Europe/Berlin` and a German `Accept-Language`, which made the claim
+look supported. But the request leaves a Ukrainian IP — checked directly,
+`46.63.32.72`, Khmelnytskyi — and **sites gate cookie banners on IP
+geolocation, not on `Accept-Language`**.
+
+So a casino that showed us no banner may be behaving exactly as designed. We
+were not an EU visitor, and Ukraine is not in the EU. The claim would have been
+wrong on the first point an operator's own lawyer checks, across 219 of 458
+readable sites.
+
+The measurement still ranks — the trackers really did fire — but it may not be
+written in an email. To make it reportable, configure the proxy pool and repeat
+the measurement from an EU exit.
+
+Even then the old constraint stands: *"N tracking hosts received a request
+before any consent interaction, measured from `<country>` on `<date>`"* is
+defensible. **"You are breaking GDPR" is not** — Google Consent Mode can send
+cookieless pings that are not violations, and this project is not qualified to
+render a legal opinion.
 
 ### Withdrawn: text-matched compliance checks
 
@@ -272,14 +329,34 @@ Nothing is presented as a continuing guarantee.
 Rules that were each learned by getting them wrong once. Read before touching
 any check in this file.
 
-**Blocked ≠ dead, everywhere.** A site returning 401/403/429/451 was refused,
-not proven absent. This mistake happened independently in the seal census (a
-block counted as "no trust signal," inflating the no-signal bucket to 84%
-before the fix), the Curaçao liveness check (0 of 20 domains reported live on
-the first pass — all were geo-blocking Ukraine, confirmed live from a German
-proxy), and the audit probe. The fix is the same shape every time: a separate
-`blocked`/`unmeasured` bucket, percentages computed only over what was
+**Blocked ≠ dead, everywhere — including one request inside a loaded page.** A
+site returning 401/403/429/451 was refused, not proven absent. This mistake
+happened independently in the seal census (a block counted as "no trust signal,"
+inflating the no-signal bucket to 84% before the fix), the Curaçao liveness
+check (0 of 20 domains reported live on the first pass — all were geo-blocking
+Ukraine, confirmed live from a German proxy), the audit probe, and then a fourth
+time at a level nobody had thought to check: **a page can return 200 while its
+own API calls are refused**, and those refusals were being counted as the
+casino's broken requests (see §5). The fix is the same shape every time: a
+separate `blocked`/`unmeasured` bucket, percentages computed only over what was
 actually read.
+
+**Prefer a measurement whose error can only point one way, and say which way.**
+Before reporting a number, ask whether the method can *overstate* it. Page
+weight sums `content-length` headers and counts a response without one as zero,
+so it is a floor — "at least 24.8MB" cannot be an overclaim, and an operator who
+checks finds more, not less. Broken-request counts under concurrency can come in
+low if a page did not settle inside the 6-second wait, again safe. By contrast
+"no signup button found" and "no consent banner" are claims of *absence*, which
+overstate the moment our detector misses something — and both did, repeatedly.
+Findings that can only understate are emailable; findings that can overstate are
+rank-only until the overstating path is closed.
+
+**Assumptions about the harness are measurements too.** The claim "concurrency 6
+distorts our request counts" sounded obviously true and would have justified a
+much slower sweep. Tested instead: `fastpari-afro.com` measured 866 requests in
+the sweep and 866 alone, `betfal.com` 836 and 833 — within 0.4%. The claim was
+false. Test the harness the same way the sites are tested.
 
 **Which host you scan from is part of the result, not noise.** The homelab and
 the workstation are refused by different sites; from Ukraine, three sample
@@ -402,8 +479,57 @@ exact commands when a proxy pool is configured.
 | Affiliate contact harvest | `crawler/affiliate-contacts.mjs` | `research/affiliate-contacts.json` |
 | Proxy pool config | `crawler/proxy-pool.mjs` | reads `PROXY_FILE` / `PROXIES` env |
 | Merged outreach list | `research/scripts/12-merge-master-outreach-list.py` | `research/master-outreach-list.csv` |
+| Single-casino audit summary | `research/scripts/13-audit-batch-summary.py` | prints, reads `research/audits/*.json` |
+| Bulk Phase-A sweep | `crawler/audit-probe.mjs --from=<list> --out=<file>` | `research/audit-sweep-battlefield.json` |
+| Outreach priority ranking | `research/scripts/14-priority-list.py` | `research/outreach-priority.csv` + `-verify.md` |
+
+## 8a. Ranking casinos for outreach
+
+Two phases, because they have different constraints.
+
+**Phase A** is everything `audit-probe.mjs` measures. It is parallel-safe —
+verified, not assumed (§7) — so it runs over the whole candidate list at
+concurrency 6.
+
+```bash
+node crawler/audit-probe.mjs --from=research/audit-targets.txt --conc=6 --resume --out=audit-sweep-battlefield.json
+```
+
+**Phase B** is `mobile-timing.mjs`. It measures milliseconds, so it must not run
+concurrently with anything, and it is only worth spending on candidates that
+already rank.
+
+Then rank:
+
+```bash
+python research/scripts/14-priority-list.py 40
+```
+
+This writes two files on purpose. `outreach-priority.csv` is the full ranked
+list. `outreach-priority-verify.md` is the top slice **written to be checked by
+hand before anything is sent** — every finding carries the exact failing URL, a
+`curl` line that reproduces it, and the dev-tools path to see it in a browser.
+A finding that does not reproduce means the tool is wrong and the row comes off
+the list.
+
+Two gates the ranking enforces:
+
+- **One domain per operator.** A Curaçao B2C licence covers a whole brand
+  roster, so the same company legitimately appears under many domains.
+  Contacting ten of its brands separately reads as a mail-merge, which is the
+  one thing this outreach cannot look like.
+- **A casino reaches the first wave only if it has an *emailable* finding.**
+  Consent ranks but cannot be quoted (§5), so a site whose only finding is
+  consent would produce an email with nothing in it. `AGENTS.md` is explicit
+  that padding destroys the reason for sending a report at all.
 
 ## 9. Changelog
 
 - **3 August 2026** — document created, consolidating rules previously scattered
   across script docstrings, `AGENTS.md`, and the dated research files.
+- **3 August 2026, later** — first bulk run over 1311 candidate domains. It
+  found three defects that 14 hand-picked domains had not: refused requests
+  counted as the casino's breakage (§5, 40% of failures in one sample), console
+  errors double-counting those same failures, and a consent finding that claimed
+  a German vantage point while measuring from a Ukrainian IP. Added §8a and the
+  two error-direction rules in §7.
