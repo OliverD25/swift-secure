@@ -65,14 +65,55 @@ anything about the Gibraltar entity.
 | Trade press | Multiple outlets, unprompted coverage | Zero |
 | Wayback Machine history | Present | Never archived |
 
-**No holding company found — Gamecheck appears independently owned**, not a
-subsidiary of a larger group or review platform. The Pragmatic Solutions
-interview is a content collaboration between two separate companies, not
-ownership. Nothing here points to Casino Guru, a review conglomerate, or any
-parent entity holding Gamecheck.
+## Correction, same day: the Casino Guru relationship is deeper than first read
 
-This changes nothing about the risk `competitors.md` already records — the
-category has a real, independently-verifiable incumbent at €250/month, which
-is the fact that matters for pricing and for the "no product gap" conclusion.
-What this check adds is confidence that the *evidence itself* is sound, not
-just repeated from a page that could say anything about itself.
+The first version of this document said "nothing here points to Casino Guru"
+and closed the question. That was wrong, and the evidence for the correction
+was already sitting in a search result from the very first competitor pass —
+a headline reading *"Casino Guru and Gamecheck partner to promote integrity and
+trust in iGaming"* (iGamingBusiness). It was read as two independent brands
+running a joint marketing initiative and not checked any further. It should
+have been.
+
+**What independent sources actually show, checked properly this time:**
+
+- Casino Guru's own site treats Gamecheck as **a feature embedded in its own
+  casino review pages** — "Visit Gamecheck Profile" links appear directly on
+  Casino Guru review pages, and Casino Guru's own material describes it as
+  *"part of Casino Guru's casino review process."* That is integration into
+  Casino Guru's core product, not a banner ad for an outside partner.
+- Every press announcement (iGB, Yogonet, AffPapa, JAMMA, igamist, and others,
+  spanning a Feb 2026 announcement and later coverage) nonetheless uses
+  partnership language throughout, and quotes James Elliott himself saying
+  *"Partnering with Casino Guru was an easy decision for us at Gamecheck"* —
+  phrasing a person describes their own employer or their own project with,
+  not the language of "Casino Guru launched this."
+- Elliott is independently described as a 20-year gaming IP lawyer, formerly
+  **General Counsel at NetEnt**, which is consistent with him founding a
+  separate venture rather than running an internal Casino Guru initiative.
+
+**Net position:** the depth of integration is real and was under-stated the
+first time — Casino Guru embeds Gamecheck's results as if native to its own
+product, which is a materially closer relationship than "partnership" usually
+implies commercially. **What is not independently confirmed is formal
+ownership or equity** — no source states Casino Guru founded, owns, or holds
+equity in Gamecheck Limited, and the founder's own quoted language points the
+other way. If a source exists for the stronger claim — Gamecheck being a
+Casino Guru project outright rather than a deeply integrated partner — it has
+not turned up in open search and should be added here directly if it surfaces.
+
+**What does not change:** Gamecheck Limited is still a real, independently
+verifiable Gibraltar company with an ISO 27001 certificate and a named,
+credentialed founder — none of that depended on the Casino Guru question.
+
+**What does change:** treating Gamecheck as a scrappy independent challenger
+was the wrong mental model regardless of the ownership question. Whether by
+equity or by product integration, its verification results are distributed
+through one of the largest casino review platforms in the industry. That is
+the more important fact for competitive positioning than the ownership
+structure underneath it.
+
+This changes the risk `competitors.md` records. The category's incumbent is not
+just independently credible — its results already reach players through Casino
+Guru's review pages, which is a distribution advantage no amount of independent
+credibility on our side closes by itself.

@@ -152,14 +152,19 @@ to retire any pitch built on "nobody does this."
 - **Free.** Not a differentiator so much as the price of entry against two
   established vendors at $250/month.
 
-**The honest risk, restated.** It is worse than the first version of this
-document said. The risk is not that our check is cheap to replicate — it is that
-it has already been replicated, packaged, priced and sold, by someone who also
-does the check we proved we cannot. We are not entering an empty space. We are
-entering behind two vendors with a narrower product and no track record.
+**The honest risk, restated a second time.** It is worse again. Gamecheck's
+results are embedded directly into Casino Guru's own review pages — checked
+3 August, see `gamecheck-ownership.md` — which is a real distribution
+advantage, not just an independently-credible competitor. Formal ownership is
+not confirmed, but for competitive purposes the effect is the same either way:
+Gamecheck's verification reaches players through one of the largest casino
+review platforms in the industry. The risk is not that our check is cheap to
+replicate, and not only that it has already been replicated and sold — it is
+that the incumbent already has the distribution we do not.
 
-That is survivable — the market is large, most operators have heard of neither,
-and 4.8% paying means the category is under-sold rather than saturated. But it
+That is survivable — the market is large, most operators have heard of neither
+us nor Gamecheck by name, and 4.8% paying means the category is under-sold
+rather than saturated. But it
 has to be planned for honestly rather than around.
 
 ## Sources
