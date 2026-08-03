@@ -65,6 +65,14 @@ def norm_stem(s: str) -> str:
     return re.sub(r"[\d_-]+", "", s.lower())
 
 
+# A brand-name match is not enough on its own: betpanda-io resolved to
+# betpanda.partners, which passes the substring check ("betpanda" in
+# "betpandapartners") but the TLD alone says this is an affiliate portal, not
+# the casino a player would visit. Domain, not stem, is checked here on
+# purpose — "partners" inside a normal casino name should not be penalised.
+AFFILIATE_DOMAIN = re.compile(r"\.partners$|affiliate|\bgo\.[a-z]|landingtool|landingstool", re.I)
+
+
 def looks_like_the_casino(slug: str, domain: str, path: str) -> bool:
     """The redirect target is trusted only if it plausibly IS the casino.
 
@@ -79,7 +87,7 @@ def looks_like_the_casino(slug: str, domain: str, path: str) -> bool:
     dom_stem = norm_stem(domain.split(".")[0])
     brand_match = len(stem) >= 4 and (stem in dom_stem or dom_stem in stem)
     root_path = path in ("", "/")
-    return brand_match and root_path
+    return brand_match and root_path and not AFFILIATE_DOMAIN.search(domain)
 
 
 def resolve(rec):
