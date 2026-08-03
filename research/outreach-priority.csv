@@ -1,11 +1,11 @@
 rank,domain,score,send,areas,n_emailable,headline,brand,operator,email,mail_problem,licence,licence_status,source
 1,luckybet.co,17,no address,asset+broken,2,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",LuckyBet,LBC Enterprises B.V.,,no address,OGL/2024/1221/0500,assessment in progress,curacao
-2,race365.com,17,no address,asset+broken,2,"15 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Race365,Superstars Entertainment B.V.,,no address,OGL/2024/1296/0547,active,curacao
-3,casinonavy.com,16,no address,broken,1,"8 request(s) fail on the homepage, 1 on their own domain, 7 on a third-party host",Homepage,JMS Investment Group N.V.,,no address,OGL/2024/675/0939,active,curacao
+2,race365.com,17,SEND,asset+broken,2,"15 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Race365,Superstars Entertainment B.V.,partner@race365.com,,OGL/2024/1296/0547,active,curacao
+3,casinonavy.com,16,SEND,broken,1,"8 request(s) fail on the homepage, 1 on their own domain, 7 on a third-party host",Homepage,JMS Investment Group N.V.,support@casinonavy.com,,OGL/2024/675/0939,active,curacao
 4,donebets.com,16,no address,broken,1,"11 request(s) fail on the homepage, on their own domain",Loading,3-102-952932 SRL,,no address,ALSI-202604027-FI2,,anjouan
 5,fatbets.com,16,address is on a different company's domain (gamdom.com) — confirm the pairing by hand first,broken,1,"9 request(s) fail on the homepage, on their own domain",Gamdom,Fatbets Ltd,support@gamdom.com,address is on a different company's domain (gamdom.com) — confirm the pairing by hand first,ALSI-202508054-FI2,,anjouan
-6,jon.bet,16,no address,broken,1,"20 request(s) fail on the homepage, on their own domain",jon,Ascend Entertainment N.V.,,no address,OGL/2024/1467/0728,assessment in progress,curacao
-7,jonbet.io,16,no address,broken,1,"20 request(s) fail on the homepage, on their own domain",jonbet,Ascend Entertainment N.V.,,no address,OGL/2024/1467/0728,assessment in progress,curacao
+6,jon.bet,16,SEND,broken,1,"20 request(s) fail on the homepage, on their own domain",jon,Ascend Entertainment N.V.,partners@jonbet.com,,OGL/2024/1467/0728,assessment in progress,curacao
+7,jonbet.io,16,duplicate mailbox,broken,1,"20 request(s) fail on the homepage, on their own domain",jonbet,Ascend Entertainment N.V.,partners@jonbet.com,,OGL/2024/1467/0728,assessment in progress,curacao
 8,metaigaming.io,16,no address,broken,1,"20 request(s) fail on the homepage, on their own domain",Meta System,Middle Kang B.V.,,no address,OGL/2024/2267/1181,assessment in progress,curacao
 9,parolambet.com,16,no address,broken,1,"10 request(s) fail on the homepage, on their own domain",Loading,3-102-952932 SRL,,no address,ALSI-202604027-FI2,,anjouan
 10,winup.io,16,SEND,broken,1,"20 request(s) fail on the homepage, 5 on their own domain, 15 on a third-party host",Winup,3-102-952740 SRL,support@winup.io,,ALSI-202601062-FI2,,anjouan
@@ -13,60 +13,60 @@ rank,domain,score,send,areas,n_emailable,headline,brand,operator,email,mail_prob
 12,casshiva.com,14,no address,broken,1,"5 request(s) fail on the homepage, on their own domain",Loading,3-102-952932 SRL,,no address,ALSI-202604027-FI2,,anjouan
 13,sporttyp.com,13,no address,broken,1,"4 request(s) fail on the homepage, on their own domain",Sporttyp,Delphin Blue Ocean B.V.,,no address,OGL/2024/657/0248,active,curacao
 14,xtp.com,13,no address,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",XTP,Entretenimiento Rojo B.V.,,no address,OGL/2024/1100/0505,assessment in progress,curacao
-15,9winz.com,12,no address,broken,1,"12 request(s) fail on the homepage, on their own domain",winz,Globis N.V.,,no address,OGL/2024/1194/0723,active,curacao
+15,9winz.com,12,SEND,broken,1,"12 request(s) fail on the homepage, on their own domain",winz,Globis N.V.,aff@9winz.com,,OGL/2024/1194/0723,active,curacao
 16,auro777.win,12,no address,broken,1,"3 request(s) fail on the homepage, 2 on their own domain, 1 on a third-party host",auro,Mirth B.V.,,no address,OGL/2024/1124/0444,active,curacao
-17,betitor.com,12,no address,broken,1,"7 request(s) fail on the homepage, 6 on their own domain, 1 on a third-party host",Betitor,3-102-941073 SRL,,no address,ALSI-202509018-FI1,,anjouan
+17,betitor.com,12,SEND,broken,1,"7 request(s) fail on the homepage, 6 on their own domain, 1 on a third-party host",Betitor,3-102-941073 SRL,support@betitor.com,,ALSI-202509018-FI1,,anjouan
 18,cm88.com,12,no address,broken,1,"3 request(s) fail on the homepage, 1 on their own domain, 2 on a third-party host",CM88,Cyber Labs B.V.,,no address,OGL/2024/1696/1055,active,curacao
 19,coinebet.com,12,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",coinebet,Rail Solutions Group B.V.,,no address,OGL/2024/788/0550,assessment in progress,curacao
 20,godbunny.com,12,no address,broken,1,"20 request(s) fail on the homepage, 1 on their own domain, 19 on a third-party host",GodBunny,Godbunny B.V.,,no address,OGL/2024/199/0868,active,curacao
-21,kaahaus.com,12,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",Tervetuloa Kaahaus Kasinolle,Fruity Entertainment N.V.,,no address,OGL/2024/1487/0729,assessment in progress,curacao
-22,keeponwin.com,12,no address,broken,1,"7 request(s) fail on the homepage, on their own domain",Keep On Win,Keep On Entertainment N.V.,,no address,OGL/2024/2279/1202,active,curacao
-23,nicewinz.com,12,no address,broken,1,"20 request(s) fail on the homepage, on their own domain",NiceWin,Glory Multimedia B.V.,,no address,OGL/2024/1600/0861,assessment in progress,curacao
-24,nolimit.bet,12,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",UnlimitedBet,NovaWave Technology N.V.,,no address,OGL/2024/547/0446,active,curacao
+21,kaahaus.com,12,address is on a different company's domain (fruitypartners.com) — confirm the pairing by hand first,broken,1,"3 request(s) fail on the homepage, on their own domain",Tervetuloa Kaahaus Kasinolle,Fruity Entertainment N.V.,contact@fruitypartners.com,address is on a different company's domain (fruitypartners.com) — confirm the pairing by hand first,OGL/2024/1487/0729,assessment in progress,curacao
+22,keeponwin.com,12,SEND,broken,1,"7 request(s) fail on the homepage, on their own domain",Keep On Win,Keep On Entertainment N.V.,support@keeponwin.com,,OGL/2024/2279/1202,active,curacao
+23,nicewinz.com,12,SEND,broken,1,"20 request(s) fail on the homepage, on their own domain",NiceWin,Glory Multimedia B.V.,info@nicewinz.com,,OGL/2024/1600/0861,assessment in progress,curacao
+24,nolimit.bet,12,address is on a different company's domain (herogaming.com) — confirm the pairing by hand first,broken,1,"3 request(s) fail on the homepage, on their own domain",UnlimitedBet,NovaWave Technology N.V.,affiliates@herogaming.com,address is on a different company's domain (herogaming.com) — confirm the pairing by hand first,OGL/2024/547/0446,active,curacao
 25,sc88.co,12,no address,broken,1,"3 request(s) fail on the homepage, 1 on their own domain, 2 on a third-party host",SC88,Cyber Labs B.V.,,no address,OGL/2024/1696/1055,active,curacao
 26,spinay.com,12,SEND,broken,1,"8 request(s) fail on the homepage, on their own domain",Spinay,Oranox Ltd,support@spinay.com,,ALSI-202601012-FI1,,anjouan
-27,spinnaus.com,12,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",Spinnaus Kasino,Fruity Entertainment N.V.,,no address,OGL/2024/1487/0729,assessment in progress,curacao
+27,spinnaus.com,12,address is on a different company's domain (fruitypartners.com) — confirm the pairing by hand first,broken,1,"3 request(s) fail on the homepage, on their own domain",Spinnaus Kasino,Fruity Entertainment N.V.,contact@fruitypartners.com,address is on a different company's domain (fruitypartners.com) — confirm the pairing by hand first,OGL/2024/1487/0729,assessment in progress,curacao
 28,tomcasino.net,12,no address,broken,1,"20 request(s) fail on the homepage, on their own domain",Tomcasino,3-102-941391 SRL,,no address,ALSI-202511019-FI1,,anjouan
 29,10x10.bet,11,no address,broken,1,"6 request(s) fail on the homepage, on their own domain",Home,Normanhouse LTD,,no address,ALSI-202603050-FI2,,anjouan
 30,bm.bet,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",Bm.bet,FairGame G.P. N.V.,,no address,OGL/2024/1673/0915,active,curacao
 31,chokwin.com,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",chokwin,Rail Solutions Group B.V.,,no address,OGL/2024/788/0550,assessment in progress,curacao
 32,fgfox.com,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",fgfox,FairGame G.P. N.V.,,no address,OGL/2024/1673/0915,active,curacao
-33,petra.bet,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",petra,Trickless N.V,,no address,OGL/2024/139/0125,assessment in progress,curacao
+33,petra.bet,11,SEND,broken,1,"2 request(s) fail on the homepage, on their own domain",petra,Trickless N.V,marketing@petra.bet,,OGL/2024/139/0125,assessment in progress,curacao
 34,unlimited.bet,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",UnlimitedBet,NovaWave Technology N.V.,,no address,OGL/2024/547/0446,active,curacao
 35,vespercasino.com,11,no address,broken,1,"2 request(s) fail on the homepage, on their own domain",Vesper,FairGame G.P. N.V.,,no address,OGL/2024/1673/0915,active,curacao
 36,789bet.sc,10,no address,asset,1,a single 261.2MB media file loads on the homepage,789BET,Cyber Labs B.V.,,no address,OGL/2024/1696/1055,active,curacao
-37,beastone.co,10,no address,asset,1,a single 24.4MB media file loads on the homepage,Beastone,Beastone N.V.,,no address,OGL/2024/390/0122,assessment in progress,curacao
+37,beastone.co,10,SEND,asset,1,a single 24.4MB media file loads on the homepage,Beastone,Beastone N.V.,general@beastone.co,,OGL/2024/390/0122,assessment in progress,curacao
 38,betovix.com,10,no address,asset,1,a single 27.1MB image file loads on the homepage,Betovix -,,,no address,,,cryptolists
 39,bookielink.com,10,no address,asset,1,a single 20.2MB media file loads on the homepage,BookieLink,Blueinic B.V.,,no address,OGL/2024/314/1090,active,curacao
 40,elitebet.io,10,no address,broken,1,"4 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",elitebet,R. Bostock Enterprises B.V.,,no address,OGL/2024/1067/0640,active,curacao
 41,fachaigaming.com,10,no address,asset,1,a single 69.0MB media file loads on the homepage,Top Online Casino Game Provider,WiselnNet Technologies B.V.,,no address,OGL/2024/1184/1010,active,curacao
 42,jun88.id,10,no address,asset,1,a single 96.5MB media file loads on the homepage,Jun88 Trang chủ chính thức Jun88.com,Cyber Labs B.V.,,no address,OGL/2024/1696/1055,active,curacao
 43,riskiiit.com,10,SEND,asset,1,a single 39.3MB media file loads on the homepage,riskiiit,Overcooked Entertainment Ltd.,support@riskiiit.com,,ALSI-202511044-FI2,,anjouan
-44,thestakehouse.io,10,no address,asset,1,a single 23.7MB image file loads on the homepage,The Stake House,,,no address,,,cryptolists
+44,thestakehouse.io,10,SEND,asset,1,a single 23.7MB image file loads on the homepage,The Stake House,The Stake House Affiliates,partners@thestakehouse.io,,,,cryptolists
 45,tucasino.lat,10,no address,broken,1,"5 request(s) fail on the homepage, on their own domain",TuCasino,Nova Code Limitada,,no address,ALSI-202508064-FI2,,anjouan
 46,u2is.tech,10,no address,asset,1,a single 25.8MB media file loads on the homepage,U2IS,U2IS Limited,,no address,ALSI-202601056-FI2,,anjouan
-47,abcfortunazone.com,9,no address,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Fortunazone Slots,Altan N.V.,,no address,OGL/2024/596/0252,active,curacao
-48,atlantivegas.com,9,no address,broken,1,"17 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Atlantivegas,SG International N.V.,,no address,OGL/2024/379/0174,assessment in progress,curacao
+47,abcfortunazone.com,9,SEND,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Fortunazone Slots,Altan N.V.,support@fortunazone.com,,OGL/2024/596/0252,active,curacao
+48,atlantivegas.com,9,SEND,broken,1,"17 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Atlantivegas,SG International N.V.,support@atlantivegassupport.com,,OGL/2024/379/0174,assessment in progress,curacao
 49,atomfortuna.com,9,no address,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Fortunazone Slots,Altan N.V.,,no address,OGL/2024/596/0252,active,curacao
 50,bettogames.com,9,SEND,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Bettogames,3-102-954365 SRL,support@bettogames.com,,ALSI-202603002-FI1,,anjouan
 51,casinityx.com,9,SEND,broken,1,"8 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",casinityx,3-102-942477 SRL,support@casinityx.com,,ALSI-202509036-FI1,,anjouan
-52,fortunazone.com,9,no address,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Fortunazone Slots,Altan N.V.,,no address,OGL/2024/596/0252,active,curacao
-53,gamealotroyale.com,9,SEND,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Gamealotroyale,3-102-954988 SRL,support@gamealotroyale.com,,ALSI-202602051-FI2,,anjouan
+52,fortunazone.com,9,duplicate mailbox,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Fortunazone Slots,Altan N.V.,support@fortunazone.com,,OGL/2024/596/0252,active,curacao
+53,gamealotroyale.com,9,3 already queued with the same vendor-side failure,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Gamealotroyale,3-102-954988 SRL,support@gamealotroyale.com,,ALSI-202602051-FI2,,anjouan
 54,jeevybet.com,9,3 already queued with the same vendor-side failure,broken,1,"16 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Jeevybet,3-102-947122 SRL,support@jeevybet.com,,ALSI-202601034-FI1,,anjouan
-55,kilobet.com,9,no address,broken,1,"9 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",KiloBet,SG International N.V.,,no address,OGL/2024/379/0174,assessment in progress,curacao
+55,kilobet.com,9,same operator as an earlier row (SG International N.V.),broken,1,"9 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",KiloBet,SG International N.V.,support@kilobetsupport.com,,OGL/2024/379/0174,assessment in progress,curacao
 56,mollydice.com,9,SEND,broken,1,"13 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Mollydice,Satoshi Labs Ltd,support@mollydice.com,,ALSI-202605020-FI1,,anjouan
 57,pro11casino.com,9,SEND,broken,1,"12 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Pro11casino,3-102-947393 SRL,support@pro11casino.com,,ALSI-202511030-FI2,,anjouan
 58,slapperzz.com,9,3 already queued with the same vendor-side failure,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Slapperzz,3-102-942611 SRL,support@slapperzz.com,,ALSI-202509041-FI1,,anjouan
 59,top.casino,9,no address,broken,1,"4 request(s) fail on the homepage, on their own domain",Online betting,Cre8 B.V.,,no address,OGL/2024/375/0657,assessment in progress,curacao
-60,vegas.salon,9,no address,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Vegas,SG International N.V.,,no address,OGL/2024/379/0174,assessment in progress,curacao
-61,zeabet777.com,9,no address,broken,1,"4 request(s) fail on the homepage, on their own domain",ZeaBet,Glory Multimedia B.V.,,no address,OGL/2024/1600/0861,assessment in progress,curacao
+60,vegas.salon,9,address is on a different company's domain (kng.partners) — confirm the pairing by hand first,broken,1,"20 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Vegas,SG International N.V.,manager@kng.partners,address is on a different company's domain (kng.partners) — confirm the pairing by hand first,OGL/2024/379/0174,assessment in progress,curacao
+61,zeabet777.com,9,same operator as an earlier row (Glory Multimedia B.V.),broken,1,"4 request(s) fail on the homepage, on their own domain",ZeaBet,Glory Multimedia B.V.,info@zeabet777.com,,OGL/2024/1600/0861,assessment in progress,curacao
 62,777spins.online,8,no address,asset,1,a single 14.2MB media file loads on the homepage,spins,Turn1 B.V.,,no address,OGL/2024/236/0117,active,curacao
 63,batcasino.bet,8,SEND,broken,1,"6 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",Batcasino,3-102-953033 SRL,support@batcasino.bet,,ALSI-202602037-FI2,,anjouan
 64,betanic.com,8,no address,asset,1,a single 9.9MB script file loads on the homepage,Games,Kitsilano Limitada,,no address,ALSI-202508065-FI2,,anjouan
-65,bonkersbet.com,8,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",BonkersBet.com,Velorum Corporation N.V.,,no address,OGL/2024/1384/0627,active,curacao
-66,cryptobosscasino.com,8,no address,asset,1,a single 13.1MB image file loads on the homepage,CryptoBoss,3-102-937046 SRL,,no address,ALSI-202509033-FI1,,anjouan
-67,drazze.casino,8,SEND,asset,1,a single 9.2MB media file loads on the homepage,Drazze,Drazze Limited,partners@drazze.casino,,ALSI-202512040-FI1,,anjouan
-68,drazzewin.com,8,duplicate mailbox,asset,1,a single 9.2MB media file loads on the homepage,Drazze,Drazze Limited,partners@drazze.casino,,ALSI-202512040-FI1,,anjouan
+65,bonkersbet.com,8,SEND,broken,1,"3 request(s) fail on the homepage, on their own domain",BonkersBet.com,Velorum Corporation N.V.,support@bonkersbet.com,,OGL/2024/1384/0627,active,curacao
+66,cryptobosscasino.com,8,address is on a different company's domain (combopartners.online) — confirm the pairing by hand first,asset,1,a single 13.1MB image file loads on the homepage,CryptoBoss,3-102-937046 SRL,affiliates@combopartners.online,address is on a different company's domain (combopartners.online) — confirm the pairing by hand first,ALSI-202509033-FI1,,anjouan
+67,drazze.casino,8,3 already queued with the same vendor-side failure,asset,1,a single 9.2MB media file loads on the homepage,Drazze,Drazze Limited,partners@drazze.casino,,ALSI-202512040-FI1,,anjouan
+68,drazzewin.com,8,3 already queued with the same vendor-side failure,asset,1,a single 9.2MB media file loads on the homepage,Drazze,Drazze Limited,partners@drazze.casino,,ALSI-202512040-FI1,,anjouan
 69,gambleverse.casino,8,no address,asset,1,a single 7.5MB image file loads on the homepage,Ölüdeniz Hostel,Casiworx N.V.,,no address,OGL/2024/1278/0497,active,curacao
 70,ganalucas.com,8,no address,asset,1,a single 9.7MB media file loads on the homepage,Spotless Serenity Stays Inc.,W&C N.V.,,no address,OGL/2024/922/0638,active,curacao
 71,gekipachi.com,8,no address,asset,1,a single 13.3MB image file loads on the homepage,アツパチ,Lucifer N.V.,,no address,OGL/2024/1635/0968,active,curacao
@@ -76,22 +76,22 @@ rank,domain,score,send,areas,n_emailable,headline,brand,operator,email,mail_prob
 75,maltcasino.com,8,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",MaltCasino,Fortuna Digital Solutions FDS Limitada,,no address,ALSI-202509068-FI2,,anjouan
 76,minix.game,8,no address,asset,1,a single 14.5MB image file loads on the homepage,MiniX,Ay Information Technology LTD,,no address,ALSI-202511017-FI1,,anjouan
 77,minorx.game,8,no address,asset,1,a single 14.5MB image file loads on the homepage,MinorX,Ay Information Technology LTD,,no address,ALSI-202511017-FI1,,anjouan
-78,neredebahis.com,8,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",Neredebahis,Trickless N.V,,no address,OGL/2024/139/0125,assessment in progress,curacao
+78,neredebahis.com,8,same operator as an earlier row (Trickless N.V),broken,1,"3 request(s) fail on the homepage, on their own domain",Neredebahis,Trickless N.V,destek@neredebahis.com,,OGL/2024/139/0125,assessment in progress,curacao
 79,oncasi.com,8,no address,asset,1,a single 14.4MB media file loads on the homepage,ONCASI 最新ゲーム搭載オンカジ,U2IS Limited,,no address,ALSI-202601056-FI2,,anjouan
 80,orobet.cl,8,no address,broken,1,"3 request(s) fail on the homepage, 1 on their own domain, 2 on a third-party host",Orobet,SUVYD B.V.,,no address,OGL/2024/846/0501,assessment in progress,curacao
 81,orobetar.com,8,no address,broken,1,"3 request(s) fail on the homepage, 1 on their own domain, 2 on a third-party host",Orobet,SUVYD B.V.,,no address,OGL/2024/846/0501,assessment in progress,curacao
 82,oxy.casino,8,SEND,asset,1,a single 7.3MB image file loads on the homepage,OXY,Spiritus Limited,support@oxy.casino,,ALSI-202603056-FI2,,anjouan
-83,partybet.ai,8,SEND,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
-84,partybet.bot,8,duplicate mailbox,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
-85,partybet.casino,8,duplicate mailbox,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
-86,partybet.fun,8,duplicate mailbox,asset,1,a single 19.9MB media file loads on the homepage,Partybet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
-87,partybet.social,8,duplicate mailbox,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
-88,partybet.win,8,duplicate mailbox,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+83,partybet.ai,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+84,partybet.bot,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+85,partybet.casino,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+86,partybet.fun,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,Partybet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+87,partybet.social,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
+88,partybet.win,8,3 already queued with the same vendor-side failure,asset,1,a single 19.9MB media file loads on the homepage,PartyBet,On Read SRL,support@partybet.fun,,ALSI-202508060-FI2,,anjouan
 89,poker8.io,8,no address,asset,1,a single 9.0MB image file loads on the homepage,Poker with passion,Joyeux B.V.,,no address,OGL/2024/1603/0850,assessment in progress,curacao
-90,rake.com,8,no address,asset,1,a single 6.1MB image file loads on the homepage,Rake Casino,,,no address,,,cryptolists
+90,rake.com,8,3 already queued with the same vendor-side failure,asset,1,a single 6.1MB image file loads on the homepage,Rake Casino,,info@rake.com,,,,cryptolists
 91,star7.casino,8,no address,broken,1,"3 request(s) fail on the homepage, on their own domain",Star7,Velorum Corporation N.V.,,no address,OGL/2024/1384/0627,active,curacao
 92,vawzengaming.com,8,no address,asset,1,a single 17.0MB script file loads on the homepage,Vawzen Gaming,Geeker Technology N.V.,,no address,OGL/2024/251/0130,active,curacao
-93,wgmgames.com,8,no address,broken,1,"6 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",wgmgames,Overseas Gaming Management B.V.,,no address,OGL/2024/2162/1156,active,curacao
+93,wgmgames.com,8,3 already queued with the same vendor-side failure,broken,1,"6 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",wgmgames,Overseas Gaming Management B.V.,support@wgmgames.com,,OGL/2024/2162/1156,active,curacao
 94,xypoker1.com,8,no address,asset,1,a single 7.7MB font file loads on the homepage,Xypoker1,3-102-938312 SRL,,no address,ALSI-202509050-FI1,,anjouan
 95,zowin.cab,8,no address,asset,1,a single 7.1MB image file loads on the homepage,ZOWIN,Amadeus Technology B.V,,no address,OGL/2024/1272/1143,active,curacao
 96,playorbet.com,7,no address,broken,1,"5 request(s) fail on the homepage, on a third-party host — the fix belongs to their platform vendor",playorbet,White Star B.V.,,no address,OGL/2023/159/0076,assessment in progress,curacao
