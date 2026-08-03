@@ -59,6 +59,24 @@ function detect(text) {
   return found;
 }
 
+// Discovered testing against winup.io: it fires 55 payment-icon requests on
+// the homepage (agstatic.com/paysystems/.../aninda2_papara.svg,
+// .../aninda2_banka.svg — the same icons whose 404 the site health audit
+// already found) but the visible-text and <img alt/src> checks found zero of
+// them. They render as CSS background-images, not <img> tags, so DOM-only
+// detection has a real, demonstrated blind spot — not a hypothetical one.
+// Network request URLs still carry the payment method's name and were the
+// only place this signal was actually visible. Filenames are each platform's
+// own internal naming, so this is still heuristic, not exhaustive — a
+// provider named only in a sprite-sheet class name with no URL trace would
+// still be missed.
+function detectFromUrls(urls) {
+  const found = new Set();
+  const joined = urls.join(" ");
+  for (const [name, re] of PAYMENT_METHODS) if (re.test(joined)) found.add(name);
+  return found;
+}
+
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 const REGION_LOCALE = {
@@ -78,6 +96,8 @@ async function sampleOnce(browser, domain, proxy) {
   });
   const page = await ctx.newPage();
   page.on("dialog", (d) => d.dismiss().catch(() => {}));
+  const requestUrls = [];
+  page.on("request", (r) => requestUrls.push(r.url()));
   try {
     const resp = await page.goto(`https://${domain}`, { waitUntil: "domcontentloaded", timeout: 30000 });
     if (!resp || resp.status() >= 400) return { blocked: true, methods: new Set() };
@@ -86,7 +106,12 @@ async function sampleOnce(browser, domain, proxy) {
     await page.waitForTimeout(2500);
     const text = await page.evaluate(() => document.body?.innerText ?? "").catch(() => "");
     if (text.trim().length < 200) return { blocked: true, methods: new Set() };
-    return { blocked: false, methods: detect(text) };
+    // Union of both: text/img catches methods spelled out in words or alt
+    // text, request-URL catches the CSS-background-image case that text
+    // detection alone would miss entirely (see detectFromUrls above).
+    const fromText = detect(text);
+    const fromUrls = detectFromUrls(requestUrls);
+    return { blocked: false, methods: new Set([...fromText, ...fromUrls]) };
   } catch {
     return { blocked: true, methods: new Set() };
   } finally {
