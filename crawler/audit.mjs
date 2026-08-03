@@ -170,7 +170,16 @@ try {
   const loadTimeout = /did not finish within/.test(out);
   mobile = { raw: out.trim(), ctaMs: ctaMatch ? Number(ctaMatch[1]) : null, loadTimedOut: loadTimeout };
 
-  if (mobile.ctaMs !== null && mobile.ctaMs > 8000) {
+  // "NOT FOUND in 20s" is the worst outcome this check can produce, and the
+  // first version handled only the numeric cases — so a site where the
+  // Register button never appeared at all produced no mobile finding whatever,
+  // silently dropping the strongest result of the module. zlot.com hit exactly
+  // this. Phrased as an observation rather than a verdict, because a CTA can
+  // legitimately sit behind a cookie wall or an age gate we did not dismiss.
+  const ctaMissing = /NOT FOUND in 20s/.test(mobile.raw ?? "");
+  if (ctaMissing) {
+    add("report", "mobile", "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open.");
+  } else if (mobile.ctaMs !== null && mobile.ctaMs > 8000) {
     add("report", "mobile", `On a Fast 3G mobile connection the Register/Sign-up button does not appear for ${(mobile.ctaMs / 1000).toFixed(1)}s.`);
   } else if (mobile.ctaMs !== null) {
     add("context", "mobile", `Register button visible after ${(mobile.ctaMs / 1000).toFixed(1)}s on Fast 3G — healthy.`);

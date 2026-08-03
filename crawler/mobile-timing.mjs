@@ -51,8 +51,39 @@ const MOBILE_UA =
 // Interactive elements only (a, button, input[submit], role=button) — matching
 // plain text anywhere on the page would catch a footer T&C link mentioning
 // "deposit limits" and call it a call-to-action.
-const CTA_TEXT =
-  /register|sign ?up|join now|create account|get started|play now|deposit|claim bonus/i;
+//
+// MULTILINGUAL BY NECESSITY, not for completeness. An English-only pattern
+// reported "no Register button in 20s" for zlot.com, bet10bet.com and pk8.com —
+// 3 of 12 in the first batch. All three have a prominent CTA above the fold:
+// "Приєднатися" (Ukrainian), "KAYIT" (Turkish), and a Chinese UI. That would
+// have told three operators their signup button was missing while it sat in
+// plain view, which is precisely the accusation-by-broken-tooling this project
+// cannot afford.
+//
+// This is the same failure that killed the text-matched compliance checks
+// (methodology.md §5) — English-and-German vocabulary against a market that is
+// heavily Turkish, Russian and CJK. The list below is not exhaustive; a locale
+// it does not cover still produces a false "not found", so that result is
+// phrased as an observation to check rather than a defect.
+const CTA_TEXT = new RegExp(
+  [
+    // English
+    "register", "sign ?up", "join now", "join us", "create account", "get started",
+    "play now", "deposit", "claim bonus",
+    // Turkish — a large share of this market
+    "kayit", "kayıt", "üye ol", "uye ol", "giriş yap", "hemen oyna",
+    // Russian / Ukrainian
+    "регистрац", "зарегистр", "реєстрац", "приєднат", "присоединит", "играть", "грати",
+    // Spanish / Portuguese
+    "registrarse", "regístrate", "cadastr", "criar conta", "jogar agora", "abrir cuenta",
+    // German / French / Polish
+    "registrieren", "anmelden", "jetzt spielen", "s'inscrire", "inscription",
+    "zarejestruj", "rejestracja",
+    // CJK
+    "注册", "註冊", "登録", "회원가입", "立即注册", "马上注册",
+  ].join("|"),
+  "i",
+);
 
 async function measure(browser, domain) {
   const out = {
