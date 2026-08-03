@@ -41,6 +41,16 @@ licences at all.
 *unlicensed*. Registers lag, tokens expire, and domains move. Absence of a record
 is absence of evidence.
 
+**Jurisdiction is stated as a fact, not a verdict — but the fact is now more
+useful.** AskGamblers' own new-casino guide names the tier explicitly: *"the
+United Kingdom Gambling Commission and the Malta Gaming Authority are highly
+trusted... new casinos with these licences usually provide better protection
+than operators licensed in Anjouan or Curaçao."* That is an industry-recognised
+statement, not our opinion, and it is the kind of one-line context a report can
+carry without editorialising — "Anjouan: an offshore jurisdiction with lighter
+regulatory oversight than UKGC or MGA" is a fact, not an accusation. Worth adding
+to how a licence line reads in a report, not just what it says.
+
 ## 2. Cloaking — does the site tell every country the same story
 
 **New, working, and the only capability no competitor offers.**
@@ -50,13 +60,28 @@ compares what each is shown. Localisation and currency differences are reported
 as normal. The finding raised is a site naming a **different regulator or licence
 number** depending on who is asking, because only one of those claims can be true.
 
-Measured on 60 sites: two confirmed (`jokertipp.com`, `greatslots.com` — Anjouan
-licence verifier shown to Canadian visitors 3 of 3 samples, to German visitors 0
-of 3).
+Measured on 130 sites (two batches): **7 confirmed (5.4%)**. Six show the
+Anjouan licence verifier to Canadian visitors and hide it from German ones;
+one, `betphoenix.ag`, runs the opposite way — shown to Germany, hidden from
+Canada. That reversal matters: it broke the tidy first-pass story of "hiding
+from strictly regulated markets," and any explanation that only fits six of
+seven is not the explanation.
 
 Every suspected difference is re-sampled three times per region before it counts.
-That guard exists because single-sample comparison had a **67% false-positive
-rate** in testing.
+That guard exists because single-sample comparison had a **~50% false-positive
+rate** across the two batches (14 candidates, 7 survived).
+
+**We do not conclude why a site differs, only that it does.** Three explanations
+fit a confirmed case and the check cannot separate them: the seal vendor's own
+widget may geo-restrict on its own, the operator may be deliberately (and
+legitimately) suppressing a claim the licence does not cover in that market, or
+it is what it looks like. AskGamblers' own new-casino guide corroborates the
+first possibility outright — *"the casinos displayed on this page are tailored
+to your location... licensing rules vary by region"* — a leading review site
+openly geo-tailors its own listings for licensing reasons. That is exactly why
+this finding never goes in the operator email: a real difference is still
+ambiguous, and only the public verification page states an ambiguous, dated
+fact without turning it into an accusation.
 
 **Why this matters commercially:** a static badge image cannot state where it was
 verified from. Ours can — "shown to visitors from Canada, not from Germany,
@@ -75,6 +100,15 @@ sorts them by what they actually are:
 The distinction matters: 4.8% of readable sites pay for certification, but 68%
 display a regulator seal. Conflating those two produced a market estimate that
 was wrong by a factor of two.
+
+**External corroboration of scope, not a new capability.** AskGamblers tells
+players to check exactly three things before depositing without an account: a
+clickable licence badge showing status and issue date, the company behind the
+casino cross-checked against official registries, and independent testing seals
+(eCOGRA, GLI, iTech Labs). That is our licence verification, our operator/company
+extraction from the Curaçao certificates, and this trust-signal detector —
+stated independently by an established authority as the accessible due-diligence
+baseline, not something we invented to justify our own scope.
 
 ## 4. Which game studios a site claims
 
