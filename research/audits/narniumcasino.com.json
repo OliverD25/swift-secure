@@ -1,0 +1,195 @@
+{
+ "domain": "narniumcasino.com",
+ "ranAt": "2026-08-03T10:11:37.231Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan (ALSI-202511055-FI2). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gaminglabs, gli, trustpilot, casinoguru, askgamblers. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 19 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 1.5s on Fast 3G — healthy."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "The page does not finish loading within 10s on a Fast 3G mobile connection."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "narniumcasino.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [
+     "ALSI-202511055-FI2"
+    ],
+    "sealLinks": [
+     "https://anjouangaming.com/license-register/",
+     "https://verification.anjouangamingboard.org/validate?domain=narniumcasino.com&seal_id=347f4ed340c19c8d9049279e16c932a928b4139621d39a498b48515742a05a26fa30476fdb83d1573a10670c259400e3&stamp=7d73d199f3ab9f1086be1c183febb52c",
+     "https://access.gaminglabs.com/Certificate/Index?i=515",
+     "https://anjouangaming.com/license-register/",
+     "https://anjouangaming.com/about/anjouan-laws/"
+    ],
+    "excerpt": "ore Fair Games Safe, Certified & Globally Respected NarniumCasino is built on transparency and trust. With a regulated license, thousands of verified player accounts, and partnerships with 90+ trusted providers, we ensure a safe, fast, and fair casino experience. Enjoy instant crypto deposits, 24/7 multilingual support, and the confidence of a platform designed for responsibl"
+   }
+  },
+  "signals": {
+   "domain": "narniumcasino.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "provider": 240,
+    "regulator": 5,
+    "payment": 7,
+    "responsible": 1,
+    "certification": 2,
+    "review": 6
+   },
+   "samples": {
+    "provider": [
+     "/provider/spnmnl/ | b-game-card__provider-link b-game-card__provider-link--text | Spinomen",
+     "/provider/kalamba/ | b-game-card__provider-link b-game-card__provider-link--text | Kalamba",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/providers/white/",
+     "/provider/hacksaw/ | b-game-card__provider-link b-game-card__provider-link--text | Hacksaw"
+    ],
+    "regulator": [
+     "https://anjouangaming.com/license-register/ | Government of the Autonomous Island of Anjou",
+     "site-foot__anjouan-seal",
+     "https://verification.anjouangamingboard.org/validate?domain=narniumcasino.com&seal_id=347f",
+     "https://anjouangaming.com/license-register/ | ALSI-202511055-FI2"
+    ],
+    "payment": [
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/visa.svg | Visa",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/mastercard.svg |",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/apple-pay.svg | ",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/paysafecard.svg "
+    ],
+    "responsible": [
+     "Gamblers Anonymous | http://www.gamblersanonymous.org/"
+    ],
+    "certification": [
+     "Gaming Labs Certified | https://access.gaminglabs.com/Certificate/Index?i=515",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/gli-certified.sv"
+    ],
+    "review": [
+     "Ratings by Trustpilot | https://www.trustpilot.com/review/narniaslots.com",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/trustpilot-stars",
+     "Review by Casino Guru | https://casino.guru/narniaslots-casino-review",
+     "https://narniumcasino.com/wp-content/themes/casino-platform/static/images/casinoguru-logo."
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [
+    "gaminglabs",
+    "gli",
+    "trustpilot",
+    "casinoguru",
+    "askgamblers"
+   ],
+   "providerNames": [
+    "BGaming",
+    "BetGames",
+    "Betsoft",
+    "EGT",
+    "Endorphina",
+    "Evolution",
+    "Ezugi",
+    "Habanero",
+    "Hacksaw",
+    "Kalamba",
+    "Nolimit City",
+    "Platipus",
+    "Play'n GO",
+    "Playson",
+    "Pragmatic Play",
+    "Quickspin",
+    "Spinomenal",
+    "Thunderkick",
+    "Yggdrasil"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "narniumcasino.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": true,
+    "x-frame-options": true,
+    "x-content-type-options": true,
+    "referrer-policy": true
+   },
+   "domContentLoaded": 1432,
+   "settled": 7433,
+   "requestCount": 254,
+   "transferKB": 5409,
+   "thirdPartyHosts": 7,
+   "trackersBeforeConsent": [
+    "www.googletagmanager.com",
+    "www.google-analytics.com"
+   ],
+   "hasConsentUI": true,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": true,
+    "aml": true,
+    "bonusTerms": true
+   },
+   "seo": {
+    "title": 57,
+    "metaDescription": 129,
+    "h1Count": 1,
+    "canonical": true,
+    "hreflang": 7,
+    "structuredData": 3,
+    "ogImage": true,
+    "imagesNoAlt": 8
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "narniumcasino.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 11516ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 1510ms (\"Register\")\n  requests / KB    : 188 / 3430",
+   "ctaMs": 1510,
+   "loadTimedOut": true
+  }
+ }
+}

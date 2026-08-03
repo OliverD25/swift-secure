@@ -1,0 +1,214 @@
+{
+ "domain": "fatbets.com",
+ "ranAt": "2026-08-03T10:12:28.981Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-152406043-FI). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gamecheck, trustpilot. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 13 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "report",
+   "area": "health",
+   "text": "9 requests fail on the homepage. Examples: 404 https://fatbets.com/_proxied/games/towers/remoteEntry.js?v=w8b0bb0p6o9 | 404 https://fatbets.com/_proxied/games/keno/remoteEntry.js?v=4vfz3tz4yeq | 404 https://fatbets.com/_proxied/games/twist/remoteEntry.js?v=y3k6z7i9qln"
+  },
+  {
+   "use": "report",
+   "area": "consent",
+   "text": "14 tracking host(s) received a request before any consent interaction, measured from a German browser context: www.googletagmanager.com, ad.doubleclick.net, www.clarity.ms, www.google.com, cnv.event.prod.bidr.io. This is a measurement, not a legal opinion."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection the Register/Sign-up button does not appear for 11.8s."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "fatbets.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan",
+     "Costa Rica (no gaming regulator)"
+    ],
+    "numbers": [
+     "ALSI-152406043-FI"
+    ],
+    "sealLinks": [],
+    "excerpt": "ress: n. 400, La Ceiba Street, San Rafael district, County of Escazu, San JosÃ©, Costa Rica operates this website under licence number ALSI-152406043-FI issued by the Government of the Autonomous Island of Anjouan, Union of Comoros English Bulgarian Czech Greek English Spanish Filipino French Indonesian Japanese Georgian Korean Polish Portuguese Russian Serbian Thai Turkish V"
+   }
+  },
+  "signals": {
+   "domain": "fatbets.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "provider": 20,
+    "certification": 3,
+    "responsible": 1,
+    "review": 2,
+    "regulator": 1
+   },
+   "samples": {
+    "provider": [
+     "/casino/le-fisherman-hacksaw-gaming | GamesListV4-styled__ProportionalContainer-sc-b6a0f5b",
+     "/casino/duck-hunters-nolimit-city | GamesListV4-styled__ProportionalContainer-sc-b6a0f5b1-",
+     "/casino/wanted-hacksaw-gaming | GamesListV4-styled__ProportionalContainer-sc-b6a0f5b1-7 gQ",
+     "/casino/soaked-by-seamen-nolimit-city | GamesListV4-styled__ProportionalContainer-sc-b6a0f"
+    ],
+    "certification": [
+     "/help/fair | FooterV4Links-styled__NavLink-sc-7133d249-0 gFcBgD | Provably Fair",
+     "https://gamecheck.com/online-casino/gamdom | FooterV4-styled__BrandLink-sc-c1d933ae-14 dbF",
+     "/static/img/game-check.png | GameCheck logo | BrandImage__BrandImg-sc-d4b9d6ee-0 igwAqh"
+    ],
+    "responsible": [
+     "/help/responsible-gambling | FooterV4Links-styled__NavLink-sc-7133d249-0 gFcBgD | Responsi"
+    ],
+    "review": [
+     "https://www.trustpilot.com/review/gamdom.com | FooterV4-styled__BrandLink-sc-c1d933ae-14 d",
+     "/static/img/trustpilot-logo.svg | Trust logo | BrandImage__BrandImg-sc-d4b9d6ee-0 cHvcas"
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=fatbets.com&seal_id=bf4bcbe20d"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [
+    "gamecheck",
+    "trustpilot"
+   ],
+   "providerNames": [
+    "BGaming",
+    "Betsoft",
+    "EGT",
+    "Endorphina",
+    "Evolution",
+    "Hacksaw",
+    "Microgaming",
+    "NetEnt",
+    "Nolimit City",
+    "Novomatic",
+    "Pragmatic Play",
+    "Quickspin",
+    "Spinomenal"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "fatbets.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": true,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 683,
+   "settled": 6689,
+   "requestCount": 266,
+   "transferKB": 4273,
+   "thirdPartyHosts": 28,
+   "trackersBeforeConsent": [
+    "www.googletagmanager.com",
+    "ad.doubleclick.net",
+    "www.clarity.ms",
+    "www.google.com",
+    "cnv.event.prod.bidr.io",
+    "googleads.g.doubleclick.net",
+    "stats.g.doubleclick.net",
+    "scripts.clarity.ms",
+    "i.clarity.ms",
+    "c.clarity.ms",
+    "connect.facebook.net",
+    "analytics.tiktok.com",
+    "c.bing.com",
+    "www.facebook.com"
+   ],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": true,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": false,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 37,
+    "metaDescription": 147,
+    "h1Count": 1,
+    "canonical": true,
+    "hreflang": 42,
+    "structuredData": 2,
+    "ogImage": true,
+    "imagesNoAlt": 19
+   },
+   "brokenRequests": 9,
+   "brokenSample": [
+    "404 https://fatbets.com/_proxied/games/towers/remoteEntry.js?v=w8b0bb0p6o9",
+    "404 https://fatbets.com/_proxied/games/keno/remoteEntry.js?v=4vfz3tz4yeq",
+    "404 https://fatbets.com/_proxied/games/twist/remoteEntry.js?v=y3k6z7i9qln",
+    "404 https://fatbets.com/_proxied/games/chicken/remoteEntry.js?v=nkyt6hv2xu",
+    "404 https://fatbets.com/_proxied/games/blackjack/remoteEntry.js?v=pjeb5ay3jm",
+    "404 https://fatbets.com/_proxied/games/limbo/remoteEntry.js?v=n65b9jsf1rn"
+   ],
+   "brokenGroups": [
+    [
+     "/_proxied/games/towers",
+     1
+    ],
+    [
+     "/_proxied/games/keno",
+     1
+    ],
+    [
+     "/_proxied/games/twist",
+     1
+    ],
+    [
+     "/_proxied/games/chicken",
+     1
+    ]
+   ],
+   "consoleErrors": 18,
+   "consoleSample": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Refused to execute script from 'https://fatbets.com/_proxied/games/towers/remoteEntry.js?v=w8b0bb0p6"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "fatbets.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 4578ms\n  load event       : 20255ms\n  CTA visible at   : 11811ms (\"Sign up\")\n  requests / KB    : 248 / 3581",
+   "ctaMs": 11811,
+   "loadTimedOut": false
+  }
+ }
+}

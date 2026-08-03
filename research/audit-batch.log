@@ -1,0 +1,246 @@
+########## zlot.com
+
+=== Technical audit: zlot.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [health] 18 requests fail on the homepage. Examples: 403 https://api.zlot.com/platform-telegram-bot__api/rpc/sumstats.platform.telegrambot.query.find_bot_for_site_login_link | 403 https://api.zlot.com/frontserver-erisgaming__api/rpc/sumstats.frontserver.command.get_main_line.erisgaming | 403 https://api.zlot.com/graphql-gateway__api/graphql?query=%23Platform_SportsbookProvidersPage%23772346995c5365f113157425434ed6a19bba32c0b3b103c4b21cff8b780737ad%23&variables=ewB9AA%3D%3D
+  [mobile] On a Fast 3G mobile connection the Register/Sign-up button does not appear for 16.1s.
+
+--- context — our understanding only ---
+  [licence] No regulator or licence number found on the page.
+  [seals] Already displays: gamecheck. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/zlot.com.json
+########## bet10bet.com
+
+=== Technical audit: bet10bet.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan (ALSI-202601035-F11). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Already displays: licenseseal. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+  [mobile] Register button visible after 6.3s on Fast 3G — healthy.
+
+--- SEND TO OPERATOR ---
+  Nothing found worth reporting. Per methodology.md, this gets a report that says exactly that — never padded with weak findings.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/bet10bet.com.json
+########## pk8.com
+
+=== Technical audit: pk8.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [consent] 4 tracking host(s) received a request before any consent interaction, measured from a German browser context: www.googletagmanager.com, www.google-analytics.com, cdn.segment.com, api.segment.io. This is a measurement, not a legal opinion.
+  [mobile] On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open.
+
+--- context — our understanding only ---
+  [licence] No regulator or licence number found on the page.
+  [seals] Already displays: gaminglabs. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/pk8.com.json
+########## yasalbahis.com
+
+=== Technical audit: yasalbahis.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [mobile] On a Fast 3G mobile connection the Register/Sign-up button does not appear for 9.7s.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan — no licence number published. Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Already displays: gamecheck. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [seals] Names 23 game studios on-site. We record the claim and its date; we cannot verify it.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/yasalbahis.com.json
+########## narniumcasino.com
+
+=== Technical audit: narniumcasino.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [mobile] The page does not finish loading within 10s on a Fast 3G mobile connection.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan (ALSI-202511055-FI2). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Already displays: gaminglabs, gli, trustpilot, casinoguru, askgamblers. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [seals] Names 19 game studios on-site. We record the claim and its date; we cannot verify it.
+  [mobile] Register button visible after 1.5s on Fast 3G — healthy.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/narniumcasino.com.json
+########## fatbets.com
+
+=== Technical audit: fatbets.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [health] 9 requests fail on the homepage. Examples: 404 https://fatbets.com/_proxied/games/towers/remoteEntry.js?v=w8b0bb0p6o9 | 404 https://fatbets.com/_proxied/games/keno/remoteEntry.js?v=4vfz3tz4yeq | 404 https://fatbets.com/_proxied/games/twist/remoteEntry.js?v=y3k6z7i9qln
+  [consent] 14 tracking host(s) received a request before any consent interaction, measured from a German browser context: www.googletagmanager.com, ad.doubleclick.net, www.clarity.ms, www.google.com, cnv.event.prod.bidr.io. This is a measurement, not a legal opinion.
+  [mobile] On a Fast 3G mobile connection the Register/Sign-up button does not appear for 11.8s.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-152406043-FI). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Already displays: gamecheck, trustpilot. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [seals] Names 13 game studios on-site. We record the claim and its date; we cannot verify it.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/fatbets.com.json
+########## raize.poker
+
+=== Technical audit: raize.poker ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [mobile] The page does not finish loading within 10s on a Fast 3G mobile connection.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-202511038-FI2). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Already displays: gli. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)
+  [seals] Displays a regulator licence seal.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+  [mobile] Register button visible after 4.7s on Fast 3G — healthy.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/raize.poker.json
+########## matadorbet.com
+
+=== Technical audit: matadorbet.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- context — our understanding only ---
+  [licence] Claims: Curaçao (GLH-OCCHKTW0708022022). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Displays a regulator licence seal.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+  [mobile] Register button visible after 2.0s on Fast 3G — healthy.
+
+--- SEND TO OPERATOR ---
+  Nothing found worth reporting. Per methodology.md, this gets a report that says exactly that — never padded with weak findings.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/matadorbet.com.json
+########## spinman.com
+
+=== Technical audit: spinman.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan — no licence number published. Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Displays a regulator licence seal.
+  [seals] Names 13 game studios on-site. We record the claim and its date; we cannot verify it.
+  [mobile] Register button visible after 4.5s on Fast 3G — healthy.
+
+--- SEND TO OPERATOR ---
+  Nothing found worth reporting. Per methodology.md, this gets a report that says exactly that — never padded with weak findings.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/spinman.com.json
+########## partybet.ai
+
+=== Technical audit: partybet.ai ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [mobile] On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-202508060-FI2). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Displays a regulator licence seal.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/partybet.ai.json
+########## bizbet.mobi
+
+=== Technical audit: bizbet.mobi ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [health] 678 requests and 994KB to load the homepage — well above the ~167-request median across sites we have measured.
+  [mobile] On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open.
+
+--- context — our understanding only ---
+  [licence] No regulator or licence number found on the page.
+  [seals] Displays a regulator licence seal.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/bizbet.mobi.json
+########## evetabi.com
+
+=== Technical audit: evetabi.com ===
+Run 2026-08-03, per research/methodology.md
+
+No proxies configured — scanning direct from this host. Blocked sites will be reported as blocked, and nothing here is geo-verified.
+
+
+--- SEND TO OPERATOR ---
+  [health] 6 requests fail on the homepage. Examples: 401 https://evetabi.com/api/announcement | 401 https://evetabi.com/api/auth/me | 401 https://evetabi.com/api/user/profile
+  [mobile] The page does not finish loading within 10s on a Fast 3G mobile connection.
+
+--- context — our understanding only ---
+  [licence] Claims: Anjouan (ALSI-202508061-FI2). Not a Curacao LOK number, so no certificate lookup is possible.
+  [seals] Displays a regulator licence seal.
+  [seals] Names 2 game studios on-site. We record the claim and its date; we cannot verify it.
+  [health] No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger.
+  [mobile] Register button visible after 0.5s on Fast 3G — healthy.
+
+No proxies configured — cloaking and payment-routing checks were skipped. Nothing here is geo-verified.
+
+wrote research/audits/evetabi.com.json

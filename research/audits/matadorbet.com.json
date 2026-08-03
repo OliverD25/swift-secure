@@ -1,0 +1,120 @@
+{
+ "domain": "matadorbet.com",
+ "ranAt": "2026-08-03T10:13:28.723Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Curaçao (GLH-OCCHKTW0708022022). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 2.0s on Fast 3G — healthy."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "matadorbet.com",
+    "reachable": true,
+    "regulators": [
+     "Curaçao"
+    ],
+    "numbers": [
+     "GLH-OCCHKTW0708022022"
+    ],
+    "sealLinks": [],
+    "excerpt": "k@matadorbet.com Matadorbet.com, Socas International B.V. şirketine bağlı olarak Dr. M. J.Hugenholtzweg 25, Willemstad, Curacao adresinde kayıtlı özel bir şirkettir. Socas International B.V., GLH-OCCHKTW0708022022 lisans numarası altında Matadorbet.com olarak Curaçao Hükümeti tarafından yetkilendirilmiş Curaçao eGaming tarafından lisanslanmıştır ve düzenlenmiştir. Matadorbet.co"
+   }
+  },
+  "signals": {
+   "domain": "matadorbet.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "regulator": 1
+   },
+   "samples": {
+    "regulator": [
+     "amp-assets/img/cga.jpg | Matadorbet Curaçao eGaming Lisansı | i-amphtml-fill-content i-amp"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "matadorbet.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 288,
+   "settled": 6301,
+   "requestCount": 34,
+   "transferKB": 2153,
+   "thirdPartyHosts": 4,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": false,
+    "privacy": false,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 38,
+    "metaDescription": 166,
+    "h1Count": 1,
+    "canonical": true,
+    "hreflang": 0,
+    "structuredData": 1,
+    "ogImage": true,
+    "imagesNoAlt": 15
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 14,
+   "consoleSample": [
+    "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+    "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "matadorbet.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 593ms\n  load event       : 7470ms\n  CTA visible at   : 2026ms (\"Kayıt\")\n  requests / KB    : 27 / 1303",
+   "ctaMs": 2026,
+   "loadTimedOut": false
+  }
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "domain": "raize.poker",
+ "ranAt": "2026-08-03T10:13:02.452Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-202511038-FI2). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gli. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 4.7s on Fast 3G — healthy."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "The page does not finish loading within 10s on a Fast 3G mobile connection."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "raize.poker",
+    "reachable": true,
+    "regulators": [
+     "Anjouan",
+     "Costa Rica (no gaming regulator)"
+    ],
+    "numbers": [
+     "ALSI-202511038-FI2"
+    ],
+    "sealLinks": [
+     "https://www.anjouangaming.com/",
+     "https://www.anjouangaming.com/"
+    ],
+    "excerpt": "om with a dedicated RAIZE dealer. Talk to our team to get set up. Is RAIZE available where I live? RAIZE runs under a licence issued by the Government of the Autonomous Island of Anjouan, Union of Comoros (Licence No. ALSI-202511038-FI2) and applies geo-checks at the table. If your region isn't supported, the lobby won't let you sit. See the footer for full details. A real s"
+   }
+  },
+  "signals": {
+   "domain": "raize.poker",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "regulator": 2,
+    "certification": 1,
+    "responsible": 1
+   },
+   "samples": {
+    "regulator": [
+     "https://www.anjouangaming.com | seal | Verify our Anjouan gaming licence",
+     "https://www.anjouangaming.com | Anjouan Licensing Services Inc."
+    ],
+    "certification": [
+     "seal | GLI Certified"
+    ],
+    "responsible": [
+     "badge18 | 18 plus only | 18+"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [
+    "gli"
+   ],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "raize.poker",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 271,
+   "settled": 6276,
+   "requestCount": 28,
+   "transferKB": 12673,
+   "thirdPartyHosts": 6,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": true,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 61,
+    "metaDescription": 158,
+    "h1Count": 1,
+    "canonical": true,
+    "hreflang": 0,
+    "structuredData": 3,
+    "ogImage": true,
+    "imagesNoAlt": 0
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "raize.poker  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1125ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 4662ms (\"Sign Up\")\n  requests / KB    : 27 / 12673",
+   "ctaMs": 4662,
+   "loadTimedOut": true
+  }
+ }
+}

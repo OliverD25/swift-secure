@@ -1,0 +1,122 @@
+{
+ "domain": "partybet.ai",
+ "ranAt": "2026-08-03T10:14:32.604Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan, Costa Rica (no gaming regulator) (ALSI-202508060-FI2). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "partybet.ai",
+    "reachable": true,
+    "regulators": [
+     "Anjouan",
+     "Costa Rica (no gaming regulator)"
+    ],
+    "numbers": [
+     "ALSI-202508060-FI2"
+    ],
+    "sealLinks": [
+     "https://verification.anjouangamingboard.org/validate?domain=partybet.bot&seal_id=42c126a8ad4bee3ce9e01879d270faef124d4e1438ba9922d5031aa164792b8060d6da1e4f4efeb50a0013b6c7cceb06&stamp=7d73d199f3ab9f1086be1c183febb52c"
+    ],
+    "excerpt": "treet Thirty-Nine, Second Office on the Right, LY Center, Costa Rica. Contact us: support@partybet.fun. PartyBet.bot is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No: ALSI-202508060-FI2. PartyBet.bot has passed all regulatory compliance and is legally authorized to conduct gaming operations for any a"
+   }
+  },
+  "signals": {
+   "domain": "partybet.ai",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "responsible": 1,
+    "regulator": 2
+   },
+   "samples": {
+    "responsible": [
+     "site-footer-badges | 18+"
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=partybet.bot&seal_id=42c126a8a",
+     "[iframe/network] 9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+    ]
+   },
+   "vendorHosts": [
+    "9f585460-afc0-433a-acb6-f05caf9286c9.snippet.anjouangaming.org"
+   ],
+   "paidVendors": [],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "partybet.ai",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 352,
+   "settled": 6366,
+   "requestCount": 48,
+   "transferKB": 23963,
+   "thirdPartyHosts": 3,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": true,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 39,
+    "metaDescription": 74,
+    "h1Count": 1,
+    "canonical": false,
+    "hreflang": 0,
+    "structuredData": 0,
+    "ogImage": true,
+    "imagesNoAlt": 1
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "partybet.ai  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 2194ms\n  load event       : 21727ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 48 / 23963",
+   "ctaMs": null,
+   "loadTimedOut": false
+  }
+ }
+}

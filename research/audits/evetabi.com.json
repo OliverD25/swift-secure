@@ -1,0 +1,174 @@
+{
+ "domain": "evetabi.com",
+ "ranAt": "2026-08-03T10:15:41.851Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan (ALSI-202508061-FI2). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 2 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "report",
+   "area": "health",
+   "text": "6 requests fail on the homepage. Examples: 401 https://evetabi.com/api/announcement | 401 https://evetabi.com/api/auth/me | 401 https://evetabi.com/api/user/profile"
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 0.5s on Fast 3G — healthy."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "The page does not finish loading within 10s on a Fast 3G mobile connection."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "evetabi.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [
+     "ALSI-202508061-FI2"
+    ],
+    "sealLinks": [
+     "https://verification.anjouangamingboard.org/validate?domain=evetabi.com&seal_id=e7442a779977dd4fcac5dab8317aa1f8754068bb812b8163207eb6d653ea1ac374088ed257392a7efc903d0e2cbeca5f&stamp=7d73d199f3ab9f1086be1c183febb52c"
+    ],
+    "excerpt": "stletoe Ltd registration number: 16083, registered address: 16083 PO Box 1212 Hamchako, Mutsamudu, Autonomous Island of Anjouan, ANJ 901 Union of Comoros. Contact us at info@evetabi.com. Evetabi.com is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No. ALSI-202508061-FI2. Evetabi.com has passed all regul"
+   }
+  },
+  "signals": {
+   "domain": "evetabi.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "payment": 2,
+    "provider": 5,
+    "regulator": 1
+   },
+   "samples": {
+    "payment": [
+     "/_next/image?url=%2Fimages%2Fstatic%2Ficon%2Ftether-icon.png&w=128&q=75 | tether-icon | ob",
+     "/_next/image?url=%2Fimages%2Fstatic%2Ficon%2Fhot-icon.png&w=128&q=75 | tether-icon | objec"
+    ],
+    "provider": [
+     "https://eu-west-1.chatbro.app/main/thumbnails/pragmatic-play-big-bass-boxing-bonus-round.p",
+     "https://eu-west-1.chatbro.app/main/thumbnails/egtd/100-burning-hot-egt-digital.avif | 100 "
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=evetabi.com&seal_id=e7442a7799"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [],
+   "providerNames": [
+    "EGT",
+    "Pragmatic Play"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "evetabi.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 417,
+   "settled": 6418,
+   "requestCount": 147,
+   "transferKB": 5239,
+   "thirdPartyHosts": 3,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": false,
+    "privacy": false,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 7,
+    "metaDescription": 17,
+    "h1Count": 1,
+    "canonical": false,
+    "hreflang": 0,
+    "structuredData": 0,
+    "ogImage": false,
+    "imagesNoAlt": 1
+   },
+   "brokenRequests": 6,
+   "brokenSample": [
+    "401 https://evetabi.com/api/announcement",
+    "401 https://evetabi.com/api/auth/me",
+    "401 https://evetabi.com/api/user/profile",
+    "401 https://evetabi.com/api/user/profile",
+    "401 https://evetabi.com/api/user/profile",
+    "401 https://evetabi.com/api/wallet/list"
+   ],
+   "brokenGroups": [
+    [
+     "/api/user",
+     3
+    ],
+    [
+     "/api",
+     1
+    ],
+    [
+     "/api/auth",
+     1
+    ],
+    [
+     "/api/wallet",
+     1
+    ]
+   ],
+   "consoleErrors": 6,
+   "consoleSample": [
+    "Failed to load resource: the server responded with a status of 401 ()",
+    "Failed to load resource: the server responded with a status of 401 ()"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "evetabi.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 3080ms\n  load event       : did not finish within 10s (Fast 3G)\n  CTA visible at   : 536ms (\"Giriş Yap\")\n  requests / KB    : 113 / 3940",
+   "ctaMs": 536,
+   "loadTimedOut": true
+  }
+ }
+}

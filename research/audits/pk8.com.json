@@ -1,0 +1,130 @@
+{
+ "domain": "pk8.com",
+ "ranAt": "2026-08-03T10:10:21.283Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "No regulator or licence number found on the page."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gaminglabs. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "report",
+   "area": "consent",
+   "text": "4 tracking host(s) received a request before any consent interaction, measured from a German browser context: www.googletagmanager.com, www.google-analytics.com, cdn.segment.com, api.segment.io. This is a measurement, not a legal opinion."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "pk8.com",
+    "reachable": true,
+    "regulators": [],
+    "numbers": [],
+    "sealLinks": [
+     "https://access.gaminglabs.com/Certificate/Index?i=300",
+     "https://access.gaminglabs.com/Certificate/Index?i=300"
+    ]
+   }
+  },
+  "signals": {
+   "domain": "pk8.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "certification": 2
+   },
+   "samples": {
+    "certification": [
+     "https://access.gaminglabs.com/Certificate/Index?i=300"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [
+    "gaminglabs"
+   ],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "pk8.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 4959,
+   "settled": 10968,
+   "requestCount": 98,
+   "transferKB": 3205,
+   "thirdPartyHosts": 9,
+   "trackersBeforeConsent": [
+    "www.googletagmanager.com",
+    "www.google-analytics.com",
+    "cdn.segment.com",
+    "api.segment.io"
+   ],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": false,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 10,
+    "metaDescription": 0,
+    "h1Count": 0,
+    "canonical": true,
+    "hreflang": 5,
+    "structuredData": 0,
+    "ogImage": false,
+    "imagesNoAlt": 29
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 3,
+   "consoleSample": [
+    "Mixed Content: The page at 'https://web.pk8.com/' was loaded over HTTPS, but requested an insecure f",
+    "Mixed Content: The page at 'https://web.pk8.com/' was loaded over HTTPS, but requested an insecure f"
+   ],
+   "mixedContent": 3,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "pk8.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 11751ms\n  load event       : 20458ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 97 / 3052",
+   "ctaMs": null,
+   "loadTimedOut": false
+  }
+ }
+}

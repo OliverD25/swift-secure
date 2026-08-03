@@ -1,0 +1,165 @@
+{
+ "domain": "yasalbahis.com",
+ "ranAt": "2026-08-03T10:11:03.242Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan — no licence number published. Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gamecheck. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 23 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection the Register/Sign-up button does not appear for 9.7s."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "yasalbahis.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [],
+    "sealLinks": [
+     "https://verification.anjouangamingboard.org/validate?domain=yasalbahis.com&seal_id=86f78206c28835ae0c75f32dce8fd1ec34161b80b9cc747da1082b8178a219ef9f28cf86ff6b4fbd3246735f28a9c765&stamp=7d73d199f3ab9f1086be1c183febb52c"
+    ],
+    "excerpt": "n number: 000050217, registered address: San Victor Street, Orange Walk Town, Belize. Contact us info@yasalbahis.com is licensed and regula ted by the Government of the Autonomous Island of Anjouan, Union of Comoros and opera tes under License No. ALSI-202509021. yasalbahis.com has passed all regulatory compliance and is legally authorized to conduct gaming opera ons for any an"
+   }
+  },
+  "signals": {
+   "domain": "yasalbahis.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "provider": 28,
+    "certification": 1,
+    "regulator": 2
+   },
+   "samples": {
+    "provider": [
+     "/egt-bell-link | block | EGT Bell Link",
+     "https://d29i6pt8t98nr9.cloudfront.net/images/GtoK8z5KM6l3GvrgpJXs.png | EGT TURNUVASI | ab",
+     "https://d29i6pt8t98nr9.cloudfront.net/images/YkwS0hNDx5170Gfvcq2o.png | EGT YENİ OYUN | ab",
+     "https://d1b82hscw3e9o2.cloudfront.net/media/images/providersLogos/white_logos/be-light.png"
+    ],
+    "certification": [
+     "https://gamecheck1.com/seal-scan/f74d5636-64e7-40b0-be07-6fec0b2af8b8?referrer=yasalbahis4"
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=yasalbahis.com&seal_id=86f7820",
+     "https://d11k2x767znmiw.cloudfront.net/anjouan-service/sealassets/7d73d199f3ab9f1086be1c183"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [
+    "gamecheck"
+   ],
+   "providerNames": [
+    "3 Oaks",
+    "BGaming",
+    "BetGames",
+    "Betsoft",
+    "EGT",
+    "Endorphina",
+    "Evolution",
+    "Evoplay",
+    "Ezugi",
+    "Fugaso",
+    "Gamzix",
+    "Habanero",
+    "Hacksaw",
+    "Kalamba",
+    "Mancala",
+    "Nolimit City",
+    "Platipus",
+    "Playson",
+    "Pragmatic Play",
+    "Spinomenal",
+    "Swintt",
+    "Thunderkick",
+    "Tom Horn"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "yasalbahis.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 752,
+   "settled": 6757,
+   "requestCount": 206,
+   "transferKB": 25027,
+   "thirdPartyHosts": 13,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": false,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 10,
+    "metaDescription": 10,
+    "h1Count": 0,
+    "canonical": false,
+    "hreflang": 0,
+    "structuredData": 0,
+    "ogImage": true,
+    "imagesNoAlt": 1
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "yasalbahis.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 6797ms\n  load event       : 6797ms\n  CTA visible at   : 9703ms (\"Kayıt\")\n  requests / KB    : 84 / 1478",
+   "ctaMs": 9703,
+   "loadTimedOut": false
+  }
+ }
+}

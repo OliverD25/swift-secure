@@ -1,0 +1,135 @@
+{
+ "domain": "bet10bet.com",
+ "ranAt": "2026-08-03T10:09:28.714Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan (ALSI-202601035-F11). Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: licenseseal. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 6.3s on Fast 3G — healthy."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "bet10bet.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [
+     "ALSI-202601035-F11"
+    ],
+    "sealLinks": [],
+    "excerpt": "to Digital LTD. registration number: 15981, registered address: PO Box 1212, Hamchako, Mutsamudu, Autonomous Island o f Anjouan, Union of Comoros. Contact us info@bet10bet.com. Bet10Bet is licensed and regulated by the Government of the Autonomous Island of Anjouan, Union of Comoros and operates under License No. ALSI-202601035-F11. Bet10Bet has passed all regulatory compliance"
+   }
+  },
+  "signals": {
+   "domain": "bet10bet.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "regulator": 1,
+    "certification": 2
+   },
+   "samples": {
+    "regulator": [
+     "FooterLicenceCuracaoContainer anj-container"
+    ],
+    "certification": [
+     "[iframe/network] bet10bet.licenseseal.online",
+     "[iframe/network] api.licenseseal.online"
+    ]
+   },
+   "vendorHosts": [
+    "bet10bet.licenseseal.online",
+    "api.licenseseal.online"
+   ],
+   "paidVendors": [
+    "licenseseal"
+   ],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "bet10bet.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": true,
+    "x-frame-options": true,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 367,
+   "settled": 6369,
+   "requestCount": 193,
+   "transferKB": 2776,
+   "thirdPartyHosts": 8,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": false,
+    "privacy": false,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 78,
+    "metaDescription": 0,
+    "h1Count": 0,
+    "canonical": true,
+    "hreflang": 6,
+    "structuredData": 0,
+    "ogImage": false,
+    "imagesNoAlt": 0
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 36,
+   "consoleSample": [
+    "WebSocket connection to 'wss://eu-swarm-newm.bet10bet.com/' failed: Error during WebSocket handshake",
+    "Access to XMLHttpRequest at 'https://go-cms.bet10bet.com/api/public/v1/tur/partners/1253/popups?type"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "bet10bet.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 4711ms\n  load event       : 5257ms\n  CTA visible at   : 6304ms (\"KAYIT\")\n  requests / KB    : 108 / 360",
+   "ctaMs": 6304,
+   "loadTimedOut": false
+  }
+ }
+}

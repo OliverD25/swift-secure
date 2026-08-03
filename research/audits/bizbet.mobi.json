@@ -1,0 +1,122 @@
+{
+ "domain": "bizbet.mobi",
+ "ranAt": "2026-08-03T10:15:12.073Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "No regulator or licence number found on the page."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "report",
+   "area": "health",
+   "text": "678 requests and 994KB to load the homepage — well above the ~167-request median across sites we have measured."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection no Register/Sign-up button became visible within 20 seconds. Worth checking whether a mobile visitor can find one at all — some layouts place it behind a menu we did not open."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "bizbet.mobi",
+    "reachable": true,
+    "regulators": [],
+    "numbers": [],
+    "sealLinks": []
+   }
+  },
+  "signals": {
+   "domain": "bizbet.mobi",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "regulator": 2,
+    "responsible": 2
+   },
+   "samples": {
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=bizbet.mobi&seal_id=9d47a545f9",
+     "[iframe/network] 772a0990-2753-4af9-b683-ccddbfb68199.snippet.anjouangaming.org"
+    ],
+    "responsible": [
+     "https://gamblersanonymous.org/ga | ui-text-editor-link-tag | Gamblers Anonymous",
+     "mailto:isomain@gamblersanonymous.org | ui-text-editor-link-tag | isomain@gamblersanonymous"
+    ]
+   },
+   "vendorHosts": [
+    "772a0990-2753-4af9-b683-ccddbfb68199.snippet.anjouangaming.org"
+   ],
+   "paidVendors": [],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "bizbet.mobi",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": true,
+    "x-frame-options": true,
+    "x-content-type-options": false,
+    "referrer-policy": false
+   },
+   "domContentLoaded": 380,
+   "settled": 6384,
+   "requestCount": 678,
+   "transferKB": 994,
+   "thirdPartyHosts": 2,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": false,
+    "privacy": false,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 59,
+    "metaDescription": 146,
+    "h1Count": 1,
+    "canonical": true,
+    "hreflang": 4,
+    "structuredData": 1,
+    "ogImage": true,
+    "imagesNoAlt": 192
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 1,
+   "consoleSample": [
+    "TypeError: Cannot read properties of null (reading 'transition')\n    at Object.resolve (https://v3.t"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "bizbet.mobi  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 1662ms\n  load event       : 5202ms\n  CTA visible at   : NOT FOUND in 20s\n  requests / KB    : 521 / 1092",
+   "ctaMs": null,
+   "loadTimedOut": false
+  }
+ }
+}

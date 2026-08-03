@@ -1,0 +1,136 @@
+{
+ "domain": "spinman.com",
+ "ranAt": "2026-08-03T10:13:51.966Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "Claims: Anjouan — no licence number published. Not a Curacao LOK number, so no certificate lookup is possible."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Names 13 game studios on-site. We record the claim and its date; we cannot verify it."
+  },
+  {
+   "use": "context",
+   "area": "mobile",
+   "text": "Register button visible after 4.5s on Fast 3G — healthy."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "spinman.com",
+    "reachable": true,
+    "regulators": [
+     "Anjouan"
+    ],
+    "numbers": [],
+    "sealLinks": [],
+    "excerpt": "ROMOS VIP Rewards VIEW REWARDS Refer & Earn INVITE FRIENDS LIVE BETS All Bets High Rollers Luckiest Races Spinman is a licensed online casino with the top 100 slots, live dealer tables, instant deposits and fast withdrawals. GAMES Slots Live Casino Promotions All Studios SPINMAN About HELP & SUPPORT Help Live Chat Contact Us Responsible Gaming 18+ 18+ Only SSL Secured License"
+   }
+  },
+  "signals": {
+   "domain": "spinman.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "provider": 37,
+    "regulator": 1
+   },
+   "samples": {
+    "provider": [
+     "/hacksaw-gaming | group/link relative flex h-11 items-center rounded-lg px-3 text-sm font-",
+     "/netent | group/link relative flex h-11 items-center rounded-lg px-3 text-sm font-bold tra",
+     "/red-tiger | group/link relative flex h-11 items-center rounded-lg px-3 text-sm font-bold ",
+     "/bgaming | group/link relative flex h-11 items-center rounded-lg px-3 text-sm font-bold tr"
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=spinman.com&seal_id=eb8dace598"
+    ]
+   },
+   "vendorHosts": [],
+   "paidVendors": [],
+   "providerNames": [
+    "BGaming",
+    "Belatra",
+    "Evolution",
+    "Ezugi",
+    "Habanero",
+    "Hacksaw",
+    "NetEnt",
+    "Nolimit City",
+    "Pragmatic Play",
+    "Red Tiger",
+    "Thunderkick",
+    "Tom Horn",
+    "Yggdrasil"
+   ],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "spinman.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": true,
+    "content-security-policy": false,
+    "x-frame-options": true,
+    "x-content-type-options": true,
+    "referrer-policy": true
+   },
+   "domContentLoaded": 292,
+   "settled": 6306,
+   "requestCount": 87,
+   "transferKB": 2564,
+   "thirdPartyHosts": 7,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": true,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": true
+   },
+   "legalPages": {
+    "terms": true,
+    "privacy": true,
+    "aml": true,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 15,
+    "metaDescription": 57,
+    "h1Count": 0,
+    "canonical": true,
+    "hreflang": 12,
+    "structuredData": 0,
+    "ogImage": true,
+    "imagesNoAlt": 10
+   },
+   "brokenRequests": 0,
+   "brokenSample": [],
+   "brokenGroups": [],
+   "consoleErrors": 0,
+   "consoleSample": [],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "spinman.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 4085ms\n  load event       : 4085ms\n  CTA visible at   : 4510ms (\"REGISTER\")\n  requests / KB    : 47 / 8",
+   "ctaMs": 4510,
+   "loadTimedOut": false
+  }
+ }
+}

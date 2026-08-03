@@ -1,0 +1,165 @@
+{
+ "domain": "zlot.com",
+ "ranAt": "2026-08-03T10:09:02.726Z",
+ "findings": [
+  {
+   "use": "context",
+   "area": "licence",
+   "text": "No regulator or licence number found on the page."
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Already displays: gamecheck. (Commercial context for us — never mentioned to the operator, who put it there deliberately.)"
+  },
+  {
+   "use": "context",
+   "area": "seals",
+   "text": "Displays a regulator licence seal."
+  },
+  {
+   "use": "report",
+   "area": "health",
+   "text": "18 requests fail on the homepage. Examples: 403 https://api.zlot.com/platform-telegram-bot__api/rpc/sumstats.platform.telegrambot.query.find_bot_for_site_login_link | 403 https://api.zlot.com/frontserver-erisgaming__api/rpc/sumstats.frontserver.command.get_main_line.erisgaming | 403 https://api.zlot.com/graphql-gateway__api/graphql?query=%23Platform_SportsbookProvidersPage%23772346995c5365f113157425434ed6a19bba32c0b3b103c4b21cff8b780737ad%23&variables=ewB9AA%3D%3D"
+  },
+  {
+   "use": "context",
+   "area": "health",
+   "text": "No HSTS header. Excluded from reports by the AGENTS.md filter — operators do not act on this from a stranger."
+  },
+  {
+   "use": "report",
+   "area": "mobile",
+   "text": "On a Fast 3G mobile connection the Register/Sign-up button does not appear for 16.1s."
+  }
+ ],
+ "raw": {
+  "licence": {
+   "checked": true,
+   "claimed": {
+    "domain": "zlot.com",
+    "reachable": true,
+    "regulators": [],
+    "numbers": [],
+    "sealLinks": []
+   }
+  },
+  "signals": {
+   "domain": "zlot.com",
+   "ok": true,
+   "blocked": false,
+   "error": "",
+   "signals": {
+    "responsible": 3,
+    "regulator": 1,
+    "certification": 3
+   },
+   "samples": {
+    "responsible": [
+     "/uk-ua/docs/responsible-gambling | cms-link--WDWO7 media-link--T1Ipx | Responsible Gamblin",
+     "https://www.responsiblegambling.org/ | gt-link--Yrpa1",
+     "https://www.gambleaware.org/ | gt-link--B9HNt"
+    ],
+    "regulator": [
+     "https://verification.anjouangamingboard.org/validate?domain=zlot.com&seal_id=0abe12f081da0"
+    ],
+    "certification": [
+     "https://gamecheck.tech/seal-scan/234f098d-0cba-43b5-a49a-4fea16830147?referrer=zlot.com",
+     "https://seal.gamecheck.cloud/seal/234f098d-0cba-43b5-a49a-4fea16830147.png | Gamecheck Tru",
+     "[iframe/network] seal.gamecheck.cloud"
+    ]
+   },
+   "vendorHosts": [
+    "seal.gamecheck.cloud"
+   ],
+   "paidVendors": [
+    "gamecheck"
+   ],
+   "providerNames": [],
+   "region": "uk",
+   "proxied": false
+  },
+  "health": {
+   "domain": "zlot.com",
+   "ok": true,
+   "error": "",
+   "status": 200,
+   "securityHeaders": {
+    "strict-transport-security": false,
+    "content-security-policy": false,
+    "x-frame-options": false,
+    "x-content-type-options": true,
+    "referrer-policy": true
+   },
+   "domContentLoaded": 664,
+   "settled": 6669,
+   "requestCount": 276,
+   "transferKB": 4292,
+   "thirdPartyHosts": 8,
+   "trackersBeforeConsent": [],
+   "hasConsentUI": false,
+   "responsibleGambling": {
+    "ageNotice": false,
+    "selfExclusion": false,
+    "depositLimit": false,
+    "helpOrg": false,
+    "rgPage": false
+   },
+   "legalPages": {
+    "terms": false,
+    "privacy": false,
+    "aml": false,
+    "bonusTerms": false
+   },
+   "seo": {
+    "title": 17,
+    "metaDescription": 171,
+    "h1Count": 0,
+    "canonical": true,
+    "hreflang": 26,
+    "structuredData": 0,
+    "ogImage": false,
+    "imagesNoAlt": 0
+   },
+   "brokenRequests": 18,
+   "brokenSample": [
+    "403 https://api.zlot.com/platform-telegram-bot__api/rpc/sumstats.platform.telegrambot.query.find_bot_for_site_login_link",
+    "403 https://api.zlot.com/frontserver-erisgaming__api/rpc/sumstats.frontserver.command.get_main_line.erisgaming",
+    "403 https://api.zlot.com/graphql-gateway__api/graphql?query=%23Platform_SportsbookProvidersPage%23772346995c5365f113157425434ed6a19bba32c0b3b103c4b21cff8b780737ad%23&variables=ewB9AA%3D%3D",
+    "403 https://api.zlot.com/graphql-gateway__api/graphql?query=%23Cms_Blocks%238ee195839638b89f8dd615893724dc1e07a495aed16180295a85c1b534024723%23&variables=ewAiAGMAbQBzAEgAaQBuAHQAcwAiADoAewAiAGcAYQBtAGUARwByAGkAZABUAHkAcABlACIAOgAiAFMASQBaAEUAXwA2ACIALAAiAGQAZQB2AGkAYwBlACIAOgAiAEQARQBTAEsAVABPAFAAIgAsACIAYwBvAHUAbgB0AHIAeQAiADoAIgBVAEsAUgAiACwAIgBsAG8AYwBhAGwAZQAiADoAIgB1AGsAXwBVAEEAIgB9ACwAIgBzAGUAZwBtAGUAbgB0AEEAdQBkAGkAZQBuAGMAZQAiADoAIgBBAE4ATwBOAFkATQBPAFUAUwAiACwAIgBzAGUAZwBtAGUAbgB0AEMAcgBpAHQAZQByAGkAYQAiADoAWwB7ACIAZgBpAGUAbABkACIAOgAiAHQAZQByAHIAaQB0AG8AcgB5AEIAeQBJAHAAIgAsACIAdgBhAGwAdQBlACIAOgAiAFUASwBSACIAfQAsAHsAIgBmAGkAZQBsAGQAIgA6ACIAYwB1AHIAcgBlAG4AYwB5AEIAeQBUAGUAcgByAGkAdABvAHIAeQAiACwAIgB2AGEAbAB1AGUAIgA6ACIAVQBBAEgAIgB9AF0ALAAiAHQAaABlAG0AZQAiADoAIgBkAGUAZgBhAHUAbAB0AF8AYwBtAHMAXwB0AGgAZQBtAGUAIgAsACIAcAByAG8AagBlAGMAdABDAG8AZABlACIAOgAiAFAATABBAFQARgBPAFIATQAiACwAIgB3AGgAZQByAGUAIgA6AHsAIgBwAHIAZQBkAGkAYwBhAHQAZQAiADoAIgBhAG4AZAAiACwAIgBvAHAAZQByAGEAbgBkAHMAIgA6AFsAewAiAGYAaQBlAGwAZABQAGEAdABoACIAOgAiAGMAbQBzAF8AYgBsAG8AYwBrAF8AXwBwAHIAbwBqAGUAYwB0AF8AYwBvAGQAZQAiACwAIgBwAHIAZQBkAGkAYwBhAHQAZQAiADoAIgBlAHEAIgAsACIAdgBhAGwAdQBlACIAOgAiAFAATABBAFQARgBPAFIATQAiAH0ALAB7ACIAZgBpAGUAbABkAFAAYQB0AGgAIgA6ACIAYwBtAHMAXwBiAGwAbwBjAGsAXwBfAGUAbgBhAGIAbABlAGQAIgAsACIAcAByAGUAZABpAGMAYQB0AGUAIgA6ACIAZQBxACIALAAiAHYAYQBsAHUAZQAiADoAIgB0AHIAdQBlACIAfQAsAHsAIgBmAGkAZQBsAGQAUABhAHQAaAAiADoAIgBjAG0AcwBfAGIAbABvAGMAawBfAF8AdAB5AHAAZQAiACwAIgBwAHIAZQBkAGkAYwBhAHQAZQAiADoAIgBpAG4AIgAsACIAdgBhAGwAdQBlACIAOgAiAFsAXAAiAHMAcABsAGEAcwBoAEIAYQBuAG4AZQByADEAXAAiAF0AIgB9AF0AfQB9AA%3D%3D",
+    "403 https://api.zlot.com/frontserver-erisgaming__api/rpc/sumstats.frontserver.command.get_main_line_schema",
+    "403 https://api.zlot.com/graphql-gateway__api/graphql?query=%23Cms_Blocks%238ee195839638b89f8dd615893724dc1e07a495aed16180295a85c1b534024723%23&variables=ewAiAHQAaABlAG0AZQAiADoAIgBkAGUAZgBhAHUAbAB0AF8AYwBtAHMAXwB0AGgAZQBtAGUAIgAsACIAdwBoAGUAcgBlACIAOgB7ACIAcAByAGUAZABpAGMAYQB0AGUAIgA6ACIAYQBuAGQAIgAsACIAbwBwAGUAcgBhAG4AZABzACIAOgBbAHsAIgBmAGkAZQBsAGQAUABhAHQAaAAiADoAIgBjAG0AcwBfAGIAbABvAGMAawBfAF8AcAByAG8AagBlAGMAdABfAGMAbwBkAGUAIgAsACIAcAByAGUAZABpAGMAYQB0AGUAIgA6ACIAZQBxACIALAAiAHYAYQBsAHUAZQAiADoAIgBTAFAATwBSAFQAUwBCAE8ATwBLACIAfQAsAHsAIgBmAGkAZQBsAGQAUABhAHQAaAAiADoAIgBjAG0AcwBfAGIAbABvAGMAawBfAF8AZQBuAGEAYgBsAGUAZAAiACwAIgBwAHIAZQBkAGkAYwBhAHQAZQAiADoAIgBlAHEAIgAsACIAdgBhAGwAdQBlACIAOgAiAHQAcgB1AGUAIgB9AF0AfQB9AA%3D%3D"
+   ],
+   "brokenGroups": [
+    [
+     "/graphql-gateway__api",
+     11
+    ],
+    [
+     "/frontserver-erisgaming__api/rpc",
+     3
+    ],
+    [
+     "/platform-telegram-bot__api/rpc",
+     1
+    ],
+    [
+     "/platform-player__api/rpc",
+     1
+    ]
+   ],
+   "consoleErrors": 32,
+   "consoleSample": [
+    "%cplayerui-core%cerror%capp padding: 2px 4px; text-transform: uppercase; font-size: 10px; background",
+    "Failed to load resource: the server responded with a status of 403 ()"
+   ],
+   "mixedContent": 0,
+   "hasViewportMeta": true
+  },
+  "mobile": {
+   "raw": "zlot.com  (Fast 3G throttle, mobile viewport)\n  DOMContentLoaded : 6393ms\n  load event       : 21540ms\n  CTA visible at   : 16098ms (\"Приєднатися\")\n  requests / KB    : 259 / 1188",
+   "ctaMs": 16098,
+   "loadTimedOut": false
+  }
+ }
+}
