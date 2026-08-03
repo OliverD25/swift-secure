@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "board": "https://app.notion.com/p/3b16fcda1d7281ce8b04fdc9fb6f0bae",
+  "view": "https://app.notion.com/p/3b16fcda1d7281ce8b04fdc9fb6f0bae?v=c5d6fcda1d7282dc91ec88dfa7e4b040",
+  "dataSource": "collection://4516fcda-1d72-8291-8cbf-07e018cd9685",
+  "stages": {
+    "info": "Not started/Info",
+    "capture": "Inbox",
+    "triage": "🚀TODO",
+    "plan": "📝Plan/Enhance",
+    "build": "Development",
+    "verify": "Testing Coverage",
+    "done": "✅ Done",
+    "rejected": "🚫Rejected"
+  },
+  "humanOnly": ["📎Archived"],
+  "properties": {
+    "title": "Name",
+    "status": "Status",
+    "notes": "Text",
+    "assignee": "Assign"
+  }
+}
