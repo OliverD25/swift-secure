@@ -154,16 +154,57 @@ export async function audit(browser, domain) {
     })).catch(() => ({}));
 
     // --- craft: things that are simply broken ---------------------------
+    // Split refusals out of breakage before counting anything.
+    //
+    // This project already treats 401/403/429/451 on a PAGE as "refused, not
+    // absent". The same rule was never applied to individual requests, and that
+    // was wrong in a way that reached the ranking. Checking the 403s on
+    // api.betewin.com and api.betim.com by hand returned a bare openresty HTML
+    // error page, 552 bytes. An API that meant "you are not logged in" answers
+    // in JSON; an nginx HTML 403 means the request never reached the
+    // application at all. That is an edge/WAF refusal aimed at our crawler, and
+    // the site is fine for a real visitor. In one 148-failure sample, 60 (40%)
+    // were refusals of this kind.
+    //
+    // Bot-check hosts are excluded for the same reason but are even clearer:
+    // challenges.cloudflare.com failing means Turnstile was interrogating US.
+    const REFUSED_STATUS = new Set([401, 403, 429, 451]);
+    const BOT_CHECK_HOST = /challenges\.cloudflare\.com|hcaptcha\.com|recaptcha\.net|google\.com\/recaptcha|perimeterx|datadome|arkoselabs/i;
+    const isRefusal = (f) => REFUSED_STATUS.has(f.status) || BOT_CHECK_HOST.test(f.url);
+
+    const root = domain.split(".").slice(-2).join(".");
+    const hostOf = (u) => { try { return new URL(u).hostname; } catch { return ""; } };
+
+    const real = failed.filter((f) => !isRefusal(f));
+    const refused = failed.filter(isRefusal);
+
+    // brokenRequests keeps its old meaning (every response >= 400) so earlier
+    // sweeps stay comparable. brokenReal is the number a report may quote.
     out.brokenRequests = failed.length;
+    out.brokenReal = real.length;
+    out.brokenRefused = refused.length;
+    out.brokenOwnHost = real.filter((f) => hostOf(f.url).endsWith(root)).length;
+    out.brokenThirdParty = real.length - out.brokenOwnHost;
+    out.brokenByStatus = Object.fromEntries(
+      Object.entries(real.reduce((a, f) => ((a[f.status] = (a[f.status] ?? 0) + 1), a), {})),
+    );
+    // Full list of genuine failures, capped. The 6-item sample was enough to
+    // print but not enough to classify a site — an accurate own-host vs
+    // third-party split cannot be recomputed from six of sixty.
+    out.brokenReal20 = real.slice(0, 20).map((f) => `${f.status} ${f.url}`);
     // Formatted to a string here rather than left as objects: this value is
     // consumed by audit.mjs and by the report writer, both of which join it
     // into human-readable text — an object array renders as [object Object]
     // and silently destroys the one detail that makes the finding actionable.
-    out.brokenSample = failed.slice(0, 6).map((f) => `${f.status} ${f.url}`);
+    // Sample from genuine failures first. The old version sampled from every
+    // response >= 400, so on a site whose first six failures were all WAF
+    // refusals the printed example was something we caused, handed over as
+    // though it were their bug.
+    out.brokenSample = (real.length ? real : failed).slice(0, 6).map((f) => `${f.status} ${f.url}`);
     // Group by the failing directory so "38 broken payment icons" reads as one
     // fixable problem rather than 38 unrelated errors.
     const groups = {};
-    for (const f of failed) {
+    for (const f of real) {
       try {
         const dir = new URL(f.url).pathname.split("/").slice(0, -1).join("/") || "/";
         groups[dir] = (groups[dir] ?? 0) + 1;
@@ -302,7 +343,7 @@ if (domains.length) {
     console.log(`  LICENCE rg: ${Object.entries(r.responsibleGambling).filter(([, v]) => v).map(([k]) => k).join(", ") || "NONE FOUND"}`);
     console.log(`          legal pages: ${Object.entries(r.legalPages).filter(([, v]) => v).map(([k]) => k).join(", ") || "NONE FOUND"}`);
     console.log(`  SEO     title ${r.seo.title}ch, desc ${r.seo.metaDescription}ch, h1 x${r.seo.h1Count}, canonical ${r.seo.canonical}, hreflang ${r.seo.hreflang}, schema ${r.seo.structuredData}, img-no-alt ${r.seo.imagesNoAlt}`);
-    console.log(`  BROKEN  ${r.brokenRequests} failed requests, ${r.consoleErrors} console errors, ${r.mixedContent} insecure`);
+    console.log(`  BROKEN  ${r.brokenReal ?? r.brokenRequests} genuine failures (${r.brokenOwnHost ?? "?"} own host, ${r.brokenThirdParty ?? "?"} third-party) + ${r.brokenRefused ?? 0} refusals aimed at us, ${r.consoleErrors} console errors, ${r.mixedContent} insecure`);
     console.log(`  SEC     ${Object.entries(r.securityHeaders).filter(([, v]) => v).map(([k]) => k.replace(/^(x-|strict-)/, "")).join(", ") || "none set"}`);
     if (r.brokenSample.length) console.log(`          e.g. ${r.brokenSample.join(" | ")}`);
   }

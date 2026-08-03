@@ -127,10 +127,21 @@ try {
   } else {
     // Broken requests — the strongest report finding we have. Unknown to them,
     // costs money, fixable.
-    if (health.brokenRequests >= 5) {
-      add("report", "health", `${health.brokenRequests} requests fail on the homepage. Examples: ${(health.brokenSample ?? []).slice(0, 3).join(" | ")}`);
-    } else if (health.brokenRequests > 0) {
-      add("report", "health", `${health.brokenRequests} failed request(s): ${(health.brokenSample ?? []).join(" | ")}`);
+    //
+    // Counts brokenReal, not brokenRequests. The difference is refusals aimed at
+    // our crawler: 401/403/429/451 and bot-check hosts. Checked by hand, the
+    // 403s on casino platform APIs come back as a bare openresty HTML page,
+    // which means an edge block, not an application error — the site is fine for
+    // a real visitor. Those were 40% of failures in one sample, and quoting them
+    // to an operator would be reporting our own block as their defect.
+    const brokenReal = health.brokenReal ?? health.brokenRequests ?? 0;
+    if (brokenReal >= 5) {
+      add("report", "health", `${brokenReal} requests fail on the homepage. Examples: ${(health.brokenSample ?? []).slice(0, 3).join(" | ")}`);
+    } else if (brokenReal > 0) {
+      add("report", "health", `${brokenReal} failed request(s): ${(health.brokenSample ?? []).join(" | ")}`);
+    }
+    if (health.brokenRefused) {
+      add("context", "health", `${health.brokenRefused} further request(s) returned 401/403/429/451 or came from a bot-check host. Refused, not broken — never reported.`);
     }
 
     if (health.requestCount > 300) {
