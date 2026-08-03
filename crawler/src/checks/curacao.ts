@@ -3,9 +3,12 @@ import type { Browser } from "playwright";
 /**
  * Verify a Curaçao licence against the regulator's own certificate.
  *
- * Curaçao publishes no downloadable register, so the Anjouan approach — pull the
- * whole list, match on domain — is not available. What it does publish is a
- * per-certificate endpoint, and the licence number contains the key to it:
+ * Curaçao publishes its register as a 25-page PDF rather than a database, which
+ * an earlier pass mistook for having no register at all — see
+ * research/scripts/8-curacao-register.py, which reads it. What makes the
+ * certificate endpoint worth using anyway is that the licence number is the key
+ * to it, and the certificate carries something the register does not: the
+ * domains the licence covers.
  *
  *   OGL/2024/887/0618  ->  https://cert.cga.cw/token?id=618
  *

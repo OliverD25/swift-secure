@@ -13,10 +13,19 @@ not publish.
 | Jurisdiction | Method | Status |
 | :--- | :--- | :--- |
 | Anjouan | Full register pulled (1,475 records), matched by domain | Working — 11 of 23 confirmed on first run |
-| Curaçao | Licence number → certificate token → official certificate | Working, and stronger (see below) |
+| Curaçao | Register PDF (624 licences) + per-licence certificate | Working, and stronger (see below) |
+
+The Curaçao pipeline also became our largest prospect source: 560 of 561 B2C
+certificates read, naming 4,177 domains that collapse to **2,187 distinct brands
+across 524 operators** once mirror domains are folded together. 1,104 sit on an
+active licence, 66 on a revoked one. Operator groupings there come from the
+regulator rather than being inferred from shared infrastructure, which makes
+them the best-sourced prospects we hold.
 
 Curaçao is worth understanding because it does more than confirm existence. The
-licence number contains the key to the certificate — `OGL/2024/887/0618` resolves
+register itself is a 25-page PDF — an earlier pass concluded there was no
+downloadable register, which was wrong — and it gives 624 licences. The
+licence number then contains the key to the certificate — `OGL/2024/887/0618` resolves
 to `cert.cga.cw/token?id=618` — and **the certificate names the domain the seal
 may be displayed on**. So the check answers a sharper question than "does this
 licence exist": it answers "does this licence belong to the site showing it".
