@@ -45,6 +45,7 @@ export async function audit(browser, domain) {
   const requests = [];
   const consoleErrors = [];
   const failed = [];
+  const heavy = [];
   let bytes = 0;
 
   page.on("request", (r) => {
@@ -56,6 +57,15 @@ export async function audit(browser, domain) {
     try {
       const len = Number(r.headers()["content-length"] ?? 0);
       bytes += len;
+      // Keep the individually huge responses. A total of "275MB" is a striking
+      // number and a useless one — the operator cannot act on a total. 789bet.sc
+      // reached that figure because its homepage loads a single 261MB MP4, and
+      // naming that file turns the finding into a task someone can finish this
+      // afternoon. 2MB is the threshold because it is already far past any
+      // reasonable homepage asset.
+      if (len > 2 * 1024 * 1024) {
+        heavy.push({ kb: Math.round(len / 1024), type: r.request()?.resourceType() ?? "", url: r.url() });
+      }
       // Keep the whole URL, query included. Storing only the pathname made
       // findings unreproducible: /_next/image without its ?url= parameters is a
       // legitimate 400, so an operator handed that path would rightly dismiss
@@ -100,6 +110,7 @@ export async function audit(browser, domain) {
       const root = domain.split(".").slice(-2).join(".");
       return hst && !hst.endsWith(root);
     }))].length;
+    out.heaviestAssets = heavy.sort((a, b) => b.kb - a.kb).slice(0, 5);
 
     // --- legal: did trackers fire before any consent was given? ---------
     // Nothing was clicked, so any tracker request here happened without the
@@ -338,7 +349,8 @@ if (domains.length) {
     all.push(r);
     if (!r.ok) { console.log(`\n=== ${d}: ${r.error}`); continue; }
     console.log(`\n=== ${d}`);
-    console.log(`  MONEY   ${r.requestCount} requests, ${r.transferKB}KB declared, ${r.thirdPartyHosts} third-party hosts, DOM ${r.domContentLoaded}ms, settled ${r.settled}ms`);
+    console.log(`  MONEY   ${r.requestCount} requests, ${(r.transferKB / 1024).toFixed(1)}MB declared, ${r.thirdPartyHosts} third-party hosts, DOM ${r.domContentLoaded}ms, settled ${r.settled}ms`);
+    for (const a of r.heaviestAssets ?? []) console.log(`          HEAVY ${(a.kb / 1024).toFixed(1)}MB ${a.type} ${a.url.slice(0, 90)}`);
     console.log(`  LEGAL   consent UI: ${r.hasConsentUI ? "yes" : "NO"} | trackers fired before consent: ${r.trackersBeforeConsent.length}${r.trackersBeforeConsent.length ? " -> " + r.trackersBeforeConsent.slice(0, 4).join(", ") : ""}`);
     console.log(`  LICENCE rg: ${Object.entries(r.responsibleGambling).filter(([, v]) => v).map(([k]) => k).join(", ") || "NONE FOUND"}`);
     console.log(`          legal pages: ${Object.entries(r.legalPages).filter(([, v]) => v).map(([k]) => k).join(", ") || "NONE FOUND"}`);

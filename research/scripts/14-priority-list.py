@@ -47,12 +47,29 @@ WEIGHTS = {
     "broken_third_party": 3,  # genuine, but the fix belongs to their platform vendor
     "broken_functional": 4,   # the failing path is an API/JS module, not a picture
     "broken_volume": 1,       # per failure beyond the first, capped
-    "heavy_requests": 2,      # > 300 requests on the homepage
+    "weight_20mb": 6,         # worst 5% of measured pages
+    "weight_10mb": 4,         # worst 10%
+    "weight_5mb": 2,          # worst 25%
+    "single_huge_asset": 2,   # one file over 5MB — the most actionable finding there is
+    "chatty": 1,              # > 500 requests, p95 and above
     "mixed_content": 2,       # http:// subresources on an https:// page
     "trackers_no_consent": 1, # measurement only, careful wording, low weight
 }
 
 BROKEN_CAP = 6
+
+# Page weight, not request count.
+#
+# Request count was the original rule and the sweep shows it is the wrong
+# signal. Across 819 readable sites: 110 exceed 300 requests, but 24 of those
+# are under 3MB — a casino loading 350 small game-tile icons is not a problem
+# worth an email. Meanwhile 92 sites exceed 10MB and 63 of them make 300
+# requests or fewer, so a request-count rule misses two thirds of the real ones.
+#
+# Measured distribution (819 sites): p50 1.9MB, p75 5.3MB, p90 11.4MB,
+# p95 22.1MB, p99 46.3MB, max 275MB.
+MB = 1024
+
 
 # Console errors are deliberately NOT scored.
 #
@@ -128,20 +145,39 @@ def score(rec: dict) -> tuple[int, list[dict]]:
         })
 
     reqs = rec.get("requestCount", 0) or 0
-    if reqs > 300:
-        pts += WEIGHTS["heavy_requests"]
-        kb = rec.get("transferKB", 0) or 0
-        size = f"{kb / 1024:.1f}MB" if kb >= 1024 else f"{kb}KB"
+    kb = rec.get("transferKB", 0) or 0
+    assets = rec.get("heaviestAssets") or []
+
+    if kb >= 20 * MB:
+        pts += WEIGHTS["weight_20mb"]
+    elif kb >= 10 * MB:
+        pts += WEIGHTS["weight_10mb"]
+    elif kb >= 5 * MB:
+        pts += WEIGHTS["weight_5mb"]
+    if reqs > 500:
+        pts += WEIGHTS["chatty"]
+
+    if kb >= 5 * MB:
+        biggest = assets[0] if assets else None
+        if biggest and biggest["kb"] >= 5 * MB:
+            pts += WEIGHTS["single_huge_asset"]
         found.append({
             "area": "weight",
             # "at least" because transferKB sums content-length headers and a
             # response without one counts as zero. The figure is a floor, so it
             # can never overstate — which is what makes it safe to send.
-            "headline": f"{reqs} requests and at least {size} to load the homepage",
-            "detail": f"{rec.get('thirdPartyHosts', 0)} distinct third-party hosts",
+            # Verified: real bodies came in 1.4-1.7x heavier than this figure.
+            "headline": f"at least {kb / MB:.1f}MB and {reqs} requests to load the homepage",
+            # Naming the single worst file is what turns this from a striking
+            # number into a task. 789bet.sc totals 275MB because of one 261MB
+            # video; "your homepage is heavy" is ignorable, the URL is not.
+            "detail": (
+                f"largest single file: {biggest['kb'] / MB:.1f}MB {biggest['type']} — {biggest['url']}"
+                if biggest else f"{rec.get('thirdPartyHosts', 0)} distinct third-party hosts"
+            ),
             "kinds": {},
-            "verify": "",
-            "verify_ui": f"Open https://{rec['domain']} → F12 → Network → reload → request count in the status bar",
+            "verify": f"curl -sI '{biggest['url']}' | grep -i content-length" if biggest else "",
+            "verify_ui": f"Open https://{rec['domain']} → F12 → Network → reload → sort by Size",
         })
 
     mixed = rec.get("mixedContent", 0) or 0
@@ -189,16 +225,26 @@ def main() -> None:
     master = list(csv.DictReader(MASTER.open(encoding="utf8")))
     by_domain = {r["domain"].strip().lower(): r for r in master if r["domain"].strip()}
 
-    # Records measured before the refusal fix landed carry brokenRequests but no
+    # Records measured before the refusal fix carry brokenRequests but no
     # brokenReal. Scoring them would read that missing field as zero and quietly
     # drop every broken-request finding they have — the exact silent-corruption
     # shape this project keeps being bitten by. Name them instead, and write the
     # list out so they can be re-measured.
-    stale = [d for d, r in sweep.items()
-             if r.get("ok") and r.get("brokenRequests", 0) and "brokenReal" not in r]
+    #
+    # Heavy pages need a second pass for a different reason: heaviestAssets was
+    # added later, and without it a 42MB finding says only "your homepage is
+    # heavy", which nobody acts on. With it, the email names the 261MB video.
+    stale = sorted({
+        d for d, r in sweep.items()
+        if r.get("ok") and (
+            (r.get("brokenRequests", 0) and "brokenReal" not in r)
+            or ((r.get("transferKB") or 0) >= 5 * MB and "heaviestAssets" not in r)
+        )
+    })
+    stale_set = set(stale)
     if stale:
         path = ROOT / "research" / "remeasure-targets.txt"
-        path.write_text("\n".join(sorted(stale)) + "\n", encoding="utf8")
+        path.write_text("\n".join(stale) + "\n", encoding="utf8")
 
     rows = []
     for domain, rec in sweep.items():
@@ -207,8 +253,8 @@ def main() -> None:
             continue
         if not rec.get("ok"):
             continue
-        if rec.get("brokenRequests", 0) and "brokenReal" not in rec:
-            continue  # measured before the refusal fix; excluded until re-measured
+        if domain in stale_set:
+            continue  # measured before a fix it depends on; excluded until re-measured
         pts, findings = score(rec)
         if not pts:
             continue
@@ -310,7 +356,8 @@ def main() -> None:
     readable = sum(1 for r in sweep.values() if r.get("ok"))
     print(f"=== {len(sweep)} domains in the sweep, {readable} readable ===")
     if stale:
-        print(f"!! {len(stale)} measured before the refusal fix and EXCLUDED.")
+        print(f"!! {len(stale)} EXCLUDED — measured before a fix their finding depends on")
+        print(f"   (refusal filtering for broken requests, heaviest-asset capture for heavy pages).")
         print(f"   Re-measure them, then run this again:")
         print(f"   node crawler/audit-probe.mjs --from=research/remeasure-targets.txt --conc=6 --out=audit-sweep-battlefield.json")
         print()
