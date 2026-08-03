@@ -31,6 +31,34 @@ public-page bar but not the email bar (cloaking, a misrepresented seal, a
 revoked licence still displayed) **never goes in the operator's email** — see
 §4 and §6.
 
+## 1a. Product names — how the checks are called in anything an operator sees
+
+Chosen 4 August 2026. These are the ONLY names used in emails, reports and the
+public site. Internal names (audit-probe, mobile-timing, brokenReal) never
+appear in operator-facing text — an operator should meet one consistent name
+per check everywhere.
+
+The umbrella name for the whole deliverable is the **Casino Health Report**,
+backed by the **Verified-at-Send** guarantee: every finding is re-checked
+against the live site on the day the email goes out, and anything that no
+longer reproduces is removed (`research/scripts/15-verify-wave.py`).
+
+| Product name | What it is | Internal check |
+| :--- | :--- | :--- |
+| **Revenue Leak Scan** | Requests that fail on the homepage — payment icons, game modules, own APIs | §5, `brokenReal` in `audit-probe.mjs` |
+| **Dead Weight Finder** | The single largest file the homepage loads, named with its URL and size | §5, `heaviestAssets` in `audit-probe.mjs` |
+| **Time-to-Play Test** | Seconds until the Register button is usable on a throttled mobile connection | `mobile-timing.mjs` |
+| **Licence Match** | The licence number on the site checked against the regulator's own register | §2, `curacao.ts` / `licence.ts` |
+
+Why these four names: the first two sell lost money, the third lost players,
+the fourth trust — and none of them sounds like an accusation, which is the
+same bar every finding itself has to clear (§1).
+
+Runner-up names, kept so the next naming discussion does not start from zero:
+Silent Failure Scan, Blind Spot Audit, Deposit Path Check; Page Bloat X-Ray,
+Speed Tax Audit; 3G Reality Check, Player Patience Test, First Tap Benchmark;
+Regulator Cross-Check, Proof of Licence.
+
 ## 2. Licence verification
 
 The core check. Two jurisdictions, two different mechanisms, because the two
@@ -546,3 +574,6 @@ Two gates the ranking enforces:
   errors double-counting those same failures, and a consent finding that claimed
   a German vantage point while measuring from a Ukrainian IP. Added §8a and the
   two error-direction rules in §7.
+- **4 August 2026** — §1a added: fixed product names for the four checks
+  (Revenue Leak Scan, Dead Weight Finder, Time-to-Play Test, Licence Match)
+  under the Casino Health Report umbrella with the Verified-at-Send guarantee.
