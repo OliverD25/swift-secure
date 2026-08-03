@@ -130,9 +130,14 @@ def score(rec: dict) -> tuple[int, list[dict]]:
     reqs = rec.get("requestCount", 0) or 0
     if reqs > 300:
         pts += WEIGHTS["heavy_requests"]
+        kb = rec.get("transferKB", 0) or 0
+        size = f"{kb / 1024:.1f}MB" if kb >= 1024 else f"{kb}KB"
         found.append({
             "area": "weight",
-            "headline": f"{reqs} requests and {rec.get('transferKB', 0)}KB to load the homepage",
+            # "at least" because transferKB sums content-length headers and a
+            # response without one counts as zero. The figure is a floor, so it
+            # can never overstate — which is what makes it safe to send.
+            "headline": f"{reqs} requests and at least {size} to load the homepage",
             "detail": f"{rec.get('thirdPartyHosts', 0)} distinct third-party hosts",
             "kinds": {},
             "verify": "",
@@ -159,11 +164,21 @@ def score(rec: dict) -> tuple[int, list[dict]]:
             "headline": f"{len(trackers)} tracking host(s) contacted before any consent interaction",
             "detail": ", ".join(trackers[:5]),
             "kinds": {},
+            "emailable": False,
             "verify": "",
             "verify_ui": f"Open https://{rec['domain']} in a fresh profile → F12 → Network → filter '{trackers[0]}' → it fires with no banner clicked",
         })
 
     return pts, found
+
+
+# Which finding areas may be quoted to an operator. Consent is excluded: the
+# sweep leaves a Ukrainian IP while sending German language headers, and sites
+# gate cookie banners on IP geolocation. A casino showing us no banner may be
+# behaving exactly as designed for a non-EU visitor. It still ranks — the
+# trackers really did fire — but it cannot be written in an email until the
+# same measurement is repeated through an EU proxy exit.
+EMAILABLE_AREAS = {"broken", "weight", "mixed"}
 
 
 def main() -> None:
@@ -197,10 +212,12 @@ def main() -> None:
         pts, findings = score(rec)
         if not pts:
             continue
+        emailable = [f for f in findings if f["area"] in EMAILABLE_AREAS]
         rows.append({
             "domain": domain,
             "score": pts,
             "findings": findings,
+            "emailable": emailable,
             "brand": m.get("brand", ""),
             "operator": m.get("operator", ""),
             "email": m.get("email", ""),
@@ -224,7 +241,8 @@ def main() -> None:
 
     with OUT_CSV.open("w", encoding="utf8", newline="") as fh:
         w = csv.writer(fh)
-        w.writerow(["rank", "domain", "score", "areas", "n_findings", "headline",
+        w.writerow(["rank", "domain", "score", "areas", "n_findings",
+                    "n_emailable", "email_headline",
                     "brand", "operator", "operator_rank", "email", "has_email",
                     "licence", "licence_status", "source"])
         for i, r in enumerate(rows, 1):
@@ -232,14 +250,19 @@ def main() -> None:
                 i, r["domain"], r["score"],
                 "+".join(sorted({f["area"] for f in r["findings"]})),
                 len(r["findings"]),
-                r["findings"][0]["headline"] if r["findings"] else "",
+                len(r["emailable"]),
+                r["emailable"][0]["headline"] if r["emailable"] else "",
                 r["brand"], r["operator"], r["operator_rank"],
                 r["email"], "yes" if r["email"].strip() else "no",
                 r["licence"], r["licence_status"], r["source"],
             ])
 
     # --- the hand-check document ------------------------------------------
-    first_wave = [r for r in rows if r["operator_rank"] == 1][:TOP_N]
+    # A casino only reaches the first wave if it has a finding we may actually
+    # WRITE. Ranking on consent alone produces a top slice we cannot say anything
+    # about — a full inbox and an empty email. AGENTS.md is explicit that a
+    # report with nothing solid in it destroys the reason for sending one.
+    first_wave = [r for r in rows if r["operator_rank"] == 1 and r["emailable"]][:TOP_N]
     lines = [
         "# First-wave outreach — verify before sending",
         "",
@@ -267,9 +290,12 @@ def main() -> None:
             "",
         ]
         for f in r["findings"]:
-            lines.append(f"**{f['area']}** — {f['headline']}")
+            tag = "" if f["area"] in EMAILABLE_AREAS else "  *(RANK ONLY — do not put this in the email)*"
+            lines.append(f"**{f['area']}** — {f['headline']}{tag}")
             if f["detail"]:
                 lines.append(f"  - detail: `{f['detail']}`")
+            if f.get("refused"):
+                lines.append(f"  - excluded from the count: {f['refused']} refusal(s) aimed at our crawler (401/403/429/451 or a bot check)")
             if f["kinds"]:
                 lines.append(f"  - classified: {f['kinds']}")
             lines.append(f"  - check in browser: {f['verify_ui']}")

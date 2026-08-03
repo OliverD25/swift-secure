@@ -148,11 +148,23 @@ try {
       add("report", "health", `${health.requestCount} requests and ${health.transferKB}KB to load the homepage — well above the ~167-request median across sites we have measured.`);
     }
 
-    // Consent: report-eligible ONLY as a measurement. Never as a legal claim —
-    // Consent Mode can send cookieless pings that are not violations.
+    // Consent is CONTEXT ONLY until it can be measured from an EU IP address.
+    //
+    // The old text said "measured from a German browser context" and that was
+    // false. audit-probe.mjs sets locale de-DE, timezone Europe/Berlin and a
+    // German Accept-Language header, but the request leaves a Ukrainian IP
+    // (checked: 46.63.32.72, Khmelnytskyi). Sites gate cookie banners on IP
+    // geolocation, not on Accept-Language. So a casino showing no banner to us
+    // may be behaving exactly as intended, because we are not an EU visitor.
+    // Ukraine is not in the EU, and an email implying otherwise is wrong on a
+    // point the operator's own lawyer will check first.
+    //
+    // It stays useful for ranking — the trackers really did fire — but it may
+    // not be quoted. Configure the proxy pool and re-measure from an EU exit to
+    // make this reportable.
     const trackers = health.trackersBeforeConsent ?? [];
     if (trackers.length && !health.hasConsentUI) {
-      add("report", "consent", `${trackers.length} tracking host(s) received a request before any consent interaction, measured from a German browser context: ${trackers.slice(0, 5).join(", ")}. This is a measurement, not a legal opinion.`);
+      add("context", "consent", `${trackers.length} tracking host(s) contacted before any consent interaction: ${trackers.slice(0, 5).join(", ")}. Measured with German language headers but from a Ukrainian IP, so this says nothing about how the site treats an EU visitor. Rank-only until re-measured through an EU proxy.`);
     }
 
     if (!health.securityHeaders?.["strict-transport-security"]) {
