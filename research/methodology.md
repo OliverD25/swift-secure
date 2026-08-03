@@ -352,6 +352,19 @@ overstate the moment our detector misses something — and both did, repeatedly.
 Findings that can only understate are emailable; findings that can overstate are
 rank-only until the overstating path is closed.
 
+Measured, not argued. Re-running the three heaviest sites while summing actual
+response bodies instead of headers:
+
+| Site | Reported "at least" | Actual bodies | Responses with no `content-length` |
+| :--- | ---: | ---: | ---: |
+| `21bets.com` | 24.8 MB | **35.3 MB** | 55 |
+| `apuesterapido.com` | 25.0 MB | **42.1 MB** | 152 |
+| `10sports.io` | 13.5 MB | **22.4 MB** | 141 |
+
+Real pages are 1.4–1.7× heavier than we report. The hedge is doing its job. The
+sweep keeps using `content-length` because reading every body costs time and
+memory across 1311 domains, and a floor is the right thing to send anyway.
+
 **Assumptions about the harness are measurements too.** The claim "concurrency 6
 distorts our request counts" sounded obviously true and would have justified a
 much slower sweep. Tested instead: `fastpari-afro.com` measured 866 requests in
