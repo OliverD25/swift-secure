@@ -217,8 +217,42 @@ if (has("sweep") || flag("from")) {
   list = list.slice(0, LIMIT);
   console.log(`auditing ${list.length} sites, concurrency ${CONC}, direct connection`);
 
-  const browser = await chromium.launch({ headless: true });
+  const OUT_URL = new URL(flag("out") ?? "audit-report.json", RESEARCH);
+
+  // Read the existing file ONCE, up front, so the checkpoint writer below can
+  // merge into it without re-reading on every flush.
+  let existing = [];
+  try { existing = JSON.parse(readFileSync(OUT_URL, "utf8")); } catch { /* first run */ }
+
+  // --resume skips domains the output file already holds, so a sweep killed at
+  // domain 900 costs 900 fewer page loads to finish rather than starting over.
+  if (has("resume") && existing.length) {
+    const seen = new Set(existing.map((r) => r.domain));
+    const before = list.length;
+    list = list.filter((d) => !seen.has(d));
+    console.log(`  --resume: ${before - list.length} already measured, ${list.length} left`);
+  }
+
   const results = [];
+  // Checkpoint to disk during the run, not only at the end.
+  //
+  // A 1311-domain sweep is over an hour of real network work, and the previous
+  // version wrote its single writeFileSync after the last domain finished. Any
+  // process-level death — and this machine produced an ERR_NO_BUFFER_SPACE kill
+  // earlier today from socket exhaustion on exactly this kind of workload —
+  // discarded every completed measurement. That directly violates the standing
+  // rule in AGENTS.md that an expensive sweep is source data and must survive.
+  // Flushing every 25 domains caps the worst-case loss at 25 sites instead of
+  // all of them, and makes a killed run resumable by diffing the target list
+  // against what is already in the file.
+  const flush = () => {
+    const merged = new Map(existing.map((r) => [r.domain, r]));
+    for (const r of results) merged.set(r.domain, r);
+    writeFileSync(OUT_URL, JSON.stringify([...merged.values()], null, 1), "utf8");
+    return merged.size;
+  };
+
+  const browser = await chromium.launch({ headless: true });
   const queue = [...list];
   let done = 0;
   await Promise.all(
@@ -230,7 +264,10 @@ if (has("sweep") || flag("from")) {
         } catch (err) {
           results.push({ domain: d, ok: false, error: String(err.message).slice(0, 80) });
         }
-        if (++done % 25 === 0) console.log(`  ${done}/${list.length}  readable: ${results.filter((r) => r.ok).length}`);
+        if (++done % 25 === 0) {
+          flush();
+          console.log(`  ${done}/${list.length}  readable: ${results.filter((r) => r.ok).length}  [checkpointed]`);
+        }
       }
     }),
   );
@@ -238,14 +275,16 @@ if (has("sweep") || flag("from")) {
 
   // Merge by domain rather than replace — the same lesson the cloaking report
   // had to learn the hard way when one run silently erased another.
-  const OUT = new URL("audit-report.json", RESEARCH);
-  let prev = [];
-  try { prev = JSON.parse(readFileSync(OUT, "utf8")); } catch { /* first run */ }
-  const merged = new Map(prev.map((r) => [r.domain, r]));
-  for (const r of results) merged.set(r.domain, r);
-  const all = [...merged.values()];
-  writeFileSync(OUT, JSON.stringify(all, null, 1), "utf8");
-  console.log(`\nwrote research/audit-report.json — ${all.length} sites (${results.length} this run)`);
+  //
+  // --out exists so a new sweep does not merge into an incompatible old one.
+  // audit-report.json was filled before commit 98fc30e, when brokenSample held
+  // bare pathnames; "/_next/image" without its query string is a legitimate 400,
+  // so those samples cannot be handed to an operator. Merging fresh full-URL
+  // records into that file would leave two formats in one array with no way to
+  // tell them apart — the silent-corruption failure this project keeps hitting.
+  const total = flush();
+  const readable = results.filter((r) => r.ok).length;
+  console.log(`\nwrote research/${flag("out") ?? "audit-report.json"} — ${total} sites total, ${results.length} this run (${readable} readable)`);
   process.exit(0);
 }
 
