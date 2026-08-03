@@ -152,6 +152,13 @@ def resolve(rec):
         except Exception:
             pass
         return out
+    except urllib.error.URLError as e:
+        # Same DNS-failure class scripts 2 and 10 already label plainly — a
+        # bare "URLError" made 110 dead domains look like an unexplained
+        # exception bucket instead of the ordinary "does not resolve" case it
+        # actually is.
+        out["reason"] = "DNS does not resolve" if "getaddrinfo" in str(e).lower() else type(e).__name__
+        return out
     except Exception as e:
         out["reason"] = type(e).__name__
         return out
