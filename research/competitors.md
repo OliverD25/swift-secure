@@ -8,14 +8,18 @@ had no idea what this category charges.
 
 Three findings, and the last one is the one that hurts.
 
-1. **The market price for a casino trust seal is €250/month.** Two vendors
-   independently at that number. Our €200 tier is priced just under them.
+1. **The market price for a casino trust seal is €250/month — confirmed for one
+   vendor, self-reported for a second.** Gamecheck's price and scope are
+   corroborated by trade press. A second vendor, Check2Play, claims the same
+   number but could not be independently verified to exist as a real operating
+   company — see below. Our €200 tier is priced just under the confirmed one.
 2. **The licence check we built is already given away free by a live
    competitor**, across more regulators than we cover.
-3. **Check2Play already sells everything we planned to sell.** Licence
-   verification, a badge, a public report — plus provider confirmation, which we
-   cannot do at all. Corrected 3 August; the first version of this document said
-   nobody occupied that position, and that was wrong.
+3. **On paper, at least one competitor already sells everything we planned to
+   sell.** Licence verification, a badge, a public report — plus provider
+   confirmation, which we cannot do at all. Corrected 3 August; the first
+   version of this document said nobody occupied that position, and that was
+   wrong regardless of which vendor's claims turn out to be real.
 
 ## The players
 
@@ -38,10 +42,20 @@ the hard way — game-provider verification is not reachable from the network, a
 Gamecheck solved it commercially rather than technically. We cannot copy this
 without partnerships we do not have.
 
-### Check2Play — the closest competitor, and closer than first recorded
+### Check2Play — the closest competitor on paper, but unverified independently
 
 **$250/month**, published on their pricing page. Free unlimited lookups for
 players, one paid plan for operators.
+
+> **Ownership checked separately, 3 August — treat this vendor's claims as
+> self-reported.** Legal entity is a Seychelles shell (Trust Validator LTD), no
+> named founder or team, zero trade-press coverage, and the domain has never
+> been archived by the Wayback Machine at any point. Gamecheck, by contrast, has
+> a named founder, industry coverage, and a publicised partnership with Casino
+> Guru. See `check2play-ownership.md` for the full check. This does not mean
+> Check2Play is illegitimate — it means their pricing and scope are *their own
+> claims about themselves*, not corroborated market data the way Gamecheck's
+> are.
 
 Their own description of what an operator gets:
 
@@ -118,9 +132,11 @@ certification.
 and Check2Play both have them and we have none, and it cannot be substituted
 with network analysis — we tested that and it does not work.
 
-**There is no product gap.** Everything we can build, Check2Play already sells,
-and they sell two things on top of it. Any pitch built on "nobody does this" is
-false and will be caught by the first operator who has heard of them.
+**There is no product gap, on the evidence available.** Everything we can build,
+Check2Play's own site claims to already sell, plus two things on top of it we
+cannot do. Their claims are unverified independently, so this should be read as
+"almost certainly no gap" rather than certainty — but Gamecheck alone is enough
+to retire any pitch built on "nobody does this."
 
 **What is left is narrower and has to be said plainly.** Three things are ours:
 
@@ -149,6 +165,7 @@ has to be planned for honestly rather than around.
 - [Gamecheck: the SEAL has arrived](https://gamecheck.com/articles/online-casino-technology-and-innovations/the-gamecheck-seal-has-arrived)
 - [Check2Play SEAL](https://check2play.com/seal) — scope of their audit
 - [Check2Play pricing](https://check2play.com/pricing) — $250/month, free for players
+- `check2play-ownership.md` — why these claims are marked self-reported rather than confirmed
 - [CasinoLicensing.org](https://www.casinolicensing.org/)
 - [licenseseal.online](https://licenseseal.online) — the Anjouan authority itself
 - [DLAG](https://dlagglobal.com/) — Tobique licensing agent
