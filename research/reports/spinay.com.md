@@ -1,27 +1,23 @@
-# winup.io — free technical check
+# spinay.com — free technical check
 
 Run 4 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
-## 38 requests fail when your homepage loads — 20 distinct files
+## 8 requests fail when your homepage loads
 
 ```
-400  https://winup.io/api/v1/bonuses?lang=en&type=promo
-404  https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10
-400  https://winup.io/api/v1/publicSocketsData?lang=en
+404  https://18379spinay.com/mdlr/fonts/raleway-semibold.woff2
+404  https://18379spinay.com/mdlr/fonts/bitter-regular.woff2
+404  https://18379spinay.com/mdlr/fonts/fira-sans-condensed-semibold.woff2
 ```
-
-These are the payment-method icons on your deposit screen. A player sees blank space where they expect something.
-
-5 of these are on your own domain and 15 come from `agstatic.com`. The first group is yours to fix; the second is worth forwarding to whoever runs that service for you.
 
 This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
 
 You can confirm any line above in one command:
 
 ```
-curl -sI 'https://winup.io/api/v1/bonuses?lang=en&type=promo'
+curl -sI 'https://18379spinay.com/mdlr/fonts/raleway-semibold.woff2'
 ```
 
 ## Checked, nothing wrong

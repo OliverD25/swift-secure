@@ -1,32 +1,49 @@
-# winup.io — free technical check
+# race365.com — free technical check
 
 Run 4 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
-## 38 requests fail when your homepage loads — 20 distinct files
+## 15 requests fail when your homepage loads
 
 ```
-400  https://winup.io/api/v1/bonuses?lang=en&type=promo
-404  https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10
-400  https://winup.io/api/v1/publicSocketsData?lang=en
+400  https://api.rcintl.io/account/v2/access-token
+404  https://cdn.rcintl.io/assets/desktop/en/home-section-2.json.gz?t=1785757212918
+404  https://cdn.rcintl.io/assets/desktop/en/home-section-4.json.gz?t=1785757212918
 ```
 
-These are the payment-method icons on your deposit screen. A player sees blank space where they expect something.
-
-5 of these are on your own domain and 15 come from `agstatic.com`. The first group is yours to fix; the second is worth forwarding to whoever runs that service for you.
+All of them are served from `api.rcintl.io`, not from your own servers. That usually means the fix belongs to your platform provider rather than to your team — worth forwarding to them with this list.
 
 This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
 
 You can confirm any line above in one command:
 
 ```
-curl -sI 'https://winup.io/api/v1/bonuses?lang=en&type=promo'
+curl -sI 'https://api.rcintl.io/account/v2/access-token'
+```
+
+## A single 11.1 MB image loads on your homepage
+
+```
+https://cdn.rcintl.io/ru/web/community-banner.webp
+  11.1 MB
+```
+
+On a mobile connection this one file takes most of the time before the page is usable. Most players arrive from a phone, often on a weak signal.
+
+There are more behind it: 3.6 MB, 3.6 MB.
+
+Usually fixable the same afternoon — compress it, or load it after the page is interactive instead of before.
+
+To confirm the size yourself:
+
+```
+curl -sI 'https://cdn.rcintl.io/ru/web/community-banner.webp' | grep -i content-length
 ```
 
 ## Checked, nothing wrong
 
-HTTPS with HSTS enabled, mobile viewport set correctly, no insecure content on a secure page.
+Mobile viewport set correctly, no insecure content on a secure page.
 
 
 ## What we did not check

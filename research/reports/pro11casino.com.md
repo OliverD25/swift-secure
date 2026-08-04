@@ -1,27 +1,27 @@
-# winup.io — free technical check
+# pro11casino.com — free technical check
 
 Run 4 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
-## 38 requests fail when your homepage loads — 20 distinct files
+## 12 requests fail when your homepage loads — 11 distinct files
 
 ```
-400  https://winup.io/api/v1/bonuses?lang=en&type=promo
-404  https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10
-400  https://winup.io/api/v1/publicSocketsData?lang=en
+404  https://agstatic.com/merchants/svg/black/sneaky_slots.svg
+404  https://agstatic.com/merchants/svg/black/gclub.svg
+404  https://agstatic.com/merchants/svg/black/aviatrixdirect.svg
 ```
 
 These are the payment-method icons on your deposit screen. A player sees blank space where they expect something.
 
-5 of these are on your own domain and 15 come from `agstatic.com`. The first group is yours to fix; the second is worth forwarding to whoever runs that service for you.
+All of them are served from `agstatic.com`, not from your own servers. That usually means the fix belongs to your platform provider rather than to your team — worth forwarding to them with this list.
 
 This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
 
 You can confirm any line above in one command:
 
 ```
-curl -sI 'https://winup.io/api/v1/bonuses?lang=en&type=promo'
+curl -sI 'https://agstatic.com/merchants/svg/black/sneaky_slots.svg'
 ```
 
 ## Checked, nothing wrong

@@ -1,27 +1,24 @@
-# winup.io — free technical check
+# oxy.casino — free technical check
 
 Run 4 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
-## 38 requests fail when your homepage loads — 20 distinct files
+## A single 7.3 MB image loads on your homepage
 
 ```
-400  https://winup.io/api/v1/bonuses?lang=en&type=promo
-404  https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10
-400  https://winup.io/api/v1/publicSocketsData?lang=en
+https://oxy.casino/static/09628223-7334-41bd-87f1-f4ed9fd577fb/dd4e35782887b18d4345a98d8c266665.svg
+  7.3 MB
 ```
 
-These are the payment-method icons on your deposit screen. A player sees blank space where they expect something.
+On a mobile connection this one file takes most of the time before the page is usable. Most players arrive from a phone, often on a weak signal.
 
-5 of these are on your own domain and 15 come from `agstatic.com`. The first group is yours to fix; the second is worth forwarding to whoever runs that service for you.
+Usually fixable the same afternoon — compress it, or load it after the page is interactive instead of before.
 
-This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
-
-You can confirm any line above in one command:
+To confirm the size yourself:
 
 ```
-curl -sI 'https://winup.io/api/v1/bonuses?lang=en&type=promo'
+curl -sI 'https://oxy.casino/static/09628223-7334-41bd-87f1-f4ed9fd577fb/dd4e35782887b18d4345a98d8c266665.svg' | grep -i content-length
 ```
 
 ## Checked, nothing wrong
