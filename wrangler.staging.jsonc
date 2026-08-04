@@ -1,0 +1,56 @@
+{
+  // Configuration for the SEPARATE Cloudflare Workers project that builds the
+  // `staging` branch. It exists as its own file, rather than as an environment
+  // inside wrangler.jsonc, because the environment approach took the live site
+  // down twice on 2026-08-04 — see the long note at the bottom of wrangler.jsonc.
+  //
+  // The danger this file exists to remove: a second Workers project pointed at
+  // this repository would, by default, deploy using wrangler.jsonc — and that
+  // file lists swiftsecured.com and www.swiftsecured.com as custom domains.
+  // Workers Builds overrides the Worker *name* but not its *routes*, so the
+  // staging project would take the production hostnames for itself and detach
+  // them from the live Worker. The same failure as this morning, arriving by a
+  // different road. In CI there is no terminal, so wrangler sets
+  // override_existing_origin and override_existing_dns_record itself and asks
+  // nothing — the theft is silent and the build stays green.
+  //
+  // So: production hostnames appear nowhere in this file, and the staging
+  // hostname appears nowhere in wrangler.jsonc. Neither project can name the
+  // other's domain, which is a property you can check by reading rather than a
+  // rule someone has to remember.
+  //
+  // The staging project's deploy commands must therefore be:
+  //   npx wrangler deploy --config wrangler.staging.jsonc --env=""
+  //   npx wrangler versions upload --config wrangler.staging.jsonc --env=""
+  // Left at the default, the first reads wrangler.jsonc and does the damage
+  // above. --env="" is empty and therefore falsy to wrangler, which pins the
+  // top-level config and overrides any CLOUDFLARE_ENV set on the project.
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Workers Builds replaces this with the project's own name, so it is here for
+  // local runs. It must never be "swift-secure": a `wrangler deploy --config
+  // wrangler.staging.jsonc` typed on a laptop would otherwise overwrite the
+  // production Worker with a staging build. It must also match the real Worker
+  // name in Cloudflare — on a mismatch, Workers Builds opens a pull request
+  // rewriting this field.
+  "name": "swift-secure-staging",
+
+  "compatibility_date": "2026-08-04",
+
+  // Off for the same reason as production: a workers.dev address is another
+  // crawlable copy of the site.
+  "workers_dev": false,
+
+  // A separate key, and the one that actually matters here. workers_dev only
+  // removes the Worker's own workers.dev route; per-version preview URLs are
+  // governed by this. `versions upload` publishes one for every build at a
+  // stable, guessable address derived from the branch name, and left unset the
+  // account default — enabled — applies.
+  "preview_urls": false,
+
+  "routes": [{ "pattern": "staging.swiftsecured.com", "custom_domain": true }],
+
+  "assets": {
+    "directory": "./dist"
+  }
+}
