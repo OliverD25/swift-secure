@@ -25,8 +25,31 @@ interface Props {
   noindex?: boolean;
 }
 
-const { locale, path, title, description, current, noindex = false } = Astro.props;
+const { locale, path, title, description, current, noindex: noindexProp = false } = Astro.props;
 const lang = getLanguage(locale);
+
+/**
+ * Every non-production deployment is noindexed, whatever the page asks for.
+ *
+ * Cloudflare Pages gives each branch its own public URL — that is the point of
+ * it — but a public URL is a crawlable one. Left alone, a staging branch puts a
+ * second copy of all 4,428 pages into the index, competing with production for
+ * the same text. For a site whose entire pitch is that it can be trusted, having
+ * two of itself in the search results is the wrong first impression.
+ *
+ * CF_PAGES_BRANCH is set by Cloudflare on every build and by nothing else, so
+ * local builds and the GitHub Pages workflow are unaffected. Read from
+ * process.env rather than import.meta.env: this frontmatter runs in Node at
+ * build time, and only PUBLIC_-prefixed variables reach import.meta.env.
+ *
+ * Astro.site stays the production domain on previews, so canonical URLs keep
+ * pointing at the real page. That is deliberate belt-and-braces — noindex is
+ * the instruction, the canonical is the fallback if a crawler ignores it.
+ */
+const PRODUCTION_BRANCH = "main";
+const branch = process.env.CF_PAGES_BRANCH;
+const isPreviewDeploy = Boolean(branch) && branch !== PRODUCTION_BRANCH;
+const noindex = noindexProp || isPreviewDeploy;
 
 const abs = (p: string) => new URL(p, Astro.site).toString();
 const canonicalURL = abs(localePath(path, locale));
