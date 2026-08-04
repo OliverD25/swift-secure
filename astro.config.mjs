@@ -7,7 +7,7 @@ import { readFileSync } from 'node:fs';
 // SITE/BASE are set by the GitHub Pages workflow, which serves the site from
 // /<repo>/ rather than the domain root. Left unset (local dev, home-server
 // preview) the site builds at the root as before.
-const site = process.env.SITE ?? 'https://swiftsecure.example';
+const site = process.env.SITE ?? 'https://swiftsecured.com';
 const base = process.env.BASE_PATH ?? undefined;
 
 // Mirrors the `noindex` rule in casinos/[slug].astro — a casino page is

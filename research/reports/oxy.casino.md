@@ -36,7 +36,7 @@ In general we cannot check anything behind a login, whether your games come from
 
 Every line above was re-checked against your live site on the day this was sent. If something here no longer reproduces, it was removed before sending rather than left in.
 
-**Swift Secure.** We are new and building the reference list. If this was useful and you want the result public, we issue a verification badge linking to a dated page that states exactly what was and was not checked. **Free for the first six months, and the technical checks stay free — no contract, remove it any time.**
+**Swift Secured.** We are new and building the reference list. If this was useful and you want the result public, we issue a verification badge linking to a dated page that states exactly what was and was not checked. **Free for the first six months, and the technical checks stay free — no contract, remove it any time.**
 
 [YOUR NAME]
 [REPLY ADDRESS]

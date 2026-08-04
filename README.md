@@ -1,6 +1,6 @@
-# Swift Secure
+# Swift Secured
 
-Marketing + utility site for the Swift Secure casino trust-seal certification service. Built with **Astro** (static output) and **Tailwind CSS v4**.
+Marketing + utility site for the Swift Secured casino trust-seal certification service. Built with **Astro** (static output) and **Tailwind CSS v4**.
 
 ## Stack
 
@@ -53,7 +53,7 @@ Two independent targets:
 
 | Target | Command | URL | Use for |
 | :--- | :--- | :--- | :--- |
-| GitHub Pages | `git push` | https://oliverd25.github.io/swift-secure/ | The shareable link. Always up. |
+| GitHub Pages | `git push` | https://oliverd25.github.io/swift-secured/ | The shareable link. Always up. |
 | Home server | `./deploy.sh` | https://swiftsecure.serveousercontent.com/ | Previewing uncommitted work. |
 
 Run `./publish.sh` instead of `./deploy.sh` when the session is already **on**
@@ -62,7 +62,7 @@ than copying 4,400 files across the network, so it does not need this PC awake.
 
 ## Working on the homelab
 
-The full toolchain runs on `rde@192.168.88.166` at `~/projects/swift-secure` —
+The full toolchain runs on `rde@192.168.88.166` at `~/projects/swift-secured` —
 Node 22, Python 3.12, Playwright with Chromium already installed. Everything
 below works there unchanged; paths resolve from each script's own location
 rather than a drive letter, so nothing needs editing per machine.
@@ -88,7 +88,7 @@ setsid nohup node crawler/seal-census.mjs > research/seal-census.log 2>&1 < /dev
 ```
 
 `git push` triggers `.github/workflows/deploy.yml`, which builds with
-`SITE`/`BASE_PATH` set so links resolve under the `/swift-secure/`
+`SITE`/`BASE_PATH` set so links resolve under the `/swift-secured/`
 sub-path Pages serves from. Local builds and `./deploy.sh` leave those unset
 and build at the root — see `src/lib/url.ts`.
 
@@ -105,9 +105,9 @@ covers the base-path, CI and indexing traps in more depth.
 
 ## Before launch
 
-- **Domain**: `public/robots.txt` still hardcodes the placeholder `swiftsecure.example` sitemap URL, and `astro.config.mjs` falls back to it when `SITE` is unset — point both at the real domain once there is one.
+- **Domain**: `swiftsecured.com` was bought on 4 August 2026 and is now the fallback in `public/robots.txt` and `astro.config.mjs`. Still to do: point the DNS at GitHub Pages and set the custom domain in **Settings → Pages**, which writes a `CNAME` file. Until that is done the live site serves from the `github.io` URL and the sitemap URL above will not resolve.
 - **Apply form — applications currently go nowhere.** `/apply/` POSTs to `PUBLIC_FORM_ENDPOINT` and only reports success on a 2xx. Neither that nor `PUBLIC_CONTACT_EMAIL` is set, so an operator who applies is told the submission failed and is given *no address to fall back to*. It no longer loses leads silently, but it cannot receive one either. Fix by setting both under **Settings → Secrets and variables → Actions → Variables** (repository *variables*, not secrets — see the note in `.github/workflows/deploy.yml`). `PUBLIC_CONTACT_EMAIL` alone is enough to make the page usable; the endpoint wants a form-to-email service such as Formspree or Web3Forms. Copy `.env.example` to `.env` for local builds.
-- **Verify lookup**: `/verify/` uses the same client-side demo matching as the design prototype (IDs ending in "42" or `CS-2026-0042`) — replace with a real API call to the certification database. See `src/pages/[...locale]/verify.astro`.
+- ~~**Verify lookup**~~: done 4 August 2026. `/verify/` now matches exactly against seals built from `src/data/casinos.ts` at build time. No badge has been issued, so every lookup returns not-found and the copy says why. A casino gains a `sealId` when its badge goes live and the page answers with no further change.
 - **Casino directory**: `casinos.ts` is a static in-memory list — replace with a real data source when there's one.
 - **Flag images**: the language switcher hotlinks flags from `flagcdn.com` — confirm that's acceptable for production or self-host them.
 - **OG image**: no `og:image` is set yet — add one for richer social link previews.

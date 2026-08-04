@@ -292,7 +292,7 @@ def build(rec: dict, row: dict) -> str:
         "Every line above was re-checked against your live site on the day this "
         "was sent. If something here no longer reproduces, it was removed before "
         "sending rather than left in.", "",
-        "**Swift Secure.** We are new and building the reference list. If this "
+        "**Swift Secured.** We are new and building the reference list. If this "
         "was useful and you want the result public, we issue a verification badge "
         "linking to a dated page that states exactly what was and was not checked. "
         "**Free for the first six months, and the technical checks stay free — "
@@ -328,7 +328,7 @@ def main() -> None:
     if SENDER.startswith("[") or REPLY.startswith("["):
         print()
         print("!! PLACEHOLDERS STILL IN EVERY FILE — do not send yet.")
-        print("   Re-run with:  --sender \"Your Name\" --reply you@swiftsecure.example")
+        print("   Re-run with:  --sender \"Your Name\" --reply you@swiftsecured.com")
 
 
 if __name__ == "__main__":

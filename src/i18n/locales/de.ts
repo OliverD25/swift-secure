@@ -30,7 +30,7 @@ const de: PartialTranslation = {
     youProvide: "Sie liefern:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Siegel prüfen",
     howEyebrow: "Ablauf",
   },
@@ -42,7 +42,7 @@ const de: PartialTranslation = {
   methodology: {
     title: "Prüfmethodik",
     description:
-      "Genau das, was Swift Secure prüft, bevor ein Siegel vergeben wird, wie oft nachgeprüft wird und was wir bewusst nicht zu prüfen behaupten.",
+      "Genau das, was Swift Secured prüft, bevor ein Siegel vergeben wird, wie oft nachgeprüft wird und was wir bewusst nicht zu prüfen behaupten.",
     eyebrow: "Methodik",
     h1: "Was das Siegel wirklich bedeutet",
     sub: "Ein Vertrauenszeichen ist nur so viel wert wie das, was dahintersteht. Das ist die vollständige Methode — einschließlich der Prüfungen, die wir nicht durchführen, damit niemand raten muss.",
@@ -75,7 +75,7 @@ const de: PartialTranslation = {
   },
   casinos: {
     title: "Casino-Verzeichnis",
-    description: "Verzeichnis neuer Online-Casinos, die Swift Secure erfasst, jeweils mit aktuellem Prüfstatus.",
+    description: "Verzeichnis neuer Online-Casinos, die Swift Secured erfasst, jeweils mit aktuellem Prüfstatus.",
     eyebrow: "Verzeichnis",
     h1: "Casino-Verzeichnis",
     sub: "Jedes neue Casino, das wir erfassen, mit seinem aktuellen Status. Die meisten sind aus öffentlichen Quellen gelistet und noch nicht geprüft — der Status auf jeder Karte sagt, welche.",
@@ -85,7 +85,7 @@ const de: PartialTranslation = {
   },
   verify: {
     title: "Siegel prüfen",
-    description: "Geben Sie die auf der Casino-Website angezeigte Siegel-ID ein, um zu bestätigen, dass sie echt und aktuell von Swift Secure zertifiziert ist.",
+    description: "Geben Sie die auf der Casino-Website angezeigte Siegel-ID ein, um zu bestätigen, dass sie echt und aktuell von Swift Secured zertifiziert ist.",
     h1: "Siegel prüfen",
     sub: "Geben Sie die auf der Casino-Website angezeigte Siegel-ID ein, um Echtheit und Gültigkeit zu bestätigen.",
     inputPlaceholder: "z. B. CS-2026-0042",
@@ -99,7 +99,7 @@ const de: PartialTranslation = {
   },
   apply: {
     title: "Zertifizierung beantragen",
-    description: "Erhalten Sie Ihr Swift Secure Siegel in nur 10 Tagen. Erzählen Sie uns von Ihrer Plattform — unser Compliance-Team antwortet innerhalb von 48 Stunden.",
+    description: "Erhalten Sie Ihr Swift Secured Siegel in nur 10 Tagen. Erzählen Sie uns von Ihrer Plattform — unser Compliance-Team antwortet innerhalb von 48 Stunden.",
     eyebrow: "Zertifizierung beantragen",
     h1: "Ihr Siegel in nur 10 Tagen",
     sub: "Erzählen Sie uns von Ihrer Plattform. Unser Compliance-Team antwortet innerhalb von 48 Stunden.",
@@ -124,10 +124,10 @@ const de: PartialTranslation = {
     ctaButton: "Kontakt aufnehmen",
   },
   badge: {
-    title: "Das Swift Secure Siegel",
-    description: "Markenreferenz für das Swift Secure Zertifizierungssiegel: Hauptsiegel, kompakte Variante und Variante für dunkle Hintergründe.",
+    title: "Das Swift Secured Siegel",
+    description: "Markenreferenz für das Swift Secured Zertifizierungssiegel: Hauptsiegel, kompakte Variante und Variante für dunkle Hintergründe.",
     eyebrow: "Das Siegel",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Ein Siegel, drei Formen. Schlicht genug, um neben einem Footer-Logo zu stehen, klar genug, um auf einen Blick etwas zu bedeuten.",
     primaryTitle: "Hauptsiegel",
     primaryBody:
@@ -137,7 +137,7 @@ const de: PartialTranslation = {
     darkTitle: "Variante für dunkle Hintergründe",
     darkBody:
       "Für Casino-Seiten mit dunklem Design: Der Ring wird zum Outline-Icon und die Schrift weiß, damit alles lesbar bleibt — ohne weiße Fläche dahinter.",
-    ctaHeading: "Möchten Sie Swift Secure auf Ihrer Website zeigen?",
+    ctaHeading: "Möchten Sie Swift Secured auf Ihrer Website zeigen?",
     ctaButton: "Zertifizierung beantragen",
   },
 };

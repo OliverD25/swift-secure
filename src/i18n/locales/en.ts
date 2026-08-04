@@ -43,9 +43,9 @@ const en: Translation = {
     { value: "1.9 MB", label: "Median homepage weight" },
   ],
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     description:
-      "Swift Secure runs a free technical check on casino homepages: requests that fail, the single heaviest file, time to a usable Register button, and the licence number against the regulator's own register. We publish what we checked and what we did not.",
+      "Swift Secured runs a free technical check on casino homepages: requests that fail, the single heaviest file, time to a usable Register button, and the licence number against the regulator's own register. We publish what we checked and what we did not.",
     // "Trusted by 340+ licensed operators" was here. Nobody carries the badge.
     // Saying so first is the only version of this line that survives an
     // operator spending thirty seconds on the directory page.
@@ -138,7 +138,7 @@ const en: Translation = {
   pricing: {
     title: "Pricing",
     description:
-      "Swift Secure is new and has no clients yet. The technical check is free, and the badge is free for the first six months. No setup fee, no card, no contract.",
+      "Swift Secured is new and has no clients yet. The technical check is free, and the badge is free for the first six months. No setup fee, no card, no contract.",
     eyebrow: "Pricing",
     h1: "The check is free. The badge is free for six months.",
     sub: "We are new and nobody carries the badge yet. A badge from an issuer with no track record is worth nothing, so we are not charging for one. This page is the whole arrangement.",
@@ -220,7 +220,7 @@ const en: Translation = {
   methodology: {
     title: "Verification Methodology",
     description:
-      "Exactly what Swift Secure checks before issuing a badge, how often it is re-checked, and what we deliberately do not claim to verify.",
+      "Exactly what Swift Secured checks before issuing a badge, how often it is re-checked, and what we deliberately do not claim to verify.",
     eyebrow: "Methodology",
     h1: "What the badge actually means",
     // The standing rule that closes the gap between this page and a report.
@@ -287,7 +287,7 @@ const en: Translation = {
   },
   casinos: {
     title: "Casino Directory",
-    description: "Directory of new online casinos tracked by Swift Secure, each with its current verification status.",
+    description: "Directory of new online casinos tracked by Swift Secured, each with its current verification status.",
     eyebrow: "Directory",
     h1: "Casino directory",
     sub: "Every new casino we index, with its current status. Most are listed from public sources and have not been checked yet — the status on each card says which.",
@@ -313,7 +313,7 @@ const en: Translation = {
   },
   apply: {
     title: "Apply for Certification",
-    description: "Get your Swift Secure seal in as little as 10 days. Tell us about your platform — our compliance team responds within 48 hours.",
+    description: "Get your Swift Secured seal in as little as 10 days. Tell us about your platform — our compliance team responds within 48 hours.",
     eyebrow: "Apply for certification",
     h1: "Get your seal in as little as 10 days",
     sub: "Tell us about your platform. Our compliance team responds within 48 hours.",
@@ -336,7 +336,7 @@ const en: Translation = {
   // so this page was arguing against our own documentation.
   about: {
     title: "About",
-    description: "Swift Secure is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
+    description: "Swift Secured is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
     eyebrow: "About",
     h1: "New, and saying so",
     sub: "We started in 2026 by measuring 1,311 casino sites to find out what could honestly be checked from outside. Most of what verification services advertise turned out not to be checkable that way, so we do not offer it.",
@@ -347,7 +347,7 @@ const en: Translation = {
   },
   faqPage: {
     title: "FAQ",
-    description: "What Swift Secure checks, what it deliberately does not check, what it costs, and how to reproduce any finding yourself.",
+    description: "What Swift Secured checks, what it deliberately does not check, what it costs, and how to reproduce any finding yourself.",
     eyebrow: "FAQ",
     h1: "Frequently asked questions",
     ctaHeading: "Still have questions?",
@@ -392,10 +392,10 @@ const en: Translation = {
     },
   ],
   badge: {
-    title: "The Swift Secure Seal",
-    description: "Brand reference for the Swift Secure certification seal: primary badge, compact lockup, and dark-background variant.",
+    title: "The Swift Secured Seal",
+    description: "Brand reference for the Swift Secured certification seal: primary badge, compact lockup, and dark-background variant.",
     eyebrow: "The seal",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "One badge, three forms. Simple enough to sit next to a footer logo, clear enough to mean something at a glance.",
     primaryTitle: "Primary seal",
     primaryBody:
@@ -405,7 +405,7 @@ const en: Translation = {
     darkTitle: "Dark-background variant",
     darkBody:
       "For casino sites with dark themes: the ring switches to an outlined icon and white type so it stays legible without needing a white plate behind it.",
-    ctaHeading: "Want to display Swift Secure on your site?",
+    ctaHeading: "Want to display Swift Secured on your site?",
     ctaButton: "Apply for Certification",
   },
 };

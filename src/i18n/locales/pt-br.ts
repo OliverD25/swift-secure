@@ -30,7 +30,7 @@ const ptBR: PartialTranslation = {
     youProvide: "Você fornece:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Verificar um selo",
     howEyebrow: "Como funciona",
   },
@@ -42,7 +42,7 @@ const ptBR: PartialTranslation = {
   methodology: {
     title: "Metodologia de verificação",
     description:
-      "Exatamente o que a Swift Secure checa antes de emitir um selo, com que frequência refaz a checagem e o que deliberadamente não afirma verificar.",
+      "Exatamente o que a Swift Secured checa antes de emitir um selo, com que frequência refaz a checagem e o que deliberadamente não afirma verificar.",
     eyebrow: "Metodologia",
     h1: "O que o selo realmente significa",
     sub: "Um selo de confiança vale só aquilo que o sustenta. Esta é a metodologia inteira — inclusive as checagens que não fazemos, para ninguém precisar adivinhar.",
@@ -75,7 +75,7 @@ const ptBR: PartialTranslation = {
   },
   casinos: {
     title: "Diretório de cassinos",
-    description: "Diretório de novos cassinos online acompanhados pela Swift Secure, cada um com seu status de verificação atual.",
+    description: "Diretório de novos cassinos online acompanhados pela Swift Secured, cada um com seu status de verificação atual.",
     eyebrow: "Diretório",
     h1: "Diretório de cassinos",
     sub: "Cada novo cassino que indexamos, com o status atual. A maioria está listada a partir de fontes públicas e ainda não passou por verificação — o status em cada cartão indica quais.",
@@ -85,7 +85,7 @@ const ptBR: PartialTranslation = {
   },
   verify: {
     title: "Verificar um selo",
-    description: "Digite o ID do selo exibido no site de um cassino para confirmar que ele é autêntico e está certificado pela Swift Secure.",
+    description: "Digite o ID do selo exibido no site de um cassino para confirmar que ele é autêntico e está certificado pela Swift Secured.",
     h1: "Verificar um selo",
     sub: "Digite o ID do selo exibido no site do cassino para confirmar que ele é autêntico e está válido.",
     inputPlaceholder: "ex. CS-2026-0042",
@@ -99,7 +99,7 @@ const ptBR: PartialTranslation = {
   },
   apply: {
     title: "Solicitar certificação",
-    description: "Tenha seu selo Swift Secure em apenas 10 dias. Conte para nós sobre sua plataforma — nosso time de compliance responde em até 48 horas.",
+    description: "Tenha seu selo Swift Secured em apenas 10 dias. Conte para nós sobre sua plataforma — nosso time de compliance responde em até 48 horas.",
     eyebrow: "Solicitar certificação",
     h1: "Tenha seu selo em apenas 10 dias",
     sub: "Conte para nós sobre sua plataforma. Nosso time de compliance responde em até 48 horas.",
@@ -124,10 +124,10 @@ const ptBR: PartialTranslation = {
     ctaButton: "Fale conosco",
   },
   badge: {
-    title: "O selo Swift Secure",
-    description: "Referência de marca do selo de certificação Swift Secure: badge principal, versão compacta e variante para fundo escuro.",
+    title: "O selo Swift Secured",
+    description: "Referência de marca do selo de certificação Swift Secured: badge principal, versão compacta e variante para fundo escuro.",
     eyebrow: "O selo",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Um badge, três formas. Simples o bastante para ficar ao lado de um logo no rodapé, claro o bastante para dizer algo à primeira vista.",
     primaryTitle: "Selo principal",
     primaryBody:
@@ -137,7 +137,7 @@ const ptBR: PartialTranslation = {
     darkTitle: "Variante para fundo escuro",
     darkBody:
       "Para sites de cassino com tema escuro: o anel vira um ícone de contorno e o texto fica branco, assim ele continua legível sem precisar de uma base branca.",
-    ctaHeading: "Quer exibir a Swift Secure no seu site?",
+    ctaHeading: "Quer exibir a Swift Secured no seu site?",
     ctaButton: "Solicitar certificação",
   },
 };

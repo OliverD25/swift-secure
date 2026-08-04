@@ -30,7 +30,7 @@ const frCA: PartialTranslation = {
     youProvide: "Vous fournissez :",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Vérifier un sceau",
     howEyebrow: "Fonctionnement",
   },
@@ -42,7 +42,7 @@ const frCA: PartialTranslation = {
   methodology: {
     title: "Méthodologie de vérification",
     description:
-      "Exactement ce que Swift Secure contrôle avant d’émettre un badge, à quelle fréquence la vérification est refaite, et ce que nous ne prétendons délibérément pas vérifier.",
+      "Exactement ce que Swift Secured contrôle avant d’émettre un badge, à quelle fréquence la vérification est refaite, et ce que nous ne prétendons délibérément pas vérifier.",
     eyebrow: "Méthodologie",
     h1: "Ce que le badge signifie réellement",
     sub: "Une marque de confiance ne vaut que ce qu’il y a derrière. Voici la méthode complète, y compris les vérifications que nous ne faisons pas, pour que personne n’ait à deviner.",
@@ -75,7 +75,7 @@ const frCA: PartialTranslation = {
   },
   casinos: {
     title: "Répertoire des casinos",
-    description: "Répertoire des nouveaux casinos en ligne suivis par Swift Secure, chacun avec son statut de vérification actuel.",
+    description: "Répertoire des nouveaux casinos en ligne suivis par Swift Secured, chacun avec son statut de vérification actuel.",
     eyebrow: "Répertoire",
     h1: "Répertoire des casinos",
     sub: "Chaque nouveau casino que nous répertorions, avec son statut actuel. La plupart proviennent de sources publiques et n'ont pas encore été vérifiés — le statut sur chaque fiche l'indique.",
@@ -85,7 +85,7 @@ const frCA: PartialTranslation = {
   },
   verify: {
     title: "Vérifier un sceau",
-    description: "Saisissez le numéro de sceau affiché sur le site d’un casino pour confirmer qu’il est authentique et certifié en ce moment par Swift Secure.",
+    description: "Saisissez le numéro de sceau affiché sur le site d’un casino pour confirmer qu’il est authentique et certifié en ce moment par Swift Secured.",
     h1: "Vérifier un sceau",
     sub: "Saisissez le numéro de sceau affiché sur le site du casino pour confirmer qu’il est authentique et à jour.",
     inputPlaceholder: "p. ex. CS-2026-0042",
@@ -99,7 +99,7 @@ const frCA: PartialTranslation = {
   },
   apply: {
     title: "Demander la certification",
-    description: "Obtenez votre sceau Swift Secure en aussi peu que 10 jours. Parlez-nous de votre plateforme : notre équipe de la conformité répond en moins de 48 heures.",
+    description: "Obtenez votre sceau Swift Secured en aussi peu que 10 jours. Parlez-nous de votre plateforme : notre équipe de la conformité répond en moins de 48 heures.",
     eyebrow: "Demander la certification",
     h1: "Obtenez votre sceau en aussi peu que 10 jours",
     sub: "Parlez-nous de votre plateforme. Notre équipe de la conformité répond en moins de 48 heures.",
@@ -124,10 +124,10 @@ const frCA: PartialTranslation = {
     ctaButton: "Nous joindre",
   },
   badge: {
-    title: "Le sceau Swift Secure",
-    description: "Référence de marque du sceau de certification Swift Secure : sceau principal, version compacte et variante sur fond sombre.",
+    title: "Le sceau Swift Secured",
+    description: "Référence de marque du sceau de certification Swift Secured : sceau principal, version compacte et variante sur fond sombre.",
     eyebrow: "Le sceau",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Un sceau, trois formes. Assez simple pour côtoyer un logo de pied de page, assez clair pour vouloir dire quelque chose d’un coup d’œil.",
     primaryTitle: "Sceau principal",
     primaryBody:
@@ -137,7 +137,7 @@ const frCA: PartialTranslation = {
     darkTitle: "Variante sur fond sombre",
     darkBody:
       "Pour les sites de casino aux thèmes sombres : l’anneau devient une icône en contour et le texte passe en blanc, pour rester lisible sans plaque blanche derrière.",
-    ctaHeading: "Vous voulez afficher Swift Secure sur votre site?",
+    ctaHeading: "Vous voulez afficher Swift Secured sur votre site?",
     ctaButton: "Demander la certification",
   },
 };

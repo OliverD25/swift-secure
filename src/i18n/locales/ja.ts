@@ -30,7 +30,7 @@ const ja: PartialTranslation = {
     youProvide: "ご提供いただくもの：",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "シールを確認",
     howEyebrow: "認証の流れ",
   },
@@ -42,7 +42,7 @@ const ja: PartialTranslation = {
   methodology: {
     title: "検証方法",
     description:
-      "Swift Secure がバッジ発行前に何をチェックし、どの頻度で再チェックし、そして何を検証しないと明言しているかをまとめています。",
+      "Swift Secured がバッジ発行前に何をチェックし、どの頻度で再チェックし、そして何を検証しないと明言しているかをまとめています。",
     eyebrow: "検証方法",
     h1: "このバッジが実際に意味すること",
     sub: "信頼マークの価値は、その裏づけの分だけです。ここに方法をすべて記します。実施しないチェックも含め、誰も推測せずに済むようにしています。",
@@ -75,7 +75,7 @@ const ja: PartialTranslation = {
   },
   casinos: {
     title: "カジノディレクトリ",
-    description: "Swift Secure が追跡している新規オンラインカジノの一覧。各カジノの現在の検証ステータスを表示します。",
+    description: "Swift Secured が追跡している新規オンラインカジノの一覧。各カジノの現在の検証ステータスを表示します。",
     eyebrow: "ディレクトリ",
     h1: "カジノディレクトリ",
     sub: "当社が収録しているすべての新規カジノと、その現在のステータスです。ほとんどは公開情報から掲載したもので、まだ検査は行っていません。各カードのステータスをご確認ください。",
@@ -127,7 +127,7 @@ const ja: PartialTranslation = {
     title: "Swift Secureシール",
     description: "Swift Secure認証シールのブランドリファレンス：メインバッジ、コンパクト版、ダーク背景版。",
     eyebrow: "シールについて",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "1つのバッジに3つの形。フッターのロゴの隣に並ぶほどシンプルで、ひと目で意味が伝わるほど明快です。",
     primaryTitle: "メインシール",
     primaryBody:

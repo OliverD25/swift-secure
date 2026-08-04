@@ -30,7 +30,7 @@ const it: PartialTranslation = {
     youProvide: "Cosa fornisci:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Verifica un sigillo",
     howEyebrow: "Come funziona",
   },
@@ -42,7 +42,7 @@ const it: PartialTranslation = {
   methodology: {
     title: "Metodologia di verifica",
     description:
-      "Esattamente cosa controlla Swift Secure prima di emettere un badge, ogni quanto viene ricontrollato e cosa dichiariamo apertamente di non verificare.",
+      "Esattamente cosa controlla Swift Secured prima di emettere un badge, ogni quanto viene ricontrollato e cosa dichiariamo apertamente di non verificare.",
     eyebrow: "Metodologia",
     h1: "Cosa significa davvero il badge",
     sub: "Un marchio di fiducia vale solo quanto ciò che c'è dietro. Questo è il metodo completo, inclusi i controlli che non facciamo, così nessuno deve tirare a indovinare.",
@@ -75,7 +75,7 @@ const it: PartialTranslation = {
   },
   casinos: {
     title: "Directory dei casinò",
-    description: "Directory dei nuovi casinò online monitorati da Swift Secure, ciascuno con il suo stato di verifica attuale.",
+    description: "Directory dei nuovi casinò online monitorati da Swift Secured, ciascuno con il suo stato di verifica attuale.",
     eyebrow: "Directory",
     h1: "Directory dei casinò",
     sub: "Ogni nuovo casinò che indicizziamo, con il suo stato attuale. La maggior parte è elencata da fonti pubbliche e non è ancora stata controllata — lo stato su ogni scheda lo indica.",
@@ -85,7 +85,7 @@ const it: PartialTranslation = {
   },
   verify: {
     title: "Verifica un sigillo",
-    description: "Inserisci l'ID del sigillo mostrato sul sito di un casinò per confermare che sia autentico e attualmente certificato da Swift Secure.",
+    description: "Inserisci l'ID del sigillo mostrato sul sito di un casinò per confermare che sia autentico e attualmente certificato da Swift Secured.",
     h1: "Verifica un sigillo",
     sub: "Inserisci l'ID del sigillo mostrato sul sito del casinò per confermare che sia autentico e valido.",
     inputPlaceholder: "es. CS-2026-0042",
@@ -99,7 +99,7 @@ const it: PartialTranslation = {
   },
   apply: {
     title: "Richiedi la certificazione",
-    description: "Ottieni il sigillo Swift Secure in appena 10 giorni. Raccontaci della tua piattaforma — il nostro team compliance risponde entro 48 ore.",
+    description: "Ottieni il sigillo Swift Secured in appena 10 giorni. Raccontaci della tua piattaforma — il nostro team compliance risponde entro 48 ore.",
     eyebrow: "Richiedi la certificazione",
     h1: "Ottieni il sigillo in appena 10 giorni",
     sub: "Raccontaci della tua piattaforma. Il nostro team compliance risponde entro 48 ore.",
@@ -124,10 +124,10 @@ const it: PartialTranslation = {
     ctaButton: "Contattaci",
   },
   badge: {
-    title: "Il sigillo Swift Secure",
-    description: "Riferimento di brand per il sigillo di certificazione Swift Secure: badge principale, versione compatta e variante su sfondo scuro.",
+    title: "Il sigillo Swift Secured",
+    description: "Riferimento di brand per il sigillo di certificazione Swift Secured: badge principale, versione compatta e variante su sfondo scuro.",
     eyebrow: "Il sigillo",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Un badge, tre forme. Abbastanza semplice da stare accanto a un logo nel footer, abbastanza chiaro da dire qualcosa a colpo d'occhio.",
     primaryTitle: "Sigillo principale",
     primaryBody:
@@ -137,7 +137,7 @@ const it: PartialTranslation = {
     darkTitle: "Variante su sfondo scuro",
     darkBody:
       "Per i siti di casinò con tema scuro: l'anello diventa un'icona in outline e il testo bianco, così resta leggibile senza bisogno di una base bianca.",
-    ctaHeading: "Vuoi mostrare Swift Secure sul tuo sito?",
+    ctaHeading: "Vuoi mostrare Swift Secured sul tuo sito?",
     ctaButton: "Richiedi la certificazione",
   },
 };

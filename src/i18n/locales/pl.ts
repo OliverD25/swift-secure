@@ -30,7 +30,7 @@ const pl: PartialTranslation = {
     youProvide: "Ty dostarczasz:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Zweryfikuj pieczęć",
     howEyebrow: "Jak to działa",
   },
@@ -42,7 +42,7 @@ const pl: PartialTranslation = {
   methodology: {
     title: "Metodyka weryfikacji",
     description:
-      "Dokładnie to, co Swift Secure sprawdza przed wydaniem znaku, jak często ponawia kontrolę i czego świadomie nie deklaruje jako zweryfikowane.",
+      "Dokładnie to, co Swift Secured sprawdza przed wydaniem znaku, jak często ponawia kontrolę i czego świadomie nie deklaruje jako zweryfikowane.",
     eyebrow: "Metodyka",
     h1: "Co ten znak faktycznie oznacza",
     sub: "Znak zaufania jest wart tyle, ile za nim stoi. To pełna metodyka — łącznie z kontrolami, których nie wykonujemy, żeby nikt nie musiał zgadywać.",
@@ -75,7 +75,7 @@ const pl: PartialTranslation = {
   },
   casinos: {
     title: "Katalog kasyn",
-    description: "Katalog nowych kasyn online śledzonych przez Swift Secure, każde z aktualnym statusem weryfikacji.",
+    description: "Katalog nowych kasyn online śledzonych przez Swift Secured, każde z aktualnym statusem weryfikacji.",
     eyebrow: "Katalog",
     h1: "Katalog kasyn",
     sub: "Każde nowe kasyno, które indeksujemy, wraz z jego aktualnym statusem. Większość pochodzi ze źródeł publicznych i nie została jeszcze sprawdzona — status na każdej karcie to pokazuje.",
@@ -85,7 +85,7 @@ const pl: PartialTranslation = {
   },
   verify: {
     title: "Zweryfikuj pieczęć",
-    description: "Wpisz identyfikator pieczęci widoczny na stronie kasyna, aby potwierdzić, że jest autentyczna i aktualnie certyfikowana przez Swift Secure.",
+    description: "Wpisz identyfikator pieczęci widoczny na stronie kasyna, aby potwierdzić, że jest autentyczna i aktualnie certyfikowana przez Swift Secured.",
     h1: "Zweryfikuj pieczęć",
     sub: "Wpisz identyfikator pieczęci widoczny na stronie kasyna, aby potwierdzić, że jest autentyczna i aktualna.",
     inputPlaceholder: "np. CS-2026-0042",
@@ -99,7 +99,7 @@ const pl: PartialTranslation = {
   },
   apply: {
     title: "Złóż wniosek o certyfikat",
-    description: "Zdobądź pieczęć Swift Secure już w 10 dni. Opowiedz nam o swojej platformie — nasz zespół ds. zgodności odpowie w ciągu 48 godzin.",
+    description: "Zdobądź pieczęć Swift Secured już w 10 dni. Opowiedz nam o swojej platformie — nasz zespół ds. zgodności odpowie w ciągu 48 godzin.",
     eyebrow: "Wniosek o certyfikat",
     h1: "Zdobądź pieczęć już w 10 dni",
     sub: "Opowiedz nam o swojej platformie. Nasz zespół ds. zgodności odpowie w ciągu 48 godzin.",
@@ -124,10 +124,10 @@ const pl: PartialTranslation = {
     ctaButton: "Skontaktuj się",
   },
   badge: {
-    title: "Pieczęć Swift Secure",
-    description: "Referencja marki dla pieczęci certyfikacyjnej Swift Secure: wersja podstawowa, kompaktowa i na ciemne tło.",
+    title: "Pieczęć Swift Secured",
+    description: "Referencja marki dla pieczęci certyfikacyjnej Swift Secured: wersja podstawowa, kompaktowa i na ciemne tło.",
     eyebrow: "Pieczęć",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Jeden znak, trzy formy. Na tyle prosty, by stanąć obok logotypu w stopce, i na tyle czytelny, by coś znaczyć na pierwszy rzut oka.",
     primaryTitle: "Pieczęć podstawowa",
     primaryBody:
@@ -137,7 +137,7 @@ const pl: PartialTranslation = {
     darkTitle: "Wersja na ciemne tło",
     darkBody:
       "Dla kasyn z ciemnym motywem: pierścień zmienia się w ikonę konturową z białą typografią, dzięki czemu pozostaje czytelny bez białej podkładki.",
-    ctaHeading: "Chcesz pokazać Swift Secure na swojej stronie?",
+    ctaHeading: "Chcesz pokazać Swift Secured na swojej stronie?",
     ctaButton: "Złóż wniosek o certyfikat",
   },
 };

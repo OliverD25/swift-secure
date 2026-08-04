@@ -30,7 +30,7 @@ const sv: PartialTranslation = {
     youProvide: "Du lämnar:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Verifiera ett sigill",
     howEyebrow: "Så fungerar det",
   },
@@ -42,7 +42,7 @@ const sv: PartialTranslation = {
   methodology: {
     title: "Verifieringsmetod",
     description:
-      "Exakt vad Swift Secure kontrollerar innan ett märke utfärdas, hur ofta det kontrolleras om och vad vi medvetet inte påstår oss verifiera.",
+      "Exakt vad Swift Secured kontrollerar innan ett märke utfärdas, hur ofta det kontrolleras om och vad vi medvetet inte påstår oss verifiera.",
     eyebrow: "Metod",
     h1: "Vad märket faktiskt betyder",
     sub: "Ett förtroendemärke är bara värt det som står bakom det. Detta är hela metoden — inklusive kontrollerna vi inte gör, så att ingen behöver gissa.",
@@ -75,7 +75,7 @@ const sv: PartialTranslation = {
   },
   casinos: {
     title: "Casinokatalog",
-    description: "Katalog över nya onlinecasinon som Swift Secure följer, var och en med sin aktuella verifieringsstatus.",
+    description: "Katalog över nya onlinecasinon som Swift Secured följer, var och en med sin aktuella verifieringsstatus.",
     eyebrow: "Katalog",
     h1: "Casinokatalog",
     sub: "Varje nytt casino vi indexerar, med dess aktuella status. De flesta är listade från offentliga källor och har ännu inte kontrollerats — statusen på varje kort visar vilka.",
@@ -85,7 +85,7 @@ const sv: PartialTranslation = {
   },
   verify: {
     title: "Verifiera ett sigill",
-    description: "Ange sigill-ID:t som visas på ett casinos webbplats för att bekräfta att det är äkta och för närvarande certifierat av Swift Secure.",
+    description: "Ange sigill-ID:t som visas på ett casinos webbplats för att bekräfta att det är äkta och för närvarande certifierat av Swift Secured.",
     h1: "Verifiera ett sigill",
     sub: "Ange sigill-ID:t som visas på casinots webbplats för att bekräfta att det är äkta och aktuellt.",
     inputPlaceholder: "t.ex. CS-2026-0042",
@@ -99,7 +99,7 @@ const sv: PartialTranslation = {
   },
   apply: {
     title: "Ansök om certifiering",
-    description: "Få ditt Swift Secure-sigill på så lite som 10 dagar. Berätta om din plattform — vårt compliance-team svarar inom 48 timmar.",
+    description: "Få ditt Swift Secured-sigill på så lite som 10 dagar. Berätta om din plattform — vårt compliance-team svarar inom 48 timmar.",
     eyebrow: "Ansök om certifiering",
     h1: "Få ditt sigill på så lite som 10 dagar",
     sub: "Berätta om din plattform. Vårt compliance-team svarar inom 48 timmar.",
@@ -124,10 +124,10 @@ const sv: PartialTranslation = {
     ctaButton: "Kontakta oss",
   },
   badge: {
-    title: "Swift Secure-sigillet",
-    description: "Varumärkesreferens för Swift Secure-certifieringssigillet: primär badge, kompakt lockup och variant för mörk bakgrund.",
+    title: "Swift Secured-sigillet",
+    description: "Varumärkesreferens för Swift Secured-certifieringssigillet: primär badge, kompakt lockup och variant för mörk bakgrund.",
     eyebrow: "Sigillet",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "En badge, tre former. Enkel nog att stå bredvid en logotyp i sidfoten, tydlig nog att betyda något vid en snabb blick.",
     primaryTitle: "Primärt sigill",
     primaryBody:
@@ -137,7 +137,7 @@ const sv: PartialTranslation = {
     darkTitle: "Variant för mörk bakgrund",
     darkBody:
       "För casinosajter med mörka teman: ringen byts till en konturikon och vit text så att den förblir läsbar utan en vit platta bakom sig.",
-    ctaHeading: "Vill du visa Swift Secure på din webbplats?",
+    ctaHeading: "Vill du visa Swift Secured på din webbplats?",
     ctaButton: "Ansök om certifiering",
   },
 };

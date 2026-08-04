@@ -4,4 +4,4 @@ Allow: /
 # Internal design-option picker, not content.
 Disallow: /settings/
 
-Sitemap: https://swiftsecure.example/sitemap-index.xml
+Sitemap: https://swiftsecured.com/sitemap-index.xml

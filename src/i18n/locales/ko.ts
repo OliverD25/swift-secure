@@ -30,7 +30,7 @@ const ko: PartialTranslation = {
     youProvide: "제출 자료:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "씰 확인하기",
     howEyebrow: "인증 절차",
   },
@@ -85,7 +85,7 @@ const ko: PartialTranslation = {
   },
   verify: {
     title: "씰 확인하기",
-    description: "카지노 사이트에 표시된 씰 ID를 입력하면 해당 씰이 진짜이며 현재 Swift Secure 인증을 유지하고 있는지 확인할 수 있습니다.",
+    description: "카지노 사이트에 표시된 씰 ID를 입력하면 해당 씰이 진짜이며 현재 Swift Secured 인증을 유지하고 있는지 확인할 수 있습니다.",
     h1: "씰 확인하기",
     sub: "카지노 사이트에 표시된 씰 ID를 입력해 진짜이며 현재 유효한지 확인하십시오.",
     inputPlaceholder: "예: CS-2026-0042",
@@ -99,7 +99,7 @@ const ko: PartialTranslation = {
   },
   apply: {
     title: "인증 신청하기",
-    description: "최단 10일 안에 Swift Secure 씰을 받으십시오. 플랫폼에 대해 알려주시면 컴플라이언스팀이 48시간 이내에 답변드립니다.",
+    description: "최단 10일 안에 Swift Secured 씰을 받으십시오. 플랫폼에 대해 알려주시면 컴플라이언스팀이 48시간 이내에 답변드립니다.",
     eyebrow: "인증 신청",
     h1: "최단 10일 안에 씰을 받으십시오",
     sub: "플랫폼에 대해 알려주십시오. 컴플라이언스팀이 48시간 이내에 답변드립니다.",
@@ -124,10 +124,10 @@ const ko: PartialTranslation = {
     ctaButton: "문의하기",
   },
   badge: {
-    title: "Swift Secure 씰",
-    description: "Swift Secure 인증 씰의 브랜드 레퍼런스: 기본 배지, 컴팩트 조합, 어두운 배경용 버전.",
+    title: "Swift Secured 씰",
+    description: "Swift Secured 인증 씰의 브랜드 레퍼런스: 기본 배지, 컴팩트 조합, 어두운 배경용 버전.",
     eyebrow: "씰 소개",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "하나의 배지, 세 가지 형태. 푸터 로고 옆에 놓일 만큼 단순하고, 한눈에 의미가 전해질 만큼 명확합니다.",
     primaryTitle: "기본 씰",
     primaryBody:

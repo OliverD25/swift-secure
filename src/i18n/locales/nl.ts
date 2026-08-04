@@ -30,7 +30,7 @@ const nl: PartialTranslation = {
     youProvide: "Jij levert aan:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Zegel verifiëren",
     howEyebrow: "Hoe het werkt",
   },
@@ -42,7 +42,7 @@ const nl: PartialTranslation = {
   methodology: {
     title: "Verificatiemethodiek",
     description:
-      "Precies wat Swift Secure controleert voordat een badge wordt uitgegeven, hoe vaak er opnieuw wordt gecontroleerd en wat wij bewust niet beweren te verifiëren.",
+      "Precies wat Swift Secured controleert voordat een badge wordt uitgegeven, hoe vaak er opnieuw wordt gecontroleerd en wat wij bewust niet beweren te verifiëren.",
     eyebrow: "Methodiek",
     h1: "Wat de badge werkelijk betekent",
     sub: "Een keurmerk is alleen waard wat erachter staat. Dit is de volledige methode — inclusief de controles die wij niet uitvoeren, zodat niemand hoeft te gissen.",
@@ -75,7 +75,7 @@ const nl: PartialTranslation = {
   },
   casinos: {
     title: "Casinogids",
-    description: "Overzicht van nieuwe onlinecasino's die Swift Secure volgt, elk met de huidige verificatiestatus.",
+    description: "Overzicht van nieuwe onlinecasino's die Swift Secured volgt, elk met de huidige verificatiestatus.",
     eyebrow: "Overzicht",
     h1: "Casinogids",
     sub: "Elk nieuw casino dat we indexeren, met de huidige status. De meeste staan vermeld op basis van openbare bronnen en zijn nog niet gecontroleerd — de status op elke kaart geeft aan welke.",
@@ -85,7 +85,7 @@ const nl: PartialTranslation = {
   },
   verify: {
     title: "Zegel verifiëren",
-    description: "Voer de zegel-ID in die op de site van een casino staat om te bevestigen dat het zegel echt is en op dit moment door Swift Secure is gecertificeerd.",
+    description: "Voer de zegel-ID in die op de site van een casino staat om te bevestigen dat het zegel echt is en op dit moment door Swift Secured is gecertificeerd.",
     h1: "Zegel verifiëren",
     sub: "Voer de zegel-ID in die op de site van het casino staat om te bevestigen dat het zegel echt en actueel is.",
     inputPlaceholder: "bijv. CS-2026-0042",
@@ -99,7 +99,7 @@ const nl: PartialTranslation = {
   },
   apply: {
     title: "Certificering aanvragen",
-    description: "Krijg je Swift Secure-zegel in slechts 10 dagen. Vertel ons over je platform — ons complianceteam reageert binnen 48 uur.",
+    description: "Krijg je Swift Secured-zegel in slechts 10 dagen. Vertel ons over je platform — ons complianceteam reageert binnen 48 uur.",
     eyebrow: "Certificering aanvragen",
     h1: "Krijg je zegel in slechts 10 dagen",
     sub: "Vertel ons over je platform. Ons complianceteam reageert binnen 48 uur.",
@@ -124,10 +124,10 @@ const nl: PartialTranslation = {
     ctaButton: "Neem contact op",
   },
   badge: {
-    title: "Het Swift Secure-zegel",
-    description: "Merkreferentie voor het Swift Secure-certificeringszegel: primaire badge, compacte lockup en variant voor donkere achtergrond.",
+    title: "Het Swift Secured-zegel",
+    description: "Merkreferentie voor het Swift Secured-certificeringszegel: primaire badge, compacte lockup en variant voor donkere achtergrond.",
     eyebrow: "Het zegel",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Eén badge, drie vormen. Eenvoudig genoeg om naast een footerlogo te staan, duidelijk genoeg om in één oogopslag iets te betekenen.",
     primaryTitle: "Primair zegel",
     primaryBody:
@@ -137,7 +137,7 @@ const nl: PartialTranslation = {
     darkTitle: "Variant voor donkere achtergrond",
     darkBody:
       "Voor casinosites met een donker thema: de ring wordt een omlijnd icoon met witte tekst, zodat hij leesbaar blijft zonder een wit vlak erachter.",
-    ctaHeading: "Wil je Swift Secure op je site tonen?",
+    ctaHeading: "Wil je Swift Secured op je site tonen?",
     ctaButton: "Certificering aanvragen",
   },
 };

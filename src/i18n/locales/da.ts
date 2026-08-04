@@ -30,7 +30,7 @@ const da: PartialTranslation = {
     youProvide: "Du leverer:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Verificer et segl",
     howEyebrow: "Sådan virker det",
   },
@@ -42,7 +42,7 @@ const da: PartialTranslation = {
   methodology: {
     title: "Verifikationsmetode",
     description:
-      "Præcis hvad Swift Secure tjekker, før et badge udstedes, hvor ofte det gentjekkes, og hvad vi bevidst ikke hævder at verificere.",
+      "Præcis hvad Swift Secured tjekker, før et badge udstedes, hvor ofte det gentjekkes, og hvad vi bevidst ikke hævder at verificere.",
     eyebrow: "Metode",
     h1: "Hvad badget rent faktisk betyder",
     sub: "Et tillidsmærke er kun det værd, der står bag det. Her er hele metoden — inklusive de kontroller, vi ikke udfører, så ingen behøver at gætte.",
@@ -75,7 +75,7 @@ const da: PartialTranslation = {
   },
   casinos: {
     title: "Casinooversigt",
-    description: "Oversigt over nye onlinecasinoer, som Swift Secure følger, hver med sin aktuelle verifikationsstatus.",
+    description: "Oversigt over nye onlinecasinoer, som Swift Secured følger, hver med sin aktuelle verifikationsstatus.",
     eyebrow: "Oversigt",
     h1: "Casinooversigt",
     sub: "Hvert nyt casino, vi indekserer, med dets aktuelle status. De fleste er opført fra offentlige kilder og er endnu ikke kontrolleret — statussen på hvert kort viser hvilke.",
@@ -85,7 +85,7 @@ const da: PartialTranslation = {
   },
   verify: {
     title: "Verificer et segl",
-    description: "Indtast det segl-id, der vises på et casinos side, for at bekræfte, at det er ægte og aktuelt certificeret af Swift Secure.",
+    description: "Indtast det segl-id, der vises på et casinos side, for at bekræfte, at det er ægte og aktuelt certificeret af Swift Secured.",
     h1: "Verificer et segl",
     sub: "Indtast det segl-id, der vises på casinoets side, for at bekræfte, at det er ægte og gyldigt.",
     inputPlaceholder: "f.eks. CS-2026-0042",
@@ -99,7 +99,7 @@ const da: PartialTranslation = {
   },
   apply: {
     title: "Ansøg om certificering",
-    description: "Få dit Swift Secure-segl på så lidt som 10 dage. Fortæl os om din platform — vores compliance-team svarer inden for 48 timer.",
+    description: "Få dit Swift Secured-segl på så lidt som 10 dage. Fortæl os om din platform — vores compliance-team svarer inden for 48 timer.",
     eyebrow: "Ansøg om certificering",
     h1: "Få dit segl på så lidt som 10 dage",
     sub: "Fortæl os om din platform. Vores compliance-team svarer inden for 48 timer.",
@@ -124,10 +124,10 @@ const da: PartialTranslation = {
     ctaButton: "Kontakt os",
   },
   badge: {
-    title: "Swift Secure-seglet",
-    description: "Brandreference for Swift Secure-certificeringsseglet: primært badge, kompakt lockup og variant til mørk baggrund.",
+    title: "Swift Secured-seglet",
+    description: "Brandreference for Swift Secured-certificeringsseglet: primært badge, kompakt lockup og variant til mørk baggrund.",
     eyebrow: "Seglet",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Ét badge, tre former. Enkelt nok til at stå ved siden af et footer-logo, tydeligt nok til at betyde noget ved første blik.",
     primaryTitle: "Primært segl",
     primaryBody:
@@ -137,7 +137,7 @@ const da: PartialTranslation = {
     darkTitle: "Variant til mørk baggrund",
     darkBody:
       "Til casinosites med mørke temaer: ringen skifter til et ikon med kontur og hvid skrift, så det forbliver læsbart uden at skulle have en hvid plade bag sig.",
-    ctaHeading: "Vil du vise Swift Secure på dit site?",
+    ctaHeading: "Vil du vise Swift Secured på dit site?",
     ctaButton: "Ansøg om certificering",
   },
 };

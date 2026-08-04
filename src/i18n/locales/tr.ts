@@ -30,7 +30,7 @@ const tr: PartialTranslation = {
     youProvide: "Sizden istenenler:",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "Mühür doğrula",
     howEyebrow: "Nasıl çalışır",
   },
@@ -42,7 +42,7 @@ const tr: PartialTranslation = {
   methodology: {
     title: "Doğrulama yöntemi",
     description:
-      "Swift Secure'ün rozet vermeden önce tam olarak neyi kontrol ettiği, bunu ne sıklıkla yinelediği ve bilerek doğruladığını iddia etmediği şeyler.",
+      "Swift Secured'ün rozet vermeden önce tam olarak neyi kontrol ettiği, bunu ne sıklıkla yinelediği ve bilerek doğruladığını iddia etmediği şeyler.",
     eyebrow: "Yöntem",
     h1: "Rozetin gerçekte ne anlama geldiği",
     sub: "Bir güven işareti, ancak arkasında duran şey kadar değerlidir. Bu, yöntemin tamamı — kimse tahmin etmek zorunda kalmasın diye yapmadığımız kontroller dahil.",
@@ -75,7 +75,7 @@ const tr: PartialTranslation = {
   },
   casinos: {
     title: "Casino dizini",
-    description: "Swift Secure tarafından takip edilen yeni çevrimiçi casinoların dizini, her biri güncel doğrulama durumuyla.",
+    description: "Swift Secured tarafından takip edilen yeni çevrimiçi casinoların dizini, her biri güncel doğrulama durumuyla.",
     eyebrow: "Dizin",
     h1: "Casino dizini",
     sub: "Dizine eklediğimiz her yeni casino, güncel durumuyla birlikte. Çoğu kamuya açık kaynaklardan listelenmiştir ve henüz kontrol edilmemiştir — her karttaki durum bunu gösterir.",
@@ -85,7 +85,7 @@ const tr: PartialTranslation = {
   },
   verify: {
     title: "Mühür doğrula",
-    description: "Bir casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve Swift Secure tarafından güncel olarak sertifikalı olduğunu doğrulayın.",
+    description: "Bir casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve Swift Secured tarafından güncel olarak sertifikalı olduğunu doğrulayın.",
     h1: "Mühür doğrula",
     sub: "Casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve güncel olduğunu doğrulayın.",
     inputPlaceholder: "örn. CS-2026-0042",
@@ -99,7 +99,7 @@ const tr: PartialTranslation = {
   },
   apply: {
     title: "Sertifikasyon için başvur",
-    description: "Swift Secure mührünüzü 10 gün gibi kısa sürede alın. Platformunuzu anlatın — uyum ekibimiz 48 saat içinde yanıt verir.",
+    description: "Swift Secured mührünüzü 10 gün gibi kısa sürede alın. Platformunuzu anlatın — uyum ekibimiz 48 saat içinde yanıt verir.",
     eyebrow: "Sertifikasyon başvurusu",
     h1: "Mührünüzü 10 gün gibi kısa sürede alın",
     sub: "Platformunuzu anlatın. Uyum ekibimiz 48 saat içinde yanıt verir.",
@@ -124,10 +124,10 @@ const tr: PartialTranslation = {
     ctaButton: "Bize ulaşın",
   },
   badge: {
-    title: "Swift Secure mührü",
-    description: "Swift Secure sertifikasyon mührü için marka referansı: birincil rozet, kompakt kilitleme ve koyu zemin varyantı.",
+    title: "Swift Secured mührü",
+    description: "Swift Secured sertifikasyon mührü için marka referansı: birincil rozet, kompakt kilitleme ve koyu zemin varyantı.",
     eyebrow: "Mühür",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "Tek rozet, üç biçim. Alt bilgideki bir logonun yanında durabilecek kadar sade, ilk bakışta anlam taşıyacak kadar net.",
     primaryTitle: "Birincil mühür",
     primaryBody:
@@ -137,7 +137,7 @@ const tr: PartialTranslation = {
     darkTitle: "Koyu zemin varyantı",
     darkBody:
       "Koyu temalı casino siteleri için: halka dış hatlı ikona ve beyaz yazıya dönüşür, böylece arkasına beyaz bir zemin koymadan okunur kalır.",
-    ctaHeading: "Swift Secure'ü sitenizde göstermek ister misiniz?",
+    ctaHeading: "Swift Secured'ü sitenizde göstermek ister misiniz?",
     ctaButton: "Sertifikasyon için başvur",
   },
 };

@@ -30,7 +30,7 @@ const zh: PartialTranslation = {
     youProvide: "您需提供：",
   },
   home: {
-    title: "Swift Secure",
+    title: "Swift Secured",
     ctaVerify: "验证标识",
     howEyebrow: "认证流程",
   },
@@ -42,7 +42,7 @@ const zh: PartialTranslation = {
   methodology: {
     title: "核查方法",
     description:
-      "Swift Secure 在签发标识前究竟核查什么、多久复查一次，以及我们刻意不声称核查的内容。",
+      "Swift Secured 在签发标识前究竟核查什么、多久复查一次，以及我们刻意不声称核查的内容。",
     eyebrow: "核查方法",
     h1: "这枚标识到底意味着什么",
     sub: "信任标记的价值取决于背后有什么。这是完整方法——包括我们不做的核查，免得任何人靠猜。",
@@ -75,7 +75,7 @@ const zh: PartialTranslation = {
   },
   casinos: {
     title: "赌场目录",
-    description: "Swift Secure 追踪的新在线赌场目录，每家均标注当前验证状态。",
+    description: "Swift Secured 追踪的新在线赌场目录，每家均标注当前验证状态。",
     eyebrow: "目录",
     h1: "赌场目录",
     sub: "我们收录的每一家新赌场及其当前状态。多数来自公开来源，尚未经过检查——每张卡片上的状态会说明。",
@@ -85,7 +85,7 @@ const zh: PartialTranslation = {
   },
   verify: {
     title: "验证标识",
-    description: "输入赌场网站上显示的标识编号，确认其真实性以及当前是否由 Swift Secure 认证。",
+    description: "输入赌场网站上显示的标识编号，确认其真实性以及当前是否由 Swift Secured 认证。",
     h1: "验证标识",
     sub: "输入赌场网站上显示的标识编号，确认其真实且仍然有效。",
     inputPlaceholder: "例如 CS-2026-0042",
@@ -99,7 +99,7 @@ const zh: PartialTranslation = {
   },
   apply: {
     title: "申请认证",
-    description: "最快 10 天获得您的 Swift Secure 标识。请告诉我们您的平台情况——我们的合规团队将在 48 小时内回复。",
+    description: "最快 10 天获得您的 Swift Secured 标识。请告诉我们您的平台情况——我们的合规团队将在 48 小时内回复。",
     eyebrow: "申请认证",
     h1: "最快 10 天获得您的标识",
     sub: "请告诉我们您的平台情况。我们的合规团队将在 48 小时内回复。",
@@ -124,10 +124,10 @@ const zh: PartialTranslation = {
     ctaButton: "联系我们",
   },
   badge: {
-    title: "Swift Secure 标识",
-    description: "Swift Secure 认证标识的品牌参考：主徽章、紧凑版组合与深色背景版本。",
+    title: "Swift Secured 标识",
+    description: "Swift Secured 认证标识的品牌参考：主徽章、紧凑版组合与深色背景版本。",
     eyebrow: "标识",
-    h1: "Swift Secure",
+    h1: "Swift Secured",
     sub: "一个徽章，三种形式。简洁到可与页脚标志并列，清晰到一眼就有意义。",
     primaryTitle: "主标识",
     primaryBody:
@@ -137,7 +137,7 @@ const zh: PartialTranslation = {
     darkTitle: "深色背景版本",
     darkBody:
       "适用于深色主题的赌场网站：圆环改为描边图标，文字为白色，因此无需在其后加白底也能保持清晰。",
-    ctaHeading: "希望在您的网站上展示 Swift Secure？",
+    ctaHeading: "希望在您的网站上展示 Swift Secured？",
     ctaButton: "申请认证",
   },
 };

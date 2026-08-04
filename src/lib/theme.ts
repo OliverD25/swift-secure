@@ -1,4 +1,4 @@
-export const STORAGE_KEY = "swiftsecure.designOption";
+export const STORAGE_KEY = "swiftsecured.designOption";
 
 /** Ships as the built-in default: every page renders with this before any
  *  stored preference is read, so it is what a first-time visitor sees. */

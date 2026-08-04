@@ -30,7 +30,7 @@ const lang = getLanguage(locale);
 
 const abs = (p: string) => new URL(p, Astro.site).toString();
 const canonicalURL = abs(localePath(path, locale));
-const pageTitle = title === "Swift Secure" ? title : `${title} | Swift Secure`;
+const pageTitle = title === "Swift Secured" ? title : `${title} | Swift Secured`;
 
 const showStickyCta = !path.startsWith("/apply");
 
@@ -64,7 +64,7 @@ const themeBootstrap = `(function(){try{var t=localStorage.getItem(${JSON.string
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content="Swift Secure" />
+    <meta property="og:site_name" content="Swift Secured" />
     <meta property="og:locale" content={lang.htmlLang.replace("-", "_")} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={pageTitle} />
