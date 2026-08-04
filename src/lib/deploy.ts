@@ -21,12 +21,27 @@ const PRODUCTION_BRANCH = "main";
 export const deployBranch = process.env.WORKERS_CI_BRANCH ?? process.env.CF_PAGES_BRANCH;
 
 /**
- * True on any Cloudflare deployment that is not the production branch.
+ * True on any deployment that is not the one public copy of the site.
  *
- * Every preview gets its own public URL — that is the point of it — and a
- * public URL is a crawlable one. Left alone, a staging branch puts a second
- * copy of all 4,428 pages into the index, competing with production for the
- * same text. For a site whose entire pitch is that it can be trusted, having
- * two of itself in the search results is the wrong first impression.
+ * Two kinds qualify, and both were live at once on 2026-08-04:
+ *
+ * 1. A Cloudflare branch preview. Every one gets its own public URL — that is
+ *    the point of it — and a public URL is a crawlable one.
+ * 2. A deployment target we keep for our own convenience rather than for
+ *    visitors. The GitHub Pages workflow still runs on every push to main and
+ *    publishes a second complete copy at oliverd25.github.io/swift-secure/.
+ *    Measured: it served `Allow: /` and a canonical pointing at itself, so it
+ *    was not merely a duplicate — it was the copy claiming to be the original,
+ *    while Cloudflare's canonical pointed at a domain that does not yet
+ *    resolve. Left alone, the address we do not want customers to see is the
+ *    one search engines would have kept.
+ *
+ * Case 2 cannot be detected from the environment, because a mirror looks
+ * exactly like production from inside the build. It has to be declared, which
+ * is what NOINDEX_DEPLOY is for.
+ *
+ * For a site whose entire pitch is that it can be trusted, having two of itself
+ * in the search results is the wrong first impression.
  */
-export const isPreviewDeploy = Boolean(deployBranch) && deployBranch !== PRODUCTION_BRANCH;
+export const isUnindexedDeploy =
+  process.env.NOINDEX_DEPLOY === "1" || (Boolean(deployBranch) && deployBranch !== PRODUCTION_BRANCH);

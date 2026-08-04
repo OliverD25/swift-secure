@@ -52,6 +52,18 @@ jobs:
           # build needs both halves to emit correct links and canonical URLs.
           SITE: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Keep this copy out of search results. Since the move to Cloudflare
+          # this workflow no longer publishes the site — it publishes a second
+          # complete copy of it, and on 2026-08-04 both were live and indexable
+          # at once. Worse, the SITE override above makes this copy canonicalise
+          # to itself while Cloudflare's canonical points at swiftsecured.com,
+          # which does not resolve yet: of the two, the address we do not want
+          # customers to see was the only credible candidate for the index.
+          #
+          # The mirror is kept because it costs nothing and is somewhere to fall
+          # back to if Cloudflare is misconfigured. It is not kept to be found.
+          # Remove this line only if GitHub Pages becomes the real site again.
+          NOINDEX_DEPLOY: "1"
           # Repository *variables*, not secrets: the PUBLIC_ prefix inlines
           # these into client-side JS, so they ship to every visitor anyway.
           # Marking them secret would only hide them from our own build logs.

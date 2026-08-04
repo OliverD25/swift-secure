@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import StickyCta from "../components/StickyCta.astro";
 import { localePath, languages, getLanguage, defaultLocale } from "../i18n";
 import { DEFAULT_THEME, STORAGE_KEY, THEMES } from "../lib/theme";
-import { isPreviewDeploy } from "../lib/deploy";
+import { isUnindexedDeploy } from "../lib/deploy";
 import "../styles/global.css";
 
 interface Props {
@@ -30,15 +30,17 @@ const { locale, path, title, description, current, noindex: noindexProp = false 
 const lang = getLanguage(locale);
 
 /**
- * Every non-production deployment is noindexed, whatever the page asks for.
- * Which deployments those are is decided in src/lib/deploy.ts, shared with
- * robots.txt.ts so the two layers cannot disagree.
+ * Every deployment that is not the one public copy of the site is noindexed,
+ * whatever the page asks for. Which those are is decided in src/lib/deploy.ts,
+ * shared with robots.txt.ts so the two layers cannot disagree.
  *
- * Astro.site stays the production domain on previews, so canonical URLs keep
- * pointing at the real page. That is deliberate extra safety — noindex is the
- * instruction, the canonical is the fallback if a crawler ignores it.
+ * On a Cloudflare preview, Astro.site stays the production domain, so canonical
+ * URLs keep pointing at the real page — noindex is the instruction, the
+ * canonical is the fallback if a crawler ignores it. The GitHub Pages mirror is
+ * the case that fallback does not cover: its workflow overrides SITE, so it
+ * self-canonicalises and only the noindex stops it.
  */
-const noindex = noindexProp || isPreviewDeploy;
+const noindex = noindexProp || isUnindexedDeploy;
 
 const abs = (p: string) => new URL(p, Astro.site).toString();
 const canonicalURL = abs(localePath(path, locale));

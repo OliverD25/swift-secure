@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { deployBranch, isPreviewDeploy } from "../lib/deploy";
+import { deployBranch, isUnindexedDeploy } from "../lib/deploy";
 
 /**
  * robots.txt, built per deployment rather than served as a static file.
@@ -15,9 +15,19 @@ import { deployBranch, isPreviewDeploy } from "../lib/deploy";
  * the thing that drifts.
  */
 export const GET: APIRoute = ({ site }) => {
-  const body = isPreviewDeploy
+  // Astro's `site` is the origin only; the sub-path lives in BASE_URL and is
+  // set on GitHub Pages, which serves from /<repo>/. Joining the filename to
+  // the origin alone produced oliverd25.github.io/sitemap-index.xml — a 404,
+  // and the one line in robots.txt whose whole job is to be fetched.
+  const rawBase = import.meta.env.BASE_URL;
+  const base = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
+  const sitemap = new URL(`${base}sitemap-index.xml`, site ?? "https://swiftsecured.com").href;
+
+  const body = isUnindexedDeploy
     ? [
-        `# Preview deployment of branch "${deployBranch}". Not the live site.`,
+        deployBranch
+          ? `# Preview deployment of branch "${deployBranch}". Not the live site.`
+          : "# Mirror of the live site, kept as a fallback. Not the live site.",
         "# The live site is https://swiftsecured.com",
         "User-agent: *",
         "Disallow: /",
@@ -30,7 +40,7 @@ export const GET: APIRoute = ({ site }) => {
         "# Internal design-option picker, not content.",
         "Disallow: /settings/",
         "",
-        `Sitemap: ${new URL("sitemap-index.xml", site ?? "https://swiftsecured.com").href}`,
+        `Sitemap: ${sitemap}`,
         "",
       ];
 
