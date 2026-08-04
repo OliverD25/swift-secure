@@ -45,6 +45,9 @@ export interface Casino {
   /** Only meaningful when status === "certified". */
   level?: VerificationLevel | null;
   /** Date the crawler last ran, or "—" when it never has. */
+  /** Set only once a badge has actually been issued. The verify page
+   *  matches on this exactly, so an unissued casino cannot be verified. */
+  sealId?: string | null;
   lastScanned: string;
   note?: string | null;
 }
@@ -60,7 +63,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto-first casino and sportsbook, ~4,000 titles from around 54 studios. The Anjouan licence this brand is associated with (ALSI-202411002-FI1, ONCHAIN Technologies Ltd) lists luckycoin.com rather than this .cash domain; number withheld pending clarification.",
   },
   {
@@ -73,7 +76,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto-friendly, roughly 2,000 games, marketed on fast payouts.",
   },
   {
@@ -89,7 +92,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-11-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Multi-provider site, 5,000+ titles. Sources disagree on the regulator.",
   },
   {
@@ -105,7 +108,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-09-22",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Large aggregated library, 120+ providers. Targets Nordics and Canada.",
   },
   {
@@ -121,7 +124,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-04-21",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "4,300+ games from 20+ studios, crypto and card payments, no sportsbook.",
   },
   {
@@ -137,7 +140,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-10-27",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto and fiat, 8,000+ titles from 70+ providers plus a sportsbook.",
   },
   {
@@ -150,7 +153,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Canada-focused, Interac payouts, 6,000+ games from 47 providers.",
   },
   {
@@ -166,7 +169,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-10-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Canada-focused, 1,000+ slots plus live dealer from 25-29 providers.",
   },
   {
@@ -179,7 +182,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Casino and sportsbook; operator runs multiple sister brands. Licence number seen in secondary sources belongs to a different domain in the official register; withdrawn pending verification.",
   },
   {
@@ -195,7 +198,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-02-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Large aggregated library plus sportsbook; no licence number in the site footer.",
   },
   {
@@ -208,7 +211,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Casino plus sportsbook; no licence number published in the footer.",
   },
   {
@@ -221,7 +224,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 15 June 2026. The site names Costa Rica but publishes no gaming licence number. Costa Rica does not license online gambling — companies incorporate there and operate without gaming oversight.",
   },
   {
@@ -237,7 +240,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-12-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 13 June 2026.",
   },
   {
@@ -253,7 +256,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-09-06",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 16 March 2026.",
   },
   {
@@ -266,7 +269,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 9 March 2026.",
   },
   {
@@ -279,7 +282,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 5 March 2026. The footer names Alsio Tech SRL, San Jose, Costa Rica and cites a 'Corporate Identification license number' of 3-102-935971 — that is a company registration number, not a gaming licence. Costa Rica issues no gaming licences.",
   },
   {
@@ -295,7 +298,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-11-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 28 February 2026.",
   },
   {
@@ -311,7 +314,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2026-12-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 23 February 2026.",
   },
   {
@@ -324,7 +327,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 10 February 2026.",
   },
   {
@@ -340,7 +343,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-01-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 5 February 2026.",
   },
   {
@@ -353,7 +356,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 28 January 2026.",
   },
   {
@@ -366,7 +369,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino; CryptoLists new-launch tracker dates the launch to 10 January 2026.",
   },
   {
@@ -379,7 +382,7 @@ export const casinos: Casino[] = [
     platform: null,
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Crypto casino launched 3 January 2026; also listed on an Anjouan-licensed casino directory. Domain confirmed live (host returned HTTP 403 to automated fetch).",
   },
   {
@@ -395,7 +398,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -411,7 +414,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -427,7 +430,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -443,7 +446,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -459,7 +462,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -475,7 +478,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -491,7 +494,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -507,7 +510,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -523,7 +526,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -539,7 +542,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -555,7 +558,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -571,7 +574,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -587,7 +590,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -603,7 +606,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -619,7 +622,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -635,7 +638,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -651,7 +654,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -667,7 +670,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -683,7 +686,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -699,7 +702,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -715,7 +718,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -731,7 +734,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -747,7 +750,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -763,7 +766,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -779,7 +782,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -795,7 +798,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -811,7 +814,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -827,7 +830,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -843,7 +846,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -859,7 +862,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -875,7 +878,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -891,7 +894,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -907,7 +910,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -923,7 +926,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -939,7 +942,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -955,7 +958,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -971,7 +974,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -987,7 +990,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1003,7 +1006,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1019,7 +1022,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1035,7 +1038,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1051,7 +1054,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1067,7 +1070,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1083,7 +1086,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1099,7 +1102,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1115,7 +1118,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1131,7 +1134,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1147,7 +1150,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1163,7 +1166,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1179,7 +1182,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1195,7 +1198,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-07-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1211,7 +1214,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1227,7 +1230,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1243,7 +1246,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1259,7 +1262,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1275,7 +1278,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1291,7 +1294,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1307,7 +1310,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1323,7 +1326,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1339,7 +1342,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1355,7 +1358,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1371,7 +1374,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1387,7 +1390,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1403,7 +1406,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1419,7 +1422,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1435,7 +1438,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1451,7 +1454,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1467,7 +1470,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1483,7 +1486,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1499,7 +1502,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1515,7 +1518,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1531,7 +1534,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1547,7 +1550,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1563,7 +1566,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1579,7 +1582,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1595,7 +1598,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1611,7 +1614,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1627,7 +1630,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1643,7 +1646,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1659,7 +1662,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1675,7 +1678,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1691,7 +1694,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1707,7 +1710,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1723,7 +1726,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1739,7 +1742,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1755,7 +1758,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1771,7 +1774,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-29",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1787,7 +1790,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1803,7 +1806,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1819,7 +1822,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1835,7 +1838,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1851,7 +1854,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1867,7 +1870,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1883,7 +1886,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1899,7 +1902,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1915,7 +1918,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1931,7 +1934,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1947,7 +1950,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1963,7 +1966,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1979,7 +1982,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -1995,7 +1998,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2011,7 +2014,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2027,7 +2030,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2043,7 +2046,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2059,7 +2062,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2075,7 +2078,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2091,7 +2094,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2107,7 +2110,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2123,7 +2126,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2139,7 +2142,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2155,7 +2158,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2171,7 +2174,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2187,7 +2190,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2203,7 +2206,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2219,7 +2222,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2235,7 +2238,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2251,7 +2254,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2267,7 +2270,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2283,7 +2286,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2299,7 +2302,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2315,7 +2318,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2331,7 +2334,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2347,7 +2350,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2363,7 +2366,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2379,7 +2382,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2395,7 +2398,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2411,7 +2414,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2427,7 +2430,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-06-11",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2443,7 +2446,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2459,7 +2462,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2475,7 +2478,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2491,7 +2494,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-30",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2507,7 +2510,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2523,7 +2526,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2539,7 +2542,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2555,7 +2558,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2571,7 +2574,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2587,7 +2590,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2603,7 +2606,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2619,7 +2622,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2635,7 +2638,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2651,7 +2654,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2667,7 +2670,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2683,7 +2686,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2699,7 +2702,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2715,7 +2718,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2731,7 +2734,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2747,7 +2750,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2763,7 +2766,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2779,7 +2782,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2795,7 +2798,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2811,7 +2814,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2827,7 +2830,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2843,7 +2846,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2859,7 +2862,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2875,7 +2878,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2891,7 +2894,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2907,7 +2910,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2923,7 +2926,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2939,7 +2942,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2955,7 +2958,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2971,7 +2974,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -2987,7 +2990,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3003,7 +3006,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3019,7 +3022,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3035,7 +3038,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3051,7 +3054,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3067,7 +3070,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3083,7 +3086,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3099,7 +3102,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3115,7 +3118,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-28",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3131,7 +3134,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3147,7 +3150,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3163,7 +3166,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3179,7 +3182,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3195,7 +3198,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3211,7 +3214,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3227,7 +3230,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3243,7 +3246,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3259,7 +3262,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3275,7 +3278,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3291,7 +3294,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3307,7 +3310,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3323,7 +3326,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3339,7 +3342,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3355,7 +3358,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3371,7 +3374,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3387,7 +3390,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3403,7 +3406,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3419,7 +3422,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3435,7 +3438,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3451,7 +3454,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3467,7 +3470,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3483,7 +3486,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3499,7 +3502,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3515,7 +3518,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3531,7 +3534,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3547,7 +3550,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3563,7 +3566,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
   {
@@ -3579,7 +3582,7 @@ export const casinos: Casino[] = [
     licenceExpiry: "2027-05-14",
     status: "listed",
     level: null,
-    lastScanned: "—",
+    lastScanned: "2026-08-04",
     note: "Licensed operator recorded in the Anjouan register. Listed from the register only — no check has been run on the site itself.",
   },
 ];

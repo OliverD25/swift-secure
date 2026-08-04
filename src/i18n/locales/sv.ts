@@ -94,10 +94,7 @@ const sv: PartialTranslation = {
     validStatus: "Giltigt och aktivt sigill",
     operator: "Operatör:",
     jurisdiction: "Jurisdiktion:",
-    certifiedSince: "Certifierad sedan:",
-    nextAudit: "Nästa omgranskning:",
     invalidStatus: "Inget matchande sigill hittades",
-    invalidBody: "Inget aktivt sigill hittades för det ID:t. Om du tror att detta är ett fel,",
     contactUs: "kontakta oss",
   },
   apply: {
@@ -119,15 +116,6 @@ const sv: PartialTranslation = {
     successBody: "Vårt team kontaktar {email} inom 48 timmar för att starta granskningen.",
   },
   about: {
-    title: "Om oss",
-    description: "En oberoende kontroll av nya casinon sedan 2020. Vi byggde granskningen som både spelare och casinon litar på.",
-    eyebrow: "Om oss",
-    h1: "En oberoende kontroll av nya casinon sedan 2020",
-    sub: "Vi startade eftersom spelare inte hade något snabbt sätt att skilja en seriös ny operatör från en tom sajt. Vi byggde granskningen som både spelare och casinon litar på.",
-    card1Title: "Oberoende i grunden",
-    card1Body: "Vi tar ingen intäktsdelning och inga hänvisningsavgifter från certifierade operatörer. Granskningsavgiften är fast, så våra resultat går inte att köpa.",
-    card2Title: "Grundlig, inte långsam",
-    card2Body: "Vårt granskningsteam består av före detta tillsynspersonal och RNG-ingenjörer. Vi byggde processen för att vara grundlig på dagar, inte månader.",
   },
   faqPage: {
     title: "FAQ",

@@ -1,11 +1,34 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { useTranslations, localeStaticPaths, localePath } from "../../i18n";
+import { casinos } from "../../data/casinos";
 
 export const getStaticPaths = () => localeStaticPaths();
 
 const { locale } = Astro.props;
 const t = useTranslations(locale);
+
+// A REAL lookup, against the real registry.
+//
+// This page used to fabricate a pass. Any ID ending in "42" returned "Valid &
+// active seal" for "Northgate Interactive Ltd., Malta Gaming Authority,
+// certified since Mar 2025" — an operator, a regulator and a date that do not
+// exist, hardcoded into the markup. The one page whose entire purpose is to
+// prove a badge is genuine was manufacturing a positive result for arbitrary
+// input, which is worse than having no verify page at all.
+//
+// Built from the directory at build time. A seal is only ever real when an
+// operator has one, so today this list is empty and every lookup correctly
+// returns "not found". When the first badge is issued the entry gains a sealId
+// and this starts answering without any further change here.
+const seals = casinos
+  .filter((c) => c.sealId && c.status === "certified")
+  .map((c) => ({
+    id: c.sealId!.toUpperCase(),
+    operator: c.operator ?? c.name,
+    jurisdiction: c.jurisdiction,
+    lastChecked: c.lastScanned,
+  }));
 ---
 
 <Layout locale={locale} path="/verify/" title={t.verify.title} description={t.verify.description} current="verify">
@@ -36,10 +59,9 @@ const t = useTranslations(locale);
             <div class="text-[17px] font-bold text-accent-soft-text">{t.verify.validStatus}</div>
           </div>
           <div class="flex flex-col gap-2 text-sm text-ink">
-            <div><strong>{t.verify.operator}</strong> Northgate Interactive Ltd.</div>
-            <div><strong>{t.verify.jurisdiction}</strong> Malta Gaming Authority</div>
-            <div><strong>{t.verify.certifiedSince}</strong> Mar 2025</div>
-            <div><strong>{t.verify.nextAudit}</strong> Sep 2026</div>
+            <div><strong>{t.verify.operator}</strong> <span data-seal-operator></span></div>
+            <div><strong>{t.verify.jurisdiction}</strong> <span data-seal-jurisdiction></span></div>
+            <div><strong>{t.verify.lastChecked}</strong> <span data-seal-checked></span></div>
           </div>
         </div>
         <div data-verify-invalid hidden class="rounded-card border border-warn-line bg-warn-soft p-6.5">
@@ -56,12 +78,12 @@ const t = useTranslations(locale);
   </main>
 </Layout>
 
-<script>
-  const input = document.querySelector<HTMLInputElement>("[data-verify-input]");
-  const button = document.querySelector<HTMLButtonElement>("[data-verify-btn]");
-  const result = document.querySelector<HTMLElement>("[data-verify-result]");
-  const valid = document.querySelector<HTMLElement>("[data-verify-valid]");
-  const invalid = document.querySelector<HTMLElement>("[data-verify-invalid]");
+<script define:vars={{ seals }}>
+  const input = document.querySelector("[data-verify-input]");
+  const button = document.querySelector("[data-verify-btn]");
+  const result = document.querySelector("[data-verify-result]");
+  const valid = document.querySelector("[data-verify-valid]");
+  const invalid = document.querySelector("[data-verify-invalid]");
 
   const runVerify = () => {
     if (!input || !result || !valid || !invalid) return;
@@ -70,9 +92,17 @@ const t = useTranslations(locale);
       result.hidden = true;
       return;
     }
-    const isValid = id === "CS-2026-0042" || id.endsWith("42");
-    valid.hidden = !isValid;
-    invalid.hidden = isValid;
+    // Exact match against issued seals only. No suffix matching, no fallback:
+    // an ID we did not issue has to fail, including one that merely resembles
+    // a real one.
+    const seal = seals.find((s) => s.id === id);
+    if (seal) {
+      valid.querySelector("[data-seal-operator]").textContent = seal.operator;
+      valid.querySelector("[data-seal-jurisdiction]").textContent = seal.jurisdiction;
+      valid.querySelector("[data-seal-checked]").textContent = seal.lastChecked;
+    }
+    valid.hidden = !seal;
+    invalid.hidden = Boolean(seal);
     result.hidden = false;
   };
 

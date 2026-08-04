@@ -94,10 +94,7 @@ const pt: PartialTranslation = {
     validStatus: "Selo válido e ativo",
     operator: "Operador:",
     jurisdiction: "Jurisdição:",
-    certifiedSince: "Certificado desde:",
-    nextAudit: "Próxima reauditoria:",
     invalidStatus: "Nenhum selo correspondente",
-    invalidBody: "Não foi encontrado nenhum selo ativo com esse ID. Se considera que se trata de um erro,",
     contactUs: "contacte-nos",
   },
   apply: {
@@ -119,15 +116,6 @@ const pt: PartialTranslation = {
     successBody: "A nossa equipa contacta {email} no prazo de 48 horas para iniciar a auditoria.",
   },
   about: {
-    title: "Sobre nós",
-    description: "Uma verificação independente de novos casinos, desde 2020. Criámos a auditoria em que jogadores e casinos confiam.",
-    eyebrow: "Sobre nós",
-    h1: "Uma verificação independente de novos casinos, desde 2020",
-    sub: "Começámos porque os jogadores não tinham forma rápida de distinguir um operador legítimo de um site fantasma. Criámos a auditoria em que jogadores e casinos confiam.",
-    card1Title: "Independentes por princípio",
-    card1Body: "Não recebemos partilha de receita nem comissões de angariação dos operadores certificados. A taxa de auditoria é fixa, por isso as nossas conclusões não se compram.",
-    card2Title: "Rigorosos, não lentos",
-    card2Body: "A nossa equipa de auditoria é formada por ex-reguladores e engenheiros de RNG. Construímos um processo aprofundado que demora dias, não meses.",
   },
   faqPage: {
     title: "FAQ",

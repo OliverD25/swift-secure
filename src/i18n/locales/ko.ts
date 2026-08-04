@@ -94,10 +94,7 @@ const ko: PartialTranslation = {
     validStatus: "유효하며 활성 상태인 씰",
     operator: "운영사:",
     jurisdiction: "관할:",
-    certifiedSince: "인증 시작일:",
-    nextAudit: "다음 재감사:",
     invalidStatus: "일치하는 씰을 찾을 수 없습니다",
-    invalidBody: "해당 ID로 활성화된 씰을 찾지 못했습니다. 오류라고 생각되시면",
     contactUs: "문의하기",
   },
   apply: {
@@ -119,15 +116,6 @@ const ko: PartialTranslation = {
     successBody: "담당 팀이 48시간 이내에 {email} 주소로 연락드려 감사를 시작합니다.",
   },
   about: {
-    title: "회사 소개",
-    description: "2020년부터 신규 카지노를 독립적으로 검증해 왔습니다. 플레이어와 카지노 모두가 신뢰하는 감사를 만들었습니다.",
-    eyebrow: "회사 소개",
-    h1: "2020년부터 이어온 신규 카지노 독립 검증",
-    sub: "플레이어가 정상적인 신규 운영사와 껍데기뿐인 사이트를 빠르게 구분할 방법이 없다는 문제에서 출발했습니다. 그래서 플레이어와 카지노 모두가 신뢰하는 감사를 만들었습니다.",
-    card1Title: "설계부터 독립적으로",
-    card1Body: "인증 운영사로부터 수익 배분이나 소개 수수료를 받지 않습니다. 감사 비용은 정액이므로 감사 결과를 돈으로 살 수 없습니다.",
-    card2Title: "엄격하되 느리지 않게",
-    card2Body: "감사팀은 전직 규제기관 출신과 RNG 엔지니어로 구성되어 있습니다. 몇 달이 아니라 며칠 안에 철저히 검토할 수 있도록 절차를 설계했습니다.",
   },
   faqPage: {
     title: "자주 묻는 질문",

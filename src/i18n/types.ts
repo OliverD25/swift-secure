@@ -187,8 +187,7 @@ export interface Translation {
     validStatus: string;
     operator: string;
     jurisdiction: string;
-    certifiedSince: string;
-    nextAudit: string;
+    lastChecked: string;
     invalidStatus: string;
     invalidBody: string;
     contactUs: string;

@@ -94,10 +94,7 @@ const de: PartialTranslation = {
     validStatus: "Gültiges & aktives Siegel",
     operator: "Betreiber:",
     jurisdiction: "Jurisdiktion:",
-    certifiedSince: "Zertifiziert seit:",
-    nextAudit: "Nächstes Nachaudit:",
     invalidStatus: "Kein passendes Siegel gefunden",
-    invalidBody: "Für diese ID wurde kein aktives Siegel gefunden. Falls Sie das für einen Fehler halten,",
     contactUs: "kontaktieren Sie uns",
   },
   apply: {
@@ -119,15 +116,6 @@ const de: PartialTranslation = {
     successBody: "Unser Team meldet sich innerhalb von 48 Stunden unter {email}, um das Audit zu starten.",
   },
   about: {
-    title: "Über uns",
-    description: "Eine unabhängige Prüfung neuer Casinos, seit 2020. Wir haben das Audit entwickelt, dem Spieler und Casinos gleichermaßen vertrauen.",
-    eyebrow: "Über uns",
-    h1: "Eine unabhängige Prüfung neuer Casinos, seit 2020",
-    sub: "Wir haben angefangen, weil Spieler keine schnelle Möglichkeit hatten, einen seriösen neuen Betreiber von einer Briefkastenseite zu unterscheiden. Wir haben das Audit entwickelt, dem Spieler und Casinos gleichermaßen vertrauen.",
-    card1Title: "Unabhängig von Grund auf",
-    card1Body: "Wir nehmen von zertifizierten Betreibern weder Umsatzbeteiligungen noch Vermittlungsgebühren. Die Auditgebühr ist pauschal, unsere Ergebnisse sind also nicht käuflich.",
-    card2Title: "Gründlich, nicht langsam",
-    card2Body: "Unser Auditteam besteht aus ehemaligen Regulierern und RNG-Ingenieuren. Wir haben den Prozess so gebaut, dass er in Tagen gründlich ist, nicht in Monaten.",
   },
   faqPage: {
     title: "FAQ",

@@ -94,10 +94,7 @@ const tr: PartialTranslation = {
     validStatus: "Geçerli ve etkin mühür",
     operator: "Operatör:",
     jurisdiction: "Yargı bölgesi:",
-    certifiedSince: "Sertifika tarihi:",
-    nextAudit: "Sonraki denetim:",
     invalidStatus: "Eşleşen mühür bulunamadı",
-    invalidBody: "Bu kimliğe ait etkin bir mühür bulunamadı. Bunun bir hata olduğunu düşünüyorsanız,",
     contactUs: "bize ulaşın",
   },
   apply: {
@@ -119,15 +116,6 @@ const tr: PartialTranslation = {
     successBody: "Ekibimiz denetimi başlatmak için 48 saat içinde {email} adresine ulaşacak.",
   },
   about: {
-    title: "Hakkımızda",
-    description: "2020'den bu yana yeni casinolar için bağımsız bir kontrol. Hem oyuncuların hem casinoların güvendiği denetimi kurduk.",
-    eyebrow: "Hakkımızda",
-    h1: "2020'den bu yana yeni casinolar için bağımsız bir kontrol",
-    sub: "Yola çıktık çünkü oyuncuların gerçek bir yeni operatörü paravan bir siteden hızla ayırt etmesinin bir yolu yoktu. Hem oyuncuların hem casinoların güvendiği denetimi kurduk.",
-    card1Title: "Tasarımı gereği bağımsız",
-    card1Body: "Sertifikalı operatörlerden gelir payı veya yönlendirme ücreti almıyoruz. Denetim ücreti sabittir; bulgularımız satın alınamaz.",
-    card2Title: "Titiz ama yavaş değil",
-    card2Body: "Denetim ekibimiz eski düzenleyicilerden ve RNG mühendislerinden oluşuyor. Süreci aylarla değil günlerle ölçülen bir titizlikte kurguladık.",
   },
   faqPage: {
     title: "SSS",

@@ -94,10 +94,7 @@ const zh: PartialTranslation = {
     validStatus: "标识有效且在有效期内",
     operator: "运营商：",
     jurisdiction: "牌照辖区：",
-    certifiedSince: "认证起始：",
-    nextAudit: "下次复审：",
     invalidStatus: "未找到匹配的标识",
-    invalidBody: "未找到该编号对应的有效标识。如果您认为这是错误，请",
     contactUs: "联系我们",
   },
   apply: {
@@ -119,15 +116,6 @@ const zh: PartialTranslation = {
     successBody: "我们的团队将在 48 小时内通过 {email} 与您联系，启动审计。",
   },
   about: {
-    title: "关于我们",
-    description: "自 2020 年起，为新赌场提供独立核查。我们打造了玩家与赌场都信赖的审计。",
-    eyebrow: "关于我们",
-    h1: "自 2020 年起，为新赌场提供独立核查",
-    sub: "我们创立的原因是：玩家没有快捷的方式分辨正规新运营商与空壳网站。于是我们打造了玩家与赌场都信赖的审计。",
-    card1Title: "独立性源于机制设计",
-    card1Body: "我们不向已认证运营商收取任何收入分成或推荐佣金。审计费用为固定金额，因此我们的结论无法被收买。",
-    card2Title: "严谨，但不拖沓",
-    card2Body: "我们的审计团队由前监管人员与 RNG 工程师组成。我们把流程设计为以天计、而非以月计的彻底审查。",
   },
   faqPage: {
     title: "常见问题",

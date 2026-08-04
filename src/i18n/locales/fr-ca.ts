@@ -94,10 +94,7 @@ const frCA: PartialTranslation = {
     validStatus: "Sceau valide et actif",
     operator: "Exploitant :",
     jurisdiction: "Territoire :",
-    certifiedSince: "Certifié depuis :",
-    nextAudit: "Prochain réaudit :",
     invalidStatus: "Aucun sceau correspondant",
-    invalidBody: "Aucun sceau actif ne correspond à ce numéro. Si vous croyez qu’il s’agit d’une erreur,",
     contactUs: "joignez-nous",
   },
   apply: {
@@ -119,15 +116,6 @@ const frCA: PartialTranslation = {
     successBody: "Notre équipe joindra {email} en moins de 48 heures pour lancer l’audit.",
   },
   about: {
-    title: "À propos",
-    description: "Un contrôle indépendant des nouveaux casinos, depuis 2020. Nous avons créé l’audit auquel les joueurs comme les casinos se fient.",
-    eyebrow: "À propos",
-    h1: "Un contrôle indépendant des nouveaux casinos, depuis 2020",
-    sub: "Nous avons commencé parce que les joueurs n’avaient aucun moyen rapide de distinguer un nouvel exploitant sérieux d’une coquille vide. Nous avons créé l’audit auquel les joueurs comme les casinos se fient.",
-    card1Title: "Indépendants par conception",
-    card1Body: "Nous n’acceptons ni partage de revenus ni commission de référence de la part des exploitants certifiés. Les frais d’audit sont forfaitaires : nos constatations ne s’achètent pas.",
-    card2Title: "Rigoureux, pas lents",
-    card2Body: "Notre équipe d’audit réunit d’anciens régulateurs et des ingénieurs RNG. Nous avons conçu le processus pour être exhaustif en quelques jours, pas en quelques mois.",
   },
   faqPage: {
     title: "FAQ",

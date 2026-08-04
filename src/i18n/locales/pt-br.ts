@@ -94,10 +94,7 @@ const ptBR: PartialTranslation = {
     validStatus: "Selo válido e ativo",
     operator: "Operador:",
     jurisdiction: "Jurisdição:",
-    certifiedSince: "Certificado desde:",
-    nextAudit: "Próxima reauditoria:",
     invalidStatus: "Nenhum selo correspondente",
-    invalidBody: "Nenhum selo ativo encontrado para esse ID. Se você acredita que isso é um erro,",
     contactUs: "fale conosco",
   },
   apply: {
@@ -119,15 +116,6 @@ const ptBR: PartialTranslation = {
     successBody: "Nossa equipe entrará em contato com {email} em até 48 horas para iniciar a auditoria.",
   },
   about: {
-    title: "Sobre nós",
-    description: "Uma checagem independente de novos cassinos, desde 2020. Criamos a auditoria em que jogadores e cassinos confiam.",
-    eyebrow: "Sobre nós",
-    h1: "Uma checagem independente de novos cassinos, desde 2020",
-    sub: "Começamos porque os jogadores não tinham como distinguir rapidamente um operador legítimo de um site de fachada. Criamos a auditoria em que jogadores e cassinos confiam.",
-    card1Title: "Independentes por princípio",
-    card1Body: "Não recebemos participação na receita nem comissões de indicação dos operadores certificados. A taxa de auditoria é fixa, então nossas conclusões não estão à venda.",
-    card2Title: "Rigorosos, não lentos",
-    card2Body: "Nosso time de auditoria é formado por ex-reguladores e engenheiros de RNG. Montamos um processo minucioso que leva dias, não meses.",
   },
   faqPage: {
     title: "FAQ",

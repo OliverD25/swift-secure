@@ -94,10 +94,7 @@ const da: PartialTranslation = {
     validStatus: "Gyldigt og aktivt segl",
     operator: "Operatør:",
     jurisdiction: "Jurisdiktion:",
-    certifiedSince: "Certificeret siden:",
-    nextAudit: "Næste genaudit:",
     invalidStatus: "Intet matchende segl fundet",
-    invalidBody: "Der blev ikke fundet noget aktivt segl med det id. Hvis du mener, det er en fejl,",
     contactUs: "så kontakt os",
   },
   apply: {
@@ -119,15 +116,6 @@ const da: PartialTranslation = {
     successBody: "Vores team kontakter {email} inden for 48 timer for at starte auditten.",
   },
   about: {
-    title: "Om os",
-    description: "Et uafhængigt tjek af nye casinoer siden 2020. Vi byggede den audit, både spillere og casinoer stoler på.",
-    eyebrow: "Om os",
-    h1: "Et uafhængigt tjek af nye casinoer siden 2020",
-    sub: "Vi startede, fordi spillere ikke havde nogen hurtig måde at skelne en legitim ny operatør fra et tomt site. Vi byggede den audit, både spillere og casinoer stoler på.",
-    card1Title: "Uafhængig af design",
-    card1Body: "Vi tager ingen andel af omsætningen og ingen henvisningsgebyrer fra certificerede operatører. Auditgebyret er fast, så vores resultater kan ikke købes.",
-    card2Title: "Grundig, ikke langsom",
-    card2Body: "Vores auditteam består af tidligere tilsynsfolk og RNG-ingeniører. Vi har bygget processen til at være grundig på dage, ikke måneder.",
   },
   faqPage: {
     title: "FAQ",

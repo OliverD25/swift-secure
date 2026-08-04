@@ -94,10 +94,7 @@ const it: PartialTranslation = {
     validStatus: "Sigillo valido e attivo",
     operator: "Operatore:",
     jurisdiction: "Giurisdizione:",
-    certifiedSince: "Certificato dal:",
-    nextAudit: "Prossimo ri-audit:",
     invalidStatus: "Nessun sigillo corrispondente",
-    invalidBody: "Nessun sigillo attivo trovato per questo ID. Se ritieni che sia un errore,",
     contactUs: "contattaci",
   },
   apply: {
@@ -119,15 +116,6 @@ const it: PartialTranslation = {
     successBody: "Il nostro team contatterà {email} entro 48 ore per avviare l'audit.",
   },
   about: {
-    title: "Chi siamo",
-    description: "Un controllo indipendente sui nuovi casinò, dal 2020. Abbiamo creato l'audit di cui si fidano sia i giocatori sia i casinò.",
-    eyebrow: "Chi siamo",
-    h1: "Un controllo indipendente sui nuovi casinò, dal 2020",
-    sub: "Siamo nati perché i giocatori non avevano modo di distinguere in fretta un operatore legittimo da un sito fittizio. Abbiamo creato l'audit di cui si fidano sia i giocatori sia i casinò.",
-    card1Title: "Indipendenti per scelta",
-    card1Body: "Non percepiamo revenue share né commissioni di segnalazione dagli operatori certificati. La tariffa di audit è fissa, quindi le nostre risultanze non si comprano.",
-    card2Title: "Rigorosi, non lenti",
-    card2Body: "Il nostro team di audit è composto da ex regolatori e ingegneri RNG. Abbiamo costruito un processo approfondito che dura giorni, non mesi.",
   },
   faqPage: {
     title: "FAQ",

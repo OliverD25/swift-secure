@@ -94,10 +94,7 @@ const pl: PartialTranslation = {
     validStatus: "Pieczęć ważna i aktywna",
     operator: "Operator:",
     jurisdiction: "Jurysdykcja:",
-    certifiedSince: "Certyfikat od:",
-    nextAudit: "Następny audyt:",
     invalidStatus: "Nie znaleziono pasującej pieczęci",
-    invalidBody: "Nie znaleziono aktywnej pieczęci o tym identyfikatorze. Jeśli uważasz, że to błąd,",
     contactUs: "skontaktuj się z nami",
   },
   apply: {
@@ -119,15 +116,6 @@ const pl: PartialTranslation = {
     successBody: "Nasz zespół skontaktuje się z {email} w ciągu 48 godzin, aby rozpocząć audyt.",
   },
   about: {
-    title: "O nas",
-    description: "Niezależna kontrola nowych kasyn od 2020 roku. Zbudowaliśmy audyt, któremu ufają zarówno gracze, jak i kasyna.",
-    eyebrow: "O nas",
-    h1: "Niezależna kontrola nowych kasyn od 2020 roku",
-    sub: "Zaczęliśmy, bo gracze nie mieli szybkiego sposobu, by odróżnić uczciwego nowego operatora od pustej witryny. Zbudowaliśmy audyt, któremu ufają i gracze, i kasyna.",
-    card1Title: "Niezależni z założenia",
-    card1Body: "Nie pobieramy udziału w przychodach ani prowizji od certyfikowanych operatorów. Opłata za audyt jest stała, więc naszych ustaleń nie da się kupić.",
-    card2Title: "Rzetelnie, ale nie powoli",
-    card2Body: "Nasz zespół audytowy to byli regulatorzy i inżynierowie RNG. Zbudowaliśmy proces tak, by był dokładny w kilka dni, a nie miesięcy.",
   },
   faqPage: {
     title: "FAQ",

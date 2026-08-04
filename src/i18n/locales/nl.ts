@@ -94,10 +94,7 @@ const nl: PartialTranslation = {
     validStatus: "Geldig & actief zegel",
     operator: "Operator:",
     jurisdiction: "Jurisdictie:",
-    certifiedSince: "Gecertificeerd sinds:",
-    nextAudit: "Volgende heraudit:",
     invalidStatus: "Geen overeenkomend zegel gevonden",
-    invalidBody: "Geen actief zegel gevonden voor dat ID. Denk je dat dit een fout is,",
     contactUs: "neem contact op",
   },
   apply: {
@@ -119,15 +116,6 @@ const nl: PartialTranslation = {
     successBody: "Ons team neemt binnen 48 uur contact op met {email} om de audit te starten.",
   },
   about: {
-    title: "Over ons",
-    description: "Een onafhankelijke controle op nieuwe casino's, sinds 2020. Wij bouwden de audit die zowel spelers als casino's vertrouwen.",
-    eyebrow: "Over ons",
-    h1: "Een onafhankelijke controle op nieuwe casino's, sinds 2020",
-    sub: "We zijn begonnen omdat spelers geen snelle manier hadden om een legitieme nieuwe operator van een lege huls te onderscheiden. Wij bouwden de audit die spelers én casino's vertrouwen.",
-    card1Title: "Onafhankelijk van opzet",
-    card1Body: "We nemen geen omzetdeling of verwijsvergoedingen aan van gecertificeerde operators. De auditvergoeding is vast, dus onze bevindingen zijn niet te koop.",
-    card2Title: "Grondig, niet traag",
-    card2Body: "Ons auditteam bestaat uit oud-toezichthouders en RNG-engineers. We bouwden het proces zo dat het grondig is in dagen, niet maanden.",
   },
   faqPage: {
     title: "FAQ",

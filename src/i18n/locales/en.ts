@@ -297,7 +297,7 @@ const en: Translation = {
   },
   verify: {
     title: "Verify a Seal",
-    description: "Enter the seal ID shown on a casino's site to confirm it's genuine and currently certified by Swift Secure.",
+    description: "Enter the seal ID shown on a casino's site to check it against the seals we have actually issued.",
     h1: "Verify a Seal",
     sub: "Enter the seal ID shown on the casino's site to confirm it's genuine and current.",
     inputPlaceholder: "e.g. CS-2026-0042",
@@ -306,10 +306,9 @@ const en: Translation = {
     validStatus: "Valid & active seal",
     operator: "Operator:",
     jurisdiction: "Jurisdiction:",
-    certifiedSince: "Certified since:",
-    nextAudit: "Next re-audit:",
+    lastChecked: "Last checked:",
     invalidStatus: "No matching seal found",
-    invalidBody: "No active seal found for that ID. If you believe this is an error,",
+    invalidBody: "No seal matches that ID. We have not issued any badges yet, so every lookup returns this today. If you believe this is an error,",
     contactUs: "contact us",
   },
   apply: {
@@ -330,16 +329,21 @@ const en: Translation = {
     successTitle: "Application received",
     successBody: "Our team will reach out to {email} within 48 hours to start the audit.",
   },
+  // Was: "An independent check on new casinos, since 2020", an audit "players
+  // and casinos both trust", and a team of "ex-regulators and RNG engineers".
+  // None of it true. The project is days old, has no clients, no team and no
+  // RNG capability — the methodology page says so explicitly two clicks away,
+  // so this page was arguing against our own documentation.
   about: {
-    title: "About Us",
-    description: "An independent check on new casinos, since 2020. We built the audit that both players and casinos trust.",
-    eyebrow: "About us",
-    h1: "An independent check on new casinos, since 2020",
-    sub: "We started because players had no fast way to tell a legitimate new operator from a shell site. We built the audit players and casinos both trust.",
-    card1Title: "Independent by design",
-    card1Body: "We take no revenue share or referral fees from certified operators. The audit fee is flat, so our findings can't be bought.",
-    card2Title: "Rigorous, not slow",
-    card2Body: "Our audit team is ex-regulators and RNG engineers. We built the process to be thorough in days, not months.",
+    title: "About",
+    description: "Swift Secure is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
+    eyebrow: "About",
+    h1: "New, and saying so",
+    sub: "We started in 2026 by measuring 1,311 casino sites to find out what could honestly be checked from outside. Most of what verification services advertise turned out not to be checkable that way, so we do not offer it.",
+    card1Title: "Nothing changes what a check reports",
+    card1Body: "No revenue share, no referral fees, and the check is free — so there is no fee to withhold and nothing to buy. A finding is removed only when it stops reproducing on the live site.",
+    card2Title: "We publish what we cannot do",
+    card2Body: "The methodology page lists the checks we do not perform at the same size as the ones we do, including the one we tried and abandoned. A mark that implies more than it measures is worth less than no mark.",
   },
   faqPage: {
     title: "FAQ",
