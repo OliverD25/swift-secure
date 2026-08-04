@@ -104,7 +104,6 @@ const de: PartialTranslation = {
     h1: "Ihr Siegel in nur 10 Tagen",
     sub: "Erzählen Sie uns von Ihrer Plattform. Unser Compliance-Team antwortet innerhalb von 48 Stunden.",
     fieldName: "Casinoname",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Website-URL",
     fieldJurisdiction: "Lizenz-Jurisdiktion",
     fieldJurisdictionPlaceholder: "z. B. Malta, Curacao",

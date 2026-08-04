@@ -104,7 +104,6 @@ const zh: PartialTranslation = {
     h1: "最快 10 天获得您的标识",
     sub: "请告诉我们您的平台情况。我们的合规团队将在 48 小时内回复。",
     fieldName: "赌场名称",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "网站地址",
     fieldJurisdiction: "牌照辖区",
     fieldJurisdictionPlaceholder: "例如 马耳他、库拉索",

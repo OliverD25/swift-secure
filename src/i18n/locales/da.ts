@@ -104,7 +104,6 @@ const da: PartialTranslation = {
     h1: "Få dit segl på så lidt som 10 dage",
     sub: "Fortæl os om din platform. Vores compliance-team svarer inden for 48 timer.",
     fieldName: "Casinonavn",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Website-URL",
     fieldJurisdiction: "Licensjurisdiktion",
     fieldJurisdictionPlaceholder: "f.eks. Malta, Curacao",

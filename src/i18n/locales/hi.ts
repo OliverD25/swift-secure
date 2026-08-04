@@ -104,7 +104,6 @@ const hi: PartialTranslation = {
     h1: "मात्र 10 दिनों में अपनी सील पाएँ",
     sub: "अपने प्लेटफ़ॉर्म के बारे में बताएँ। हमारी अनुपालन टीम 48 घंटों के भीतर जवाब देती है।",
     fieldName: "कैसीनो का नाम",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "वेबसाइट URL",
     fieldJurisdiction: "लाइसेंसिंग क्षेत्राधिकार",
     fieldJurisdictionPlaceholder: "जैसे माल्टा, कुराकाओ",

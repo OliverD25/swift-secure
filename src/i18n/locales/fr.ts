@@ -104,7 +104,6 @@ const fr: PartialTranslation = {
     h1: "Obtenez votre sceau en seulement 10 jours",
     sub: "Parlez-nous de votre plateforme. Notre équipe conformité répond sous 48 heures.",
     fieldName: "Nom du casino",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL du site",
     fieldJurisdiction: "Juridiction de la licence",
     fieldJurisdictionPlaceholder: "ex. Malta, Curacao",

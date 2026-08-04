@@ -104,7 +104,6 @@ const pl: PartialTranslation = {
     h1: "Zdobądź pieczęć już w 10 dni",
     sub: "Opowiedz nam o swojej platformie. Nasz zespół ds. zgodności odpowie w ciągu 48 godzin.",
     fieldName: "Nazwa kasyna",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Adres strony",
     fieldJurisdiction: "Jurysdykcja licencji",
     fieldJurisdictionPlaceholder: "np. Malta, Curacao",

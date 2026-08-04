@@ -104,7 +104,6 @@ const ru: PartialTranslation = {
     h1: "Получите знак всего за 10 дней",
     sub: "Расскажите о своей платформе. Наш комплаенс-отдел ответит в течение 48 часов.",
     fieldName: "Название казино",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL сайта",
     fieldJurisdiction: "Юрисдикция лицензии",
     fieldJurisdictionPlaceholder: "напр. Мальта, Кюрасао",

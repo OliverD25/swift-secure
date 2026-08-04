@@ -104,7 +104,6 @@ const it: PartialTranslation = {
     h1: "Ottieni il sigillo in appena 10 giorni",
     sub: "Raccontaci della tua piattaforma. Il nostro team compliance risponde entro 48 ore.",
     fieldName: "Nome del casinò",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL del sito",
     fieldJurisdiction: "Giurisdizione della licenza",
     fieldJurisdictionPlaceholder: "es. Malta, Curacao",

@@ -104,7 +104,6 @@ const ptBR: PartialTranslation = {
     h1: "Tenha seu selo em apenas 10 dias",
     sub: "Conte para nós sobre sua plataforma. Nosso time de compliance responde em até 48 horas.",
     fieldName: "Nome do cassino",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL do site",
     fieldJurisdiction: "Jurisdição de licenciamento",
     fieldJurisdictionPlaceholder: "ex. Malta, Curacao",

@@ -104,7 +104,6 @@ const nl: PartialTranslation = {
     h1: "Krijg je zegel in slechts 10 dagen",
     sub: "Vertel ons over je platform. Ons complianceteam reageert binnen 48 uur.",
     fieldName: "Naam casino",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Website-URL",
     fieldJurisdiction: "Licentiejurisdictie",
     fieldJurisdictionPlaceholder: "bijv. Malta, Curacao",

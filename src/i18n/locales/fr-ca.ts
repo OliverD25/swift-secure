@@ -104,7 +104,6 @@ const frCA: PartialTranslation = {
     h1: "Obtenez votre sceau en aussi peu que 10 jours",
     sub: "Parlez-nous de votre plateforme. Notre équipe de la conformité répond en moins de 48 heures.",
     fieldName: "Nom du casino",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL du site Web",
     fieldJurisdiction: "Territoire du permis",
     fieldJurisdictionPlaceholder: "p. ex. Malta, Curacao",

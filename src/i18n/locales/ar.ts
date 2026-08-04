@@ -104,7 +104,6 @@ const ar: PartialTranslation = {
     h1: "احصل على ختمك خلال 10 أيام فقط",
     sub: "أخبرنا عن منصتك. يرد فريق الامتثال لدينا خلال 48 ساعة.",
     fieldName: "اسم الكازينو",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "رابط الموقع",
     fieldJurisdiction: "الولاية القضائية للترخيص",
     fieldJurisdictionPlaceholder: "مثال: مالطا، كوراساو",

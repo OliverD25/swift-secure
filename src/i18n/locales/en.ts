@@ -318,7 +318,7 @@ const en: Translation = {
     h1: "Get your seal in as little as 10 days",
     sub: "Tell us about your platform. Our compliance team responds within 48 hours.",
     fieldName: "Casino name",
-    fieldNamePlaceholder: "Northgate Interactive",
+    fieldNamePlaceholder: "Your casino name",
     fieldWebsite: "Website URL",
     fieldJurisdiction: "Licensing jurisdiction",
     fieldJurisdictionPlaceholder: "e.g. Malta, Curacao",

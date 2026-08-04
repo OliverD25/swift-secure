@@ -104,7 +104,6 @@ const sv: PartialTranslation = {
     h1: "Få ditt sigill på så lite som 10 dagar",
     sub: "Berätta om din plattform. Vårt compliance-team svarar inom 48 timmar.",
     fieldName: "Casinots namn",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Webbplatsens URL",
     fieldJurisdiction: "Licensjurisdiktion",
     fieldJurisdictionPlaceholder: "t.ex. Malta, Curacao",

@@ -104,7 +104,6 @@ const tr: PartialTranslation = {
     h1: "Mührünüzü 10 gün gibi kısa sürede alın",
     sub: "Platformunuzu anlatın. Uyum ekibimiz 48 saat içinde yanıt verir.",
     fieldName: "Casino adı",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "Site adresi",
     fieldJurisdiction: "Lisans yargı bölgesi",
     fieldJurisdictionPlaceholder: "örn. Malta, Curacao",

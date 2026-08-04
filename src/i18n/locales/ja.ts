@@ -104,7 +104,6 @@ const ja: PartialTranslation = {
     h1: "最短10日でシールを取得",
     sub: "プラットフォームについてお聞かせください。コンプライアンスチームが48時間以内にご連絡します。",
     fieldName: "カジノ名",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "ウェブサイトURL",
     fieldJurisdiction: "ライセンス法域",
     fieldJurisdictionPlaceholder: "例：マルタ、キュラソー",

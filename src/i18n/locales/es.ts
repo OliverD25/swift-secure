@@ -104,7 +104,6 @@ const es: PartialTranslation = {
     h1: "Consiga su sello en tan solo 10 días",
     sub: "Cuéntenos cómo es su plataforma. Nuestro equipo de cumplimiento responde en 48 horas.",
     fieldName: "Nombre del casino",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "URL del sitio web",
     fieldJurisdiction: "Jurisdicción de la licencia",
     fieldJurisdictionPlaceholder: "p. ej. Malta, Curacao",

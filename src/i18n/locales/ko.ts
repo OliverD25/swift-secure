@@ -104,7 +104,6 @@ const ko: PartialTranslation = {
     h1: "최단 10일 안에 씰을 받으십시오",
     sub: "플랫폼에 대해 알려주십시오. 컴플라이언스팀이 48시간 이내에 답변드립니다.",
     fieldName: "카지노 이름",
-    fieldNamePlaceholder: "Northgate Interactive",
     fieldWebsite: "웹사이트 주소",
     fieldJurisdiction: "라이선스 관할",
     fieldJurisdictionPlaceholder: "예: 몰타, 퀴라소",
