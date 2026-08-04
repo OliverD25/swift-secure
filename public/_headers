@@ -1,0 +1,20 @@
+# Consumed by Cloudflare at deploy time — this file is not served to visitors.
+#
+# It exists because removing the Cloudflare Astro adapter removed something we
+# wanted. The adapter wrote this file itself on every build, logging "Injected
+# immutable Cache-Control for /_astro/* into _headers". Dropping the adapter for
+# a plain static upload silently dropped that too, and the Workers default is
+# `public, max-age=0, must-revalidate` — every stylesheet and script revalidated
+# on every visit, on a site that is otherwise nothing but cacheable files.
+#
+# Measured before the change: the live deployment served
+# /_astro/Layout.v_tD0hcF.css with `public, max-age=31536000, immutable`.
+# This restores exactly that.
+#
+# Safe only because Astro fingerprints these filenames with a hash of their
+# contents. The file at a given /_astro/ URL can never change, so a browser that
+# never revalidates it can never be stale. Do not extend this rule to paths
+# outside /_astro/ — HTML has stable URLs and changing content, and a year-long
+# immutable cache on it would strand visitors on an old site with no way back.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
