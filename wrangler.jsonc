@@ -60,37 +60,33 @@
     "directory": "./dist"
   },
 
-  // A second Worker, so staging has one fixed address instead of a new one per
-  // push. Left at its default, Cloudflare runs `wrangler versions upload` on any
-  // branch that is not main and hands back a URL with the version id in it —
-  // safe, but useless for showing the same link to someone twice, and useless
-  // for anything that has to be registered somewhere.
+  // There is deliberately no `env` block here, and it must not come back.
   //
-  // Reached by setting the non-production branch deploy command to
-  //   npx wrangler deploy --env staging
-  // in the Cloudflare dashboard. That is the one part of this that cannot live
-  // in the repository, and it is written down in .cloudflare-deploy.md.
+  // A staging environment was added on 2026-08-04 and removed the same hour,
+  // because it took the live site down twice. The reasoning was that
+  // `wrangler deploy --env staging` would deploy a second Worker,
+  // swift-secure-staging, on its own hostname, leaving production alone. It does
+  // not, and the reason was in the very first build log of this project:
   //
-  // Nothing here can touch production. It is a different Worker name and a
-  // different hostname, and the main branch never runs with --env.
+  //   ▲ Failed to match Worker name. Your config file is using the Worker name
+  //     "swift-secured", but the CI system expected "swift-secure". Overriding
+  //     using the CI provided Worker name.
   //
-  // `assets` is repeated rather than relied on: wrangler inherits some top-level
-  // keys into an environment and not others, and a staging Worker that silently
-  // shipped with no files at all is not a failure anyone would notice quickly.
-  // Verified with `wrangler deploy --env staging --dry-run`, which reports the
-  // file count.
+  // Workers Builds is bound to one Worker and overrides whatever name the config
+  // asks for. So `--env staging` did not create a second Worker — it redeployed
+  // this one with staging's routes in place of production's, detaching
+  // swiftsecured.com and www and deleting their DNS records. The live site
+  // answered Cloudflare error 1016 until the next production deploy put them
+  // back, which in turn deleted staging's. Two environments, one Worker, and
+  // whichever deployed last owned the domains.
   //
-  // Search engines are kept off it by branch, not by hostname: WORKERS_CI_BRANCH
-  // is "staging" there, which src/lib/deploy.ts treats as unindexed, so every
-  // page carries noindex and robots.txt serves Disallow. Confirmed by building
-  // with that variable set — 0 of 4,428 pages came out indexable.
-  "env": {
-    "staging": {
-      "name": "swift-secure-staging",
-      "routes": [{ "pattern": "staging.swiftsecured.com", "custom_domain": true }],
-      "assets": {
-        "directory": "./dist"
-      }
-    }
-  }
+  // A dry run cannot catch this. `wrangler deploy --env staging --dry-run` was
+  // clean: the config is valid, and the damage comes from the CI renaming the
+  // target afterwards.
+  //
+  // A real staging hostname needs a *separate Workers project* pointed at the
+  // same repository with `staging` as its production branch — a second Worker,
+  // not a second environment inside this one. Until that exists, non-production
+  // branches must run `npx wrangler versions upload`, which is the Cloudflare
+  // default and cannot touch a custom domain. See .cloudflare-deploy.md.
 }
