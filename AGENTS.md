@@ -8,6 +8,80 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Deploying — staging first, always
+
+Three addresses are published from this repository, and two of them come from
+the same branch:
+
+| Push to | Deploys to | Visible to the public |
+| :--- | :--- | :--- |
+| `main` | `swiftsecured.com` + `www` — Worker `swift-secure` | **Yes. The live site** |
+| `main` | GitHub Pages mirror, via `.github/workflows/deploy.yml` | Yes, but `noindex` |
+| `staging` | `staging.swiftsecured.com` — Worker `swift-secure-staging` | Yes, but `noindex` and `Disallow: /` |
+
+A push to `main` is therefore two production deploys, not one.
+
+**Any change that alters the built site goes to `staging` first. It reaches
+`main` only after a human has looked at it and said so in chat.**
+
+Site-affecting means anything under `src/` or `public/`, plus
+`astro.config.mjs`, `package.json`, `wrangler.jsonc`, `wrangler.staging.jsonc`
+and `.github/workflows/deploy.yml`. Documentation, research sweeps and crawler
+scripts build no page and go straight to `main`.
+
+The staging project builds the `staging` branch and nothing else — non-production
+builds are switched off. A feature branch gets no preview, so the work has to sit
+on `staging` itself.
+
+### The sequence
+
+1. Commit, and push to `staging` only.
+2. Wait for the Cloudflare build. About ten minutes; it renders 4,428 pages.
+3. **Prove the new build is the one being served** before asking anyone to look.
+   Fetch the exact text or markup the change introduces. A page that merely looks
+   different is not evidence, and a green build only means the deploy ran.
+4. Ask for a look at `https://staging.swiftsecured.com`.
+5. **Wait for a yes, in words, in chat.** A finished background task, a green
+   build, or a passing check is not confirmation. Neither is an earlier yes to a
+   different question.
+6. Only then move `main` to **the exact commit that was verified on staging**.
+   No rebase, no amend, no extra commit slipped in between. Promoting anything
+   else puts code on the live site that nobody looked at.
+
+### Reaching staging from this PC
+
+`staging.swiftsecured.com` often will not resolve here for up to 30 minutes after
+it is deployed, while working fine everywhere else. The router at `192.168.88.1`
+caches the "no such name" answer, and the zone's SOA minimum is 1800 seconds.
+That is a stale cache, not a broken site — and polling the name before it exists
+is what puts the entry there.
+
+To check without waiting, ask the zone's own nameserver for the address, then use
+it to bypass DNS entirely:
+
+```bash
+nslookup staging.swiftsecured.com cora.ns.cloudflare.com
+curl -s -o /dev/null -w '%{http_code}\n' --resolve staging.swiftsecured.com:443:<IPv4 from above> https://staging.swiftsecured.com/
+```
+
+Read the IPv4 out of the first command rather than hardcoding one. The addresses
+are Cloudflare anycast and change without notice.
+
+The in-app Browser pane resolves independently of the router and shows the site
+at once. A phone on mobile data works too.
+
+### The one exception
+
+If production is already broken it may be restored directly on `main`, but only
+by **an empty commit that rebuilds, or a revert of the commit that broke it.**
+Never new code. Both outages on 2026-08-04 were fixed this way in under a minute,
+and neither could introduce anything unreviewed.
+
+After any such push, bring `staging` back to the same commit before the next
+change. Once the two branches diverge, the next promotion is no longer a
+fast-forward — and the commit that was reviewed stops being the commit that
+reaches production.
+
 ## Research data — expensive, do not overwrite
 
 These files hold sweeps that take 20–40 minutes each over hundreds of live
