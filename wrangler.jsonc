@@ -20,6 +20,14 @@
 
   "compatibility_date": "2026-08-04",
 
+  // swift-secure.muzexp.workers.dev is off. Declaring routes turned it off by
+  // itself — wrangler drops the workers.dev address once a Worker has a real
+  // one — and it is written here so it stays a decision rather than a side
+  // effect somebody later "fixes". We want it off: it was a third complete,
+  // crawlable copy of the site, and this project has already had two of those
+  // competing with each other in one day.
+  "workers_dev": false,
+
   // Attaching the domain here rather than clicking it in the dashboard, so the
   // arrangement is in the repository and survives whoever set it up. On deploy
   // wrangler creates the custom domain and the DNS record for each pattern; the
