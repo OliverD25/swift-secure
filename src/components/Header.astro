@@ -1,6 +1,7 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 import ChipMark from "./ChipMark.astro";
+import PreviewBanner from "./PreviewBanner.astro";
 import { useTranslations, localePath } from "../i18n";
 
 interface Props {
@@ -27,6 +28,9 @@ const linkClass = (key: Props["current"]) =>
 ---
 
 <header class="sticky top-0 z-20 border-b border-nav-line bg-nav backdrop-blur-sm">
+  {/* Inside the sticky header on purpose, so the warning cannot be scrolled away.
+      It renders nothing at all on a production build. */}
+  <PreviewBanner />
   <div class="flex items-center justify-between gap-3 px-5 py-3.5 sm:px-[clamp(20px,5vw,40px)]">
     <a href={localePath("/", locale)} class="flex shrink-0 items-center gap-2.5">
       <ChipMark size={32} kind="mark" />

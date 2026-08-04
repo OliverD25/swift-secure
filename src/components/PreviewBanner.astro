@@ -1,0 +1,83 @@
+---
+import { deployBranch, isUnindexedDeploy } from "../lib/deploy";
+
+/**
+ * A bar saying, on every page, that this is not the live site.
+ *
+ * Staging is a byte-for-byte copy of production on a near-identical address,
+ * which is the point of it and also the danger: the two are told apart by four
+ * characters in the URL bar, and the noindex tag that keeps it out of search is
+ * invisible to a human. Someone will read a price, a claim or a licence result
+ * off staging and act on it. This is the only thing on the page that stops
+ * that, so it is loud, it is at the top, and it stays there while you scroll —
+ * it renders inside the sticky header rather than above it.
+ *
+ * Styled here rather than with utility classes, and this is not a preference.
+ * The first version used Tailwind and rendered correctly on 4,427 pages and
+ * wrongly on one: /settings/ builds its own document and never loads the
+ * stylesheet, so the bar arrived with no padding, no spacing between the words
+ * and the wrong size. A warning that degrades on exactly the pages that fall
+ * outside the normal layout is worthless, because those are the pages nobody
+ * checked. Component styles travel with the component, so this cannot happen.
+ *
+ * The colours are fixed, not theme tokens. The site ships four themes and a
+ * visitor can switch between them at /settings/; a warning that quietly turns
+ * pale grey under one of them has failed at the one job it has.
+ *
+ * Deliberately not translated. It is signage for us, and it must never be
+ * reachable by a player: it renders only where isUnindexedDeploy is true, and
+ * every such deployment also serves noindex and robots Disallow. Routing it
+ * through the i18n files would put nineteen copies of an internal string into
+ * the public translation surface for no reader.
+ */
+const label = deployBranch ? "STAGING" : "MIRROR";
+const detail = deployBranch
+  ? `Branch "${deployBranch}" — not the live site`
+  : "Copy of the live site, kept as a fallback";
+---
+
+{
+  isUnindexedDeploy && (
+    <div class="preview-banner" role="note" aria-label="Deployment warning">
+      <strong>{label}</strong>
+      <span>{detail}</span>
+      <a href="https://swiftsecured.com/">Go to the live site</a>
+    </div>
+  )
+}
+
+<style>
+  .preview-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem 0.75rem;
+    padding: 0.375rem 1.25rem;
+    background: #b45309;
+    color: #fff8ec;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      sans-serif;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .preview-banner strong {
+    padding: 0.125rem 0.375rem;
+    border-radius: 2px;
+    background: #fff8ec;
+    color: #7c2d12;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+
+  .preview-banner a {
+    color: #fff8ec;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>
