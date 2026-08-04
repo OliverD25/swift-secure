@@ -50,5 +50,39 @@
   // 404 rather than us pointing at a file that is not built.
   "assets": {
     "directory": "./dist"
+  },
+
+  // A second Worker, so staging has one fixed address instead of a new one per
+  // push. Left at its default, Cloudflare runs `wrangler versions upload` on any
+  // branch that is not main and hands back a URL with the version id in it —
+  // safe, but useless for showing the same link to someone twice, and useless
+  // for anything that has to be registered somewhere.
+  //
+  // Reached by setting the non-production branch deploy command to
+  //   npx wrangler deploy --env staging
+  // in the Cloudflare dashboard. That is the one part of this that cannot live
+  // in the repository, and it is written down in .cloudflare-deploy.md.
+  //
+  // Nothing here can touch production. It is a different Worker name and a
+  // different hostname, and the main branch never runs with --env.
+  //
+  // `assets` is repeated rather than relied on: wrangler inherits some top-level
+  // keys into an environment and not others, and a staging Worker that silently
+  // shipped with no files at all is not a failure anyone would notice quickly.
+  // Verified with `wrangler deploy --env staging --dry-run`, which reports the
+  // file count.
+  //
+  // Search engines are kept off it by branch, not by hostname: WORKERS_CI_BRANCH
+  // is "staging" there, which src/lib/deploy.ts treats as unindexed, so every
+  // page carries noindex and robots.txt serves Disallow. Confirmed by building
+  // with that variable set — 0 of 4,428 pages came out indexable.
+  "env": {
+    "staging": {
+      "name": "swift-secure-staging",
+      "routes": [{ "pattern": "staging.swiftsecured.com", "custom_domain": true }],
+      "assets": {
+        "directory": "./dist"
+      }
+    }
   }
 }
