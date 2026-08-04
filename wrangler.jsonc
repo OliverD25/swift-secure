@@ -20,6 +20,27 @@
 
   "compatibility_date": "2026-08-04",
 
+  // Attaching the domain here rather than clicking it in the dashboard, so the
+  // arrangement is in the repository and survives whoever set it up. On deploy
+  // wrangler creates the custom domain and the DNS record for each pattern; the
+  // zone is already on Cloudflare's nameservers, which is what makes that
+  // possible.
+  //
+  // Until this landed, every page told search engines its real address was
+  // swiftsecured.com while that name had no address record at all — the site
+  // was disowning itself in favour of somewhere that did not exist.
+  //
+  // www is listed too, because a visitor who types it should not meet a DNS
+  // error. Both names serve the same pages, which would normally be a duplicate
+  // problem; it is not one here because Astro builds every canonical URL from
+  // the apex, so the www copy points at the apex as the original. A redirect
+  // rule would be tidier still, but that cannot be expressed in this file and a
+  // dashboard-only setting is exactly what this block exists to avoid.
+  "routes": [
+    { "pattern": "swiftsecured.com", "custom_domain": true },
+    { "pattern": "www.swiftsecured.com", "custom_domain": true }
+  ],
+
   // No "main": this is a static site, so the Worker is assets-only and no
   // JavaScript runs per request. Cloudflare serves the files directly.
   //
