@@ -20,8 +20,6 @@ const it: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Richieste esaminate entro 48 ore.",
-    button: "Richiedi la certificazione",
   },
   seal: {
     certified: "Certificato",
@@ -31,241 +29,16 @@ const it: PartialTranslation = {
     viewSealRecord: "Vedi il registro del sigillo",
     youProvide: "Cosa fornisci:",
   },
-  stats: [
-    { value: "340+", label: "Casinò certificati" },
-    { value: "48h", label: "Avvio medio revisione" },
-    { value: "2.1M", label: "Sigilli scansionati / mese" },
-    { value: "6 anni", label: "Audit sugli operatori" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Il sigillo di fiducia Swift Secure che i giocatori controllano prima di depositare. Verifichiamo in modo indipendente i nuovi casinò online su correttezza, licenze, sicurezza e velocità dei pagamenti.",
-    badge: "Scelto da oltre 340 operatori con licenza",
-    h1: "Il sigillo di fiducia che i giocatori controllano davvero prima di depositare.",
-    sub: "Verifichiamo in modo indipendente i nuovi casinò su correttezza, licenze, sicurezza e velocità dei pagamenti — poi rilasciamo un sigillo che i giocatori possono verificare in pochi secondi.",
-    ctaApply: "Richiedi la certificazione",
     ctaVerify: "Verifica un sigillo",
     howEyebrow: "Come funziona",
-    howTitle: "Dalla richiesta al sigillo attivo in meno di 3 settimane",
-    criteriaEyebrow: "Cosa verifichiamo",
-    criteriaTitle: "Cinque controlli che ogni sigillo deve superare",
-    operatorsEyebrow: "Operatori certificati",
-    operatorsTitle: "I casinò che oggi espongono il sigillo",
-    viewAllCasinos: "Vedi tutti i casinò certificati",
-    testimonialsEyebrow: "Le loro parole",
-    testimonialsTitle: "Gli operatori sulla certificazione",
-    pricingEyebrow: "Prezzi",
-    pricingTitle: "Piani di certificazione",
-    ctaHeading: "Pronto a ottenere il sigillo di cui i giocatori si fidano?",
-    ctaSub: "Richieste esaminate entro 48 ore.",
-    ctaButton: "Richiedi la certificazione",
   },
-  steps: [
-    { n: "1", title: "Richiesta", desc: "Invia i dati su licenza e piattaforma per una prima verifica di idoneità." },
-    { n: "2", title: "Audit", desc: "Il nostro team esamina la correttezza dell'RNG, la sicurezza e lo storico dei pagamenti." },
-    { n: "3", title: "Certificazione", desc: "Gli operatori idonei ricevono il sigillo e un registro pubblico di verifica." },
-    { n: "4", title: "Monitoraggio", desc: "Ripetiamo l'audit ogni trimestre per mantenere il sigillo attivo e affidabile." },
-  ],
-  criteria: [
-    { title: "RNG e correttezza dei giochi", desc: "Test indipendenti sulla generazione di numeri casuali e sulle tabelle di pagamento." },
-    { title: "Stato della licenza", desc: "Verificato sul registro pubblico della giurisdizione che l'ha rilasciata." },
-    { title: "Sicurezza di dati e fondi", desc: "Standard di crittografia, fondi dei giocatori segregati, storico delle violazioni." },
-    { title: "Tempi di pagamento", desc: "Tempi di prelievo verificati rispetto alle condizioni dichiarate dall'operatore." },
-    { title: "Strumenti di gioco responsabile", desc: "Limiti di deposito, autoesclusione e risorse di supporto attive." },
-  ],
-  testimonials: [
-    {
-      quote: "L'audit è stato approfondito, ma il team ci ha detto esattamente cosa correggere. La certificazione ha richiesto 19 giorni.",
-      name: "M. Andersen",
-      role: "Responsabile compliance, operatore al lancio",
-    },
-    {
-      quote: "I giocatori chiedono del sigillo nei ticket di assistenza. È diventato un vero segnale di fiducia alla cassa.",
-      name: "R. Osei",
-      role: "Responsabile di prodotto",
-    },
-    {
-      quote: "I ri-audit trimestrali ci tengono onesti e mantengono il sigillo significativo.",
-      name: "J. Vale",
-      role: "Fondatore, operatore su nuovi mercati",
-    },
-  ],
   process: {
-    title: "Come funziona la certificazione",
-    description:
-      "Sei fasi dalla richiesta a un sigillo Swift Secure attivo e monitorato — di norma 10–21 giorni, a seconda della rapidità con cui arriva la documentazione.",
-    eyebrow: "Il processo",
-    h1: "Come funziona la certificazione, passo dopo passo",
-    sub: "Sei fasi dalla richiesta a un sigillo attivo e monitorato — di norma 10–21 giorni, a seconda della rapidità con cui arriva la documentazione.",
-    ctaHeading: "Pronto a iniziare il tuo audit?",
-    ctaButton: "Richiedi la certificazione",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Richiesta e verifica di idoneità",
-      duration: "1-2 giorni",
-      desc: "Confermiamo che la tua piattaforma sia idonea all'esame: URL attivo, licenza valida e una base di giocatori reale o una data di lancio.",
-      provide: "Dati aziendali, informazioni sulla licenza, URL della piattaforma",
-    },
-    {
-      n: "2",
-      title: "Esame della documentazione",
-      duration: "2-4 giorni",
-      desc: "Il nostro team compliance esamina i documenti di licenza, i termini di servizio e le politiche di gioco responsabile.",
-      provide: "Certificato di licenza, T&C, documenti sul gioco responsabile",
-    },
-    {
-      n: "3",
-      title: "Audit tecnico",
-      duration: "5-8 giorni",
-      desc: "Test indipendenti su correttezza dell'RNG, tabelle di pagamento e sicurezza della piattaforma (crittografia, segregazione dei fondi).",
-      provide: "Accesso API/di test, panoramica dell'architettura di sicurezza",
-    },
-    {
-      n: "4",
-      title: "Verifica dei pagamenti",
-      duration: "3-5 giorni",
-      desc: "Verifichiamo i tempi di prelievo reali rispetto alle condizioni dichiarate, su un campione di dati di transazione.",
-      provide: "Log dei prelievi anonimizzati (ultimi 90 giorni)",
-    },
-    {
-      n: "5",
-      title: "Decisione sulla certificazione",
-      duration: "1-2 giorni",
-      desc: "Le risultanze passano al nostro comitato di revisione. Gli operatori idonei ricevono il sigillo e un registro pubblico di verifica.",
-      provide: "Nulla di più — ti avvisiamo in ogni caso",
-    },
-    {
-      n: "6",
-      title: "Monitoraggio continuo",
-      duration: "Trimestrale",
-      desc: "Ripetiamo l'audit ogni trimestre per mantenere il sigillo attivo. I sigilli vengono sospesi subito se gli standard calano.",
-      provide: "Log aggiornati ogni trimestre",
-    },
-  ],
   pricing: {
     title: "Prezzi",
-    description: "Prezzi Swift Secure: da €200 a €700 al mese per un badge di fiducia ricontrollato in continuo, più un audit iniziale una tantum. Nessuna quota sui ricavi.",
-    eyebrow: "Prezzi",
-    h1: "Prezzo di uno stato attivo, non di un certificato",
-    sub: "Un canone mensile tiene il badge attivo e sotto ricontrollo. Una tariffa di attivazione per entrare. Nessuna quota sui ricavi, nessuna sorpresa al rinnovo.",
-    applyNow: "Richiedi ora",
-    mostPopular: "PIÙ SCELTO",
-    billingTitle: "Dettagli di fatturazione",
-    addOnsTitle: "Costi una tantum",
-    addOnsSub: "Addebitati una sola volta, in aggiunta a un piano oppure da soli.",
-    tiersTitle: "Livelli di verifica",
-    tiersSub: "Quanto va a fondo il controllo. Ogni piano parte da Bronze; Silver e Gold sono disponibili con qualsiasi piano.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "al mese",
-      features: [
-        "Verifica Bronze",
-        "Pagina di verifica pubblica",
-        "Badge vincolato al dominio",
-        "Ricontrollo automatico settimanale",
-        "Consulenza sul posizionamento in cassa",
-        "Supporto via email",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "al mese",
-      features: [
-        "Tutto quello di Basic",
-        "Profilo verificato nella nostra directory",
-        "Auto-Mirror Sync per i nuovi domini",
-        "Presenza nei confronti rivolti ai giocatori",
-        "Coda di ricontrollo prioritaria",
-        "Referente dedicato",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "al mese",
-      features: [
-        "Tutto quello di Pro",
-        "Monitoraggio della disponibilità dei giochi",
-        "Report scritti mensili",
-        "Copertura multi-brand",
-        "Perimetro di controllo su misura",
-        "Account manager",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Tariffa di attivazione",
-      price: "€300–500",
-      desc: "Audit tecnico una tantum prima dell'emissione del badge. Addebitato una sola volta, per ogni brand.",
-    },
-    {
-      name: "Esame accelerato",
-      price: "+€250",
-      desc: "48 ore invece della coda standard di 10–14 giorni. Utile prima del lancio di una campagna.",
-    },
-    {
-      name: "Trust Audit pre-lancio",
-      price: "€1,000–2,000",
-      desc: "Report approfondito una tantum prima di andare online: controlli tecnici, licenza, termini, pagamenti, assistenza. Nessun abbonamento richiesto.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "I giochi sono reali e la licenza esiste.",
-      checks: [
-        "I giochi vengono caricati dal provider o da un aggregatore di contenuti legittimo",
-        "Il catalogo giochi corrisponde a quello che il provider pubblica davvero",
-        "Controllato tramite proxy residenziali in diverse aree geografiche",
-        "Numero di licenza confrontato con il registro pubblico dell'autorità",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, più prelievi testati con denaro reale.",
-      checks: [
-        "Tutto quello di Bronze",
-        "Depositi e prelievi di prova con importi reali",
-        "Tempo di prelievo effettivo misurato rispetto ai termini che dichiari",
-        "Richieste KYC impreviste al momento del prelievo registrate",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, più un audit dei termini dei tuoi bonus.",
-      checks: [
-        "Tutto quello di Silver",
-        "Termini dei bonus esaminati con una checklist di clausole predatorie",
-        "Tetti massimi di prelievo, moltiplicatori di puntata, clausole di confisca",
-        "Storico dei reclami esaminato dove è pubblico",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Mensile, non un certificato",
-      desc: "Il badge resta attivo perché continuiamo a ricontrollare. Se interrompi l'abbonamento il badge viene rimosso: è uno stato attivo, non un documento che ti resta.",
-    },
-    {
-      title: "Nessuna quota sui ricavi",
-      desc: "Applichiamo una tariffa fissa e non prendiamo alcuna percentuale sui tuoi ricavi, quindi quello che troviamo non dipende da quanto guadagni.",
-    },
-    {
-      title: "Se non superi il controllo",
-      desc: "Il report con le risultanze resta tuo: puoi correggere i problemi e ripresentare la richiesta al prezzo pubblico standard. La tua pagina di verifica non viene mai cancellata, viene aggiornata con quello che è cambiato.",
-    },
-  ],
   methodology: {
     title: "Metodologia di verifica",
     description:
@@ -277,34 +50,13 @@ const it: PartialTranslation = {
     limitsTitle: "Cosa non verifichiamo",
     limitsSub:
       "Pubblicato di proposito. Un sigillo che lascia intendere più di quanto controlla è peggio di nessun sigillo, ed è la linea che teniamo quando qualcosa va storto da un operatore che porta il nostro badge.",
-    monitoringTitle: "I controlli proseguono dopo l'emissione del badge",
-    monitoringBody:
-      "Il crawler ricontrolla ogni cliente ogni settimana e la pagina di verifica mostra la data dell'ultima esecuzione. Per questo si tratta di un abbonamento e non di un certificato una tantum: paghi per uno stato che resta aggiornato, non per un PDF di sei mesi fa.",
     suspensionTitle: "Come viene sospeso un badge",
     suspensionBody:
       "Se arriva un reclamo o il crawler rileva qualcosa di anomalo, l'operatore ha 48 ore per rispondere in privato prima che cambi qualcosa pubblicamente: questo protegge dalle segnalazioni false dei concorrenti. Se il problema è reale il badge viene rimosso e la pagina di verifica viene aggiornata con i fatti. Non rimuoviamo pagine dietro pagamento e non esiste una tariffa che faccia sparire una risultanza.",
     ctaHeading: "Vuoi far controllare la tua piattaforma?",
     ctaButton: "Richiedi una scansione",
   },
-  limits: [
-    {
-      title: "L'RTP e se i singoli risultati siano equi",
-      desc: "Dimostrarlo richiede milioni di giri o dati diretti dal provider. Nessun servizio di verifica su questo mercato lo fa davvero, e non lasceremo intendere che lo facciamo noi.",
-    },
-    {
-      title: "Se un operatore sia in grado di pagare una vincita grossa",
-      desc: "La solvibilità non è visibile dall'esterno. Verifichiamo che i prelievi funzionino su importi ordinari; non è una garanzia su un jackpot.",
-    },
-    {
-      title: "Che un operatore non tratterà mai male un giocatore",
-      desc: "Il badge dice che i giochi sono autentici, che la licenza è reale e che i prelievi di prova sono andati a buon fine. Non è una lettera di referenze.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verificato",
-      desc: "Ha superato la verifica ed è sotto monitoraggio settimanale attivo.",
-    },
     scanned: {
       label: "Scansionato",
       desc: "Controllato automaticamente dal nostro crawler. Nessun rapporto commerciale e nessun badge emesso.",
@@ -376,70 +128,14 @@ const it: PartialTranslation = {
     card1Body: "Non percepiamo revenue share né commissioni di segnalazione dagli operatori certificati. La tariffa di audit è fissa, quindi le nostre risultanze non si comprano.",
     card2Title: "Rigorosi, non lenti",
     card2Body: "Il nostro team di audit è composto da ex regolatori e ingegneri RNG. Abbiamo costruito un processo approfondito che dura giorni, non mesi.",
-    teamTitle: "Il team di audit",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Responsabile audit, ex-MGA",
-      bio: "Otto anni di controlli sulla conformità delle licenze presso un'autorità nazionale di gioco.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Responsabile RNG e sicurezza",
-      bio: "Ex ingegnere di correttezza dei giochi specializzato nella certificazione RNG.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Pagamenti e compliance",
-      bio: "Guida gli audit sui tempi di pagamento e il programma di ri-certificazione trimestrale.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Domande frequenti sulla certificazione Swift Secure: costi, tempi, ri-audit e verifica del sigillo.",
     eyebrow: "FAQ",
     h1: "Domande frequenti",
     ctaHeading: "Hai ancora domande?",
     ctaButton: "Contattaci",
   },
-  faqs: [
-    {
-      q: "Quanto costa la certificazione?",
-      a: "I piani partono da $1,900 per un audit una tantum che copre un anno di validità del sigillo. Vedi la pagina Prezzi per tutti i dettagli.",
-    },
-    {
-      q: "Quanto dura l'audit?",
-      a: "Di norma 10–21 giorni, a seconda della rapidità con cui fornisci documentazione e accessi di test. Il piano Crescita offre un esame prioritario in 10 giorni.",
-    },
-    {
-      q: "Cosa succede se non superiamo l'audit?",
-      a: "Ricevi un report dettagliato delle risultanze senza costi aggiuntivi. Puoi ripresentare la richiesta una volta risolti i problemi — gratuitamente entro 60 giorni.",
-    },
-    {
-      q: "Ripetete l'audit sui casinò certificati?",
-      a: "Sì. Ogni operatore certificato viene ri-verificato ogni trimestre. I sigilli vengono sospesi subito se gli standard scendono sotto la nostra soglia.",
-    },
-    {
-      q: "Il sigillo vale per una sola giurisdizione?",
-      a: "No. Il nostro audit verifica la validità della licenza nella giurisdizione in cui operi, insieme a controlli indipendenti dalla giurisdizione come la correttezza dell'RNG e la velocità dei pagamenti.",
-    },
-    {
-      q: "I giocatori possono verificare un sigillo da soli?",
-      a: "Sì — chiunque può inserire un ID sigillo nella nostra pagina Verifica per vedere in pochi secondi stato della certificazione, licenza e data del prossimo audit.",
-    },
-    {
-      q: "Cosa succede se il nostro sigillo viene revocato?",
-      a: "Ti avvisiamo subito indicando il motivo. Il registro pubblico di verifica si aggiorna in tempo reale, così i giocatori vedono sempre lo stato corretto.",
-    },
-    {
-      q: "Ricevete commissioni di segnalazione dai casinò?",
-      a: "No. Applichiamo solo la tariffa fissa di audit — nessun revenue share, nessuna commissione — così le risultanze non possono essere influenzate da pagamenti ricorrenti.",
-    },
-  ],
   badge: {
     title: "Il sigillo Swift Secure",
     description: "Riferimento di brand per il sigillo di certificazione Swift Secure: badge principale, versione compatta e variante su sfondo scuro.",

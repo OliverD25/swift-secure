@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PlanCard from "../../components/PlanCard.astro";
 import { useTranslations, localeStaticPaths, localePath } from "../../i18n";
 
 export const getStaticPaths = () => localeStaticPaths();
@@ -17,66 +16,8 @@ const t = useTranslations(locale);
       <p class="text-lg leading-relaxed text-muted">{t.pricing.sub}</p>
     </section>
 
-    <!-- MONTHLY PLANS -->
-    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] pb-7.5 pt-5">
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
-        {t.plans.map((plan, i) => <PlanCard locale={locale} plan={plan} featured={i === 1} />)}
-      </div>
-    </section>
 
-    <!-- ONE-OFF CHARGES -->
-    <section class="mx-auto w-full max-w-[1180px] px-[clamp(20px,5vw,40px)] py-10">
-      <div class="mb-7 text-center">
-        <h2 class="text-h2 mb-2">{t.pricing.addOnsTitle}</h2>
-        <p class="text-sm text-muted">{t.pricing.addOnsSub}</p>
-      </div>
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
-        {
-          t.addOns.map((a) => (
-            <div class="card flex flex-col p-6">
-              <div class="mb-1 text-[15px] font-bold">{a.name}</div>
-              <div class="mb-2.5 text-[26px] font-extrabold text-accent">{a.price}</div>
-              <div class="text-sm leading-relaxed text-muted">{a.desc}</div>
-            </div>
-          ))
-        }
-      </div>
-    </section>
 
-    <!-- VERIFICATION LEVELS -->
-    <section class="bg-surface-2 px-[clamp(20px,5vw,40px)] py-15">
-      <div class="mx-auto max-w-[1180px]">
-        <div class="mb-9 text-center">
-          <h2 class="text-h2 mb-2">{t.pricing.tiersTitle}</h2>
-          <p class="mx-auto max-w-[560px] text-sm leading-relaxed text-muted">{t.pricing.tiersSub}</p>
-        </div>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5">
-          {
-            t.tiers.map((tier) => (
-              <div class="card flex flex-col p-6">
-                <div class="mb-1.5 flex items-center gap-2">
-                  <span class="chip px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide">{tier.id}</span>
-                </div>
-                <div class="mb-4 text-sm font-semibold text-ink">{tier.summary}</div>
-                <ul class="flex flex-col gap-2">
-                  {tier.checks.map((c) => (
-                    <li class="flex gap-2 text-[13px] leading-relaxed text-muted">
-                      <span class="mt-0.5 shrink-0 text-accent">&#10003;</span>
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-        </div>
-        <p class="mt-7 text-center text-sm text-muted">
-          <a href={localePath("/methodology/", locale)} class="font-semibold text-accent">
-            {t.methodology.title} &rarr;
-          </a>
-        </p>
-      </div>
-    </section>
 
     <!-- BILLING -->
     <section class="mx-auto w-full max-w-[900px] px-[clamp(20px,5vw,40px)] pb-22.5 pt-15">

@@ -20,8 +20,6 @@ const de: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Bewerbungen werden innerhalb von 48 Stunden geprüft.",
-    button: "Zertifizierung beantragen",
   },
   seal: {
     certified: "Zertifiziert",
@@ -31,241 +29,16 @@ const de: PartialTranslation = {
     viewSealRecord: "Siegeleintrag ansehen",
     youProvide: "Sie liefern:",
   },
-  stats: [
-    { value: "340+", label: "Zertifizierte Casinos" },
-    { value: "48 Std.", label: "Ø Prüfbeginn" },
-    { value: "2.1M", label: "Siegel-Scans / Mon." },
-    { value: "6 J.", label: "Betreiber-Audits" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Das Swift Secure Vertrauenssiegel, das Spieler vor der Einzahlung prüfen. Wir auditieren neue Online-Casinos unabhängig auf Fairness, Lizenzierung, Sicherheit und Auszahlungstempo.",
-    badge: "Vertraut von 340+ lizenzierten Betreibern",
-    h1: "Das Vertrauenssiegel, das Spieler vor der Einzahlung wirklich prüfen.",
-    sub: "Wir auditieren neue Casinos unabhängig auf Fairness, Lizenzierung, Sicherheit und Auszahlungstempo — und vergeben ein Siegel, das Spieler in Sekunden prüfen können.",
-    ctaApply: "Zertifizierung beantragen",
     ctaVerify: "Siegel prüfen",
     howEyebrow: "Ablauf",
-    howTitle: "Von der Bewerbung zum aktiven Siegel in unter 3 Wochen",
-    criteriaEyebrow: "Was wir prüfen",
-    criteriaTitle: "Fünf Prüfungen, die jedes Siegel bestehen muss",
-    operatorsEyebrow: "Zertifizierte Betreiber",
-    operatorsTitle: "Casinos, die das Siegel heute tragen",
-    viewAllCasinos: "Alle zertifizierten Casinos ansehen",
-    testimonialsEyebrow: "In ihren Worten",
-    testimonialsTitle: "Betreiber über die Zertifizierung",
-    pricingEyebrow: "Preise",
-    pricingTitle: "Zertifizierungspakete",
-    ctaHeading: "Bereit für das Siegel, dem Spieler vertrauen?",
-    ctaSub: "Bewerbungen werden innerhalb von 48 Stunden geprüft.",
-    ctaButton: "Zertifizierung beantragen",
   },
-  steps: [
-    { n: "1", title: "Bewerben", desc: "Reichen Sie Ihre Lizenz- und Plattformdaten für eine erste Eignungsprüfung ein." },
-    { n: "2", title: "Audit", desc: "Unser Team prüft RNG-Fairness, Sicherheitsniveau und Auszahlungshistorie." },
-    { n: "3", title: "Zertifizieren", desc: "Betreiber, die bestehen, erhalten das Siegel und einen öffentlichen Prüfeintrag." },
-    { n: "4", title: "Überwachen", desc: "Wir auditieren quartalsweise nach, damit das Siegel aktiv und glaubwürdig bleibt." },
-  ],
-  criteria: [
-    { title: "RNG & Spielfairness", desc: "Unabhängige Tests von Zufallsgenerator und Auszahlungstabellen." },
-    { title: "Lizenzstatus", desc: "Abgeglichen mit dem öffentlichen Register der ausstellenden Jurisdiktion." },
-    { title: "Daten- & Geldsicherheit", desc: "Verschlüsselungsstandards, getrennte Spielergelder, Vorfallshistorie." },
-    { title: "Auszahlungsdauer", desc: "Geprüfte Auszahlungszeiten gemessen an den Bedingungen des Betreibers." },
-    { title: "Spielerschutz-Tools", desc: "Einzahlungslimits, Selbstsperre und Hilfsangebote vorhanden." },
-  ],
-  testimonials: [
-    {
-      quote: "Das Audit war gründlich, aber das Team hat uns genau gesagt, was zu beheben ist. Die Zertifizierung dauerte 19 Tage.",
-      name: "M. Andersen",
-      role: "Compliance-Leitung, Launch-Betreiber",
-    },
-    {
-      quote: "Spieler fragen im Support nach dem Siegel. Es ist zu einem echten Vertrauenssignal an der Kasse geworden.",
-      name: "R. Osei",
-      role: "Produktleitung",
-    },
-    {
-      quote: "Quartalsweise Nachaudits halten uns ehrlich und das Siegel aussagekräftig.",
-      name: "J. Vale",
-      role: "Gründer, Betreiber in neuen Märkten",
-    },
-  ],
   process: {
-    title: "So funktioniert die Zertifizierung",
-    description:
-      "Sechs Phasen von der Bewerbung bis zum aktiven, überwachten Swift Secure Siegel — typischerweise 10–21 Tage, je nachdem, wie schnell die Unterlagen eintreffen.",
-    eyebrow: "Der Ablauf",
-    h1: "So funktioniert die Zertifizierung, Schritt für Schritt",
-    sub: "Sechs Phasen von der Bewerbung bis zum aktiven, überwachten Siegel — typischerweise 10–21 Tage, je nachdem, wie schnell die Unterlagen eintreffen.",
-    ctaHeading: "Bereit, Ihr Audit zu starten?",
-    ctaButton: "Zertifizierung beantragen",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Bewerbung & Eignungsprüfung",
-      duration: "1-2 Tage",
-      desc: "Wir prüfen, ob Ihre Plattform für ein Audit infrage kommt: aktive URL, gültige Lizenz und eine echte Spielerbasis oder ein Startdatum.",
-      provide: "Firmendaten, Lizenzangaben, Plattform-URL",
-    },
-    {
-      n: "2",
-      title: "Unterlagenprüfung",
-      duration: "2-4 Tage",
-      desc: "Unser Compliance-Team prüft Lizenzunterlagen, AGB und Richtlinien zum verantwortungsvollen Spielen.",
-      provide: "Lizenzurkunde, AGB, Spielerschutz-Richtlinien",
-    },
-    {
-      n: "3",
-      title: "Technisches Audit",
-      duration: "5-8 Tage",
-      desc: "Unabhängige Tests von RNG-Fairness, Auszahlungstabellen und Plattformsicherheit (Verschlüsselung, Geldertrennung).",
-      provide: "API-/Testzugang, Überblick zur Sicherheitsarchitektur",
-    },
-    {
-      n: "4",
-      title: "Auszahlungsprüfung",
-      duration: "3-5 Tage",
-      desc: "Wir prüfen echte Auszahlungszeiten anhand von Stichprobendaten gegen Ihre angegebenen Bedingungen.",
-      provide: "Anonymisierte Auszahlungsprotokolle (letzte 90 Tage)",
-    },
-    {
-      n: "5",
-      title: "Zertifizierungsentscheidung",
-      duration: "1-2 Tage",
-      desc: "Die Ergebnisse gehen an unser Prüfgremium. Betreiber, die bestehen, erhalten das Siegel und einen öffentlichen Prüfeintrag.",
-      provide: "Nichts weiter — wir informieren Sie in jedem Fall",
-    },
-    {
-      n: "6",
-      title: "Laufende Überwachung",
-      duration: "Quartalsweise",
-      desc: "Wir auditieren jedes Quartal nach, damit das Siegel aktiv bleibt. Sinken die Standards, wird das Siegel sofort ausgesetzt.",
-      provide: "Aktualisierte Protokolle je Quartal",
-    },
-  ],
   pricing: {
     title: "Preise",
-    description: "Swift Secure Preise: €200–€700 pro Monat für ein laufend nachgeprüftes Vertrauenssiegel, plus ein einmaliges Setup-Audit. Keine Umsatzbeteiligung.",
-    eyebrow: "Preise",
-    h1: "Bepreist als Live-Status, nicht als Zertifikat",
-    sub: "Eine monatliche Gebühr hält das Siegel aktiv und in laufender Nachprüfung. Eine Setup-Gebühr für den Einstieg. Keine Umsatzbeteiligung, keine Überraschungen bei der Verlängerung.",
-    applyNow: "Jetzt bewerben",
-    mostPopular: "AM BELIEBTESTEN",
-    billingTitle: "Abrechnungsdetails",
-    addOnsTitle: "Einmalige Kosten",
-    addOnsSub: "Einmalig berechnet, zusätzlich zu einem Paket — oder eigenständig.",
-    tiersTitle: "Prüfstufen",
-    tiersSub: "Wie tief die Prüfung geht. Jedes Paket startet bei Bronze; Silver und Gold sind in jedem Paket verfügbar.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "pro Monat",
-      features: [
-        "Bronze-Verifizierung",
-        "Öffentliche Prüfseite",
-        "Domain-gebundenes Siegel",
-        "Wöchentliche automatische Nachprüfung",
-        "Beratung zur Platzierung an der Kasse",
-        "E-Mail-Support",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "pro Monat",
-      features: [
-        "Alles aus Basic",
-        "Verifiziertes Profil in unserem Verzeichnis",
-        "Auto-Mirror-Sync für neue Domains",
-        "Aufnahme in Spielervergleiche",
-        "Vorrangige Warteschlange für Nachprüfungen",
-        "Fester Ansprechpartner",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "pro Monat",
-      features: [
-        "Alles aus Pro",
-        "Überwachung der Spielverfügbarkeit",
-        "Monatliche schriftliche Berichte",
-        "Abdeckung mehrerer Marken",
-        "Individueller Prüfumfang",
-        "Kundenbetreuer",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Setup-Gebühr",
-      price: "€300–500",
-      desc: "Einmaliges technisches Audit, bevor das Siegel vergeben wird. Einmalig berechnet, pro Marke.",
-    },
-    {
-      name: "Express-Prüfung",
-      price: "+€250",
-      desc: "48 Stunden statt der üblichen Warteschlange von 10–14 Tagen. Nützlich vor einem Kampagnenstart.",
-    },
-    {
-      name: "Pre-Launch Trust Audit",
-      price: "€1,000–2,000",
-      desc: "Ausführlicher Einmalbericht vor dem Start: technische Prüfungen, Lizenz, AGB, Zahlungen, Support. Kein Abo erforderlich.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Die Spiele sind echt und die Lizenz existiert.",
-      checks: [
-        "Spiele werden vom Anbieter oder einem legitimen Content-Aggregator geladen",
-        "Spielkatalog stimmt mit dem überein, was der Anbieter tatsächlich veröffentlicht",
-        "Geprüft über Residential-Proxys in mehreren Regionen",
-        "Lizenznummer abgeglichen mit dem öffentlichen Register der Aufsichtsbehörde",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, plus mit echtem Geld getestete Auszahlungen.",
-      checks: [
-        "Alles aus Bronze",
-        "Testeinzahlungen und -auszahlungen mit echten Beträgen",
-        "Tatsächliche Auszahlungsdauer gemessen an Ihren angegebenen Bedingungen",
-        "Unerwartete KYC-Forderungen bei der Auszahlung werden protokolliert",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, plus eine Prüfung Ihrer Bonusbedingungen.",
-      checks: [
-        "Alles aus Silver",
-        "Bonusbedingungen geprüft anhand einer Checkliste räuberischer Klauseln",
-        "Maximale Auszahlungsgrenzen, Umsatzfaktoren, Einzugsklauseln",
-        "Beschwerdehistorie geprüft, soweit öffentlich",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Monatlich, kein Zertifikat",
-      desc: "Das Siegel bleibt aktiv, weil wir laufend nachprüfen. Wird das Abo beendet, verschwindet das Siegel — es ist ein Live-Status, kein Dokument, das Sie behalten.",
-    },
-    {
-      title: "Keine Umsatzbeteiligung",
-      desc: "Wir nehmen eine Pauschale und keinen Anteil an Ihrem Umsatz. Was wir feststellen, hängt also nicht davon ab, wie viel Sie verdienen.",
-    },
-    {
-      title: "Wenn Sie nicht bestehen",
-      desc: "Sie behalten den Ergebnisbericht, können die Mängel beheben und sich zum regulären veröffentlichten Preis erneut bewerben. Ihre Prüfseite wird nie gelöscht — sie wird mit den Änderungen aktualisiert.",
-    },
-  ],
   methodology: {
     title: "Prüfmethodik",
     description:
@@ -277,34 +50,13 @@ const de: PartialTranslation = {
     limitsTitle: "Was wir nicht prüfen",
     limitsSub:
       "Bewusst veröffentlicht. Ein Siegel, das mehr suggeriert, als es prüft, ist schlimmer als gar kein Siegel — und das ist die Linie, an der wir festhalten, wenn bei einem Betreiber mit unserem Siegel etwas schiefgeht.",
-    monitoringTitle: "Die Prüfungen laufen weiter, nachdem das Siegel steht",
-    monitoringBody:
-      "Der Crawler prüft jeden Kunden wöchentlich nach, und die Prüfseite zeigt das Datum des letzten Durchlaufs. Deshalb ist dies ein Abo und kein einmaliges Zertifikat: Sie zahlen für einen Status, der aktuell bleibt, nicht für ein PDF von vor sechs Monaten.",
     suspensionTitle: "Wie ein Siegel ausgesetzt wird",
     suspensionBody:
       "Geht eine Beschwerde ein oder sieht der Crawler etwas Auffälliges, hat der Betreiber 48 Stunden Zeit, intern zu antworten, bevor sich öffentlich etwas ändert — das schützt vor Falschmeldungen von Wettbewerbern. Ist das Problem real, verschwindet das Siegel und die Prüfseite wird mit den Fakten aktualisiert. Wir entfernen keine Seiten gegen Bezahlung, und es gibt keine Gebühr, die ein Ergebnis verschwinden lässt.",
     ctaHeading: "Möchten Sie Ihre Plattform prüfen lassen?",
     ctaButton: "Scan anfordern",
   },
-  limits: [
-    {
-      title: "RTP und ob einzelne Ergebnisse fair sind",
-      desc: "Dieser Nachweis erfordert Millionen von Spins oder Daten direkt vom Anbieter. Kein Prüfdienst in diesem Markt leistet das wirklich, und wir werden nicht so tun, als täten wir es.",
-    },
-    {
-      title: "Ob ein Betreiber einen großen Gewinn auszahlen kann",
-      desc: "Zahlungsfähigkeit ist von außen nicht erkennbar. Wir testen, dass Auszahlungen bei üblichen Beträgen funktionieren; das ist keine Garantie für einen Jackpot.",
-    },
-    {
-      title: "Dass ein Betreiber einen Spieler nie schlecht behandelt",
-      desc: "Das Siegel sagt, dass die Spiele echt sind, die Lizenz real ist und Testauszahlungen durchgingen. Es ist kein Charakterzeugnis.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verifiziert",
-      desc: "Prüfung bestanden und unter aktiver wöchentlicher Überwachung.",
-    },
     scanned: {
       label: "Gescannt",
       desc: "Automatisch von unserem Crawler geprüft. Keine Geschäftsbeziehung und kein vergebenes Siegel.",
@@ -376,70 +128,14 @@ const de: PartialTranslation = {
     card1Body: "Wir nehmen von zertifizierten Betreibern weder Umsatzbeteiligungen noch Vermittlungsgebühren. Die Auditgebühr ist pauschal, unsere Ergebnisse sind also nicht käuflich.",
     card2Title: "Gründlich, nicht langsam",
     card2Body: "Unser Auditteam besteht aus ehemaligen Regulierern und RNG-Ingenieuren. Wir haben den Prozess so gebaut, dass er in Tagen gründlich ist, nicht in Monaten.",
-    teamTitle: "Das Auditteam",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Leitung Audits, ehem. MGA",
-      bio: "Acht Jahre Prüfung der Lizenz-Compliance bei einer nationalen Glücksspielbehörde.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Leitung RNG & Sicherheit",
-      bio: "Ehemaliger Spielfairness-Ingenieur mit Spezialisierung auf RNG-Zertifizierung.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Auszahlungen & Compliance",
-      bio: "Leitet die Audits zur Auszahlungsdauer und das quartalsweise Rezertifizierungsprogramm.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Häufige Fragen zur Swift Secure Zertifizierung: Kosten, Dauer, Nachaudits und Siegelprüfung.",
     eyebrow: "FAQ",
     h1: "Häufig gestellte Fragen",
     ctaHeading: "Noch Fragen?",
     ctaButton: "Kontakt aufnehmen",
   },
-  faqs: [
-    {
-      q: "Was kostet die Zertifizierung?",
-      a: "Die Pakete beginnen bei $1,900 für ein einmaliges Audit mit einem Jahr Siegel-Gültigkeit. Alle Details finden Sie auf der Preisseite.",
-    },
-    {
-      q: "Wie lange dauert das Audit?",
-      a: "Typischerweise 10–21 Tage, je nachdem, wie schnell Sie Unterlagen und Testzugang bereitstellen. Unser Wachstum-Paket bietet eine vorrangige Prüfung in 10 Tagen.",
-    },
-    {
-      q: "Was passiert, wenn wir ein Audit nicht bestehen?",
-      a: "Sie erhalten ohne Aufpreis einen detaillierten Ergebnisbericht. Nach Behebung der Mängel können Sie sich erneut bewerben — innerhalb von 60 Tagen kostenfrei.",
-    },
-    {
-      q: "Prüfen Sie zertifizierte Casinos erneut?",
-      a: "Ja. Jeder zertifizierte Betreiber wird quartalsweise nachgeprüft. Sinken die Standards unter unsere Schwelle, wird das Siegel sofort ausgesetzt.",
-    },
-    {
-      q: "Gilt das Siegel nur für eine Jurisdiktion?",
-      a: "Nein. Unser Audit prüft die Lizenzgültigkeit in der Jurisdiktion, unter der Sie tätig sind, zusammen mit jurisdiktionsunabhängigen Prüfungen wie RNG-Fairness und Auszahlungstempo.",
-    },
-    {
-      q: "Können Spieler ein Siegel selbst prüfen?",
-      a: "Ja — jeder kann eine Siegel-ID auf unserer Prüfseite eingeben und sieht in Sekunden Zertifizierungsstatus, Lizenz und Datum des nächsten Audits.",
-    },
-    {
-      q: "Was passiert, wenn unser Siegel entzogen wird?",
-      a: "Wir informieren Sie umgehend mit Begründung. Der öffentliche Prüfeintrag aktualisiert sich in Echtzeit, sodass Spieler den korrekten Status sehen.",
-    },
-    {
-      q: "Nehmen Sie Vermittlungsgebühren von Casinos?",
-      a: "Nein. Wir berechnen nur die pauschale Auditgebühr — keine Umsatzbeteiligung, keine Vermittlungsgebühren —, sodass Ergebnisse nicht durch laufende Zahlungen beeinflusst werden können.",
-    },
-  ],
   badge: {
     title: "Das Swift Secure Siegel",
     description: "Markenreferenz für das Swift Secure Zertifizierungssiegel: Hauptsiegel, kompakte Variante und Variante für dunkle Hintergründe.",

@@ -231,12 +231,17 @@ def clean_section(rec: dict) -> str:
     """What we checked and found nothing wrong with. Keeps the report honest."""
     bits = []
     reqs = rec.get("requestCount") or 0
-    # Only claim the request count is fine when it actually is. The measured
-    # median across 1222 casinos is 143, so listing "290 requests" under
-    # "nothing wrong" would be telling an operator a bad number is good — and
-    # they would be right to stop reading there.
+    # Only claim the request count is fine when it actually is. Listing "290
+    # requests" under "nothing wrong" would tell an operator a bad number is
+    # good, and they would be right to stop reading there.
+    #
+    # The median is 134.5, recomputed from audit-sweep-battlefield.json over the
+    # 1222 readable records. An earlier version of this line published 143,
+    # which came from an old code comment rather than the data — the exact habit
+    # this project keeps having to correct. Published as "about 135" because a
+    # half-request is not a thing an operator can picture.
     if 0 < reqs <= 200:
-        bits.append(f"{reqs} requests on the homepage, below the market median of 143")
+        bits.append(f"{reqs} requests on the homepage, below the market median of about 135")
     if rec.get("securityHeaders", {}).get("strict-transport-security"):
         bits.append("HTTPS with HSTS enabled")
     if rec.get("hasViewportMeta"):
@@ -266,11 +271,23 @@ def build(rec: dict, row: dict) -> str:
         return ""
     parts.append(findings)
     parts.append(clean_section(rec))
+    # Name the checks that did NOT run on this site.
+    #
+    # We publish four checks. This generator composes exactly two of them, so
+    # every report in this wave is a two-check report. An operator reading the
+    # site and then holding this letter would reasonably ask "where is my
+    # licence result?" — and the honest answer has to be in the letter, not
+    # waiting for them to ask.
     parts += [
         "## What we did not check", "",
-        "Anything behind a login. Whether your games come from the studios named "
-        "on the site — that cannot be established from outside, and we do not "
-        "claim it. RNG fairness, which needs an accredited lab.", "",
+        "**On your site specifically, two of our four checks did not run:** the "
+        "licence register match and the mobile time-to-register measurement. "
+        "A report only ever contains checks that actually ran — if one is not "
+        "named above, it did not happen. Both are available free on request.", "",
+        "In general we cannot check anything behind a login, whether your games "
+        "come from the studios named on the site — that cannot be established "
+        "from outside, and we do not claim it — or RNG fairness, which needs an "
+        "accredited lab.", "",
         "---", "",
         "Every line above was re-checked against your live site on the day this "
         "was sent. If something here no longer reproduces, it was removed before "

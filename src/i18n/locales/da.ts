@@ -20,8 +20,6 @@ const da: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Ansøgninger behandles inden for 48 timer.",
-    button: "Ansøg om certificering",
   },
   seal: {
     certified: "Certificeret",
@@ -31,241 +29,16 @@ const da: PartialTranslation = {
     viewSealRecord: "Se seglregistrering",
     youProvide: "Du leverer:",
   },
-  stats: [
-    { value: "340+", label: "Certificerede casinoer" },
-    { value: "48 t", label: "Gns. start på gennemgang" },
-    { value: "2.1M", label: "Segl scannet / md." },
-    { value: "6 år", label: "Auditerer operatører" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Swift Secure-tillidsseglet, som spillere tjekker, før de indbetaler. Vi auditerer uafhængigt nye onlinecasinoer på fairness, licensering, sikkerhed og udbetalingshastighed.",
-    badge: "Betroet af 340+ licenserede operatører",
-    h1: "Tillidsseglet, spillerne rent faktisk tjekker, før de indbetaler.",
-    sub: "Vi auditerer uafhængigt nye casinoer på fairness, licensering, sikkerhed og udbetalingshastighed — og udsteder derefter et segl, spillerne kan verificere på sekunder.",
-    ctaApply: "Ansøg om certificering",
     ctaVerify: "Verificer et segl",
     howEyebrow: "Sådan virker det",
-    howTitle: "Fra ansøgning til aktivt segl på under 3 uger",
-    criteriaEyebrow: "Det, vi auditerer",
-    criteriaTitle: "Fem kontroller, ethvert segl skal bestå",
-    operatorsEyebrow: "Certificerede operatører",
-    operatorsTitle: "Casinoer med seglet i dag",
-    viewAllCasinos: "Se alle certificerede casinoer",
-    testimonialsEyebrow: "Med deres egne ord",
-    testimonialsTitle: "Operatører om at blive certificeret",
-    pricingEyebrow: "Priser",
-    pricingTitle: "Certificeringsplaner",
-    ctaHeading: "Klar til at opnå det segl, spillerne stoler på?",
-    ctaSub: "Ansøgninger behandles inden for 48 timer.",
-    ctaButton: "Ansøg om certificering",
   },
-  steps: [
-    { n: "1", title: "Ansøg", desc: "Indsend dine licens- og platformsoplysninger til en indledende egnethedsvurdering." },
-    { n: "2", title: "Auditer", desc: "Vores team gennemgår RNG-fairness, sikkerhedsniveau og udbetalingshistorik." },
-    { n: "3", title: "Certificer", desc: "Operatører, der består, får seglet og en offentlig verifikationsregistrering." },
-    { n: "4", title: "Overvåg", desc: "Vi auditerer igen hvert kvartal, så seglet forbliver aktivt og troværdigt." },
-  ],
-  criteria: [
-    { title: "RNG og spilfairness", desc: "Uafhængig test af tilfældighedsgenerering og udbetalingstabeller." },
-    { title: "Licensstatus", desc: "Verificeret mod den udstedende jurisdiktions offentlige register." },
-    { title: "Data- og midlersikkerhed", desc: "Krypteringsstandarder, adskilte spillermidler, historik for sikkerhedsbrud." },
-    { title: "Udbetalingstid", desc: "Auditerede udbetalingstider målt mod operatørens angivne vilkår." },
-    { title: "Værktøjer til ansvarligt spil", desc: "Indbetalingsgrænser, selvudelukkelse og hjælperessourcer på plads." },
-  ],
-  testimonials: [
-    {
-      quote: "Auditten var grundig, men teamet fortalte os præcis, hvad vi skulle rette. Certificeringen tog 19 dage.",
-      name: "M. Andersen",
-      role: "Compliance-ansvarlig, nystartet operatør",
-    },
-    {
-      quote: "Spillere spørger til seglet i supporthenvendelser. Det er blevet et reelt tillidssignal ved kassen.",
-      name: "R. Osei",
-      role: "Produktchef",
-    },
-    {
-      quote: "Kvartalsvise genaudits holder os ærlige og holder seglet meningsfuldt.",
-      name: "J. Vale",
-      role: "Stifter, operatør på nyt marked",
-    },
-  ],
   process: {
-    title: "Sådan fungerer certificeringen",
-    description:
-      "Seks faser fra ansøgning til et aktivt, overvåget Swift Secure-segl — typisk 10–21 dage afhængigt af, hvor hurtigt dokumentationen kommer ind.",
-    eyebrow: "Processen",
-    h1: "Sådan fungerer certificeringen, trin for trin",
-    sub: "Seks faser fra ansøgning til et aktivt, overvåget segl — typisk 10–21 dage afhængigt af, hvor hurtigt dokumentationen kommer ind.",
-    ctaHeading: "Klar til at starte din audit?",
-    ctaButton: "Ansøg om certificering",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Ansøgning og egnethedstjek",
-      duration: "1-2 dage",
-      desc: "Vi bekræfter, at din platform er egnet til gennemgang: aktiv URL, gyldig licens og et reelt spillergrundlag eller en lanceringsdato.",
-      provide: "Virksomhedsoplysninger, licensinfo, platform-URL",
-    },
-    {
-      n: "2",
-      title: "Gennemgang af dokumentation",
-      duration: "2-4 dage",
-      desc: "Vores compliance-team gennemgår licenspapirer, handelsbetingelser og politikker for ansvarligt spil.",
-      provide: "Licenscertifikat, vilkår, politikker for ansvarligt spil",
-    },
-    {
-      n: "3",
-      title: "Teknisk audit",
-      duration: "5-8 dage",
-      desc: "Uafhængig test af RNG-fairness, udbetalingstabeller og platformssikkerhed (kryptering, adskillelse af midler).",
-      provide: "API-/testadgang, oversigt over sikkerhedsarkitektur",
-    },
-    {
-      n: "4",
-      title: "Verifikation af udbetalinger",
-      duration: "3-5 dage",
-      desc: "Vi auditerer reelle udbetalingstider mod dine angivne vilkår ud fra stikprøver af transaktionsdata.",
-      provide: "Anonymiserede udbetalingslogs (seneste 90 dage)",
-    },
-    {
-      n: "5",
-      title: "Certificeringsafgørelse",
-      duration: "1-2 dage",
-      desc: "Resultaterne går til vores bedømmelsesudvalg. Operatører, der består, får seglet og en offentlig verifikationsregistrering.",
-      provide: "Intet yderligere — vi giver dig besked uanset udfald",
-    },
-    {
-      n: "6",
-      title: "Løbende overvågning",
-      duration: "Kvartalsvis",
-      desc: "Vi auditerer igen hvert kvartal, så seglet forbliver aktivt. Segl suspenderes øjeblikkeligt, hvis standarderne glider.",
-      provide: "Opdaterede logs hvert kvartal",
-    },
-  ],
   pricing: {
     title: "Priser",
-    description: "Swift Secure-priser: €200–€700 om måneden for et tillidsbadge, der løbende gentjekkes, plus en teknisk engangsaudit ved opstart. Ingen omsætningsandel.",
-    eyebrow: "Priser",
-    h1: "Prissat som en aktiv status, ikke et certifikat",
-    sub: "Et månedligt gebyr holder badget aktivt og gentjekket. Ét opstartsgebyr for at komme i gang. Ingen omsætningsandel, ingen overraskelser ved fornyelse.",
-    applyNow: "Ansøg nu",
-    mostPopular: "MEST POPULÆRE",
-    billingTitle: "Faktureringsdetaljer",
-    addOnsTitle: "Engangsgebyrer",
-    addOnsSub: "Opkræves én gang, oven i en plan — eller alene.",
-    tiersTitle: "Verifikationsniveauer",
-    tiersSub: "Hvor dybt tjekket går. Alle planer starter på Bronze; Sølv og Guld kan tilkøbes på enhver plan.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "pr. måned",
-      features: [
-        "Bronze-verifikation",
-        "Offentlig verifikationsside",
-        "Domænelåst badge",
-        "Ugentligt automatisk gentjek",
-        "Vejledning i placering i kassen",
-        "E-mailsupport",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "pr. måned",
-      features: [
-        "Alt i Basic",
-        "Verificeret profil i vores oversigt",
-        "Auto-Mirror Sync til nye domæner",
-        "Med i sammenligninger for spillere",
-        "Prioriteret kø til gentjek",
-        "Fast kontaktperson",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "pr. måned",
-      features: [
-        "Alt i Pro",
-        "Overvågning af spillenes oppetid",
-        "Månedlige skriftlige rapporter",
-        "Dækning af flere brands",
-        "Tilpasset kontrolomfang",
-        "Kundeansvarlig",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Opstartsgebyr",
-      price: "€300–500",
-      desc: "Teknisk engangsaudit, før badget udstedes. Opkræves én gang pr. brand.",
-    },
-    {
-      name: "Fremskyndet gennemgang",
-      price: "+€250",
-      desc: "48 timer i stedet for den normale kø på 10–14 dage. Nyttigt før en kampagnelancering.",
-    },
-    {
-      name: "Trust-audit før lancering",
-      price: "€1,000–2,000",
-      desc: "Dybdegående engangsrapport, før du går live: tekniske kontroller, licens, vilkår, betalinger, support. Kræver ikke abonnement.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Spillene er ægte, og licensen findes.",
-      checks: [
-        "Spillene indlæses fra udbyderen eller en legitim indholdsaggregator",
-        "Spilkataloget stemmer med det, udbyderen rent faktisk udgiver",
-        "Tjekket via residentielle proxyer i flere regioner",
-        "Licensnummeret matchet mod tilsynsmyndighedens offentlige register",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Sølv",
-      summary: "Bronze plus udbetalinger testet med rigtige penge.",
-      checks: [
-        "Alt i Bronze",
-        "Testindbetalinger og -udbetalinger med rigtige beløb",
-        "Faktisk udbetalingstid målt mod dine angivne vilkår",
-        "Uventede KYC-krav ved udbetaling registreres",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Guld",
-      summary: "Sølv plus en gennemgang af dine bonusvilkår.",
-      checks: [
-        "Alt i Sølv",
-        "Bonusvilkår gennemgået mod en tjekliste over rovklausuler",
-        "Lofter for maks. udbetaling, omsætningskrav, konfiskationsklausuler",
-        "Klagehistorik gennemgået, hvor den er offentlig",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Månedligt, ikke et certifikat",
-      desc: "Badget forbliver aktivt, fordi vi bliver ved med at gentjekke. Stopper abonnementet, ryger badget ned — det er en aktiv status, ikke et dokument, du beholder.",
-    },
-    {
-      title: "Ingen omsætningsandel",
-      desc: "Vi tager et fast gebyr og ingen andel af din omsætning, så det, vi finder, påvirkes ikke af, hvor meget du tjener.",
-    },
-    {
-      title: "Hvis du ikke består",
-      desc: "Du beholder resultatrapporten og kan rette problemerne og ansøge igen til den normale offentliggjorte pris. Din verifikationsside slettes aldrig — den opdateres med det, der er ændret.",
-    },
-  ],
   methodology: {
     title: "Verifikationsmetode",
     description:
@@ -277,34 +50,13 @@ const da: PartialTranslation = {
     limitsTitle: "Det, vi ikke verificerer",
     limitsSub:
       "Offentliggjort bevidst. Et segl, der antyder mere, end det tjekker, er værre end intet segl, og det er den linje, vi holder, når noget går galt hos en operatør med vores badge.",
-    monitoringTitle: "Kontrollerne fortsætter, efter badget er sat op",
-    monitoringBody:
-      "Crawleren gentjekker hver kunde ugentligt, og verifikationssiden viser datoen for den seneste kørsel. Derfor er det et abonnement og ikke et engangscertifikat: du betaler for en status, der holdes aktuel, ikke for en PDF fra et halvt år siden.",
     suspensionTitle: "Sådan bliver et badge suspenderet",
     suspensionBody:
       "Hvis der kommer en klage, eller crawleren ser noget unormalt, får operatøren 48 timer til at svare privat, før noget ændres offentligt — det beskytter mod falske anmeldelser fra konkurrenter. Er problemet reelt, ryger badget ned, og verifikationssiden opdateres med fakta. Vi fjerner ikke sider mod betaling, og der findes intet gebyr, der får et fund til at forsvinde.",
     ctaHeading: "Vil du have din platform tjekket?",
     ctaButton: "Bestil en scanning",
   },
-  limits: [
-    {
-      title: "RTP og om de enkelte spilresultater er fair",
-      desc: "At bevise det kræver millioner af spins eller data direkte fra udbyderen. Ingen verifikationstjeneste på dette marked gør det reelt, og vi vil ikke antyde, at vi gør.",
-    },
-    {
-      title: "Om en operatør kan betale en stor gevinst",
-      desc: "Solvens kan ikke ses udefra. Vi tester, at udbetalinger virker ved almindelige beløb; det er ingen garanti for en jackpot.",
-    },
-    {
-      title: "At en operatør aldrig vil behandle en spiller dårligt",
-      desc: "Badget siger, at spillene er ægte, licensen er reel, og at testudbetalinger gik igennem. Det er ikke en karakterattest.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verificeret",
-      desc: "Bestået verifikation og under aktiv ugentlig overvågning.",
-    },
     scanned: {
       label: "Scannet",
       desc: "Tjekket automatisk af vores crawler. Ingen forretningsrelation og intet badge udstedt.",
@@ -376,70 +128,14 @@ const da: PartialTranslation = {
     card1Body: "Vi tager ingen andel af omsætningen og ingen henvisningsgebyrer fra certificerede operatører. Auditgebyret er fast, så vores resultater kan ikke købes.",
     card2Title: "Grundig, ikke langsom",
     card2Body: "Vores auditteam består af tidligere tilsynsfolk og RNG-ingeniører. Vi har bygget processen til at være grundig på dage, ikke måneder.",
-    teamTitle: "Auditteamet",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Auditchef, tidl. MGA",
-      bio: "Otte år med gennemgang af licens-compliance hos en national spillemyndighed.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Ansvarlig for RNG og sikkerhed",
-      bio: "Tidligere ingeniør inden for spilfairness med speciale i RNG-certificering.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Udbetalinger og compliance",
-      bio: "Står for audits af udbetalingstider og det kvartalsvise recertificeringsprogram.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Ofte stillede spørgsmål om Swift Secure-certificering: pris, tidsforløb, genaudits og verifikation af segl.",
     eyebrow: "FAQ",
     h1: "Ofte stillede spørgsmål",
     ctaHeading: "Har du stadig spørgsmål?",
     ctaButton: "Kontakt os",
   },
-  faqs: [
-    {
-      q: "Hvad koster certificeringen?",
-      a: "Planer starter ved $1,900 for en engangsaudit, der dækker ét års seglgyldighed. Se prissiden for alle plandetaljer.",
-    },
-    {
-      q: "Hvor lang tid tager auditten?",
-      a: "Typisk 10–21 dage afhængigt af, hvor hurtigt du leverer dokumentation og testadgang. Vores Vækst-plan tilbyder en prioriteret gennemgang på 10 dage.",
-    },
-    {
-      q: "Hvad sker der, hvis vi ikke består en audit?",
-      a: "Du får en detaljeret resultatrapport uden ekstra beregning. Du kan ansøge igen, når forholdene er rettet — gratis inden for 60 dage.",
-    },
-    {
-      q: "Genauditerer I certificerede casinoer?",
-      a: "Ja. Alle certificerede operatører genauditeres kvartalsvis. Segl suspenderes øjeblikkeligt, hvis standarderne falder under vores grænse.",
-    },
-    {
-      q: "Gælder seglet kun for én jurisdiktion?",
-      a: "Nej. Vores audit kontrollerer licensens gyldighed i den jurisdiktion, du opererer under, sammen med jurisdiktionsuafhængige kontroller som RNG-fairness og udbetalingshastighed.",
-    },
-    {
-      q: "Kan spillere selv verificere et segl?",
-      a: "Ja — alle kan indtaste et segl-id på vores verificeringsside og se certificeringsstatus, licens og næste auditdato på sekunder.",
-    },
-    {
-      q: "Hvad hvis vores segl bliver inddraget?",
-      a: "Vi giver dig straks besked med begrundelsen. Den offentlige verifikationsregistrering opdateres i realtid, så spillere ser den korrekte status.",
-    },
-    {
-      q: "Tager I henvisningsgebyrer fra casinoer?",
-      a: "Nej. Vi opkræver kun det faste auditgebyr — ingen andel af omsætningen, ingen henvisningsgebyrer — så resultaterne ikke kan påvirkes af løbende betalinger.",
-    },
-  ],
   badge: {
     title: "Swift Secure-seglet",
     description: "Brandreference for Swift Secure-certificeringsseglet: primært badge, kompakt lockup og variant til mørk baggrund.",

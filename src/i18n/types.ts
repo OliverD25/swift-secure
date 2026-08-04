@@ -114,17 +114,12 @@ export interface Translation {
     operatorsEyebrow: string;
     operatorsTitle: string;
     viewAllCasinos: string;
-    testimonialsEyebrow: string;
-    testimonialsTitle: string;
-    pricingEyebrow: string;
-    pricingTitle: string;
     ctaHeading: string;
     ctaSub: string;
     ctaButton: string;
   };
   steps: Step[];
   criteria: Criterion[];
-  testimonials: Testimonial[];
   process: {
     title: string;
     description: string;
@@ -141,16 +136,8 @@ export interface Translation {
     eyebrow: string;
     h1: string;
     sub: string;
-    applyNow: string;
-    mostPopular: string;
     billingTitle: string;
-    addOnsTitle: string;
-    addOnsSub: string;
-    tiersTitle: string;
-    tiersSub: string;
   };
-  plans: Plan[];
-  addOns: AddOn[];
   tiers: Tier[];
   billingNotes: BillingNote[];
   methodology: {
@@ -234,9 +221,7 @@ export interface Translation {
     card1Body: string;
     card2Title: string;
     card2Body: string;
-    teamTitle: string;
   };
-  team: TeamMember[];
   faqPage: {
     title: string;
     description: string;

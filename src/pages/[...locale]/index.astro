@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import Seal from "../../components/Seal.astro";
 import StatRow from "../../components/StatRow.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
-import PlanCard from "../../components/PlanCard.astro";
 import CasinoCard from "../../components/CasinoCard.astro";
 import CtaBand from "../../components/CtaBand.astro";
 import { featuredCasinos } from "../../data/casinos";
@@ -118,31 +117,7 @@ const orgJsonLd = {
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="bg-surface-2 px-[clamp(20px,5vw,40px)] py-22.5">
-      <div class="mx-auto max-w-[1280px]">
-        <SectionHeading eyebrow={t.home.testimonialsEyebrow} title={t.home.testimonialsTitle} />
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
-          {
-            t.testimonials.map((item) => (
-              <div class="rounded-2xl border border-line bg-surface p-6.5">
-                <div class="mb-4.5 text-[15px] leading-relaxed text-ink">&ldquo;{item.quote}&rdquo;</div>
-                <div class="text-sm font-bold">{item.name}</div>
-                <div class="text-[13px] text-faint">{item.role}</div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-22.5">
-      <SectionHeading eyebrow={t.home.pricingEyebrow} title={t.home.pricingTitle} />
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-6">
-        {t.plans.map((plan, i) => <PlanCard locale={locale} plan={plan} featured={i === 1} featuresCount={4} />)}
-      </div>
-    </section>
 
     <CtaBand
       locale={locale}

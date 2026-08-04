@@ -20,8 +20,6 @@ const pl: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Wnioski rozpatrujemy w ciągu 48 godzin.",
-    button: "Złóż wniosek o certyfikat",
   },
   seal: {
     certified: "Certyfikowane",
@@ -31,241 +29,16 @@ const pl: PartialTranslation = {
     viewSealRecord: "Zobacz wpis pieczęci",
     youProvide: "Ty dostarczasz:",
   },
-  stats: [
-    { value: "340+", label: "Certyfikowanych kasyn" },
-    { value: "48 h", label: "Śr. start audytu" },
-    { value: "2.1M", label: "Skanów pieczęci / mies." },
-    { value: "6 lat", label: "Audytujemy operatorów" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Pieczęć zaufania Swift Secure, którą gracze sprawdzają przed wpłatą. Niezależnie audytujemy nowe kasyna online pod kątem uczciwości, licencji, bezpieczeństwa i szybkości wypłat.",
-    badge: "Zaufało nam ponad 340 licencjonowanych operatorów",
-    h1: "Pieczęć zaufania, którą gracze naprawdę sprawdzają przed wpłatą.",
-    sub: "Niezależnie audytujemy nowe kasyna pod kątem uczciwości, licencji, bezpieczeństwa i szybkości wypłat — a następnie wydajemy pieczęć, którą gracze zweryfikują w kilka sekund.",
-    ctaApply: "Złóż wniosek o certyfikat",
     ctaVerify: "Zweryfikuj pieczęć",
     howEyebrow: "Jak to działa",
-    howTitle: "Od wniosku do aktywnej pieczęci w niecałe 3 tygodnie",
-    criteriaEyebrow: "Co audytujemy",
-    criteriaTitle: "Pięć kontroli, które musi przejść każda pieczęć",
-    operatorsEyebrow: "Certyfikowani operatorzy",
-    operatorsTitle: "Kasyna z pieczęcią już dziś",
-    viewAllCasinos: "Zobacz wszystkie certyfikowane kasyna",
-    testimonialsEyebrow: "Ich słowami",
-    testimonialsTitle: "Operatorzy o zdobyciu certyfikatu",
-    pricingEyebrow: "Cennik",
-    pricingTitle: "Plany certyfikacji",
-    ctaHeading: "Gotowi zdobyć pieczęć, której ufają gracze?",
-    ctaSub: "Wnioski rozpatrujemy w ciągu 48 godzin.",
-    ctaButton: "Złóż wniosek o certyfikat",
   },
-  steps: [
-    { n: "1", title: "Wniosek", desc: "Prześlij dane licencyjne i informacje o platformie do wstępnej weryfikacji." },
-    { n: "2", title: "Audyt", desc: "Nasz zespół sprawdza uczciwość RNG, poziom bezpieczeństwa i historię wypłat." },
-    { n: "3", title: "Certyfikat", desc: "Operatorzy, którzy przejdą audyt, otrzymują pieczęć i publiczny wpis weryfikacyjny." },
-    { n: "4", title: "Monitoring", desc: "Powtarzamy audyt co kwartał, aby pieczęć pozostała aktywna i wiarygodna." },
-  ],
-  criteria: [
-    { title: "Uczciwość RNG i gier", desc: "Niezależne testy generatora liczb losowych i tabel wypłat." },
-    { title: "Status licencji", desc: "Weryfikacja w publicznym rejestrze jurysdykcji wydającej licencję." },
-    { title: "Bezpieczeństwo danych i środków", desc: "Standardy szyfrowania, wydzielone środki graczy, historia naruszeń." },
-    { title: "Terminowość wypłat", desc: "Audyt rzeczywistych czasów wypłat wobec warunków deklarowanych przez operatora." },
-    { title: "Narzędzia odpowiedzialnej gry", desc: "Limity wpłat, samowykluczenie i dostępne materiały wsparcia." },
-  ],
-  testimonials: [
-    {
-      quote: "Audyt był wnikliwy, ale zespół dokładnie wskazał, co poprawić. Certyfikacja zajęła 19 dni.",
-      name: "M. Andersen",
-      role: "Kierownik ds. zgodności, nowy operator",
-    },
-    {
-      quote: "Gracze pytają o pieczęć w zgłoszeniach do wsparcia. Stała się realnym sygnałem zaufania przy płatności.",
-      name: "R. Osei",
-      role: "Dyrektor ds. produktu",
-    },
-    {
-      quote: "Kwartalne ponowne audyty pilnują nas i sprawiają, że pieczęć coś znaczy.",
-      name: "J. Vale",
-      role: "Założyciel, operator na nowym rynku",
-    },
-  ],
   process: {
-    title: "Jak działa certyfikacja",
-    description:
-      "Sześć etapów od wniosku do aktywnej, monitorowanej pieczęci Swift Secure — zwykle 10–21 dni, zależnie od tempa dostarczania dokumentacji.",
-    eyebrow: "Proces",
-    h1: "Jak przebiega certyfikacja, krok po kroku",
-    sub: "Sześć etapów od wniosku do aktywnej, monitorowanej pieczęci — zwykle 10–21 dni, zależnie od tempa dostarczania dokumentacji.",
-    ctaHeading: "Gotowi rozpocząć audyt?",
-    ctaButton: "Złóż wniosek o certyfikat",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Wniosek i wstępna kwalifikacja",
-      duration: "1-2 dni",
-      desc: "Potwierdzamy, że Twoja platforma kwalifikuje się do audytu: działający adres, ważna licencja oraz realna baza graczy lub data startu.",
-      provide: "Dane firmy, informacje o licencji, adres platformy",
-    },
-    {
-      n: "2",
-      title: "Przegląd dokumentacji",
-      duration: "2-4 dni",
-      desc: "Nasz zespół ds. zgodności analizuje dokumenty licencyjne, regulamin i zasady odpowiedzialnej gry.",
-      provide: "Certyfikat licencji, regulamin, dokumenty odpowiedzialnej gry",
-    },
-    {
-      n: "3",
-      title: "Audyt techniczny",
-      duration: "5-8 dni",
-      desc: "Niezależne testy uczciwości RNG, tabel wypłat i bezpieczeństwa platformy (szyfrowanie, wydzielenie środków).",
-      provide: "Dostęp do API/środowiska testowego, opis architektury bezpieczeństwa",
-    },
-    {
-      n: "4",
-      title: "Weryfikacja wypłat",
-      duration: "3-5 dni",
-      desc: "Audytujemy rzeczywiste czasy wypłat wobec deklarowanych warunków na podstawie próbki danych transakcyjnych.",
-      provide: "Zanonimizowane logi wypłat (ostatnie 90 dni)",
-    },
-    {
-      n: "5",
-      title: "Decyzja certyfikacyjna",
-      duration: "1-2 dni",
-      desc: "Ustalenia trafiają do naszej komisji. Operatorzy, którzy przejdą audyt, otrzymują pieczęć i publiczny wpis weryfikacyjny.",
-      provide: "Nic więcej — o decyzji informujemy niezależnie od wyniku",
-    },
-    {
-      n: "6",
-      title: "Bieżący monitoring",
-      duration: "Co kwartał",
-      desc: "Powtarzamy audyt co kwartał, aby pieczęć pozostała aktywna. Pieczęcie zawieszamy natychmiast, gdy standardy spadają.",
-      provide: "Zaktualizowane logi co kwartał",
-    },
-  ],
   pricing: {
     title: "Cennik",
-    description: "Cennik Swift Secure: €200–€700 miesięcznie za znak zaufania stale poddawany ponownej kontroli, plus jednorazowy audyt wdrożeniowy. Bez udziału w przychodach.",
-    eyebrow: "Cennik",
-    h1: "Wycena jak żywego statusu, nie certyfikatu",
-    sub: "Opłata miesięczna utrzymuje znak aktywny i wciąż sprawdzany. Jedna opłata wdrożeniowa na start. Bez udziału w przychodach i bez niespodzianek przy odnowieniu.",
-    applyNow: "Złóż wniosek",
-    mostPopular: "NAJPOPULARNIEJSZY",
-    billingTitle: "Szczegóły rozliczeń",
-    addOnsTitle: "Opłaty jednorazowe",
-    addOnsSub: "Naliczane raz, dodatkowo do planu — albo osobno.",
-    tiersTitle: "Poziomy weryfikacji",
-    tiersSub: "Jak głęboko sięga kontrola. Każdy plan startuje od poziomu Bronze; Silver i Gold można dobrać do dowolnego planu.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "miesięcznie",
-      features: [
-        "Weryfikacja Bronze",
-        "Publiczna strona weryfikacji",
-        "Znak przypisany do domeny",
-        "Cotygodniowa automatyczna kontrola",
-        "Wskazówki dot. umieszczenia w kasie",
-        "Wsparcie e-mail",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "miesięcznie",
-      features: [
-        "Wszystko z planu Basic",
-        "Zweryfikowany profil w naszym katalogu",
-        "Auto-Mirror Sync dla nowych domen",
-        "Obecność w porównaniach dla graczy",
-        "Priorytetowa kolejka kontroli",
-        "Stały opiekun kontaktowy",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "miesięcznie",
-      features: [
-        "Wszystko z planu Pro",
-        "Monitoring dostępności gier",
-        "Miesięczne raporty pisemne",
-        "Obsługa wielu marek",
-        "Indywidualny zakres kontroli",
-        "Opiekun klienta",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Opłata wdrożeniowa",
-      price: "€300–500",
-      desc: "Jednorazowy audyt techniczny przed wydaniem znaku. Naliczany raz, na markę.",
-    },
-    {
-      name: "Kontrola w trybie pilnym",
-      price: "+€250",
-      desc: "48 godzin zamiast standardowej kolejki 10–14 dni. Przydatne przed startem kampanii.",
-    },
-    {
-      name: "Audyt zaufania przed startem",
-      price: "€1,000–2,000",
-      desc: "Pogłębiony raport jednorazowy przed wejściem na rynek: kontrole techniczne, licencja, regulamin, płatności, wsparcie. Bez abonamentu.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Gry są prawdziwe, a licencja istnieje.",
-      checks: [
-        "Gry ładują się od dostawcy lub legalnego agregatora treści",
-        "Katalog gier zgadza się z tym, co dostawca faktycznie publikuje",
-        "Sprawdzane przez proxy rezydencjalne w kilku regionach",
-        "Numer licencji porównany z publicznym rejestrem regulatora",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze plus wypłaty testowane prawdziwymi pieniędzmi.",
-      checks: [
-        "Wszystko z poziomu Bronze",
-        "Testowe wpłaty i wypłaty na realne kwoty",
-        "Rzeczywisty czas wypłaty zmierzony wobec twojego regulaminu",
-        "Rejestrowanie nieoczekiwanych żądań KYC przy wypłacie",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver plus audyt warunków bonusowych.",
-      checks: [
-        "Wszystko z poziomu Silver",
-        "Warunki bonusów sprawdzone listą klauzul drapieżnych",
-        "Limity maksymalnej wypłaty, obrót, klauzule konfiskaty",
-        "Historia skarg przejrzana tam, gdzie jest publiczna",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Miesięcznie, a nie certyfikat",
-      desc: "Znak pozostaje aktywny, bo wciąż go sprawdzamy. Rezygnacja z abonamentu oznacza zdjęcie znaku — to żywy status, a nie dokument, który zostaje u ciebie.",
-    },
-    {
-      title: "Bez udziału w przychodach",
-      desc: "Pobieramy stałą opłatę i żadnej części twoich przychodów, więc to, co znajdziemy, nie zależy od tego, ile zarabiasz.",
-    },
-    {
-      title: "Jeśli nie przejdziesz",
-      desc: "Zachowujesz raport z ustaleniami i możesz usunąć uchybienia oraz złożyć wniosek ponownie w standardowej, opublikowanej cenie. Twoja strona weryfikacji nigdy nie jest usuwana — aktualizujemy ją o to, co się zmieniło.",
-    },
-  ],
   methodology: {
     title: "Metodyka weryfikacji",
     description:
@@ -277,34 +50,13 @@ const pl: PartialTranslation = {
     limitsTitle: "Czego nie weryfikujemy",
     limitsSub:
       "Publikujemy to celowo. Pieczęć sugerująca więcej, niż faktycznie sprawdza, jest gorsza niż brak pieczęci, i tej linii trzymamy się, gdy u operatora z naszym znakiem coś pójdzie źle.",
-    monitoringTitle: "Kontrole trwają po umieszczeniu znaku",
-    monitoringBody:
-      "Crawler sprawdza każdego klienta co tydzień, a strona weryfikacji pokazuje datę ostatniego uruchomienia. Dlatego jest to abonament, a nie jednorazowy certyfikat: płacisz za status, który pozostaje aktualny, a nie za PDF sprzed pół roku.",
     suspensionTitle: "Jak dochodzi do zawieszenia znaku",
     suspensionBody:
       "Jeśli wpłynie skarga albo crawler zauważy coś nietypowego, operator ma 48 godzin na prywatną odpowiedź, zanim cokolwiek zmieni się publicznie — to chroni przed fałszywymi zgłoszeniami konkurencji. Jeśli problem jest realny, znak zostaje zdjęty, a strona weryfikacji zaktualizowana o fakty. Nie usuwamy stron za opłatą i nie ma opłaty, która sprawia, że ustalenie znika.",
     ctaHeading: "Chcesz, żebyśmy sprawdzili twoją platformę?",
     ctaButton: "Zamów skanowanie",
   },
-  limits: [
-    {
-      title: "RTP i to, czy pojedyncze wyniki są uczciwe",
-      desc: "Udowodnienie tego wymaga milionów spinów albo danych bezpośrednio od dostawcy. Żadna usługa weryfikacyjna na tym rynku realnie tego nie robi i nie będziemy sugerować, że my to robimy.",
-    },
-    {
-      title: "Czy operator jest w stanie wypłacić dużą wygraną",
-      desc: "Wypłacalności nie widać z zewnątrz. Testujemy, że wypłaty działają przy zwykłych kwotach; to nie jest gwarancja przy jackpocie.",
-    },
-    {
-      title: "Że operator nigdy nie potraktuje gracza źle",
-      desc: "Znak mówi, że gry są autentyczne, licencja jest prawdziwa, a wypłaty testowe przeszły. To nie jest świadectwo moralności.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Zweryfikowane",
-      desc: "Przeszło weryfikację i jest pod aktywnym cotygodniowym monitoringiem.",
-    },
     scanned: {
       label: "Przeskanowane",
       desc: "Sprawdzone automatycznie przez nasz crawler. Bez relacji handlowej i bez wydanego znaku.",
@@ -376,70 +128,14 @@ const pl: PartialTranslation = {
     card1Body: "Nie pobieramy udziału w przychodach ani prowizji od certyfikowanych operatorów. Opłata za audyt jest stała, więc naszych ustaleń nie da się kupić.",
     card2Title: "Rzetelnie, ale nie powoli",
     card2Body: "Nasz zespół audytowy to byli regulatorzy i inżynierowie RNG. Zbudowaliśmy proces tak, by był dokładny w kilka dni, a nie miesięcy.",
-    teamTitle: "Zespół audytowy",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Szefowa audytów, wcześniej MGA",
-      bio: "Osiem lat weryfikacji zgodności licencyjnej w krajowym urzędzie ds. gier.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Kierownik ds. RNG i bezpieczeństwa",
-      bio: "Dawniej inżynier ds. uczciwości gier, specjalista od certyfikacji RNG.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Wypłaty i zgodność",
-      bio: "Prowadzi audyty terminowości wypłat i kwartalny program recertyfikacji.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Najczęstsze pytania o certyfikację Swift Secure: koszt, czas trwania, ponowne audyty i weryfikacja pieczęci.",
     eyebrow: "FAQ",
     h1: "Najczęściej zadawane pytania",
     ctaHeading: "Masz jeszcze pytania?",
     ctaButton: "Skontaktuj się",
   },
-  faqs: [
-    {
-      q: "Ile kosztuje certyfikacja?",
-      a: "Plany zaczynają się od $1,900 za jednorazowy audyt obejmujący rok ważności pieczęci. Pełne szczegóły planów znajdziesz w cenniku.",
-    },
-    {
-      q: "Ile trwa audyt?",
-      a: "Zwykle 10–21 dni, zależnie od tempa dostarczania dokumentacji i dostępu testowego. Plan Rozwój obejmuje priorytetowy audyt w 10 dni.",
-    },
-    {
-      q: "Co się stanie, jeśli nie przejdziemy audytu?",
-      a: "Otrzymujesz szczegółowy raport z ustaleniami bez dodatkowych opłat. Możesz złożyć wniosek ponownie po usunięciu uchybień — bezpłatnie w ciągu 60 dni.",
-    },
-    {
-      q: "Czy audytujecie ponownie certyfikowane kasyna?",
-      a: "Tak. Każdy certyfikowany operator przechodzi ponowny audyt co kwartał. Pieczęcie zawieszamy natychmiast, gdy standardy spadną poniżej naszego progu.",
-    },
-    {
-      q: "Czy pieczęć dotyczy jednej jurysdykcji?",
-      a: "Nie. Nasz audyt sprawdza ważność licencji w jurysdykcji, w której działasz, a także kontrole niezależne od jurysdykcji, takie jak uczciwość RNG i szybkość wypłat.",
-    },
-    {
-      q: "Czy gracze mogą sami zweryfikować pieczęć?",
-      a: "Tak — każdy może wpisać identyfikator pieczęci na naszej stronie weryfikacji i w kilka sekund zobaczyć status certyfikacji, licencję i datę kolejnego audytu.",
-    },
-    {
-      q: "Co, jeśli nasza pieczęć zostanie cofnięta?",
-      a: "Informujemy natychmiast, podając powód. Publiczny wpis weryfikacyjny aktualizuje się w czasie rzeczywistym, więc gracze widzą aktualny status.",
-    },
-    {
-      q: "Czy pobieracie prowizje od kasyn?",
-      a: "Nie. Pobieramy wyłącznie stałą opłatę za audyt — bez udziału w przychodach i bez prowizji — więc bieżące płatności nie wpływają na ustalenia.",
-    },
-  ],
   badge: {
     title: "Pieczęć Swift Secure",
     description: "Referencja marki dla pieczęci certyfikacyjnej Swift Secure: wersja podstawowa, kompaktowa i na ciemne tło.",

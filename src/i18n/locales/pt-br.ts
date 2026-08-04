@@ -20,8 +20,6 @@ const ptBR: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Solicitações analisadas em até 48 horas.",
-    button: "Solicitar certificação",
   },
   seal: {
     certified: "Certificado",
@@ -31,241 +29,16 @@ const ptBR: PartialTranslation = {
     viewSealRecord: "Ver registro do selo",
     youProvide: "Você fornece:",
   },
-  stats: [
-    { value: "340+", label: "Cassinos certificados" },
-    { value: "48h", label: "Início médio da análise" },
-    { value: "2.1M", label: "Selos lidos / mês" },
-    { value: "6 anos", label: "Auditando operadores" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "O selo de confiança Swift Secure que os jogadores conferem antes de depositar. Auditamos de forma independente novos cassinos online em equidade, licenciamento, segurança e velocidade de pagamento.",
-    badge: "Escolhido por mais de 340 operadores licenciados",
-    h1: "O selo de confiança que os jogadores realmente conferem antes de depositar.",
-    sub: "Auditamos de forma independente novos cassinos em equidade, licenciamento, segurança e velocidade de pagamento — e emitimos um selo que os jogadores verificam em segundos.",
-    ctaApply: "Solicitar certificação",
     ctaVerify: "Verificar um selo",
     howEyebrow: "Como funciona",
-    howTitle: "Da solicitação ao selo ativo em menos de 3 semanas",
-    criteriaEyebrow: "O que auditamos",
-    criteriaTitle: "Cinco verificações que todo selo precisa passar",
-    operatorsEyebrow: "Operadores certificados",
-    operatorsTitle: "Cassinos que exibem o selo hoje",
-    viewAllCasinos: "Ver todos os cassinos certificados",
-    testimonialsEyebrow: "Nas palavras deles",
-    testimonialsTitle: "Operadores sobre a certificação",
-    pricingEyebrow: "Preços",
-    pricingTitle: "Planos de certificação",
-    ctaHeading: "Pronto para conquistar o selo em que os jogadores confiam?",
-    ctaSub: "Solicitações analisadas em até 48 horas.",
-    ctaButton: "Solicitar certificação",
   },
-  steps: [
-    { n: "1", title: "Solicitação", desc: "Envie os dados de licenciamento e da plataforma para uma primeira verificação de elegibilidade." },
-    { n: "2", title: "Auditoria", desc: "Nossa equipe analisa a equidade do RNG, a postura de segurança e o histórico de pagamentos." },
-    { n: "3", title: "Certificação", desc: "Os operadores aprovados recebem o selo e um registro público de verificação." },
-    { n: "4", title: "Monitoramento", desc: "Refazemos a auditoria a cada trimestre para manter o selo ativo e confiável." },
-  ],
-  criteria: [
-    { title: "RNG e equidade dos jogos", desc: "Testes independentes da geração de números aleatórios e das tabelas de pagamento." },
-    { title: "Situação da licença", desc: "Verificada no registro público da jurisdição emissora." },
-    { title: "Segurança de dados e fundos", desc: "Padrões de criptografia, fundos dos jogadores segregados, histórico de vazamentos." },
-    { title: "Agilidade nos saques", desc: "Tempos de saque auditados em relação aos termos informados pelo operador." },
-    { title: "Ferramentas de jogo responsável", desc: "Limites de depósito, autoexclusão e canais de apoio disponíveis." },
-  ],
-  testimonials: [
-    {
-      quote: "A auditoria foi rigorosa, mas a equipe nos disse exatamente o que corrigir. A certificação levou 19 dias.",
-      name: "M. Andersen",
-      role: "Líder de compliance, operador em lançamento",
-    },
-    {
-      quote: "Os jogadores perguntam sobre o selo nos chamados de suporte. Virou um sinal de confiança real na hora do pagamento.",
-      name: "R. Osei",
-      role: "Diretor de Produto",
-    },
-    {
-      quote: "As reauditorias trimestrais nos mantêm rigorosos e mantêm o selo com significado.",
-      name: "J. Vale",
-      role: "Fundador, operador em novos mercados",
-    },
-  ],
   process: {
-    title: "Como funciona a certificação",
-    description:
-      "Seis etapas da solicitação até um selo Swift Secure ativo e monitorado — normalmente de 10 a 21 dias, dependendo da rapidez com que a documentação chega.",
-    eyebrow: "O processo",
-    h1: "Como funciona a certificação, passo a passo",
-    sub: "Seis etapas da solicitação até um selo ativo e monitorado — normalmente de 10 a 21 dias, dependendo da rapidez com que a documentação chega.",
-    ctaHeading: "Pronto para começar sua auditoria?",
-    ctaButton: "Solicitar certificação",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Solicitação e verificação de elegibilidade",
-      duration: "1-2 dias",
-      desc: "Confirmamos que sua plataforma está apta para a análise: URL no ar, licença ativa e uma base real de jogadores ou data de lançamento.",
-      provide: "Dados da empresa, informações de licenciamento, URL da plataforma",
-    },
-    {
-      n: "2",
-      title: "Análise da documentação",
-      duration: "2-4 dias",
-      desc: "Nosso time de compliance analisa a documentação da licença, os termos de uso e as políticas de jogo responsável.",
-      provide: "Certificado da licença, termos de uso, políticas de jogo responsável",
-    },
-    {
-      n: "3",
-      title: "Auditoria técnica",
-      duration: "5-8 dias",
-      desc: "Testes independentes da equidade do RNG, das tabelas de pagamento e da segurança da plataforma (criptografia, segregação de fundos).",
-      provide: "Acesso à API/ambiente de teste, visão geral da arquitetura de segurança",
-    },
-    {
-      n: "4",
-      title: "Verificação dos pagamentos",
-      duration: "3-5 dias",
-      desc: "Auditamos os tempos reais de saque em relação aos termos que você informa, usando uma amostra de dados de transações.",
-      provide: "Registros de saques anonimizados (últimos 90 dias)",
-    },
-    {
-      n: "5",
-      title: "Decisão de certificação",
-      duration: "1-2 dias",
-      desc: "As conclusões vão para o nosso comitê de avaliação. Os operadores aprovados recebem o selo e um registro público de verificação.",
-      provide: "Mais nada — avisamos você de qualquer forma",
-    },
-    {
-      n: "6",
-      title: "Monitoramento contínuo",
-      duration: "Trimestral",
-      desc: "Refazemos a auditoria a cada trimestre para manter o selo ativo. Os selos são suspensos imediatamente se os padrões caírem.",
-      provide: "Registros atualizados a cada trimestre",
-    },
-  ],
   pricing: {
     title: "Preços",
-    description: "Preços da Swift Secure: €200–€700 por mês por um selo de confiança reverificado continuamente, mais uma auditoria técnica única de implantação. Sem divisão de receita.",
-    eyebrow: "Preços",
-    h1: "Cobrado como um status ativo, não como um certificado",
-    sub: "A mensalidade mantém o selo ativo e sendo reverificado. Uma taxa de implantação para entrar. Sem divisão de receita e sem surpresa na renovação.",
-    applyNow: "Solicitar agora",
-    mostPopular: "MAIS ESCOLHIDO",
-    billingTitle: "Detalhes de faturamento",
-    addOnsTitle: "Cobranças únicas",
-    addOnsSub: "Cobradas uma única vez, junto de um plano — ou separadamente.",
-    tiersTitle: "Níveis de verificação",
-    tiersSub: "Até onde a checagem vai. Todo plano começa no Bronze; Silver e Gold podem ser adicionados a qualquer plano.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "por mês",
-      features: [
-        "Verificação Bronze",
-        "Página pública de verificação",
-        "Selo travado no domínio",
-        "Reverificação automática semanal",
-        "Orientação de posicionamento no caixa",
-        "Suporte por e-mail",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "por mês",
-      features: [
-        "Tudo do plano Basic",
-        "Perfil verificado no nosso diretório",
-        "Auto-Mirror Sync para novos domínios",
-        "Presença nas comparações para jogadores",
-        "Fila prioritária de reverificação",
-        "Contato dedicado",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "por mês",
-      features: [
-        "Tudo do plano Pro",
-        "Monitoramento de disponibilidade dos jogos",
-        "Relatórios escritos mensais",
-        "Cobertura para várias marcas",
-        "Escopo de checagem personalizado",
-        "Gerente de contas",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Taxa de implantação",
-      price: "€300–500",
-      desc: "Auditoria técnica única antes de o selo ser emitido. Cobrada uma vez, por marca.",
-    },
-    {
-      name: "Análise acelerada",
-      price: "+€250",
-      desc: "48 horas em vez da fila padrão de 10 a 14 dias. Útil antes do lançamento de uma campanha.",
-    },
-    {
-      name: "Auditoria de confiança pré-lançamento",
-      price: "€1,000–2,000",
-      desc: "Relatório único e aprofundado antes de você entrar no ar: checagens técnicas, licença, termos, pagamentos, suporte. Não exige assinatura.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Os jogos são reais e a licença existe.",
-      checks: [
-        "Os jogos carregam a partir do provedor ou de um agregador de conteúdo legítimo",
-        "O catálogo de jogos bate com o que o provedor de fato publica",
-        "Checado por proxies residenciais em várias regiões",
-        "Número da licença conferido no registro público do regulador",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, mais saques testados com dinheiro real.",
-      checks: [
-        "Tudo do nível Bronze",
-        "Depósitos e saques de teste com valores reais",
-        "Tempo real de saque medido contra os termos que você informa",
-        "Registro de exigências de KYC inesperadas na hora do saque",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, mais uma auditoria dos seus termos de bônus.",
-      checks: [
-        "Tudo do nível Silver",
-        "Termos de bônus revisados contra uma lista de cláusulas abusivas",
-        "Tetos de saque máximo, múltiplos de rollover, cláusulas de confisco",
-        "Histórico de reclamações revisado quando é público",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Mensal, não um certificado",
-      desc: "O selo continua ativo porque seguimos checando. Se a assinatura para, o selo sai do ar — é um status ativo, não um documento que fica com você.",
-    },
-    {
-      title: "Sem divisão de receita",
-      desc: "Cobramos um valor fixo e nenhuma parte da sua receita, então o que encontramos não é afetado por quanto você fatura.",
-    },
-    {
-      title: "Se você não for aprovado",
-      desc: "Você fica com o relatório de conclusões e pode corrigir os problemas e solicitar de novo pelo preço padrão publicado. Sua página de verificação nunca é apagada — ela é atualizada com o que mudou.",
-    },
-  ],
   methodology: {
     title: "Metodologia de verificação",
     description:
@@ -277,34 +50,13 @@ const ptBR: PartialTranslation = {
     limitsTitle: "O que não verificamos",
     limitsSub:
       "Publicado de propósito. Um selo que sugere mais do que checa é pior do que selo nenhum, e é essa a linha que sustentamos quando algo dá errado em um operador que exibe o nosso selo.",
-    monitoringTitle: "As checagens continuam depois que o selo entra no ar",
-    monitoringBody:
-      "O crawler recheca cada cliente toda semana e a página de verificação mostra a data da última execução. É por isso que isto é uma assinatura, e não um certificado único: você paga por um status que se mantém atualizado, não por um PDF de seis meses atrás.",
     suspensionTitle: "Como um selo é suspenso",
     suspensionBody:
       "Se chega uma reclamação ou o crawler vê algo fora do padrão, o operador tem 48 horas para responder em particular antes de qualquer mudança pública — isso protege contra denúncias falsas de concorrentes. Se o problema for real, o selo sai do ar e a página de verificação é atualizada com os fatos. Não removemos páginas mediante pagamento, e não existe taxa que faça uma conclusão sumir.",
     ctaHeading: "Quer sua plataforma checada?",
     ctaButton: "Solicitar uma varredura",
   },
-  limits: [
-    {
-      title: "O RTP e se os resultados individuais são justos",
-      desc: "Provar isso exige milhões de giros ou dados direto do provedor. Nenhum serviço de verificação neste mercado faz isso de verdade, e não vamos insinuar que fazemos.",
-    },
-    {
-      title: "Se um operador consegue pagar um prêmio alto",
-      desc: "Solvência não é visível de fora. Testamos que os saques funcionam em valores comuns; isso não é garantia em caso de jackpot.",
-    },
-    {
-      title: "Que um operador nunca vai tratar mal um jogador",
-      desc: "O selo diz que os jogos são genuínos, que a licença é real e que os saques de teste caíram. Não é um atestado de caráter.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verificado",
-      desc: "Passou na verificação e está sob monitoramento semanal ativo.",
-    },
     scanned: {
       label: "Escaneado",
       desc: "Checado automaticamente pelo nosso crawler. Sem relação comercial e sem selo emitido.",
@@ -376,70 +128,14 @@ const ptBR: PartialTranslation = {
     card1Body: "Não recebemos participação na receita nem comissões de indicação dos operadores certificados. A taxa de auditoria é fixa, então nossas conclusões não estão à venda.",
     card2Title: "Rigorosos, não lentos",
     card2Body: "Nosso time de auditoria é formado por ex-reguladores e engenheiros de RNG. Montamos um processo minucioso que leva dias, não meses.",
-    teamTitle: "O time de auditoria",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Diretora de Auditorias, ex-MGA",
-      bio: "Oito anos analisando conformidade de licenciamento em uma autoridade nacional de jogos.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Líder de RNG e Segurança",
-      bio: "Ex-engenheiro de equidade de jogos especializado em certificação de RNG.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Pagamentos e Compliance",
-      bio: "Conduz as auditorias de agilidade nos saques e o programa trimestral de recertificação.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Perguntas frequentes sobre a certificação Swift Secure: custo, prazo, reauditorias e verificação do selo.",
     eyebrow: "FAQ",
     h1: "Perguntas frequentes",
     ctaHeading: "Ainda tem dúvidas?",
     ctaButton: "Fale conosco",
   },
-  faqs: [
-    {
-      q: "Quanto custa a certificação?",
-      a: "Os planos começam em $1,900 por uma auditoria única que cobre um ano de validade do selo. Veja a página de Preços para todos os detalhes.",
-    },
-    {
-      q: "Quanto tempo leva a auditoria?",
-      a: "Normalmente de 10 a 21 dias, dependendo da rapidez com que você envia a documentação e os acessos de teste. O plano Crescimento oferece análise prioritária em 10 dias.",
-    },
-    {
-      q: "O que acontece se reprovarmos na auditoria?",
-      a: "Você recebe um relatório detalhado das conclusões sem custo adicional. Pode solicitar de novo assim que corrigir os problemas — de graça dentro de 60 dias.",
-    },
-    {
-      q: "Vocês reauditam os cassinos certificados?",
-      a: "Sim. Todo operador certificado é reauditado a cada trimestre. Os selos são suspensos imediatamente se os padrões ficarem abaixo do nosso limite.",
-    },
-    {
-      q: "O selo vale para apenas uma jurisdição?",
-      a: "Não. Nossa auditoria checa a validade da licença na jurisdição em que você opera, junto com verificações independentes de jurisdição, como equidade do RNG e velocidade de pagamento.",
-    },
-    {
-      q: "Os jogadores podem verificar um selo sozinhos?",
-      a: "Sim — qualquer pessoa pode digitar um ID de selo na nossa página de verificação e ver em segundos a situação da certificação, a licença e a data da próxima auditoria.",
-    },
-    {
-      q: "E se o nosso selo for revogado?",
-      a: "Avisamos imediatamente, com o motivo. O registro público de verificação é atualizado em tempo real, para que os jogadores vejam a situação correta.",
-    },
-    {
-      q: "Vocês recebem comissões de indicação dos cassinos?",
-      a: "Não. Cobramos apenas a taxa fixa de auditoria — sem participação na receita, sem comissões de indicação — para que as conclusões não sejam influenciadas por pagamentos recorrentes.",
-    },
-  ],
   badge: {
     title: "O selo Swift Secure",
     description: "Referência de marca do selo de certificação Swift Secure: badge principal, versão compacta e variante para fundo escuro.",

@@ -20,8 +20,6 @@ const es: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Solicitudes revisadas en un plazo de 48 horas.",
-    button: "Solicitar certificación",
   },
   seal: {
     certified: "Certificado",
@@ -31,241 +29,16 @@ const es: PartialTranslation = {
     viewSealRecord: "Ver registro del sello",
     youProvide: "Usted aporta:",
   },
-  stats: [
-    { value: "340+", label: "Casinos certificados" },
-    { value: "48 h", label: "Inicio medio de revisión" },
-    { value: "2.1M", label: "Sellos escaneados / mes" },
-    { value: "6 años", label: "Auditando operadores" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "El sello de confianza Swift Secure que los jugadores comprueban antes de depositar. Auditamos de forma independiente los nuevos casinos online en equidad, licencias, seguridad y rapidez de pago.",
-    badge: "La confianza de más de 340 operadores con licencia",
-    h1: "El sello de confianza que los jugadores sí comprueban antes de depositar.",
-    sub: "Auditamos de forma independiente los nuevos casinos en equidad, licencias, seguridad y rapidez de pago, y emitimos un sello que los jugadores pueden verificar en segundos.",
-    ctaApply: "Solicitar certificación",
     ctaVerify: "Verificar un sello",
     howEyebrow: "Cómo funciona",
-    howTitle: "De la solicitud al sello activo en menos de 3 semanas",
-    criteriaEyebrow: "Qué auditamos",
-    criteriaTitle: "Cinco comprobaciones que todo sello debe superar",
-    operatorsEyebrow: "Operadores certificados",
-    operatorsTitle: "Casinos que llevan el sello hoy",
-    viewAllCasinos: "Ver todos los casinos certificados",
-    testimonialsEyebrow: "En sus palabras",
-    testimonialsTitle: "Operadores sobre certificarse",
-    pricingEyebrow: "Precios",
-    pricingTitle: "Planes de certificación",
-    ctaHeading: "¿Listo para obtener el sello en el que confían los jugadores?",
-    ctaSub: "Solicitudes revisadas en un plazo de 48 horas.",
-    ctaButton: "Solicitar certificación",
   },
-  steps: [
-    { n: "1", title: "Solicitar", desc: "Envíe los datos de su licencia y su plataforma para una primera comprobación de idoneidad." },
-    { n: "2", title: "Auditar", desc: "Nuestro equipo revisa la equidad del RNG, el nivel de seguridad y el historial de pagos." },
-    { n: "3", title: "Certificar", desc: "Los operadores que la superan reciben el sello y un registro público de verificación." },
-    { n: "4", title: "Supervisar", desc: "Reauditamos cada trimestre para mantener el sello activo y fiable." },
-  ],
-  criteria: [
-    { title: "RNG y equidad del juego", desc: "Pruebas independientes de la generación de números aleatorios y las tablas de pago." },
-    { title: "Estado de la licencia", desc: "Verificado con el registro público de la jurisdicción emisora." },
-    { title: "Seguridad de datos y fondos", desc: "Estándares de cifrado, fondos de jugadores segregados, historial de incidentes." },
-    { title: "Puntualidad en los pagos", desc: "Tiempos de retirada auditados frente a las condiciones declaradas por el operador." },
-    { title: "Herramientas de juego responsable", desc: "Límites de depósito, autoexclusión y recursos de ayuda disponibles." },
-  ],
-  testimonials: [
-    {
-      quote: "La auditoría fue exhaustiva, pero el equipo nos dijo exactamente qué corregir. La certificación tardó 19 días.",
-      name: "M. Andersen",
-      role: "Responsable de cumplimiento, operador en lanzamiento",
-    },
-    {
-      quote: "Los jugadores preguntan por el sello en los tickets de soporte. Se ha convertido en una señal de confianza real en el pago.",
-      name: "R. Osei",
-      role: "Director de producto",
-    },
-    {
-      quote: "Las reauditorías trimestrales nos mantienen honestos y hacen que el sello siga significando algo.",
-      name: "J. Vale",
-      role: "Fundador, operador en nuevos mercados",
-    },
-  ],
   process: {
-    title: "Cómo funciona la certificación",
-    description:
-      "Seis fases desde la solicitud hasta un sello Swift Secure activo y supervisado: normalmente de 10 a 21 días según la rapidez con la que llegue la documentación.",
-    eyebrow: "El proceso",
-    h1: "Cómo funciona la certificación, paso a paso",
-    sub: "Seis fases desde la solicitud hasta un sello activo y supervisado: normalmente de 10 a 21 días según la rapidez con la que llegue la documentación.",
-    ctaHeading: "¿Listo para empezar su auditoría?",
-    ctaButton: "Solicitar certificación",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Solicitud y comprobación de idoneidad",
-      duration: "1-2 días",
-      desc: "Confirmamos que su plataforma es apta para la revisión: URL activa, licencia vigente y una base real de jugadores o una fecha de lanzamiento.",
-      provide: "Datos de la empresa, información de licencia, URL de la plataforma",
-    },
-    {
-      n: "2",
-      title: "Revisión documental",
-      duration: "2-4 días",
-      desc: "Nuestro equipo de cumplimiento revisa la documentación de licencia, los términos de servicio y las políticas de juego responsable.",
-      provide: "Certificado de licencia, términos y condiciones, políticas de juego responsable",
-    },
-    {
-      n: "3",
-      title: "Auditoría técnica",
-      duration: "5-8 días",
-      desc: "Pruebas independientes de la equidad del RNG, las tablas de pago y la seguridad de la plataforma (cifrado, segregación de fondos).",
-      provide: "Acceso de API/pruebas, resumen de la arquitectura de seguridad",
-    },
-    {
-      n: "4",
-      title: "Verificación de pagos",
-      duration: "3-5 días",
-      desc: "Auditamos los tiempos reales de retirada frente a sus condiciones declaradas usando datos de transacciones muestreados.",
-      provide: "Registros de retiradas anonimizados (últimos 90 días)",
-    },
-    {
-      n: "5",
-      title: "Decisión de certificación",
-      duration: "1-2 días",
-      desc: "Los hallazgos pasan a nuestro comité de revisión. Los operadores que la superan reciben el sello y un registro público de verificación.",
-      provide: "Nada más: le avisamos en cualquier caso",
-    },
-    {
-      n: "6",
-      title: "Supervisión continua",
-      duration: "Trimestral",
-      desc: "Reauditamos cada trimestre para mantener el sello activo. Los sellos se suspenden de inmediato si bajan los estándares.",
-      provide: "Registros actualizados cada trimestre",
-    },
-  ],
   pricing: {
     title: "Precios",
-    description: "Precios de Swift Secure: de €200 a €700 al mes por un distintivo de confianza que se revisa de forma continua, más una auditoría inicial única. Sin reparto de ingresos.",
-    eyebrow: "Precios",
-    h1: "Con precio de estado activo, no de certificado",
-    sub: "Una cuota mensual mantiene el distintivo activo y revisado. Una tarifa de alta para entrar. Sin reparto de ingresos ni sorpresas en la renovación.",
-    applyNow: "Solicitar ahora",
-    mostPopular: "MÁS POPULAR",
-    billingTitle: "Detalles de facturación",
-    addOnsTitle: "Cargos únicos",
-    addOnsSub: "Se cobran una sola vez, además de un plan o por separado.",
-    tiersTitle: "Niveles de verificación",
-    tiersSub: "Hasta dónde llega la revisión. Todos los planes empiezan en Bronze; Silver y Gold están disponibles en cualquier plan.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "al mes",
-      features: [
-        "Verificación Bronze",
-        "Página pública de verificación",
-        "Distintivo vinculado al dominio",
-        "Revisión automática semanal",
-        "Asesoramiento de ubicación en el cajero",
-        "Soporte por correo electrónico",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "al mes",
-      features: [
-        "Todo lo de Basic",
-        "Perfil verificado en nuestro directorio",
-        "Auto-Mirror Sync para nuevos dominios",
-        "Presencia en comparativas para jugadores",
-        "Cola prioritaria de revisión",
-        "Contacto dedicado",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "al mes",
-      features: [
-        "Todo lo de Pro",
-        "Supervisión de disponibilidad de juegos",
-        "Informes escritos mensuales",
-        "Cobertura multimarca",
-        "Alcance de revisión a medida",
-        "Gestor de cuenta",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Tarifa de alta",
-      price: "€300–500",
-      desc: "Auditoría técnica única antes de emitir el distintivo. Se cobra una sola vez, por marca.",
-    },
-    {
-      name: "Revisión acelerada",
-      price: "+€250",
-      desc: "48 horas en lugar de la cola habitual de 10–14 días. Útil antes del lanzamiento de una campaña.",
-    },
-    {
-      name: "Auditoría de confianza previa al lanzamiento",
-      price: "€1,000–2,000",
-      desc: "Informe único y exhaustivo antes de salir en vivo: revisiones técnicas, licencia, términos, pagos y soporte. No requiere suscripción.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Los juegos son reales y la licencia existe.",
-      checks: [
-        "Los juegos se cargan desde el proveedor o un agregador de contenido legítimo",
-        "El catálogo de juegos coincide con lo que el proveedor publica realmente",
-        "Comprobado a través de proxies residenciales en varias regiones",
-        "Número de licencia cotejado con el registro público del regulador",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, más retiradas probadas con dinero real.",
-      checks: [
-        "Todo lo de Bronze",
-        "Depósitos y retiradas de prueba por importes reales",
-        "Tiempo real de retirada medido frente a sus términos declarados",
-        "Se registran las exigencias de KYC inesperadas al retirar",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, más una auditoría de sus términos de bonos.",
-      checks: [
-        "Todo lo de Silver",
-        "Términos de bonos revisados con una lista de cláusulas abusivas",
-        "Límites máximos de retirada, multiplicadores de apuesta, cláusulas de confiscación",
-        "Historial de reclamaciones revisado cuando es público",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Mensual, no un certificado",
-      desc: "El distintivo sigue activo porque seguimos revisando. Si cancela la suscripción, el distintivo se retira: es un estado activo, no un documento que usted conserva.",
-    },
-    {
-      title: "Sin reparto de ingresos",
-      desc: "Cobramos una tarifa plana y ninguna parte de sus ingresos, así que lo que encontramos no depende de cuánto gane usted.",
-    },
-    {
-      title: "Si no la supera",
-      desc: "Conserva el informe de hallazgos y puede corregir los problemas y volver a solicitarla al precio público estándar. Su página de verificación nunca se elimina: se actualiza con lo que ha cambiado.",
-    },
-  ],
   methodology: {
     title: "Metodología de verificación",
     description:
@@ -277,34 +50,13 @@ const es: PartialTranslation = {
     limitsTitle: "Qué no verificamos",
     limitsSub:
       "Publicado a propósito. Un sello que insinúa más de lo que comprueba es peor que ningún sello, y esta es la línea que mantenemos cuando algo sale mal en un operador que lleva nuestro distintivo.",
-    monitoringTitle: "Las comprobaciones continúan después de emitir el distintivo",
-    monitoringBody:
-      "El rastreador revisa a cada cliente cada semana y la página de verificación muestra la fecha de la última ejecución. Por eso esto es una suscripción y no un certificado único: paga por un estado que se mantiene al día, no por un PDF de hace seis meses.",
     suspensionTitle: "Cómo se suspende un distintivo",
     suspensionBody:
       "Si llega una reclamación o el rastreador detecta algo anómalo, el operador dispone de 48 horas para responder en privado antes de que cambie nada públicamente: eso protege frente a denuncias falsas de la competencia. Si el problema es real, el distintivo se retira y la página de verificación se actualiza con los hechos. No retiramos páginas a cambio de dinero y no existe ninguna tarifa que haga desaparecer un hallazgo.",
     ctaHeading: "¿Quiere que revisemos su plataforma?",
     ctaButton: "Solicitar un escaneo",
   },
-  limits: [
-    {
-      title: "El RTP y si los resultados individuales son justos",
-      desc: "Demostrarlo requiere millones de giros o datos directos del proveedor. Ningún servicio de verificación de este mercado lo hace de verdad, y no vamos a dar a entender que nosotros sí.",
-    },
-    {
-      title: "Si un operador puede pagar un premio grande",
-      desc: "La solvencia no se ve desde fuera. Comprobamos que las retiradas funcionan con importes ordinarios; eso no es una garantía sobre un bote.",
-    },
-    {
-      title: "Que un operador nunca vaya a tratar mal a un jugador",
-      desc: "El distintivo dice que los juegos son genuinos, que la licencia es real y que las retiradas de prueba se completaron. No es una carta de recomendación.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verificado",
-      desc: "Ha superado la verificación y está bajo supervisión semanal activa.",
-    },
     scanned: {
       label: "Escaneado",
       desc: "Comprobado automáticamente por nuestro rastreador. Sin relación comercial y sin distintivo emitido.",
@@ -376,70 +128,14 @@ const es: PartialTranslation = {
     card1Body: "No aceptamos reparto de ingresos ni comisiones por recomendación de los operadores certificados. La tarifa de auditoría es fija, así que nuestros hallazgos no se pueden comprar.",
     card2Title: "Rigurosos, no lentos",
     card2Body: "Nuestro equipo de auditoría lo forman ex reguladores e ingenieros de RNG. Diseñamos el proceso para ser exhaustivos en días, no en meses.",
-    teamTitle: "El equipo de auditoría",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Directora de auditorías, ex-MGA",
-      bio: "Ocho años revisando el cumplimiento de licencias en una autoridad nacional del juego.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Responsable de RNG y seguridad",
-      bio: "Antiguo ingeniero de equidad de juego especializado en certificación de RNG.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Pagos y cumplimiento",
-      bio: "Dirige las auditorías de puntualidad de pagos y el programa trimestral de recertificación.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Preguntas frecuentes sobre la certificación Swift Secure: coste, plazos, reauditorías y verificación del sello.",
     eyebrow: "FAQ",
     h1: "Preguntas frecuentes",
     ctaHeading: "¿Le queda alguna duda?",
     ctaButton: "Contactar",
   },
-  faqs: [
-    {
-      q: "¿Cuánto cuesta la certificación?",
-      a: "Los planes empiezan en $1,900 por una auditoría única que cubre un año de validez del sello. Consulte la página de Precios para ver todos los detalles.",
-    },
-    {
-      q: "¿Cuánto dura la auditoría?",
-      a: "Normalmente de 10 a 21 días según la rapidez con la que aporte la documentación y el acceso de pruebas. Nuestro plan Crecimiento ofrece una revisión prioritaria de 10 días.",
-    },
-    {
-      q: "¿Qué pasa si no superamos la auditoría?",
-      a: "Recibe un informe detallado de hallazgos sin coste adicional. Puede volver a solicitarla una vez corregidos los problemas, gratis dentro de los 60 días.",
-    },
-    {
-      q: "¿Reauditan a los casinos certificados?",
-      a: "Sí. Todos los operadores certificados se reauditan cada trimestre. Los sellos se suspenden de inmediato si los estándares bajan de nuestro umbral.",
-    },
-    {
-      q: "¿El sello es específico de una jurisdicción?",
-      a: "No. Nuestra auditoría comprueba la validez de la licencia en la jurisdicción bajo la que opere, junto con comprobaciones independientes de la jurisdicción como la equidad del RNG y la rapidez de pago.",
-    },
-    {
-      q: "¿Pueden los jugadores verificar un sello por su cuenta?",
-      a: "Sí: cualquiera puede introducir un ID de sello en nuestra página de verificación para ver en segundos el estado de certificación, la licencia y la fecha de la próxima auditoría.",
-    },
-    {
-      q: "¿Y si nos revocan el sello?",
-      a: "Le avisamos de inmediato indicando el motivo. El registro público de verificación se actualiza en tiempo real para que los jugadores vean el estado correcto.",
-    },
-    {
-      q: "¿Cobran comisiones por recomendación a los casinos?",
-      a: "No. Solo cobramos la tarifa fija de auditoría, sin reparto de ingresos ni comisiones, para que los hallazgos no puedan verse influidos por pagos continuados.",
-    },
-  ],
   badge: {
     title: "El sello Swift Secure",
     description: "Referencia de marca del sello de certificación Swift Secure: sello principal, versión compacta y variante para fondos oscuros.",

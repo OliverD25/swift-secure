@@ -28,7 +28,9 @@ HTTPS with HSTS enabled, mobile viewport set correctly, no insecure content on a
 
 ## What we did not check
 
-Anything behind a login. Whether your games come from the studios named on the site — that cannot be established from outside, and we do not claim it. RNG fairness, which needs an accredited lab.
+**On your site specifically, two of our four checks did not run:** the licence register match and the mobile time-to-register measurement. A report only ever contains checks that actually ran — if one is not named above, it did not happen. Both are available free on request.
+
+In general we cannot check anything behind a login, whether your games come from the studios named on the site — that cannot be established from outside, and we do not claim it — or RNG fairness, which needs an accredited lab.
 
 ---
 

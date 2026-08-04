@@ -20,8 +20,6 @@ const nl: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Aanvragen worden binnen 48 uur beoordeeld.",
-    button: "Certificering aanvragen",
   },
   seal: {
     certified: "Gecertificeerd",
@@ -31,241 +29,16 @@ const nl: PartialTranslation = {
     viewSealRecord: "Bekijk zegelregistratie",
     youProvide: "Jij levert aan:",
   },
-  stats: [
-    { value: "340+", label: "Casino's gecertificeerd" },
-    { value: "48u", label: "Gem. start beoordeling" },
-    { value: "2.1M", label: "Zegels gescand / mnd" },
-    { value: "6 jr", label: "Operators auditen" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Het Swift Secure-vertrouwenszegel dat spelers controleren voordat ze storten. Wij auditen nieuwe online casino's onafhankelijk op eerlijkheid, licenties, beveiliging en uitbetalingssnelheid.",
-    badge: "Vertrouwd door 340+ gelicentieerde operators",
-    h1: "Het vertrouwenszegel dat spelers écht controleren voordat ze storten.",
-    sub: "Wij auditen nieuwe casino's onafhankelijk op eerlijkheid, licenties, beveiliging en uitbetalingssnelheid — en geven dan een zegel uit dat spelers in seconden kunnen verifiëren.",
-    ctaApply: "Certificering aanvragen",
     ctaVerify: "Zegel verifiëren",
     howEyebrow: "Hoe het werkt",
-    howTitle: "Van aanvraag tot een live zegel in minder dan 3 weken",
-    criteriaEyebrow: "Wat we auditen",
-    criteriaTitle: "Vijf controles die elk zegel moet doorstaan",
-    operatorsEyebrow: "Gecertificeerde operators",
-    operatorsTitle: "Casino's die het zegel vandaag voeren",
-    viewAllCasinos: "Bekijk alle gecertificeerde casino's",
-    testimonialsEyebrow: "In hun woorden",
-    testimonialsTitle: "Operators over hun certificering",
-    pricingEyebrow: "Tarieven",
-    pricingTitle: "Certificeringspakketten",
-    ctaHeading: "Klaar om het zegel te verdienen dat spelers vertrouwen?",
-    ctaSub: "Aanvragen worden binnen 48 uur beoordeeld.",
-    ctaButton: "Certificering aanvragen",
   },
-  steps: [
-    { n: "1", title: "Aanvragen", desc: "Dien je licentie- en platformgegevens in voor een eerste geschiktheidscheck." },
-    { n: "2", title: "Auditen", desc: "Ons team beoordeelt de eerlijkheid van de RNG, de beveiliging en de uitbetalingshistorie." },
-    { n: "3", title: "Certificeren", desc: "Operators die slagen, krijgen het zegel en een openbare verificatieregistratie." },
-    { n: "4", title: "Monitoren", desc: "We auditen elk kwartaal opnieuw om het zegel live en betrouwbaar te houden." },
-  ],
-  criteria: [
-    { title: "RNG & speleerlijkheid", desc: "Onafhankelijke tests van de random-nummergeneratie en de uitbetalingstabellen." },
-    { title: "Licentiestatus", desc: "Geverifieerd in het openbare register van de uitgevende jurisdictie." },
-    { title: "Data- en fondsbeveiliging", desc: "Encryptiestandaarden, gescheiden spelersgelden, historie van datalekken." },
-    { title: "Uitbetalingssnelheid", desc: "Uitbetalingstijden geaudit tegenover de voorwaarden van de operator." },
-    { title: "Tools voor verantwoord spelen", desc: "Stortlimieten, zelfuitsluiting en ondersteuningsbronnen aanwezig." },
-  ],
-  testimonials: [
-    {
-      quote: "De audit was grondig, maar het team vertelde ons precies wat we moesten aanpassen. De certificering duurde 19 dagen.",
-      name: "M. Andersen",
-      role: "Compliance lead, nieuwe operator",
-    },
-    {
-      quote: "Spelers vragen naar het zegel in supporttickets. Het is een echt vertrouwenssignaal bij het afrekenen geworden.",
-      name: "R. Osei",
-      role: "Hoofd Product",
-    },
-    {
-      quote: "De kwartaalaudits houden ons scherp en houden het zegel betekenisvol.",
-      name: "J. Vale",
-      role: "Oprichter, operator in nieuwe markten",
-    },
-  ],
   process: {
-    title: "Hoe certificering werkt",
-    description:
-      "Zes fasen van aanvraag tot een live, gemonitord Swift Secure-zegel — meestal 10–21 dagen, afhankelijk van hoe snel de documentatie binnenkomt.",
-    eyebrow: "Het proces",
-    h1: "Hoe certificering werkt, stap voor stap",
-    sub: "Zes fasen van aanvraag tot een live, gemonitord zegel — meestal 10–21 dagen, afhankelijk van hoe snel de documentatie binnenkomt.",
-    ctaHeading: "Klaar om je audit te starten?",
-    ctaButton: "Certificering aanvragen",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Aanvraag & geschiktheidscheck",
-      duration: "1-2 dagen",
-      desc: "We bevestigen dat je platform geschikt is voor beoordeling: live URL, actieve licentie en een echte spelersbasis of lanceerdatum.",
-      provide: "Bedrijfsgegevens, licentie-informatie, platform-URL",
-    },
-    {
-      n: "2",
-      title: "Documentatiebeoordeling",
-      duration: "2-4 dagen",
-      desc: "Ons complianceteam beoordeelt de licentiepapieren, de algemene voorwaarden en het beleid voor verantwoord spelen.",
-      provide: "Licentiecertificaat, voorwaarden, beleid verantwoord spelen",
-    },
-    {
-      n: "3",
-      title: "Technische audit",
-      duration: "5-8 dagen",
-      desc: "Onafhankelijke tests van RNG-eerlijkheid, uitbetalingstabellen en platformbeveiliging (encryptie, scheiding van gelden).",
-      provide: "API-/testtoegang, overzicht van de beveiligingsarchitectuur",
-    },
-    {
-      n: "4",
-      title: "Uitbetalingsverificatie",
-      duration: "3-5 dagen",
-      desc: "We auditen de werkelijke uitbetalingstijden tegenover je eigen voorwaarden op basis van een steekproef uit je transactiedata.",
-      provide: "Geanonimiseerde uitbetalingslogs (laatste 90 dagen)",
-    },
-    {
-      n: "5",
-      title: "Certificeringsbesluit",
-      duration: "1-2 dagen",
-      desc: "De bevindingen gaan naar onze beoordelingscommissie. Operators die slagen, krijgen het zegel en een openbare verificatieregistratie.",
-      provide: "Verder niets — we laten het je hoe dan ook weten",
-    },
-    {
-      n: "6",
-      title: "Doorlopende monitoring",
-      duration: "Per kwartaal",
-      desc: "We auditen elk kwartaal opnieuw om het zegel live te houden. Zegels worden direct opgeschort als de standaarden zakken.",
-      provide: "Elk kwartaal bijgewerkte logs",
-    },
-  ],
   pricing: {
     title: "Tarieven",
-    description: "Swift Secure-tarieven: €200 tot €700 per maand voor een badge die doorlopend opnieuw wordt gecontroleerd, plus een eenmalige setup-audit. Geen omzetdeling.",
-    eyebrow: "Tarieven",
-    h1: "Geprijsd als een actuele status, niet als een certificaat",
-    sub: "Een maandbedrag houdt de badge actief en opnieuw gecontroleerd. Eén setupvergoeding om te starten. Geen omzetdeling, geen verrassingen bij verlenging.",
-    applyNow: "Nu aanvragen",
-    mostPopular: "MEEST GEKOZEN",
-    billingTitle: "Facturatiedetails",
-    addOnsTitle: "Eenmalige kosten",
-    addOnsSub: "Eenmalig in rekening gebracht, bovenop een pakket of los.",
-    tiersTitle: "Verificatieniveaus",
-    tiersSub: "Hoe diep de controle gaat. Elk pakket start op Bronze; Silver en Gold zijn bij elk pakket beschikbaar.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "per maand",
-      features: [
-        "Bronze-verificatie",
-        "Openbare verificatiepagina",
-        "Aan het domein gekoppelde badge",
-        "Wekelijkse automatische hercontrole",
-        "Advies over plaatsing bij de kassa",
-        "E-mailondersteuning",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "per maand",
-      features: [
-        "Alles uit Basic",
-        "Geverifieerd profiel in onze directory",
-        "Auto-Mirror Sync voor nieuwe domeinen",
-        "Vermelding in vergelijkingen voor spelers",
-        "Voorrang in de hercontrolewachtrij",
-        "Vast aanspreekpunt",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "per maand",
-      features: [
-        "Alles uit Pro",
-        "Monitoring van spelbeschikbaarheid",
-        "Maandelijkse schriftelijke rapportages",
-        "Dekking voor meerdere merken",
-        "Controlescope op maat",
-        "Accountmanager",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Setupvergoeding",
-      price: "€300–500",
-      desc: "Eenmalige technische audit voordat de badge wordt uitgegeven. Eenmalig in rekening gebracht, per merk.",
-    },
-    {
-      name: "Versnelde beoordeling",
-      price: "+€250",
-      desc: "48 uur in plaats van de standaard wachtrij van 10–14 dagen. Handig vlak voor een campagnelancering.",
-    },
-    {
-      name: "Trust Audit vóór lancering",
-      price: "€1,000–2,000",
-      desc: "Diepgaand eenmalig rapport voordat je live gaat: technische controles, licentie, voorwaarden, betalingen, support. Geen abonnement nodig.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "De spellen zijn echt en de licentie bestaat.",
-      checks: [
-        "Spellen laden vanaf de provider of een legitieme contentaggregator",
-        "De spelcatalogus komt overeen met wat de provider daadwerkelijk publiceert",
-        "Gecontroleerd via residentiële proxy's in meerdere regio's",
-        "Licentienummer vergeleken met het openbare register van de toezichthouder",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, plus uitbetalingen getest met echt geld.",
-      checks: [
-        "Alles uit Bronze",
-        "Teststortingen en -opnames met echte bedragen",
-        "Werkelijke opnametijd gemeten tegen je eigen voorwaarden",
-        "Onverwachte KYC-eisen bij het uitbetalen worden vastgelegd",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, plus een audit van je bonusvoorwaarden.",
-      checks: [
-        "Alles uit Silver",
-        "Bonusvoorwaarden getoetst aan een checklist met roofzuchtige clausules",
-        "Maximale uitbetalingslimieten, inzetmultipliers, verbeurdverklaringsclausules",
-        "Klachtenhistorie beoordeeld waar die openbaar is",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Maandelijks, geen certificaat",
-      desc: "De badge blijft actief omdat wij blijven hercontroleren. Stop je het abonnement, dan verdwijnt de badge — het is een actuele status, geen document dat je houdt.",
-    },
-    {
-      title: "Geen omzetdeling",
-      desc: "Wij rekenen een vast bedrag en nemen geen deel van je omzet, dus wat wij vinden hangt niet af van hoeveel je verdient.",
-    },
-    {
-      title: "Als je niet slaagt",
-      desc: "Je houdt het bevindingenrapport en kunt de problemen oplossen en opnieuw aanvragen tegen de standaard gepubliceerde prijs. Je verificatiepagina wordt nooit verwijderd — die wordt bijgewerkt met wat er is veranderd.",
-    },
-  ],
   methodology: {
     title: "Verificatiemethodiek",
     description:
@@ -277,34 +50,13 @@ const nl: PartialTranslation = {
     limitsTitle: "Wat wij niet verifiëren",
     limitsSub:
       "Bewust gepubliceerd. Een zegel dat meer suggereert dan het controleert is slechter dan geen zegel, en dat is de lijn die wij aanhouden wanneer er iets misgaat bij een operator met onze badge.",
-    monitoringTitle: "De controles gaan door nadat de badge er staat",
-    monitoringBody:
-      "De crawler controleert elke klant wekelijks opnieuw en de verificatiepagina toont de datum van de laatste run. Daarom is dit een abonnement en geen eenmalig certificaat: je betaalt voor een status die actueel blijft, niet voor een pdf van zes maanden geleden.",
     suspensionTitle: "Hoe een badge wordt geschorst",
     suspensionBody:
       "Komt er een klacht binnen of ziet de crawler iets afwijkends, dan krijgt de operator 48 uur om privé te reageren voordat er publiekelijk iets verandert — dat beschermt tegen valse meldingen van concurrenten. Is het probleem echt, dan verdwijnt de badge en wordt de verificatiepagina bijgewerkt met de feiten. Wij verwijderen geen pagina's tegen betaling, en er is geen bedrag waarmee een bevinding verdwijnt.",
     ctaHeading: "Wil je je platform laten controleren?",
     ctaButton: "Scan aanvragen",
   },
-  limits: [
-    {
-      title: "RTP en of afzonderlijke uitkomsten eerlijk zijn",
-      desc: "Dat aantonen vraagt miljoenen spins of directe data van de provider. Geen enkele verificatiedienst op deze markt doet dat echt, en wij gaan niet suggereren dat wij het wel doen.",
-    },
-    {
-      title: "Of een operator een grote winst kan uitbetalen",
-      desc: "Solvabiliteit is van buitenaf niet zichtbaar. Wij testen dat opnames werken bij gewone bedragen; dat is geen garantie over een jackpot.",
-    },
-    {
-      title: "Dat een operator een speler nooit slecht zal behandelen",
-      desc: "De badge zegt dat de spellen echt zijn, de licentie bestaat en testopnames zijn doorgekomen. Het is geen karakterverklaring.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Geverifieerd",
-      desc: "Verificatie doorstaan en onder actieve wekelijkse monitoring.",
-    },
     scanned: {
       label: "Gescand",
       desc: "Automatisch gecontroleerd door onze crawler. Geen commerciële relatie en geen badge uitgegeven.",
@@ -376,70 +128,14 @@ const nl: PartialTranslation = {
     card1Body: "We nemen geen omzetdeling of verwijsvergoedingen aan van gecertificeerde operators. De auditvergoeding is vast, dus onze bevindingen zijn niet te koop.",
     card2Title: "Grondig, niet traag",
     card2Body: "Ons auditteam bestaat uit oud-toezichthouders en RNG-engineers. We bouwden het proces zo dat het grondig is in dagen, niet maanden.",
-    teamTitle: "Het auditteam",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Hoofd Audits, ex-MGA",
-      bio: "Acht jaar ervaring met licentiecompliance bij een nationale kansspelautoriteit.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Hoofd RNG & Beveiliging",
-      bio: "Voormalig engineer speleerlijkheid, gespecialiseerd in RNG-certificering.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Uitbetalingen & Compliance",
-      bio: "Leidt de audits van uitbetalingssnelheid en het kwartaalprogramma voor hercertificering.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Veelgestelde vragen over Swift Secure-certificering: kosten, doorlooptijd, heraudits en zegelverificatie.",
     eyebrow: "FAQ",
     h1: "Veelgestelde vragen",
     ctaHeading: "Nog vragen?",
     ctaButton: "Neem contact op",
   },
-  faqs: [
-    {
-      q: "Wat kost certificering?",
-      a: "Pakketten beginnen bij $1,900 voor een eenmalige audit met één jaar zegelgeldigheid. Zie de pagina Tarieven voor alle details.",
-    },
-    {
-      q: "Hoe lang duurt de audit?",
-      a: "Meestal 10–21 dagen, afhankelijk van hoe snel je documentatie en testtoegang aanlevert. Ons Groei-pakket biedt een prioriteitsbeoordeling in 10 dagen.",
-    },
-    {
-      q: "Wat gebeurt er als we de audit niet halen?",
-      a: "Je krijgt zonder extra kosten een gedetailleerd bevindingenrapport. Je kunt opnieuw aanvragen zodra de problemen zijn opgelost — binnen 60 dagen kosteloos.",
-    },
-    {
-      q: "Auditen jullie gecertificeerde casino's opnieuw?",
-      a: "Ja. Elke gecertificeerde operator wordt elk kwartaal opnieuw geaudit. Zegels worden direct opgeschort als de standaarden onder onze drempel zakken.",
-    },
-    {
-      q: "Geldt het zegel voor één jurisdictie?",
-      a: "Nee. Onze audit controleert de geldigheid van je licentie in de jurisdictie waaronder je opereert, naast jurisdictie-onafhankelijke controles zoals RNG-eerlijkheid en uitbetalingssnelheid.",
-    },
-    {
-      q: "Kunnen spelers een zegel zelf verifiëren?",
-      a: "Ja — iedereen kan een zegel-ID invoeren op onze verificatiepagina en ziet in seconden de certificeringsstatus, de licentie en de datum van de volgende audit.",
-    },
-    {
-      q: "Wat als ons zegel wordt ingetrokken?",
-      a: "We laten het je direct weten, met de reden erbij. De openbare verificatieregistratie wordt in realtime bijgewerkt, zodat spelers de juiste status zien.",
-    },
-    {
-      q: "Nemen jullie verwijsvergoedingen aan van casino's?",
-      a: "Nee. We rekenen alleen de vaste auditvergoeding — geen omzetdeling, geen verwijsvergoedingen — zodat bevindingen niet beïnvloed kunnen worden door doorlopende betalingen.",
-    },
-  ],
   badge: {
     title: "Het Swift Secure-zegel",
     description: "Merkreferentie voor het Swift Secure-certificeringszegel: primaire badge, compacte lockup en variant voor donkere achtergrond.",

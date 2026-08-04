@@ -20,8 +20,6 @@ const frCA: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Les demandes sont examinées en moins de 48 heures.",
-    button: "Demander la certification",
   },
   seal: {
     certified: "Certifié",
@@ -31,241 +29,16 @@ const frCA: PartialTranslation = {
     viewSealRecord: "Voir la fiche du sceau",
     youProvide: "Vous fournissez :",
   },
-  stats: [
-    { value: "340+", label: "Casinos certifiés" },
-    { value: "48 h", label: "Début d’examen moy." },
-    { value: "2.1M", label: "Sceaux balayés / mois" },
-    { value: "6 ans", label: "D’audit d’exploitants" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Le sceau de confiance Swift Secure que les joueurs vérifient avant de déposer. Nous auditons en toute indépendance les nouveaux casinos en ligne sur l’équité, le permis, la sécurité et la rapidité des paiements.",
-    badge: "La confiance de plus de 340 exploitants agréés",
-    h1: "Le sceau de confiance que les joueurs vérifient vraiment avant de déposer.",
-    sub: "Nous auditons en toute indépendance les nouveaux casinos sur l’équité, le permis, la sécurité et la rapidité des paiements, puis délivrons un sceau que les joueurs vérifient en quelques secondes.",
-    ctaApply: "Demander la certification",
     ctaVerify: "Vérifier un sceau",
     howEyebrow: "Fonctionnement",
-    howTitle: "De la demande au sceau actif en moins de 3 semaines",
-    criteriaEyebrow: "Ce que nous auditons",
-    criteriaTitle: "Cinq contrôles que chaque sceau doit réussir",
-    operatorsEyebrow: "Exploitants certifiés",
-    operatorsTitle: "Les casinos qui portent le sceau aujourd’hui",
-    viewAllCasinos: "Voir tous les casinos certifiés",
-    testimonialsEyebrow: "Dans leurs mots",
-    testimonialsTitle: "Les exploitants parlent de la certification",
-    pricingEyebrow: "Tarifs",
-    pricingTitle: "Forfaits de certification",
-    ctaHeading: "Prêt à obtenir le sceau auquel les joueurs se fient?",
-    ctaSub: "Les demandes sont examinées en moins de 48 heures.",
-    ctaButton: "Demander la certification",
   },
-  steps: [
-    { n: "1", title: "Demander", desc: "Transmettez les renseignements sur votre permis et votre plateforme pour un premier contrôle d’admissibilité." },
-    { n: "2", title: "Auditer", desc: "Notre équipe examine l’équité du RNG, le niveau de sécurité et l’historique des paiements." },
-    { n: "3", title: "Certifier", desc: "Les exploitants qui réussissent reçoivent le sceau et une fiche de vérification publique." },
-    { n: "4", title: "Surveiller", desc: "Nous réauditons chaque trimestre pour garder le sceau actif et crédible." },
-  ],
-  criteria: [
-    { title: "RNG et équité des jeux", desc: "Tests indépendants de la génération de nombres aléatoires et des tables de gains." },
-    { title: "Statut du permis", desc: "Vérifié auprès du registre public de l’autorité qui l’a délivré." },
-    { title: "Sécurité des données et des fonds", desc: "Normes de chiffrement, fonds des joueurs distincts, historique des incidents." },
-    { title: "Délais de paiement", desc: "Délais de retrait audités au regard des conditions annoncées par l’exploitant." },
-    { title: "Outils de jeu responsable", desc: "Limites de dépôt, auto-exclusion et ressources d’aide en place." },
-  ],
-  testimonials: [
-    {
-      quote: "L’audit a été approfondi, mais l’équipe nous a dit exactement quoi corriger. La certification a pris 19 jours.",
-      name: "M. Andersen",
-      role: "Responsable de la conformité, exploitant en lancement",
-    },
-    {
-      quote: "Les joueurs posent des questions sur le sceau dans les billets de soutien. C’est devenu un vrai signal de confiance au moment de payer.",
-      name: "R. Osei",
-      role: "Directeur de produit",
-    },
-    {
-      quote: "Les réaudits trimestriels nous obligent à rester irréprochables et gardent au sceau tout son sens.",
-      name: "J. Vale",
-      role: "Fondateur, exploitant sur de nouveaux marchés",
-    },
-  ],
   process: {
-    title: "Comment fonctionne la certification",
-    description:
-      "Six étapes de la demande au sceau Swift Secure actif et surveillé : généralement de 10 à 21 jours selon la rapidité de réception des documents.",
-    eyebrow: "Le processus",
-    h1: "Le déroulement de la certification, étape par étape",
-    sub: "Six étapes de la demande au sceau actif et surveillé : généralement de 10 à 21 jours selon la rapidité de réception des documents.",
-    ctaHeading: "Prêt à lancer votre audit?",
-    ctaButton: "Demander la certification",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Demande et contrôle d’admissibilité",
-      duration: "1-2 jours",
-      desc: "Nous confirmons que votre plateforme peut être auditée : URL en ligne, permis valide et une véritable clientèle de joueurs ou une date de lancement.",
-      provide: "Renseignements sur l’entreprise et le permis, URL de la plateforme",
-    },
-    {
-      n: "2",
-      title: "Examen documentaire",
-      duration: "2-4 jours",
-      desc: "Notre équipe de la conformité examine les documents de permis, les conditions d’utilisation et les politiques de jeu responsable.",
-      provide: "Certificat de permis, conditions d’utilisation, politiques de jeu responsable",
-    },
-    {
-      n: "3",
-      title: "Audit technique",
-      duration: "5-8 jours",
-      desc: "Tests indépendants de l’équité du RNG, des tables de gains et de la sécurité de la plateforme (chiffrement, séparation des fonds).",
-      provide: "Accès API/test, présentation de l’architecture de sécurité",
-    },
-    {
-      n: "4",
-      title: "Vérification des paiements",
-      duration: "3-5 jours",
-      desc: "Nous auditons les délais de retrait réels au regard de vos conditions annoncées, à partir d’un échantillon de transactions.",
-      provide: "Journaux de retraits anonymisés (90 derniers jours)",
-    },
-    {
-      n: "5",
-      title: "Décision de certification",
-      duration: "1-2 jours",
-      desc: "Les constatations passent devant notre comité d’examen. Les exploitants qui réussissent reçoivent le sceau et une fiche de vérification publique.",
-      provide: "Rien de plus : nous vous informons dans tous les cas",
-    },
-    {
-      n: "6",
-      title: "Surveillance continue",
-      duration: "Trimestriel",
-      desc: "Nous réauditons chaque trimestre pour garder le sceau actif. Un sceau est suspendu immédiatement si les normes ne sont plus respectées.",
-      provide: "Journaux mis à jour chaque trimestre",
-    },
-  ],
   pricing: {
     title: "Tarifs",
-    description: "Tarifs Swift Secure : de €200 à €700 par mois pour un badge de confiance revérifié en continu, plus un audit de mise en place unique. Aucun partage de revenus.",
-    eyebrow: "Tarifs",
-    h1: "Le prix d’un statut en direct, pas d’un certificat",
-    sub: "Un abonnement mensuel garde le badge actif et revérifié. Des frais de mise en place pour commencer. Aucun partage de revenus, aucune surprise au renouvellement.",
-    applyNow: "Faire une demande",
-    mostPopular: "LE PLUS POPULAIRE",
-    billingTitle: "Détails de facturation",
-    addOnsTitle: "Frais ponctuels",
-    addOnsSub: "Facturés une seule fois, en plus d’un forfait ou séparément.",
-    tiersTitle: "Niveaux de vérification",
-    tiersSub: "Jusqu’où va la vérification. Chaque forfait commence au niveau Bronze; Silver et Gold sont offerts avec tous les forfaits.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "par mois",
-      features: [
-        "Vérification Bronze",
-        "Page de vérification publique",
-        "Badge lié au domaine",
-        "Revérification automatique hebdomadaire",
-        "Conseils de placement à la caisse",
-        "Soutien par courriel",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "par mois",
-      features: [
-        "Tout le forfait Basic",
-        "Profil vérifié dans notre répertoire",
-        "Auto-Mirror Sync pour les nouveaux domaines",
-        "Présence dans les comparatifs pour joueurs",
-        "File de revérification prioritaire",
-        "Personne-ressource attitrée",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "par mois",
-      features: [
-        "Tout le forfait Pro",
-        "Suivi de la disponibilité des jeux",
-        "Rapports écrits mensuels",
-        "Couverture multimarque",
-        "Portée de vérification sur mesure",
-        "Chargé de compte",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Frais de mise en place",
-      price: "€300–500",
-      desc: "Audit technique unique avant l’émission du badge. Facturé une seule fois, par marque.",
-    },
-    {
-      name: "Examen accéléré",
-      price: "+€250",
-      desc: "48 heures au lieu de la file d’attente habituelle de 10 à 14 jours. Utile avant le lancement d’une campagne.",
-    },
-    {
-      name: "Audit de confiance avant lancement",
-      price: "€1,000–2,000",
-      desc: "Rapport ponctuel approfondi avant la mise en ligne : vérifications techniques, permis, conditions, paiements, soutien. Sans abonnement.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Les jeux sont réels et le permis existe.",
-      checks: [
-        "Les jeux se chargent depuis le fournisseur ou un agrégateur de contenu légitime",
-        "Le catalogue de jeux correspond à ce que le fournisseur publie réellement",
-        "Vérifié au moyen de proxys résidentiels dans plusieurs régions",
-        "Numéro de permis comparé au registre public de l’organisme de réglementation",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, plus des retraits testés avec de l’argent réel.",
-      checks: [
-        "Tout le niveau Bronze",
-        "Dépôts et retraits d’essai pour des montants réels",
-        "Délai de retrait réel mesuré par rapport à vos conditions annoncées",
-        "Exigences de vérification d’identité imprévues au retrait consignées",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver, plus un audit de vos conditions de bonus.",
-      checks: [
-        "Tout le niveau Silver",
-        "Conditions de bonus examinées à l’aide d’une liste de clauses abusives",
-        "Plafonds de retrait, multiplicateurs de mise, clauses de confiscation",
-        "Historique des plaintes examiné lorsqu’il est public",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Mensuel, pas un certificat",
-      desc: "Le badge reste actif parce que nous continuons de vérifier. Arrêtez l’abonnement et le badge est retiré : c’est un statut en direct, pas un document que vous conservez.",
-    },
-    {
-      title: "Aucun partage de revenus",
-      desc: "Nous facturons un montant fixe et ne prenons aucune part de vos revenus : ce que nous constatons ne dépend donc pas de ce que vous gagnez.",
-    },
-    {
-      title: "Si vous n’êtes pas retenu",
-      desc: "Vous conservez le rapport de constatations, vous pouvez corriger les problèmes et soumettre une nouvelle demande au tarif public standard. Votre page de vérification n’est jamais supprimée : elle est mise à jour avec ce qui a changé.",
-    },
-  ],
   methodology: {
     title: "Méthodologie de vérification",
     description:
@@ -277,34 +50,13 @@ const frCA: PartialTranslation = {
     limitsTitle: "Ce que nous ne vérifions pas",
     limitsSub:
       "Publié délibérément. Un sceau qui laisse entendre plus qu’il ne vérifie est pire que pas de sceau du tout, et c’est la ligne que nous tenons quand quelque chose tourne mal chez un exploitant qui porte notre badge.",
-    monitoringTitle: "Les vérifications se poursuivent après la pose du badge",
-    monitoringBody:
-      "Le robot revérifie chaque client chaque semaine et la page de vérification affiche la date du dernier passage. C’est pourquoi il s’agit d’un abonnement et non d’un certificat unique : vous payez pour un statut qui reste à jour, pas pour un PDF vieux de six mois.",
     suspensionTitle: "Comment un badge est suspendu",
     suspensionBody:
       "Si une plainte arrive ou si le robot repère quelque chose d’anormal, l’exploitant dispose de 48 heures pour répondre en privé avant tout changement public : cela protège contre les fausses dénonciations de concurrents. Si le problème est réel, le badge est retiré et la page de vérification est mise à jour avec les faits. Nous ne retirons aucune page contre paiement, et aucun montant ne fait disparaître une constatation.",
     ctaHeading: "Vous voulez faire vérifier votre plateforme?",
     ctaButton: "Demander une analyse",
   },
-  limits: [
-    {
-      title: "Le taux de retour et l’équité des résultats individuels",
-      desc: "Le prouver exige des millions de tours ou des données directes du fournisseur. Aucun service de vérification sur ce marché ne le fait vraiment, et nous ne laisserons pas croire que nous le faisons.",
-    },
-    {
-      title: "La capacité d’un exploitant à payer un gros gain",
-      desc: "La solvabilité ne se voit pas de l’extérieur. Nous testons que les retraits fonctionnent pour des montants ordinaires; ce n’est pas une garantie sur un gros lot.",
-    },
-    {
-      title: "Qu’un exploitant ne traitera jamais mal un joueur",
-      desc: "Le badge dit que les jeux sont authentiques, que le permis est réel et que les retraits d’essai ont abouti. Ce n’est pas un certificat de bonne conduite.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Vérifié",
-      desc: "A réussi la vérification et fait l’objet d’une surveillance hebdomadaire active.",
-    },
     scanned: {
       label: "Analysé",
       desc: "Contrôlé automatiquement par notre robot. Aucune relation commerciale et aucun badge émis.",
@@ -376,70 +128,14 @@ const frCA: PartialTranslation = {
     card1Body: "Nous n’acceptons ni partage de revenus ni commission de référence de la part des exploitants certifiés. Les frais d’audit sont forfaitaires : nos constatations ne s’achètent pas.",
     card2Title: "Rigoureux, pas lents",
     card2Body: "Notre équipe d’audit réunit d’anciens régulateurs et des ingénieurs RNG. Nous avons conçu le processus pour être exhaustif en quelques jours, pas en quelques mois.",
-    teamTitle: "L’équipe d’audit",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Directrice des audits, ex-MGA",
-      bio: "Huit ans à contrôler la conformité des permis au sein d’une autorité nationale des jeux.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Responsable RNG et sécurité",
-      bio: "Ancien ingénieur en équité des jeux, spécialisé dans la certification RNG.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Paiements et conformité",
-      bio: "Pilote les audits de délais de paiement et le programme trimestriel de recertification.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Questions fréquentes sur la certification Swift Secure : coût, délais, réaudits et vérification du sceau.",
     eyebrow: "FAQ",
     h1: "Foire aux questions",
     ctaHeading: "D’autres questions?",
     ctaButton: "Nous joindre",
   },
-  faqs: [
-    {
-      q: "Combien coûte la certification?",
-      a: "Les forfaits commencent à $1,900 pour un audit unique couvrant un an de validité du sceau. Consultez la page Tarifs pour tous les détails.",
-    },
-    {
-      q: "Combien de temps dure l’audit?",
-      a: "Généralement de 10 à 21 jours selon la rapidité avec laquelle vous fournissez les documents et l’accès de test. Notre forfait Croissance offre un examen prioritaire en 10 jours.",
-    },
-    {
-      q: "Que se passe-t-il si nous échouons à un audit?",
-      a: "Vous recevez un rapport de constatations détaillé sans frais additionnels. Vous pouvez soumettre une nouvelle demande une fois les problèmes corrigés, sans frais dans les 60 jours.",
-    },
-    {
-      q: "Réauditez-vous les casinos certifiés?",
-      a: "Oui. Chaque exploitant certifié est réaudité chaque trimestre. Un sceau est suspendu immédiatement si les normes passent sous notre seuil.",
-    },
-    {
-      q: "Le sceau vise-t-il un seul territoire?",
-      a: "Non. Notre audit contrôle la validité du permis dans le territoire où vous exercez, en plus de contrôles indépendants du territoire comme l’équité du RNG et la rapidité des paiements.",
-    },
-    {
-      q: "Les joueurs peuvent-ils vérifier un sceau eux-mêmes?",
-      a: "Oui : n’importe qui peut saisir un numéro de sceau sur notre page de vérification pour voir en quelques secondes le statut de certification, le permis et la date du prochain audit.",
-    },
-    {
-      q: "Que se passe-t-il si notre sceau est révoqué?",
-      a: "Nous vous prévenons immédiatement en indiquant le motif. La fiche de vérification publique se met à jour en temps réel pour que les joueurs voient le statut exact.",
-    },
-    {
-      q: "Percevez-vous des commissions de référence des casinos?",
-      a: "Non. Nous facturons uniquement les frais d’audit forfaitaires, sans partage de revenus ni commission de référence, pour que nos constatations ne puissent pas être influencées par des versements continus.",
-    },
-  ],
   badge: {
     title: "Le sceau Swift Secure",
     description: "Référence de marque du sceau de certification Swift Secure : sceau principal, version compacte et variante sur fond sombre.",

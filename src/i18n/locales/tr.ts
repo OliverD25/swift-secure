@@ -20,8 +20,6 @@ const tr: PartialTranslation = {
     faq: "SSS",
   },
   stickyCta: {
-    note: "Başvurular 48 saat içinde değerlendirilir.",
-    button: "Sertifikasyon için başvur",
   },
   seal: {
     certified: "Sertifikalı",
@@ -31,241 +29,16 @@ const tr: PartialTranslation = {
     viewSealRecord: "Mühür kaydını gör",
     youProvide: "Sizden istenenler:",
   },
-  stats: [
-    { value: "340+", label: "Sertifikalı casino" },
-    { value: "48 sa", label: "Ort. inceleme başlangıcı" },
-    { value: "2.1M", label: "Aylık mühür taraması" },
-    { value: "6 yıl", label: "Operatör denetimi" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Oyuncuların para yatırmadan önce kontrol ettiği Swift Secure güven mührü. Yeni çevrimiçi casinoları adillik, lisans, güvenlik ve ödeme hızı açısından bağımsız olarak denetliyoruz.",
-    badge: "340+ lisanslı operatörün tercihi",
-    h1: "Oyuncuların para yatırmadan önce gerçekten kontrol ettiği güven mührü.",
-    sub: "Yeni casinoları adillik, lisans, güvenlik ve ödeme hızı açısından bağımsız olarak denetliyor, ardından oyuncuların saniyeler içinde doğrulayabileceği bir mühür veriyoruz.",
-    ctaApply: "Sertifikasyon için başvur",
     ctaVerify: "Mühür doğrula",
     howEyebrow: "Nasıl çalışır",
-    howTitle: "Başvurudan yayındaki mühre 3 haftadan kısa sürede",
-    criteriaEyebrow: "Neyi denetliyoruz",
-    criteriaTitle: "Her mührün geçmesi gereken beş kontrol",
-    operatorsEyebrow: "Sertifikalı operatörler",
-    operatorsTitle: "Bugün mührü taşıyan casinolar",
-    viewAllCasinos: "Tüm sertifikalı casinoları gör",
-    testimonialsEyebrow: "Kendi sözleriyle",
-    testimonialsTitle: "Operatörler sertifikasyon sürecini anlatıyor",
-    pricingEyebrow: "Fiyatlar",
-    pricingTitle: "Sertifikasyon planları",
-    ctaHeading: "Oyuncuların güvendiği mührü almaya hazır mısınız?",
-    ctaSub: "Başvurular 48 saat içinde değerlendirilir.",
-    ctaButton: "Sertifikasyon için başvur",
   },
-  steps: [
-    { n: "1", title: "Başvuru", desc: "Ön uygunluk kontrolü için lisans ve platform bilgilerinizi gönderin." },
-    { n: "2", title: "Denetim", desc: "Ekibimiz RNG adilliğini, güvenlik yapısını ve ödeme geçmişini inceler." },
-    { n: "3", title: "Sertifika", desc: "Denetimi geçen operatörler mührü ve herkese açık bir doğrulama kaydını alır." },
-    { n: "4", title: "İzleme", desc: "Mührün geçerli ve güvenilir kalması için her çeyrekte yeniden denetim yaparız." },
-  ],
-  criteria: [
-    { title: "RNG ve oyun adilliği", desc: "Rastgele sayı üretimi ve ödeme tablolarının bağımsız testi." },
-    { title: "Lisans durumu", desc: "Lisansı veren yargı bölgesinin kamuya açık siciliyle doğrulanır." },
-    { title: "Veri ve fon güvenliği", desc: "Şifreleme standartları, ayrıştırılmış oyuncu fonları, ihlal geçmişi." },
-    { title: "Ödeme süreleri", desc: "Gerçek çekim süreleri operatörün beyan ettiği koşullara göre denetlenir." },
-    { title: "Sorumlu oyun araçları", desc: "Yatırım limitleri, kendini dışlama ve destek kaynaklarının varlığı." },
-  ],
-  testimonials: [
-    {
-      quote: "Denetim kapsamlıydı ama ekip neyi düzeltmemiz gerektiğini net şekilde söyledi. Sertifikasyon 19 gün sürdü.",
-      name: "M. Andersen",
-      role: "Uyum Yöneticisi, yeni operatör",
-    },
-    {
-      quote: "Oyuncular destek taleplerinde mührü soruyor. Ödeme adımında gerçek bir güven sinyaline dönüştü.",
-      name: "R. Osei",
-      role: "Ürün Direktörü",
-    },
-    {
-      quote: "Üç aylık yeniden denetimler bizi disiplinde tutuyor ve mührü anlamlı kılıyor.",
-      name: "J. Vale",
-      role: "Kurucu, yeni pazar operatörü",
-    },
-  ],
   process: {
-    title: "Sertifikasyon nasıl işler",
-    description:
-      "Başvurudan yayındaki, izlenen Swift Secure mührüne kadar altı aşama — belgelerin ne kadar hızlı geldiğine bağlı olarak genellikle 10–21 gün.",
-    eyebrow: "Süreç",
-    h1: "Sertifikasyon adım adım nasıl işler",
-    sub: "Başvurudan yayındaki, izlenen mühre kadar altı aşama — belgelerin ne kadar hızlı geldiğine bağlı olarak genellikle 10–21 gün.",
-    ctaHeading: "Denetiminizi başlatmaya hazır mısınız?",
-    ctaButton: "Sertifikasyon için başvur",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Başvuru ve uygunluk kontrolü",
-      duration: "1-2 gün",
-      desc: "Platformunuzun incelemeye uygun olduğunu doğrularız: yayında bir adres, geçerli lisans ve gerçek bir oyuncu tabanı veya lansman tarihi.",
-      provide: "Şirket bilgileri, lisans bilgileri, platform adresi",
-    },
-    {
-      n: "2",
-      title: "Belge incelemesi",
-      duration: "2-4 gün",
-      desc: "Uyum ekibimiz lisans belgelerini, kullanım koşullarını ve sorumlu oyun politikalarını inceler.",
-      provide: "Lisans belgesi, kullanım koşulları, sorumlu oyun politikaları",
-    },
-    {
-      n: "3",
-      title: "Teknik denetim",
-      duration: "5-8 gün",
-      desc: "RNG adilliği, ödeme tabloları ve platform güvenliğinin (şifreleme, fon ayrıştırma) bağımsız testi.",
-      provide: "API/test erişimi, güvenlik mimarisi özeti",
-    },
-    {
-      n: "4",
-      title: "Ödeme doğrulaması",
-      duration: "3-5 gün",
-      desc: "Örneklenen işlem verileriyle gerçek çekim sürelerini beyan ettiğiniz koşullara göre denetleriz.",
-      provide: "Anonimleştirilmiş çekim kayıtları (son 90 gün)",
-    },
-    {
-      n: "5",
-      title: "Sertifikasyon kararı",
-      duration: "1-2 gün",
-      desc: "Bulgular değerlendirme kurulumuza gider. Denetimi geçen operatörler mührü ve herkese açık bir doğrulama kaydını alır.",
-      provide: "Başka bir şey gerekmez — sonucu her durumda bildiririz",
-    },
-    {
-      n: "6",
-      title: "Sürekli izleme",
-      duration: "Üç ayda bir",
-      desc: "Mührün geçerli kalması için her çeyrekte yeniden denetim yaparız. Standartlar düşerse mühür anında askıya alınır.",
-      provide: "Her çeyrekte güncellenen kayıtlar",
-    },
-  ],
   pricing: {
     title: "Fiyatlar",
-    description: "Swift Secure fiyatlandırması: sürekli yeniden kontrol edilen bir güven rozeti için ayda €200–€700, artı tek seferlik kurulum denetimi. Gelir paylaşımı yok.",
-    eyebrow: "Fiyatlar",
-    h1: "Sertifika değil, canlı bir durum olarak fiyatlandırılır",
-    sub: "Aylık ücret rozeti canlı ve yeniden kontrol edilir tutar. Girişte tek bir kurulum ücreti. Gelir paylaşımı yok, yenilemede sürpriz yok.",
-    applyNow: "Hemen başvur",
-    mostPopular: "EN POPÜLER",
-    billingTitle: "Faturalandırma detayları",
-    addOnsTitle: "Tek seferlik ücretler",
-    addOnsSub: "Bir kez alınır; bir planın üzerine ya da tek başına.",
-    tiersTitle: "Doğrulama seviyeleri",
-    tiersSub: "Kontrolün ne kadar derine indiği. Her plan Bronze ile başlar; Silver ve Gold her planda eklenebilir.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "aylık",
-      features: [
-        "Bronze doğrulama",
-        "Herkese açık doğrulama sayfası",
-        "Alan adına kilitli rozet",
-        "Haftalık otomatik yeniden kontrol",
-        "Kasa yerleşimi rehberliği",
-        "E-posta desteği",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "aylık",
-      features: [
-        "Basic'teki her şey",
-        "Dizinimizde doğrulanmış profil",
-        "Yeni alan adları için Auto-Mirror Sync",
-        "Oyunculara yönelik karşılaştırmalarda yer alma",
-        "Öncelikli yeniden kontrol sırası",
-        "Özel iletişim kişisi",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "aylık",
-      features: [
-        "Pro'daki her şey",
-        "Oyun erişilebilirliği izleme",
-        "Aylık yazılı raporlar",
-        "Çoklu marka kapsamı",
-        "Özel kontrol kapsamı",
-        "Müşteri yöneticisi",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Kurulum ücreti",
-      price: "€300–500",
-      desc: "Rozet verilmeden önce yapılan tek seferlik teknik denetim. Marka başına bir kez alınır.",
-    },
-    {
-      name: "Hızlandırılmış inceleme",
-      price: "+€250",
-      desc: "Standart 10–14 günlük sıra yerine 48 saat. Kampanya lansmanı öncesinde işe yarar.",
-    },
-    {
-      name: "Lansman öncesi güven denetimi",
-      price: "€1,000–2,000",
-      desc: "Yayına girmeden önce derinlemesine tek seferlik rapor: teknik kontroller, lisans, koşullar, ödemeler, destek. Abonelik gerekmez.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Oyunlar gerçek ve lisans mevcut.",
-      checks: [
-        "Oyunlar sağlayıcıdan veya meşru bir içerik toplayıcısından yükleniyor",
-        "Oyun kataloğu sağlayıcının gerçekten yayımladığıyla örtüşüyor",
-        "Birkaç bölgede yerleşik (residential) proxy'ler üzerinden kontrol ediliyor",
-        "Lisans numarası düzenleyicinin kamuya açık siciliyle eşleştiriliyor",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze artı gerçek parayla test edilen çekimler.",
-      checks: [
-        "Bronze'daki her şey",
-        "Gerçek tutarlarla test yatırma ve çekme işlemleri",
-        "Fiili çekim süresi, belirttiğiniz koşullara karşı ölçülür",
-        "Çekimde çıkan beklenmedik KYC talepleri kayda geçer",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Gold",
-      summary: "Silver artı bonus koşullarınızın denetimi.",
-      checks: [
-        "Silver'daki her şey",
-        "Bonus koşulları, sömürücü madde kontrol listesine göre incelenir",
-        "Azami çekim tavanları, çevrim katları, el koyma maddeleri",
-        "Kamuya açık olduğu yerlerde şikâyet geçmişi incelenir",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Sertifika değil, aylık abonelik",
-      desc: "Rozet canlı kalır çünkü kontrol etmeye devam ederiz. Aboneliği durdurursanız rozet iner — bu, elinizde kalan bir belge değil, canlı bir durumdur.",
-    },
-    {
-      title: "Gelir paylaşımı yok",
-      desc: "Sabit bir ücret alırız, gelirinizden pay almayız; bu yüzden bulduklarımız ne kadar kazandığınızdan etkilenmez.",
-    },
-    {
-      title: "Geçemezseniz",
-      desc: "Bulgu raporu sizde kalır; eksikleri giderip standart yayımlanmış fiyattan yeniden başvurabilirsiniz. Doğrulama sayfanız asla silinmez — neyin değiştiğiyle güncellenir.",
-    },
-  ],
   methodology: {
     title: "Doğrulama yöntemi",
     description:
@@ -277,34 +50,13 @@ const tr: PartialTranslation = {
     limitsTitle: "Doğrulamadıklarımız",
     limitsSub:
       "Bilerek yayımlıyoruz. Kontrol ettiğinden fazlasını ima eden bir mühür, hiç mühür olmamasından kötüdür; rozetimizi taşıyan bir operatörde bir şey ters gittiğinde savunduğumuz çizgi budur.",
-    monitoringTitle: "Rozet yayına girdikten sonra kontroller sürer",
-    monitoringBody:
-      "Tarayıcımız her müşteriyi haftalık olarak yeniden kontrol eder ve doğrulama sayfası son çalıştığı tarihi gösterir. Bu yüzden tek seferlik bir sertifika değil abonelik: güncel kalan bir duruma ödeme yapıyorsunuz, altı ay önceki bir PDF'e değil.",
     suspensionTitle: "Bir rozet nasıl askıya alınır",
     suspensionBody:
       "Bir şikâyet gelirse ya da tarayıcı olağan dışı bir şey görürse, kamuya açık hiçbir şey değişmeden önce operatörün özel olarak yanıt vermesi için 48 saati olur — bu, rakiplerden gelen asılsız ihbarlara karşı koruma sağlar. Sorun gerçekse rozet iner ve doğrulama sayfası gerçeklerle güncellenir. Ödeme karşılığı sayfa kaldırmayız ve bir bulguyu yok edecek hiçbir ücret yoktur.",
     ctaHeading: "Platformunuzun kontrol edilmesini ister misiniz?",
     ctaButton: "Tarama talep et",
   },
-  limits: [
-    {
-      title: "RTP ve tek tek sonuçların adil olup olmadığı",
-      desc: "Bunu kanıtlamak milyonlarca dönüş ya da doğrudan sağlayıcıdan veri gerektirir. Bu pazarda hiçbir doğrulama hizmeti bunu gerçekten yapmıyor; yaptığımızı da ima etmeyeceğiz.",
-    },
-    {
-      title: "Bir operatörün büyük bir kazancı ödeyip ödeyemeyeceği",
-      desc: "Ödeme gücü dışarıdan görünmez. Olağan tutarlarda çekimlerin çalıştığını test ederiz; bu, bir jackpot için garanti değildir.",
-    },
-    {
-      title: "Bir operatörün bir oyuncuya asla kötü davranmayacağı",
-      desc: "Rozet; oyunların gerçek, lisansın geçerli ve test çekimlerinin sonuçlandığını söyler. Bu bir karakter referansı değildir.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Doğrulandı",
-      desc: "Doğrulamayı geçti ve etkin haftalık izleme altında.",
-    },
     scanned: {
       label: "Tarandı",
       desc: "Tarayıcımız tarafından otomatik kontrol edildi. Ticari ilişki yok, rozet verilmedi.",
@@ -376,70 +128,14 @@ const tr: PartialTranslation = {
     card1Body: "Sertifikalı operatörlerden gelir payı veya yönlendirme ücreti almıyoruz. Denetim ücreti sabittir; bulgularımız satın alınamaz.",
     card2Title: "Titiz ama yavaş değil",
     card2Body: "Denetim ekibimiz eski düzenleyicilerden ve RNG mühendislerinden oluşuyor. Süreci aylarla değil günlerle ölçülen bir titizlikte kurguladık.",
-    teamTitle: "Denetim ekibi",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Denetim Direktörü, eski MGA",
-      bio: "Ulusal bir oyun otoritesinde sekiz yıl lisans uyumu incelemesi.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "RNG ve Güvenlik Sorumlusu",
-      bio: "RNG sertifikasyonunda uzmanlaşmış eski oyun adilliği mühendisi.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Ödemeler ve Uyum",
-      bio: "Ödeme süresi denetimlerini ve üç aylık yeniden sertifikasyon programını yürütüyor.",
-    },
-  ],
   faqPage: {
     title: "SSS",
-    description: "Swift Secure sertifikasyonu hakkında sık sorulan sorular: maliyet, süre, yeniden denetimler ve mühür doğrulama.",
     eyebrow: "SSS",
     h1: "Sık sorulan sorular",
     ctaHeading: "Hâlâ sorunuz mu var?",
     ctaButton: "Bize ulaşın",
   },
-  faqs: [
-    {
-      q: "Sertifikasyon ne kadar tutuyor?",
-      a: "Planlar, bir yıllık mühür geçerliliğini kapsayan tek seferlik denetim için $1,900 fiyatından başlar. Tüm plan detayları için fiyat sayfasına bakın.",
-    },
-    {
-      q: "Denetim ne kadar sürer?",
-      a: "Belgeleri ve test erişimini ne kadar hızlı sağladığınıza bağlı olarak genellikle 10–21 gün. Büyüme planımız 10 günlük öncelikli inceleme sunar.",
-    },
-    {
-      q: "Denetimi geçemezsek ne olur?",
-      a: "Ek ücret ödemeden ayrıntılı bir bulgu raporu alırsınız. Eksikler giderildiğinde yeniden başvurabilirsiniz — 60 gün içinde ücretsiz.",
-    },
-    {
-      q: "Sertifikalı casinoları yeniden denetliyor musunuz?",
-      a: "Evet. Sertifikalı her operatör üç ayda bir yeniden denetlenir. Standartlar eşiğimizin altına düşerse mühür anında askıya alınır.",
-    },
-    {
-      q: "Mühür tek bir yargı bölgesine mi özgü?",
-      a: "Hayır. Denetimimiz, faaliyet gösterdiğiniz yargı bölgesindeki lisans geçerliliğinin yanı sıra RNG adilliği ve ödeme hızı gibi yargı bölgesinden bağımsız kontrolleri de kapsar.",
-    },
-    {
-      q: "Oyuncular mührü kendileri doğrulayabilir mi?",
-      a: "Evet — herkes doğrulama sayfamıza bir mühür kimliği girerek sertifikasyon durumunu, lisansı ve sonraki denetim tarihini saniyeler içinde görebilir.",
-    },
-    {
-      q: "Mührümüz iptal edilirse ne olur?",
-      a: "Gerekçesiyle birlikte sizi hemen bilgilendiririz. Herkese açık doğrulama kaydı gerçek zamanlı güncellenir, böylece oyuncular doğru durumu görür.",
-    },
-    {
-      q: "Casinolardan yönlendirme ücreti alıyor musunuz?",
-      a: "Hayır. Yalnızca sabit denetim ücretini alırız — gelir payı yok, yönlendirme ücreti yok — böylece bulgular sürekli ödemelerden etkilenmez.",
-    },
-  ],
   badge: {
     title: "Swift Secure mührü",
     description: "Swift Secure sertifikasyon mührü için marka referansı: birincil rozet, kompakt kilitleme ve koyu zemin varyantı.",

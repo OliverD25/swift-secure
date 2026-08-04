@@ -20,8 +20,6 @@ const sv: PartialTranslation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Ansökningar granskas inom 48 timmar.",
-    button: "Ansök om certifiering",
   },
   seal: {
     certified: "Certifierad",
@@ -31,241 +29,16 @@ const sv: PartialTranslation = {
     viewSealRecord: "Visa sigillposten",
     youProvide: "Du lämnar:",
   },
-  stats: [
-    { value: "340+", label: "Certifierade casinon" },
-    { value: "48 tim", label: "Snittstart för granskning" },
-    { value: "2.1M", label: "Sigill skannade / mån" },
-    { value: "6 år", label: "Granskar operatörer" },
-  ],
   home: {
     title: "Swift Secure",
-    description:
-      "Swift Secure-sigillet som spelare kontrollerar innan de sätter in pengar. Vi granskar oberoende nya onlinecasinon på rättvisa, licensiering, säkerhet och utbetalningstid.",
-    badge: "Betrott av 340+ licensierade operatörer",
-    h1: "Förtroendesigillet som spelarna faktiskt kollar innan de sätter in pengar.",
-    sub: "Vi granskar oberoende nya casinon på rättvisa, licensiering, säkerhet och utbetalningstid — och utfärdar sedan ett sigill som spelare kan verifiera på sekunder.",
-    ctaApply: "Ansök om certifiering",
     ctaVerify: "Verifiera ett sigill",
     howEyebrow: "Så fungerar det",
-    howTitle: "Från ansökan till ett aktivt sigill på under 3 veckor",
-    criteriaEyebrow: "Det vi granskar",
-    criteriaTitle: "Fem kontroller varje sigill måste klara",
-    operatorsEyebrow: "Certifierade operatörer",
-    operatorsTitle: "Casinon som bär sigillet i dag",
-    viewAllCasinos: "Visa alla certifierade casinon",
-    testimonialsEyebrow: "Med deras egna ord",
-    testimonialsTitle: "Operatörer om att bli certifierade",
-    pricingEyebrow: "Priser",
-    pricingTitle: "Certifieringsplaner",
-    ctaHeading: "Redo att förtjäna sigillet spelarna litar på?",
-    ctaSub: "Ansökningar granskas inom 48 timmar.",
-    ctaButton: "Ansök om certifiering",
   },
-  steps: [
-    { n: "1", title: "Ansök", desc: "Skicka in dina licens- och plattformsuppgifter för en inledande lämplighetskontroll." },
-    { n: "2", title: "Granska", desc: "Vårt team granskar RNG-rättvisa, säkerhetsnivå och utbetalningshistorik." },
-    { n: "3", title: "Certifiera", desc: "Operatörer som klarar granskningen får sigillet och en offentlig verifieringspost." },
-    { n: "4", title: "Övervaka", desc: "Vi omgranskar varje kvartal så att sigillet förblir aktivt och trovärdigt." },
-  ],
-  criteria: [
-    { title: "RNG och spelrättvisa", desc: "Oberoende testning av slumptalsgenerering och utbetalningstabeller." },
-    { title: "Licensstatus", desc: "Verifierad mot den utfärdande jurisdiktionens offentliga register." },
-    { title: "Data- och medelssäkerhet", desc: "Krypteringsstandarder, separerade spelarmedel, historik över intrång." },
-    { title: "Utbetalningstider", desc: "Granskade uttagstider mot operatörens angivna villkor." },
-    { title: "Verktyg för ansvarsfullt spelande", desc: "Insättningsgränser, självavstängning och stödresurser på plats." },
-  ],
-  testimonials: [
-    {
-      quote: "Granskningen var grundlig, men teamet berättade exakt vad vi behövde åtgärda. Certifieringen tog 19 dagar.",
-      name: "M. Andersen",
-      role: "Compliance-ansvarig, nystartad operatör",
-    },
-    {
-      quote: "Spelare frågar om sigillet i supportärenden. Det har blivit en verklig förtroendesignal i kassan.",
-      name: "R. Osei",
-      role: "Produktchef",
-    },
-    {
-      quote: "Kvartalsvisa omgranskningar håller oss ärliga och gör sigillet meningsfullt.",
-      name: "J. Vale",
-      role: "Grundare, operatör på ny marknad",
-    },
-  ],
   process: {
-    title: "Så fungerar certifieringen",
-    description:
-      "Sex steg från ansökan till ett aktivt, övervakat Swift Secure-sigill — vanligtvis 10–21 dagar beroende på hur snabbt dokumentationen kommer in.",
-    eyebrow: "Processen",
-    h1: "Så fungerar certifieringen, steg för steg",
-    sub: "Sex steg från ansökan till ett aktivt, övervakat sigill — vanligtvis 10–21 dagar beroende på hur snabbt dokumentationen kommer in.",
-    ctaHeading: "Redo att starta din granskning?",
-    ctaButton: "Ansök om certifiering",
   },
-  stages: [
-    {
-      n: "1",
-      title: "Ansökan och lämplighetskontroll",
-      duration: "1-2 dagar",
-      desc: "Vi bekräftar att din plattform är lämplig för granskning: aktiv URL, giltig licens och en verklig spelarbas eller ett lanseringsdatum.",
-      provide: "Företagsuppgifter, licensinformation, plattformens URL",
-    },
-    {
-      n: "2",
-      title: "Granskning av dokumentation",
-      duration: "2-4 dagar",
-      desc: "Vårt compliance-team går igenom licenshandlingar, användarvillkor och policyer för ansvarsfullt spelande.",
-      provide: "Licensbevis, villkor, policyer för ansvarsfullt spelande",
-    },
-    {
-      n: "3",
-      title: "Teknisk granskning",
-      duration: "5-8 dagar",
-      desc: "Oberoende testning av RNG-rättvisa, utbetalningstabeller och plattformssäkerhet (kryptering, separering av medel).",
-      provide: "API-/teståtkomst, översikt över säkerhetsarkitekturen",
-    },
-    {
-      n: "4",
-      title: "Verifiering av utbetalningar",
-      duration: "3-5 dagar",
-      desc: "Vi granskar faktiska uttagstider mot dina angivna villkor med stickprov på transaktionsdata.",
-      provide: "Anonymiserade uttagsloggar (senaste 90 dagarna)",
-    },
-    {
-      n: "5",
-      title: "Certifieringsbeslut",
-      duration: "1-2 dagar",
-      desc: "Resultaten går till vår granskningsnämnd. Operatörer som klarar granskningen får sigillet och en offentlig verifieringspost.",
-      provide: "Inget mer — vi meddelar dig oavsett utfall",
-    },
-    {
-      n: "6",
-      title: "Löpande övervakning",
-      duration: "Kvartalsvis",
-      desc: "Vi omgranskar varje kvartal för att hålla sigillet aktivt. Sigill stängs av omedelbart om standarderna sjunker.",
-      provide: "Uppdaterade loggar varje kvartal",
-    },
-  ],
   pricing: {
     title: "Priser",
-    description: "Swift Secure-priser: €200–€700 per månad för ett förtroendemärke som kontrolleras om löpande, plus en teknisk engångsgranskning vid start. Ingen intäktsdelning.",
-    eyebrow: "Priser",
-    h1: "Prissatt som en levande status, inte ett certifikat",
-    sub: "En månadsavgift håller märket aktivt och omkontrollerat. En startavgift för att komma in. Ingen intäktsdelning, inga överraskningar vid förnyelse.",
-    applyNow: "Ansök nu",
-    mostPopular: "POPULÄRAST",
-    billingTitle: "Faktureringsdetaljer",
-    addOnsTitle: "Engångsavgifter",
-    addOnsSub: "Debiteras en gång, utöver en plan — eller separat.",
-    tiersTitle: "Verifieringsnivåer",
-    tiersSub: "Hur djupt kontrollen går. Alla planer börjar på Bronze; Silver och Guld kan läggas till på vilken plan som helst.",
   },
-  plans: [
-    {
-      name: "Basic",
-      price: "€200",
-      cadence: "per månad",
-      features: [
-        "Bronze-verifiering",
-        "Offentlig verifieringssida",
-        "Domänlåst märke",
-        "Automatisk omkontroll varje vecka",
-        "Vägledning för placering i kassan",
-        "E-postsupport",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "€400",
-      cadence: "per månad",
-      features: [
-        "Allt i Basic",
-        "Verifierad profil i vår katalog",
-        "Auto-Mirror Sync för nya domäner",
-        "Med i jämförelser för spelare",
-        "Prioriterad kö för omkontroll",
-        "Egen kontaktperson",
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "€700+",
-      cadence: "per månad",
-      features: [
-        "Allt i Pro",
-        "Övervakning av spelens drifttid",
-        "Skriftliga månadsrapporter",
-        "Täckning för flera varumärken",
-        "Anpassad kontrollomfattning",
-        "Kundansvarig",
-      ],
-    },
-  ],
-  addOns: [
-    {
-      name: "Startavgift",
-      price: "€300–500",
-      desc: "Teknisk engångsgranskning innan märket utfärdas. Debiteras en gång, per varumärke.",
-    },
-    {
-      name: "Snabbgranskning",
-      price: "+€250",
-      desc: "48 timmar i stället för den vanliga kön på 10–14 dagar. Bra inför en kampanjlansering.",
-    },
-    {
-      name: "Förtroendegranskning före lansering",
-      price: "€1,000–2,000",
-      desc: "Djup engångsrapport innan du går live: tekniska kontroller, licens, villkor, betalningar, support. Inget abonnemang krävs.",
-    },
-  ],
-  tiers: [
-    {
-      id: "Bronze",
-      name: "Bronze",
-      summary: "Spelen är äkta och licensen finns.",
-      checks: [
-        "Spelen laddas från leverantören eller en legitim innehållsaggregator",
-        "Spelkatalogen stämmer med det leverantören faktiskt publicerar",
-        "Kontrollerat via residentiella proxyer i flera regioner",
-        "Licensnumret matchat mot tillsynsmyndighetens offentliga register",
-      ],
-    },
-    {
-      id: "Silver",
-      name: "Silver",
-      summary: "Bronze, plus uttag testade med riktiga pengar.",
-      checks: [
-        "Allt i Bronze",
-        "Testinsättningar och uttag med verkliga belopp",
-        "Faktisk uttagstid mätt mot dina angivna villkor",
-        "Oväntade KYC-krav vid uttag noteras",
-      ],
-    },
-    {
-      id: "Gold",
-      name: "Guld",
-      summary: "Silver, plus en granskning av dina bonusvillkor.",
-      checks: [
-        "Allt i Silver",
-        "Bonusvillkor granskade mot en checklista över rovlystna klausuler",
-        "Tak för maxuttag, omsättningskrav, konfiskationsklausuler",
-        "Klagomålshistorik granskad där den är offentlig",
-      ],
-    },
-  ],
-  billingNotes: [
-    {
-      title: "Månadsvis, inte ett certifikat",
-      desc: "Märket förblir aktivt för att vi fortsätter kontrollera. Avslutas abonnemanget tas märket ned — det är en levande status, inte ett dokument du behåller.",
-    },
-    {
-      title: "Ingen intäktsdelning",
-      desc: "Vi tar en fast avgift och ingen andel av dina intäkter, så det vi hittar påverkas inte av hur mycket du tjänar.",
-    },
-    {
-      title: "Om du inte blir godkänd",
-      desc: "Du behåller resultatrapporten och kan åtgärda bristerna och ansöka igen till det ordinarie publicerade priset. Din verifieringssida raderas aldrig — den uppdateras med det som ändrats.",
-    },
-  ],
   methodology: {
     title: "Verifieringsmetod",
     description:
@@ -277,34 +50,13 @@ const sv: PartialTranslation = {
     limitsTitle: "Det vi inte verifierar",
     limitsSub:
       "Publicerat med avsikt. Ett sigill som antyder mer än det kontrollerar är sämre än inget sigill, och det är den linjen vi håller när något går fel hos en operatör som bär vårt märke.",
-    monitoringTitle: "Kontrollerna fortsätter efter att märket satts upp",
-    monitoringBody:
-      "Crawlern kontrollerar varje kund varje vecka och verifieringssidan visar datumet för den senaste körningen. Därför är detta ett abonnemang och inte ett engångscertifikat: du betalar för en status som hålls aktuell, inte för en PDF från ett halvår sedan.",
     suspensionTitle: "Så stängs ett märke av",
     suspensionBody:
       "Om ett klagomål kommer in eller crawlern ser något avvikande får operatören 48 timmar att svara privat innan något ändras offentligt — det skyddar mot falska anmälningar från konkurrenter. Är problemet verkligt tas märket ned och verifieringssidan uppdateras med fakta. Vi tar inte bort sidor mot betalning, och det finns ingen avgift som får ett fynd att försvinna.",
     ctaHeading: "Vill du få din plattform kontrollerad?",
     ctaButton: "Beställ en skanning",
   },
-  limits: [
-    {
-      title: "RTP och om enskilda spelresultat är rättvisa",
-      desc: "Att bevisa det kräver miljontals snurr eller data direkt från leverantören. Ingen verifieringstjänst på den här marknaden gör det på riktigt, och vi tänker inte antyda att vi gör det.",
-    },
-    {
-      title: "Om en operatör kan betala ut en stor vinst",
-      desc: "Solvens syns inte utifrån. Vi testar att uttag fungerar vid vanliga belopp; det är ingen garanti för en jackpot.",
-    },
-    {
-      title: "Att en operatör aldrig kommer att behandla en spelare illa",
-      desc: "Märket säger att spelen är äkta, att licensen är verklig och att testuttagen gick igenom. Det är inte ett karaktärsintyg.",
-    },
-  ],
   directory: {
-    certified: {
-      label: "Verifierad",
-      desc: "Godkänd verifiering och under aktiv veckovis övervakning.",
-    },
     scanned: {
       label: "Skannad",
       desc: "Kontrollerad automatiskt av vår crawler. Ingen affärsrelation och inget märke utfärdat.",
@@ -376,70 +128,14 @@ const sv: PartialTranslation = {
     card1Body: "Vi tar ingen intäktsdelning och inga hänvisningsavgifter från certifierade operatörer. Granskningsavgiften är fast, så våra resultat går inte att köpa.",
     card2Title: "Grundlig, inte långsam",
     card2Body: "Vårt granskningsteam består av före detta tillsynspersonal och RNG-ingenjörer. Vi byggde processen för att vara grundlig på dagar, inte månader.",
-    teamTitle: "Granskningsteamet",
   },
-  team: [
-    {
-      initials: "MK",
-      name: "Marta Kowalski",
-      role: "Granskningschef, tidigare MGA",
-      bio: "Åtta år med granskning av licensefterlevnad hos en nationell spelmyndighet.",
-    },
-    {
-      initials: "DS",
-      name: "Daniel Suh",
-      role: "Ansvarig för RNG och säkerhet",
-      bio: "Tidigare ingenjör inom spelrättvisa med inriktning på RNG-certifiering.",
-    },
-    {
-      initials: "LR",
-      name: "Lena Reyes",
-      role: "Utbetalningar och compliance",
-      bio: "Driver granskningarna av utbetalningstider och det kvartalsvisa omcertifieringsprogrammet.",
-    },
-  ],
   faqPage: {
     title: "FAQ",
-    description: "Vanliga frågor om Swift Secure-certifiering: kostnad, tidsplan, omgranskningar och verifiering av sigill.",
     eyebrow: "FAQ",
     h1: "Vanliga frågor",
     ctaHeading: "Har du fler frågor?",
     ctaButton: "Kontakta oss",
   },
-  faqs: [
-    {
-      q: "Vad kostar certifieringen?",
-      a: "Planerna börjar på $1,900 för en engångsgranskning som täcker ett års sigillgiltighet. Se prissidan för fullständiga uppgifter om planerna.",
-    },
-    {
-      q: "Hur lång tid tar granskningen?",
-      a: "Vanligtvis 10–21 dagar beroende på hur snabbt du lämnar dokumentation och teståtkomst. Vår Tillväxt-plan erbjuder prioriterad granskning på 10 dagar.",
-    },
-    {
-      q: "Vad händer om vi inte klarar en granskning?",
-      a: "Du får en detaljerad resultatrapport utan extra kostnad. Du kan ansöka igen när bristerna är åtgärdade — kostnadsfritt inom 60 dagar.",
-    },
-    {
-      q: "Omgranskar ni certifierade casinon?",
-      a: "Ja. Varje certifierad operatör omgranskas kvartalsvis. Sigill stängs av omedelbart om standarderna sjunker under vår gräns.",
-    },
-    {
-      q: "Gäller sigillet bara en jurisdiktion?",
-      a: "Nej. Vår granskning kontrollerar licensens giltighet i den jurisdiktion du verkar under, tillsammans med jurisdiktionsoberoende kontroller som RNG-rättvisa och utbetalningstider.",
-    },
-    {
-      q: "Kan spelare verifiera ett sigill själva?",
-      a: "Ja — vem som helst kan ange ett sigill-ID på vår verifieringssida och se certifieringsstatus, licens och nästa granskningsdatum på sekunder.",
-    },
-    {
-      q: "Vad händer om vårt sigill återkallas?",
-      a: "Vi meddelar dig omedelbart med orsaken. Den offentliga verifieringsposten uppdateras i realtid så att spelare ser korrekt status.",
-    },
-    {
-      q: "Tar ni hänvisningsavgifter från casinon?",
-      a: "Nej. Vi tar bara ut den fasta granskningsavgiften — ingen intäktsdelning, inga hänvisningsavgifter — så resultaten kan inte påverkas av löpande betalningar.",
-    },
-  ],
   badge: {
     title: "Swift Secure-sigillet",
     description: "Varumärkesreferens för Swift Secure-certifieringssigillet: primär badge, kompakt lockup och variant för mörk bakgrund.",
