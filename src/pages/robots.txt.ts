@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { deployBranch, isPreviewDeploy } from "../lib/deploy";
 
 /**
  * robots.txt, built per deployment rather than served as a static file.
@@ -9,18 +10,14 @@ import type { APIRoute } from "astro";
  * crawler that fetches robots.txt first should be told before it spends a
  * request finding out — and the two layers fail independently.
  *
- * CF_PAGES_BRANCH is set by Cloudflare on every build and by nothing else, so a
- * local build or the GitHub Pages workflow still produces the production file.
+ * Which branch we are on is decided in one place, src/lib/deploy.ts, because
+ * this file and Layout.astro have to agree and a copied condition is exactly
+ * the thing that drifts.
  */
-const PRODUCTION_BRANCH = "main";
-
 export const GET: APIRoute = ({ site }) => {
-  const branch = process.env.CF_PAGES_BRANCH;
-  const isPreview = Boolean(branch) && branch !== PRODUCTION_BRANCH;
-
-  const body = isPreview
+  const body = isPreviewDeploy
     ? [
-        `# Preview deployment of branch "${branch}". Not the live site.`,
+        `# Preview deployment of branch "${deployBranch}". Not the live site.`,
         "# The live site is https://swiftsecured.com",
         "User-agent: *",
         "Disallow: /",

@@ -1,0 +1,33 @@
+{
+  // Without this file, `npx wrangler deploy` finds no config, decides it is
+  // looking at an unconfigured Astro project, and runs `astro add cloudflare`
+  // on the build machine — installing an SSR adapter, rewriting astro.config,
+  // and building the whole site a second time. That happened on the first
+  // deployment. It is wrong three ways: the adapter printed "Astro 7.1.3 is not
+  // officially supported", the fix lived only on Cloudflare's builder so every
+  // future build would redo it and could pick up a different adapter version,
+  // and the site is 4,428 static files that need no server at all.
+  //
+  // With a config present, wrangler skips framework detection entirely and just
+  // uploads what `npm run build` produced.
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Must match the Worker the Cloudflare project already created. It was named
+  // before the Swift Secure → Swift Secured rename, so it is missing the "d"
+  // that package.json has. Using the package name instead makes every build
+  // print "Failed to match Worker name" and deploy under the CI's name anyway.
+  "name": "swift-secure",
+
+  "compatibility_date": "2026-08-04",
+
+  // No "main": this is a static site, so the Worker is assets-only and no
+  // JavaScript runs per request. Cloudflare serves the files directly.
+  //
+  // html_handling defaults to auto-trailing-slash, which maps /about to
+  // dist/about/index.html — the layout Astro emits. There is no dist/404.html,
+  // so not_found_handling stays at its default and Cloudflare returns its own
+  // 404 rather than us pointing at a file that is not built.
+  "assets": {
+    "directory": "./dist"
+  }
+}
