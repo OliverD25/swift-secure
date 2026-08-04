@@ -262,3 +262,23 @@ export interface Translation {
     ctaButton: string;
   };
 }
+
+/**
+ * What a non-English locale file is allowed to be.
+ *
+ * Every locale used to be typed as a full `Translation`, so adding one key to
+ * en.ts turned into 18 type errors and 18 files to edit before anything could
+ * ship. Non-English files are now deep-partial: they carry what has actually
+ * been translated, and `useTranslations` fills the rest from English.
+ *
+ * Arrays stay whole rather than becoming arrays of partials — a locale either
+ * translates a list or leaves it to English, and half-translated lists are the
+ * one outcome nobody wants on a pricing table.
+ */
+export type PartialTranslation = {
+  [K in keyof Translation]?: Translation[K] extends readonly unknown[]
+    ? Translation[K]
+    : Translation[K] extends object
+      ? { [P in keyof Translation[K]]?: Translation[K][P] }
+      : Translation[K];
+};

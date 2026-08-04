@@ -1,6 +1,6 @@
-import type { Translation } from "../types";
+import type { PartialTranslation } from "../types";
 
-const ar: Translation = {
+const ar: PartialTranslation = {
   nav: {
     howItWorks: "كيف يعمل",
     methodology: "المنهجية",
