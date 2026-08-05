@@ -1,15 +1,20 @@
 import type { PartialTranslation } from "../types";
 
+/**
+ * Partial overrides. Any key absent here falls back to English, per key.
+ *
+ * Sixty strings were removed on 5 August 2026, when the English copy was
+ * rewritten for players. They were faithful translations of claims the rewrite
+ * deleted — a badge "in 10 days", a reply "within 48 hours", the word
+ * "Certified" — and this project has no clients, no team and no issued badge.
+ * A correct English sentence beats a fluent promise we cannot keep, so these
+ * keys now fall through until they are translated again.
+ */
 const da: PartialTranslation = {
   nav: {
     howItWorks: "Sådan virker det",
-    methodology: "Metode",
-    pricing: "Priser",
     about: "Om os",
     faq: "FAQ",
-    casinos: "Casinoer",
-    verify: "Verificer",
-    apply: "Ansøg",
     openMenu: "Åbn menu",
     closeMenu: "Luk menu",
     primaryLabel: "Primær",
@@ -19,75 +24,31 @@ const da: PartialTranslation = {
     apply: "Ansøg",
     faq: "FAQ",
   },
-  stickyCta: {
-  },
-  seal: {
-    certified: "Certificeret",
-  },
-  common: {
-    certifiedSince: "Certificeret siden",
-    viewSealRecord: "Se seglregistrering",
-    youProvide: "Du leverer:",
-  },
   home: {
     title: "Swift Secured",
-    ctaVerify: "Verificer et segl",
     howEyebrow: "Sådan virker det",
   },
-  process: {
-  },
-  pricing: {
-    title: "Priser",
-  },
   methodology: {
-    title: "Verifikationsmetode",
-    description:
-      "Præcis hvad Swift Secured tjekker, før et badge udstedes, hvor ofte det gentjekkes, og hvad vi bevidst ikke hævder at verificere.",
     eyebrow: "Metode",
-    h1: "Hvad badget rent faktisk betyder",
-    sub: "Et tillidsmærke er kun det værd, der står bag det. Her er hele metoden — inklusive de kontroller, vi ikke udfører, så ingen behøver at gætte.",
-    checksTitle: "Det, vi verificerer",
-    limitsTitle: "Det, vi ikke verificerer",
-    limitsSub:
-      "Offentliggjort bevidst. Et segl, der antyder mere, end det tjekker, er værre end intet segl, og det er den linje, vi holder, når noget går galt hos en operatør med vores badge.",
-    suspensionTitle: "Sådan bliver et badge suspenderet",
-    suspensionBody:
-      "Hvis der kommer en klage, eller crawleren ser noget unormalt, får operatøren 48 timer til at svare privat, før noget ændres offentligt — det beskytter mod falske anmeldelser fra konkurrenter. Er problemet reelt, ryger badget ned, og verifikationssiden opdateres med fakta. Vi fjerner ikke sider mod betaling, og der findes intet gebyr, der får et fund til at forsvinde.",
-    ctaHeading: "Vil du have din platform tjekket?",
-    ctaButton: "Bestil en scanning",
   },
   directory: {
-    scanned: {
-      label: "Scannet",
-      desc: "Tjekket automatisk af vores crawler. Ingen forretningsrelation og intet badge udstedt.",
-    },
-    listed: {
-      label: "Opført",
-      desc: "Med i vores indeks ud fra offentlige kilder. Der er endnu ikke kørt nogen kontrol, og intet her er anbefalet.",
-    },
-    flagged: {
-      label: "Skal gennemgås",
-      desc: "Den automatiske kontrol fandt noget, der kræver et menneskeligt blik, før der kan konkluderes.",
-    },
     statusFilterAll: "Alle",
-    lastScanned: "Sidst tjekket",
-    viewReport: "Se rapport",
   },
   casinos: {
     title: "Casinooversigt",
-    description: "Oversigt over nye onlinecasinoer, som Swift Secured følger, hver med sin aktuelle verifikationsstatus.",
+    description:
+      "Oversigt over nye onlinecasinoer, som Swift Secured følger, hver med sin aktuelle verifikationsstatus.",
     eyebrow: "Oversigt",
     h1: "Casinooversigt",
-    sub: "Hvert nyt casino, vi indekserer, med dets aktuelle status. De fleste er opført fra offentlige kilder og er endnu ikke kontrolleret — statussen på hvert kort viser hvilke.",
     searchPlaceholder: "Søg på casinonavn eller jurisdiktion",
     searchLabel: "Søg i certificerede casinoer",
     empty: "Ingen casinoer matcher den søgning.",
   },
   verify: {
     title: "Verificer et segl",
-    description: "Indtast det segl-id, der vises på et casinos side, for at bekræfte, at det er ægte og aktuelt certificeret af Swift Secured.",
+    description:
+      "Indtast det segl-id, der vises på et casinos side, for at bekræfte, at det er ægte og aktuelt certificeret af Swift Secured.",
     h1: "Verificer et segl",
-    sub: "Indtast det segl-id, der vises på casinoets side, for at bekræfte, at det er ægte og gyldigt.",
     inputPlaceholder: "f.eks. CS-2026-0042",
     inputLabel: "Segl-id",
     button: "Verificer",
@@ -98,47 +59,12 @@ const da: PartialTranslation = {
     contactUs: "så kontakt os",
   },
   apply: {
-    title: "Ansøg om certificering",
-    description: "Få dit Swift Secured-segl på så lidt som 10 dage. Fortæl os om din platform — vores compliance-team svarer inden for 48 timer.",
-    eyebrow: "Ansøg om certificering",
-    h1: "Få dit segl på så lidt som 10 dage",
-    sub: "Fortæl os om din platform. Vores compliance-team svarer inden for 48 timer.",
     fieldName: "Casinonavn",
-    fieldWebsite: "Website-URL",
-    fieldJurisdiction: "Licensjurisdiktion",
-    fieldJurisdictionPlaceholder: "f.eks. Malta, Curacao",
     fieldEmail: "Kontakt-e-mail",
     fieldMessage: "Er der andet, vi bør vide?",
-    fieldMessagePlaceholder: "Lanceringsdato, målmarkeder, nuværende audits...",
-    submit: "Send ansøgning",
-    successTitle: "Ansøgning modtaget",
-    successBody: "Vores team kontakter {email} inden for 48 timer for at starte auditten.",
-  },
-  about: {
   },
   faqPage: {
-    title: "FAQ",
     eyebrow: "FAQ",
-    h1: "Ofte stillede spørgsmål",
-    ctaHeading: "Har du stadig spørgsmål?",
-    ctaButton: "Kontakt os",
-  },
-  badge: {
-    title: "Swift Secured-seglet",
-    description: "Brandreference for Swift Secured-certificeringsseglet: primært badge, kompakt lockup og variant til mørk baggrund.",
-    eyebrow: "Seglet",
-    h1: "Swift Secured",
-    sub: "Ét badge, tre former. Enkelt nok til at stå ved siden af et footer-logo, tydeligt nok til at betyde noget ved første blik.",
-    primaryTitle: "Primært segl",
-    primaryBody:
-      "Det fulde badge til en forsides hero eller footer. Én stregtykkelse, én accentfarve, ingen gradienter eller ekstra pynt — det skal kunne læses tydeligt i enhver størrelse, også skaleret ned til 60 px.",
-    compactTitle: "Kompakt lockup",
-    compactBody: "Til en betalingsside, en footer-stribe eller steder, hvor der er trangt vandret. Samme ikon, samme wordmark, én linje.",
-    darkTitle: "Variant til mørk baggrund",
-    darkBody:
-      "Til casinosites med mørke temaer: ringen skifter til et ikon med kontur og hvid skrift, så det forbliver læsbart uden at skulle have en hvid plade bag sig.",
-    ctaHeading: "Vil du vise Swift Secured på dit site?",
-    ctaButton: "Ansøg om certificering",
   },
 };
 

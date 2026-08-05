@@ -1,15 +1,20 @@
 import type { PartialTranslation } from "../types";
 
+/**
+ * Partial overrides. Any key absent here falls back to English, per key.
+ *
+ * Sixty strings were removed on 5 August 2026, when the English copy was
+ * rewritten for players. They were faithful translations of claims the rewrite
+ * deleted — a badge "in 10 days", a reply "within 48 hours", the word
+ * "Certified" — and this project has no clients, no team and no issued badge.
+ * A correct English sentence beats a fluent promise we cannot keep, so these
+ * keys now fall through until they are translated again.
+ */
 const nl: PartialTranslation = {
   nav: {
     howItWorks: "Hoe het werkt",
-    methodology: "Methodiek",
-    pricing: "Tarieven",
     about: "Over ons",
     faq: "FAQ",
-    casinos: "Casino's",
-    verify: "Verifiëren",
-    apply: "Aanvragen",
     openMenu: "Menu openen",
     closeMenu: "Menu sluiten",
     primaryLabel: "Primair",
@@ -19,75 +24,31 @@ const nl: PartialTranslation = {
     apply: "Aanvragen",
     faq: "FAQ",
   },
-  stickyCta: {
-  },
-  seal: {
-    certified: "Gecertificeerd",
-  },
-  common: {
-    certifiedSince: "Gecertificeerd sinds",
-    viewSealRecord: "Bekijk zegelregistratie",
-    youProvide: "Jij levert aan:",
-  },
   home: {
     title: "Swift Secured",
-    ctaVerify: "Zegel verifiëren",
     howEyebrow: "Hoe het werkt",
   },
-  process: {
-  },
-  pricing: {
-    title: "Tarieven",
-  },
   methodology: {
-    title: "Verificatiemethodiek",
-    description:
-      "Precies wat Swift Secured controleert voordat een badge wordt uitgegeven, hoe vaak er opnieuw wordt gecontroleerd en wat wij bewust niet beweren te verifiëren.",
     eyebrow: "Methodiek",
-    h1: "Wat de badge werkelijk betekent",
-    sub: "Een keurmerk is alleen waard wat erachter staat. Dit is de volledige methode — inclusief de controles die wij niet uitvoeren, zodat niemand hoeft te gissen.",
-    checksTitle: "Wat wij verifiëren",
-    limitsTitle: "Wat wij niet verifiëren",
-    limitsSub:
-      "Bewust gepubliceerd. Een zegel dat meer suggereert dan het controleert is slechter dan geen zegel, en dat is de lijn die wij aanhouden wanneer er iets misgaat bij een operator met onze badge.",
-    suspensionTitle: "Hoe een badge wordt geschorst",
-    suspensionBody:
-      "Komt er een klacht binnen of ziet de crawler iets afwijkends, dan krijgt de operator 48 uur om privé te reageren voordat er publiekelijk iets verandert — dat beschermt tegen valse meldingen van concurrenten. Is het probleem echt, dan verdwijnt de badge en wordt de verificatiepagina bijgewerkt met de feiten. Wij verwijderen geen pagina's tegen betaling, en er is geen bedrag waarmee een bevinding verdwijnt.",
-    ctaHeading: "Wil je je platform laten controleren?",
-    ctaButton: "Scan aanvragen",
   },
   directory: {
-    scanned: {
-      label: "Gescand",
-      desc: "Automatisch gecontroleerd door onze crawler. Geen commerciële relatie en geen badge uitgegeven.",
-    },
-    listed: {
-      label: "Vermeld",
-      desc: "In onze index op basis van openbare bronnen. Er is nog geen controle uitgevoerd en niets hiervan is een aanbeveling.",
-    },
-    flagged: {
-      label: "Nader te bekijken",
-      desc: "De automatische controle vond iets waar een mens naar moet kijken voordat er een conclusie volgt.",
-    },
     statusFilterAll: "Alle",
-    lastScanned: "Laatst gecontroleerd",
-    viewReport: "Rapport bekijken",
   },
   casinos: {
     title: "Casinogids",
-    description: "Overzicht van nieuwe onlinecasino's die Swift Secured volgt, elk met de huidige verificatiestatus.",
+    description:
+      "Overzicht van nieuwe onlinecasino's die Swift Secured volgt, elk met de huidige verificatiestatus.",
     eyebrow: "Overzicht",
     h1: "Casinogids",
-    sub: "Elk nieuw casino dat we indexeren, met de huidige status. De meeste staan vermeld op basis van openbare bronnen en zijn nog niet gecontroleerd — de status op elke kaart geeft aan welke.",
     searchPlaceholder: "Zoek op casinonaam of jurisdictie",
     searchLabel: "Zoek in gecertificeerde casino's",
     empty: "Geen casino's gevonden voor die zoekopdracht.",
   },
   verify: {
     title: "Zegel verifiëren",
-    description: "Voer de zegel-ID in die op de site van een casino staat om te bevestigen dat het zegel echt is en op dit moment door Swift Secured is gecertificeerd.",
+    description:
+      "Voer de zegel-ID in die op de site van een casino staat om te bevestigen dat het zegel echt is en op dit moment door Swift Secured is gecertificeerd.",
     h1: "Zegel verifiëren",
-    sub: "Voer de zegel-ID in die op de site van het casino staat om te bevestigen dat het zegel echt en actueel is.",
     inputPlaceholder: "bijv. CS-2026-0042",
     inputLabel: "Zegel-ID",
     button: "Verifiëren",
@@ -98,47 +59,12 @@ const nl: PartialTranslation = {
     contactUs: "neem contact op",
   },
   apply: {
-    title: "Certificering aanvragen",
-    description: "Krijg je Swift Secured-zegel in slechts 10 dagen. Vertel ons over je platform — ons complianceteam reageert binnen 48 uur.",
-    eyebrow: "Certificering aanvragen",
-    h1: "Krijg je zegel in slechts 10 dagen",
-    sub: "Vertel ons over je platform. Ons complianceteam reageert binnen 48 uur.",
     fieldName: "Naam casino",
-    fieldWebsite: "Website-URL",
-    fieldJurisdiction: "Licentiejurisdictie",
-    fieldJurisdictionPlaceholder: "bijv. Malta, Curacao",
     fieldEmail: "Contact-e-mail",
     fieldMessage: "Nog iets dat we moeten weten?",
-    fieldMessagePlaceholder: "Lanceerdatum, doelmarkten, lopende audits...",
-    submit: "Aanvraag versturen",
-    successTitle: "Aanvraag ontvangen",
-    successBody: "Ons team neemt binnen 48 uur contact op met {email} om de audit te starten.",
-  },
-  about: {
   },
   faqPage: {
-    title: "FAQ",
     eyebrow: "FAQ",
-    h1: "Veelgestelde vragen",
-    ctaHeading: "Nog vragen?",
-    ctaButton: "Neem contact op",
-  },
-  badge: {
-    title: "Het Swift Secured-zegel",
-    description: "Merkreferentie voor het Swift Secured-certificeringszegel: primaire badge, compacte lockup en variant voor donkere achtergrond.",
-    eyebrow: "Het zegel",
-    h1: "Swift Secured",
-    sub: "Eén badge, drie vormen. Eenvoudig genoeg om naast een footerlogo te staan, duidelijk genoeg om in één oogopslag iets te betekenen.",
-    primaryTitle: "Primair zegel",
-    primaryBody:
-      "De volledige badge, voor een homepage-hero of de footer. Eén lijndikte, één accentkleur, geen verlopen of extra versiering — hij moet op elk formaat duidelijk leesbaar zijn, ook verkleind tot 60px.",
-    compactTitle: "Compacte lockup",
-    compactBody: "Voor een afrekenpagina, een footerbalk of overal waar horizontale ruimte krap is. Zelfde icoon, zelfde woordmerk, op één regel.",
-    darkTitle: "Variant voor donkere achtergrond",
-    darkBody:
-      "Voor casinosites met een donker thema: de ring wordt een omlijnd icoon met witte tekst, zodat hij leesbaar blijft zonder een wit vlak erachter.",
-    ctaHeading: "Wil je Swift Secured op je site tonen?",
-    ctaButton: "Certificering aanvragen",
   },
 };
 

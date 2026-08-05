@@ -1,15 +1,20 @@
 import type { PartialTranslation } from "../types";
 
+/**
+ * Partial overrides. Any key absent here falls back to English, per key.
+ *
+ * Sixty strings were removed on 5 August 2026, when the English copy was
+ * rewritten for players. They were faithful translations of claims the rewrite
+ * deleted — a badge "in 10 days", a reply "within 48 hours", the word
+ * "Certified" — and this project has no clients, no team and no issued badge.
+ * A correct English sentence beats a fluent promise we cannot keep, so these
+ * keys now fall through until they are translated again.
+ */
 const tr: PartialTranslation = {
   nav: {
     howItWorks: "Nasıl çalışır",
-    methodology: "Yöntem",
-    pricing: "Fiyatlar",
     about: "Hakkımızda",
     faq: "SSS",
-    casinos: "Casinolar",
-    verify: "Doğrula",
-    apply: "Başvur",
     openMenu: "Menüyü aç",
     closeMenu: "Menüyü kapat",
     primaryLabel: "Ana",
@@ -19,75 +24,31 @@ const tr: PartialTranslation = {
     apply: "Başvur",
     faq: "SSS",
   },
-  stickyCta: {
-  },
-  seal: {
-    certified: "Sertifikalı",
-  },
-  common: {
-    certifiedSince: "Sertifika tarihi",
-    viewSealRecord: "Mühür kaydını gör",
-    youProvide: "Sizden istenenler:",
-  },
   home: {
     title: "Swift Secured",
-    ctaVerify: "Mühür doğrula",
     howEyebrow: "Nasıl çalışır",
   },
-  process: {
-  },
-  pricing: {
-    title: "Fiyatlar",
-  },
   methodology: {
-    title: "Doğrulama yöntemi",
-    description:
-      "Swift Secured'ün rozet vermeden önce tam olarak neyi kontrol ettiği, bunu ne sıklıkla yinelediği ve bilerek doğruladığını iddia etmediği şeyler.",
     eyebrow: "Yöntem",
-    h1: "Rozetin gerçekte ne anlama geldiği",
-    sub: "Bir güven işareti, ancak arkasında duran şey kadar değerlidir. Bu, yöntemin tamamı — kimse tahmin etmek zorunda kalmasın diye yapmadığımız kontroller dahil.",
-    checksTitle: "Doğruladıklarımız",
-    limitsTitle: "Doğrulamadıklarımız",
-    limitsSub:
-      "Bilerek yayımlıyoruz. Kontrol ettiğinden fazlasını ima eden bir mühür, hiç mühür olmamasından kötüdür; rozetimizi taşıyan bir operatörde bir şey ters gittiğinde savunduğumuz çizgi budur.",
-    suspensionTitle: "Bir rozet nasıl askıya alınır",
-    suspensionBody:
-      "Bir şikâyet gelirse ya da tarayıcı olağan dışı bir şey görürse, kamuya açık hiçbir şey değişmeden önce operatörün özel olarak yanıt vermesi için 48 saati olur — bu, rakiplerden gelen asılsız ihbarlara karşı koruma sağlar. Sorun gerçekse rozet iner ve doğrulama sayfası gerçeklerle güncellenir. Ödeme karşılığı sayfa kaldırmayız ve bir bulguyu yok edecek hiçbir ücret yoktur.",
-    ctaHeading: "Platformunuzun kontrol edilmesini ister misiniz?",
-    ctaButton: "Tarama talep et",
   },
   directory: {
-    scanned: {
-      label: "Tarandı",
-      desc: "Tarayıcımız tarafından otomatik kontrol edildi. Ticari ilişki yok, rozet verilmedi.",
-    },
-    listed: {
-      label: "Listede",
-      desc: "Kamuya açık kaynaklardan dizinimizde. Henüz hiçbir kontrol yapılmadı ve buradaki hiçbir şey tavsiye edilmiyor.",
-    },
-    flagged: {
-      label: "İnceleme gerekli",
-      desc: "Otomatik kontrol, sonuca varmadan önce insan gözü isteyen bir şey buldu.",
-    },
     statusFilterAll: "Tümü",
-    lastScanned: "Son kontrol",
-    viewReport: "Raporu gör",
   },
   casinos: {
     title: "Casino dizini",
-    description: "Swift Secured tarafından takip edilen yeni çevrimiçi casinoların dizini, her biri güncel doğrulama durumuyla.",
+    description:
+      "Swift Secured tarafından takip edilen yeni çevrimiçi casinoların dizini, her biri güncel doğrulama durumuyla.",
     eyebrow: "Dizin",
     h1: "Casino dizini",
-    sub: "Dizine eklediğimiz her yeni casino, güncel durumuyla birlikte. Çoğu kamuya açık kaynaklardan listelenmiştir ve henüz kontrol edilmemiştir — her karttaki durum bunu gösterir.",
     searchPlaceholder: "Casino adına veya yargı bölgesine göre ara",
     searchLabel: "Sertifikalı casinolarda ara",
     empty: "Bu aramayla eşleşen casino yok.",
   },
   verify: {
     title: "Mühür doğrula",
-    description: "Bir casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve Swift Secured tarafından güncel olarak sertifikalı olduğunu doğrulayın.",
+    description:
+      "Bir casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve Swift Secured tarafından güncel olarak sertifikalı olduğunu doğrulayın.",
     h1: "Mühür doğrula",
-    sub: "Casinonun sitesinde görünen mühür kimliğini girerek mührün gerçek ve güncel olduğunu doğrulayın.",
     inputPlaceholder: "örn. CS-2026-0042",
     inputLabel: "Mühür kimliği",
     button: "Doğrula",
@@ -98,47 +59,12 @@ const tr: PartialTranslation = {
     contactUs: "bize ulaşın",
   },
   apply: {
-    title: "Sertifikasyon için başvur",
-    description: "Swift Secured mührünüzü 10 gün gibi kısa sürede alın. Platformunuzu anlatın — uyum ekibimiz 48 saat içinde yanıt verir.",
-    eyebrow: "Sertifikasyon başvurusu",
-    h1: "Mührünüzü 10 gün gibi kısa sürede alın",
-    sub: "Platformunuzu anlatın. Uyum ekibimiz 48 saat içinde yanıt verir.",
     fieldName: "Casino adı",
-    fieldWebsite: "Site adresi",
-    fieldJurisdiction: "Lisans yargı bölgesi",
-    fieldJurisdictionPlaceholder: "örn. Malta, Curacao",
     fieldEmail: "İletişim e-postası",
     fieldMessage: "Bilmemiz gereken başka bir şey var mı?",
-    fieldMessagePlaceholder: "Lansman tarihi, hedef pazarlar, mevcut denetimler...",
-    submit: "Başvuruyu gönder",
-    successTitle: "Başvuru alındı",
-    successBody: "Ekibimiz denetimi başlatmak için 48 saat içinde {email} adresine ulaşacak.",
-  },
-  about: {
   },
   faqPage: {
-    title: "SSS",
     eyebrow: "SSS",
-    h1: "Sık sorulan sorular",
-    ctaHeading: "Hâlâ sorunuz mu var?",
-    ctaButton: "Bize ulaşın",
-  },
-  badge: {
-    title: "Swift Secured mührü",
-    description: "Swift Secured sertifikasyon mührü için marka referansı: birincil rozet, kompakt kilitleme ve koyu zemin varyantı.",
-    eyebrow: "Mühür",
-    h1: "Swift Secured",
-    sub: "Tek rozet, üç biçim. Alt bilgideki bir logonun yanında durabilecek kadar sade, ilk bakışta anlam taşıyacak kadar net.",
-    primaryTitle: "Birincil mühür",
-    primaryBody:
-      "Ana sayfa başlığı veya alt bilgi için tam rozet. Tek çizgi kalınlığı, tek vurgu rengi, gradyan veya fazladan süsleme yok — 60 piksele küçültülse bile her boyutta net okunmalı.",
-    compactTitle: "Kompakt kilitleme",
-    compactBody: "Ödeme sayfası, alt bilgi şeridi veya yatay alanın dar olduğu her yer için. Aynı ikon, aynı kelime markası, tek satır.",
-    darkTitle: "Koyu zemin varyantı",
-    darkBody:
-      "Koyu temalı casino siteleri için: halka dış hatlı ikona ve beyaz yazıya dönüşür, böylece arkasına beyaz bir zemin koymadan okunur kalır.",
-    ctaHeading: "Swift Secured'ü sitenizde göstermek ister misiniz?",
-    ctaButton: "Sertifikasyon için başvur",
   },
 };
 

@@ -1,15 +1,20 @@
 import type { PartialTranslation } from "../types";
 
+/**
+ * Partial overrides. Any key absent here falls back to English, per key.
+ *
+ * Sixty strings were removed on 5 August 2026, when the English copy was
+ * rewritten for players. They were faithful translations of claims the rewrite
+ * deleted — a badge "in 10 days", a reply "within 48 hours", the word
+ * "Certified" — and this project has no clients, no team and no issued badge.
+ * A correct English sentence beats a fluent promise we cannot keep, so these
+ * keys now fall through until they are translated again.
+ */
 const ar: PartialTranslation = {
   nav: {
     howItWorks: "كيف يعمل",
-    methodology: "المنهجية",
-    pricing: "الأسعار",
     about: "من نحن",
     faq: "الأسئلة الشائعة",
-    casinos: "الكازينوهات",
-    verify: "التحقق",
-    apply: "التقديم",
     openMenu: "فتح القائمة",
     closeMenu: "إغلاق القائمة",
     primaryLabel: "رئيسية",
@@ -19,75 +24,31 @@ const ar: PartialTranslation = {
     apply: "التقديم",
     faq: "الأسئلة الشائعة",
   },
-  stickyCta: {
-  },
-  seal: {
-    certified: "معتمد",
-  },
-  common: {
-    certifiedSince: "معتمد منذ",
-    viewSealRecord: "عرض سجل الختم",
-    youProvide: "ما تقدّمه:",
-  },
   home: {
     title: "Swift Secured",
-    ctaVerify: "التحقق من ختم",
     howEyebrow: "كيف يعمل",
   },
-  process: {
-  },
-  pricing: {
-    title: "الأسعار",
-  },
   methodology: {
-    title: "منهجية التحقق",
-    description:
-      "ما الذي يفحصه Swift Secured بالضبط قبل إصدار الشارة، وكم مرة يُعاد الفحص، وما الذي لا ندّعي التحقق منه عن قصد.",
     eyebrow: "المنهجية",
-    h1: "ماذا تعني الشارة فعلياً",
-    sub: "علامة الثقة لا تساوي إلا ما يقف خلفها. هذه هي المنهجية كاملة — بما فيها الفحوص التي لا نجريها، حتى لا يضطر أحد إلى التخمين.",
-    checksTitle: "ما الذي نتحقق منه",
-    limitsTitle: "ما الذي لا نتحقق منه",
-    limitsSub:
-      "نُنشر هذا عن قصد. الختم الذي يوحي بأكثر مما يفحص أسوأ من غياب الختم، وهذا هو الخط الذي نلتزم به حين يقع خطأ لدى مشغّل يحمل شارتنا.",
-    suspensionTitle: "كيف تُعلَّق الشارة",
-    suspensionBody:
-      "إذا وردت شكوى أو رصد الزاحف شيئاً غير طبيعي، يحصل المشغّل على 48 ساعة للرد بشكل خاص قبل أي تغيير علني — وهذا يحمي من البلاغات الكاذبة من المنافسين. وإذا كانت المشكلة حقيقية، تُسحب الشارة وتُحدَّث صفحة التحقق بالوقائع. نحن لا نحذف الصفحات مقابل المال، ولا توجد رسوم تجعل نتيجة ما تختفي.",
-    ctaHeading: "تريد فحص منصتك؟",
-    ctaButton: "اطلب فحصاً",
   },
   directory: {
-    scanned: {
-      label: "تم فحصه",
-      desc: "فُحص آلياً بواسطة زاحفنا. لا علاقة تجارية، ولم تُصدر أي شارة.",
-    },
-    listed: {
-      label: "مُدرج",
-      desc: "ضمن فهرسنا من مصادر عامة. لم يُجرَ أي فحص بعد، ولا شيء هنا معتمد منّا.",
-    },
-    flagged: {
-      label: "يحتاج مراجعة",
-      desc: "وجد الفحص الآلي شيئاً يستدعي نظرة بشرية قبل أي استنتاج.",
-    },
     statusFilterAll: "الكل",
-    lastScanned: "آخر فحص",
-    viewReport: "عرض التقرير",
   },
   casinos: {
     title: "دليل الكازينوهات",
-    description: "دليل الكازينوهات الجديدة على الإنترنت التي تتابعها Swift Secured، مع حالة التحقق الحالية لكل منها.",
+    description:
+      "دليل الكازينوهات الجديدة على الإنترنت التي تتابعها Swift Secured، مع حالة التحقق الحالية لكل منها.",
     eyebrow: "الدليل",
     h1: "دليل الكازينوهات",
-    sub: "كل كازينو جديد نُدرجه، مع حالته الحالية. معظمها مُدرج من مصادر عامة ولم يُفحص بعد — الحالة على كل بطاقة توضّح ذلك.",
     searchPlaceholder: "ابحث باسم الكازينو أو الولاية القضائية",
     searchLabel: "البحث في الكازينوهات المعتمدة",
     empty: "لا توجد كازينوهات مطابقة لهذا البحث.",
   },
   verify: {
     title: "التحقق من ختم",
-    description: "أدخل معرّف الختم الظاهر على موقع الكازينو للتأكد من أنه أصلي ومعتمد حالياً من Swift Secured.",
+    description:
+      "أدخل معرّف الختم الظاهر على موقع الكازينو للتأكد من أنه أصلي ومعتمد حالياً من Swift Secured.",
     h1: "التحقق من ختم",
-    sub: "أدخل معرّف الختم الظاهر على موقع الكازينو للتأكد من أنه أصلي وساري.",
     inputPlaceholder: "مثال: CS-2026-0042",
     inputLabel: "معرّف الختم",
     button: "تحقّق",
@@ -98,47 +59,12 @@ const ar: PartialTranslation = {
     contactUs: "تواصل معنا",
   },
   apply: {
-    title: "قدّم طلب الاعتماد",
-    description: "احصل على ختم Swift Secured خلال 10 أيام فقط. أخبرنا عن منصتك — يرد فريق الامتثال لدينا خلال 48 ساعة.",
-    eyebrow: "طلب الاعتماد",
-    h1: "احصل على ختمك خلال 10 أيام فقط",
-    sub: "أخبرنا عن منصتك. يرد فريق الامتثال لدينا خلال 48 ساعة.",
     fieldName: "اسم الكازينو",
-    fieldWebsite: "رابط الموقع",
-    fieldJurisdiction: "الولاية القضائية للترخيص",
-    fieldJurisdictionPlaceholder: "مثال: مالطا، كوراساو",
     fieldEmail: "البريد الإلكتروني للتواصل",
     fieldMessage: "هل من شيء آخر يجب أن نعرفه؟",
-    fieldMessagePlaceholder: "تاريخ الإطلاق، الأسواق المستهدفة، عمليات التدقيق الحالية...",
-    submit: "إرسال الطلب",
-    successTitle: "تم استلام الطلب",
-    successBody: "سيتواصل فريقنا مع {email} خلال 48 ساعة لبدء التدقيق.",
-  },
-  about: {
   },
   faqPage: {
-    title: "الأسئلة الشائعة",
     eyebrow: "الأسئلة الشائعة",
-    h1: "الأسئلة الشائعة",
-    ctaHeading: "هل لا تزال لديك أسئلة؟",
-    ctaButton: "تواصل معنا",
-  },
-  badge: {
-    title: "ختم Swift Secured",
-    description: "مرجع العلامة التجارية لختم اعتماد Swift Secured: الشارة الأساسية، والنسخة المدمجة، ونسخة الخلفية الداكنة.",
-    eyebrow: "الختم",
-    h1: "Swift Secured",
-    sub: "شارة واحدة بثلاث صيغ. بسيطة بما يكفي لتوضع بجانب شعار في التذييل، وواضحة بما يكفي لتعني شيئاً من نظرة واحدة.",
-    primaryTitle: "الختم الأساسي",
-    primaryBody:
-      "الشارة الكاملة، لواجهة الصفحة الرئيسية أو التذييل. سماكة خط واحدة، ولون تمييز واحد، بلا تدرجات أو زخارف إضافية — يجب أن تُقرأ بوضوح بأي حجم، حتى عند تصغيرها إلى 60 بكسل.",
-    compactTitle: "النسخة المدمجة",
-    compactBody: "لصفحة الدفع أو شريط التذييل أو أي مكان تضيق فيه المساحة الأفقية. الأيقونة نفسها، والاسم نفسه، في سطر واحد.",
-    darkTitle: "نسخة الخلفية الداكنة",
-    darkBody:
-      "لمواقع الكازينو ذات الثيمات الداكنة: تتحول الحلقة إلى أيقونة مفرغة والنص إلى الأبيض، ليبقى الختم مقروءاً دون الحاجة إلى خلفية بيضاء خلفه.",
-    ctaHeading: "هل تريد عرض Swift Secured على موقعك؟",
-    ctaButton: "قدّم طلب الاعتماد",
   },
 };
 
