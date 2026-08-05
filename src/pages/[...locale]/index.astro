@@ -103,7 +103,8 @@ const orgJsonLd = {
       </div>
     </section>
 
-    <!-- CERTIFIED CASINOS -->
+    {/* The index. Nothing here is "certified" — no badge has been issued, and
+        an HTML comment saying otherwise still ships to the reader. */}
     <section class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-22.5">
       <div class="mb-11 flex flex-wrap items-end justify-between gap-6">
         <div>
@@ -119,12 +120,15 @@ const orgJsonLd = {
 
 
 
+    {/* The button reads "What we do not check", so it goes to the page that
+        lists the limits — not to the operator sign-up form it pointed at while
+        this band was still addressed to casinos. */}
     <CtaBand
       locale={locale}
       heading={t.home.ctaHeading}
       subtext={t.home.ctaSub}
       ctaLabel={t.home.ctaButton}
-      ctaHref="/apply/"
+      ctaHref="/methodology/"
     />
   </main>
 </Layout>

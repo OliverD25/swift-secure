@@ -1,15 +1,27 @@
 import type { Translation } from "../types";
 
+/**
+ * English source copy. The other eighteen locales fall back to this file per
+ * key, so a string added here reaches every language without touching them.
+ *
+ * Two rules govern everything below, and both have been broken before:
+ *
+ * 1. This site speaks to players. It is a trust service. The free technical
+ *    report we send casino operators is how we open a sales conversation, and
+ *    it appears nowhere in public copy.
+ * 2. Every number is counted from a file in this repository. Nothing is
+ *    estimated, rounded up, or carried over from a previous draft.
+ */
 const en: Translation = {
   nav: {
     howItWorks: "How it works",
-    methodology: "Methodology",
-    pricing: "Pricing",
+    methodology: "What we check",
+    pricing: "For casinos",
     about: "About",
     faq: "FAQ",
-    casinos: "Casinos",
-    verify: "Verify",
-    apply: "Apply",
+    casinos: "The index",
+    verify: "Check a badge",
+    apply: "Casino sign-up",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     primaryLabel: "Primary",
@@ -20,286 +32,315 @@ const en: Translation = {
     faq: "FAQ",
   },
   stickyCta: {
-    note: "Free technical check. Nothing to sign.",
-    button: "Ask for a free check",
+    note: "Run one of the casinos listed here? The operator side of this site starts here.",
+    button: "Casino sign-up",
   },
+  // "Certified" until 5 August 2026. It claimed a judgement we do not make: we
+  // confirm a licence number appears in a register, which is a smaller and true
+  // thing. Seal.astro measures this string to size the badge, so a longer word
+  // is safe here.
   seal: {
-    certified: "Certified",
+    certified: "Licence checked",
   },
   common: {
-    certifiedSince: "Certified since",
-    viewSealRecord: "View seal record",
-    youProvide: "You provide:",
+    certifiedSince: "Record dated",
+    viewSealRecord: "Open the record",
+    youProvide: "What this needs:",
   },
-  // Every figure recomputed from research/audit-sweep-battlefield.json, 4 August
-  // 2026, over the 1222 readable records. The previous four — "340+ casinos
-  // certified", "2.1M seals scanned / mo", "6 yrs auditing operators" — were
-  // invented. We have no clients and no history, and an operator who checks
-  // would find that out faster than they would find anything else on the page.
+  // Counted from src/data/casinos.ts on 5 August 2026, not estimated: 223 records,
+  // 215 with jurisdiction "Anjouan", 0 with status "certified". They are written
+  // here as literals and will therefore go stale the moment the index changes —
+  // if a fourth figure is ever added, derive them at build time instead.
+  //
+  // The middle tile is deliberate. Naming the concentration ourselves is worth
+  // more than hiding it, because a reader who opens the index sees it in ten
+  // seconds anyway, and a trust service caught presenting only flattering facts
+  // has nothing left to sell.
   stats: [
-    { value: "1,311", label: "Casino domains swept" },
-    { value: "1,222", label: "Readable from our crawler" },
-    { value: "135", label: "Median homepage requests" },
-    { value: "1.9 MB", label: "Median homepage weight" },
+    {
+      value: "223",
+      label: "Casinos listed",
+    },
+    {
+      value: "215",
+      label: "Of them under one regulator, Anjouan",
+    },
+    {
+      value: "0",
+      label: "Carrying the badge today",
+    },
   ],
+  // Written for players. The technical checks we run for operators are an
+  // internal tool for opening a conversation, and must not be described on any
+  // public page.
+  //
+  // The sub-headline names the regulator and stops. An earlier draft added that
+  // a regulator's rules "in many places" cover lab-tested games and approved
+  // suppliers — cut, because 215 of the 223 casinos in our own index hold an
+  // Anjouan licence, which imposes neither. The site would have been refuted by
+  // its own directory, one click away.
   home: {
     title: "Swift Secured",
     description:
-      "Swift Secured runs a free technical check on casino homepages: requests that fail, the single heaviest file, time to a usable Register button, and the licence number against the regulator's own register. We publish what we checked and what we did not.",
-    // "Trusted by 340+ licensed operators" was here. Nobody carries the badge.
-    // Saying so first is the only version of this line that survives an
-    // operator spending thirty seconds on the directory page.
-    badge: "New. Nobody carries the badge yet.",
-    h1: "We check casino sites and tell you what is broken.",
-    sub: "Measured from outside, with no access to your systems. Every finding comes with the exact URL and a command that reproduces it — and we publish the checks we do not run, at the same size as the ones we do.",
-    ctaApply: "Ask for a free check",
-    ctaVerify: "Verify a Seal",
+      "We look up a casino's licence number in the regulator's own register and publish what came back, with the date. No casino carries the badge yet.",
+    badge: "New. No casino carries the badge yet.",
+    h1: "Before you deposit, find out who can shut the casino down.",
+    sub: "We look up a casino in the register of the regulator it names, and publish what came back and when. Then we name that regulator, because regulators are not equal — the name is whose word you are trusting. We never call a casino safe.",
+    ctaApply: "See what we check",
+    ctaVerify: "Check a badge",
     howEyebrow: "How it works",
     howTitle: "From a free check to a dated public page",
-    criteriaEyebrow: "The Casino Health Report",
-    criteriaTitle: "Four checks, run from outside your site",
+    criteriaEyebrow: "What the badge means",
+    criteriaTitle:
+      "One thing the badge tells you, and three rules we hold ourselves to",
     operatorsEyebrow: "Our index",
-    operatorsTitle: "Casinos in our index — listed, not endorsed",
+    operatorsTitle: "Casinos in our index — listed, not recommended",
     viewAllCasinos: "See the full index",
-    ctaHeading: "Want the same checks run on your site?",
-    ctaSub: "Free, and there is nothing to sign.",
-    ctaButton: "Ask for a free check",
+    ctaHeading: "Before you deposit, read the limits",
+    ctaSub:
+      "What we cannot see from outside is written out on our how-we-check page, in the same size type as what we can. Read it before you trust any badge, ours included.",
+    ctaButton: "What we do not check",
   },
-  // The old flow began with the operator applying. Ours begins with us having
-  // already run the checks and sent the result — which is what the 21 outreach
-  // reports actually do, and the site has to describe the same sequence.
   steps: [
-    { n: "1", title: "You get a report", desc: "We run the checks from outside and send what we found, with a command to reproduce every line. Nothing to sign, no reply needed." },
-    { n: "2", title: "You fix what matters", desc: "Each finding names the exact file or URL. Most are fixable the same afternoon, and many belong to your platform provider rather than your team." },
-    { n: "3", title: "You decide if it goes public", desc: "If you want the result public we issue a badge linking to a dated page that states exactly what was and was not checked." },
-    { n: "4", title: "We re-check before we publish", desc: "Every finding is re-run against your live site on the day it is sent or published. Anything that no longer reproduces is removed." },
+    {
+      n: "1",
+      title: "Start with the licence number",
+      desc: "A licensed casino publishes a licence number and the name of the regulator behind it, usually at the bottom of the page. That number, and the address of the site you would play on, are where we start.",
+    },
+    {
+      n: "2",
+      title: "Look for it in the regulator's register",
+      desc: "We search the register kept by the regulator that issued the licence. Where the register publishes the sites a licence covers, we check whether this site is on that list.",
+    },
+    {
+      n: "3",
+      title: "Publish the answer with a date",
+      desc: "Confirmed or unconfirmed, both get published, and both carry the day we checked. A licence we cannot find in the register is reported as unconfirmed, never as unlicensed.",
+    },
+    {
+      n: "4",
+      title: "Check it yourself",
+      desc: "The record names the licence number and the regulator that issued it. Those registers are public, so you can repeat the check and never have to take our word for it.",
+    },
   ],
-  // The four checks named in research/methodology.md §1a, replacing five claims
-  // of which four were things this project has established it cannot do from
-  // outside: RNG fairness needs an accredited lab, payout timeliness needs
-  // account access, funds segregation and breach history are not observable,
-  // and the responsible-gambling text matching was withdrawn entirely (§5).
   criteria: [
-    { title: "Revenue Leak Scan", desc: "Requests that fail while your homepage loads — payment icons, game modules, your own APIs. Reported with the URL and a command to reproduce them." },
-    { title: "Dead Weight Finder", desc: "The single largest file your homepage loads, named with its URL and its size. One file to fix, not a page-weight score." },
-    { title: "Time-to-Play Test", desc: "Seconds until the Register button can be tapped on a throttled mobile connection, with the settings we used." },
-    { title: "Licence Match", desc: "The licence number on your site, looked up in the regulator's own register. No record is reported as unconfirmed, never as unlicensed." },
+    {
+      title: "The licence number is in the regulator's register",
+      desc: "We look for the licence number, and for the address of the site itself, in the register kept by the regulator that issued it. Where that register also publishes the sites a licence covers, we check whether this one is on the list. That is the whole of what the badge says.",
+    },
+    {
+      title: "We name the regulator, so you can judge it yourself",
+      desc: "Regulators differ in what they demand of a casino and in what they publish. Every record names the regulator and the number, so you can read that regulator's rules and reach your own view of how much the licence is worth.",
+    },
+    {
+      title: "Every record carries the day it was checked",
+      desc: "Licences get renewed, moved to another company, or withdrawn. An answer without a date on it says nothing, so the date sits on every record, next to the answer.",
+    },
+    {
+      title: "No payment will ever change a record",
+      desc: "No casino can buy a confirmation, alter one, or have one taken down. A record changes when the register changes, and the new date goes on it.",
+    },
   ],
   process: {
-    title: "How the check works",
+    title: "How it works",
     description:
-      "Four stages from a free technical check to a dated public page. Nothing behind a login, no access to your systems, and nothing to sign.",
-    eyebrow: "The process",
-    h1: "How the check works, step by step",
-    sub: "Four stages, none of which need anything from you. We produce your report without asking for access, and we still need none.",
-    ctaHeading: "Want the same checks run on your site?",
-    ctaButton: "Ask for a free check",
+      "How Swift Secured reads a casino's licence number, looks it up in the register of the regulator that issued it, names that regulator, and prints the date on every record.",
+    eyebrow: "How it works",
+    h1: "How a casino gets checked and listed",
+    sub: "There is not much to it, and that is deliberate. We confirm one fact, we name who issued the licence, and we print the day we looked. None of it needs anything from you, and none of it needs anything from the casino.",
+    ctaHeading: "Run one of these casinos?",
+    ctaButton: "Casino sign-up",
   },
   stages: [
     {
       n: "1",
-      title: "We run the checks",
-      duration: "Minutes",
-      desc: "Run from outside your site: requests that fail on the homepage, the single largest file it loads, time to a usable Register button, and the licence number against the regulator's register.",
-      provide: "Nothing. No access, no login, no code on your page.",
+      title: "We read what the casino says about its licence",
+      duration: "Public pages only",
+      desc: "The licence number and the name of the regulator, read from the casino's own pages. What we read is what that site showed us, from where we looked, on the day we looked. Some entries in the index came from public trackers and review sites instead. Those are marked as not checked until someone reads the number off the casino's own page.",
+      provide: "Nothing. You can open the same page yourself.",
     },
     {
       n: "2",
-      title: "We re-check before sending",
-      duration: "Same day",
-      desc: "Every finding is re-run against your live site on the day the report goes out. Anything that no longer reproduces is removed rather than left in to make the report look fuller.",
+      title: "We look the number up in the register",
+      duration: "Public register only",
+      desc: "We search the register kept by the regulator that issued the licence, including the list of approved site addresses where the regulator publishes one. Not every place has one. Some casinos name a jurisdiction with no gaming regulator, and some publish no number at all. Then there is nothing to search, and the record says that instead of pretending otherwise.",
       provide: "Nothing.",
     },
     {
       n: "3",
-      title: "You get the report, free",
-      duration: "Free",
-      desc: "It names what we found, what we checked and found nothing wrong with, and what we did not check at all. A report only contains checks that actually ran on your site.",
-      provide: "Nothing. No fee, no card, nothing to sign.",
+      title: "We publish the answer, the regulator and the date",
+      duration: "Free to read",
+      desc: "The record says which regulator issued the licence, what came back, and the day we looked. We name the regulator because regulators are not equal, and what one of them demands of a casino before granting a licence is the thing worth knowing. If no matching entry came back, the answer is unconfirmed. It is never unlicensed.",
+      provide: "Nothing. No account, no email, no payment.",
     },
     {
       n: "4",
-      title: "If you want it public",
-      duration: "Free for six months",
-      desc: "We issue a badge linking to a dated page stating exactly what was and was not checked. Remove it any time by deleting one line of HTML.",
-      provide: "A link from your site to that page.",
+      title: "We will look again, and the date will move",
+      duration: "On every re-check",
+      desc: "Registers change. A licence lapses, is handed back, is reissued, or a site address is added or dropped. Every record here carries one date because it has been read once. When it is read again the answer is rewritten and the date moves with it, and the old answer is not hidden.",
+      provide: "Nothing. But read the date before you trust the answer.",
     },
   ],
-  // The page keeps its route and its nav item. A B2B site with no page about
-  // money reads as "we quote based on how rich you look", which is exactly the
-  // fear a free offer has to answer. What goes is the price table: 21 operators
-  // were emailed an offer of free for six months, and would otherwise land on
-  // €200–€700 per month plus a €300–500 setup fee.
-  //
-  // No future price is named — not ours, not a competitor's. We have no clients,
-  // so any number is a guess we would have to walk back. No scarcity cap either:
-  // those 21 emails promised an uncapped six months, and a limit invented
-  // afterwards is a second contradiction rather than a fix.
   pricing: {
-    title: "Pricing",
+    title: "For casinos",
     description:
-      "Swift Secured is new and has no clients yet. The technical check is free, and the badge is free for the first six months. No setup fee, no card, no contract.",
-    eyebrow: "Pricing",
-    h1: "The check is free. The badge is free for six months.",
-    sub: "We are new and nobody carries the badge yet. A badge from an issuer with no track record is worth nothing, so we are not charging for one. This page is the whole arrangement.",
+      "Terms for operators. The badge is free for the first six months from the day it goes up. No setup fee, no card, no contract, and no payment changes what a record says.",
+    eyebrow: "For casinos",
+    h1: "What it costs to carry the badge",
+    sub: "This page is for people who run casinos. If you came here to look a site up before depositing, the index is the page you want. We are new and no casino carries the badge yet. A badge from a company nobody has heard of is worth nothing, so we are not charging for one. Being in the index is free and no casino pays to be there.",
     billingTitle: "The whole arrangement",
   },
-  // Was Bronze / Silver / Gold, a paid ladder describing work we do not do:
-  // real-money withdrawal tests, bonus-term audits, complaint-history review.
-  // Bronze also asserted game-provider verification, which research/
-  // methodology.md §6 records as tested and confirmed impossible — provider
-  // hosts found on live sites: zero. The site was making the one claim the
-  // project had specifically proved it could not make.
-  //
-  // These are now the four checks that actually run, each with what it does,
-  // how it is reported, and what it deliberately stops short of saying.
+  // The four ids are load-bearing: other code and the outreach reports key off
+  // them, so they stay. Their visible names and text no longer describe the
+  // internal checks they were named after.
   tiers: [
     {
       id: "revenue-leak-scan",
-      name: "Revenue Leak Scan",
-      summary: "Requests that fail while your homepage loads.",
+      name: "What the badge confirms",
+      summary:
+        "One fact: the licence number on the casino's own page appears in the register of the regulator that issued it.",
       checks: [
-        "Every failing request recorded with its full URL, not just a count",
-        "Refusals aimed at our crawler separated out and never reported as your breakage",
-        "Failures on your own domain separated from your platform vendor's",
-        "Each one reproducible by you with a single curl command",
+        "The number is read from the casino's own pages, not copied from a third-party list",
+        "It is looked up in the issuing regulator's own register, including the approved-address list where that regulator publishes one",
+        "The record names that regulator, so you can find out what it demands of a casino and decide what the licence is worth",
+        "Nothing else is confirmed. The badge is not a statement that a casino is safe",
       ],
     },
     {
       id: "dead-weight-finder",
-      name: "Dead Weight Finder",
-      summary: "The single largest file your homepage loads.",
+      name: "How a record is dated",
+      summary:
+        "A register answer is true on the day it was read, and every record says which day that was.",
       checks: [
-        "Named with its URL, its size and its type — one file, not a score",
-        "Page totals are measured but never quoted: on a site that streams video the total overstated the real transfer by 3.4x",
-        "Compared against a measured market median of 1.9 MB across 1,222 sites",
-        "Confirmable with one curl command against the file itself",
+        "Where we have read the register, the record shows the day we read it, next to the answer and not in small print",
+        "Where nobody has read it yet, the record says so rather than showing an answer we do not have",
+        "An old date is left visible. Nothing is quietly refreshed to look newer than it is",
+        "If the date is too old to trust, do not trust the answer. That is the right reaction, and it is why the date is there",
       ],
     },
     {
       id: "time-to-play-test",
-      name: "Time-to-Play Test",
-      summary: "Seconds to a usable Register button on a slow mobile connection.",
+      name: "What makes a record change",
+      summary:
+        "A register can change. The record follows it, and says which way it went.",
       checks: [
-        "Run on a phone-sized viewport with the connection throttled to a named profile",
-        "The button is never clicked — we measure readiness, not create accounts",
-        "The throttle settings are stated so you can repeat the measurement",
-        "If our detector finds no button we report that as unmeasured, never as missing",
+        "A licence that is withdrawn, handed back or expired is recorded as exactly that, not softened into unconfirmed",
+        "A site address dropped from the regulator's approved list changes the record too",
+        "No entry found is its own answer: unconfirmed, meaning we found nothing, not that we found something bad",
+        "A record changes because the register changed. No payment, from anyone, changes what it says",
       ],
     },
     {
       id: "licence-match",
-      name: "Licence Match",
-      summary: "Your licence number, looked up in the regulator's own register.",
+      name: "What we refuse to do",
+      summary:
+        "The limits are part of the product, not a footnote at the end of it.",
       checks: [
-        "The number is read from your own page, not from a third-party list",
-        "Checked against the regulator's register, including the approved-domain list",
-        "No public record is reported as unconfirmed — never as unlicensed",
-        "Certificates expire and get reissued, and we say so rather than implying fault",
+        "We never call a casino safe, recommended or trustworthy. Nobody can tell you that from outside",
+        "We never call a casino unlicensed. No record found means unconfirmed, and that is all it means",
+        "We say nothing about the games, the odds, or whether a win gets paid",
+        "We do not grade casinos and we do not sell a better answer, a faster one, or a higher place in the list",
       ],
     },
   ],
   billingNotes: [
     {
       title: "What it costs today",
-      desc: "Nothing. The technical check is free and the badge is free for the first six months. No setup fee, no card and no contract. The technical checks stay free after that either way.",
+      desc: "Nothing. A listing in the index is free and stays free, whether you ever speak to us or not. The badge is free for the first six months, counted from the day it goes up on your site. No setup fee, no card, no contract.",
     },
     {
-      title: "What we ask instead",
-      desc: "If you take the badge, it links back to your verification page here, and we may name you as one of the first operators we checked. That is the whole exchange — no exclusivity, no revenue share, no referral fee.",
+      title: "What we ask in return",
+      desc: "One link, from your badge to your record here. That link is the consideration: it is how players check the badge is real, and it is how people find us. That is the whole exchange. No exclusivity, no revenue share, no referral fee, and nothing you can buy that changes what your record says.",
     },
     {
       title: "After six months",
-      desc: "We have not set a price. We have no clients, so any number would be a guess and we would have to walk it back. We will tell you the price before it applies and you can say no. Nothing renews on its own, because we never take a payment method.",
+      desc: "We have not set a price. We have no clients, so any figure now would be a guess we would have to withdraw later. You will hear the price before it applies and you can say no. Nothing renews on its own, because we never hold a payment method.",
     },
     {
       title: "If you want it gone",
-      desc: "Delete one line of HTML. We do not ask why, and your verification page stays up with the date it was last checked — it is a record of what we measured, not an endorsement we can withdraw as leverage.",
+      desc: "Delete one line from your page and the badge is gone. We do not ask why. Your record stays up with the date on it, because it is a record of what the register said, not an endorsement we can pull as leverage.",
     },
   ],
   methodology: {
-    title: "Verification Methodology",
+    title: "What we check",
     description:
-      "Exactly what Swift Secured checks before issuing a badge, how often it is re-checked, and what we deliberately do not claim to verify.",
+      "The whole method: the one fact Swift Secured confirms, why every record carries a date, what we deliberately do not check, and what happens when a licence stops appearing.",
     eyebrow: "Methodology",
-    h1: "What the badge actually means",
-    // The standing rule that closes the gap between this page and a report.
-    // We advertise four checks; a given report may contain fewer, because the
-    // generator only composes the checks that actually ran. An operator holding
-    // a two-check report must find the explanation here rather than having to
-    // ask "where is my licence result?".
-    sub: "A trust mark is only worth what stands behind it. This is the full method, including the checks we do not perform, so nobody has to guess. A report only ever contains the checks that actually ran on your site, and it names them — if a check is not named in your report, it did not run.",
-    checksTitle: "The four checks, and what each one stops short of claiming",
-    limitsTitle: "What we do not verify",
+    h1: "How we check, and what we cannot check",
+    sub: "Everything here is done from outside, as an ordinary visitor with no account and no access to any casino. We take the licence number a casino publishes, and the address of the site, and look for both in the register kept by the regulator that issued the licence. Then we publish the answer with the date. We do not test games ourselves. This page is what that answer tells you, and what it does not.",
+    checksTitle: "What we confirm",
+    limitsTitle: "What we do not check",
     limitsSub:
-      "Published deliberately. A seal that implies more than it checks is worse than no seal, and this is the line we hold when something goes wrong at an operator carrying our badge.",
-    monitoringTitle: "Verified-at-Send",
+      "This list is published on purpose. It is the only way to know what the badge is worth. It also says which registers we can read today, because a casino we have not checked is marked not checked, and that is not the same word as unconfirmed.",
+    monitoringTitle: "Why every record carries a date",
     monitoringBody:
-      "Every finding is re-run against the live site on the day it is sent or published, and anything that no longer reproduces is removed rather than left in. Findings go stale — one site fixed an issue between our sweep and our checking it a day later. The verification page always shows the date it was last run, so nobody has to guess how old the result is.",
-    suspensionTitle: "How a badge gets suspended",
+      "A register is not a fixed thing. A licence lapses, a site address is added or dropped, a certificate is reissued under a new number. So an answer is only true on the day it was read, and we print that day beside the answer rather than leave you to guess. Every record here has been read once. When we read one again, the record is rewritten and the date moves with it, and the earlier answer is not hidden. An old date stays visible on purpose. It is better that you distrust a stale record than trust one that only looks fresh.",
+    suspensionTitle: "When a badge comes down",
     suspensionBody:
-      "If a complaint arrives or the crawler sees something abnormal, the operator gets 48 hours to respond privately before anything changes publicly — that protects against false reports from competitors. If the problem is real, the badge comes down and the verification page is updated with the facts. We do not remove pages for payment, and there is no fee that makes a finding disappear.",
-    ctaHeading: "Want your platform checked?",
-    ctaButton: "Request a scan",
+      "If a licence stops appearing in the register, that is what the register says, and we publish it when we see it. We do not hold it back while the casino decides how to respond. A report from anyone, including a rival, is not a finding and never changes a record on its own. It only makes us read the register again, and what publishes is what the register said and the day we read it. The operator can send an answer, and it is added to the record when it arrives. If the licence is gone, the badge comes down and the record says what changed and when. No payment removes a record, and there is no fee that makes one say something friendlier.",
+    ctaHeading: "Before you deposit, look the casino up.",
+    ctaButton: "See the full index",
   },
   limits: [
     {
-      title: "RTP and whether individual results are fair",
-      desc: "Proving this needs millions of spins or direct data from the provider. No verification service on this market genuinely does it, and we will not imply that we do.",
+      title: "Whether the games are fair",
+      desc: "Whether a spin is honest, and what a game really pays back over time, can only be established by an accredited testing lab with access to the game's own data. We are not a lab and we do not have that data. Some regulators require independent lab testing before they grant a licence and some do not, so a licence sitting in a register is not a substitute for that testing. We will not let the badge suggest it is.",
     },
     {
-      title: "Where the games actually come from",
-      desc: "We tried. Operators serve game content through their own domains and unbranded CDNs, so the studio behind a game cannot be established from outside. We record which studios a site names and the date it named them. We do not verify the claim.",
+      title: "Who really made a game",
+      desc: "We tried to establish this from outside and could not do it on any site we looked at. A casino can name any studio on a page. We cannot confirm the claim, so we do not repeat it as a finding.",
     },
     {
       title: "Anything behind a login",
-      desc: "Every check runs as a first-time visitor with no account. Deposits, withdrawals, KYC and account settings are invisible to us, so we say nothing about them.",
+      desc: "Every check is done as a visitor with no account. Deposits, withdrawals, identity checks, bonus terms and account settings are invisible to us, so we say nothing at all about them.",
     },
     {
-      title: "Whether an operator can pay a large win",
-      desc: "Solvency is not visible from outside, and we do not test withdrawals. Nothing we publish is a statement about whether a jackpot gets paid.",
+      title: "Whether a big win gets paid",
+      desc: "We do not test withdrawals, and whether a company can cover a large win is not visible from outside. Nothing in a record says whether you get your money.",
     },
     {
-      title: "That an operator will never treat a player badly",
-      desc: "The badge reports four measurements taken on one day from outside the site. It is a record of what we measured, not a character reference.",
+      title: "That a casino is safe",
+      desc: "A licence is a permission the issuer can withdraw. That is all it is. What a regulator demands before granting one varies enormously, and a badge cannot tell two regulators apart. As of 4 August 2026, 215 of the 223 casinos in this index hold a licence from Anjouan, which is why we print the regulator's name on every record and expect you to look it up. We never call a casino safe.",
     },
   ],
   directory: {
     certified: {
-      label: "Verified",
-      desc: "Checked, and the operator chose to publish the result. The verification page shows the date it was last run.",
+      label: "Licence number confirmed",
+      desc: "The licence number on the casino's site was found in the register of the regulator that issued it. The record names that regulator and the day we looked. Registers are incomplete and lag behind, so this means found on that day, in that register, and nothing more.",
     },
     scanned: {
-      label: "Scanned",
-      desc: "Checked automatically by our crawler. No commercial relationship, and no badge issued.",
+      label: "Not found in register",
+      desc: "We searched on the date shown and no matching entry came back. That is not the same as unlicensed. Registers are incomplete, go offline and lag behind. Some casinos also name a place with no gaming regulator, or publish no number at all, and then there is no register to search.",
     },
     listed: {
-      label: "Listed",
-      desc: "In our index from public sources. No check has been run yet and nothing here is endorsed.",
+      label: "Not checked yet",
+      desc: "In the index from public sources. The licence number here is second-hand and nobody has looked it up in the register. Being listed is not a recommendation.",
     },
     flagged: {
-      label: "Needs review",
-      desc: "The automated check found something that needs a human look before any conclusion.",
+      label: "Held for a person to read",
+      desc: "The lookup returned something that does not add up, such as a number matching nothing or a claim we could not follow. It is held back until a person reads it, and nothing is published as a conclusion until then.",
     },
     statusFilterAll: "All",
-    lastScanned: "Last checked",
-    viewReport: "View report",
+    lastScanned: "Record dated",
+    viewReport: "Open the record",
   },
   casinos: {
     title: "Casino Directory",
-    description: "Directory of new online casinos tracked by Swift Secured, each with its current verification status.",
+    description:
+      "Directory of new online casinos tracked by Swift Secured, each with its current verification status.",
     eyebrow: "Directory",
     h1: "Casino directory",
-    sub: "Every new casino we index, with its current status. Most are listed from public sources and have not been checked yet — the status on each card says which.",
+    sub: "Every casino in our index, with the regulator named on its licence and the date of any check. Listed is not checked, and checked is not recommended. Each card says which.",
     searchPlaceholder: "Search by casino name or jurisdiction",
     searchLabel: "Search certified casinos",
     empty: "No casinos match that search.",
   },
   verify: {
     title: "Verify a Seal",
-    description: "Enter the seal ID shown on a casino's site to check it against the seals we have actually issued.",
+    description:
+      "Enter the seal ID shown on a casino's site to check it against the seals we have actually issued.",
     h1: "Verify a Seal",
-    sub: "Enter the seal ID shown on the casino's site to confirm it's genuine and current.",
+    sub: "Enter the number printed on a badge. No badges have been issued yet, so today every lookup comes back empty.",
     inputPlaceholder: "e.g. CS-2026-0042",
     inputLabel: "Seal ID",
     button: "Verify",
@@ -308,105 +349,98 @@ const en: Translation = {
     jurisdiction: "Jurisdiction:",
     lastChecked: "Last checked:",
     invalidStatus: "No matching seal found",
-    invalidBody: "No seal matches that ID. We have not issued any badges yet, so every lookup returns this today. If you believe this is an error,",
+    invalidBody:
+      "No seal matches that ID. We have not issued any badges yet, so every lookup returns this today. If you believe this is an error,",
     contactUs: "contact us",
   },
   apply: {
-    title: "Apply for Certification",
-    description: "Get your Swift Secured seal in as little as 10 days. Tell us about your platform — our compliance team responds within 48 hours.",
-    eyebrow: "Apply for certification",
-    h1: "Get your seal in as little as 10 days",
-    sub: "Tell us about your platform. Our compliance team responds within 48 hours.",
+    title: "For casinos: ask us to check your licence",
+    description:
+      "The operator side of Swift Secured. Tell us where your licence number is published and we will look it up in the register of the regulator that issued it, and publish what we find with the date.",
+    eyebrow: "For casinos",
+    h1: "Ask us to check your licence",
+    sub: "This form is for operators. If you are here to look a casino up before depositing, the index is what you want. There is no department behind this form, so we make no promise about how fast you hear back and there is no promised date. There is nothing to pay and nothing to sign. If the register shows nothing against your number, we publish that too.",
     fieldName: "Casino name",
-    fieldNamePlaceholder: "Your casino name",
-    fieldWebsite: "Website URL",
-    fieldJurisdiction: "Licensing jurisdiction",
-    fieldJurisdictionPlaceholder: "e.g. Malta, Curacao",
+    fieldNamePlaceholder: "The name players see",
+    fieldWebsite: "Website address",
+    fieldJurisdiction: "Regulator that issued your licence",
+    fieldJurisdictionPlaceholder: "e.g. Anjouan, Curacao GCB",
     fieldEmail: "Contact email",
     fieldMessage: "Anything else we should know?",
-    fieldMessagePlaceholder: "Launch date, target markets, current audits...",
-    submit: "Submit application",
-    successTitle: "Application received",
-    successBody: "Our team will reach out to {email} within 48 hours to start the audit.",
+    fieldMessagePlaceholder:
+      "Licence number, the page it is printed on, who to reply to",
+    submit: "Send",
+    successTitle: "Received",
+    successBody:
+      "It is with us. If we can act on it, you will hear back at {email} once a person has read it. We are new and small, so that can take a while, and we are not promising a date. If the register shows nothing against your number, we will tell you that as well.",
   },
-  // Was: "An independent check on new casinos, since 2020", an audit "players
-  // and casinos both trust", and a team of "ex-regulators and RNG engineers".
-  // None of it true. The project is days old, has no clients, no team and no
-  // RNG capability — the methodology page says so explicitly two clicks away,
-  // so this page was arguing against our own documentation.
   about: {
     title: "About",
-    description: "Swift Secured is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
+    description:
+      "Swift Secured is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
     eyebrow: "About",
     h1: "New, and saying so",
-    sub: "We started in 2026 by measuring 1,311 casino sites to find out what could honestly be checked from outside. Most of what verification services advertise turned out not to be checkable that way, so we do not offer it.",
-    card1Title: "Nothing changes what a check reports",
-    card1Body: "No revenue share, no referral fees, and the check is free — so there is no fee to withhold and nothing to buy. A finding is removed only when it stops reproducing on the live site.",
-    card2Title: "We publish what we cannot do",
-    card2Body: "The methodology page lists the checks we do not perform at the same size as the ones we do, including the one we tried and abandoned. A mark that implies more than it measures is worth less than no mark.",
+    sub: "Swift Secured started in August 2026. It is days old, no casino carries the badge, and we would rather write that than dress it up. We publish only what can be confirmed from outside, with no account and no access to any casino. That turned out to be a short list, so the list is short, and it sits on this site next to everything the badge does not cover.",
+    card1Title: "No casino can buy a result",
+    card1Body:
+      "No payment will ever change what a record says, and no record comes down because someone asked. We will not take a share of a casino's revenue and we will not take a referral fee. A casino may one day pay to display a record. It will never pay for a word of what the record says.",
+    card2Title: "The limits sit next to the claim",
+    card2Body:
+      "Whether a game is fair, whether a large win gets paid, anything behind a login — none of that can be seen from outside, so we do not claim it. Our how-we-check page lists what we confirm and what we do not, in the same size type. Read that list before you trust the badge.",
   },
   faqPage: {
-    title: "FAQ",
-    description: "What Swift Secured checks, what it deliberately does not check, what it costs, and how to reproduce any finding yourself.",
+    title: "Questions",
+    description:
+      "What the badge confirms, what unconfirmed means, whether casinos pay us, and why we name the regulator instead of judging it for you.",
     eyebrow: "FAQ",
-    h1: "Frequently asked questions",
-    ctaHeading: "Still have questions?",
-    ctaButton: "Get in touch",
+    h1: "Questions players ask",
+    ctaHeading: "Run a casino? The operator side starts here.",
+    ctaButton: "Casino sign-up",
   },
   faqs: [
     {
-      q: "How much does the check cost?",
-      a: "Nothing. The technical check is free, and the badge is free for the first six months. There is no setup fee, no card and no contract. We have not set a price for after six months, because we have no clients yet and any number would be a guess.",
+      q: "What does the badge actually mean?",
+      a: "It means the licence number shown for that casino was found in the register kept by the regulator that issued it, on the date printed on the record. That is the whole claim. It is not a recommendation, and it is not a promise that you will be treated well.",
     },
     {
-      q: "What do you actually check?",
-      a: "Four things, all from outside your site with no access to your systems: requests that fail while your homepage loads, the single largest file it loads, how long it takes before the Register button can be tapped on a slow mobile connection, and your licence number against the regulator's own register.",
+      q: "Do you check the games?",
+      a: "No. We do not test games, spins or payout percentages, and we will not pretend to. That takes an accredited laboratory and millions of recorded spins, and no badge can do it from outside a casino. What we confirm is the licence, because the licence is the thing a casino can lose. A regulator sets the rules a licensed casino has to follow, and in many places those rules cover games tested by an accredited laboratory and suppliers the regulator has approved. The regulator, not us, is the body that can withdraw the licence. So a confirmed licence tells you the casino answers to someone with that power, and it tells you who that someone is, so you can read their rules yourself. It does not tell you we looked at the games. We did not.",
     },
     {
-      q: "What can you not check?",
-      a: "Anything behind a login. Where your games actually come from — operators serve game content through their own domains, so the studio behind a game cannot be established from outside. RNG fairness, which needs an accredited lab and millions of spins. Whether an operator can pay a large win.",
+      q: "Does the casino pay you for the badge?",
+      a: "No casino pays us for a result. No payment will ever change what a record says, and no record comes down because someone asked. If a casino ever pays us, it buys the right to display a record, never a word of what the record says.",
     },
     {
-      q: "My report only listed two checks. Why?",
-      a: "A report only ever contains the checks that actually ran on your site, and it names them. If a check is not named in your report, it did not happen. Ask and we will run the others.",
+      q: "It says unconfirmed. Is the casino illegal?",
+      a: "No, and we are careful with that word. Unconfirmed means we found no public record for that number. Registers go offline, numbers get printed wrong, licences get moved to another company name, and some regulators publish very little. It is not the same as unlicensed, and we never write that. Ask the casino for its licence details directly. A refusal to answer tells you more than our result does.",
     },
     {
-      q: "How do I know the findings are real?",
-      a: "Every finding carries the exact URL and a command you can paste into a terminal to reproduce it. We also re-run every finding against your live site on the day the report is sent, and remove anything that no longer reproduces.",
+      q: "I have a problem with a casino. Can you help?",
+      a: "Not with money, a locked account or a refused withdrawal. We have no access to any account and no power over any casino, and saying otherwise would waste your time. The record names the regulator that issued the licence, and that is the body with power over the licence. Some regulators publish a complaints procedure and some publish almost nothing, so look at what the one named on the record actually offers before you count on it.",
     },
     {
-      q: "Do we have to do anything to get a report?",
-      a: "No. We run the checks without asking you for anything, and send the result whether or not you ever reply. Taking the badge is a separate decision you make afterwards.",
-    },
-    {
-      q: "What happens if you find nothing?",
-      a: "You get a report saying exactly that. We do not add weak findings to make a report look fuller — that would destroy the only thing that makes it worth reading.",
-    },
-    {
-      q: "Can we remove the badge later?",
-      a: "Delete one line of HTML. We do not ask why. Your verification page stays up with the date it was last checked, because it is a record of what we measured rather than an endorsement we withdraw as leverage.",
-    },
-    {
-      q: "Do you take referral fees from casinos?",
-      a: "No. No revenue share, no referral fees, and no payment of any kind changes what a check reports.",
+      q: "Why should I trust a brand nobody has heard of?",
+      a: "You should not, yet. Swift Secured is days old and no casino carries the badge. All we offer is a check you can repeat: the licence number is public, the register is public, and the date is on the record. Look it up yourself, and our name stops mattering.",
     },
   ],
   badge: {
-    title: "The Swift Secured Seal",
-    description: "Brand reference for the Swift Secured certification seal: primary badge, compact lockup, and dark-background variant.",
-    eyebrow: "The seal",
-    h1: "Swift Secured",
-    sub: "One badge, three forms. Simple enough to sit next to a footer logo, clear enough to mean something at a glance.",
-    primaryTitle: "Primary seal",
+    title: "The badge",
+    description:
+      "What the Swift Secured badge looks like, the one thing it confirms, and how to tell a real badge from a picture of one.",
+    eyebrow: "The badge",
+    h1: "What the badge means when you see it",
+    sub: "One mark, three forms, one meaning. It reads Licence checked, because that is the only thing it says: on the date shown, we looked that casino's licence number up in the register of the regulator that issued it. Every real badge is a link. If it does not open a dated record here that names the regulator, it is a picture, not a badge.",
+    primaryTitle: "The full badge",
     primaryBody:
-      "The full badge, for a homepage hero or footer. One weight of stroke, one accent color, no gradients or extra ornament — it has to read clearly at any size, even shrunk to 60px.",
-    compactTitle: "Compact lockup",
-    compactBody: "For a checkout page, footer strip, or anywhere horizontal space is tight. Same icon, same wordmark, one line.",
-    darkTitle: "Dark-background variant",
+      "The version you would meet in a footer or near a sign-up form. It says Licence checked, and it is deliberately plain, because a mark dressed up as an award is trying to tell you something nobody checked. Click it and it opens that casino's record here, with the regulator named at the top and the date we looked. No casino carries it yet.",
+    compactTitle: "The small version",
+    compactBody:
+      "The same mark on one line, for a footer strip or a row of payment logos where there is no room. It links to the same record and means exactly the same thing. Small does not mean lesser, and there is no bigger badge that means more.",
+    darkTitle: "On dark pages",
     darkBody:
-      "For casino sites with dark themes: the ring switches to an outlined icon and white type so it stays legible without needing a white plate behind it.",
-    ctaHeading: "Want to display Swift Secured on your site?",
-    ctaButton: "Apply for Certification",
+      "Most casino sites are dark, so there is an outlined version with white type. Same mark, same words, same record. The colour is about staying readable, not a higher grade. We do not have grades.",
+    ctaHeading: "Run a casino and want to carry it?",
+    ctaButton: "Casino sign-up",
   },
 };
 
