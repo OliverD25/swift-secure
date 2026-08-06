@@ -53,18 +53,32 @@ import sys
 from datetime import date
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
-PRIORITY = ROOT / "research" / "outreach-priority.csv"
-VERIFIED = ROOT / "research" / "wave-verification.json"
-SENDER_FILE = ROOT / "research" / "sender.json"
-OUTDIR = ROOT / "research" / "reports"
-
-MB = 1024
-TODAY = date.today().strftime("%-d %B %Y") if sys.platform != "win32" else date.today().strftime("%d %B %Y").lstrip("0")
 
 argv = sys.argv[1:]
 def opt(name, default):
     return argv[argv.index(name) + 1] if name in argv and argv.index(name) + 1 < len(argv) else default
+
+
+def shortpath(p: pathlib.Path) -> str:
+    """Repo-relative when it can be, absolute otherwise — a fixture in /tmp is
+    outside ROOT and relative_to() would raise inside an error message."""
+    try:
+        return str(p.relative_to(ROOT))
+    except ValueError:
+        return str(p)
+
+
+SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
+PRIORITY = ROOT / "research" / "outreach-priority.csv"
+# These three are overridable so tests can run against fixtures instead of
+# writing over the real letters. test_report_tooling.py relies on it.
+VERIFIED = pathlib.Path(opt("--verified", ROOT / "research" / "wave-verification.json"))
+SENDER_FILE = pathlib.Path(opt("--sender-file", ROOT / "research" / "sender.json"))
+OUTDIR = pathlib.Path(opt("--outdir", ROOT / "research" / "reports"))
+
+MB = 1024
+TODAY = date.today().strftime("%-d %B %Y") if sys.platform != "win32" else date.today().strftime("%d %B %Y").lstrip("0")
+
 
 def signature() -> dict:
     """Read research/sender.json. A malformed file is an error, not a fallback.
@@ -78,7 +92,7 @@ def signature() -> dict:
     try:
         return json.loads(SENDER_FILE.read_text(encoding="utf8"))
     except json.JSONDecodeError as err:
-        raise SystemExit(f"{SENDER_FILE.relative_to(ROOT)} is not valid JSON: {err}")
+        raise SystemExit(f"{shortpath(SENDER_FILE)} is not valid JSON: {err}")
 
 
 SIGNATURE = signature()
@@ -407,11 +421,19 @@ def build(rec: dict, row: dict, ver: dict) -> str:
 def main() -> None:
     if not VERIFIED.exists():
         raise SystemExit(
-            f"missing {VERIFIED.relative_to(ROOT)} — run 15-verify-wave.py first.\n"
+            f"missing {shortpath(VERIFIED)} — run 15-verify-wave.py first.\n"
             "Every report claims each line was re-checked on the day it was sent. "
             "Without that file the claim is false and the curl lines are unproven.")
     sweep = {r["domain"]: r for r in json.loads(SWEEP.read_text(encoding="utf8"))}
-    verified = json.loads(VERIFIED.read_text(encoding="utf8"))
+    raw = json.loads(VERIFIED.read_text(encoding="utf8"))
+    if "domains" not in raw or "generatedOn" not in raw:
+        raise SystemExit(
+            f"{shortpath(VERIFIED)} has no generatedOn field — re-run 15-verify-wave.py.\n"
+            "The age of the measurements is read from inside the file on purpose: "
+            "a git clone resets file timestamps, so mtime would call month-old "
+            "data fresh on any machine that did not produce it.")
+    verified = raw["domains"]
+    generated_on = date.fromisoformat(raw["generatedOn"])
     wave = [r for r in csv.DictReader(PRIORITY.open(encoding="utf8")) if r["send"] == "SEND"]
     OUTDIR.mkdir(exist_ok=True)
 
@@ -440,7 +462,7 @@ def main() -> None:
     if SENDER.startswith("[") or REPLY.startswith("["):
         print()
         print("!! PLACEHOLDERS STILL IN EVERY FILE — do not send yet.")
-        print(f"   Fill them in {SENDER_FILE.relative_to(ROOT)}, or pass")
+        print(f"   Fill them in {shortpath(SENDER_FILE)}, or pass")
         print("   --sender \"Your Name\" --reply you@swiftsecured.com")
 
     # Signing the letters removed the catch that used to stop a send. The date
@@ -448,7 +470,7 @@ def main() -> None:
     # date and states each line was re-checked "on the day this was sent". Both
     # are set when the file is written, and neither ages well. So warn on the
     # measurement's age rather than trusting whoever runs this to remember.
-    stale = (date.today() - date.fromtimestamp(VERIFIED.stat().st_mtime)).days
+    stale = (date.today() - generated_on).days
     if stale >= 1:
         print()
         print(f"!! The verification data is {stale} day(s) old, but these letters are")

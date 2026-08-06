@@ -29,6 +29,7 @@ import pathlib
 import re
 import subprocess
 import sys
+from datetime import date
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
@@ -166,7 +167,17 @@ def main() -> None:
 
     lines.insert(4, f"**{len(ok_rows)} confirmed, {len(bad_rows)} must not be sent as-is.**\n")
     OUT.write_text("\n".join(lines), encoding="utf8")
-    OUTJSON.write_text(json.dumps(results, indent=1, sort_keys=True), encoding="utf8")
+    # The date goes INSIDE the file, not left to the filesystem.
+    #
+    # 18-generate-reports.py refuses to date a letter "re-checked today" against
+    # measurements that are not. It used to judge that on the file's mtime,
+    # which git does not preserve: a fresh clone stamps every file with the
+    # checkout time, so month-old data would read as minutes old on the other
+    # machine. Recording the run date as content makes the check survive a
+    # clone, a copy and a backup restore.
+    OUTJSON.write_text(json.dumps(
+        {"generatedOn": date.today().isoformat(), "domains": results},
+        indent=1, sort_keys=True), encoding="utf8")
     print(f"\n{len(ok_rows)} confirmed, {len(bad_rows)} held: {', '.join(bad_rows) or 'none'}")
     print(f"wrote {OUT.relative_to(ROOT)} and {OUTJSON.relative_to(ROOT)}")
     if LIMITED:
