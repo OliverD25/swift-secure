@@ -17,3 +17,18 @@
  */
 export const FORM_ENDPOINT = import.meta.env.PUBLIC_FORM_ENDPOINT ?? "";
 export const CONTACT_EMAIL = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "";
+
+/**
+ * Optional, and only some services want it.
+ *
+ * Formspree identifies the form from the endpoint URL, so it needs nothing
+ * here — leave PUBLIC_FORM_KEY unset. Web3Forms posts to one shared endpoint
+ * for everybody and identifies the form from an `access_key` field in the body,
+ * so it needs this set.
+ *
+ * Supporting both makes the choice of service a variable rather than a code
+ * change, so switching later costs nothing. No secret is exposed by this:
+ * Web3Forms' access key is designed to sit in public HTML, which is also why
+ * the variable carries the PUBLIC_ prefix that ships it to every visitor.
+ */
+export const FORM_KEY = import.meta.env.PUBLIC_FORM_KEY ?? "";

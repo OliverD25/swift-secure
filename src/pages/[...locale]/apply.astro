@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { useTranslations, localeStaticPaths } from "../../i18n";
-import { FORM_ENDPOINT, CONTACT_EMAIL } from "../../lib/leadCapture";
+import { FORM_ENDPOINT, CONTACT_EMAIL, FORM_KEY } from "../../lib/leadCapture";
 
 export const getStaticPaths = () => localeStaticPaths();
 
@@ -27,6 +27,7 @@ const labelClass = "text-[13px] font-semibold text-muted";
         data-apply-form
         data-endpoint={FORM_ENDPOINT}
         data-contact={CONTACT_EMAIL}
+        data-key={FORM_KEY}
         class="flex flex-col gap-4.5"
         novalidate
       >
@@ -138,10 +139,17 @@ const labelClass = "text-[13px] font-semibold text-muted";
       button.textContent = "…";
     }
     try {
+      const body = new FormData(form);
+      // Web3Forms identifies the form from this field because every customer
+      // posts to the same endpoint. Formspree reads the form from the URL and
+      // wants no such field, so an unset key must add nothing at all.
+      const key = form.dataset.key ?? "";
+      if (key) body.append("access_key", key);
+
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: new FormData(form),
+        body,
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       showSuccess(email);
