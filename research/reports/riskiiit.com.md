@@ -1,6 +1,6 @@
 # riskiiit.com — free technical check
 
-Run 4 August 2026. Nothing to sign, no reply needed.
+Run 6 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 

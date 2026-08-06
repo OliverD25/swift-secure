@@ -1,6 +1,6 @@
 # beastone.co — free technical check
 
-Run 4 August 2026. Nothing to sign, no reply needed.
+Run 6 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
@@ -17,10 +17,13 @@ There are more behind it: 3.5 MB, 2.1 MB, 2.1 MB.
 
 Usually fixable the same afternoon — compress it, or load it after the page is interactive instead of before.
 
-To confirm the size yourself:
+This file is served without a size header, so a one-line check will not report it. The browser measures it directly:
 
 ```
-curl -sI 'https://beastone.co/_astro/welcome2.DRkjFzaV.mov' | grep -i content-length
+1. Open https://beastone.co/ in Chrome
+2. Press F12, then select the Network tab
+3. Tick 'Disable cache' and reload with Ctrl+Shift+R
+4. Click the Size column to sort — this file lands at the top
 ```
 
 ## Checked, nothing wrong

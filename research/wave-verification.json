@@ -1,0 +1,448 @@
+{
+ "9winz.com": {
+  "asset": null,
+  "homepage": "301",
+  "urls": {
+   "https://www.9winz019.com/widgets-x/icons/casino/colored/play.svg?v=1785752878": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "abcfortunazone.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/merchants/svg/black/adlunam.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/wlc/icons/theme-wolf/categories/gameshows.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/wlc/icons/theme-wolf/categories/native.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "atlantivegas.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/paysystems/V2/svg/color/dark/macpay_pixpay.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/wlc/icons/category/topgames.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "batcasino.bet": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/merchants/svg/black/aviatrixdirect.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/merchants/svg/black/gclub.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/merchants/svg/black/xpg.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "beastone.co": {
+  "asset": {
+   "declaredKb": 25004,
+   "gotLength": null,
+   "reproduces": false,
+   "url": "https://beastone.co/_astro/welcome2.DRkjFzaV.mov"
+  },
+  "homepage": "200",
+  "urls": {},
+  "verdict": "CONFIRMED"
+ },
+ "betitor.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://betitor.com/content/wp-content/uploads/2026/07/Dice-315x236-1.webp": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://betitor.com/content/wp-content/uploads/2026/07/Keno-315x236-1.webp": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://betitor.com/content/wp-content/uploads/2026/07/Mines-315x236-1.webp": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://widget.betitorpromo.com/widget.js": {
+    "expected": "504",
+    "got": "000",
+    "reproduces": false
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "bettogames.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/paysystems/V2/svg/black/vasu_vnd_banktransfer.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/vasu_vnd_momo.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/vasu_vnd_viettel.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "bonkersbet.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://bonkersbet.com/api-crm-sessiontracker/device": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://bonkersbet.com/api/cms/file/binary/21/fileName/slots-my-left.png": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://bonkersbet.com/api/cms/file/binary/21/fileName/slots-my-right.png": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "casinityx.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/paysystems/V2/svg/black/betterbro_bre_b_llave_qr_payout.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/betterbro_pse.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/betterbro_pse_payout.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "casinonavy.com": {
+  "asset": null,
+  "homepage": "308",
+  "urls": {
+   "https://api.casinonavy.com/api/v1/categories?skipEmpty=true": {
+    "expected": "500",
+    "got": "405",
+    "reproduces": false
+   },
+   "https://api.casinonavy.com/api/v1/games/vendors": {
+    "expected": "500",
+    "got": "405",
+    "reproduces": false
+   },
+   "https://api.casinonavy.com/api/v1/games?mobile=false&q=&limit=50&offset=0": {
+    "expected": "500",
+    "got": "405",
+    "reproduces": false
+   },
+   "https://www.casinonavy.com/_vercel/insights/script.js": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "jon.bet": {
+  "asset": null,
+  "homepage": "301",
+  "urls": {
+   "https://jonbet.com/api/chat_rooms": {
+    "expected": "530",
+    "got": "530",
+    "reproduces": true
+   },
+   "https://jonbet.com/api/feature-flag-group/users/has-access?name=SportsUsabilityTest1": {
+    "expected": "530",
+    "got": "530",
+    "reproduces": true
+   },
+   "https://jonbet.com/api/users/self-limits/start-tracking-time": {
+    "expected": "530",
+    "got": "530",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "keeponwin.com": {
+  "asset": null,
+  "homepage": "301",
+  "urls": {
+   "https://www.keeponwin.com/%3Chttps://app.hoory.com%3E/packs/js/sdk.js": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://www.keeponwin.com/widgets-x/icons/casino/colored/other.svg?v=1785752878": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "mollydice.com": {
+  "asset": null,
+  "homepage": "307",
+  "urls": {
+   "https://d1bvoel1nv172p.cloudfront.net/competitors/images/normal/medium/1093393.png": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://d1bvoel1nv172p.cloudfront.net/competitors/images/normal/medium/2499626385199476766.png": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://d1bvoel1nv172p.cloudfront.net/competitors/images/normal/medium/396548.png": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "nicewinz.com": {
+  "asset": null,
+  "homepage": "301",
+  "urls": {
+   "https://www.nicewinz.com/x-data/icons/casino/colored/play.svg?v=1785339548": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://www.nicewinz.com/x-data/icons/sports/colored/russianpyramid.svg?v=1785339548": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "oxy.casino": {
+  "asset": {
+   "declaredKb": 7495,
+   "gotLength": 7675125,
+   "reproduces": true,
+   "url": "https://oxy.casino/static/09628223-7334-41bd-87f1-f4ed9fd577fb/dd4e35782887b18d4345a98d8c266665.svg"
+  },
+  "homepage": "200",
+  "urls": {
+   "https://oxy.casino/api/meta/settings/definitions/07258158-f9f9-4a52-8935-c3bee232f24e/instance?projectScope=9a8fd9c6-a4c1-4360-9934-c6ac9f071266": {
+    "expected": "404",
+    "got": "401",
+    "reproduces": false
+   }
+  },
+  "verdict": "BROWSER-ONLY"
+ },
+ "petra.bet": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://petra.bet/api/_nuxt_icon/lucide.json?icons=arrow-up-right": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://petra.bet/api/_nuxt_icon/ph.json?icons=instagram-logo-duotone": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "pro11casino.com": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/merchants/svg/black/aviatrixdirect.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/merchants/svg/black/gclub.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/merchants/svg/black/sneaky_slots.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "race365.com": {
+  "asset": {
+   "declaredKb": 11389,
+   "gotLength": 11662770,
+   "reproduces": true,
+   "url": "https://cdn.rcintl.io/ru/web/community-banner.webp"
+  },
+  "homepage": "302",
+  "urls": {
+   "https://api.rcintl.io/account/v2/access-token": {
+    "expected": "400",
+    "got": "400",
+    "reproduces": true
+   },
+   "https://cdn.rcintl.io/assets/desktop/en/home-section-2.json.gz?t=1785757212918": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://cdn.rcintl.io/assets/desktop/en/home-section-4.json.gz?t=1785757212918": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "riskiiit.com": {
+  "asset": {
+   "declaredKb": 40275,
+   "gotLength": 41241640,
+   "reproduces": true,
+   "url": "https://riskiiit.com/sounds/riskItForTheBiscuit.wav"
+  },
+  "homepage": "200",
+  "urls": {},
+  "verdict": "CONFIRMED"
+ },
+ "spinay.com": {
+  "asset": null,
+  "homepage": "302",
+  "urls": {
+   "https://18379spinay.com/mdlr/fonts/bitter-regular.woff2": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://18379spinay.com/mdlr/fonts/fira-sans-condensed-semibold.woff2": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://18379spinay.com/mdlr/fonts/raleway-semibold.woff2": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   }
+  },
+  "verdict": "CONFIRMED"
+ },
+ "thestakehouse.io": {
+  "asset": {
+   "declaredKb": 24235,
+   "gotLength": 24816969,
+   "reproduces": true,
+   "url": "https://a.storyblok.com/f/291681349697900/24816969/480ababaae/promotions.svg"
+  },
+  "homepage": "200",
+  "urls": {},
+  "verdict": "CONFIRMED"
+ },
+ "winup.io": {
+  "asset": null,
+  "homepage": "200",
+  "urls": {
+   "https://agstatic.com/paysystems/V2/svg/black/betterbro_pix.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/multipay_papara.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://agstatic.com/paysystems/V2/svg/black/paymentmodule_aeteredge_payouts.svg": {
+    "expected": "404",
+    "got": "404",
+    "reproduces": true
+   },
+   "https://winup.io/api/v1/bonuses?lang=en&type=promo": {
+    "expected": "400",
+    "got": "200",
+    "reproduces": false
+   },
+   "https://winup.io/api/v1/publicSocketsData?lang=en": {
+    "expected": "400",
+    "got": "200",
+    "reproduces": false
+   },
+   "https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10": {
+    "expected": "404",
+    "got": "200",
+    "reproduces": false
+   }
+  },
+  "verdict": "CONFIRMED"
+ }
+}

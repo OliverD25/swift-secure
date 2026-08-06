@@ -20,9 +20,22 @@ WHAT CHANGED FROM THE FIRST TEMPLATE, and why each change was forced:
      support is included, so the footer no longer says "free for the first
      operators" without saying for how long.
 
+  4. The "confirm it yourself" command is no longer the first failure in the
+     list. It is a failure that 15-verify-wave.py proved curl reproduces.
+     winup.io showed why: its first three failures are own-domain API calls
+     that answer 400 to a browser and 200 to curl, so the report handed the
+     operator a command that disproved the report. Where nothing reproduces
+     under curl, the letter gives the dev-tools path instead. A check the
+     operator runs and sees pass is worse than giving them no check at all.
+
 Two placeholders are left deliberately and the script refuses to pretend they
 are filled: SENDER_NAME and REPLY_EMAIL. A report signed by nobody, offering a
 reply to nowhere, is worse than no report.
+
+This script requires research/wave-verification.json and will not run without
+it. Every report ends with "every line above was re-checked against your live
+site on the day this was sent" — generating one from unverified data makes that
+sentence false.
 
 Usage: python research/scripts/18-generate-reports.py [--sender "Name"] [--reply addr@domain]
 """
@@ -36,6 +49,7 @@ from datetime import date
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
 PRIORITY = ROOT / "research" / "outreach-priority.csv"
+VERIFIED = ROOT / "research" / "wave-verification.json"
 OUTDIR = ROOT / "research" / "reports"
 
 MB = 1024
@@ -85,7 +99,40 @@ def describe_area(urls: list[str]) -> str:
     return ""
 
 
-def broken_section(rec: dict) -> str:
+def devtools_recipe(domain: str) -> list[str]:
+    """The check to hand over when curl cannot reproduce the failure.
+
+    Some servers answer a bare curl differently from a real browser request —
+    winup.io returns 200 to curl for calls the browser sees fail with 400. The
+    finding is still real; only the one-line proof is unavailable. Giving them
+    a command that appears to pass is worse than giving them no command.
+    """
+    return [
+        "A plain `curl` will not show these — this server answers a bare "
+        "request differently from a browser one, so the check has to run in "
+        "the browser:",
+        "",
+        "```",
+        f"1. Open https://{domain}/ in Chrome",
+        "2. Press F12, then select the Network tab",
+        "3. Tick 'Disable cache' and reload with Ctrl+Shift+R",
+        "4. Click the Status column to sort — the failing requests group together",
+        "```",
+        "",
+    ]
+
+
+def reproducible(ver: dict, url: str) -> bool:
+    """Did 15-verify-wave.py prove curl reproduces this exact URL?
+
+    Unknown counts as no. The script checks a sample rather than every URL, so
+    absence here means unproven, not proven fine — and an unproven curl line is
+    the thing this whole function exists to keep out of the letter.
+    """
+    return bool((ver.get("urls") or {}).get(url, {}).get("reproduces"))
+
+
+def broken_section(rec: dict, ver: dict) -> str:
     """The Revenue Leak Scan finding, written so the operator can check it."""
     site = stem(rec["domain"])
     failures = []
@@ -107,6 +154,12 @@ def broken_section(rec: dict) -> str:
         if u not in seen:
             seen.add(u)
             distinct.append((s, u))
+
+    # Lead with the failures the operator can actually check for themselves.
+    # The printed sample and the confirm command below have to agree — showing
+    # three URLs and then a command about a fourth reads as picked at random.
+    # sort() is stable, so the original order survives inside each group.
+    distinct.sort(key=lambda su: not reproducible(ver, su[1]))
 
     urls = [u for _, u in distinct]
     own = [(s, u) for s, u in distinct if site and (site in stem(host_of(u)) or stem(host_of(u)) in site)]
@@ -180,17 +233,23 @@ def broken_section(rec: dict) -> str:
         "page and no warning, and anyone who has opened the site before is served "
         "it from their own cache — so on your team's machines the page looks correct.",
         "",
-        "You can confirm any line above in one command:",
-        "",
-        "```",
-        f"curl -sI '{failures[0][1]}'",
-        "```",
-        "",
     ]
+    checkable = next((u for _, u in distinct if reproducible(ver, u)), "")
+    if checkable:
+        lines += [
+            "You can confirm the first line above in one command:",
+            "",
+            "```",
+            f"curl -sI '{checkable}'",
+            "```",
+            "",
+        ]
+    else:
+        lines += devtools_recipe(rec["domain"])
     return "\n".join(lines)
 
 
-def asset_section(rec: dict) -> str:
+def asset_section(rec: dict, ver: dict) -> str:
     """The Dead Weight Finder finding."""
     assets = rec.get("heaviestAssets") or []
     if not assets or assets[0]["kb"] < 5 * MB:
@@ -217,13 +276,33 @@ def asset_section(rec: dict) -> str:
         "Usually fixable the same afternoon — compress it, or load it after the "
         "page is interactive instead of before.",
         "",
-        "To confirm the size yourself:",
-        "",
-        "```",
-        f"curl -sI '{a['url']}' | grep -i content-length",
-        "```",
-        "",
     ]
+    # beastone.co serves its 200 without a content-length header, so the
+    # one-line size check prints nothing at all. An operator who runs it sees
+    # an empty result and concludes we never tested the finding.
+    seen_asset = ver.get("asset") or {}
+    if seen_asset.get("url") == a["url"] and seen_asset.get("reproduces"):
+        lines += [
+            "To confirm the size yourself:",
+            "",
+            "```",
+            f"curl -sI '{a['url']}' | grep -i content-length",
+            "```",
+            "",
+        ]
+    else:
+        lines += [
+            "This file is served without a size header, so a one-line check "
+            "will not report it. The browser measures it directly:",
+            "",
+            "```",
+            f"1. Open https://{rec['domain']}/ in Chrome",
+            "2. Press F12, then select the Network tab",
+            "3. Tick 'Disable cache' and reload with Ctrl+Shift+R",
+            "4. Click the Size column to sort — this file lands at the top",
+            "```",
+            "",
+        ]
     return "\n".join(lines)
 
 
@@ -259,14 +338,14 @@ def clean_section(rec: dict) -> str:
     return "## Checked, nothing wrong\n\n" + ", ".join([first] + bits[1:]) + ".\n\n"
 
 
-def build(rec: dict, row: dict) -> str:
+def build(rec: dict, row: dict, ver: dict) -> str:
     brand = row.get("brand") or rec["domain"]
     parts = [f"# {rec['domain']} — free technical check", "",
              f"Run {TODAY}. Nothing to sign, no reply needed.", "",
              "We check casino sites and publish what we find. This one is yours, "
              "free, whether or not you ever talk to us.", ""]
 
-    findings = "\n".join(s for s in (broken_section(rec), asset_section(rec)) if s)
+    findings = "\n".join(s for s in (broken_section(rec, ver), asset_section(rec, ver)) if s)
     if not findings.strip():
         return ""
     parts.append(findings)
@@ -303,7 +382,13 @@ def build(rec: dict, row: dict) -> str:
 
 
 def main() -> None:
+    if not VERIFIED.exists():
+        raise SystemExit(
+            f"missing {VERIFIED.relative_to(ROOT)} — run 15-verify-wave.py first.\n"
+            "Every report claims each line was re-checked on the day it was sent. "
+            "Without that file the claim is false and the curl lines are unproven.")
     sweep = {r["domain"]: r for r in json.loads(SWEEP.read_text(encoding="utf8"))}
+    verified = json.loads(VERIFIED.read_text(encoding="utf8"))
     wave = [r for r in csv.DictReader(PRIORITY.open(encoding="utf8")) if r["send"] == "SEND"]
     OUTDIR.mkdir(exist_ok=True)
 
@@ -313,7 +398,11 @@ def main() -> None:
         if not rec:
             skipped.append((row["domain"], "no sweep record"))
             continue
-        text = build(rec, row)
+        ver = verified.get(row["domain"], {})
+        if ver.get("verdict") not in ("CONFIRMED", "BROWSER-ONLY"):
+            skipped.append((row["domain"], f"verdict {ver.get('verdict') or 'unverified'}"))
+            continue
+        text = build(rec, row, ver)
         if not text:
             skipped.append((row["domain"], "no emailable finding after filtering"))
             continue

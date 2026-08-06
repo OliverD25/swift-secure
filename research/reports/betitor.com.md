@@ -1,6 +1,6 @@
 # betitor.com — free technical check
 
-Run 4 August 2026. Nothing to sign, no reply needed.
+Run 6 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
@@ -18,7 +18,7 @@ These are your sportsbook section. A player sees blank space where they expect s
 
 This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
 
-You can confirm any line above in one command:
+You can confirm the first line above in one command:
 
 ```
 curl -sI 'https://betitor.com/content/wp-content/uploads/2026/07/Keno-315x236-1.webp'

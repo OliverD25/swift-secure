@@ -2,7 +2,7 @@
 
 Each finding below was re-requested just now. A row that does not
 reproduce is a row that must not be sent, whatever its score.
-**21 confirmed, 1 must not be sent as-is.**
+**22 confirmed, 0 must not be sent as-is.**
 
 
 ## race365.com — CONFIRMED
@@ -172,8 +172,9 @@ score 8, to support@bonkersbet.com
 - OK  [own-host] expected 404, got 404  https://bonkersbet.com/api/cms/file/binary/21/fileName/slots-my-right.png
 - OK  [own-host] expected 404, got 404  https://bonkersbet.com/api/cms/file/binary/21/fileName/slots-my-left.png
 
-## oxy.casino — UNVERIFIABLE
+## oxy.casino — BROWSER-ONLY
 
 score 8, to support@oxy.casino
 
-- homepage returns 451 from this vantage point — refused, not proven wrong. Re-check through a proxy before sending.
+- ??  [own-host] expected 404, curl got 401 — browser-only, hand over the dev-tools recipe not a curl line  https://oxy.casino/api/meta/settings/definitions/07258158-f9f9-4a52-89
+- OK  asset declared 7.3MB, now 7.3MB  https://oxy.casino/static/09628223-7334-41bd-87f1-f4ed9fd577fb/dd4e35782887b18d4

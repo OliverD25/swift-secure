@@ -1,15 +1,15 @@
 # winup.io — free technical check
 
-Run 4 August 2026. Nothing to sign, no reply needed.
+Run 6 August 2026. Nothing to sign, no reply needed.
 
 We check casino sites and publish what we find. This one is yours, free, whether or not you ever talk to us.
 
 ## 38 requests fail when your homepage loads — 20 distinct files
 
 ```
-400  https://winup.io/api/v1/bonuses?lang=en&type=promo
-404  https://winup.io/api/v1/reports?report=v2/Reports/LastBets&lang=en&minBet=0&quantity=10
-400  https://winup.io/api/v1/publicSocketsData?lang=en
+404  https://agstatic.com/paysystems/V2/svg/black/paymentmodule_aeteredge_payouts.svg
+404  https://agstatic.com/paysystems/V2/svg/black/multipay_papara.svg
+404  https://agstatic.com/paysystems/V2/svg/black/betterbro_pix.svg
 ```
 
 These are the payment-method icons on your deposit screen. A player sees blank space where they expect something.
@@ -18,10 +18,10 @@ These are the payment-method icons on your deposit screen. A player sees blank s
 
 This kind of failure is easy to miss. A missing file produces no error page and no warning, and anyone who has opened the site before is served it from their own cache — so on your team's machines the page looks correct.
 
-You can confirm any line above in one command:
+You can confirm the first line above in one command:
 
 ```
-curl -sI 'https://winup.io/api/v1/bonuses?lang=en&type=promo'
+curl -sI 'https://agstatic.com/paysystems/V2/svg/black/paymentmodule_aeteredge_payouts.svg'
 ```
 
 ## Checked, nothing wrong

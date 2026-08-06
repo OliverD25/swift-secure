@@ -17,6 +17,10 @@ curl fails validation with exit 60 rather than reporting the real status. TLS
 verification is therefore disabled on purpose here — the goal is to read the
 status the browser saw, not to audit anyone's certificate.
 
+Writes two files. The Markdown is for a human deciding what to send. The JSON
+beside it is read by 18-generate-reports.py, which may only print a "check this
+yourself" curl line for a URL this script proved curl can reproduce.
+
 Usage: python research/scripts/15-verify-wave.py [max_rows]
 """
 import csv
@@ -29,9 +33,16 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
 PRIORITY = ROOT / "research" / "outreach-priority.csv"
-OUT = ROOT / "research" / "outreach-wave-verified.md"
 
-MAX_ROWS = int(sys.argv[1]) if len(sys.argv) > 1 else 40
+# A limited run must never overwrite a full one. 18-generate-reports.py reads
+# the JSON to decide whether a curl line is safe to print, so a truncated file
+# would not just lose rows — it would silently downgrade every site missing
+# from it to the dev-tools recipe, with nothing on screen to say why.
+LIMITED = len(sys.argv) > 1
+MAX_ROWS = int(sys.argv[1]) if LIMITED else 40
+SUFFIX = ".partial" if LIMITED else ""
+OUT = ROOT / "research" / f"outreach-wave-verified{SUFFIX}.md"
+OUTJSON = ROOT / "research" / f"wave-verification{SUFFIX}.json"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
 TRACKER = re.compile(
@@ -69,12 +80,14 @@ def main() -> None:
              "Each finding below was re-requested just now. A row that does not",
              "reproduce is a row that must not be sent, whatever its score.", ""]
     ok_rows, bad_rows = [], []
+    results = {}
 
     for r in wave:
         d = r["domain"]
         rec = sweep.get(d, {})
         home = head(f"https://{d}/", f"https://{d}/")
         checks, verdict = [], "CONFIRMED"
+        record = {"verdict": None, "homepage": home["status"], "urls": {}, "asset": None}
 
         if home["status"] in ("451", "403", "401", "429"):
             verdict = "UNVERIFIABLE"
@@ -109,6 +122,8 @@ def main() -> None:
                 for entry in group:
                     expect, _, url = entry.partition(" ")
                     got = head(url, f"https://{d}/")
+                    record["urls"][url] = {"expected": expect, "got": got["status"],
+                                           "reproduces": got["status"] == expect}
                     if got["status"] == expect:
                         curl_ok += 1
                         checks.append(f"OK  [{label}] expected {expect}, got {got['status']}  {url[:90]}")
@@ -124,6 +139,7 @@ def main() -> None:
             if assets:
                 a = assets[0]
                 got = head(a["url"], f"https://{d}/")
+                same = False
                 if got["length"]:
                     delta = abs(got["length"] / 1024 - a["kb"]) / max(a["kb"], 1)
                     same = delta < 0.05
@@ -133,9 +149,16 @@ def main() -> None:
                         verdict = "DOES NOT REPRODUCE"
                 else:
                     checks.append(f"?? asset returned {got['status']} with no length  {a['url'][:80]}")
+                # reproduces means "the operator running our curl line sees what
+                # we described". A 200 with no content-length fails that test:
+                # the size command prints nothing at all.
+                record["asset"] = {"url": a["url"], "declaredKb": a["kb"],
+                                   "gotLength": got["length"], "reproduces": same}
 
         # BROWSER-ONLY is still sendable — the finding is real, the recipe just
         # has to be the dev-tools path rather than a curl line.
+        record["verdict"] = verdict
+        results[d] = record
         (ok_rows if verdict in ("CONFIRMED", "BROWSER-ONLY") else bad_rows).append(d)
         lines += [f"## {d} — {verdict}", "", f"score {r['score']}, to {r['email']}", ""]
         lines += [f"- {c}" for c in checks] + [""]
@@ -143,8 +166,12 @@ def main() -> None:
 
     lines.insert(4, f"**{len(ok_rows)} confirmed, {len(bad_rows)} must not be sent as-is.**\n")
     OUT.write_text("\n".join(lines), encoding="utf8")
+    OUTJSON.write_text(json.dumps(results, indent=1, sort_keys=True), encoding="utf8")
     print(f"\n{len(ok_rows)} confirmed, {len(bad_rows)} held: {', '.join(bad_rows) or 'none'}")
-    print(f"wrote {OUT.relative_to(ROOT)}")
+    print(f"wrote {OUT.relative_to(ROOT)} and {OUTJSON.relative_to(ROOT)}")
+    if LIMITED:
+        print(f"\n!! LIMITED RUN ({MAX_ROWS} rows) — wrote .partial files only.")
+        print("   The full outreach-wave-verified.md was left alone.")
 
 
 if __name__ == "__main__":

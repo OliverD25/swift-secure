@@ -39,3 +39,7 @@ crawler/proxies.txt
 
 # partial sweep output — a limited run, never the canonical dataset
 research/*.partial.json
+research/*.partial.md
+
+# python bytecode from the research scripts
+__pycache__/
