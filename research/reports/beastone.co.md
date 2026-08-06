@@ -43,5 +43,5 @@ Every line above was re-checked against your live site on the day this was sent.
 
 **Swift Secured.** We are new and building the reference list. If this was useful and you want the result public, we issue a verification badge linking to a dated page that states exactly what was and was not checked. **Free for the first six months, and the technical checks stay free — no contract, remove it any time.**
 
-[YOUR NAME]
-[REPLY ADDRESS]
+Dmytro
+dmytro@swiftsecured.com

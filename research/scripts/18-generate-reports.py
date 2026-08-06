@@ -37,6 +37,12 @@ it. Every report ends with "every line above was re-checked against your live
 site on the day this was sent" — generating one from unverified data makes that
 sentence false.
 
+WHO SIGNS THE LETTERS lives in research/sender.json, so it is set once rather
+than retyped on every run. --sender and --reply still win when given, which is
+what makes a one-off run under a different name possible without editing the
+file. With neither the file nor the flags, the placeholders stay and the script
+says so.
+
 Usage: python research/scripts/18-generate-reports.py [--sender "Name"] [--reply addr@domain]
 """
 import csv
@@ -50,6 +56,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 SWEEP = ROOT / "research" / "audit-sweep-battlefield.json"
 PRIORITY = ROOT / "research" / "outreach-priority.csv"
 VERIFIED = ROOT / "research" / "wave-verification.json"
+SENDER_FILE = ROOT / "research" / "sender.json"
 OUTDIR = ROOT / "research" / "reports"
 
 MB = 1024
@@ -59,8 +66,24 @@ argv = sys.argv[1:]
 def opt(name, default):
     return argv[argv.index(name) + 1] if name in argv and argv.index(name) + 1 < len(argv) else default
 
-SENDER = opt("--sender", "[YOUR NAME]")
-REPLY = opt("--reply", "[REPLY ADDRESS]")
+def signature() -> dict:
+    """Read research/sender.json. A malformed file is an error, not a fallback.
+
+    Falling back to the placeholders on a JSON syntax error would be the worst
+    outcome available: the run looks normal, and 21 letters go out signed
+    "[YOUR NAME]" because of a missing comma nobody was shown.
+    """
+    if not SENDER_FILE.exists():
+        return {}
+    try:
+        return json.loads(SENDER_FILE.read_text(encoding="utf8"))
+    except json.JSONDecodeError as err:
+        raise SystemExit(f"{SENDER_FILE.relative_to(ROOT)} is not valid JSON: {err}")
+
+
+SIGNATURE = signature()
+SENDER = opt("--sender", SIGNATURE.get("sender") or "[YOUR NAME]")
+REPLY = opt("--reply", SIGNATURE.get("reply") or "[REPLY ADDRESS]")
 
 TRACKER = re.compile(
     r"google-analytics|googletagmanager|doubleclick|facebook|fbevents|hotjar|"
@@ -417,7 +440,20 @@ def main() -> None:
     if SENDER.startswith("[") or REPLY.startswith("["):
         print()
         print("!! PLACEHOLDERS STILL IN EVERY FILE — do not send yet.")
-        print("   Re-run with:  --sender \"Your Name\" --reply you@swiftsecured.com")
+        print(f"   Fill them in {SENDER_FILE.relative_to(ROOT)}, or pass")
+        print("   --sender \"Your Name\" --reply you@swiftsecured.com")
+
+    # Signing the letters removed the catch that used to stop a send. The date
+    # is the thing that catch was really protecting: every report prints today's
+    # date and states each line was re-checked "on the day this was sent". Both
+    # are set when the file is written, and neither ages well. So warn on the
+    # measurement's age rather than trusting whoever runs this to remember.
+    stale = (date.today() - date.fromtimestamp(VERIFIED.stat().st_mtime)).days
+    if stale >= 1:
+        print()
+        print(f"!! The verification data is {stale} day(s) old, but these letters are")
+        print(f"   dated {TODAY} and claim a same-day re-check. Re-run")
+        print("   15-verify-wave.py, then this script, on the day you actually send.")
 
 
 if __name__ == "__main__":
