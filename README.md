@@ -75,6 +75,19 @@ node crawler/seal-census.mjs              # ~15 min, rewrites research/seal-cens
 ./publish.sh                              # build and swap into the live docroot
 ```
 
+**The operator reports are a two-step build, and the order is enforced.**
+`15-verify-wave.py` re-requests every finding and writes both a human-readable
+`outreach-wave-verified.md` and a machine-readable `wave-verification.json`.
+`18-generate-reports.py` refuses to run without the JSON, because it may only
+print a "check this yourself" curl line for a URL curl was proved to reproduce.
+Passing a row limit to the verifier writes `.partial` files and leaves the real
+ones alone.
+
+```bash
+python3 research/scripts/15-verify-wave.py   # ~4 min over the wave, hits live sites
+python3 research/scripts/18-generate-reports.py --sender "Name" --reply addr@domain
+```
+
 **Scan results depend on which machine you run them from.** 95 of 489 sites
 refuse the homelab outright, and the workstation is refused by a different set.
 Numbers move between hosts because our network position moved, not because the
@@ -105,8 +118,8 @@ covers the base-path, CI and indexing traps in more depth.
 
 ## Before launch
 
-- **Domain**: `swiftsecured.com` was bought on 4 August 2026 and is now the fallback in `public/robots.txt` and `astro.config.mjs`. Still to do: point the DNS at GitHub Pages and set the custom domain in **Settings → Pages**, which writes a `CNAME` file. Until that is done the live site serves from the `github.io` URL and the sitemap URL above will not resolve.
-- **Apply form — applications currently go nowhere.** `/apply/` POSTs to `PUBLIC_FORM_ENDPOINT` and only reports success on a 2xx. Neither that nor `PUBLIC_CONTACT_EMAIL` is set, so an operator who applies is told the submission failed and is given *no address to fall back to*. It no longer loses leads silently, but it cannot receive one either. Fix by setting both under **Settings → Secrets and variables → Actions → Variables** (repository *variables*, not secrets — see the note in `.github/workflows/deploy.yml`). `PUBLIC_CONTACT_EMAIL` alone is enough to make the page usable; the endpoint wants a form-to-email service such as Formspree or Web3Forms. Copy `.env.example` to `.env` for local builds.
+- ~~**Domain**~~: done. `swiftsecured.com` is live and served by the Cloudflare Worker, not by GitHub Pages, so there is no `CNAME` file and nothing to set under **Settings → Pages**. `astro.config.mjs` falls back to the domain and `src/pages/robots.txt.ts` builds the sitemap URL from the same value — the static `public/robots.txt` this list used to name no longer exists, so the two cannot drift apart.
+- **Apply form — works locally, still dead in production.** `/apply/` POSTs to `PUBLIC_FORM_ENDPOINT` and only reports success on a 2xx. `PUBLIC_CONTACT_EMAIL` is now set in the local `.env` to `dmytro@swiftsecured.com`, and a local build renders a working `mailto:` on all 19 apply pages. **The deployed site still has neither value**, because both are GitHub repository *variables* and neither is set — an operator who applies there is told the submission failed and given no address to fall back to. Set them under **Settings → Secrets and variables → Actions → Variables** (repository *variables*, not secrets — see the note in `.github/workflows/deploy.yml`). `PUBLIC_CONTACT_EMAIL` alone is enough to make the page usable; the endpoint wants a form-to-email service such as Formspree or Web3Forms. `.env` is gitignored, so it does not travel with the repo — copy `.env.example` on any new machine.
 - ~~**Verify lookup**~~: done 4 August 2026. `/verify/` now matches exactly against seals built from `src/data/casinos.ts` at build time. No badge has been issued, so every lookup returns not-found and the copy says why. A casino gains a `sealId` when its badge goes live and the page answers with no further change.
 - **Casino directory**: `casinos.ts` is a static in-memory list — replace with a real data source when there's one.
 - **Flag images**: the language switcher hotlinks flags from `flagcdn.com` — confirm that's acceptable for production or self-host them.
