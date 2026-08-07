@@ -1,0 +1,4636 @@
+{
+ "generatedOn": "2026-08-07",
+ "tool": "crawler/game-provenance.mjs",
+ "note": "Evidence on whether the game-provenance check can be completed from outside, as an anonymous visitor. The probe opens a casino, clicks into a game and follows the frame tree to see whose servers serve the spin.\n\nOf 60 domains: 3 failed to load, 56 never reached a game (a login wall or no demo mode), and 1 worked completely. On tuplaa.com the chain was www.tuplaa.com -> megaplays.net -> caocw.playngonetwork.com, with the spin settled over a socket to pc-prod-eu.playngonetwork.com. That is exactly the casino -> aggregator -> provider chain the method describes, so the technique is proven. The obstacle is access, not technique.\n\nOne success in 57 loadable sites is not a service. No claim about checking games may appear on the site or in an operator report until the check runs with an account the casino provides. See research/copy-brief-player-site.md section 3.\n\nprovider=0 never means 'the casino serves its own games'. It means no game was opened. From outside those two are indistinguishable, and mistaking one for the other is the failure this file exists to prevent.",
+ "summary": {
+  "probed": 60,
+  "probeErrors": 3,
+  "reachedAGame": 1,
+  "logReasons": {
+   "no demo control found": 56,
+   "clicked tile": 12,
+   "login prompt visible": 12,
+   "cookies-declined": 1,
+   "clicked demo": 1
+  },
+  "reachedAGameDomains": [
+   "tuplaa.com"
+  ]
+ },
+ "domains": [
+  {
+   "domain": "acrpoker.eu",
+   "startUrl": "https://acrpoker.eu",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.acrpoker.eu",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "acrpoker.eu",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "dev.visualwebsiteoptimizer.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.acrpoker.eu",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.acrpoker.eu/"
+  },
+  {
+   "domain": "alawin.com",
+   "startUrl": "https://alawin.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "alawin.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "alawin.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://alawin.com/"
+  },
+  {
+   "domain": "allstars.io",
+   "startUrl": "https://allstars.io",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/play/']",
+    "login prompt visible: [class*='login']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "allstars.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "wchat.eu.freshchat.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "allstars.io",
+     "kind": "other",
+     "frames": 4
+    },
+    {
+     "host": "assetscdn-wchat.eu.freshchat.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cms.allstars.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cognito-identity.eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d3od7i1d3odrul.cloudfront.net",
+     "kind": "other",
+     "frames": 4
+    },
+    {
+     "host": "eu.novacloud.one",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "flags.allstars.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fp.allstars.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "luckmedia.link",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "nano-web-assets.s3.eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "nano.imgix.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "rts-static-prod.freshworksapi.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.novacloud.one",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "wchat.eu.freshchat.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "wchat.freshchat.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://eu.novacloud.one/ws",
+     "host": "eu.novacloud.one",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://allstars.io/en/casino/play/3599/sugar-rush-1000/auto"
+  },
+  {
+   "domain": "betacr.eu",
+   "startUrl": "https://betacr.eu",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "betacr.eu",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.seeip.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api6.ipify.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "betacr.eu",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "betacruibo.betacr.eu",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "content.hotjar.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "env-betacreu-wfstg.kinsta.cloud",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ipv4.icanhazip.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ipv6.icanhazip.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "metrics.hotjar.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "mpsnare.iesnare.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "myaccount.betacr.eu",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "p.typekit.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "script.hotjar.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.hotjar.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "use.typekit.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://mpsnare.iesnare.com/star",
+     "host": "mpsnare.iesnare.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://mpsnare.iesnare.com/star",
+     "host": "mpsnare.iesnare.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://ws.hotjar.com/api/v2/client/ws",
+     "host": "ws.hotjar.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://betacr.eu/"
+  },
+  {
+   "domain": "betpositivo.com",
+   "startUrl": "https://betpositivo.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.betpositivo.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "betpositivo.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.betpositivo.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.betpositivo.com/"
+  },
+  {
+   "domain": "betrepublic.com",
+   "startUrl": "https://betrepublic.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "betrepublic.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "betrepublic.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://betrepublic.com/"
+  },
+  {
+   "domain": "blackchippoker.io",
+   "startUrl": "https://blackchippoker.io",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "blackchippoker.io",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "blackchippoker.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "blackchippokerio.kinsta.cloud",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "code.jquery.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "maxcdn.bootstrapcdn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "wordpress.blackchippoker.eu",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://blackchippoker.io/"
+  },
+  {
+   "domain": "bobercasino.com",
+   "startUrl": "https://bobercasino.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "bobercasino.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "bobercasino.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://bobercasino.com/"
+  },
+  {
+   "domain": "casinocat.com",
+   "startUrl": "https://casinocat.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "casinocat.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "casinocat.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://casinocat.com/"
+  },
+  {
+   "domain": "casinok.com",
+   "startUrl": "https://casinok.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "casinok.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "thefreshdesk.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "7s-d309b5b93ece4e188e0aa4e9c7906f0f.ecs.us-west-1.on.aws",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "analytics-sp.googleserv.tech",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "analytics.ahrefs.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.onesignal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.ba.contentsquare.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "casinok.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.onesignal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "connect.facebook.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "imagedelivery.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "k.ba.contentsquare.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "mpc-prod-25-s6uit34pua-wl.a.run.app",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "mpc2-prod-28-is5qnl632q-ue.a.run.app",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "onesignal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "rtg.wewomedia.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sealimg.certcga.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "server.blockchain-ads.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "t.contentsquare.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "thefreshdesk.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.facebook.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://casinok.com/"
+  },
+  {
+   "domain": "coin88.io",
+   "startUrl": "https://coin88.io",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "coin88.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "83a8fd61-935b-469f-a067-53d6f4ad1cc9.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.bing.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cms.coin88.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cognito-identity.ap-northeast-2.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "coin88.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "coin88.zendesk.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d1kxsoeasqf84t.cloudfront.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ekr.zdassets.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "flags.coin88.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "i.clarity.ms",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "nano-web-assets.s3-eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "nano-web-assets.s3.eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "scripts.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.zdassets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://coin88.io/en/"
+  },
+  {
+   "domain": "crypto-backgammon.online",
+   "startUrl": "https://crypto-backgammon.online",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "crypto-backgammon.online",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.cbg-dev.magicmedia-projects.studio",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "crypto-backgammon.online",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://crypto-backgammon.online/home"
+  },
+  {
+   "domain": "emberbet21.io",
+   "startUrl": "https://emberbet21.io",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/play/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "emberbet21.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "assets-gamma-crucis-c.yavuno.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.draknos.com",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "assets-gamma-crucis-c.yavuno.com",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "cdn.logr-in.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn1.gs-c3fw33.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d77254e5-1c52-4c85-846b-e9c80471f715.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ekr.zdassets.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "emberbet.zendesk.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "emberbet21.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "eu.api.fpjs.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fpnpmcdn.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "game-logos.emberbet21.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "lib.rewards.tech",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ngs.gs-c3fw33.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "r.logr-in.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2auth-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2bonus-gateway-p002.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2frontend-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2integration-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2wsdk-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2wsdk-cdn-altenar2.biahosted.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.zdassets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://emberbet21.io/casino/play/demo/hxixswnvnwbqiritkaohzczykryjwckc"
+  },
+  {
+   "domain": "fairmatch.us",
+   "startUrl": "https://fairmatch.us",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "fairmatch.us",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "fairmatch.us",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://fairmatch.us/"
+  },
+  {
+   "domain": "fungabet.com",
+   "startUrl": "https://fungabet.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "fungabet.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api-iam.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api-js.datadome.co",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "connect.facebook.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "errs.qwrt.xyz",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fungabet.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "js.datadome.co",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js.intercomcdn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js.support-tech.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sport-images.sportplatform.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "widget.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.facebook.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://fungabet.com/crtc",
+     "host": "fungabet.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://fungabet.com/direct-feed/feed",
+     "host": "fungabet.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://fungabet.com/crtc",
+     "host": "fungabet.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://fungabet.com/fpapi/ws/collect",
+     "host": "fungabet.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://nexus-websocket-a.intercom.io/pubsub/5-yIIm5o6akASQz1bc7awLgqYFwJXTVq-IBwNa-pKwCaYbuamFZrWYYSVhajMq6Y63ldCWCqoegEqcOjSE2RVDS4T6vln97jY2HpFm",
+     "host": "nexus-websocket-a.intercom.io",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://fungabet.com/"
+  },
+  {
+   "domain": "gannar.com",
+   "startUrl": "https://gannar.com",
+   "ok": false,
+   "log": [],
+   "frames": [],
+   "hosts": [],
+   "sockets": [],
+   "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://gannar.com/"
+  },
+  {
+   "domain": "gansobet.com",
+   "startUrl": "https://gansobet.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: [class*='login']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "gansobet.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "6c94f0b2-32d3-423c-9273-10fc70fc967d.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "accounts.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn-01.maxline.by",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.livechatinc.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.maxline.by",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "gansobet.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "purple-forest-df1d.alfa7870.workers.dev",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.gansobet.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://s.gansobet.com/connection/websocket",
+     "host": "s.gansobet.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://api.livechatinc.com/v3.6/customer/rtm/ws",
+     "host": "api.livechatinc.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://gansobet.com/"
+  },
+  {
+   "domain": "grailbet.com",
+   "startUrl": "https://grailbet.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "grailbet.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "grailbet.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://grailbet.com/"
+  },
+  {
+   "domain": "herculescasino.com",
+   "startUrl": "https://herculescasino.com",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/play/']",
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.herculescasino.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "accounts.google.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "007a1daf-8d6e-481f-986f-ba002db1c98f.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "accounts.google.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdnjs.cloudflare.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d1i1wfn7hj3mva.cloudfront.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "embed.tawk.to",
+     "kind": "other",
+     "frames": 4
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "herculescasino.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js.pusher.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "play.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "stats.pusher.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "va.tawk.to",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.herculescasino.com",
+     "kind": "other",
+     "frames": 4
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://vsb62.tawk.to/s/",
+     "host": "vsb62.tawk.to",
+     "kind": "other"
+    },
+    {
+     "url": "wss://ws-eu.pusher.com/app/20b0fd266ca054082242",
+     "host": "ws-eu.pusher.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://www.herculescasino.com/en/log-in"
+  },
+  {
+   "domain": "highstack.com",
+   "startUrl": "https://highstack.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "highstack.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "highstack.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "2c802a05-c168-48d5-a8ca-51b4b0bf37ed.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "a.storyblok.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.highstack.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "highstack.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://highstack.com/en/"
+  },
+  {
+   "domain": "iqpokies.com",
+   "startUrl": "https://iqpokies.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "iqpokies.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.aws.parking.godaddy.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "csp.secureserver.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "img1.wsimg.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "iqpokies.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://iqpokies.com/lander"
+  },
+  {
+   "domain": "kings.game",
+   "startUrl": "https://kings.game",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/game/']",
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "kings.game",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "accounts.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api-iam.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "assets.kings.game",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "b590b99b-2077-474b-b227-f949187b64bc.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "b590b99b-2077-474b-b227-f949187b64bc.snippet.anjouangaming.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "check-service.kings.game",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js.intercomcdn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "kings.game",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "v.kings.game",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "widget.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://kings.game/api/chat-service/ws/",
+     "host": "kings.game",
+     "kind": "other"
+    },
+    {
+     "url": "wss://nexus-websocket-a.intercom.io/pubsub/5-JF7dxT26rbTAnNHuIOhJaMDZHR_cEckydl2eeRXgFcSWVMqDaO40gqWqt1JEZl3ajIejZVQ6KaI6b5-l3-IH2xM3AM1J_rJ6X52M",
+     "host": "nexus-websocket-a.intercom.io",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://kings.game/game/4446"
+  },
+  {
+   "domain": "legendz.io",
+   "startUrl": "https://legendz.io",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "legendz.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "www.google.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 2,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "1d4da783-c9c2-47ae-8626-09019259c4f3.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "api.adradv.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cms.legendz.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "cognito-identity.eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "content.legendz.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "d1835mas0gwu6p.cloudfront.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ekr.zdassets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "eu.novacloud.one",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "flags.legendz.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "legendz.io",
+     "kind": "other",
+     "frames": 4
+    },
+    {
+     "host": "legendziosupport.zendesk.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "metrics.legendz.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "nano-web-assets.s3-eu-west-1.amazonaws.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "secure.adnxs.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.novacloud.one",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "static.zdassets.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "tag.adrsbl.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "track.adform.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "v6.tag.adrsbl.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "widgets.coingecko.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "www.google.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://legendz.io/en/blocked/Ukraine"
+  },
+  {
+   "domain": "lionluck.casino",
+   "startUrl": "https://lionluck.casino",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "lionluck.casino",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "lionluck.casino",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://lionluck.casino/"
+  },
+  {
+   "domain": "lottosway.com",
+   "startUrl": "https://lottosway.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.lottosway.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "lottosway.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.lottosway.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.lottosway.com/"
+  },
+  {
+   "domain": "luckleopard.casino",
+   "startUrl": "https://luckleopard.casino",
+   "ok": true,
+   "log": [
+    "clicked tile: [class*='game-card']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "luckleopard.casino",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "luckleopard.casino",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://luckleopard.casino/"
+  },
+  {
+   "domain": "luckyanon.com",
+   "startUrl": "https://luckyanon.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "luckyanon.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "75784a9e-963d-4d7b-80e2-e7ba5b4d2ef5.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api-iam.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.luckyanon.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.luckyanon.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "eu-assets.i.posthog.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "eu.i.posthog.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js.intercomcdn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "luckyanon.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "vip-cdn.luckyanon.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "widget.intercom.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://nexus-websocket-a.intercom.io/pubsub/5-3iVqEGp4H636JYoY7lIaPJ3cJwcF-tT3q9btUYrwUDj4iB8kiNI74ITtUCjgZZ7RZrMg5EZbLbIQ4k-Zk3qS6vI95zVZTczxqG-E",
+     "host": "nexus-websocket-a.intercom.io",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://luckyanon.com/"
+  },
+  {
+   "domain": "luckybit.com",
+   "startUrl": "https://luckybit.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "luckybit.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "luckybit.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://luckybit.com/"
+  },
+  {
+   "domain": "luckycoin.cash",
+   "startUrl": "https://luckycoin.cash",
+   "ok": true,
+   "log": [
+    "clicked tile: [class*='game-card']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.luckycoin.cash",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "luckycoin.cash",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.luckycoin.cash",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.luckycoin.cash/"
+  },
+  {
+   "domain": "luckyriches.com",
+   "startUrl": "https://luckyriches.com",
+   "ok": true,
+   "log": [
+    "clicked tile: [class*='game-card']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "luckyriches.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "709d2392-5e3a-4ffc-9785-5006af0cedd5.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "luckyriches-audit-api.terragon.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "luckyriches-audit-cdn-cms.terragon.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "luckyriches.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://luckyriches-audit-websocket.terragon.io/app/9XM6G9jA2Y1xm5x5v0CKZA4j6W9TsMCtJ6yor9F5rT",
+     "host": "luckyriches-audit-websocket.terragon.io",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://luckyriches.com/signup/"
+  },
+  {
+   "domain": "magicmarkets.com",
+   "startUrl": "https://magicmarkets.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "magicmarkets.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api-js.mixpanel.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdp.customer.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d2x9hkvgrcabur.cloudfront.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "magicmarkets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "metadatascraper.devmolly.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://magicmarkets.com/demo/magic-cpricefeed/v2",
+     "host": "magicmarkets.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://magicmarkets.com/"
+  },
+  {
+   "domain": "moemoecasino.com",
+   "startUrl": "https://moemoecasino.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "moemoecasino.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "moemoecasino.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://moemoecasino.com/"
+  },
+  {
+   "domain": "northspin.com",
+   "startUrl": "https://northspin.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "northspin.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "browser-intake-datadoghq.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cms.cdn-mediakit.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "edge.fullstory.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "northspin.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "rs.fullstory.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "storageu4mbcu7gqf2su.blob.core.windows.net",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://northspin.com/"
+  },
+  {
+   "domain": "onda-bet.com",
+   "startUrl": "https://onda-bet.com",
+   "ok": false,
+   "log": [],
+   "frames": [],
+   "hosts": [],
+   "sockets": [],
+   "error": "TimeoutError: page.goto: Timeout 45000ms exceeded."
+  },
+  {
+   "domain": "onda.bet",
+   "startUrl": "https://onda.bet",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "ondabet100.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "cloudflare.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "onda.bet",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ondabet100.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://ondabet100.com/"
+  },
+  {
+   "domain": "orionsfortune.casino",
+   "startUrl": "https://orionsfortune.casino",
+   "ok": true,
+   "log": [
+    "cookies-declined: button:has-text('Decline')",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "orionsfortune.casino",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "orionsfortune.casino",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://orionsfortune.casino/"
+  },
+  {
+   "domain": "orionsfortune.com",
+   "startUrl": "https://orionsfortune.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "orionsfortune.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.aws.parking.godaddy.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "csp.secureserver.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "img1.wsimg.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "orionsfortune.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://orionsfortune.com/lander"
+  },
+  {
+   "domain": "pelaa.io",
+   "startUrl": "https://pelaa.io",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "pelaa.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.aws.parking.godaddy.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "csp.secureserver.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "img1.wsimg.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pelaa.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "widget.trustpilot.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://pelaa.io/lander"
+  },
+  {
+   "domain": "redstone777.com",
+   "startUrl": "https://redstone777.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "redstone777.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "www.google.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 2,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "cdn.reamaze.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "contact.apps-api.instantpage.secureserver.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "csp.secureserver.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "img1.wsimg.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ms.godaddy.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "redstone777.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "s.zkcdn.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://redstone777.com/"
+  },
+  {
+   "domain": "rivertidecasino.com",
+   "startUrl": "https://rivertidecasino.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "rivertidecasino.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.cloudscape.one",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "assets.cloudscape.one",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "firebase.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "firebaseinstallations.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "rivertidecasino.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "s3.sa-east-1.amazonaws.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "tracking.dexiralwhisper.space",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "unpkg.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://rivertidecasino.com/"
+  },
+  {
+   "domain": "royalen.com",
+   "startUrl": "https://royalen.com",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/game/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "royalen.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "accounts.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "assets.customer.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "browser-intake-datadoghq.eu",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.launcher.a8r.games",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.livechatinc.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.royalen.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "code.gist.build",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "payments-lib.cdn.s7s.ai",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "performadspartners.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "royalen.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "track-eu.customer.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://royalen.com/ws/notifications/tertiary/connection/websocket",
+     "host": "royalen.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://api.livechatinc.com/v3.6/customer/rtm/ws",
+     "host": "api.livechatinc.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://royalen.com/"
+  },
+  {
+   "domain": "slotoy.com",
+   "startUrl": "https://slotoy.com",
+   "ok": false,
+   "log": [],
+   "frames": [],
+   "hosts": [],
+   "sockets": [],
+   "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://slotoy.com/"
+  },
+  {
+   "domain": "smash.casino",
+   "startUrl": "https://smash.casino",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "smash.casino",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "challenges.cloudflare.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "brunhild.challenges.cloudflare.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "challenges.cloudflare.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "smash.casino",
+     "kind": "other",
+     "frames": 3
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://smash.casino/"
+  },
+  {
+   "domain": "spartaspins.com",
+   "startUrl": "https://spartaspins.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "spartaspins.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "spartaspins.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://spartaspins.com/"
+  },
+  {
+   "domain": "spinbetter.com",
+   "startUrl": "https://spinbetter.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "spinbetter.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "17126420.fls.doubleclick.net",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "gum.criteo.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "17126420.fls.doubleclick.net",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "aa.agkn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ad.360yield.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ad.doubleclick.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ad.yieldlab.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "adservice.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "analytics.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.spinbetter.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.bing.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "c.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdp-eu.customer.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cm.g.doubleclick.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "connect.facebook.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "convertagain.tech",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "criteo-partners.tremorhub.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "criteo-sync.teads.tv",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cs.media.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d.adroll.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d.adtelligent.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "dis.criteo.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "dpm.demdex.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "dsum-sec.casalemedia.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "dynamic.criteo.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "eb2.3lift.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "gum.criteo.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "i.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "i.loopme.me",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ib.adnxs.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "id5-sync.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "idsync.rlcdn.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "image2.pubmatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "jadserve.postrelease.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "match.sharethrough.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ml314.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "mpc2-prod-26-is5qnl632q-uc.a.run.app",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pippio.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pixel-us.convertagain.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pixel-us.trovina.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pixel.rubiconproject.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "pixel.tapad.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ps.eyeota.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "r.casalemedia.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "r.uuidksinc.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "rtb-csync.smartadserver.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "s.adroll.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "scripts.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "servetraff.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "simage2.pubmatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "simage4.pubmatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "spinbetter.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "sslwidget.criteo.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "stats.g.doubleclick.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sync-t1.taboola.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sync.1rx.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sync.crwdcntrl.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sync.outbrain.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "sync.taboola.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "us-u.openx.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "vid.spinbetter.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "widget.us.criteo.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.facebook.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google.com.ua",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "x.bidswitch.net",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://spinbetter.com/en/block"
+  },
+  {
+   "domain": "spinko.co",
+   "startUrl": "https://spinko.co",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "spinko.co",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "spinko.co",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://spinko.co/"
+  },
+  {
+   "domain": "spinzen.com",
+   "startUrl": "https://spinzen.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "spinzen.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "spinzen.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://spinzen.com/"
+  },
+  {
+   "domain": "stoked.bet",
+   "startUrl": "https://stoked.bet",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "stoked.bet",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.flux.pizza",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.iconify.design",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "f6a626f3-494c-4be1-b2d0-d4b5eae958e6.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "stoked.bet",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://stoked.bet/"
+  },
+  {
+   "domain": "trevol.bet",
+   "startUrl": "https://trevol.bet",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/game/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "trevol.bet",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "soporte.trevolbet.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "accounts.google.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "d1nxk8io3iz4ej.cloudfront.net",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "da4gomi5w3o01.cloudfront.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "dp0kd0fj044fh.cloudfront.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "f10de67d-1580-40a7-bc2d-41d3251fa824.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "f10de67d-1580-40a7-bc2d-41d3251fa824.snippet.anjouangaming.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "soporte.trevolbet.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "trevol.bet",
+     "kind": "other",
+     "frames": 4
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://trevol.bet/ws/connection/websocket",
+     "host": "trevol.bet",
+     "kind": "other"
+    },
+    {
+     "url": "wss://trevol.bet/sportsbook/connection/websocket",
+     "host": "trevol.bet",
+     "kind": "other"
+    },
+    {
+     "url": "wss://trevol.bet/ws/connection/websocket",
+     "host": "trevol.bet",
+     "kind": "other"
+    },
+    {
+     "url": "wss://soporte.trevolbet.com/cable",
+     "host": "soporte.trevolbet.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://trevol.bet/en/game/provider/InOut"
+  },
+  {
+   "domain": "trevolbet.mx",
+   "startUrl": "https://trevolbet.mx",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "trevolbet.mx",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "trevolbet.mx",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://trevolbet.mx/"
+  },
+  {
+   "domain": "truepoker.eu",
+   "startUrl": "https://truepoker.eu",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.truepoker.eu",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "truepoker.eu",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.truepoker.eu",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.truepoker.eu/"
+  },
+  {
+   "domain": "tuplaa.com",
+   "startUrl": "https://tuplaa.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "clicked demo: a:has-text('Demo')"
+   ],
+   "frames": [
+    {
+     "host": "www.tuplaa.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "megaplays.net",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "caocw.playngonetwork.com",
+     "depth": 2,
+     "kind": "provider"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "92fd2b6f-b545-466b-a6da-4b1846d01442.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "acuflyp.playngonetwork.com",
+     "kind": "provider",
+     "frames": 1
+    },
+    {
+     "host": "caocw.playngonetwork.com",
+     "kind": "provider",
+     "frames": 2
+    },
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.playngonetwork.com",
+     "kind": "provider",
+     "frames": 1
+    },
+    {
+     "host": "cdn.sanity.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdnjs.cloudflare.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "client.crisp.chat",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "data.tuplaa.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "image.crisp.chat",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "megaplays.net",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "o4511014756220928.ingest.de.sentry.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "pc-prod-eu.playngonetwork.com",
+     "kind": "provider",
+     "frames": 1
+    },
+    {
+     "host": "tuplaa.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.tuplaa.com",
+     "kind": "other",
+     "frames": 3
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://client.relay.crisp.chat/w/fc6/",
+     "host": "client.relay.crisp.chat",
+     "kind": "other"
+    },
+    {
+     "url": "wss://client.relay.crisp.chat/w/fc6/",
+     "host": "client.relay.crisp.chat",
+     "kind": "other"
+    },
+    {
+     "url": "wss://acuflyp.playngonetwork.com/gamehub",
+     "host": "acuflyp.playngonetwork.com",
+     "kind": "provider"
+    },
+    {
+     "url": "wss://pc-prod-eu.playngonetwork.com/player-events",
+     "host": "pc-prod-eu.playngonetwork.com",
+     "kind": "provider"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://www.tuplaa.com/en/moon-princess-100"
+  },
+  {
+   "domain": "turbosven.com",
+   "startUrl": "https://turbosven.com",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/play/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "turbosven21.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "assets-gamma-crucis-c.yavuno.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api.draknos.com",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "assets-gamma-crucis-c.yavuno.com",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "cdn.logr-in.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn1.gs-c3fw33.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ece19565-9d9a-43b8-8c4e-2a1f202dcfcb.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ekr.zdassets.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "eu.api.fpjs.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fpnpmcdn.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "game-logos.turbosven21.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "lib.rewards.tech",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ngs.gs-c3fw33.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2auth-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2bonus-gateway-p002.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2frontend-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2integration-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2wsdk-altenar2.biahosted.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sb2wsdk-cdn-altenar2.biahosted.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.zdassets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "turbosven.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "turbosven.zendesk.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "turbosven21.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://turbosven21.com/casino/play/demo/hxixswnvnwbqiritkaohzczykryjwckc"
+  },
+  {
+   "domain": "vivaspin.com",
+   "startUrl": "https://vivaspin.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.vivaspin.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "1dbea307-08a5-4154-8d01-ff825257f4b8.seals.dlagglobal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "21970b5b-0194-4887-a991-2df97367793c.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "ekr.zdassets.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "eu.api.fpjs.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fpnpmcdn.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "platform-gateway.vivaspin.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.paymentiq.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.zdassets.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "telegram.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "vivaspin.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "vivaspin.zendesk.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.vivaspin.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.vivaspin.com/en"
+  },
+  {
+   "domain": "winberry.casino",
+   "startUrl": "https://winberry.casino",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "winberry.casino",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "auth.winberry-vault.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "www.google.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    },
+    {
+     "host": "",
+     "depth": 2,
+     "kind": "unknown"
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "24e58675-4da9-446b-b0ca-74f4b21d7046.snippet.anjcdn.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "24e58675-4da9-446b-b0ca-74f4b21d7046.snippet.anjouangaming.org",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "accounts.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api.onesignal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "auth.winberry-vault.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.ba.contentsquare.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.livechatinc.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.onesignal.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "imgs.winberry-vault.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sentry.betrium.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "t.contentsquare.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "winberry-vault.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "winberry.casino",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://winberry-vault.com/socket.io/",
+     "host": "winberry-vault.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://api.livechatinc.com/v3.6/customer/rtm/ws",
+     "host": "api.livechatinc.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://winberry.casino/"
+  },
+  {
+   "domain": "winigreat.com",
+   "startUrl": "https://winigreat.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "winigreat.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "winigreat.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://winigreat.com/"
+  },
+  {
+   "domain": "winnowlotto.com",
+   "startUrl": "https://winnowlotto.com",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/play/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "winnowlotto.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "api-na3.hubspot.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "app-na3.hubspot.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "connect.facebook.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "exceptions-na3.hubspot.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "forms-na3.hscollectedforms.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js-na3.hs-analytics.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js-na3.hs-banner.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js-na3.hs-scripts.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js-na3.hscollectedforms.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "js-na3.usemessages.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sl-11a463aaedf44600a99367660fd6fa70.ecs.us-east-1.on.aws",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "static.hsappstatic.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "track-na3.hubspot.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "winnowlotto.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "www.facebook.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://winnowlotto.com/play/powerball"
+  },
+  {
+   "domain": "yapoker.com",
+   "startUrl": "https://yapoker.com",
+   "ok": true,
+   "log": [
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.yapoker.com",
+     "depth": 0,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "cdn.weglot.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "env-yapokercom-newyp.kinsta.cloud",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "g10498469755.co",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "g1584674684.co",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "gtlyimg.co",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.yapoker.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "yapoker.com",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://www.yapoker.com/"
+  },
+  {
+   "domain": "zenobet.io",
+   "startUrl": "https://zenobet.io",
+   "ok": true,
+   "log": [
+    "clicked tile: a[href*='/game/']",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "www.zenobet.io",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "depth": 1,
+     "kind": "other"
+    },
+    {
+     "host": "",
+     "depth": 1,
+     "kind": "unknown"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "760.sentermax.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "aaplay.xyz",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "accounts.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "adboostio.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "analytics.salesanalytics.io",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "api-zenobet.btrtrf.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "api.livechatinc.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "api.zenobet.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "blend.host",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.adtrackerz.co.uk",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.jsdelivr.net",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cdn.livechatinc.com",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "cdn.zenobet.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "cf-zenobet.btrtrf.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "chat.zenobet.io",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "e.acuityplatform.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "insights.rtgio.co",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "media.athena-tech.eu",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "pixel.athena-tech.eu",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "proxysites.co",
+     "kind": "other",
+     "frames": 0
+    },
+    {
+     "host": "rtg.mediamathrdrt.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "rtg.prdredir.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "rtg.wewomedia.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "rtgio.co",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "s.logstracker.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "scripts.coolretargeting.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "scripts.mediamathrdrt.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "scripts.prdredir.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "secure.livechatinc.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static-cdn.jtvnw.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 4
+    },
+    {
+     "host": "www.datamart.pro",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.zenobet.io",
+     "kind": "other",
+     "frames": 3
+    },
+    {
+     "host": "zenobet-casino-dev.s3.amazonaws.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "zenobet.io",
+     "kind": "other",
+     "frames": 1
+    }
+   ],
+   "sockets": [
+    {
+     "url": "wss://chat.zenobet.io/socket.io/",
+     "host": "chat.zenobet.io",
+     "kind": "other"
+    },
+    {
+     "url": "wss://api.livechatinc.com/v3.6/customer/rtm/ws",
+     "host": "api.livechatinc.com",
+     "kind": "other"
+    },
+    {
+     "url": "wss://chat.zenobet.io/socket.io/",
+     "host": "chat.zenobet.io",
+     "kind": "other"
+    },
+    {
+     "url": "wss://api.livechatinc.com/v3.6/customer/rtm/ws",
+     "host": "api.livechatinc.com",
+     "kind": "other"
+    }
+   ],
+   "error": null,
+   "finalUrl": "https://www.zenobet.io/games/game/money-tree-jackpot-hold-and-win-18peaches-money-tree-jackpot-hold-and-win"
+  },
+  {
+   "domain": "zizobet.com",
+   "startUrl": "https://zizobet.com",
+   "ok": true,
+   "log": [
+    "login prompt visible: text=/sign in|log in|\u0443\u0432\u0456\u0439\u0442\u0438|\u0432\u043e\u0439\u0442\u0438|giri\u015f/i",
+    "no demo control found"
+   ],
+   "frames": [
+    {
+     "host": "zizobet.com",
+     "depth": 0,
+     "kind": "other"
+    },
+    {
+     "host": "intercomme.com",
+     "depth": 1,
+     "kind": "other"
+    }
+   ],
+   "hosts": [
+    {
+     "host": "analytics-sp.googleserv.tech",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.bing.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "c.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.googleapis.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "fonts.gstatic.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "i.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "imagedelivery.net",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "intercomme.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "scripts.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "sealimg.certcga.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "static.cloudflareinsights.com",
+     "kind": "other",
+     "frames": 2
+    },
+    {
+     "host": "www.clarity.ms",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.google-analytics.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "www.googletagmanager.com",
+     "kind": "other",
+     "frames": 1
+    },
+    {
+     "host": "zizobet.com",
+     "kind": "other",
+     "frames": 2
+    }
+   ],
+   "sockets": [],
+   "error": null,
+   "finalUrl": "https://zizobet.com/"
+  }
+ ]
+}

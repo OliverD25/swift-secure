@@ -61,7 +61,12 @@ consumers deciding where to put money.
 
 - ❌ **"We check whether casinos substitute fake games."** We have never once
   done this. The tool exists but has never completed a single check. We tested
-  45 casinos: **0** let a visitor open a game without an account.
+  60 casinos: 3 failed to load, 56 never reached a game, and **1** worked.
+  On tuplaa.com the chain resolved casino → aggregator → provider exactly as
+  the method describes, so the technique is proven and the obstacle is access.
+  One success in 57 loadable sites is not a service, and until the check runs
+  with an account the casino provides, nothing about checking games may be
+  claimed. Evidence: `research/game-provenance-probe.json`.
 - ❌ **"We test whether games are fair."** Impossible from outside. Needs an
   accredited laboratory and millions of recorded spins.
 - ❌ **"We check payouts / withdrawals / whether a casino pays."** We have no
