@@ -50,7 +50,7 @@ const isUnindexedCasinoPage = (page) => {
 // https://astro.build/config
 const locales = [
   'en', 'ar', 'da', 'de', 'es', 'fr', 'fr-ca', 'it', 'nl',
-  'pl', 'pt', 'pt-br', 'sv', 'tr', 'hi', 'ko', 'zh', 'ja', 'ru',
+  'pl', 'pt', 'pt-br', 'sv', 'tr', 'hi', 'ko', 'zh', 'ja', 'ru', 'uk',
 ];
 
 export default defineConfig({

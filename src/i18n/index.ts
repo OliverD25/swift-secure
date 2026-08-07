@@ -19,6 +19,7 @@ import ko from "./locales/ko";
 import zh from "./locales/zh";
 import ja from "./locales/ja";
 import ru from "./locales/ru";
+import uk from "./locales/uk";
 import { withBase } from "../lib/url";
 
 const translations: Record<string, PartialTranslation> = {
@@ -41,6 +42,7 @@ const translations: Record<string, PartialTranslation> = {
   zh,
   ja,
   ru,
+  uk,
 };
 
 /**

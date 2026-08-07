@@ -183,8 +183,14 @@ Three written by hand, seventeen by fallback.
 | Language | Where it goes | State today |
 | :--- | :--- | :--- |
 | **English** | `src/i18n/locales/en.ts` — the source every other language falls back to | Exists. Must stay complete. |
-| **Russian** | `src/i18n/locales/ru.ts` — overrides English key by key | Exists, but overrides almost nothing: only `home.title`, `home.howEyebrow`, `methodology.eyebrow`. **Everything else a Russian visitor reads today is English.** |
-| **Ukrainian** | Does not exist | Must be created in three places: a row in `src/data/languages.ts`, a new `src/i18n/locales/uk.ts`, and `'uk'` added to the `locales` array in `astro.config.mjs`. |
+| **Russian** | `src/i18n/locales/ru.ts` — overrides English key by key | Home page done 7 August 2026. Every other page still falls back to English. |
+| **Ukrainian** | `src/i18n/locales/uk.ts` | Created 7 August 2026, home page only. Every other page falls back to English. |
+
+**Adding a locale takes four edits, not three.** A row in `src/data/languages.ts`,
+the locale file itself, `'uk'` in the `locales` array in `astro.config.mjs`, and
+**an import plus a map entry in `src/i18n/index.ts`**. The last one is the one to
+miss: without it the build still succeeds, the URLs still generate, and the
+locale silently serves English to everybody.
 
 **The other 17 languages** — ar, da, de, es, fr, fr-ca, hi, it, ja, ko, nl, pl,
 pt, pt-br, sv, tr, zh — take English automatically, key by key. So the English

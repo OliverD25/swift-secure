@@ -82,10 +82,10 @@ const en: Translation = {
   home: {
     title: "Swift Secured",
     description:
-      "We look up a casino's licence number in the regulator's own register and publish what came back, with the date. No casino carries the badge yet.",
+      "We validate casino licence data against the registers of the relevant regulators and record the technical condition of their pages. Every result is dated.",
     badge: "New. No casino carries the badge yet.",
-    h1: "Before you deposit, find out who can shut the casino down.",
-    sub: "We look up a casino in the register of the regulator it names, and publish what came back and when. Then we name that regulator, because regulators are not equal — the name is whose word you are trusting. We never call a casino safe.",
+    h1: "Independent audit of licence data and technical condition.",
+    sub: "Our service performs a comprehensive technical audit of online casinos, validating licence data against the registers of the relevant regulators and recording the actual technical condition of game and payment pages. We document discrepancies in how licence information is presented across jurisdictions, ensuring every result is published with the date the check was carried out.",
     ctaApply: "See what we check",
     ctaVerify: "Check a badge",
     howEyebrow: "How it works",
@@ -96,10 +96,10 @@ const en: Translation = {
     operatorsEyebrow: "Our index",
     operatorsTitle: "Casinos in our index — listed, not recommended",
     viewAllCasinos: "See the full index",
-    ctaHeading: "Before you deposit, read the limits",
+    ctaHeading: "How the audit is carried out",
     ctaSub:
-      "What we cannot see from outside is written out on our how-we-check page, in the same size type as what we can. Read it before you trust any badge, ours included.",
-    ctaButton: "What we do not check",
+      "The full method is published: which registers are read, how the technical condition of a page is recorded, and what each result does and does not establish.",
+    ctaButton: "Read the method",
   },
   steps: [
     {

@@ -32,6 +32,7 @@ export const languages: Language[] = [
   { locale: "zh", htmlLang: "zh", code: "ZH", name: "中文", iso: "cn", dir: "ltr" },
   { locale: "ja", htmlLang: "ja", code: "JA", name: "日本語", iso: "jp", dir: "ltr" },
   { locale: "ru", htmlLang: "ru", code: "RU", name: "Русский", iso: "ru", dir: "ltr" },
+  { locale: "uk", htmlLang: "uk", code: "UK", name: "Українська", iso: "ua", dir: "ltr" },
 ];
 
 export const defaultLocale = "en";
