@@ -106,9 +106,16 @@ nobody outside a casino can" line is a feature, not a weakness.
   buried.
 - Cold and factual outperforms excited. The subject is frightening on its own.
 
-## 5. What to produce
+## 5. What to produce — in three languages
 
-English is the source language. Deliver plain text per slot.
+Deliver every slot below in **English, Russian and Ukrainian**. Plain text per
+slot, per language.
+
+**Write each language natively. Do not translate the English literally.** Fear
+does not survive word-for-word translation: a line that lands hard in English
+turns polite in Russian and stilted in Ukrainian. The *facts* must be identical
+across all three — same numbers, same seven domains, same claims, same things
+refused. Only the phrasing changes.
 
 | Slot | Guidance |
 | :--- | :--- |
@@ -120,15 +127,27 @@ English is the source language. Deliver plain text per slot.
 | Section: what we do not check | Heading + 2–3 short paragraphs. Games, fairness, withdrawals. |
 | CTA | Button label plus one supporting sentence. |
 
-## 6. Translation constraint
+## 6. How the three languages reach the site
 
-The English copy is machine-fed into 18 other languages: ar, da, de, es, fr,
-fr-ca, hi, it, ja, ko, nl, pl, pt, pt-br, ru, sv, tr, zh.
+Three written by hand, seventeen by fallback.
+
+| Language | Where it goes | State today |
+| :--- | :--- | :--- |
+| **English** | `src/i18n/locales/en.ts` — the source every other language falls back to | Exists. Must stay complete. |
+| **Russian** | `src/i18n/locales/ru.ts` — overrides English key by key | Exists, but overrides almost nothing: only `home.title`, `home.howEyebrow`, `methodology.eyebrow`. **Everything else a Russian visitor reads today is English.** |
+| **Ukrainian** | Does not exist | Must be created in three places: a row in `src/data/languages.ts`, a new `src/i18n/locales/uk.ts`, and `'uk'` added to the `locales` array in `astro.config.mjs`. |
+
+**The other 17 languages** — ar, da, de, es, fr, fr-ca, hi, it, ja, ko, nl, pl,
+pt, pt-br, sv, tr, zh — take English automatically, key by key. So the English
+version still has to be translation-safe:
 
 - **No idioms, no wordplay, no puns.** They do not survive translation.
 - **No culture-specific references.**
 - Arabic is right-to-left; avoid copy whose meaning depends on visual order.
 - Keep sentences short enough to survive 30% expansion in German.
+
+Russian and Ukrainian are exempt from that constraint, because they are written
+by hand rather than derived. They can hit harder than the English.
 
 ## 7. Rejected already
 
