@@ -73,6 +73,7 @@ python3 research/scripts/test_drafts.py   # 1,275 assertions on the outreach dra
 python3 research/scripts/test_directory_seo.py   # indexing + consent, reads dist/
 python3 research/scripts/test_report_tooling.py  # signature, freshness, .partial guard
 node scripts/test-apply-form.mjs          # apply form in a real browser, own dev server
+python3 scripts/test-site-claims.py       # what the built site claims, all locales
 node crawler/seal-census.mjs              # ~15 min, rewrites research/seal-census.json
 ./publish.sh                              # build and swap into the live docroot
 ```
