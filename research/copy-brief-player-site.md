@@ -97,14 +97,63 @@ nobody outside a casino can" line is a feature, not a weakness.
 
 ## 4. Voice
 
+**Confident and institutional.** This is an audit firm describing its work, not
+a sceptic listing caveats. Formal, technical, unhedged.
+
 - **Short sentences.** One idea each.
 - **Concrete over abstract.** "Seven sites" beats "many operators".
-- **No hedging, no marketing adjectives.** No "leading", "trusted", "premium".
+- **Technical vocabulary is wanted** — audit, register, routing, verification,
+  documented, jurisdiction. It signals competence and it is what this reader
+  expects from an auditor.
+- **No hedging and no apologising.** Do not open on what we cannot do.
 - **Never say a casino is safe.** The site has never said it and must not start.
-- **Candour is the differentiator.** Publishing what we do *not* check is the
-  main answer to "why should I trust your badge?" It should be prominent, not
-  buried.
 - Cold and factual outperforms excited. The subject is frightening on its own.
+
+### Where the limitations go
+
+Earlier versions of this site led with what we do **not** check, on the front
+page. That has changed. **Limitations belong on `/methodology/`, not on the home
+page.** The home page states what the audit covers. A reader who wants the
+boundaries follows a link and finds them in full.
+
+This is a change of emphasis, not of substance. Nothing is deleted or denied,
+and the methodology page stays exactly as blunt as it has always been.
+
+### Register: one rejected, one accepted
+
+Both are formal and technical. Only one can be defended.
+
+**Rejected:**
+
+> Our service performs a comprehensive technical audit of online casinos,
+> validating the originality of the game code and the absence of third-party
+> manipulation of the software. We verify the routing of game sessions and the
+> conformity of presented content to providers' registration standards,
+> guaranteeing that the real state of the gaming environment is recorded.
+
+Register is right. Every substantive claim is false: we have never inspected
+game code, cannot detect software manipulation, have never completed a session-
+routing check, and have no relationship with any provider or access to their
+standards. "Guaranteeing" makes it worse.
+
+**Accepted:**
+
+> Our service performs a comprehensive technical audit of online casinos. We
+> match the licence number against the register of the regulator that issued it,
+> record the technical condition of payment and game pages, and document
+> discrepancies in how licence information is presented across jurisdictions.
+> Every result is published with the date the check was carried out.
+
+Identical tone and authority. Every clause traces to a file: regulator
+registers, 193 sites with failing requests, 7 of 130 with a licence that changes
+by country.
+
+### What has NOT changed
+
+Section 3 still governs. Confidence is about how a true claim is delivered, not
+about which claims may be made. A confident sentence about a check we have never
+run is still a false sentence — and that is the one thing that can end this
+business rather than merely embarrass it.
 
 ## 5. What to produce — in three languages
 
@@ -124,7 +173,7 @@ refused. Only the phrasing changes.
 | `description` | Meta description, under 160 characters. |
 | Section: the licence check | Heading + 2–3 short paragraphs. Use the 7-of-130 finding. |
 | Section: what a logo is worth | Heading + 2–3 short paragraphs. Risk framing only — no claim we check it. |
-| Section: what we do not check | Heading + 2–3 short paragraphs. Games, fairness, withdrawals. |
+| Section: what the audit covers | Heading + 2–3 short paragraphs. Stated as scope, in the register of section 4. |
 | CTA | Button label plus one supporting sentence. |
 
 ## 6. How the three languages reach the site
@@ -157,6 +206,9 @@ by hand rather than derived. They can hit harder than the English.
 - Anything opening on withdrawal was judged too risky: it puts payment front and
   centre while we cannot check payment, and readers hear a promise regardless of
   the disclaimer.
+- The "originality of the game code / absence of third-party manipulation /
+  providers' registration standards" paragraph — see section 4. The register was
+  right and has been adopted. The claims were not, and were replaced.
 
 ## 8. Acceptance criteria
 
@@ -165,5 +217,7 @@ by hand rather than derived. They can hit harder than the English.
 3. A hostile reader — a competitor, a regulator, a journalist — cannot find a
    sentence we could not defend with a file.
 4. It is frightening.
+5. It reads like an audit firm, not a warning label. No caveat opens a section
+   on the home page.
 
-Criterion 4 without criteria 1–3 is worthless. So is 1–3 without 4.
+Criteria 4 and 5 without criteria 1–3 are worthless. So are 1–3 without 4 and 5.
