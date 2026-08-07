@@ -32,7 +32,9 @@ const ru: PartialTranslation = {
   home: {
     title: "Swift Secured",
     howEyebrow: "Как это работает",
-    badge: "Новый сервис. Ни одно казино ещё не имеет знака.",
+    badge: "Независимый сервис. Не аффилирован ни с одним казино.",
+    criteriaTitle: "Что устанавливает запись и по каким правилам",
+    howTitle: "От сверки с реестром до датированной публичной записи",
     ctaApply: "Что мы проверяем",
     ctaVerify: "Проверить знак",
     description:

@@ -83,16 +83,15 @@ const en: Translation = {
     title: "Swift Secured",
     description:
       "We validate casino licence data against the registers of the relevant regulators and record the technical condition of their pages. Every result is dated.",
-    badge: "New. No casino carries the badge yet.",
+    badge: "Independent. Not affiliated with any casino.",
     h1: "Independent audit of licence data and technical condition.",
     sub: "Our service performs a comprehensive technical audit of online casinos, validating licence data against the registers of the relevant regulators and recording the actual technical condition of game and payment pages. We document discrepancies in how licence information is presented across jurisdictions, ensuring every result is published with the date the check was carried out.",
     ctaApply: "See what we check",
     ctaVerify: "Check a badge",
     howEyebrow: "How it works",
-    howTitle: "From a free check to a dated public page",
+    howTitle: "From register lookup to a dated public record",
     criteriaEyebrow: "What the badge means",
-    criteriaTitle:
-      "One thing the badge tells you, and three rules we hold ourselves to",
+    criteriaTitle: "What a record establishes, and the rules that govern it",
     operatorsEyebrow: "Our index",
     operatorsTitle: "Casinos in our index — listed, not recommended",
     viewAllCasinos: "See the full index",
@@ -147,7 +146,7 @@ const en: Translation = {
       "How Swift Secured reads a casino's licence number, looks it up in the register of the regulator that issued it, names that regulator, and prints the date on every record.",
     eyebrow: "How it works",
     h1: "How a casino gets checked and listed",
-    sub: "There is not much to it, and that is deliberate. We confirm one fact, we name who issued the licence, and we print the day we looked. None of it needs anything from you, and none of it needs anything from the casino.",
+    sub: "The procedure is fixed and published, so any result can be reproduced independently. We read the licence number a casino publishes, search for it in the register of the regulator that issued it, and record the answer with the date. The casino is not contacted, and nothing is required from the reader.",
     ctaHeading: "Run one of these casinos?",
     ctaButton: "Casino sign-up",
   },
@@ -264,14 +263,14 @@ const en: Translation = {
   methodology: {
     title: "What we check",
     description:
-      "The whole method: the one fact Swift Secured confirms, why every record carries a date, what we deliberately do not check, and what happens when a licence stops appearing.",
+      "The full procedure: which registers are read, why every record carries a date, the defined perimeter of the audit, and what happens when a licence stops appearing.",
     eyebrow: "Methodology",
-    h1: "How we check, and what we cannot check",
-    sub: "Everything here is done from outside, as an ordinary visitor with no account and no access to any casino. We take the licence number a casino publishes, and the address of the site, and look for both in the register kept by the regulator that issued the licence. Then we publish the answer with the date. We do not test games ourselves. This page is what that answer tells you, and what it does not.",
+    h1: "How the audit is carried out",
+    sub: "The audit is performed externally, from the position of an ordinary visitor, without an account and without any access granted by the casino. We take the licence number a site publishes and the address of the site, and search for both in the register maintained by the regulator that issued the licence. The result is published with the date it was recorded. This page sets out the procedure and the perimeter it runs inside.",
     checksTitle: "What we confirm",
-    limitsTitle: "What we do not check",
+    limitsTitle: "Scope of the audit",
     limitsSub:
-      "This list is published on purpose. It is the only way to know what the badge is worth. It also says which registers we can read today, because a casino we have not checked is marked not checked, and that is not the same word as unconfirmed.",
+      "Every audit has a defined perimeter, and ours is published so a reader can judge what a record is worth. It also states which registers are readable today, because a casino nobody has checked is marked not checked, and that is not the same word as unconfirmed.",
     monitoringTitle: "Why every record carries a date",
     monitoringBody:
       "A register is not a fixed thing. A licence lapses, a site address is added or dropped, a certificate is reissued under a new number. So an answer is only true on the day it was read, and we print that day beside the answer rather than leave you to guess. Every record here has been read once. When we read one again, the record is rewritten and the date moves with it, and the earlier answer is not hidden. An old date stays visible on purpose. It is better that you distrust a stale record than trust one that only looks fresh.",
@@ -377,16 +376,16 @@ const en: Translation = {
   about: {
     title: "About",
     description:
-      "Swift Secured is new. We run four measurements on casino homepages from the outside, publish the method in full, and say plainly what we cannot check.",
+      "Swift Secured audits online casinos from the outside, publishes the procedure in full, and states the perimeter every record runs inside.",
     eyebrow: "About",
-    h1: "New, and saying so",
-    sub: "Swift Secured started in August 2026. It is days old, no casino carries the badge, and we would rather write that than dress it up. We publish only what can be confirmed from outside, with no account and no access to any casino. That turned out to be a short list, so the list is short, and it sits on this site next to everything the badge does not cover.",
+    h1: "Independent by construction",
+    sub: "Swift Secured audits online casinos and publishes each result with the date it was recorded. Operators pay to display a record. They never pay for what it says: no revenue share, no referral fee, and no arrangement under which a finding can be altered or withdrawn. The procedure is published in full, so any result can be repeated without taking our word for it.",
     card1Title: "No casino can buy a result",
     card1Body:
       "No payment will ever change what a record says, and no record comes down because someone asked. We will not take a share of a casino's revenue and we will not take a referral fee. A casino may one day pay to display a record. It will never pay for a word of what the record says.",
-    card2Title: "The limits sit next to the claim",
+    card2Title: "Defined scope, published in full",
     card2Body:
-      "Whether a game is fair, whether a large win gets paid, anything behind a login — none of that can be seen from outside, so we do not claim it. Our how-we-check page lists what we confirm and what we do not, in the same size type. Read that list before you trust the badge.",
+      "Whether a game is fair, whether a large win is paid, and anything behind a login cannot be observed from outside. They fall outside the perimeter of this audit, and no record claims them. The scope is set out on the method page, in the same size type as the findings.",
   },
   faqPage: {
     title: "Questions",
