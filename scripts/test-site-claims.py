@@ -143,6 +143,27 @@ def main() -> None:
         for needle in needles:
             check(f"/{loc or 'en'}/methodology/ still states '{needle}'", needle in text)
 
+    # A hand-written locale must not quietly fall back to English.
+    #
+    # The fallback is per key and silent by design: delete a heading from uk.ts
+    # and the page still builds, still renders and still reads perfectly — in
+    # English, to a Ukrainian visitor arriving from a Ukrainian nav. Nothing
+    # else in this repo would notice.
+    CYRILLIC = re.compile(r"[Ѐ-ӿ]")
+    for loc in ("uk", "ru"):
+        for page in ("", "methodology", "how-it-works", "about",
+                     "casinos", "verify", "apply", "faq", "pricing", "badge"):
+            path = DIST / loc / page / "index.html" if page else DIST / loc / "index.html"
+            if not path.exists():
+                check(f"/{loc}/{page} exists", False, str(path))
+                continue
+            html = path.read_text(encoding="utf8", errors="replace")
+            m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
+            heading = re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else ""
+            check(f"/{loc}/{page or 'home'} has a translated heading",
+                  bool(heading) and bool(CYRILLIC.search(heading)),
+                  f"heading is '{heading[:60]}' — English fallback")
+
     # Figures published as literals, against the data they claim to describe.
     src = CASINOS.read_text(encoding="utf8")
     truth = {
