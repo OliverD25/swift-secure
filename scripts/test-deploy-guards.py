@@ -207,30 +207,39 @@ def test_check_deployed() -> None:
           f"sent User-Agent: {_Handler.seen_agent!r}")
 
 
-def test_hook_skips_and_passes(site_sha: str, docs_sha: str | None) -> None:
-    print("\npre-push — the quiet paths")
+def test_hook_static() -> None:
+    """The ways a hook can be switched off without anyone editing its logic."""
+    print("\npre-push — the ways it can be switched off silently")
     check("the hook file exists and is not empty", HOOK.exists() and HOOK.stat().st_size > 0)
-    check("core.hooksPath points at .githooks",
-          git("config", "--get", "core.hooksPath") == ".githooks",
-          "run: git config core.hooksPath .githooks")
     pkg = json.loads((ROOT / "package.json").read_text(encoding="utf8"))
     check("npm install installs the hook by itself",
           "core.hooksPath" in pkg.get("scripts", {}).get("prepare", ""),
           "a fresh clone would otherwise have no protection and no warning")
-
-    # Git will not run a hook without the execute bit on Linux, and it does so
-    # silently — the push succeeds with no checks and no message. Windows does
-    # not track the bit, so it has to be recorded in the index deliberately.
     mode = git("ls-files", "-s", ".githooks/pre-push").split()[0]
     check("the hook is recorded executable in git (100755)", mode == "100755",
           f"mode is {mode}; on Linux git would skip the hook without a word. "
           "Fix: git update-index --chmod=+x .githooks/pre-push")
-
     hook_src = HOOK.read_text(encoding="utf8")
     check("the hook finds npm on a machine with a stripped PATH",
           "$HOME/.local/bin" in hook_src,
           "the homelab keeps npm there and a non-interactive shell does not "
           "have it on PATH; the push would fail with 'npm: not found'")
+    for needle, why in (
+        ("TYPE CHECK FAILED", "astro check"),
+        ("LOCKFILE IS NOT INSTALLABLE", "the npm@10.9.2 lockfile check"),
+        ("CLAIM CHECK FAILED", "the claim checks"),
+        ("THE BUILD FAILED", "the build"),
+    ):
+        check(f"the hook still runs {why}", needle in hook_src)
+
+
+def test_hook_skips_and_passes(site_sha: str, docs_sha: str | None) -> None:
+    test_hook_static()
+    print("\npre-push — the quiet paths")
+    # Only meaningful on a working clone; CI checks out fresh and never pushes.
+    check("core.hooksPath points at .githooks",
+          git("config", "--get", "core.hooksPath") == ".githooks",
+          "run: git config core.hooksPath .githooks")
 
     if docs_sha:
         code, out = run_hook(docs_sha, f"{docs_sha}~1")
@@ -286,34 +295,44 @@ def main() -> int:
     ap.add_argument("--fast", action="store_true", help="skip tests that run a build")
     a = ap.parse_args()
 
+    # Only the full run edits real files, so only the full run needs a clean
+    # tree. --fast reads and asserts; refusing there would block CI and anyone
+    # checking their work mid-change, for no gain.
     dirty = git("status", "--porcelain")
-    if dirty:
+    if dirty and not a.fast:
         print("REFUSING TO RUN: the working tree has uncommitted changes.\n"
               "These tests break files on purpose and restore them from memory.\n"
-              "Commit or stash first, so an interrupted run cannot lose your work.\n")
+              "Commit or stash first, so an interrupted run cannot lose your work.\n"
+              "(--fast reads only, and runs on a dirty tree.)\n")
         print(dirty)
-        return 2
-
-    site_re = re.compile(r"^(src/|public/|astro\.config\.mjs|wrangler.*\.jsonc)")
-    deps_re = re.compile(r"^(package\.json|package-lock\.json)$")
-    site_sha = latest_commit_touching(site_re, True)
-    docs_sha = latest_commit_touching(site_re, False)
-    deps_sha = latest_commit_touching(deps_re, True)
-    if not site_sha:
-        print("could not find a recent commit touching src/ — cannot test the hook")
         return 2
 
     test_version_stamp(fresh=not a.fast)
     test_check_deployed()
+
     if a.fast:
+        # CI runs this mode. It needs no history beyond HEAD~1 and starts no
+        # build, so it stays cheap enough to run on every push while still
+        # asserting the things that can switch a guard off silently: the hook's
+        # execute bit, the prepare script, and the PATH fix.
+        test_hook_static()
         print("\n--fast: skipping every test that runs a build")
     else:
+        site_re = re.compile(r"^(src/|public/|astro\.config\.mjs|wrangler.*\.jsonc)")
+        deps_re = re.compile(r"^(package\.json|package-lock\.json)$")
+        site_sha = latest_commit_touching(site_re, True)
+        docs_sha = latest_commit_touching(site_re, False)
+        deps_sha = latest_commit_touching(deps_re, True)
+        if not site_sha:
+            print("could not find a recent commit touching src/ — cannot test the hook")
+            return 2
         test_hook_skips_and_passes(site_sha, docs_sha)
         test_hook_blocks(site_sha, deps_sha)
 
-    print("\nafterwards")
-    still_dirty = git("status", "--porcelain")
-    check("the working tree is exactly as it was found", not still_dirty, still_dirty)
+    if not a.fast:
+        print("\nafterwards")
+        still_dirty = git("status", "--porcelain")
+        check("the working tree is exactly as it was found", not still_dirty, still_dirty)
 
     print(f"\n{len(passed)} passed, {len(failed)} failed")
     if failed:
