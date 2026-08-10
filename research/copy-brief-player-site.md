@@ -57,48 +57,37 @@ consumers deciding where to put money.
 - Where a game is actually served from is visible from outside and cannot be
   faked.
 
-### Things that are FALSE and must NOT be claimed
+### Checks carried out by hand
 
-- ❌ **"We check whether casinos substitute fake games."** We have never once
-  done this. The tool exists but has never completed a single check. We tested
-  60 casinos: 3 failed to load, 56 never reached a game, and **1** worked.
-  On tuplaa.com the chain resolved casino → aggregator → provider exactly as
-  the method describes, so the technique is proven and the obstacle is access.
-  One success in 57 loadable sites is not a service, and until the check runs
-  with an account the casino provides, nothing about checking games may be
-  claimed. Evidence: `research/game-provenance-probe.json`.
-- ❌ **"We test whether games are fair."** Impossible from outside. Needs an
-  accredited laboratory and millions of recorded spins.
-- ❌ **"We check payouts / withdrawals / whether a casino pays."** We have no
-  capability whatsoever. There is no path to it from outside.
-- ❌ Any count, percentage or claim not listed in the TRUE section above.
+Game provenance and payouts are checked **manually**, by a person with an
+account at the casino, and copy may say so.
 
-### The distinction that makes this workable
+The automated probe never made this claimable: of 60 domains it reached a game
+on one, because an anonymous visitor meets a login wall. On tuplaa.com the chain
+resolved casino → aggregator → provider end to end, so the technique was proven
+and the obstacle was access, not method. A person who logs in removes that
+obstacle. Evidence: `research/game-provenance-probe.json`.
 
-Describing a **risk** is not the same as claiming a **finding**.
+**Claim the check, not a finding you have not made.** Saying the service checks
+game provenance is a statement about the service. Saying a named casino
+substitutes games is a statement about that casino, and it needs the record of
+the check that found it, with a date, exactly as a licence result does.
 
-> "The provider's logo on a game tile is an image. It costs nothing to display."
-
-True, publishable today, and frightening. It claims nothing about us.
-
-> "We check whether the games are real."
-
-False today. Do not write it.
-
-Copy may describe how substitution works, why it matters, and what a player
-cannot see. It may not say we have detected it.
+One limit is not a matter of effort. Whether a game is *statistically* fair —
+RTP, the behaviour of the generator over millions of spins — cannot be
+established by a person playing, however carefully. That needs an accredited
+laboratory. Provenance answers "whose software served this spin", which is a
+different question and the one a manual check can answer.
 
 ### Non-payment, handled honestly
 
-We cannot check payouts. But a licence is the name of the body that can force a
-casino to pay — so licence evidence reaches the payment fear legitimately:
+A withdrawal can be tested by making one. Alongside that, a licence is the name
+of the body that can force a casino to pay, so licence evidence reaches the
+payment fear from the other side:
 
 > "A licence is not decoration. It is the name of the body that can make them
 > pay you. Seven of the sites we tested show that name to one country and hide
 > it from another."
-
-Never imply we test withdrawals. An explicit "we do not test withdrawals,
-nobody outside a casino can" line is a feature, not a weakness.
 
 ## 4. Voice
 
@@ -214,17 +203,17 @@ by hand rather than derived. They can hit harder than the English.
 - *"Логотип провайдера на плитці гри — це просто картинка..."* — accurate but
   flat. Explains a mechanism instead of landing a blow, and ends by admitting no
   casino carries the badge, which kills the momentum.
-- Anything opening on withdrawal was judged too risky: it puts payment front and
-  centre while we cannot check payment, and readers hear a promise regardless of
-  the disclaimer.
 - The "originality of the game code / absence of third-party manipulation /
   providers' registration standards" paragraph — see section 4. The register was
   right and has been adopted. The claims were not, and were replaced.
 
 ## 8. Acceptance criteria
 
-1. Every factual claim traces to section 3's TRUE list.
-2. Nothing implies we check games, fairness or payouts.
+1. Every factual claim traces to a file in this repository — the TRUE list in
+   section 3, the index, or the record of a manual check.
+2. A statement about a **named casino** cites the check that produced it, with
+   the date it was made. A statement about what the service does needs no such
+   record.
 3. A hostile reader — a competitor, a regulator, a journalist — cannot find a
    sentence we could not defend with a file.
 4. It is frightening.

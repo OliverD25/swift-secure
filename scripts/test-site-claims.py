@@ -10,19 +10,23 @@ plain strings, nineteen locales fall back to English per key, and Russian and
 Ukrainian are hand-written and free to depart from the English wording — so a
 claim can enter in one language and not the others.
 
-Four checks, all against dist/ rather than the source, because what ships is
+Three checks, all against dist/ rather than the source, because what ships is
 what matters:
 
   1. Phrases that are false in any context. "originality of the game code",
      "we guarantee", "provably fair" and their Ukrainian and Russian forms.
-  2. Phrases that are only false when asserted. "test withdrawals" is fine in
-     "we do not test withdrawals" and forbidden on its own, so every occurrence
-     is checked for a negation in front of it.
-  3. The honesty that must not quietly disappear. The scope section and its five
+  2. The honesty that must not quietly disappear. The scope section and its five
      items have to survive on the methodology page of every hand-written locale.
-  4. Figures that go stale. en.ts publishes 223 listed, 215 under Anjouan and 0
-     certified as literals, with a comment saying they will go stale the moment
-     the index changes. This compares them to src/data/casinos.ts.
+  3. Figures, against the data they describe. The stat tiles are read out of the
+     built home page and compared to src/data/casinos.ts.
+
+A fourth check used to live here. It required "test games", "check payouts" and
+their Ukrainian and Russian forms to carry a negation, because the service could
+not do any of it. Game provenance and payouts are now checked by hand, by a
+person with an account, so asserting them is no longer a lie and the check was
+removed on 10 August 2026. What survives in FORBIDDEN is narrower and still
+true: nothing here guarantees anything, and "provably fair" remains a claim no
+manual check establishes.
 
 Usage: python3 scripts/test-site-claims.py   (after npm run build)
 """
@@ -58,32 +62,6 @@ FORBIDDEN = [
     "гарантируя",
 ]
 
-# Legitimate only when negated. "We do not test withdrawals" is a feature of
-# this site; "we test withdrawals" would be a lie.
-RISKY = [
-    "test games",
-    "test the games",
-    "check the games",
-    "verify the games",
-    "test withdrawals",
-    "check payouts",
-    "games are fair",
-    "перевіряємо ігри",
-    "тестуємо ігри",
-    "перевіряємо виплати",
-    "тестуємо виведення",
-    "проверяем игры",
-    "тестируем игры",
-    "проверяем выплаты",
-    "тестируем вывод",
-]
-
-NEGATION = re.compile(
-    r"\b(not|never|no|cannot|can't|without|nothing|neither|nor)\b"
-    r"|\bне\b|\bніколи\b|\bжодн|\bніщо\b|\bникогда\b|\bничего\b|\bни\b",
-    re.I,
-)
-
 # Must survive on the methodology page of every hand-written locale.
 REQUIRED = {
     "": ["Scope of the audit", "Whether the games are fair", "Whether a big win gets paid"],
@@ -115,7 +93,7 @@ def main() -> None:
     pages = sorted(DIST.rglob("index.html"))
     check("the build produced pages to scan", len(pages) > 100, f"found {len(pages)}")
 
-    forbidden_hits, risky_hits = [], []
+    forbidden_hits = []
     for page in pages:
         text = visible_text(page.read_text(encoding="utf8", errors="replace"))
         low = text.lower()
@@ -123,16 +101,9 @@ def main() -> None:
         for phrase in FORBIDDEN:
             if phrase.lower() in low:
                 forbidden_hits.append(f"{rel}: {phrase}")
-        for phrase in RISKY:
-            for m in re.finditer(re.escape(phrase.lower()), low):
-                before = low[max(0, m.start() - 60):m.start()]
-                if not NEGATION.search(before):
-                    risky_hits.append(f"{rel}: '{phrase}' with no negation before it")
 
     check("no forbidden claim appears anywhere in the build", not forbidden_hits,
           "\n      ".join(forbidden_hits[:6]))
-    check("no risky phrase is asserted rather than denied", not risky_hits,
-          "\n      ".join(risky_hits[:6]))
 
     for loc, needles in REQUIRED.items():
         path = DIST / loc / "methodology" / "index.html" if loc else DIST / "methodology" / "index.html"
