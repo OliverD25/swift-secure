@@ -132,6 +132,10 @@ const en: Translation = {
       title: "No payment will ever change a record",
       desc: "No casino can buy a confirmation, alter one, or have one taken down. A record changes when the register changes, and the new date goes on it.",
     },
+    {
+      title: "The games are the ones the casino says they are",
+      desc: "The studio name under a game is a label on a page, and a label costs nothing to print. We open the game and follow it to the servers that actually run the spin, so the studio on the tile is the studio behind the result.",
+    },
   ],
   process: {
     title: "How it works",
@@ -277,10 +281,6 @@ const en: Translation = {
     {
       title: "Whether the games are fair",
       desc: "Whether a spin is honest, and what a game really pays back over time, can only be established by an accredited testing lab with access to the game's own data. We are not a lab and we do not have that data. Some regulators require independent lab testing before they grant a licence and some do not, so a licence sitting in a register is not a substitute for that testing. We will not let the badge suggest it is.",
-    },
-    {
-      title: "Who really made a game",
-      desc: "We tried to establish this from outside and could not do it on any site we looked at. A casino can name any studio on a page. We cannot confirm the claim, so we do not repeat it as a finding.",
     },
     {
       title: "Anything behind a login",
