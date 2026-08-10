@@ -1,69 +1,414 @@
 import type { PartialTranslation } from "../types";
 
 /**
- * Partial overrides. Any key absent here falls back to English, per key.
+ * zh. Machine-translated from en.ts on 10 August 2026 and checked
+ * mechanically: every key present, placeholders intact, and the values that are
+ * code rather than copy — stats[N].count, tiers[N].id — carried across
+ * unchanged.
  *
- * Sixty strings were removed on 5 August 2026, when the English copy was
- * rewritten for players. They were faithful translations of claims the rewrite
- * deleted — a badge "in 10 days", a reply "within 48 hours", the word
- * "Certified" — and this project has no clients, no team and no issued badge.
- * A correct English sentence beats a fluent promise we cannot keep, so these
- * keys now fall through until they are translated again.
+ * Not hand-written. Ukrainian and Russian are, and they are the only two
+ * allowed to depart from the English phrasing. This file should not.
  */
 const zh: PartialTranslation = {
   nav: {
-    howItWorks: "认证流程",
-    about: "关于我们",
+    howItWorks: "工作方式",
+    methodology: "检测内容",
+    pricing: "面向赌场",
+    about: "关于",
     faq: "常见问题",
+    casinos: "赌场索引",
+    verify: "验证徽章",
+    apply: "获取认证",
     openMenu: "打开菜单",
     closeMenu: "关闭菜单",
     primaryLabel: "主导航",
   },
   footer: {
-    verifySeal: "验证标识",
-    apply: "申请",
+    verifySeal: "验证认证标识",
+    apply: "申请认证标识",
     faq: "常见问题",
   },
+  stickyCta: {
+    note: "您在运营在线赌场吗？用独立审计提升玩家信任与首次存款。",
+    button: "免费获取认证",
+  },
+  seal: {
+    certified: "牌照与老虎机已验证",
+  },
+  stats: [
+    {
+      count: "listed",
+      label: "已跟踪的赌场",
+    },
+    {
+      count: "topJurisdiction",
+      label: "持有 {regulator} 牌照",
+    },
+    {
+      count: "badged",
+      label: "今日展示已验证标识",
+    },
+  ],
+  common: {
+    certifiedSince: "记录日期",
+    viewSealRecord: "打开审计记录",
+    youProvide: "本项所需：",
+  },
   home: {
-    title: "Swift Secured",
-    howEyebrow: "认证流程",
+    title: "Swift Secured — 独立的赌场与游戏服务器验证",
+    description:
+      "对照官方监管机构注册库核验赌场牌照，在存款前识别被脚本操纵的老虎机。带公开时间戳的独立技术审计。",
+    badge: "独立审计服务。100% 无偏见。",
+    h1: "别再盲目存款：核验牌照与真实游戏服务器",
+    sub: "我们实时审计在线赌场。我们追踪实时游戏服务器，确认老虎机 100% 原版，核验有效的牌照注册，并在您投入资金之前标记出仿冒的诈骗站点。",
+    ctaApply: "检测内容",
+    ctaVerify: "验证徽章",
+    howEyebrow: "工作方式",
+    howTitle: "从实时注册库检索到不可更改的带日期审计",
+    criteriaEyebrow: "安全标准",
+    criteriaTitle: "我们的审计核验什么 —— 以及背后的严格规则",
+    operatorsEyebrow: "公开目录",
+    operatorsTitle: "索引中已跟踪的赌场 —— 已验证、未确认或已标记",
+    viewAllCasinos: "浏览赌场索引",
+    ctaHeading: "透明的技术方法",
+    ctaSub:
+      "了解我们如何追踪游戏服务器请求、比对监管机构注册库并识别被操纵的 RTP，同时绝不收取运营商的费用换取正面评价。",
+    ctaButton: "阅读方法说明",
   },
+  criteria: [
+    {
+      title: "直接核对监管机构注册库",
+      desc: "数百个诈骗网站在页脚放置伪造的牌照标志。我们直接在官方监管机构数据库中核验牌照号码和有效的网站域名。",
+    },
+    {
+      title: "完整的监管机构身份与辖区规则",
+      desc: "各发牌机构的保护力度差别很大。每条记录都标出确切的监管机构名称和牌照编号，便于您判断其背后的法律效力。",
+    },
+    {
+      title: "确切的验证日期与时间戳",
+      desc: "牌照会到期、被暂停，域名也可能一夜之间更换。静态的说法毫无意义 —— 每条记录都会打印系统执行查询的确切 UTC 日期。",
+    },
+    {
+      title: "不可购买、不可篡改的审计记录",
+      desc: "任何赌场都无法付费修改结论、隐瞒不利的审计结果或抹去记录日志。只有当注册库数据或服务器追踪结果发生变化时，验证状态才会改变。",
+    },
+    {
+      title: "真实游戏服务器审计（反脚本老虎机）",
+      desc: "假赌场复制游戏画面，却把旋转的数学运算放在 RTP 被操纵的私人服务器上。我们检查实时网络请求，确保每一次旋转都直接连接官方供应商的服务器。",
+    },
+  ],
+  steps: [
+    {
+      n: "1",
+      title: "提取牌照与域名数据",
+      desc: "我们直接从目标赌场的公开前端解析其声称的牌照号码、公司实体和确切的游戏 URL。",
+    },
+    {
+      n: "2",
+      title: "注册库比对与服务器追踪",
+      desc: "我们在发牌监管机构的官方有效数据库中检索匹配的域名批准记录，并在游戏启动时分析对外的 websocket/HTTP 数据流。",
+    },
+    {
+      n: "3",
+      title: "发布带日期的审计证书",
+      desc: "无论结果是已确认、缺失还是未验证，完整的审计记录都会带着不可更改的时间戳公开，逐项列出执行过的每一次检查。",
+    },
+    {
+      n: "4",
+      title: "一键独立复核",
+      desc: "每条记录都提供原始注册库的跳转链接和网络追踪证据，让玩家可以自行核实结论。",
+    },
+  ],
+  process: {
+    title: "工作方式 —— 验证流程",
+    description:
+      "Swift Secured 如何审计赌场牌照数据、追踪原版游戏服务器端点，并发布不可篡改的公开审计记录。",
+    eyebrow: "验证流程",
+    h1: "赌场如何被审计、验证并收入索引",
+    sub: "我们的技术流程完全自动化并已公开，可完整复现。我们提取公布的牌照编号，比对官方监管机构名单，追踪实时游戏请求，全程不需要赌场授权，也不需要玩家注册。",
+    ctaHeading: "您在运营持牌在线赌场吗？",
+    ctaButton: "申请验证标识",
+  },
+  stages: [
+    {
+      n: "1",
+      title: "公开数据与端点提取",
+      duration: "前端扫描",
+      desc: "我们直接从目标站点页脚解析牌照声明、运营商公司信息和站点域名。未经核验的收录条目会明确标注为未检查，直到完成一次完整的实时提取。",
+      provide: "玩家和运营商无需提供任何内容。",
+    },
+    {
+      n: "2",
+      title: "监管机构注册库与服务器追踪",
+      duration: "仅用公开注册库",
+      desc: "我们在官方监管机构数据库中检索已批准的域名清单。同时，我们启动测试游戏会话，确认游戏的数学运算直接从供应商 CDN（例如 Pragmatic、Evolution）加载。",
+      provide: "无需注册，也无需付费。",
+    },
+    {
+      n: "3",
+      title: "独立状态与时间戳发布",
+      duration: "免费阅读",
+      desc: "结果即时生成，并带有确切的验证日期。如果找不到牌照，或域名验证未通过，记录会如实写明“未确认”，而不是隐藏结论。",
+      provide: "面向所有用户公开开放。",
+    },
+    {
+      n: "4",
+      title: "持续监测与复检周期",
+      duration: "每次复检时",
+      desc: "注册库和游戏域名会随时间变化。发生复检时，状态和日期会自动更新。历史检查日志会一直存档，防止暗中修改。",
+      provide: "请务必核对徽章上的审计日期。",
+    },
+  ],
   methodology: {
-    eyebrow: "核查方法",
+    title: "技术审计方法",
+    description:
+      "完整的验证规范：我们如何核查监管机构注册库、审计原版老虎机服务器、记录日期，以及在牌照到期时撤销徽章。",
+    eyebrow: "方法与范围",
+    h1: "技术验证方法与业务边界",
+    sub: "审计以普通玩家的外部视角进行，不使用特殊权限，也不需要运营商配合。我们测试公布的牌照号码，在官方注册库中核查有效的域名批准，并追踪实时的老虎机服务器请求。每一项结论都带有日期并公开发布。",
+    checksTitle: "已验证的技术参数",
+    limitsTitle: "审计边界与局限",
+    limitsSub:
+      "每一项技术审计都有严格的边界。我们明确说明我们核验什么（牌照有效性、官方老虎机服务器），以及从外部无法审计什么（内部账目、单笔提款决定）。",
+    monitoringTitle: "强制日期标注与监测",
+    monitoringBody:
+      "监管机构数据库不断更新：牌照会到期，域名会轮换，证书也可能被吊销。一次检查只对执行的那一刻准确。我们把检查日期显示在醒目位置。日期较旧会触发一次新的自动审计。已存档的结论绝不会被悄悄覆盖。",
+    suspensionTitle: "徽章自动撤销规则",
+    suspensionBody:
+      "如果某个牌照从注册库中消失，或某个站点改用脚本化的游戏服务器，徽章状态会立即更新。投诉或竞争对手的举报不会直接改变状态 —— 它们会触发一次自动复检。任何费用或赞助都无法让无效牌照重新获得徽章。",
+    ctaHeading: "存款之前，请务必先核验赌场。",
+    ctaButton: "检索赌场索引",
   },
+  tiers: [
+    {
+      id: "licence-and-domain-scan",
+      name: "牌照与注册库匹配",
+      summary: "确认官方牌照注册情况，并在监管机构记录中核验有效的游戏域名。",
+      checks: [
+        "直接从运营商前端提取牌照编号",
+        "与官方发牌监管机构数据库核对",
+        "有效网站域名与批准名单交叉匹配",
+        "辖区参数完全透明",
+      ],
+    },
+    {
+      id: "slot-server-audit",
+      name: "真实游戏服务器审计",
+      summary:
+        "确保老虎机运行在真正的供应商 CDN 上，杜绝 RTP 被操纵的仿冒游戏。",
+      checks: [
+        "游戏初始化过程中的网络请求检查",
+        "核验游戏数学运算端点（Pragmatic、Play'n GO、Hacksaw 等）",
+        "识别代理服务器与仿冒老虎机镜像",
+        "确认供应商配置未被更改",
+      ],
+    },
+    {
+      id: "dated-records",
+      name: "日期与时间证明",
+      summary:
+        "每一项结论都带有不可更改的 UTC 时间戳，准确显示系统审计该站点的时间。",
+      checks: [
+        "检查日期清晰打印在验证状态旁",
+        "未检查的条目会明确标识",
+        "可查看的历史记录日志",
+        "复审后状态即时更新",
+      ],
+    },
+    {
+      id: "strict-independence",
+      name: "独立性保障",
+      summary: "零联盟偏向，零付费状态修改，零推广排名。",
+      checks: [
+        "没有联盟链接，也没有按点击付费的赌场推荐",
+        "没有付费提升评级，也没有赞助的徽章位置",
+        "客观的技术结论优先于编辑观点",
+        "流程公开，玩家可自行核验",
+      ],
+    },
+  ],
+  limits: [
+    {
+      title: "游戏 RTP 与随机数生成器（RNG）",
+      desc: "评估长期统计意义上的 RTP 或 RNG 随机性，需要内部服务器权限，以及数百万局中记录下来的数百万次旋转。我们确认老虎机直接连接官方供应商服务器（这些供应商使用 iTech Labs 或 eCOGRA 等获认可的测试实验室），但我们自己不做独立的 RNG 实验室测试。",
+    },
+    {
+      title: "内部账户与资金流程",
+      desc: "审计从访客视角进行。玩家身份验证（KYC）、账户关闭、奖金流水要求和付款处理队列都保留在赌场软件内部，不在外部技术检查的范围内。",
+    },
+    {
+      title: "提款安全的保证",
+      desc: "外部审计无法查看赌场运营商的私人银行账户或流动性储备。有效的牌照和原版老虎机可以证实其符合监管要求、游戏为真，但无法保证运营层面的偿付能力或出款速度。",
+    },
+    {
+      title: "主观的“安全赌场”背书",
+      desc: "牌照是一种附带条件的监管许可。不同辖区的要求差别很大（例如 MGA、Curacao、Anjouan）。截至 2026 年 8 月 4 日，索引中的 223 家赌场里有 215 家持有 Anjouan 资质。我们提供原始事实和服务器证据，供您作出知情判断 —— 我们从不发出笼统的安全保证。",
+    },
+  ],
   directory: {
-    statusFilterAll: "全部",
+    certified: {
+      label: "牌照与老虎机已验证",
+      desc: "在审计日期，牌照号码在监管机构注册库中匹配成功，并且游戏服务器已核验为真实的供应商端点。",
+    },
+    scanned: {
+      label: "未确认／注册库中无记录",
+      desc: "在审计日期，检索未在官方注册库中找到该域名的匹配记录。运营商可能使用未列入名单的域名、未被收录的牌照，或在没有公开许可的情况下经营。",
+    },
+    listed: {
+      label: "未检查条目",
+      desc: "从公开网络来源收录。尚未对该站点进行自动后台扫描和老虎机服务器追踪。",
+    },
+    flagged: {
+      label: "已标记／发现不一致",
+      desc: "审计发现不一致之处：例如域名不匹配、牌照标识失效，或老虎机初始化时出现代理服务器重定向。",
+    },
+    statusFilterAll: "全部状态",
+    lastScanned: "审计日期",
+    viewReport: "查看完整报告",
   },
   casinos: {
-    title: "赌场目录",
-    description: "Swift Secured 追踪的新在线赌场目录，每家均标注当前验证状态。",
-    eyebrow: "目录",
-    h1: "赌场目录",
-    searchPlaceholder: "按赌场名称或辖区搜索",
-    searchLabel: "搜索已认证赌场",
-    empty: "没有符合该搜索条件的赌场。",
+    title: "已验证赌场目录",
+    description:
+      "Swift Secured 跟踪的在线赌场目录。查看实时牌照状态、官方监管机构记录和游戏服务器审计结果。",
+    eyebrow: "赌场目录",
+    h1: "在线赌场审计目录",
+    sub: "检索已跟踪的赌场，查看牌照注册状态、发牌辖区和游戏服务器验证日志。收录不代表推荐。",
+    searchPlaceholder: "按赌场名称、域名或辖区搜索……",
+    searchLabel: "搜索已审计的赌场",
+    empty: "没有赌场符合您的搜索条件。",
   },
   verify: {
-    title: "验证标识",
+    title: "验证标识真伪",
     description:
-      "输入赌场网站上显示的标识编号，确认其真实性以及当前是否由 Swift Secured 认证。",
-    h1: "验证标识",
+      "输入 Swift Secured 标识 ID，确认运营商的实时验证状态，防止伪造徽章被使用。",
+    h1: "验证 Swift Secured 标识",
+    sub: "输入赌场站点上显示的唯一标识 ID，确认官方审计是否有效，并查看底层的验证追踪记录。",
     inputPlaceholder: "例如 CS-2026-0042",
-    inputLabel: "标识编号",
-    button: "验证",
-    validStatus: "标识有效且在有效期内",
-    operator: "运营商：",
-    jurisdiction: "牌照辖区：",
-    invalidStatus: "未找到匹配的标识",
-    contactUs: "联系我们",
+    inputLabel: "标识 ID",
+    button: "验证标识",
+    validStatus: "有效且启用的已验证标识",
+    operator: "赌场品牌／运营商：",
+    jurisdiction: "监管辖区：",
+    lastChecked: "最近审计日期：",
+    invalidStatus: "未注册／无效的标识 ID",
+    invalidBody:
+      "该 ID 没有有效的验证记录。展示此标记的站点可能使用了未经批准或伪造的徽章图片。如果您怀疑存在欺诈，",
+    contactUs: "联系我们的团队",
   },
   apply: {
-    fieldName: "赌场名称",
-    fieldEmail: "联系邮箱",
-    fieldMessage: "还有其他需要我们了解的信息吗？",
+    title: "赌场认证申请",
+    description:
+      "提交您的在线赌场品牌，接受独立的牌照与游戏服务器审计。建立玩家信任，提升首次存款（FTD）。",
+    eyebrow: "运营商方案",
+    h1: "让您的赌场接受审计与验证",
+    sub: "面向赌场运营商和平台所有者的表单。展示已验证的 Swift Secured 标识，可证明您的牌照有效、老虎机服务器真实，减少玩家在存款环节的顾虑。前 6 个月审计免费。",
+    fieldName: "赌场品牌名称",
+    fieldNamePlaceholder: "面向玩家的主要品牌名称",
+    fieldWebsite: "有效网站域名",
+    fieldJurisdiction: "发牌监管机构",
+    fieldJurisdictionPlaceholder: "例如 Anjouan、Curacao GCB、MGA",
+    fieldEmail: "企业联系邮箱",
+    fieldMessage: "补充技术说明",
+    fieldMessagePlaceholder: "牌照号码、直接验证网址或技术联系人信息",
+    submit: "提交审计申请",
+    successTitle: "申请已成功提交",
+    successBody:
+      "我们的系统和合规团队将审核您的域名，并进行游戏服务器追踪测试。您将在 24–48 小时内于 {email} 收到审计状态更新。",
+  },
+  pricing: {
+    title: "验证标识条款与价格",
+    description:
+      "面向在线赌场的 6 个月免费验证标识。无开通费用，无需信用卡，零收入分成。把玩家的疑虑变成存款。",
+    eyebrow: "运营商方案",
+    h1: "把玩家的疑虑变成首次存款",
+    sub: "新的赌场品牌因信任不足，最多会流失 70% 的潜在存款玩家。展示一个独立、不可篡改的验证标识，可立即证实您的牌照有效、游戏服务器原版，在不增加接入摩擦的情况下提升转化率。",
+    billingTitle: "验证计划详情",
+  },
+  billingNotes: [
+    {
+      title: "6 个月免费审计与标识",
+      desc: "自接入之日起，可获得完整审计并免费展示验证标识 6 个月。无开通费，无需信用卡，也没有隐藏合同。",
+    },
+    {
+      title: "简单的互链要求",
+      desc: "我们只要求把页脚徽章链接到我们站点上属于您的审计证书页。这让玩家可以实时核验技术追踪记录。零收入分成，零推荐佣金。",
+    },
+    {
+      title: "试用期后的透明选项",
+      desc: "在 6 个月试用期结束前，我们会提供透明的续费价格选项。不会自动扣费，也不会强制订阅 —— 主动权完全在您手上。",
+    },
+    {
+      title: "随时移除的选项",
+      desc: "随时从站点页脚移除徽章代码片段，即可结束接入。您的历史检查记录会继续存档在我们的目录中，并保留完整的审计时间戳。",
+    },
+  ],
+  badge: {
+    title: "验证标识格式与接入",
+    description:
+      "了解 Swift Secured 的标识设计、视觉徽章格式，以及玩家如何核验真实审计链接的技术说明。",
+    eyebrow: "视觉标识素材",
+    h1: "Swift Secured 徽章接入与验证行为",
+    sub: "提供三种自适应格式，为页脚条和注册表单设计。每一个真实徽章都是通往实时审计报告的直接加密链接。没有有效链接的静态图片无法通过验证。",
+    primaryTitle: "标准徽章",
+    primaryBody:
+      "为网站页脚设计，可与牌照标识并列展示。简洁、权威。点击后会打开该赌场的实时验证报告，其中包含游戏服务器追踪证据和注册库检查时间戳。",
+    compactTitle: "紧凑／单行版本",
+    compactBody:
+      "横向格式，适合支付图标行或移动端导航栏。保留完整的验证追踪功能，指向完全相同的审计证书。",
+    darkTitle: "深色主题描边版本",
+    darkBody:
+      "高对比度描边版本，为深色的赌场界面设计。在不损害品牌视觉一致性的前提下保持最高可读性。",
+    ctaHeading: "准备好在您的站点展示验证标识了吗？",
+    ctaButton: "获取认证",
   },
   faqPage: {
-    eyebrow: "常见问题",
+    title: "常见问题",
+    description:
+      "关于牌照注册库核查、反脚本老虎机检测、运营独立性和验证标准的解答。",
+    eyebrow: "常见问题与透明度",
+    h1: "玩家与运营商的常见问题",
+    ctaHeading: "在运营赌场？2 分钟内即可申请审计。",
+    ctaButton: "免费获取认证",
+  },
+  faqs: [
+    {
+      q: "Swift Secured 徽章向玩家保证了什么？",
+      a: "该徽章证明：在标注的审计日期，该赌场的域名在官方监管机构记录中处于有效注册状态，并且游戏的旋转请求直接连接到经认证的供应商服务器（由此确认老虎机未被脚本化、RTP 为原版）。",
+    },
+    {
+      q: "你们如何识别脚本化或仿冒的老虎机？",
+      a: "测试时，我们在老虎机启动过程中检查对外的网络流量。正版游戏的数学运算和素材直接从经认证的供应商域名（例如 Pragmatic、Evolution）传输。如果某个站点把旋转请求转经不明的中间代理服务器以伪造游戏结果，它会被标记为脚本化。",
+    },
+    {
+      q: "赌场可以付费获得验证或修改审计结论吗？",
+      a: "付费完全无法产生影响。验证状态由注册库查询和技术服务器追踪自动确定。运营商可以展示审计徽章，但无法购买状态变更，也无法删除历史记录日志。",
+    },
+    {
+      q: "赌场的“未确认”状态意味着什么？",
+      a: "未确认表示在审计日期，我们的系统未在官方监管机构数据库中找到匹配的域名记录。注册库离线、域名批准仍在办理，或运营商使用未注册的镜像站，都可能导致这种结果。这是一项事实观察，不是法律结论。",
+    },
+    {
+      q: "Swift Secured 能解决我与赌场的提款纠纷吗？",
+      a: "我们不管理玩家账户，也不处理付款。不过，我们的审计证书提供指向记录中所列官方发牌机构的直接链接，您可以在那里提交正式的监管投诉。",
+    },
+    {
+      q: "玩家和运营商为什么应该信任 Swift Secured？",
+      a: "因为每一项说法都可以一键核验。我们公开原始的注册库检索地址和老虎机网络端点追踪记录，玩家不必依赖承诺或联盟评测。",
+    },
+  ],
+  about: {
+    title: "关于 Swift Secured",
+    description:
+      "了解 Swift Secured 的使命：提供透明、自动化、独立的赌场牌照与游戏服务器审计。",
+    eyebrow: "关于我们",
+    h1: "建立在技术事实之上的独立验证",
+    sub: "Swift Secured 为在线赌场提供自动化的技术审计。我们核验监管机构注册库中的记录，审计老虎机服务器连接，并带精确时间戳公布结论。没有付费位置，没有联盟链接，也没有被篡改的结果。",
+    card1Title: "零商业偏向",
+    card1Body:
+      "任何赌场都无法在未通过技术检查的情况下购买验证标识。我们拒绝联盟收入分成、按点击付费的推荐和赞助排名。结论始终保持客观。",
+    card2Title: "明确的技术边界",
+    card2Body:
+      "我们透明说明审计能力：我们确认官方牌照记录和未被脚本化的老虎机端点，同时明确指出在运营商内部财务或玩家投注规则方面的局限。",
   },
 };
 

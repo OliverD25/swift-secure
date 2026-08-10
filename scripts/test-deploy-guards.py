@@ -207,6 +207,85 @@ def test_check_deployed() -> None:
           f"sent User-Agent: {_Handler.seen_agent!r}")
 
 
+def load_locales() -> dict[str, dict[str, str]]:
+    """Every locale file, flattened to key -> string, via node."""
+    import subprocess, tempfile, os
+    out = {}
+    for path in sorted((ROOT / "src" / "i18n" / "locales").glob("*.ts")):
+        src = path.read_text(encoding="utf8")
+        src = re.sub(r"^import type.*$", "", src, flags=re.M)
+        src = re.sub(r"^const (\w+)\s*:\s*[^=]+=", r"const \1 =", src, flags=re.M)
+        src = re.sub(r"^export default (\w+);", r"console.log(JSON.stringify(\1));",
+                     src, flags=re.M)
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "l.mjs")
+            open(p, "w", encoding="utf8", newline="").write(src)
+            # Bytes, decoded here. text=True decodes with the machine's locale
+            # encoding, which on this PC is cp1251 and cannot represent Chinese,
+            # Arabic, Japanese or Korean — every non-Latin locale would fail for
+            # a reason that has nothing to do with the locale.
+            r = subprocess.run(["node", p], capture_output=True)
+        stdout = r.stdout.decode("utf8", "strict") if r.stdout else ""
+        if r.returncode != 0 or not stdout.strip():
+            out[path.stem] = {}
+            continue
+        flat: dict[str, str] = {}
+
+        def walk(o, prefix=""):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    walk(v, f"{prefix}.{k}" if prefix else k)
+            elif isinstance(o, list):
+                for i, v in enumerate(o):
+                    walk(v, f"{prefix}[{i}]")
+            elif isinstance(o, str):
+                flat[prefix] = o
+
+        walk(json.loads(stdout))
+        out[path.stem] = flat
+    return out
+
+
+def test_locales() -> None:
+    """A locale is either complete or it lies about being a translation.
+
+    A missing key falls back to English silently: the page renders, in the wrong
+    language, and nothing anywhere says so. That went unnoticed for days.
+    """
+    print("\nlocales — complete, and code left alone")
+    loc = load_locales()
+    en = loc.get("en", {})
+    if not check("en.ts parses and has keys", bool(en)):
+        return
+
+    frozen = [k for k in en if k.endswith(".count") or k.endswith(".id")]
+    incomplete, broken_code, lost_token = [], [], []
+    for code, d in loc.items():
+        if code == "en" or not d:
+            if code != "en":
+                incomplete.append(f"{code}(unparseable)")
+            continue
+        if len(d) != len(en) or any(k not in d for k in en):
+            incomplete.append(f"{code}({len(d)}/{len(en)})")
+        for k in frozen:
+            if k in d and d[k] != en[k]:
+                broken_code.append(f"{code}:{k}={d[k]!r}")
+        for k, token in (("stats[1].label", "{regulator}"),
+                         ("apply.successBody", "{email}")):
+            if k in d and token not in d[k]:
+                lost_token.append(f"{code}:{k}")
+
+    check(f"all {len(loc)} locales carry every one of the {len(en)} keys",
+          not incomplete, "incomplete: " + ", ".join(incomplete[:8]))
+    check("no locale translated a value that is code, not copy",
+          not broken_code,
+          "stats[N].count and tiers[N].id select data and must stay English: "
+          + ", ".join(broken_code[:5]))
+    check("no locale lost {regulator} or {email}", not lost_token,
+          "the placeholder is substituted at build time; translating it leaves "
+          "raw braces on the page: " + ", ".join(lost_token[:5]))
+
+
 def test_hook_static() -> None:
     """The ways a hook can be switched off without anyone editing its logic."""
     print("\npre-push — the ways it can be switched off silently")
@@ -252,15 +331,21 @@ def test_hook_skips_and_passes(site_sha: str, docs_sha: str | None) -> None:
 
 def break_and_run(name: str, path: pathlib.Path, mutate, site_sha: str,
                   expect_in_output: str) -> None:
-    """Break one file, require the hook to refuse the push, then put it back."""
-    original = path.read_text(encoding="utf8")
+    """Break one file, require the hook to refuse the push, then put it back.
+
+    Bytes in, bytes out. read_text/write_text translate line endings on Windows,
+    so a file stored with LF came back as CRLF — the helper reported that it had
+    restored the file while actually rewriting every line of it. The suite's own
+    closing check caught that, which is the only reason it is not still true.
+    """
+    original = path.read_bytes()
     try:
-        path.write_text(mutate(original), encoding="utf8")
+        path.write_bytes(mutate(original.decode("utf8")).encode("utf8"))
         code, out = run_hook(site_sha, f"{site_sha}~1")
         check(name, code != 0 and expect_in_output in out,
               f"exit={code}; wanted {expect_in_output!r}\n      {out.strip()[-300:]}")
     finally:
-        path.write_text(original, encoding="utf8")
+        path.write_bytes(original)
 
 
 def test_hook_blocks(site_sha: str, deps_sha: str | None) -> None:
@@ -309,6 +394,7 @@ def main() -> int:
 
     test_version_stamp(fresh=not a.fast)
     test_check_deployed()
+    test_locales()
 
     if a.fast:
         # CI runs this mode. It needs no history beyond HEAD~1 and starts no
