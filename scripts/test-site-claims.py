@@ -33,6 +33,7 @@ Usage: python3 scripts/test-site-claims.py   (after npm run build)
 import pathlib
 import re
 import sys
+from html import unescape
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -67,11 +68,21 @@ FORBIDDEN = [
     "гарантируя",
 ]
 
-# Must survive on the methodology page of every hand-written locale.
+# Must survive on the methodology page of every hand-written locale. The point
+# is not these exact words — it is that the boundary section never quietly
+# disappears from one language while staying in another. Re-pointed at the
+# wording of 10 August 2026; re-point it again when the copy moves, never delete
+# it.
 REQUIRED = {
-    "": ["Scope of the audit", "Whether the games are fair", "Whether a big win gets paid"],
-    "uk": ["Обсяг аудиту", "Чи чесні ігри", "Чи виплатять великий виграш"],
-    "ru": ["Объём аудита", "Честны ли игры", "Выплатят ли крупный выигрыш"],
+    "": ["Audit boundaries & limitations",
+         "Game RTP & Random Number Generators (RNG)",
+         "Guaranteed Withdrawal Security"],
+    "uk": ["Обсяг та межі аудиту",
+           "Математичний RTP та генератор випадкових чисел (ГВЧ)",
+           "Гарантія виплати виграшів"],
+    "ru": ["Объём и границы аудита",
+           "Математический RTP и генератор случайных чисел (ГСЧ)",
+           "Гарантия выплаты выигрышей"],
 }
 
 checks = 0
@@ -86,9 +97,15 @@ def check(label, ok, detail=""):
 
 
 def visible_text(html: str) -> str:
-    """Drop script, style and tag noise so a class name cannot trip a phrase."""
+    """Drop script, style and tag noise so a class name cannot trip a phrase.
+
+    Entities are decoded afterwards. Without that, any copy containing "&", "<"
+    or a quote is unsearchable: "Audit boundaries & limitations" ships as
+    "Audit boundaries &amp; limitations", and a check for it silently fails
+    while the phrase is right there on the page.
+    """
     html = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.S | re.I)
-    return re.sub(r"<[^>]+>", " ", html)
+    return unescape(re.sub(r"<[^>]+>", " ", html))
 
 
 def main() -> None:
@@ -167,13 +184,19 @@ def main() -> None:
     # whichever jurisdiction is most common in the index. If the mix ever moves,
     # a stale regulator on the home page would be a claim about our own data
     # that our own data contradicts.
+    # Matched on the tile itself rather than on a phrase, so rewording the label
+    # cannot silently switch this check off: find the tile whose number is the
+    # dominant count, and require its label to name that jurisdiction.
     jurisdictions = re.findall(r'jurisdiction:\s*"([^"]+)"', src)
     dominant = max(set(jurisdictions), key=jurisdictions.count) if jurisdictions else ""
-    check("the middle tile names the jurisdiction the data says is dominant",
-          f"under one regulator, {dominant}" in visible_text(home),
-          f"data says {dominant}")
+    pairs = re.findall(
+        r'<div class="text-\[32px\][^"]*">([\d,]+)</div>\s*<div class="[^"]*">([^<]*)</div>', home)
+    middle = [lbl for val, lbl in pairs if val.replace(",", "") == str(truth["anjouan"])]
+    check("the tile showing the Anjouan count names Anjouan",
+          bool(middle) and dominant in middle[0],
+          f"data says {truth['anjouan']} under {dominant}; tiles read {pairs}")
 
-    sentence = re.search(r"(\d{3}) of the (\d{3}) casinos", en)
+    sentence = re.search(r"(\d{3}) of (?:the )?(\d{3})", en)
     check("the Anjouan sentence matches the data",
           bool(sentence) and sentence.groups() == (str(truth["anjouan"]), str(truth["total"])),
           f"sentence says {sentence.groups() if sentence else None}, data says "
