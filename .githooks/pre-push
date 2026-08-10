@@ -15,6 +15,13 @@
 #
 set -e
 
+# The homelab keeps node, npm and npx in ~/.local/bin, which a login shell has
+# on PATH and a non-interactive one does not. A hook that cannot find npm fails
+# the push with "npm: not found", which reads as a broken hook rather than a
+# stripped environment. Prepending a directory that may not exist is harmless.
+PATH="$HOME/.local/bin:$PATH"
+export PATH
+
 # The npm that Cloudflare Workers Builds runs, read out of a real build log on
 # 10 August 2026. It is NOT the npm on this machine, and that difference cost
 # three days: the local npm wrote a lockfile only it would accept, five builds

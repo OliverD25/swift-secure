@@ -218,6 +218,20 @@ def test_hook_skips_and_passes(site_sha: str, docs_sha: str | None) -> None:
           "core.hooksPath" in pkg.get("scripts", {}).get("prepare", ""),
           "a fresh clone would otherwise have no protection and no warning")
 
+    # Git will not run a hook without the execute bit on Linux, and it does so
+    # silently — the push succeeds with no checks and no message. Windows does
+    # not track the bit, so it has to be recorded in the index deliberately.
+    mode = git("ls-files", "-s", ".githooks/pre-push").split()[0]
+    check("the hook is recorded executable in git (100755)", mode == "100755",
+          f"mode is {mode}; on Linux git would skip the hook without a word. "
+          "Fix: git update-index --chmod=+x .githooks/pre-push")
+
+    hook_src = HOOK.read_text(encoding="utf8")
+    check("the hook finds npm on a machine with a stripped PATH",
+          "$HOME/.local/bin" in hook_src,
+          "the homelab keeps npm there and a non-interactive shell does not "
+          "have it on PATH; the push would fail with 'npm: not found'")
+
     if docs_sha:
         code, out = run_hook(docs_sha, f"{docs_sha}~1")
         check("a documentation-only push skips the expensive checks",
