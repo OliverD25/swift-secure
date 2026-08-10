@@ -81,8 +81,10 @@ def latest_commit_touching(pattern: re.Pattern, want: bool) -> str | None:
 class _Handler(BaseHTTPRequestHandler):
     payload = b"{}"
     status = 200
+    seen_agent = ""
 
     def do_GET(self):
+        _Handler.seen_agent = self.headers.get("User-Agent", "")
         self.send_response(self.status)
         self.send_header("Content-Type", "application/json")
         self.end_headers()
@@ -190,6 +192,19 @@ def test_check_deployed() -> None:
     srv.shutdown()
     check("explains a 404 as a build predating version.json",
           code == 1 and "predates" in out, out.strip()[-200:])
+
+    srv, url = serve(b"nope", status=403)
+    code, out = check_deployed(url)
+    srv.shutdown()
+    check("explains a 403 as a refusal rather than a missing file",
+          code == 1 and "refused" in out, out.strip()[-200:])
+
+    # Cloudflare answers 403 to Python-urllib's default agent, so without one of
+    # our own this tool reports UNKNOWN for a healthy site every time. That is a
+    # check that cannot succeed, and it shipped once already.
+    check("the request carries a user agent Cloudflare will accept",
+          "Python-urllib" not in _Handler.seen_agent and bool(_Handler.seen_agent),
+          f"sent User-Agent: {_Handler.seen_agent!r}")
 
 
 def test_hook_skips_and_passes(site_sha: str, docs_sha: str | None) -> None:

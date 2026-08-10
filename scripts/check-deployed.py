@@ -29,9 +29,20 @@ def git(*args: str) -> str | None:
         return None
 
 
+# Cloudflare answers 403 to the default Python-urllib user agent. Measured on
+# 10 August 2026: curl got 200 from the same URL in the same second. Without a
+# user agent of our own this tool reports UNKNOWN for a perfectly healthy site,
+# every single time — a check that cannot succeed, which is the failure mode
+# this whole script exists to remove.
+USER_AGENT = "swift-secured-deploy-check/1 (+https://swiftsecured.com)"
+
+
 def fetch_version(base: str) -> dict | None:
     url = base.rstrip("/") + "/version.json"
-    req = urllib.request.Request(url, headers={"Cache-Control": "no-cache"})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Cache-Control": "no-cache",
+    })
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
             return json.loads(r.read().decode("utf8"))
@@ -39,6 +50,9 @@ def fetch_version(base: str) -> dict | None:
         print(f"  {url} returned HTTP {e.code}")
         if e.code == 404:
             print("  That build predates /version.json. Push once more and it will appear.")
+        elif e.code == 403:
+            print("  403 usually means the request was refused, not that the file is "
+                  "missing. Compare with: curl -sI " + url)
         return None
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
         print(f"  could not read {url}: {e}")
