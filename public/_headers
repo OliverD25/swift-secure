@@ -18,3 +18,13 @@
 # immutable cache on it would strand visitors on an old site with no way back.
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
+
+# The opposite rule, for the one file whose whole job is to be current.
+#
+# /version.json names the commit this deployment was built from, and
+# scripts/check-deployed.py reads it to answer "is the live site up to date".
+# A cached copy would answer for the previous deployment and confirm a release
+# that never happened — the exact failure it exists to catch. The header set in
+# the endpoint itself does not survive a static build; only this line does.
+/version.json
+  Cache-Control: no-store

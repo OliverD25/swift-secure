@@ -1,64 +1,105 @@
 #!/bin/sh
 #
-# Refuse to push a commit that does not build, or that the claim checks reject.
+# Refuse to push work that will not build, will not type-check, that the claim
+# checks reject, or whose lockfile the Cloudflare builder cannot install.
 #
 # This replaced the staging branch on 10 August 2026. Staging showed a problem
 # ten minutes after it had already left the machine; this stops it before it
 # leaves. A failed Cloudflare build deploys nothing, so broken code could never
 # reach the live site anyway — what actually needed catching is code that builds
-# fine and says something wrong, and that is exactly what these two checks are.
+# fine and says something wrong, and a lockfile the builder rejects.
 #
 # Install once per clone:   git config core.hooksPath .githooks
+#                           (npm install does it for you — see package.json)
 # Skip deliberately:        git push --no-verify
 #
 set -e
 
-# Only site-affecting pushes pay for a build. The list matches the one in
-# AGENTS.md: documentation, research sweeps and crawler scripts build no page.
-PATTERN='^(src/|public/|scripts/test-site-claims\.py|astro\.config\.mjs|package\.json|package-lock\.json|wrangler.*\.jsonc)'
+# The npm that Cloudflare Workers Builds runs, read out of a real build log on
+# 10 August 2026. It is NOT the npm on this machine, and that difference cost
+# three days: the local npm wrote a lockfile only it would accept, five builds
+# failed at `npm clean-install` before ever reaching the site, and the live site
+# quietly served old copy the whole time. Update this when the build log does.
+CI_NPM=10.9.2
+
+# Anything that renders a page. Documentation, research sweeps and crawler
+# scripts build nothing and skip the expensive checks.
+SITE='^(src/|public/|scripts/test-site-claims\.py|astro\.config\.mjs|wrangler.*\.jsonc)'
+DEPS='^(package\.json|package-lock\.json)$'
 
 changed=""
 while read -r _local_ref local_sha _remote_ref remote_sha; do
+	# A carriage return on the last field turns "sha~1" into "sha~1\r" and git
+	# rejects the range. Git itself never sends one; a test harness on Windows
+	# can, and the failure reads as a broken hook rather than a broken caller.
+	local_sha=$(printf '%s' "$local_sha" | tr -d '\r')
+	remote_sha=$(printf '%s' "$remote_sha" | tr -d '\r')
 	[ "$local_sha" = "0000000000000000000000000000000000000000" ] && continue
 	if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
-		range="$local_sha"
-		files=$(git show --name-only --format= "$range")
+		files=$(git show --name-only --format= "$local_sha")
 	else
-		range="$remote_sha..$local_sha"
-		files=$(git diff --name-only "$range")
+		files=$(git diff --name-only "$remote_sha..$local_sha")
 	fi
 	changed="$changed$files
 "
 done
 
-if ! printf '%s' "$changed" | grep -qE "$PATTERN"; then
-	echo "pre-push: nothing that builds a page changed — skipping the build"
+touched_site=$(printf '%s' "$changed" | grep -qE "$SITE" && echo yes || echo no)
+touched_deps=$(printf '%s' "$changed" | grep -qE "$DEPS" && echo yes || echo no)
+
+if [ "$touched_site" = no ] && [ "$touched_deps" = no ]; then
+	echo "pre-push: nothing that builds a page changed — skipping the checks"
 	exit 0
 fi
 
 cd "$(git rev-parse --show-toplevel)"
+LOG="${TMPDIR:-/tmp}/prepush.log"
+
+# 1. The lockfile, read the way the builder will read it.
+if [ "$touched_deps" = yes ]; then
+	echo "pre-push: checking the lockfile with npm@$CI_NPM, the version Cloudflare uses…"
+	if ! npx --yes "npm@$CI_NPM" ci --dry-run >"$LOG" 2>&1; then
+		echo "pre-push: THE LOCKFILE IS NOT INSTALLABLE BY THE BUILDER — nothing was pushed." >&2
+		echo "  Fix it with:  npx npm@$CI_NPM install --package-lock-only" >&2
+		grep -E 'npm error' "$LOG" | head -12 >&2
+		exit 1
+	fi
+fi
+
+[ "$touched_site" = no ] && { echo "pre-push: dependency change only, checks passed."; exit 0; }
 
 if [ ! -d node_modules ]; then
 	echo "pre-push: node_modules is missing. Run 'npm ci' first, or push with --no-verify." >&2
 	exit 1
 fi
 
-echo "pre-push: building the site…"
-npm run build >/tmp/prepush-build.log 2>&1 || {
-	echo "pre-push: THE BUILD FAILED — nothing was pushed." >&2
-	tail -25 /tmp/prepush-build.log >&2
+# 2. Types. `astro build` does not type-check, so a missing translation key or a
+#    wrong field name builds cleanly and breaks a page instead.
+echo "pre-push: type-checking…"
+if ! npx astro check >"$LOG" 2>&1; then
+	echo "pre-push: TYPE CHECK FAILED — nothing was pushed." >&2
+	grep -vE '^\s*$' "$LOG" | tail -25 >&2
 	exit 1
-}
+fi
 
+# 3. The build itself.
+echo "pre-push: building the site…"
+if ! npm run build >"$LOG" 2>&1; then
+	echo "pre-push: THE BUILD FAILED — nothing was pushed." >&2
+	tail -25 "$LOG" >&2
+	exit 1
+fi
+
+# 4. What the built pages claim.
 PY=$(command -v python3 || command -v python || true)
 if [ -z "$PY" ]; then
 	echo "pre-push: python not found, skipping the claim checks" >&2
 else
 	echo "pre-push: checking what the built pages claim…"
-	"$PY" scripts/test-site-claims.py || {
+	if ! "$PY" scripts/test-site-claims.py; then
 		echo "pre-push: A CLAIM CHECK FAILED — nothing was pushed." >&2
 		exit 1
-	}
+	fi
 fi
 
-echo "pre-push: build and claim checks passed."
+echo "pre-push: all checks passed."
