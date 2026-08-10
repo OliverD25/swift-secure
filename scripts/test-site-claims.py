@@ -45,6 +45,13 @@ HAND_WRITTEN = ("", "uk", "ru")
 
 # Never legitimate, in any sentence. These are the exact claims that were
 # proposed and rejected, plus the words that turn a measurement into a promise.
+#
+# "гарантуємо" and "гарантируем" were on this list until 10 August 2026. The
+# owner then wrote both, deliberately, into criteria[4].desc — the Ukrainian and
+# Russian copy about game servers guarantees the spin runs on the provider's own
+# server. Removed so his wording ships. The English forms stay, because the
+# English of that same string says "to ensure" and nothing here should turn into
+# a guarantee by accident.
 FORBIDDEN = [
     "originality of the game code",
     "absence of third-party manipulation",
@@ -54,11 +61,9 @@ FORBIDDEN = [
     "guaranteeing",
     "оригінальність ігрового коду",
     "маніпуляцій із софтом",
-    "гарантуємо",
     "гарантуючи",
     "оригинальность игрового кода",
     "манипуляций с софтом",
-    "гарантируем",
     "гарантируя",
 ]
 
