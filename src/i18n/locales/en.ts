@@ -47,28 +47,21 @@ const en: Translation = {
     viewSealRecord: "Open the record",
     youProvide: "What this needs:",
   },
-  // Counted from src/data/casinos.ts on 5 August 2026, not estimated: 223 records,
-  // 215 with jurisdiction "Anjouan", 0 with status "certified". They are written
-  // here as literals and will therefore go stale the moment the index changes —
-  // if a fourth figure is ever added, derive them at build time instead.
+  // Only the wording lives here. Every figure is counted out of
+  // src/data/casinos.ts while the site builds — see StatRow.astro.
   //
   // The middle tile is deliberate. Naming the concentration ourselves is worth
   // more than hiding it, because a reader who opens the index sees it in ten
   // seconds anyway, and a trust service caught presenting only flattering facts
-  // has nothing left to sell.
+  // has nothing left to sell. {regulator} is filled from the index too, so the
+  // sentence stays true if the mix ever moves off Anjouan.
   stats: [
+    { count: "listed", label: "Casinos listed" },
     {
-      value: "223",
-      label: "Casinos listed",
+      count: "topJurisdiction",
+      label: "Of them under one regulator, {regulator}",
     },
-    {
-      value: "215",
-      label: "Of them under one regulator, Anjouan",
-    },
-    {
-      value: "0",
-      label: "Carrying the badge today",
-    },
+    { count: "badged", label: "Carrying the badge today" },
   ],
   // Written for players. The technical checks we run for operators are an
   // internal tool for opening a conversation, and must not be described on any

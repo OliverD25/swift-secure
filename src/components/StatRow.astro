@@ -1,5 +1,7 @@
 ---
 import { useTranslations } from "../i18n";
+import { casinos, statusCount } from "../data/casinos";
+import type { StatCount } from "../i18n/types";
 
 interface Props {
   locale: string;
@@ -8,14 +10,35 @@ interface Props {
 
 const { locale, variant = "dark" } = Astro.props;
 const t = useTranslations(locale);
+
+// Every number on this row is counted out of the index while the site builds,
+// because the translation file is the wrong place to keep a fact. The four
+// figures that stood here first were invented, and their honest replacements
+// still went stale the moment a casino was added.
+const byJurisdiction = new Map<string, number>();
+for (const casino of casinos) {
+  byJurisdiction.set(casino.jurisdiction, (byJurisdiction.get(casino.jurisdiction) ?? 0) + 1);
+}
+const ranked = [...byJurisdiction.entries()].sort((a, b) => b[1] - a[1]);
+const topRegulator = ranked[0]?.[0] ?? "—";
+
+const figures: Record<StatCount, number> = {
+  listed: casinos.length,
+  topJurisdiction: ranked[0]?.[1] ?? 0,
+  badged: statusCount("certified"),
+};
 ---
 
 <div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-6 text-center">
   {
     t.stats.map((s) => (
       <div>
-        <div class:list={["text-[32px] font-extrabold", variant === "dark" ? "text-band-text" : "text-accent"]}>{s.value}</div>
-        <div class:list={["mt-1 text-sm", variant === "dark" ? "text-band-muted" : "text-muted"]}>{s.label}</div>
+        <div class:list={["text-[32px] font-extrabold", variant === "dark" ? "text-band-text" : "text-accent"]}>
+          {figures[s.count].toLocaleString("en-US")}
+        </div>
+        <div class:list={["mt-1 text-sm", variant === "dark" ? "text-band-muted" : "text-muted"]}>
+          {s.label.replace("{regulator}", topRegulator)}
+        </div>
       </div>
     ))
   }

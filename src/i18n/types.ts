@@ -1,5 +1,13 @@
+/** Which figure StatRow counts out of src/data/casinos.ts at build time.
+ *  There is deliberately no way to write a stat value by hand: the first four
+ *  on this site were invented outright, and the three that replaced them were
+ *  correct on 5 August and wrong the next time a casino was added. */
+export type StatCount = "listed" | "topJurisdiction" | "badged";
+
 export interface Stat {
-  value: string;
+  count: StatCount;
+  /** May contain {regulator}, replaced with the most common jurisdiction in
+   *  the index — so the sentence survives the mix shifting away from Anjouan. */
   label: string;
 }
 export interface Step {

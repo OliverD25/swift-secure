@@ -164,7 +164,7 @@ def main() -> None:
                   bool(heading) and bool(CYRILLIC.search(heading)),
                   f"heading is '{heading[:60]}' — English fallback")
 
-    # Figures published as literals, against the data they claim to describe.
+    # Figures, against the data they claim to describe.
     src = CASINOS.read_text(encoding="utf8")
     truth = {
         "total": len(re.findall(r"\n    domain:", src)),
@@ -172,12 +172,30 @@ def main() -> None:
         "certified": len(re.findall(r'status:\s*"certified"', src)),
     }
     en = EN.read_text(encoding="utf8")
-    stats = re.search(r"\n  stats: \[(.*?)\n  \],\n", en, re.S)
-    published = re.findall(r'value:\s*"([^"]+)"', stats.group(1)) if stats else []
+
+    # Read the tiles off the built page rather than out of en.ts. They stopped
+    # being literals on 10 August 2026 — StatRow counts them out of casinos.ts
+    # while the site builds — so there is no longer a number in the source to
+    # compare against. Reading dist/ tests one step further along anyway: that
+    # the count actually reaches the page, not merely that someone typed it
+    # correctly.
+    home = (DIST / "index.html").read_text(encoding="utf8", errors="replace")
+    tiles = re.findall(r'<div class="text-\[32px\][^"]*">([\d,]+)</div>', home)
+    published = [t.replace(",", "") for t in tiles]
     check("the stat tiles match src/data/casinos.ts",
           published == [str(truth["total"]), str(truth["anjouan"]), str(truth["certified"])],
           f"page says {published}, data says "
           f"{[truth['total'], truth['anjouan'], truth['certified']]}")
+
+    # The middle tile no longer names Anjouan either; {regulator} is filled from
+    # whichever jurisdiction is most common in the index. If the mix ever moves,
+    # a stale regulator on the home page would be a claim about our own data
+    # that our own data contradicts.
+    jurisdictions = re.findall(r'jurisdiction:\s*"([^"]+)"', src)
+    dominant = max(set(jurisdictions), key=jurisdictions.count) if jurisdictions else ""
+    check("the middle tile names the jurisdiction the data says is dominant",
+          f"under one regulator, {dominant}" in visible_text(home),
+          f"data says {dominant}")
 
     sentence = re.search(r"(\d{3}) of the (\d{3}) casinos", en)
     check("the Anjouan sentence matches the data",
