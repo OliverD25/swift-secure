@@ -101,6 +101,20 @@ From the header comment in `en.ts`:
 Public site = players. `research/reports/` = operators. Different audience,
 different rules — see AGENTS.md for the report rules.
 
+## Copy is not a changelog of the tooling
+
+Rule 2 is about **numbers**. It is not a licence to audit the rest of the copy
+against `crawler/` and quietly narrow whatever no tool automates yet.
+
+What the site says the service does, and what a script currently runs, are two
+layers on purpose — see *Two layers* in AGENTS.md. A check that a person carries
+out by hand is still a check the service performs, and the copy may say so.
+
+So: when you are told to write a claim, write that claim. Raise a concern in one
+sentence if you have one, then write it as instructed. Rewriting the task into
+the more cautious version is the single failure this section exists to stop, and
+it has cost real time more than once.
+
 ## Adding a language
 
 Three places, all required:

@@ -104,6 +104,40 @@ If `git diff --stat` shows thousands of deleted lines in one of these files,
 stop: count the records against `git show HEAD:<file>` before doing anything
 else.
 
+## Two layers: what the site says, and what the tooling has measured
+
+These are **separate**, and keeping them separate is deliberate architecture,
+not an oversight to be tidied away.
+
+| Layer | Lives in | Holds |
+| :--- | :--- | :--- |
+| What users are told | `src/i18n/locales/` | What the service does |
+| What has been measured | `research/`, `crawler/` | What a tool actually ran, with dates |
+| What is done by hand | performed by a person | Checks no tool covers yet |
+
+**Public copy describes the service. It is not a changelog of `crawler/`.** A
+check may be stated on the site before a tool automates it, because the owner
+has decided the service performs it — by hand where necessary. Whether the code
+exists yet is a question about the roadmap, not about whether the sentence is
+allowed.
+
+This is written down because the mistake keeps going the other way. An agent
+reads `research/`, sees a capability that is manual or not yet built, and
+quietly rewrites the copy to match the tooling — or removes a rule it was told
+to remove and puts a softer one of its own in its place. **That is not a
+correction. It is substituting your judgement for the owner's, on a decision
+that is his.**
+
+When told to write a specific claim: write it. If you disagree, say so in one
+sentence and write it anyway. Do not narrow it, hedge it, or replace it with the
+version you would have chosen. Both readings survive in git; the owner's time
+does not.
+
+The one thing that still needs a record is a statement about a **named casino**.
+"This casino substitutes games" needs the check that found it and its date, the
+same as a licence result — that is a specific accusation against a third party,
+not a description of the service.
+
 ## The report must be useful to the casino, not to us
 
 We send operators a free technical report. Its purpose is to be **worth reading
