@@ -8,47 +8,58 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
-## Deploying — staging first, always
+## Deploying — one branch, and a hook that runs before it leaves
 
-Three addresses are published from this repository, and two of them come from
-the same branch:
+**There is one branch: `main`. Pushing it publishes the live site.**
 
 | Push to | Deploys to | Visible to the public |
 | :--- | :--- | :--- |
 | `main` | `swiftsecured.com` + `www` — Worker `swift-secure` | **Yes. The live site** |
 | `main` | GitHub Pages mirror, via `.github/workflows/deploy.yml` | Yes, but `noindex` |
-| `staging` | `staging.swiftsecured.com` — Worker `swift-secure-staging` | Yes, but `noindex` and `Disallow: /` |
 
-A push to `main` is therefore two production deploys, not one.
+The build takes about ninety seconds for 4,661 pages.
 
-**Any change that alters the built site goes to `staging` first. It reaches
-`main` only after a human has looked at it and said so in chat.**
+### What replaced the staging branch
 
-Site-affecting means anything under `src/` or `public/`, plus
-`astro.config.mjs`, `package.json`, `wrangler.jsonc`, `wrangler.staging.jsonc`
-and `.github/workflows/deploy.yml`. Documentation, research sweeps and crawler
-scripts build no page and go straight to `main`.
+Until 10 August 2026 every site change went to a `staging` branch first, was
+looked at on `staging.swiftsecured.com`, and only then moved to `main`. That was
+dropped, on purpose, and it is worth knowing why before reinstating it.
 
-The staging project builds the `staging` branch and nothing else — non-production
-builds are switched off. A feature branch gets no preview, so the work has to sit
-on `staging` itself.
+**A failed Cloudflare build deploys nothing.** Five builds failed in a row on
+10 August and the live site went on serving the previous version for three days.
+Broken code cannot reach production; it just fails to replace what is there. So
+staging was never protecting against that.
 
-### The sequence
+What it did protect against is code that **builds cleanly and is wrong** — copy
+with a false claim in it. That is now caught by `.githooks/pre-push`, which
+builds the site and runs `scripts/test-site-claims.py` before the push leaves the
+machine. Earlier than staging, and in seconds rather than ten minutes.
 
-1. Commit, and push to `staging` only.
-2. Wait for the Cloudflare build. About ten minutes; it renders 4,428 pages.
-3. **Prove the new build is the one being served** before asking anyone to look.
-   Fetch the exact text or markup the change introduces. A page that merely looks
-   different is not evidence, and a green build only means the deploy ran.
-4. Ask for a look at `https://staging.swiftsecured.com`.
-5. **Wait for a yes, in words, in chat.** A finished background task, a green
-   build, or a passing check is not confirmation. Neither is an earlier yes to a
-   different question.
-6. Only then move `main` to **the exact commit that was verified on staging**.
-   No rebase, no amend, no extra commit slipped in between. Promoting anything
-   else puts code on the live site that nobody looked at.
+Install it once per clone, because git does not carry hook settings:
 
-### Reaching staging from this PC
+```bash
+cd "E:/codespace/_claude_code/swift-secured-badge"; git config core.hooksPath .githooks
+```
+
+The hook only builds when something that renders a page changed — anything under
+`src/` or `public/`, plus `astro.config.mjs`, `package.json`,
+`package-lock.json`, `wrangler*.jsonc` and the claim test itself. Documentation,
+research sweeps and crawler scripts skip it.
+
+`git push --no-verify` skips the hook. Do not, unless the person who owns the
+site asks for it.
+
+### Bring staging back when the site has visitors
+
+The `swift-secure-staging` Worker and `wrangler.staging.jsonc` were kept, and the
+`staging` branch still exists. Only the habit was dropped.
+
+Reinstate it the day outreach starts. Once operators are opening the site because
+an email told them to, a minute of wrong copy costs something, and a place to
+look before publishing is worth ten minutes again. Today the site has no
+visitors, so it is not.
+
+### Reaching staging from this PC, if it comes back
 
 `staging.swiftsecured.com` often will not resolve here for up to 30 minutes after
 it is deployed, while working fine everywhere else. The router at `192.168.88.1`
@@ -70,17 +81,23 @@ are Cloudflare anycast and change without notice.
 The in-app Browser pane resolves independently of the router and shows the site
 at once. A phone on mobile data works too.
 
-### The one exception
+### Proving a deploy actually happened
 
-If production is already broken it may be restored directly on `main`, but only
-by **an empty commit that rebuilds, or a revert of the commit that broke it.**
-Never new code. Both outages on 2026-08-04 were fixed this way in under a minute,
-and neither could introduce anything unreviewed.
+**A green build is not proof, and neither is an unchanged page.** Fetch the exact
+text the change introduces. If the change produces no visible difference — a
+refactor, a pinned dependency — say so plainly instead of reporting a passing
+check that could not have failed.
 
-After any such push, bring `staging` back to the same commit before the next
-change. Once the two branches diverge, the next promotion is no longer a
-fast-forward — and the commit that was reviewed stops being the commit that
-reaches production.
+This was learned three times in one day: "production returns 200" while the
+output was byte-identical, "staging is healthy" with no marker for the new build,
+and `npm ci --dry-run` passing under the wrong npm. A check that cannot fail is
+worse than no check, because it costs time and buys confidence.
+
+### If production is already broken
+
+Restore it with **an empty commit that rebuilds, or a revert of the commit that
+broke it.** Never new code. Both outages on 2026-08-04 were fixed this way in
+under a minute.
 
 ## Research data — expensive, do not overwrite
 

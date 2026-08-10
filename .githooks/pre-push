@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+# Refuse to push a commit that does not build, or that the claim checks reject.
+#
+# This replaced the staging branch on 10 August 2026. Staging showed a problem
+# ten minutes after it had already left the machine; this stops it before it
+# leaves. A failed Cloudflare build deploys nothing, so broken code could never
+# reach the live site anyway — what actually needed catching is code that builds
+# fine and says something wrong, and that is exactly what these two checks are.
+#
+# Install once per clone:   git config core.hooksPath .githooks
+# Skip deliberately:        git push --no-verify
+#
+set -e
+
+# Only site-affecting pushes pay for a build. The list matches the one in
+# AGENTS.md: documentation, research sweeps and crawler scripts build no page.
+PATTERN='^(src/|public/|scripts/test-site-claims\.py|astro\.config\.mjs|package\.json|package-lock\.json|wrangler.*\.jsonc)'
+
+changed=""
+while read -r _local_ref local_sha _remote_ref remote_sha; do
+	[ "$local_sha" = "0000000000000000000000000000000000000000" ] && continue
+	if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+		range="$local_sha"
+		files=$(git show --name-only --format= "$range")
+	else
+		range="$remote_sha..$local_sha"
+		files=$(git diff --name-only "$range")
+	fi
+	changed="$changed$files
+"
+done
+
+if ! printf '%s' "$changed" | grep -qE "$PATTERN"; then
+	echo "pre-push: nothing that builds a page changed — skipping the build"
+	exit 0
+fi
+
+cd "$(git rev-parse --show-toplevel)"
+
+if [ ! -d node_modules ]; then
+	echo "pre-push: node_modules is missing. Run 'npm ci' first, or push with --no-verify." >&2
+	exit 1
+fi
+
+echo "pre-push: building the site…"
+npm run build >/tmp/prepush-build.log 2>&1 || {
+	echo "pre-push: THE BUILD FAILED — nothing was pushed." >&2
+	tail -25 /tmp/prepush-build.log >&2
+	exit 1
+}
+
+PY=$(command -v python3 || command -v python || true)
+if [ -z "$PY" ]; then
+	echo "pre-push: python not found, skipping the claim checks" >&2
+else
+	echo "pre-push: checking what the built pages claim…"
+	"$PY" scripts/test-site-claims.py || {
+		echo "pre-push: A CLAIM CHECK FAILED — nothing was pushed." >&2
+		exit 1
+	}
+fi
+
+echo "pre-push: build and claim checks passed."
