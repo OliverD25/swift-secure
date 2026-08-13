@@ -143,11 +143,22 @@ root with no prefix; every other locale gets `/<code>/`.
 npm run build && npx astro check
 ```
 
-The build emits 4,428 pages and takes ~2 minutes. To confirm a visual change,
-render it — this server is headless:
+The build emits 4,661 pages. To confirm a visual change, render it and read the
+PNG. **Use `localhost`, never `127.0.0.1`** — `astro dev` binds only the IPv6
+loopback, so `127.0.0.1:4321` is refused while `localhost:4321` answers 200.
 
 ```bash
-node scripts/shot.mjs http://127.0.0.1:4321/ .screenshots/check.png
+node scripts/shot.mjs http://localhost:4321/ .screenshots/check.png 1280 900
 ```
 
-Then read the PNG. Do not claim a copy change looks right without looking.
+No dev server running, or you want the built output rather than the dev
+server's version of it:
+
+```bash
+npm run build; MSYS_NO_PATHCONV=1 node scripts/shot-dist.mjs / .screenshots/check.png 1280 900 false
+```
+
+Do not claim a change looks right without looking. If every route to a
+screenshot is blocked, say so plainly instead of reporting a visual check you
+did not perform — and see the `local-site-screenshot` skill, which lists the
+routes and what each failure means.

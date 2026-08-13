@@ -1,17 +1,16 @@
 // Screenshot the BUILT site with no server running.
 //
-// WHY THIS EXISTS ALONGSIDE shot.mjs. That one points a browser at a running
-// dev server, which works on the Ubuntu box. On the Windows PC the dev server
-// is started by the editor's preview pane and listens somewhere the shell
-// cannot reach: curl and Playwright both get ECONNREFUSED on 127.0.0.1:4321
-// while the pane itself loads the page perfectly. So the only visual check
-// available here was the pane's own screenshot, which needs the pane to be
-// on screen, and returns "not compositing frames" when it is hidden.
+// WHY THIS EXISTS ALONGSIDE shot.mjs. That one needs a dev server running and
+// screenshots whatever the dev server renders. This one needs no server at all
+// and screenshots the built output — what actually ships. Use it to check a
+// production build, or when no dev server is up.
 //
-// This takes the third route. It answers every request out of dist/ through
-// Playwright's request interception, so nothing listens on a port and nothing
-// needs to be visible. It shows the built output — what actually ships —
-// rather than the dev server's version of it.
+// It is NOT a workaround for shot.mjs being unreachable. It was first written
+// under that belief, which was wrong: shot.mjs failed only because its default
+// URL was 127.0.0.1 and `astro dev` binds the IPv6 loopback (::1). Use
+// localhost and shot.mjs works fine. That correction is kept here because the
+// wrong version of this comment is what would send the next person hunting a
+// sandbox that does not exist.
 //
 // Run `npm run build` first; this reads dist/, it does not create it.
 //
