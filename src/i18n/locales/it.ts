@@ -45,6 +45,10 @@ const it: PartialTranslation = {
       label: "Con licenza rilasciata da {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licenze trovate nel registro",
+    },
+    {
       count: "badged",
       label: "Che oggi mostrano il sigillo verificato",
     },

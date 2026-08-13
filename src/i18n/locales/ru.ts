@@ -33,9 +33,10 @@ const ru: PartialTranslation = {
     certified: "Лицензия и слоты проверены",
   },
   // The `count` field is not copy. It names which figure StatRow counts out of
-  // src/data/casinos.ts while the site builds — "listed", "topJurisdiction" or
-  // "badged" — and the type will not accept anything else. Only `label` is
-  // translated, and {regulator} in it is filled from the index.
+  // src/data/casinos.ts while the site builds — "listed", "topJurisdiction",
+  // "registryMatched" or "badged" — and the type will not accept anything
+  // else. Only `label` is translated, and {regulator} in it is filled from the
+  // index. A tile whose figure is zero is not rendered at all.
   stats: [
     {
       count: "listed",
@@ -44,6 +45,10 @@ const ru: PartialTranslation = {
     {
       count: "topJurisdiction",
       label: "Зарегистрировано в {regulator}",
+    },
+    {
+      count: "registryMatched",
+      label: "Лицензий найдено в реестре",
     },
     {
       count: "badged",

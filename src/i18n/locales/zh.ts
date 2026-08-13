@@ -45,6 +45,10 @@ const zh: PartialTranslation = {
       label: "持有 {regulator} 牌照",
     },
     {
+      count: "registryMatched",
+      label: "登记册中核实的牌照",
+    },
+    {
       count: "badged",
       label: "今日展示已验证标识",
     },

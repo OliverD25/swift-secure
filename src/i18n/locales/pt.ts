@@ -45,6 +45,10 @@ const pt: PartialTranslation = {
       label: "Licenciados sob {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licenças encontradas no registo",
+    },
+    {
       count: "badged",
       label: "A exibir o selo verificado hoje",
     },

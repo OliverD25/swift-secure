@@ -45,6 +45,10 @@ const sv: PartialTranslation = {
       label: "Licensierade under {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licenser hittade i registret",
+    },
+    {
       count: "badged",
       label: "Visar verifierat sigill idag",
     },

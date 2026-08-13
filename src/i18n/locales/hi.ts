@@ -45,6 +45,10 @@ const hi: PartialTranslation = {
       label: "{regulator} के अंतर्गत लाइसेंस प्राप्त",
     },
     {
+      count: "registryMatched",
+      label: "रजिस्टर में मिले लाइसेंस",
+    },
+    {
       count: "badged",
       label: "आज सत्यापित सील दिखा रहे हैं",
     },

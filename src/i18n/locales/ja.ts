@@ -45,6 +45,10 @@ const ja: PartialTranslation = {
       label: "{regulator} のライセンス保有",
     },
     {
+      count: "registryMatched",
+      label: "登録簿で確認済みのライセンス",
+    },
+    {
       count: "badged",
       label: "本日、検証済みシールを掲示中",
     },

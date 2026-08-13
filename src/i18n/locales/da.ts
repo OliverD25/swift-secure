@@ -45,6 +45,10 @@ const da: PartialTranslation = {
       label: "Licenseret under {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licenser fundet i registret",
+    },
+    {
       count: "badged",
       label: "Viser verificeret segl i dag",
     },

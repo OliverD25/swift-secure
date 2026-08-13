@@ -45,6 +45,10 @@ const tr: PartialTranslation = {
       label: "{regulator} lisansına sahip",
     },
     {
+      count: "registryMatched",
+      label: "Sicilde doğrulanan lisanslar",
+    },
+    {
       count: "badged",
       label: "Bugün doğrulanmış mührü gösteren",
     },

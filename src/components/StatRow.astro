@@ -1,6 +1,6 @@
 ---
 import { useTranslations } from "../i18n";
-import { casinos, statusCount } from "../data/casinos";
+import { casinos, statusCount, registryMatchedCount } from "../data/casinos";
 import type { StatCount } from "../i18n/types";
 
 interface Props {
@@ -25,6 +25,7 @@ const topRegulator = ranked[0]?.[0] ?? "—";
 const figures: Record<StatCount, number> = {
   listed: casinos.length,
   topJurisdiction: ranked[0]?.[1] ?? 0,
+  registryMatched: registryMatchedCount(),
   badged: statusCount("certified"),
 };
 

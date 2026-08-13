@@ -162,6 +162,11 @@ def main() -> None:
     truth = {
         "total": len(re.findall(r"\n    domain:", src)),
         "anjouan": len(re.findall(r'jurisdiction:\s*"Anjouan"', src)),
+        # Casinos whose licence number was found in the issuing regulator's own
+        # register. Counted off `licenceVerified`, which is only ever set with a
+        # date and a registry name — the declaration in the interface is
+        # "licenceVerified?:" and does not match this pattern.
+        "registry": len(re.findall(r'licenceVerified:\s*"', src)),
         "certified": len(re.findall(r'status:\s*"certified"', src)),
     }
     en = EN.read_text(encoding="utf8")
@@ -183,11 +188,14 @@ def main() -> None:
     home = (DIST / "index.html").read_text(encoding="utf8", errors="replace")
     tiles = re.findall(r'<div class="text-\[32px\][^"]*">([\d,]+)</div>', home)
     published = [t.replace(",", "") for t in tiles]
-    expected = [str(n) for n in (truth["total"], truth["anjouan"], truth["certified"]) if n > 0]
+    expected = [str(n) for n in (truth["total"], truth["anjouan"],
+                                 truth["registry"], truth["certified"]) if n > 0]
     check("the stat tiles match src/data/casinos.ts, with zero-count tiles hidden",
           published == expected,
           f"page says {published}, data says {expected} "
-          f"(raw counts {[truth['total'], truth['anjouan'], truth['certified']]})")
+          f"(raw counts total={truth['total']} anjouan={truth['anjouan']} "
+          f"registry={truth['registry']} certified={truth['certified']}; "
+          f"a zero is expected to be absent from the page)")
 
     # The middle tile no longer names Anjouan either; {regulator} is filled from
     # whichever jurisdiction is most common in the index. If the mix ever moves,

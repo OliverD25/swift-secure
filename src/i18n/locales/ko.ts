@@ -45,6 +45,10 @@ const ko: PartialTranslation = {
       label: "{regulator} 라이선스 보유",
     },
     {
+      count: "registryMatched",
+      label: "등록부에서 확인된 라이선스",
+    },
+    {
       count: "badged",
       label: "현재 검증 씰을 표시 중",
     },

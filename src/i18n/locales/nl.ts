@@ -45,6 +45,10 @@ const nl: PartialTranslation = {
       label: "Gelicentieerd onder {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licenties gevonden in het register",
+    },
+    {
       count: "badged",
       label: "Toont vandaag een geverifieerd zegel",
     },

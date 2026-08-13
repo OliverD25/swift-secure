@@ -2,7 +2,7 @@
  *  There is deliberately no way to write a stat value by hand: the first four
  *  on this site were invented outright, and the three that replaced them were
  *  correct on 5 August and wrong the next time a casino was added. */
-export type StatCount = "listed" | "topJurisdiction" | "badged";
+export type StatCount = "listed" | "topJurisdiction" | "registryMatched" | "badged";
 
 export interface Stat {
   count: StatCount;

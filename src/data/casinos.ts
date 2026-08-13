@@ -3590,3 +3590,9 @@ export const casinos: Casino[] = [
 export const certifiedCasinos = () => casinos.filter((c) => c.status === "certified");
 export const featuredCasinos = () => casinos.slice(0, 6);
 export const statusCount = (status: CasinoStatus) => casinos.filter((c) => c.status === status).length;
+
+/** Casinos whose published licence number was found in the issuing regulator's
+ *  own register, with the date recorded in `licenceVerified`. This is a
+ *  stronger fact than `status`, which tracks the technical scan and is still
+ *  "listed" everywhere — and it is the figure the home-page lookup reports. */
+export const registryMatchedCount = () => casinos.filter((c) => c.licenceVerified).length;

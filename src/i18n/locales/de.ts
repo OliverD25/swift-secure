@@ -45,6 +45,10 @@ const de: PartialTranslation = {
       label: "Lizenziert unter {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Lizenzen im Register bestätigt",
+    },
+    {
       count: "badged",
       label: "Zeigen heute das geprüfte Siegel",
     },

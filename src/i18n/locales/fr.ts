@@ -45,6 +45,10 @@ const fr: PartialTranslation = {
       label: "Sous licence {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "Licences trouvées au registre",
+    },
+    {
       count: "badged",
       label: "Affichant aujourd'hui le sceau vérifié",
     },

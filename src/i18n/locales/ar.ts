@@ -45,6 +45,10 @@ const ar: PartialTranslation = {
       label: "مرخّصة لدى {regulator}",
     },
     {
+      count: "registryMatched",
+      label: "تراخيص مؤكَّدة في السجل",
+    },
+    {
       count: "badged",
       label: "تعرض ختم التحقق اليوم",
     },
