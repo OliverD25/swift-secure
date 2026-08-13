@@ -12,12 +12,23 @@ export interface Language {
   dir: "ltr" | "rtl";
 }
 
+/**
+ * This array is the switcher menu, in order — LanguageSwitcher.astro renders it
+ * as-is and never sorts. The first four are the audiences the site is aimed at
+ * now; the rest keep the earlier grouping (Latin script alphabetically, then
+ * the other scripts). Do not "tidy" this back to alphabetical.
+ *
+ * English must stay first: getLanguage() below falls back to languages[0] for
+ * any locale it does not recognise.
+ */
 export const languages: Language[] = [
   { locale: "en", htmlLang: "en", code: "EN", name: "English", iso: "gb", dir: "ltr" },
+  { locale: "es", htmlLang: "es", code: "ES", name: "Español", iso: "es", dir: "ltr" },
+  { locale: "uk", htmlLang: "uk", code: "UK", name: "Українська", iso: "ua", dir: "ltr" },
+  { locale: "ru", htmlLang: "ru", code: "RU", name: "Русский", iso: "ru", dir: "ltr" },
   { locale: "ar", htmlLang: "ar", code: "AR", name: "العربية", iso: "sa", dir: "rtl" },
   { locale: "da", htmlLang: "da", code: "DA", name: "Dansk", iso: "dk", dir: "ltr" },
   { locale: "de", htmlLang: "de", code: "DE", name: "Deutsch", iso: "de", dir: "ltr" },
-  { locale: "es", htmlLang: "es", code: "ES", name: "Español", iso: "es", dir: "ltr" },
   { locale: "fr", htmlLang: "fr", code: "FR", name: "Français", iso: "fr", dir: "ltr" },
   { locale: "fr-ca", htmlLang: "fr-CA", code: "FR-CA", name: "Français (CA)", iso: "ca", dir: "ltr" },
   { locale: "it", htmlLang: "it", code: "IT", name: "Italiano", iso: "it", dir: "ltr" },
@@ -31,8 +42,6 @@ export const languages: Language[] = [
   { locale: "ko", htmlLang: "ko", code: "KO", name: "한국어", iso: "kr", dir: "ltr" },
   { locale: "zh", htmlLang: "zh", code: "ZH", name: "中文", iso: "cn", dir: "ltr" },
   { locale: "ja", htmlLang: "ja", code: "JA", name: "日本語", iso: "jp", dir: "ltr" },
-  { locale: "ru", htmlLang: "ru", code: "RU", name: "Русский", iso: "ru", dir: "ltr" },
-  { locale: "uk", htmlLang: "uk", code: "UK", name: "Українська", iso: "ua", dir: "ltr" },
 ];
 
 export const defaultLocale = "en";
