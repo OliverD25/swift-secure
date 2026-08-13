@@ -1,6 +1,8 @@
 ---
 import type { Casino } from "../data/casinos";
 import { useTranslations, localePath } from "../i18n";
+import { casinoIcons } from "../data/casinoIcons";
+import { withBase } from "../lib/url";
 
 interface Props {
   locale: string;
@@ -10,6 +12,30 @@ interface Props {
 
 const { locale, casino, href } = Astro.props;
 const t = useTranslations(locale);
+
+// The operator's own icon, fetched once and served from here. Never hotlinked
+// from a favicon service: that would tell a third party which casino pages each
+// visitor reads, which is the same behaviour we report operators for.
+const icon = casinoIcons[casino.slug];
+
+/**
+ * Initials for the casinos with no fetchable icon — roughly a third of them,
+ * mostly because a bot filter answers 403 to everything.
+ *
+ * A missing image must not leave a hole in the grid, so every card gets a tile
+ * of the same size either way. Generic words are dropped first, otherwise most
+ * of the directory would read "C" for Casino.
+ */
+const GENERIC = new Set(["casino", "casinos", "cassino", "bet", "bets", "betting",
+                         "slots", "slot", "club", "games", "game", "online"]);
+const words = casino.name.split(/[\s\-_.]+/).filter(Boolean);
+const meaningful = words.filter((w) => !GENERIC.has(w.toLowerCase()));
+const source = meaningful.length ? meaningful : words;
+const initials = (
+  source.length > 1
+    ? source[0]!.charAt(0) + source[1]!.charAt(0)
+    : (source[0] ?? casino.name).slice(0, 2)
+).toUpperCase();
 
 // The status chip is the honest part of this card. A scanned casino gets a
 // neutral chip and no tick — nothing here may imply an endorsement that was
@@ -26,13 +52,29 @@ const chipClass =
 
 <div class="card flex h-full flex-col p-5.5">
   <div class="mb-3.5 flex items-start gap-3">
-    <div
-      class="flex size-11 shrink-0 items-center justify-center rounded-chip font-mono text-[9px] text-faint"
-      style="background: repeating-linear-gradient(135deg, var(--surface-2), var(--surface-2) 4px, var(--border) 4px, var(--border) 8px);"
-      aria-hidden="true"
-    >
-      logo
-    </div>
+    {
+      icon ? (
+        /* alt is empty on purpose: the casino's name is the next element, and a
+           screen reader announcing it twice helps nobody. Lazy because the
+           directory renders 223 of these on one page. */
+        <img
+          src={withBase(`/logos/${icon}`)}
+          alt=""
+          width="44"
+          height="44"
+          loading="lazy"
+          decoding="async"
+          class="size-11 shrink-0 rounded-chip bg-surface-2 object-contain p-1"
+        />
+      ) : (
+        <div
+          class="flex size-11 shrink-0 items-center justify-center rounded-chip bg-surface-2 text-[15px] font-bold text-muted"
+          aria-hidden="true"
+        >
+          {initials}
+        </div>
+      )
+    }
     <div class="min-w-0">
       <div class="truncate text-[15px] font-bold">{casino.name}</div>
       <div class="truncate text-xs text-faint">{casino.jurisdiction}</div>

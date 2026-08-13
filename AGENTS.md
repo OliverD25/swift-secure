@@ -215,6 +215,28 @@ exactly that. The temptation to add weak findings so it looks fuller destroys
 the only thing that makes the report worth sending — that when we do say
 something, it matters.
 
+## The directory will eventually link out to casinos
+
+Decided 13 August 2026 by the owner. Today a directory card links only to our
+own record page. In time it will also link to the casino itself, because being
+listed and linked from an independent audit index is part of what an operator
+is being offered.
+
+**Do not design against this.** Casino icons were added on the same day for the
+same reason: the directory is meant to become something an operator wants to
+appear in, not a bare table.
+
+**The one line that must not be crossed:** an outbound link is a plain link. It
+may never become an affiliate link, a tracking link, a paid placement or a
+redirect that counts clicks for money. The site states "no affiliate links or
+pay-per-click casino referrals" and that is the whole basis of calling the
+findings independent. A link that earns revenue per visitor turns every status
+on this site into a commercial judgement, and the directory stops being worth
+anything to a player.
+
+Ordering must stay editorial too. When links go live, nothing on the page may
+be sorted, promoted or highlighted because of money.
+
 ## Documentation
 
 Full documentation: https://docs.astro.build
