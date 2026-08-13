@@ -27,11 +27,29 @@ const figures: Record<StatCount, number> = {
   topJurisdiction: ranked[0]?.[1] ?? 0,
   badged: statusCount("certified"),
 };
+
+// A tile counting zero is hidden rather than shown as "0".
+//
+// "Displaying verified seal today: 0" was on the home page, in twenty
+// languages, telling every visitor that nobody uses the product. The figure was
+// true, which is why nothing here flagged it — but a home page is not obliged
+// to publish a zero, and this one was doing active harm.
+//
+// Hiding is the whole fix, and it is deliberately here rather than in the copy.
+// Every locale defines its own three-entry `stats` array, and arrays are
+// replaced whole rather than merged per item, so removing the tile from en.ts
+// would have left the zero standing in the other nineteen languages. One filter
+// in the component fixes all twenty at once.
+//
+// It also reverses itself. The day the first badge is issued the count stops
+// being zero and the tile returns, in every language, with the label each one
+// already has. Nothing needs remembering.
+const visible = t.stats.filter((s) => figures[s.count] > 0);
 ---
 
 <div class="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-6 text-center">
   {
-    t.stats.map((s) => (
+    visible.map((s) => (
       <div>
         <div class:list={["text-[32px] font-extrabold", variant === "dark" ? "text-band-text" : "text-accent"]}>
           {figures[s.count].toLocaleString("en-US")}

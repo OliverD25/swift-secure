@@ -172,13 +172,22 @@ def main() -> None:
     # compare against. Reading dist/ tests one step further along anyway: that
     # the count actually reaches the page, not merely that someone typed it
     # correctly.
+    # A tile counting zero is not rendered at all — StatRow drops it, because
+    # "Displaying verified seal today: 0" told every visitor that nobody uses
+    # the service. So the expected list is the same three figures in the same
+    # order with the zeros removed, not a fixed list of three.
+    #
+    # This still fails on a wrong number, which is the point of the check. It
+    # also fails if a zero ever reappears on the page, and it starts requiring
+    # the badge tile again by itself on the day the first badge is issued.
     home = (DIST / "index.html").read_text(encoding="utf8", errors="replace")
     tiles = re.findall(r'<div class="text-\[32px\][^"]*">([\d,]+)</div>', home)
     published = [t.replace(",", "") for t in tiles]
-    check("the stat tiles match src/data/casinos.ts",
-          published == [str(truth["total"]), str(truth["anjouan"]), str(truth["certified"])],
-          f"page says {published}, data says "
-          f"{[truth['total'], truth['anjouan'], truth['certified']]}")
+    expected = [str(n) for n in (truth["total"], truth["anjouan"], truth["certified"]) if n > 0]
+    check("the stat tiles match src/data/casinos.ts, with zero-count tiles hidden",
+          published == expected,
+          f"page says {published}, data says {expected} "
+          f"(raw counts {[truth['total'], truth['anjouan'], truth['certified']]})")
 
     # The middle tile no longer names Anjouan either; {regulator} is filled from
     # whichever jurisdiction is most common in the index. If the mix ever moves,
