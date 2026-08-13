@@ -12,10 +12,17 @@ const t = useTranslations(locale);
 <footer class="mt-auto border-t border-footer-line bg-footer px-5 py-10 text-footer-text sm:px-[clamp(20px,5vw,40px)]">
   <div class="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4">
     <div class="text-[15px] font-bold">Swift Secured</div>
+    {/* How it works and About live here rather than in the header. The bar was
+        cut to four links because seven did not fit in 18 of the 20 languages.
+        These are the pages that moved; they are reached from here and from the
+        body copy, and they reuse the header's own labels so nothing needed
+        translating again. */}
     <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-footer-muted">
+      <a href={localePath("/how-it-works/", locale)} class="text-inherit hover:text-footer-text">{t.nav.howItWorks}</a>
       <a href={localePath("/verify/", locale)} class="text-inherit hover:text-footer-text">{t.footer.verifySeal}</a>
       <a href={localePath("/apply/", locale)} class="text-inherit hover:text-footer-text">{t.footer.apply}</a>
       <a href={localePath("/faq/", locale)} class="text-inherit hover:text-footer-text">{t.footer.faq}</a>
+      <a href={localePath("/about/", locale)} class="text-inherit hover:text-footer-text">{t.nav.about}</a>
       {/* Brand-asset reference. Reuses the badge page's own eyebrow so the
           label is already translated in all 19 locales. */}
       <a href={localePath("/badge/", locale)} class="text-inherit hover:text-footer-text">{t.badge.eyebrow}</a>

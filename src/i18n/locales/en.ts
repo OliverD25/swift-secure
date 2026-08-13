@@ -8,7 +8,15 @@ import type { Translation } from "../types";
  * offline — all 245 keys, in English, Ukrainian and Russian together, so the
  * three could not drift apart one key at a time.
  *
- * The site speaks to players. The technical report sent to casino operators is
+ * The site addresses operators first and players as well. That was decided on
+ * 13 August 2026 and it is why the header leads with "For casinos". It replaces
+ * an earlier line here saying the site speaks to players only.
+ *
+ * In practice both audiences read the same pages. An operator wants to know
+ * what will be checked on their site and where the audit stops; that is the
+ * same page which convinces a player the service is honest.
+ *
+ * Unchanged by that decision: the technical report sent to casino operators is
  * how a sales conversation opens, and it belongs in research/reports/, not on
  * any public page.
  */

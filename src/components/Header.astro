@@ -13,12 +13,25 @@ interface Props {
 const { locale, path, current } = Astro.props;
 const t = useTranslations(locale);
 
+/**
+ * The bar carries four links, operators first. Four is a measured ceiling, not
+ * a matter of taste: these labels exist in 20 languages and Spanish renders 44%
+ * wider than English. With the previous seven, the header did not fit and the
+ * whole page scrolled sideways in 18 of the 20 — Spanish by 406px at 1024px
+ * wide, and still by 64px at 1366px. Four fits every language from 1100px.
+ *
+ * How it works, About and FAQ moved to the footer. The pages are unchanged and
+ * still linked; only their place in the bar is gone. "How it works" is the one
+ * that lost least by moving — every fact on it also appears on "What we check",
+ * which additionally carries the audit boundaries and the revocation rules.
+ *
+ * Props["current"] deliberately still accepts the keys that are no longer here.
+ * /about/, /faq/ and /how-it-works/ go on passing their own name, they simply
+ * have nothing in the bar to highlight.
+ */
 const navItems: { key: NonNullable<Props["current"]>; href: string; label: string }[] = [
-  { key: "process", href: "/how-it-works/", label: t.nav.howItWorks },
-  { key: "methodology", href: "/methodology/", label: t.nav.methodology },
   { key: "pricing", href: "/pricing/", label: t.nav.pricing },
-  { key: "about", href: "/about/", label: t.nav.about },
-  { key: "faq", href: "/faq/", label: t.nav.faq },
+  { key: "methodology", href: "/methodology/", label: t.nav.methodology },
   { key: "casinos", href: "/casinos/", label: t.nav.casinos },
   { key: "verify", href: "/verify/", label: t.nav.verify },
 ];
@@ -37,8 +50,12 @@ const linkClass = (key: Props["current"]) =>
       <span class="text-[17px] font-bold tracking-tight text-nav-text">Swift Secured</span>
     </a>
 
-    <!-- Full nav, shown once there is room for every item without scrolling. -->
-    <nav class="hidden items-center gap-4 text-sm font-medium text-nav-muted lg:flex" aria-label={t.nav.primaryLabel}>
+    <!-- Full nav, shown only from 1280px up. It used to appear at 1024px, which
+         was wide enough for the English labels and for nothing else: at 1024px
+         the header overflowed in 18 of 20 languages. The four-item bar fits
+         everywhere from 1100px, so 1280px leaves ~180px of room for future
+         wording. If this drops back to lg:, measure Spanish before shipping. -->
+    <nav class="hidden items-center gap-4 text-sm font-medium text-nav-muted xl:flex" aria-label={t.nav.primaryLabel}>
       {
         navItems.map((item) => (
           <a
@@ -59,7 +76,7 @@ const linkClass = (key: Props["current"]) =>
     <!-- Apply stays in the always-visible bar on mobile; the language switcher
          moves into the panel below. There is only room for one of them beside
          the logo, and Apply is the action the page exists to drive. -->
-    <div class="flex items-center gap-2 lg:hidden">
+    <div class="flex items-center gap-2 xl:hidden">
       <a href={localePath("/apply/", locale)} class="btn-primary whitespace-nowrap px-3.5 py-2 text-sm font-semibold">
         {t.nav.apply}
       </a>
@@ -87,7 +104,7 @@ const linkClass = (key: Props["current"]) =>
     </div>
   </div>
 
-  <nav id="site-nav" data-nav-menu hidden class="border-t border-nav-line bg-nav px-5 pb-4 pt-2 lg:hidden" aria-label={t.nav.primaryLabel}>
+  <nav id="site-nav" data-nav-menu hidden class="border-t border-nav-line bg-nav px-5 pb-4 pt-2 xl:hidden" aria-label={t.nav.primaryLabel}>
     {
       navItems.map((item) => (
         <a
@@ -132,7 +149,10 @@ const linkClass = (key: Props["current"]) =>
 
     // Leaving the mobile breakpoint while the panel is open would otherwise
     // strand it visible behind the desktop nav on the next resize back down.
-    const wide = window.matchMedia("(min-width: 1024px)");
+    // This number must stay equal to the xl: breakpoint used on the two navs
+    // above. They are set in different languages — Tailwind and JavaScript —
+    // so nothing links them but this comment.
+    const wide = window.matchMedia("(min-width: 1280px)");
     wide.addEventListener("change", (event) => {
       if (event.matches) setOpen(false);
     });

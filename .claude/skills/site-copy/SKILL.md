@@ -91,15 +91,18 @@ silently loses it.
 
 From the header comment in `en.ts`:
 
-1. **The site speaks to players.** It is a trust service. The free technical
-   report sent to casino operators is how a sales conversation opens, and it
-   must appear nowhere in public copy.
+1. **The site addresses operators first and players as well** (decided
+   13 August 2026; it used to say players only). The header leads with "For
+   casinos" for that reason. This is about who the copy is aimed at — it does
+   **not** move the free technical report onto the site. That report is how a
+   sales conversation opens and must still appear nowhere in public copy.
 2. **Every number is counted from a file in this repository.** Nothing is
    estimated, rounded up, or carried from a previous draft. If copy states a
    figure, verify it against the data before changing or repeating it.
 
-Public site = players. `research/reports/` = operators. Different audience,
-different rules — see AGENTS.md for the report rules.
+Public site = operators and players, same pages. `research/reports/` = the
+private report for one operator. Different documents, different rules — see
+AGENTS.md for the report rules.
 
 ## Copy is not a changelog of the tooling
 
