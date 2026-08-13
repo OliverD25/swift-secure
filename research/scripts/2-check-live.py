@@ -10,9 +10,21 @@ import urllib.request, urllib.error
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SRC = ROOT / "research" / "prospects.csv"
-DEST = ROOT / "research" / "prospects-live.csv"
 
-LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 900
+# A run with an explicit limit writes somewhere else. Without this, a small test
+# run silently replaces a full sweep — which is what destroyed a 489-site result
+# on 2 August 2026, and the rule written in AGENTS.md afterwards. The rule was
+# applied to the crawler/*.mjs generators at the time; this script was missed.
+LIMITED = len(sys.argv) > 1 and sys.argv[1] != "--force"
+LIMIT = int(sys.argv[1]) if LIMITED else 900
+DEST = ROOT / "research" / ("prospects-live.partial.csv" if LIMITED
+                            else "prospects-live.csv")
+FORCE = "--force" in sys.argv
+
+# This file gains columns after it is built — harvested contact emails, notes —
+# that exist nowhere else. Rebuilding throws them away. If you only want to know
+# whether the listed domains are still up, use 20-recheck-live.py, which writes
+# a separate dated file and never touches this one.
 
 rows = list(csv.DictReader(SRC.open(encoding="utf8")))
 rows = [r for r in rows if r["already_listed"] == "no"][:LIMIT]
@@ -85,6 +97,18 @@ for r in live:
         cleaned = re.split(r"\s*[|\-–—:·]\s*", t)[0].strip()
         if 2 < len(cleaned) < 40:
             r["brand"] = cleaned
+
+# A rebuild that lands far short of what is already on disk is a stop signal,
+# not a result. It usually means the network flaked or the source list changed
+# shape, and overwriting turns a bad afternoon into lost work.
+if DEST.exists() and not FORCE:
+    existing = sum(1 for _ in DEST.open(encoding="utf8")) - 1
+    if existing > 0 and len(live) < existing * 0.8:
+        print(f"\nREFUSING TO WRITE. {DEST.name} already holds {existing} rows and this "
+              f"run produced only {len(live)}.")
+        print("Count the records and work out why before replacing it. Re-run with "
+              "--force if the drop is real.")
+        raise SystemExit(1)
 
 with DEST.open("w", newline="", encoding="utf8") as f:
     w = csv.DictWriter(f, fieldnames=list(live[0].keys()))
