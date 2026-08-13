@@ -295,6 +295,43 @@ const en: Translation = {
     searchLabel: "Search audited casinos",
     empty: "No casinos match your search parameters.",
   },
+  // The home-page lookup. Wording here is deliberately modest: for now the
+  // index answers with a licence matched in a regulator's register and a date,
+  // and says plainly that no technical scan has run. It must never read as a
+  // verdict on a casino, because it is not one.
+  checker: {
+    inputPlaceholder: "Enter casino name or URL (e.g. Lucky Coin Casino or luckycoin.cash)",
+    inputLabel: "Casino name, website address or licence number",
+    button: "Check",
+    steps: [
+      { n: "1", title: "Enter the casino name or URL" },
+      { n: "2", title: "We search our audit index" },
+      { n: "3", title: "Read the licence and scan record" },
+    ],
+    footnote:
+      "{count} casinos indexed. We report the licence number a casino publishes, whether it appears in the issuing regulator's own register, and the date we looked.",
+    emptyInput: "Type a casino name, website address or licence number first.",
+    recordEyebrow: "Index record",
+    jurisdiction: "Jurisdiction",
+    operator: "Licensed company",
+    licence: "Licence number",
+    licenceNone: "None published",
+    licenceExpiry: "Licence expires",
+    licenceExpired: "This date has passed. Ask the casino for a current licence.",
+    licenceMatched: "Found in the {registry} when we looked on {date}",
+    licenceSecondhand: "Taken from public sources. Not yet matched in a register.",
+    scan: "Technical scan",
+    scanNone: "Not run yet",
+    noteLabel: "What we noticed",
+    viewRecord: "Open the full record",
+    multipleTitle: "More than one casino matches",
+    multipleBody: "Choose the one you meant.",
+    notFoundTitle: "Not in the index",
+    notFoundBody:
+      "We hold no record under that name, address or licence number. That is not a finding against the casino — it only means we have not indexed it yet.",
+    notFoundBrowse: "Browse the index",
+    notFoundApply: "Ask us to check it",
+  },
   verify: {
     title: "Verify Seal Authenticity",
     description:

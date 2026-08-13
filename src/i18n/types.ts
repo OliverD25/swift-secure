@@ -19,6 +19,13 @@ export interface Criterion {
   title: string;
   desc: string;
 }
+/** One numbered step under the home-page casino lookup. Shorter than `Step`:
+ *  it labels an action the visitor is doing right now, not a stage of the
+ *  audit, so there is nothing to describe underneath it. */
+export interface CheckStep {
+  n: string;
+  title: string;
+}
 export interface Testimonial {
   quote: string;
   name: string;
@@ -183,6 +190,41 @@ export interface Translation {
     searchPlaceholder: string;
     searchLabel: string;
     empty: string;
+  };
+  /** The casino lookup on the home page. Separate from `verify`, which answers
+   *  a different question: `verify` proves a badge we issued is genuine, this
+   *  reports what the index holds on a casino the visitor names. */
+  checker: {
+    inputPlaceholder: string;
+    inputLabel: string;
+    button: string;
+    steps: CheckStep[];
+    /** Contains {count}, replaced with the size of the index at build time, so
+     *  the sentence cannot go stale when a casino is added. */
+    footnote: string;
+    emptyInput: string;
+    recordEyebrow: string;
+    jurisdiction: string;
+    operator: string;
+    licence: string;
+    licenceNone: string;
+    licenceExpiry: string;
+    licenceExpired: string;
+    /** Contains {registry} and {date}. The record stores both in one string
+     *  ("2026-07-30 — Anjouan Gaming Authority register"); the component splits
+     *  it so the sentence reads properly in any word order. */
+    licenceMatched: string;
+    licenceSecondhand: string;
+    scan: string;
+    scanNone: string;
+    noteLabel: string;
+    viewRecord: string;
+    multipleTitle: string;
+    multipleBody: string;
+    notFoundTitle: string;
+    notFoundBody: string;
+    notFoundBrowse: string;
+    notFoundApply: string;
   };
   verify: {
     title: string;

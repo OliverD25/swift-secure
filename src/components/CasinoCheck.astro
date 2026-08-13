@@ -1,0 +1,353 @@
+---
+/**
+ * The casino lookup that sits at the top of the home page.
+ *
+ * It answers a different question from /verify/. That page proves a badge we
+ * issued is genuine and matches a seal ID exactly. This one takes whatever a
+ * visitor already has — a brand name, the address in their browser bar, or a
+ * licence number off a footer — and reports what our index holds.
+ *
+ * WHAT IT MAY SAY. Today no badge has been issued and no technical scan has
+ * run, so the honest answer is the licence: 211 of the indexed casinos have a
+ * number confirmed in the issuing regulator's own register, with the date we
+ * looked. The panel states that, states plainly that the scan has not run, and
+ * shows the note where one exists. It must never be reworded into a verdict.
+ * "Found in the register" is not "safe to deposit", and the copy may not drift
+ * toward implying it.
+ *
+ * WHY THE INDEX IS INLINED. The site is static — there is no server to ask.
+ * All 223 records ship with the page so the lookup answers instantly and
+ * offline. Only the home page carries this, and the fields are trimmed to the
+ * ones the panel shows.
+ */
+import { casinos } from "../data/casinos";
+import { useTranslations, localePath } from "../i18n";
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+// Short keys on purpose: this array is serialised into every home page, in 20
+// languages. Long property names would be the largest part of it.
+const index = casinos.map((c) => ({
+  s: c.slug,
+  n: c.name,
+  d: c.domain,
+  j: c.jurisdiction,
+  o: c.operator ?? "",
+  l: c.licenceNumber ?? "",
+  v: c.licenceVerified ?? "",
+  e: c.licenceExpiry ?? "",
+  st: c.status,
+  ls: c.lastScanned,
+  no: c.note ?? "",
+  h: localePath(`/casinos/${c.slug}/`, locale),
+}));
+
+const labels = {
+  eyebrow: t.checker.recordEyebrow,
+  jurisdiction: t.checker.jurisdiction,
+  operator: t.checker.operator,
+  licence: t.checker.licence,
+  licenceNone: t.checker.licenceNone,
+  licenceExpiry: t.checker.licenceExpiry,
+  licenceExpired: t.checker.licenceExpired,
+  licenceMatched: t.checker.licenceMatched,
+  licenceSecondhand: t.checker.licenceSecondhand,
+  scan: t.checker.scan,
+  scanNone: t.checker.scanNone,
+  note: t.checker.noteLabel,
+  view: t.checker.viewRecord,
+  multipleTitle: t.checker.multipleTitle,
+  multipleBody: t.checker.multipleBody,
+  notFoundTitle: t.checker.notFoundTitle,
+  notFoundBody: t.checker.notFoundBody,
+  browse: t.checker.notFoundBrowse,
+  apply: t.checker.notFoundApply,
+  empty: t.checker.emptyInput,
+  status: {
+    certified: t.directory.certified.label,
+    scanned: t.directory.scanned.label,
+    listed: t.directory.listed.label,
+    flagged: t.directory.flagged.label,
+  } as Record<string, string>,
+};
+
+// Counted at build time rather than written into the copy. A number typed into
+// en.ts is correct until the next casino is added; this one cannot go stale.
+const footnote = t.checker.footnote.replace("{count}", casinos.length.toLocaleString("en-US"));
+
+const browseHref = localePath("/casinos/", locale);
+const applyHref = localePath("/apply/", locale);
+---
+
+<div class="mx-auto w-full max-w-[820px]">
+  <form data-check-form role="search" class="flex flex-col gap-2.5 sm:flex-row">
+    <div class="relative flex-1">
+      <input
+        type="text"
+        data-check-input
+        autocomplete="off"
+        placeholder={t.checker.inputPlaceholder}
+        aria-label={t.checker.inputLabel}
+        aria-expanded="false"
+        aria-controls="check-suggestions"
+        class="w-full rounded-btn border border-btn-line bg-surface px-4 py-3.5 text-[15px] font-sans text-ink placeholder:text-faint"
+      />
+      <ul
+        id="check-suggestions"
+        data-check-suggestions
+        hidden
+        role="listbox"
+        class="absolute inset-x-0 top-[calc(100%+6px)] z-10 max-h-[280px] overflow-y-auto rounded-card border border-line bg-surface p-1.5 text-start shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)]"
+      >
+      </ul>
+    </div>
+    <button type="submit" class="btn-primary whitespace-nowrap px-7 py-3.5 text-[15px] font-semibold">
+      {t.checker.button}
+    </button>
+  </form>
+
+  <div data-check-result hidden aria-live="polite" class="mt-5 text-start"></div>
+
+  <!-- Numbered like the steps further down the page, but deliberately not the
+       same size as the stat tiles: the claim test finds those by reading every
+       text-[32px] number off the built home page, and a fourth would break it. -->
+  <ol class="mt-8 flex flex-wrap items-start justify-center gap-x-3 gap-y-5 text-center">
+    {
+      t.checker.steps.map((step, i) => (
+        <>
+          {i > 0 && <li aria-hidden="true" class="hidden self-center text-faint sm:block">&rarr;</li>}
+          <li class="flex max-w-[190px] flex-1 basis-[150px] flex-col items-center gap-2">
+            <span class="chip flex size-7 items-center justify-center text-[13px] font-extrabold">{step.n}</span>
+            <span class="text-sm leading-relaxed text-muted">{step.title}</span>
+          </li>
+        </>
+      ))
+    }
+  </ol>
+
+  <p class="mx-auto mt-6 max-w-[640px] text-center text-sm leading-relaxed text-faint">{footnote}</p>
+</div>
+
+<script define:vars={{ index, labels, browseHref, applyHref }}>
+  const form = document.querySelector("[data-check-form]");
+  const input = document.querySelector("[data-check-input]");
+  const list = document.querySelector("[data-check-suggestions]");
+  const result = document.querySelector("[data-check-result]");
+
+  if (form && input && list && result) {
+    // Accent folding matters here: a visitor types "curacao" for "Curaçao" and
+    // several brand names carry diacritics. Same normalisation the directory
+    // page uses, so the two searches agree on what counts as a match.
+    const norm = (v) =>
+      String(v).trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+
+    // A pasted address is the common case, not the exception: people copy the
+    // browser bar. Reduce anything URL-shaped to its bare host so
+    // "https://www.luckycoin.cash/en/promotions?x=1" matches "luckycoin.cash".
+    const asHost = (v) => {
+      let h = String(v).trim().toLowerCase();
+      h = h.replace(/^[a-z][a-z0-9+.-]*:\/\//, "");
+      h = h.split(/[/?#]/)[0];
+      h = h.replace(/^www\./, "");
+      return h;
+    };
+
+    const el = (tag, cls, text) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined) n.textContent = text;
+      return n;
+    };
+
+    const row = (label, value) => {
+      const wrap = el("div", "flex flex-wrap gap-x-2 gap-y-0.5");
+      wrap.append(el("span", "text-muted", label), el("span", "font-semibold text-ink", value));
+      return wrap;
+    };
+
+    const matches = (raw) => {
+      const q = norm(raw);
+      const host = asHost(raw);
+      if (!q) return [];
+      const exact = index.filter(
+        (c) => norm(c.n) === q || norm(c.d) === host || (c.l && norm(c.l) === q),
+      );
+      if (exact.length) return exact;
+      return index.filter(
+        (c) => norm(c.n).includes(q) || norm(c.d).includes(q) || (c.l && norm(c.l).includes(q)),
+      );
+    };
+
+    const showRecord = (c) => {
+      const card = el("div", "rounded-card border border-line bg-surface p-6 text-start");
+      card.append(el("div", "eyebrow mb-1.5 text-[12px] font-bold", labels.eyebrow));
+      card.append(el("div", "text-[19px] font-bold text-ink", c.n));
+      card.append(el("div", "mb-4 text-sm text-faint", c.d));
+
+      const rows = el("div", "flex flex-col gap-2.5 text-sm");
+      rows.append(row(labels.jurisdiction, c.j));
+      if (c.o) rows.append(row(labels.operator, c.o));
+
+      // The licence line is the substance of the whole feature, so it always
+      // states which of the three situations applies rather than leaving a
+      // blank that a reader would fill in optimistically.
+      const lic = el("div", "flex flex-col gap-0.5");
+      lic.append(row(labels.licence, c.l || labels.licenceNone));
+      if (c.l) {
+        // Stored as "2026-07-30 — Anjouan Gaming Authority register", one
+        // string. Split so the sentence can put the registry and the date
+        // wherever a language needs them, instead of reading "Found in the
+        // 2026-07-30 — Anjouan Gaming Authority register".
+        let line = labels.licenceSecondhand;
+        if (c.v) {
+          const parts = c.v.split(/\s*—\s*/);
+          const date = parts.length > 1 ? parts[0] : "";
+          const registry = parts.length > 1 ? parts.slice(1).join(" — ") : c.v;
+          line = labels.licenceMatched.replace("{registry}", registry).replace("{date}", date);
+        }
+        lic.append(el("div", c.v ? "text-[13px] text-accent" : "text-[13px] text-faint", line));
+      }
+      rows.append(lic);
+
+      // An expiry that has already passed is arithmetic on a date the register
+      // itself published, not an accusation — and it is the single most useful
+      // thing on this panel for someone about to deposit. It says what to do
+      // rather than pronouncing the casino unsafe.
+      if (c.e) {
+        const exp = el("div", "flex flex-col gap-0.5");
+        exp.append(row(labels.licenceExpiry, c.e));
+        if (Date.parse(c.e) < Date.now()) {
+          exp.append(el("div", "text-[13px] font-semibold text-warn-soft-text", labels.licenceExpired));
+        }
+        rows.append(exp);
+      }
+
+      rows.append(row(labels.scan, c.st === "listed" ? labels.scanNone : labels.status[c.st] || c.st));
+      card.append(rows);
+
+      if (c.no) {
+        const note = el("div", "mt-4 rounded-chip border border-line bg-surface-2 p-3.5");
+        note.append(el("div", "mb-1 text-[12px] font-bold text-muted", labels.note));
+        note.append(el("div", "text-[13px] leading-relaxed text-muted", c.no));
+        card.append(note);
+      }
+
+      const link = el("a", "mt-5 inline-block text-sm font-semibold text-accent", labels.view);
+      link.href = c.h;
+      card.append(link);
+      return card;
+    };
+
+    const showChoice = (found) => {
+      const card = el("div", "rounded-card border border-line bg-surface p-6 text-start");
+      card.append(el("div", "text-[17px] font-bold text-ink", labels.multipleTitle));
+      card.append(el("div", "mb-4 text-sm text-muted", labels.multipleBody));
+      const ul = el("div", "flex flex-col gap-1.5");
+      for (const c of found.slice(0, 8)) {
+        const b = el("button", "rounded-chip px-3 py-2 text-start text-sm text-ink hover:bg-surface-2");
+        b.type = "button";
+        b.append(el("span", "font-semibold", c.n), el("span", "text-faint", "  " + c.d));
+        b.addEventListener("click", () => {
+          input.value = c.n;
+          render([c]);
+        });
+        ul.append(b);
+      }
+      card.append(ul);
+      return card;
+    };
+
+    const showMissing = () => {
+      const card = el("div", "rounded-card border border-line bg-surface-2 p-6 text-start");
+      card.append(el("div", "text-[17px] font-bold text-ink", labels.notFoundTitle));
+      card.append(el("div", "mb-4 text-sm leading-relaxed text-muted", labels.notFoundBody));
+      const actions = el("div", "flex flex-wrap gap-4 text-sm font-semibold");
+      const a1 = el("a", "text-accent", labels.browse);
+      a1.href = browseHref;
+      const a2 = el("a", "text-accent", labels.apply);
+      a2.href = applyHref;
+      actions.append(a1, a2);
+      card.append(actions);
+      return card;
+    };
+
+    const render = (found) => {
+      list.hidden = true;
+      input.setAttribute("aria-expanded", "false");
+      result.replaceChildren(
+        found.length === 1 ? showRecord(found[0]) : found.length ? showChoice(found) : showMissing(),
+      );
+      result.hidden = false;
+    };
+
+    const suggest = () => {
+      const q = input.value.trim();
+      if (q.length < 2) {
+        list.hidden = true;
+        input.setAttribute("aria-expanded", "false");
+        return;
+      }
+      const found = matches(q).slice(0, 6);
+      if (!found.length || (found.length === 1 && norm(found[0].n) === norm(q))) {
+        list.hidden = true;
+        input.setAttribute("aria-expanded", "false");
+        return;
+      }
+      list.replaceChildren(
+        ...found.map((c) => {
+          const li = el("li", "");
+          li.setAttribute("role", "option");
+          const b = el("button", "flex w-full flex-col rounded-chip px-3 py-2 text-start hover:bg-surface-2");
+          b.type = "button";
+          b.append(el("span", "text-sm font-medium text-ink", c.n), el("span", "text-[12px] text-faint", c.d));
+          b.addEventListener("click", () => {
+            input.value = c.n;
+            render([c]);
+          });
+          li.append(b);
+          return li;
+        }),
+      );
+      list.hidden = false;
+      input.setAttribute("aria-expanded", "true");
+    };
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const q = input.value.trim();
+      if (!q) {
+        result.replaceChildren(el("div", "text-sm text-faint", labels.empty));
+        result.hidden = false;
+        return;
+      }
+      render(matches(q));
+    });
+
+    input.addEventListener("input", suggest);
+    document.addEventListener("click", (event) => {
+      if (!form.contains(event.target)) {
+        list.hidden = true;
+        input.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        list.hidden = true;
+        input.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Lets anything link straight into an answer, e.g. /?q=luckycoin.cash from
+    // an outreach email or the directory.
+    const preset = new URLSearchParams(location.search).get("q");
+    if (preset) {
+      input.value = preset;
+      render(matches(preset));
+    }
+  }
+</script>

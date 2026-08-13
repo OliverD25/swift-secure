@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Seal from "../../components/Seal.astro";
+import CasinoCheck from "../../components/CasinoCheck.astro";
 import StatRow from "../../components/StatRow.astro";
 import SectionHeading from "../../components/SectionHeading.astro";
 import CasinoCard from "../../components/CasinoCard.astro";
@@ -27,34 +28,42 @@ const orgJsonLd = {
 <Layout locale={locale} path="/" title={t.home.title} description={t.home.description}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
   <main>
-    <!-- HERO -->
-    <section class="mx-auto grid w-full max-w-[1280px] grid-cols-[repeat(auto-fit,minmax(320px,1fr))] items-center gap-12 px-[clamp(20px,5vw,40px)] py-20">
-      <div>
-        <div class="chip mb-5 inline-flex items-center gap-2 px-3 py-1.5 text-[13px] font-semibold">
-          <span class="size-1.5 rounded-full bg-accent"></span>
-          {t.home.badge}
-        </div>
-        <h1 class="text-hero mb-5">{t.home.h1}</h1>
-        <p class="mb-8 max-w-[520px] text-lg leading-relaxed text-muted sm:text-[19px]">{t.home.sub}</p>
-        <div class="flex flex-wrap gap-3.5">
-          <a href={localePath("/apply/", locale)} class="btn-primary px-6.5 py-3.5 text-base font-semibold">
-            {t.home.ctaApply}
-          </a>
-          <a
-            href={localePath("/verify/", locale)}
-            class="btn-secondary px-6.5 py-3.5 text-base font-semibold"
-          >
-            {t.home.ctaVerify} &rarr;
-          </a>
-        </div>
-      </div>
-      <div class="flex justify-center">
+    {/* HERO. Centred on one column rather than the earlier text-beside-seal
+        split, so the lookup is the first thing on the page: a visitor who
+        arrived holding a casino name can act on it without scrolling or
+        choosing a menu item. Order matches what the owner asked for on
+        13 August 2026 — headline, subline, search, steps, footnote. */}
+    <section class="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,40px)] py-16 text-center">
+      <div class="mb-7 flex justify-center">
         <div
-          class="flex size-[280px] items-center justify-center rounded-full"
+          class="flex size-[168px] items-center justify-center rounded-full"
           style="background: var(--hero-disc); box-shadow: var(--hero-disc-shadow);"
         >
-          <Seal locale={locale} variant="primary" size={200} />
+          <Seal locale={locale} variant="primary" size={116} />
         </div>
+      </div>
+      <div class="chip mb-5 inline-flex items-center gap-2 px-3 py-1.5 text-[13px] font-semibold">
+        <span class="size-1.5 rounded-full bg-accent"></span>
+        {t.home.badge}
+      </div>
+      <h1 class="text-hero mx-auto mb-5 max-w-[900px]">{t.home.h1}</h1>
+      <p class="mx-auto mb-9 max-w-[640px] text-lg leading-relaxed text-muted sm:text-[19px]">{t.home.sub}</p>
+
+      <CasinoCheck locale={locale} />
+
+      {/* Both destinations are also in the header, but they were the hero's
+          only actions before the lookup existed and nothing is gained by
+          dropping them. They sit below the search, not beside it. */}
+      <div class="mt-9 flex flex-wrap justify-center gap-3.5">
+        <a href={localePath("/apply/", locale)} class="btn-primary px-6.5 py-3.5 text-base font-semibold">
+          {t.home.ctaApply}
+        </a>
+        <a
+          href={localePath("/verify/", locale)}
+          class="btn-secondary px-6.5 py-3.5 text-base font-semibold"
+        >
+          {t.home.ctaVerify} &rarr;
+        </a>
       </div>
     </section>
 
