@@ -33,7 +33,17 @@ const check = (label, ok, detail = '') => {
   if (!ok) failures.push(detail ? `${label}\n      ${detail}` : label);
 };
 
-const server = spawn('npx', ['astro', 'dev', '--port', String(PORT), '--host', '127.0.0.1'], {
+// Start Astro's own entry script with this Node, rather than going through npx.
+// npx is npx.cmd on Windows: spawn() cannot find it without a shell, and Node
+// refuses to spawn a .cmd through spawn() at all. Both failure modes were hit
+// here — the test was written on the Ubuntu box and had never run on the PC.
+// Naming the .mjs directly needs no shell and behaves the same on both systems.
+//
+// --host 127.0.0.1 is load-bearing, not decoration. Left to itself `astro dev`
+// binds only the IPv6 loopback, and the fetch below to 127.0.0.1 is then
+// refused while a browser on localhost works fine.
+const ASTRO_BIN = join(import.meta.dirname, '..', 'node_modules', 'astro', 'bin', 'astro.mjs');
+const server = spawn(process.execPath, [ASTRO_BIN, 'dev', '--port', String(PORT), '--host', '127.0.0.1'], {
   cwd: join(import.meta.dirname, '..'),
   env: {
     ...process.env,
