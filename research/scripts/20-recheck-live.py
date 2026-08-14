@@ -35,17 +35,31 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-SRC = ROOT / "research" / "prospects-live.csv"
 
-# Passed on the command line rather than read from a clock: a dated filename has
-# to be reproducible when this is re-run, and a machine date makes yesterday's
-# output impossible to overwrite deliberately.
-STAMP = "2026-08-13"
+# Defaults to prospects-live.csv, but any list with a `domain` column works:
+#
+#   python research/scripts/20-recheck-live.py --source research/master-outreach-list.csv
+#
+# That matters because the master outreach list is the file mail is actually
+# sent from, and 380 of the domains behind its addresses had never been tested
+# for liveness at all. Checking the wrong file is how a list looks verified
+# while the addresses that will really be used are unverified.
+_src_arg = None
+if "--source" in sys.argv:
+    _src_arg = sys.argv[sys.argv.index("--source") + 1]
+SRC = (ROOT / _src_arg) if _src_arg else (ROOT / "research" / "prospects-live.csv")
 
-LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+# Today's date, so each sweep lands in its own file and an old result is never
+# silently replaced. Override with --date YYYY-MM-DD to re-run a previous
+# sweep's filename deliberately. This was hardcoded at first, which meant the
+# second day's sweep would have been labelled with the first day's date.
+STAMP = (sys.argv[sys.argv.index("--date") + 1] if "--date" in sys.argv
+         else __import__("datetime").date.today().isoformat())
+
+_nums = [a for a in sys.argv[1:] if a.isdigit()]
+LIMIT = int(_nums[0]) if _nums else 0
 DEST = ROOT / "research" / (
-    f"prospects-live-recheck-{STAMP}.partial.csv" if LIMIT
-    else f"prospects-live-recheck-{STAMP}.csv")
+    f"{SRC.stem}-recheck-{STAMP}{'.partial' if LIMIT else ''}.csv")
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
@@ -104,6 +118,25 @@ def main() -> int:
         print(f"no {SRC} to re-check")
         return 1
     rows = list(csv.DictReader(SRC.open(encoding="utf8")))
+    if not rows or "domain" not in rows[0]:
+        print(f"{SRC.name} has no `domain` column — nothing to test")
+        return 1
+
+    # One request per domain, not per row. The master outreach list holds 1,497
+    # rows over far fewer sites, because one operator runs several brands.
+    # Testing per row would hit the same host repeatedly for no extra
+    # information, and look like an attack while doing it.
+    seen, deduped = set(), []
+    for r in rows:
+        d = (r.get("domain") or "").strip().lower()
+        if not d or d in seen:
+            continue
+        seen.add(d)
+        deduped.append(r)
+    if len(deduped) != len(rows):
+        print(f"{len(rows)} rows cover {len(deduped)} distinct domains — testing each once")
+    rows = deduped
+
     if LIMIT:
         rows = rows[:LIMIT]
         print(f"LIMITED RUN: {len(rows)} rows -> {DEST.name} "
@@ -143,7 +176,13 @@ def main() -> int:
     live = [r for r in results if r["recheck_verdict"] == "live"]
     blocked = [r for r in results if r["recheck_verdict"] == "blocked"]
     gone = [r for r in results if r["recheck_verdict"] == "gone"]
-    gone_with_email = [r for r in gone if (r.get("contact_email") or "").strip()]
+    # The address column is named differently in the two lists that matter:
+    # prospects-live.csv calls it contact_email, master-outreach-list.csv calls
+    # it email. Reporting zero dead-with-an-address because the column was
+    # spelled differently would be a false all-clear on the one number that
+    # decides whether the send is safe.
+    email_col = next((c for c in ("contact_email", "email") if c in results[0]), None)
+    gone_with_email = [r for r in gone if email_col and (r.get(email_col) or "").strip()]
 
     print(f"\nstill live : {len(live)} of {len(results)}")
     print(f"blocked    : {len(blocked)}  (bot protection answering us, not a dead site -")
@@ -156,7 +195,7 @@ def main() -> int:
     print(f"\nof the {len(gone)} gone, {len(gone_with_email)} have a harvested contact "
           f"email - those are the ones that would be emailed into a void")
     print(f"\nwrote -> {DEST}")
-    print("prospects-live.csv was NOT modified.")
+    print(f"{SRC.name} was NOT modified.")
     return 0
 
 
